@@ -48,7 +48,7 @@ Both PSO and DE have different parameters that one can experiment on. In this im
 | `mutationF`      | Degree of mutation effect (exploration parameter)        |
 | `recombinationC` | Degree of recombination effect (exploitation parameter)  |
 
-## Implementation Notes:
+## Results:
 Generalization Ability  
 1. **Particle Swarm Optimization** (84.86%)  
 ![Generalization ability of PSO](http://i.imgur.com/JtMGhr8l.png)  
