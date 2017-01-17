@@ -1,29 +1,50 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" width="device-width, initial-scale=1.0">
+		<meta name="description" content="{{ page.description }}">
+		<meta name="author" content="Lj Miranda">
+		<title>{{ page.title }} | Lj Miranda </title>		
+		<!-- styles -->
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/jumbotron-narrow.css" rel="stylesheet">
+		<link href="/css/style.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div class="container"> <!-- /container [1] -->
+			<div class="header"> <!-- /header [1] -->
+				<ul class="nav nav-pills pull-right">
+					<li class="{{ page.cv }}"><a href="/cv" title="CV">CV</a></li>
+					<li class="{{ page.notes }}"><a href="/projects" title="Projects">Notes</a></li>
+					<li class="{{ page.contact }}"><a href="/blog" title="Blog">Blog</a></li>
+				</ul>
+				<h3 class="text-muted"><a href="/">Lj Miranda</a></h3>
+			</div> <!-- /header [0] -->
+			
 			
 			{{ content }}
 			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:lester.miranda@toki.waseda.jp">email</a></li>
-	        		<li><a href="https://github.com/ljvmiranda921">github.com/ljvmiranda921</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+			<div class="footer"> <!-- /footer [1] -->
+				<div class="row">
+					<div class="col-sm-8">
+						<p><small>&copy; Lester James Miranda, 2016</small></p>
+					</div>
+					<div class="col-sm-4">
+						<a href="https://github.com/ljvmiranda921"><img src="/res/GitHub-Mark-120px-plus.png" alt="My GitHub profile" width="24" height="24" border="0" /></a>
+						<a href="https://jp.linkedin.com/in/lesterjamesmiranda"><img src="/res/LinkedIn_logo_initials.png" alt="My LinkedIn profile" width="24" height="24" border="0" /></a>
+					</div>
+				</div>
+			</div> <!-- /footer [0]-->
+		</div> <!-- /container [0] -->
+	
+	
+		<!-- javascript at the end of the doc so page loads faster -->
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<script src="/js/library.js"></script>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	</body>
+
+</html>
