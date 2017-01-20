@@ -1,2 +1,2 @@
-permalink: /projects/:year/:month/:day/:title
+permalink: pretty
 markdown: kramdown
