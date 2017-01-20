@@ -2,6 +2,7 @@
 layout: post
 title: "Exploratory Data Analysis: Energy Use in the Philippines"
 date: 2016-03-28
+category: projects
 ---
 
 ```python

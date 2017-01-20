@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Ant Colony Optimization for Solving the Travelling Salesman Problem"
-date: 2017-01-17
+date: 2017-01-18
+category: projects
 ---
 
 This is an implementation of the Ant Colony Optimization to solve the Traveling Salesman Problem. 

@@ -2,6 +2,7 @@
 layout: post
 title: "Neural Network for Solving the Two Spiral Problem"
 date: 2017-01-17
+category: projects
 ---
 
 This is a simple implementation of a 2-M-1 neural network trained using different optimization algorithms in order to solve the two-spiral problem. The two-spiral problem is a particularly difficult problem that requires separating two logistic spirals from one another [1] [2]. 
