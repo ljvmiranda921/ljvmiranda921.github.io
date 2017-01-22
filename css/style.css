@@ -1,14 +1,15 @@
 @import url(//fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic);
 @import url(//fonts.googleapis.com/css?family=Montserrat);
+@import url(//fonts.googleapis.com/css?family=Roboto:400,700);
 
-body { padding-top: 20px; padding-bottom: 40px; font-family: 'Merriweather', Georgia, Times; font-size: 16px; }
+body { padding-top: 20px; padding-bottom: 40px; font-family: 'Roboto', Georgia, Times; font-size: 16px; font-weight:400; }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Merriweather', Georgia, Times; font-weight: 700;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Roboto', Georgia, Times; font-weight: 700;}
 
 blockquote p { font-size: 16px; line-height: 1.6em; }
 
 /* Masthead */
-.header, .footer, .header h3 { font-family: 'Montserrat', Helvetica, sans-serif; text-transform: uppercase; font-weight: normal; }
+.header, .footer, .header h3 { font-family: 'Roboto', Helvetica, sans-serif; text-transform: uppercase; font-weight: normal; }
 
 /* Navigation */
 h3.text-muted a {text-decoration: none; color: #999999; }
@@ -75,8 +76,11 @@ iframe {font-family: 'Merriweather', Georgia, Times; font-size: 16px;}
 .guide .notes { font-size: 12px; }
 .guide .notes h2 { font-size: 14px; }
 
-/* Code */
-pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
+
+pre.prettyprint { padding: 10px !important; 
+				  margin: 40px; font-size: 12px;
+				  width: auto;
+				  overflow: auto;}
 
 .step { border-radius: 50%; 
 	-moz-border-radius: 50%; 
@@ -92,4 +96,5 @@ pre.prettyprint { padding: 10px !important; margin: 40px; font-size: 12px;}
 	margin: 5px 15px 0px 0px;
 	font-family: 'Montserrat', Helvetica, sans-serif; }
 
+.prettyprint ol.linenums > li { list-style-type: decimal; }
 

@@ -29,7 +29,8 @@ DE perturbs vectors using the scaled difference of two randomly population vecto
 Both PSO and DE have different parameters that one can experiment on. In this implementation, the parameters present are summarized in the table below
 
 **Particle Swarm Optimization**   
-
+  
+|-----------------+----------------------------------------------------------|
 | Parameter       | Description                                              |
 |-----------------|----------------------------------------------------------|
 | `maxIter`       | Number of iterations that the PSO algorithm will run     |
@@ -38,9 +39,11 @@ Both PSO and DE have different parameters that one can experiment on. In this im
 | `c_1`           | Cognitive component (exploration parameter).             |
 | `c_2`           | Social component (exploitation parameter).               |
 | `inertiaWeight` | Inertia weight that controls the movement of particles.  |
+|-----------------+----------------------------------------------------------|
 
 **Differential Evolution**  
 
+|------------------+----------------------------------------------------------|
 | Parameter        | Description                                              |
 |------------------|----------------------------------------------------------|
 | `genMax`         | Number of generations that the DE algorithm will run     |
@@ -48,6 +51,7 @@ Both PSO and DE have different parameters that one can experiment on. In this im
 | `epsilon_de`     | Scattering degree of the particles during initialization |
 | `mutationF`      | Degree of mutation effect (exploration parameter)        |
 | `recombinationC` | Degree of recombination effect (exploitation parameter)  |
+|------------------+----------------------------------------------------------|
 
 ## Results:
 Generalization Ability  

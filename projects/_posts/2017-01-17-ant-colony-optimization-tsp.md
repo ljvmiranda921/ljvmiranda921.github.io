@@ -49,14 +49,16 @@ constantly doing random searches for each iteration.
 ![ACO Test 4](http://i.imgur.com/ISCpfpkl.png)  
 
 ## Results:  
-The best solution for ACO was __7548.9927__ _(the optimal solution achieved by current research so far is 7542.00)_ . It was obtained with the following parameters: 
+The best solution for ACO was __7548.9927__ _(the optimal solution achieved by current research so far is 7542.00)_ . It was obtained with the following parameters:   
 
-| Parameter               | Value |
-|-------------------------|-------|
-| Iterations              | 500   |
-| Colony Size             | 0.7   |
-| Evaporation Coefficient, $$\rho$$ | 0.1   |
-| Pheromone Attraction, $$\alpha$$    | 15    |
-| Short-Path Bias, $$\beta$$         | 200   | 
+|----------------------------------------+-------|
+| Parameter            				     | Value |
+|----------------------------------------|-------|
+| Iterations          				     | 500   |
+| Colony Size            				 | 0.7   |
+| Evaporation Coefficient, $$\rho$$ 	 | 0.1   |
+| Pheromone Attraction, $$\alpha$$       | 15    |
+| Short-Path Bias, $$\beta$$             | 200   | 
+|----------------------------------------+-------|  
 
 ![ACO Best](http://i.imgur.com/neFD3JDl.png)
