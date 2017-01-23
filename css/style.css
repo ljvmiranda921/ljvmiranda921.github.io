@@ -1,15 +1,17 @@
+/*
 @import url(//fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic);
 @import url(//fonts.googleapis.com/css?family=Montserrat);
-@import url(//fonts.googleapis.com/css?family=Roboto:400,700);
+*/
+@import url(//fonts.googleapis.com/css?family=Roboto:300,400,700);
 
-body { padding-top: 20px; padding-bottom: 40px; font-family: 'Roboto', Georgia, Times; font-size: 16px; font-weight:400; }
+body { padding-top: 20px; padding-bottom: 40px; font-family: 'Roboto', Georgia, Times; font-size: 16px; font-weight:300; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Roboto', Georgia, Times; font-weight: 700;}
 
 blockquote p { font-size: 16px; line-height: 1.6em; }
 
 /* Masthead */
-.header, .footer, .header h3 { font-family: 'Roboto', Helvetica, sans-serif; text-transform: uppercase; font-weight: normal; }
+.header, .footer, .header h3 { font-family: 'Roboto', Helvetica, sans-serif; text-transform: uppercase; font-weight: 400; }
 
 /* Navigation */
 h3.text-muted a {text-decoration: none; color: #999999; }
@@ -62,10 +64,29 @@ ul.swatch li:first-child { webkit-border-top-left-radius: 9px; -webkit-border-bo
 .notes, .contact, .about, .cv, .error, .swatches { margin-bottom: 30px; }
 
 /* Contact */
-iframe {font-family: 'Merriweather', Georgia, Times; font-size: 16px;}
+iframe {font-family: 'Roboto', Georgia, Times; font-size: 16px;}
 
 /* About */
 .about ul.list-unstyled li { line-height: 30px; text-indent: -30px; margin-left: 30px;}
+
+
+/* Tables */
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:2px solid #000000;
+	margin: 0px auto;  
+}
+
+th{
+    border:2px solid #000000;
+}
+
+td{
+    border:1px solid #000000;
+}
+
 
 /* Guides */
 .guide { width: 90%; margin: 0 auto 60px auto; line-height: 26px;}
@@ -94,7 +115,7 @@ pre.prettyprint { padding: 10px !important;
 	font-size: 24px;
 	padding-top: 5.5px;
 	margin: 5px 15px 0px 0px;
-	font-family: 'Montserrat', Helvetica, sans-serif; }
+	font-family: 'Roboto', Helvetica, sans-serif; }
 
 .prettyprint ol.linenums > li { list-style-type: decimal; }
 

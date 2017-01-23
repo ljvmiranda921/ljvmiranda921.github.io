@@ -61,4 +61,17 @@ The best solution for ACO was __7548.9927__ _(the optimal solution achieved by c
 | Short-Path Bias, $$\beta$$             | 200   | 
 |----------------------------------------+-------|  
 
-![ACO Best](http://i.imgur.com/neFD3JDl.png)
+![ACO Best](http://i.imgur.com/neFD3JDl.png)  
+
+## Conclusion
+
+In this ACO implementation, arriving at the best solution requires balancing the exploitation-exploration tradeoff. 
+Setting the evaporation coefficient low makes the pheromones stay longer. However, this was balanced by setting the path 
+bias of the colony very high, so that they get to explore more options near the route with the highest pheromone concentration 
+(instead of causally settling in it). In contrast with the GA implementation, ACO is much easier to control. There are few 
+parameters needed and the exploration capability doesn't necessarily go out of control. It also helps that the ants are 
+randomly placed in different areas of the map and allowed to make a "guided" initial tour. This makes the initial values 
+much lower as compared in the case of GA where initial costs are very high if a greedy search is not first implemented to construct the initial tour.
+
+
+You can access the repository [here.](https://github.com/ljvmiranda921/tsp-ant-system)

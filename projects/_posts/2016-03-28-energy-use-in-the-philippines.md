@@ -5,9 +5,6 @@ date: 2016-03-28
 category: projects
 ---
 
-```python
-%matplotlib inline
-```
 
 # Energy Use in the Philippines
 *Author:* Lester James V. Miranda  
