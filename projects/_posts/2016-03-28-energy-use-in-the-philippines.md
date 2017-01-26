@@ -3,12 +3,8 @@ layout: post
 title: "Exploratory Data Analysis: Energy Use in the Philippines"
 date: 2016-03-28
 category: projects
+comments: true
 ---
-
-
-# Energy Use in the Philippines
-*Author:* Lester James V. Miranda  
-*Website:* https://github.com/ljvmiranda921  
 
 I am investigating the country's energy use given the World Development Indicators 
 dataset provided here in Kaggle. I am particularly interested to how the Philippines has been

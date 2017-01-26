@@ -3,6 +3,7 @@ layout: blog
 title: "Simple Pairwise Sequencing with BLOSUM62"
 date: 2017-01-23
 category: blog
+comments: true
 ---
 
 Doing pairwise alignments using the BLOSUM62 scoring matrix _manually_ for our assignment in bioinformatics is really time-consuming. 
