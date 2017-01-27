@@ -6,18 +6,33 @@ category: projects
 comments: true
 ---
 
-This is a simple implementation of a 2-16-1 neural network trained using Particle Swarm Optimization in order to solve the two-spiral problem. The $$\sin(z)$$ and $$\sigma(z)$$ activation functions were used for the input-hidden and hidden-output layers respectively. The cross-entropy error was used as the cost function. The two-spiral problem is a particularly difficult problem that requires separating two logistic spirals from one another [1] [2].
+
+
+
+This is a simple implementation of a 2-16-1 neural network trained using Particle Swarm Optimization in order to solve the two-spiral problem. The $$\sin(z)$$ and $$\sigma(z)$$ activation functions were used for the input-hidden and hidden-output layers respectively. The cross-entropy error was used as the cost function. The two-spiral problem is a particularly difficult problem that requires separating two logistic spirals from one another.
 
 ![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)
 __Figure 1:__ _Graph of the Two-Spiral Problem_
-{: style="text-align: center;"}
+{: style="text-align: center;"}  
 
-## Particle Swarm Optimization:
+
+## Table of Contents
+---
+1. [Introduction: Particle Swarm Optimization](#particle-swarm-optimization)
+2. [Methodology](#methodology)
+  - [Particle Initialization](#initialization)
+  - [Implementation Parameters](#implementation-parameters)
+  - [Parameter Tuning: Social and Cognitive Components](#tuning-the-social-and-cognitive-behaviour-of-the-swarm)
+  - [Observation of Swarm Behavior](#observation-of-swarm-behavior)
+3. [Results](#results)
+4. [Conclusion](#conclusion)
+
+## Particle Swarm Optimization
 Particle swarm optimization is a population-based search algorithm that is based on the social behavior of birds within a
 flock. In PSO, the particles are scattered throughout the hyperdimensional search space. These particles use the results found
 by the others in order to build a better solution.
 
-## Methodology:
+## Methodology  
 
 ### Initialization
 For any particle $$n = 1,2, \dots , N$$, its position $$P$$ at time-step $$t$$ with respect to the ANN parameters are expressed as:
@@ -51,7 +66,7 @@ __Table 1:__ _Parameters used in PSO Implementation_
 
 
 
-### Tuning the $$c_{1}$$ and $$c_{2}$$ parameters
+### Tuning the social and cognitive behaviour of the swarm
 Here, I swept over different values for the social and cognitive components, and came up with this matrix:
 
 ![Cmatrix for PSO params](/res/nn/cmatrix.png){:height="560px" width="560px"}  
@@ -64,11 +79,8 @@ However, because the value matrix doesn't give anything definitive regarding the
 a more heuristic approach is applied.
 
 ### Observation of Swarm Behavior
-
-Below is a simulation of the behavior of particles when $$c_{1} = 0$$ and $$c_{2} = 0$$
-
 The following images below show the simulation of the swarm (only at parameters $$\theta_{11}^{(1)}$$ and
-$$\theta_{12}^{(1)}) given different values of the social and cognitive components. Below these simulations,
+$$\theta_{12}^{(1)}$$) given different values of the social and cognitive components. Below these simulations,
 a graph of the cost is traced. One can then see the differences in their behavior by looking on the
 convergence of the "mean best" with respect to the personal and global bests.  
 
@@ -108,7 +120,6 @@ __Figure 4:__ _Generalization ability of the PSO-trained Neural Network over the
 {: style="text-align: center;"}
 
 ## Conclusion
-
 One of the main advantage of PSO is that there are only (at a minimum) two parameters to control. Balancing the tradeoff between exploitation and exploration is much easier as compared to other algorithms because it is much more intuitive. However, initialization is also important in PSO. It matters how the particles are distributed along the search space as it may increase or decrease their chances of finding the optimal solution. In this implementation, a small value of $$0.1$$ was used for the spread parameter $$\epsilon$$.
 
 Compared with the benchmark solution, the PSO has a tendency to run slower. Moreover, as the number of particles increase,
@@ -117,7 +128,10 @@ using advanced vectorization techniques in MATLAB, but overall, the PSO runtime 
 
 
 ## References
-[1] Kevin J. Lang and Michael J. Witbrock: Learning to Tell Two Spirals Apart. In: *Proceedings of the 1988 Connectionist Models Summer School*, Morgan Kauffman, 1998.  
-[2] http://www.ibiblio.org/pub/academic/computer-science/neural-networks/programs/bench/two-spirals   
++ A. Engelbrecht, *Computational Intelligence: An Introduction*, John Wiley & Sons, Ltd., 2007.  
++ J.M. Sopena, E. Romero,R. Alquezar, "Neural networks with periodic and monotonic activation functions: a comparative study in classification problems," _ICANN Ninth International Conference on Artificial Neural Networks_, 1999.
++ K.J. Lang and M.J. Witbrock, "Learning to Tell Two Spirals Apart", in: *Proceedings of the 1988 Connectionist Models Summer School*, Morgan Kauffman, 1998.  
++ [Two-Spirals in Neural Networks](http://www.ibiblio.org/pub/academic/computer-science/neural-networks/programs/bench/two-spirals), [Accessed: 17 January 2017].   
+
 
 You can access the repository [here.](https://github.com/ljvmiranda921/two-spiral-neural-net)

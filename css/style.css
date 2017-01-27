@@ -4,10 +4,10 @@
 */
 @import url(//fonts.googleapis.com/css?family=Roboto:300,400,700);
 
+
 body { padding-top: 20px; padding-bottom: 40px; font-family: 'Roboto', Georgia, Times; font-size: 16px; font-weight:300; }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Roboto', Georgia, Times; font-weight: 700;}
-
+h1,  h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Roboto', Georgia, Times; font-weight: 400;}
 blockquote p { font-size: 16px; line-height: 1.6em; }
 
 /* Masthead */
@@ -65,6 +65,14 @@ ul.swatch li:first-child { webkit-border-top-left-radius: 9px; -webkit-border-bo
 
 /* Contact */
 iframe {font-family: 'Roboto', Georgia, Times; font-size: 16px;}
+
+/* Page Content */
+.page-content {
+  padding: 30px 0;
+  background-color: #fff;
+}
+
+
 
 /* About */
 .about ul.list-unstyled li { line-height: 30px; text-indent: -30px; margin-left: 30px;}

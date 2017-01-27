@@ -10,10 +10,23 @@ This is a simple implementation of a 2-16-1 neural network trained using Particl
 
 ![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)  
 __Figure 1:__ _Graph of the Two-Spiral Problem_
-{: style="text-align: center;"}
+{: style="text-align: center;"}  
+
+
+## Table of Contents
+---
+1. [Introduction: Differential Evolution](#differential-evolution)
+2. [Methodology](#methodology)
+  - [Initialization of candidate solutions](#initialization)
+  - [Implementation parameters](#implementation-parameters)
+  - [Parameter Tuning: Mutation and Recombination](#tuning-the-mutation-and-recombination-parameters)
+  - [Optimization System Set-up](#optimization-system)
+3. [Results](#results)
+4. [Conclusion](#conclusion)
+
+
 
 ## Differential Evolution  
-
 As a member of a class of different evolutionary algorithms, DE is a population-based optimizer that generates
 perturbations given the current generation. But instead of generating vectors using samples from a predefined
 probability functions, DE perturbs vectors using the scaled difference of two randomly population vectors.
@@ -23,7 +36,7 @@ vector of the same index. Now, once the last trial vector has been tested, the s
 competitions become the parents for the next generation in the evolutionary cycle.
 
 
-## Methodology:
+## Methodology  
 
 ### Initialization
 For any particle $$n = 1,2, \dots , N$$, its position $$P$$ at time-step $$t$$ with respect to the ANN parameters are expressed as:
@@ -64,7 +77,7 @@ __Figure 2:__ _Value matrix for testing the mutation and recombination parameter
 As shown, it may be better to use lower mutation values coupled with very low recombination values.
 
 
-### DE Set-up  
+### Optimization System  
 1. __Mutation:__ For mutation, three random vectors are chosen, and relate them in order to produce the donor vector
 ,$$v_{i,G+1}$$. This method is controlled by the parameter $$F$$ ($$F \in [0,2]$$). The equation for producing the
 donor vector is $$v_{i,G+1} = x_{r1,G} + F (x_{r2,G} - x_{r3,G})$$
@@ -107,7 +120,13 @@ In terms of performance, DE and PSO's best solutions are not really that far apa
 
 
 ## References
-[1] Kevin J. Lang and Michael J. Witbrock: Learning to Tell Two Spirals Apart. In: *Proceedings of the 1988 Connectionist Models Summer School*, Morgan Kauffman, 1998.  
-[2] http://www.ibiblio.org/pub/academic/computer-science/neural-networks/programs/bench/two-spirals   
++ A. Engelbrecht, *Computational Intelligence: An Introduction*, John Wiley & Sons, Ltd., 2007.  
++ E.B. Baum and K.J. Lang, "Constructing Hidden Units Using Examples and Queries" _Advances
+in Neural Information Processing Systems_, vol. 3, pp. 904-910, 1993.
++ J.M. Sopena, E. Romero,R. Alquezar, "Neural networks with periodic and monotonic activation functions: a comparative study in classification problems," _ICANN Ninth International Conference on Artificial Neural Networks_, 1999.
++ K.J. Lang and M.J. Witbrock, "Learning to Tell Two Spirals Apart", in: *Proceedings of the 1988 Connectionist Models Summer School*, Morgan Kauffman, 1998.  
++ K.V. Price, R.M. Storn, J.A. Lampinen, _Differential Evolution: A Practical Approach to Global Evolution_, Springer, 2005.
++ [Two-Spirals in Neural Networks](http://www.ibiblio.org/pub/academic/computer-science/neural-networks/programs/bench/two-spirals), [Accessed: 17 January 2017].   
+
 
 You can access the repository [here.](https://github.com/ljvmiranda921/two-spiral-neural-net)

@@ -6,13 +6,35 @@ category: projects
 comments: true
 ---
 
+This is my implementation of the forward kinematics problem in Robotics. The forward kinematics problem involves finding the
+end-tip position of a manipulator in a coordinate space given its joint parameters (i.e., joint angles for revolute joints and
+link offset for prismatic joints). This means that given a certain _pose_ of a robotic arm, the xyz coordinates of the hand must be determined. For this implementation, I will be using the 6-DOF Stanford Manipulator as my basis.
+
+
+## Table of Contents
+---
+1. [Introduction: Stanford Arm](#stanford-arm)
+2. [Methodology](#methodology)
+  - [Denavit-Hartenberg Parameters](#denavit-hartenberg-parameters)
+  - [MATLAB Implementation](#matlab-implementation)
+    - [Transformation Matrix](#transformation-matrix)
+    - [Forward Kinematics](#forward-kinematics)
+3. [Simulation Results](#simulation-results)
+  - [Simulation 1](#simulation-1)
+  - [Simulation 2](#simulation-2)
+  - [Simulation 3](#simulation-3)
+4. [Conclusion](#conclusion)
+
+
 ## Stanford Arm
 
 The Stanford Arm, designed by Victor Scheinmann in 1969, can be considered to be one of the _classic manipulators_ in robotics, and is one of the first robots that are designed exclusively for computer control. In this project, I performed a forward kinematics procedure in simulating the arm.  
 
 Forward Kinematics uses different kinematic equations in order to compute for the end-tip position of a manipulator given its joint parameters. Joint parameters can refer to joint angles $$\theta$$ for revolute joints, or link lengths for prismatic joints. In solving for the Forward Kinematics, I utilized the Denavit-Hartenberg (DH) Parameters.  
 
-## Denavit-Hartenberg Parameters
+## Methodology
+
+### Denavit Hartenberg Parameters
 
 With DH Parameters, solving for the Forward Kinematics is easy. I only need to take four parameters for each joint $$i$$: $$\theta_{i}$$ for the joint angle, $$\alpha_{i}$$ for the link twist, $$d_{i}$$ for the link offset, and $$a_{i}$$ for the link length. Once I've obtained them, I can just  plug them in to this transformation matrix:  
 
@@ -48,10 +70,60 @@ $$
 V \equiv \begin{bmatrix}
 \theta_{1} & \theta_{2} & d_{3} & \theta_{5} & \theta_{6}
 \end{bmatrix}
-$$
+$$  
 
-## Simulation  
-Here are some simulations of my work. I tried different values for the joint parameters and the recorded the results in
+They are then limited in terms of physical constraints, such that:
+
+| Parameters   | Limitation |
+|:------------:|:----------:|
+| $$\theta_1$$ | [-180 180] |
+| $$\theta_2$$ | [-90 90]   |
+| $$d_3$$      | [1 3]      |
+| $$\theta_4$$ | [-180 180] |
+| $$\theta_5$$ | [-25 25]   |
+| $$\theta_6$$ | [-180 180] |  
+
+__Table 2:__ _Joint variable physical constraints_
+{: style="text-align: center;"}
+
+### MATLAB Implementation  
+The following code snippets will show my implementation of the forward kinematics of the Stanford Manipulator in MATLAB.
+
+#### Transformation Matrix  
+The transformation matrix is expressed as the function `getTransformMatrix`. It takes the DH parameters of a single joint as its input argument, and outputs the corresponding transformation matrix $$T_{i-1}^{i}$$.
+
+<?prettify?>
+<pre class="prettyprint linenums">
+function [T] = getTransformMatrix(theta, d, a, alpha)
+T = [cosd(theta) -sind(theta) * cosd(alpha) sind(theta) * sind(alpha) a * cosd(theta);...
+     sind(theta) cosd(theta) * cosd(alpha)  -cosd(theta) * sind(alpha) a * sind(theta);...
+     0,sind(alpha),cosd(alpha),d;...
+     0,0,0,1];
+end
+</pre>
+
+#### Forward Kinematics
+Forward kinematics then becomes a simple implementation of the `getTransformMatrix` above. By setting the link lengths constant, the end-tip position can be computed. In my case, I wrapped this function inside the method `forwardKinematics`:
+
+<?prettify?>
+<pre class="prettyprint linenums">
+function [T00,T01,T12,T23,T34,T45,T56,Etip] =  forwardKinematics(theta1,theta2,d3,theta4,theta5,theta6)
+
+T00 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1];
+T01 = getTransformMatrix(theta1,d1,0,-90);
+T12 = getTransformMatrix(theta2,d2,0,90);
+T23 = getTransformMatrix(0,d3,0,-90);
+T34 = getTransformMatrix(theta4,d4,0,-90);
+T45 = getTransformMatrix(theta5,0,0,90);
+T56 = getTransformMatrix(theta6,d6,0,0);
+
+Etip = T00 * T01 * T12 * T23 * T34 * T45 * T56;
+
+end
+</pre>
+
+## Simulation Results
+Here are some simulations of my work. I tried different values for the joint parameters and then recorded the results in
 GIF format. I also plotted the top and side views just to see how the manipulator is posed in terms of the x-y and x-z coordinates.
 
 

@@ -2,7 +2,7 @@
 layout: blog
 title: "Hello world!"
 date: 2017-01-17
-category: blog
+category: notebook
 comments: true
 ---
 
