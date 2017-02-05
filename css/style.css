@@ -107,9 +107,13 @@ td{
 
 
 pre.prettyprint { padding: 10px !important;
-				  margin: 40px; font-size: 12px;
+         display: block;
+				  margin: 40px;
+          font-size: 12px;
 				  width: auto;
-				  overflow: auto;}
+				  overflow: auto;
+          white-space: pre;
+          word-wrap: normal;}
 
 .step { border-radius: 50%;
 	-moz-border-radius: 50%;
