@@ -114,3 +114,8 @@ much lower as compared in the case of GA where initial costs are very high if a 
 + M. Dorigo. _Optimization, Learning and Natural Algorithms_. PhD thesis, Politecnico di Milano, 1992
 
 You can access the repository [here.](https://github.com/ljvmiranda921/tsp-ant-system)
+
+***
+#### Related Posts
+- [PSO-trained Neural Network for Solving the Two Spiral Problem](https://ljvmiranda921.github.io/projects/2017/01/17/pso-trained-neural-network-for-solving-the-two-spiral-problem/)
+- [DE-trained Neural Network for Solving the Two Spiral Problem](https://ljvmiranda921.github.io/projects/2017/01/17/de-trained-neural-network-for-solving-the-two-spiral-problem/)

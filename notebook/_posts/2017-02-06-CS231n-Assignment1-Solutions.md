@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CS231n Assignment#1 Solutions"
-date: 2017-02-09
+date: 2017-02-06
 category: notebook
 comments: true
 ---
@@ -18,5 +18,6 @@ The [first assignment](http://cs231n.github.io/assignments2016/assignment1/) is 
 - Higher Level Representations _(In-progress)_
 
 ## Implementing a kNN Classifier
-[Post](https://ljvmiranda921.github.io/) | [IPython notebook](https://github.com/ljvmiranda921/cs231n-assignments/blob/master/assignment1/knn.ipynb)  
+[Post](https://ljvmiranda921.github.io/cs231n/assignment1/knn/) | [IPython notebook](https://github.com/ljvmiranda921/cs231n-assignments/blob/master/assignment1/knn.ipynb)  
+_Completion Date:_ February 9, 2017  
 k-Nearest Neighbors was implemented in order to classify the examples in the CIFAR-10 dataset. The exercise involves the computation of the L2 Distance using two loops, one loop, and no loop (or vectorized implementation). Cross-validation was also implemented in order to find the best value of k.

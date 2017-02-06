@@ -135,3 +135,9 @@ using advanced vectorization techniques in MATLAB, but overall, the PSO runtime 
 
 
 You can access the repository [here.](https://github.com/ljvmiranda921/two-spiral-neural-net)
+
+***
+#### Related Posts
+- [Inverse Kinematics using Particle Swarm Optimization](https://ljvmiranda921.github.io/notebook/2017/02/04/inverse-kinematics-pso/)
+- [DE-trained Neural Network for Solving the Two Spiral Problem](https://ljvmiranda921.github.io/projects/2017/01/17/de-trained-neural-network-for-solving-the-two-spiral-problem/)
+- [Ant Colony Optimization for Solving the Travelling Salesman Problem](https://ljvmiranda921.github.io/projects/2017/01/18/ant-colony-optimization-tsp/)

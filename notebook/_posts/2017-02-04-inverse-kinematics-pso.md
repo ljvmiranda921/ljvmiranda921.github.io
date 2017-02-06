@@ -162,3 +162,8 @@ that an algebraically difficult problem can be solved in a different way. Other 
 even reduce the execution time so that IK problems can be solved in almost real-time.  
 
 Access the repository [here.](https://github.com/ljvmiranda921/inverse-kinematics-pso)
+
+***
+#### Related Posts
+- [PSO-trained Neural Network for Solving the Two Spiral Problem](https://ljvmiranda921.github.io/projects/2017/01/17/pso-trained-neural-network-for-solving-the-two-spiral-problem/)
+- [Forward Kinematics of Stanford Arm](https://ljvmiranda921.github.io/projects/2017/01/25/forward-kinematics-stanford-manipulator/)

@@ -172,3 +172,8 @@ Solving for the end-tip position given the joint parameters (or doing forward ki
 Limitations should also be imposed in the model with respect to the physical environment it belongs to. This is to avoid “impractical” or “illogical” movements being done by the manipulator.  
 
 Solving for the inverse kinematics proved to be very difficult algebraically. Multiple solutions often arise and it must always be checked with respect to the physical constraints imposed.
+
+***
+
+### Related Posts
+- [Inverse Kinematics using Particle Swarm Optimization](https://ljvmiranda921.github.io/notebook/2017/02/04/inverse-kinematics-pso/)

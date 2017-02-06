@@ -130,3 +130,8 @@ in Neural Information Processing Systems_, vol. 3, pp. 904-910, 1993.
 
 
 You can access the repository [here.](https://github.com/ljvmiranda921/two-spiral-neural-net)
+
+***
+#### Related Posts
+- [PSO-trained Neural Network for Solving the Two Spiral Problem](https://ljvmiranda921.github.io/projects/2017/01/17/pso-trained-neural-network-for-solving-the-two-spiral-problem/)
+- [Ant Colony Optimization for Solving the Travelling Salesman Problem](https://ljvmiranda921.github.io/projects/2017/01/18/ant-colony-optimization-tsp/)
