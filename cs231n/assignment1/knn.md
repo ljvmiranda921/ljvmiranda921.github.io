@@ -5,6 +5,7 @@ date: 2017-02-09
 category: notebook
 comments: true
 ---
+<sup>[CS231n: CONVOLUTIONAL NEURAL NETWORKS FOR VISUAL RECOGNITION](https://ljvmiranda921.github.io/notebook/2017/02/06/CS231n-Assignment1-Solutions/)</sup> 
 
 The basic idea for the k-Nearest Neighbors classifier is that we find the _k_ closest images in the dataset with
 respect to our query _x_. Here, we will perform the following processes:
@@ -26,7 +27,7 @@ We can visualize some examples in CIFAR-10, here we can see a sample of 10 class
 __Figure 1:__ _Samples of the CIFAR-10 Dataset_
 {: style="text-align: center;"}
 
-As we can see, for each class, there are distinct images related to it. For example, the `car` class is represented of different car images, some of which have different orientation, or different color. These images then represent a certain "template" that can be used by the classifier in order to categorize a test image.
+As we can see, for each class, there are distinct images related to it. For example, the `car` class is represented by different car images, some of which have different orientation or color. These images then make-up a certain "template" that can be used by the classifier in order to categorize a test image.
 
 # Compute for the L2 Distance
 Distance computation is a quantifiable means of comparing two images together. To compute for distance, pixel-wise differences are often implemented. In this method, distance is computed "pixel-by-pixel" and then the elements of the corresponding matrix is added together. Highly similar images will have lower values while different images will have higher values. Moreover, images that are exactly similar have a 0 distance. The choice of distance that was used in the assignment is the L2 distance:
@@ -86,23 +87,23 @@ With this equation, we can easily compute for the `dists` matrix without using a
 <?prettify?>
 <pre class="prettyprint linenums">
 num_test = X.shape[0]
-    num_train = self.X_train.shape[0]
-    dists = np.zeros((num_test, num_train))
-    test = np.reshape(np.sum(X*X, axis = 1),(-1,1))
-    train = np.reshape(np.sum(self.X_train*self.X_train, axis = 1),(1,-1))
-    temp = test + train - 2 * np.dot(X, np.transpose(self.X_train))
-	  dists = np.sqrt(temp)
+num_train = self.X_train.shape[0]
+dists = np.zeros((num_test, num_train))
+dists = np.sqrt((X**2).sum(axis=1)[:, np.newaxis] + (self.X_train**2).sum(axis=1) - 2 * X.dot(self.X_train.T))
 </pre>
 
 The vectorized version can in fact provide a very fast performance compared to the looped implementations. Using my own
 machine, I was able to obtain the following execution times:
 
 ```
-Two loop version took 211.117404 seconds
-One loop version took 135.111970 seconds
-No loop version took 5.534445 seconds
+Two loop version took 92.134323 seconds
+One loop version took 213.639710 seconds
+No loop version took 6.479004 seconds
 ```
-We were then able to reduce the time it takes to compute for the L2 Distance in a large dataset from 3 minutes to just 5 seconds. Very impressive indeed!
+We were then able to reduce the time it takes to compute for the L2 Distance in a large dataset from 3 minutes to just 6 seconds. Very impressive indeed!
+
+> You may notice that the one-loop implementation is much slower than the two-loop implementation, and it goes against the intuition that we had. The course instructors mentioned that the problem is system dependent and it's nothing to worry about. Source: [badmephisto's answer in "Assignment#1 knn -single loop slower than double loop"](https://www.reddit.com/r/cs231n/comments/451nb3/assignment_1_knn_single_loop_slower_than_double/)
+
 
 ## Visualize the distances
 We can plot the `dists` matrix and visualize the distances of our test examples with respect to different training examples. Here, as you look down, we are looking at a representation of our test examples. As you look from left to right, we see the training examples. Thus we have over 500 test examples and over 5000 training examples. Darker regions represent areas of low distance (more similar images) while lighter regions represent areas of high distance (more different images).
@@ -172,10 +173,15 @@ of line plot with error bars:
 __Figure 3:__ _Visualization of the cross-validation procedure with different k values_
 {: style="text-align: center;"}
 
-From now, we can choose a good k value. Let's take `k = 7`.
+From now, we can choose a good k value. Let's take `k = 10`.
 
 ```
 Got 141 / 500 correct => accuracy: 0.282000
 ```
 
 And thus we were able to obtain an accuracy of 28.2%. It is not as good as state-of-the-art classifiers today (a Convolutional Neural Network solution in [Kaggle](https://www.kaggle.com/c/cifar-10/leaderboard) was able to reach a whopping 95%). But this is a good start to learn the image classification pipeline and the efficiency of the vectorization method.
+
+***
+
+### Related Posts
+- [CS231n Assignment # 1](https://ljvmiranda921.github.io/notebook/2017/02/06/CS231n-Assignment1-Solutions/)
