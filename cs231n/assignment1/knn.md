@@ -5,7 +5,7 @@ date: 2017-02-09
 category: notebook
 comments: true
 ---
-<sup>[CS231n: CONVOLUTIONAL NEURAL NETWORKS FOR VISUAL RECOGNITION](https://ljvmiranda921.github.io/notebook/2017/02/06/CS231n-Assignment1-Solutions/)</sup> 
+<sup>[CS231n: CONVOLUTIONAL NEURAL NETWORKS FOR VISUAL RECOGNITION](https://ljvmiranda921.github.io/notebook/2017/02/06/CS231n-Assignment1-Solutions/)</sup>
 
 The basic idea for the k-Nearest Neighbors classifier is that we find the _k_ closest images in the dataset with
 respect to our query _x_. Here, we will perform the following processes:
@@ -185,3 +185,4 @@ And thus we were able to obtain an accuracy of 28.2%. It is not as good as state
 
 ### Related Posts
 - [CS231n Assignment # 1](https://ljvmiranda921.github.io/notebook/2017/02/06/CS231n-Assignment1-Solutions/)
+- [Training a Support Vector Machine](https://ljvmiranda921.github.io/cs231n/assignment1/svm/)
