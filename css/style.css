@@ -72,7 +72,9 @@ iframe {font-family: 'Roboto', Georgia, Times; font-size: 16px;}
   background-color: #fff;
 }
 
-
+.inner_div{
+    padding: 15px 160px 15px 160px;
+}
 
 /* About */
 .about ul.list-unstyled li { line-height: 30px; text-indent: -30px; margin-left: 30px;}
