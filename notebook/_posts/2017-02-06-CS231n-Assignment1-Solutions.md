@@ -13,7 +13,7 @@ The [first assignment](http://cs231n.github.io/assignments2016/assignment1/) is 
 
 - [Implementing a k-Nearest Neighbor classifier](#implementing-a-knn-classifier)
 - [Training a Support-Vector Machine](#svm)
-- Implementing a Softmax classifier _(In-progress)_
+- [Implementing a Softmax classifier](#softmax)
 - Two-Layer Neural Network _(In-progress)_
 - Higher Level Representations _(In-progress)_
 
@@ -26,3 +26,9 @@ k-Nearest Neighbors was implemented in order to classify the examples in the CIF
 [Post](https://ljvmiranda921.github.io/cs231n/assignment1/svm/) | [IPython notebook](https://github.com/ljvmiranda921/cs231n-assignments/blob/master/assignment1/svm.ipynb)  
 _Completion Date:_ February 11, 2017  
 A Support Vector Machine (SVM) was trained using stochastic gradient descent (SGD). The exercise involves the computation of the loss and gradient, and the implementation of the optimization algorithm SGD. Hyperparameters such as the learning rate and regularization strength were tuned to arrive at a better prediction accuracy.
+
+## <a name="softmax"></a> Implementing a Softmax Classifier
+[Post](https://ljvmiranda921.github.io/cs231n/assignment1/softmax/) | [IPython notebook](https://github.com/ljvmiranda921/cs231n-assignments/blob/master/assignment1/softmax.ipynb)  
+_Completion Date:_ February 14, 2017  
+A Softmax classifier was implemented using the cross-entropy loss function. This exercise involves the implementation of the loss and
+gradient computation for the cross-entropy function. 
