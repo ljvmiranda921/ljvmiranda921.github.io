@@ -186,3 +186,4 @@ And thus we were able to obtain an accuracy of 28.2%. It is not as good as state
 ### Related Posts
 - [CS231n Assignment # 1](https://ljvmiranda921.github.io/notebook/2017/02/06/CS231n-Assignment1-Solutions/)
 - [Training a Support Vector Machine](https://ljvmiranda921.github.io/cs231n/assignment1/svm/)
+- [Two Layer Neural Network](https://ljvmiranda921.github.io/cs231n/assignment1/ann/)

@@ -275,3 +275,4 @@ Here we can see an improvement from our k-NN classifier, both in terms of accura
 ### Related Posts
 - [CS231n Assignment # 1](https://ljvmiranda921.github.io/notebook/2017/02/06/CS231n-Assignment1-Solutions/)
 - [Implementing a k-NN classifier](https://ljvmiranda921.github.io/cs231n/assignment1/knn/)
+- [Two Layer Neural Network](https://ljvmiranda921.github.io/cs231n/assignment1/ann/)

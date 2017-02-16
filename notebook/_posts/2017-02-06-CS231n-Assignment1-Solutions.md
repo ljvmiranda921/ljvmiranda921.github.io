@@ -14,7 +14,7 @@ The [first assignment](http://cs231n.github.io/assignments2016/assignment1/) is 
 - [Implementing a k-Nearest Neighbor classifier](#implementing-a-knn-classifier)
 - [Training a Support-Vector Machine](#svm)
 - [Implementing a Softmax classifier](#softmax)
-- Two-Layer Neural Network _(In-progress)_
+- [Two-Layer Neural Network](#ann)
 - Higher Level Representations _(In-progress)_
 
 ## Implementing a kNN Classifier
@@ -31,4 +31,9 @@ A Support Vector Machine (SVM) was trained using stochastic gradient descent (SG
 [Post](https://ljvmiranda921.github.io/cs231n/assignment1/softmax/) | [IPython notebook](https://github.com/ljvmiranda921/cs231n-assignments/blob/master/assignment1/softmax.ipynb)  
 _Completion Date:_ February 14, 2017  
 A Softmax classifier was implemented using the cross-entropy loss function. This exercise involves the implementation of the loss and
-gradient computation for the cross-entropy function. 
+gradient computation for the cross-entropy function.
+
+## <a name="ann"></a> Two-Layer Neural Network
+[Post](https://ljvmiranda921.github.io/cs231n/assignment1/ann/) | [IPython notebook](https://github.com/ljvmiranda921/cs231n-assignments/blob/master/assignment1/two_layer_net.ipynb)  
+_Completion Date:_ February 17, 2017  
+A Two-Layer neural network was implemented with a ReLU in the hidden layer and Softmax Loss in the output layer. Computations for the forward and backward passes were implemented for the network, including the loss and gradient computation. The hyperparameters were tuned and the weights were visualized to show the effects of hypeparameter tuning to the weights in the network.

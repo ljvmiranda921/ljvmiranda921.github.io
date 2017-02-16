@@ -303,3 +303,10 @@ We can then see that the weights are more heterogeneous. This can then accommoda
 
 # Results
 Lastly, we implement our learned weights into our network, and check the test accuracy. For my implementation, I got `0.496`
+
+***
+
+### Related Posts
+- [CS231n Assignment # 1](https://ljvmiranda921.github.io/notebook/2017/02/06/CS231n-Assignment1-Solutions/)
+- [Training a Support Vector Machine](https://ljvmiranda921.github.io/cs231n/assignment1/svm/)
+- [Implementing a k-NN classifier](https://ljvmiranda921.github.io/cs231n/assignment1/knn/)
