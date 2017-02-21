@@ -11,3 +11,7 @@ kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
+
+# Gems
+gems:
+  - jekyll-seo-tag

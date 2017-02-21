@@ -12,7 +12,6 @@ description: Projects of Lester James V. Miranda
 		around the topics of macine learning and data science, so I hope you enjoy reading through them!</p>
 	<ul class="posts">
 	  {% for post in site.categories.projects %}
-	    <li style="margin: 9px 0;"><span style="font-family: 'Roboto'; font-weight: 400;">{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}" style="font-family: 'Roboto'; font-weight: 400;">{{ post.title }}</a>
-			<br>{{post.description}}</li>
+	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 	  {% endfor %}
 	</ul>

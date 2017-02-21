@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CS231n Assignment#1 Solutions"
+title: "Notes on CS231n Assignment 1"
 date: 2017-02-06
 category: notebook
 comments: true

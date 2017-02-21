@@ -107,16 +107,6 @@ td{
 .guide .notes { font-size: 12px; }
 .guide .notes h2 { font-size: 14px; }
 
-
-/*pre.prettyprint { padding: 10px !important;
-         display: block;
-				  margin: 40px;
-          font-size: 12px;
-				  width: auto;
-				  overflow: auto;
-          white-space: pre;
-          word-wrap: normal;} */
-
 .step { border-radius: 50%;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;

@@ -1,10 +1,10 @@
 ---
-layout: post
-title: "Ant Colony Optimization for Solving the Travelling Salesman Problem"
+layout: viz
+title: "Ant Colony Optimization"
 date: 2017-01-18
 category: projects
 comments: true
-description: "Solution for the berlin52 shortest path problem using ant colony optimization"
+description: "Solution for the berlin52 travelling salesman problem using ant colony optimization"
 ---
 
 

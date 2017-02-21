@@ -3,10 +3,21 @@ layout: wide
 notes: active
 ---
 
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-3">{{ page.title }}</h1>
+				<p class="lead">{{page.description}}</p>
+				<small><info datetime="{{ page.date }}">
+						{{ page.date | date_to_string | upcase }} {% if page.author %} BY <a href="https://ljvmiranda921.github.io/">{{ page.author }}</a>{% endif %}
+				</info></small>
+			</div>
+	</div>
+	<!--
 	<h1 style="font-size: 350%;">{{ page.title }}</h1>
 	<small><info datetime="{{ page.date }}">
 			{{ page.date | date_to_string | upcase }} {% if page.author %} BY <a href="https://ljvmiranda921.github.io/">{{ page.author }}</a>{% endif %}
 	</info></small>
+-->
 	<!-- Post content -->
 	<div class="notebody">
 				{{ content }}

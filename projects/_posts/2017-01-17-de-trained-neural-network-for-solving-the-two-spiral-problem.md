@@ -1,10 +1,10 @@
 ---
-layout: post
-title: "DE-trained Neural Network for Solving the Two Spiral Problem"
+layout: viz
+title: "DE Neural Network"
 date: 2017-01-17
 category: projects
 comments: true
-description: "Trained a neural network using differential evolution to solve the two-spiral problem"
+description: "Trained a neural network using differential evolution (DE) to solve the two-spiral problem"
 ---
 
 This is a simple implementation of a 2-16-1 neural network trained using Particle Swarm Optimization in order to solve the two-spiral problem. The $$\sin(z)$$ and $$\sigma(z)$$ activation functions were used for the input-hidden and hidden-output layers respectively. The cross-entropy error was used as the cost function. The two-spiral problem is a particularly difficult problem that requires separating two logistic spirals from one another [1] [2].
@@ -38,6 +38,9 @@ competitions become the parents for the next generation in the evolutionary cycl
 
 
 ## Methodology  
+For Differential Evolution, a three step process will be done. First, we will initialize the population, set-up the optimization system,
+and then tune the hyperparameters. Initialization will be based from a Gaussian distribution, while the tuning will involve
+the mutation and recombination parameters.
 
 ### Initialization
 For any particle $$n = 1,2, \dots , N$$, its position $$P$$ at time-step $$t$$ with respect to the ANN parameters are expressed as:
@@ -50,8 +53,23 @@ P_{n,t} \equiv \begin{bmatrix}
 $$
 
 The particle matrix __P__ was initialized using uniform distribution. This is to maximize the exploration capability of the particles
-over the search space by distributing it evenly. Using a gaussian distribution to initialize the particles will "scatter" it in a centered weight
+over the search space by distributing it evenly. Using a Gaussian distribution to initialize the particles will "scatter" it in a centered weight
 , reducing the exploration capacity.
+
+
+### Optimization System  
+1. __Mutation:__ For mutation, three random vectors are chosen, and relate them in order to produce the donor vector
+,$$v_{i,G+1}$$. This method is controlled by the parameter $$F$$ ($$F \in [0,2]$$). The equation for producing the
+donor vector is $$v_{i,G+1} = x_{r1,G} + F (x_{r2,G} - x_{r3,G})$$
+
+2. __Recombination:__ For recombination, the trial vector is built using the elements of the donor vector (donorVec)
+and the elements of your target vector. This means that for each particle in the population (for each row of
+particle) and for each dimension of that particle (for each column of each row of particle), a comparison is made with respect to the
+parameter $$CR$$.
+
+3. __Selection:__ For selection, the target vector is then compared against the trial vector if the fitness value is less
+than the computed fitness of the target, then that particle is replaced  with the one captured from the trial vector.
+After all particles are tested, we then have the second generation.
 
 ### Implementation Parameters  
 
@@ -68,6 +86,7 @@ over the search space by distributing it evenly. Using a gaussian distribution t
 __Table 1:__ _Parameters used in DE Implementation_
 {: style="text-align: center;"}
 
+
 ### Tuning the mutation and recombination parameters
 Here, I swept over different values of $$m$$ and $$c$$ in order to find good values for my final model.
 
@@ -78,19 +97,7 @@ __Figure 2:__ _Heat Map for testing the mutation and recombination parameters_
 As shown, it may be better to use lower mutation values coupled with very low recombination values.
 
 
-### Optimization System  
-1. __Mutation:__ For mutation, three random vectors are chosen, and relate them in order to produce the donor vector
-,$$v_{i,G+1}$$. This method is controlled by the parameter $$F$$ ($$F \in [0,2]$$). The equation for producing the
-donor vector is $$v_{i,G+1} = x_{r1,G} + F (x_{r2,G} - x_{r3,G})$$
 
-2. __Recombination:__ For recombination, the trial vector is built using the elements of the donor vector (donorVec)
-and the elements of your target vector. This means that for each particle in the population (for each row of
-particle) and for each dimension of that particle (for each column of each row of particle), a comparison is made with respect to the
-parameter $$CR$$.
-
-3. __Selection:__ For selection, the target vector is then compared against the trial vector if the fitness value is less
-than the computed fitness of the target, then that particle is replaced  with the one captured from the trial vector.
-After all particles are tested, we then have the second generation.
 
 
 ## Results:

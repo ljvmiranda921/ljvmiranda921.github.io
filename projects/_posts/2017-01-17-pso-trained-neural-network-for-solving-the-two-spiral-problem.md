@@ -1,10 +1,11 @@
 ---
-layout: post
-title: "PSO-trained Neural Network for Solving the Two Spiral Problem"
+layout: viz
+title: "PSO Neural Network"
 date: 2017-01-17
 category: projects
 comments: true
-description: "Trained a neural network using particle swarm optimization to solve the two-spiral problem"
+author: "LJ MIRANDA"
+description: "Trained a neural network using particle swarm optimization (PSO) to solve the two-spiral problem"
 ---
 
 
@@ -34,6 +35,9 @@ flock. In PSO, the particles are scattered throughout the hyperdimensional searc
 by the others in order to build a better solution.
 
 ## Methodology  
+For Particle Swarm Optimization, we first initialize the swarm, and then observe the effects of the social and cognitive parameters
+to its performance. After that, parameter tuning will be implemented as the neural network will be cross-validated with respect
+to the social and cognitive parameters.
 
 ### Initialization
 For any particle $$n = 1,2, \dots , N$$, its position $$P$$ at time-step $$t$$ with respect to the ANN parameters are expressed as:
