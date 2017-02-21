@@ -4,6 +4,7 @@ title: "Forward Kinematics of Stanford Arm"
 date: 2017-01-25
 category: projects
 comments: true
+description: "Simulation of robotic-arm movement using Denavit-Hartenberg parameters"
 ---
 
 This is my implementation of the forward kinematics problem in Robotics. The forward kinematics problem involves finding the

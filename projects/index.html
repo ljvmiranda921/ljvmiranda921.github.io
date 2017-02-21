@@ -8,10 +8,11 @@ description: Projects of Lester James V. Miranda
 ---
 
 	<h1>{{ page.title }}</h1>
-	<p>I am excited to share some of the projects I created, both from my course requirements and side projects that I am working on. Most of my
-	works revolve around machine learning and optimization, so expect a little bit of math in my posts (although I will try to limit them so that everyone can comprehend!).</p>
+	<p>I am excited to share some of the projects I created, both from my course requirements and side-projects that I am working on. My projects revolve
+		around the topics of macine learning and data science, so I hope you enjoy reading through them!</p>
 	<ul class="posts">
 	  {% for post in site.categories.projects %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	    <li style="margin: 9px 0;"><span style="font-family: 'Roboto'; font-weight: 400;">{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}" style="font-family: 'Roboto'; font-weight: 400;">{{ post.title }}</a>
+			<br>{{post.description}}</li>
 	  {% endfor %}
 	</ul>

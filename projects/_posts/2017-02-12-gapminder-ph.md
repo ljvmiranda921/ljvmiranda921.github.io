@@ -5,6 +5,7 @@ date: 2017-02-12
 category: projects
 comments: true
 author: "LJ MIRANDA"
+description: "A tribute to Hans Rosling's Gapminder chart, applied in the Philippine context."
 ---
 
 <br> In honor of Hans Rosling, who passed away last week, I decided to create a Gapminder plot for the Philippines. So here

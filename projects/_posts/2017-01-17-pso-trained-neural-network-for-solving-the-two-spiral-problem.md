@@ -4,6 +4,7 @@ title: "PSO-trained Neural Network for Solving the Two Spiral Problem"
 date: 2017-01-17
 category: projects
 comments: true
+description: "Trained a neural network using particle swarm optimization to solve the two-spiral problem"
 ---
 
 
@@ -11,7 +12,7 @@ comments: true
 
 This is a simple implementation of a 2-16-1 neural network trained using Particle Swarm Optimization in order to solve the two-spiral problem. The $$\sin(z)$$ and $$\sigma(z)$$ activation functions were used for the input-hidden and hidden-output layers respectively. The cross-entropy error was used as the cost function. The two-spiral problem is a particularly difficult problem that requires separating two logistic spirals from one another.
 
-![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)
+![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)  
 __Figure 1:__ _Graph of the Two-Spiral Problem_
 {: style="text-align: center;"}  
 
@@ -69,8 +70,8 @@ __Table 1:__ _Parameters used in PSO Implementation_
 ### Tuning the social and cognitive behaviour of the swarm
 Here, I swept over different values for the social and cognitive components, and came up with this matrix:
 
-![Cmatrix for PSO params](/res/nn/cmatrix.png){:height="560px" width="560px"}  
-__Figure 2:__ _Value matrix for testing the social and cognitive parameters_
+![Cmatrix for PSO params](/res/nn/cmatrix.png){:width="320px"}    
+__Figure 2:__ _Heat map for testing the social and cognitive parameters_
 {: style="text-align: center;"}
 
 From this value matrix, it is clear that accuracy may improve with values where the ratio of $$c_{1}$$ and $$c_{2}$$ is
@@ -84,7 +85,7 @@ $$\theta_{12}^{(1)}$$) given different values of the social and cognitive compon
 a graph of the cost is traced. One can then see the differences in their behavior by looking on the
 convergence of the "mean best" with respect to the personal and global bests.  
 
-![PSO Run for c1](/res/nn/pso_r_test1_zeroc1.gif){:height="250px" width="280px"} ![PSO Run c2](/res/nn/pso_r_test2_zeroc2.gif){:height="250px" width="280px"}
+![PSO Run for c1](/res/nn/pso_r_test1_zeroc1.gif){:height="250px" width="280px"} ![PSO Run c2](/res/nn/pso_r_test2_zeroc2.gif){:height="250px" width="280px"}  
 __Figure 2:__ _Swarm behavior at when it is fully social (left) and fully cognitive (right)_
 {: style="text-align: center;"}
 
@@ -115,7 +116,7 @@ __Table 2:__ _Parameter values for PSO Implementation_
 {: style="text-align: center;"}
 
 
-![Generalization ability of PSO](http://i.imgur.com/JtMGhr8l.png)  
+![Generalization ability of PSO](http://i.imgur.com/JtMGhr8l.png){:width="320px"}      
 __Figure 4:__ _Generalization ability of the PSO-trained Neural Network over the whole space_
 {: style="text-align: center;"}
 

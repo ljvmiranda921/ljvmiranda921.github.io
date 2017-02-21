@@ -4,6 +4,7 @@ title: "DE-trained Neural Network for Solving the Two Spiral Problem"
 date: 2017-01-17
 category: projects
 comments: true
+description: "Trained a neural network using differential evolution to solve the two-spiral problem"
 ---
 
 This is a simple implementation of a 2-16-1 neural network trained using Particle Swarm Optimization in order to solve the two-spiral problem. The $$\sin(z)$$ and $$\sigma(z)$$ activation functions were used for the input-hidden and hidden-output layers respectively. The cross-entropy error was used as the cost function. The two-spiral problem is a particularly difficult problem that requires separating two logistic spirals from one another [1] [2].
@@ -70,8 +71,8 @@ __Table 1:__ _Parameters used in DE Implementation_
 ### Tuning the mutation and recombination parameters
 Here, I swept over different values of $$m$$ and $$c$$ in order to find good values for my final model.
 
-![Cmatrix for DE params](/res/nn/cmatrix2.png){:height="560px" width="560px"}  
-__Figure 2:__ _Value matrix for testing the mutation and recombination parameters_
+![Cmatrix for DE params](/res/nn/cmatrix2.png){:width="320px"}       
+__Figure 2:__ _Heat Map for testing the mutation and recombination parameters_
 {: style="text-align: center;"}
 
 As shown, it may be better to use lower mutation values coupled with very low recombination values.
@@ -108,7 +109,7 @@ The best score that was achieved using this optimization algorithm is 84.8684% r
 __Table 2:__ _Parameter Values for DE Implementation_
 {: style="text-align: center;"}
 
-![Generalization ability of DE](http://i.imgur.com/oEHj0Dhl.png)  
+![Generalization ability of DE](http://i.imgur.com/oEHj0Dhl.png){:width="320px"}  
 __Figure 3:__ _Generalization ability of the DE-trained Neural Network over the whole space_
 {: style="text-align: center;"}
 
