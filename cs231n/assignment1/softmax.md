@@ -42,8 +42,7 @@ $$
 
 And we simply run this through all examples in our training set:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 num_train = X.shape[0]
 num_classes = W.shape[1]
 loss = 0.0
@@ -59,12 +58,11 @@ for i in range(num_train):
   for k in range(num_classes):
     p_k = p(k)
     dW[:, k] += (p_k - (k == y[i])) * X[i]
-</pre>
+```
 
 Notice that the form is similar to the SVM exercise that we had. Moreover, the $$p_{k}$$ equation above is expressed in code in terms of a lambda function. This makes everything much easier to do. Lastly, don't forget to regularize and normalize our `loss` and `dW` before returning them.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 # This is implemented outside our
 # nested loops
 loss /= num_train
@@ -73,13 +71,12 @@ dW /= num_train
 dW += reg*W
 
 return loss, dW
-</pre>
+```
 
 ## <a name="vector"></a> Vectorized Implementation
 I honestly found the vectorized implementation way easier than the naive one. It is because one has to simply follow the equations above. In this case, we have the following for the loss function:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 num_train = X.shape[0]
  f = X.dot(W)
  f -= np.max(f, axis=1, keepdims=True)
@@ -87,16 +84,15 @@ num_train = X.shape[0]
  p = np.exp(f)/sum_f
 
  loss = np.sum(-np.log(p[np.arange(num_train), y]))
-</pre>
+```
 
 And we have the following for the gradient:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 ind = np.zeros_like(p)
 ind[np.arange(num_train), y] = 1
 dW = X.T.dot(p - ind)
-</pre>
+```
 
 As usual, we should not forget to regularize and normalize our loss and gradient matrices.  
 

@@ -1,5 +1,13 @@
+# Site settings
+title: Lj Miranda
+email: lester.miranda@toki.waseda.jp
 permalink: pretty
 markdown: kramdown
+
+
+# Build settings
 highlighter: rouge
 kramdown:
+  input: GFM
+  auto_ids: true
   syntax_highlighter: rouge

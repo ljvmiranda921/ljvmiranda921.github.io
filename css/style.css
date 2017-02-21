@@ -108,14 +108,14 @@ td{
 .guide .notes h2 { font-size: 14px; }
 
 
-pre.prettyprint { padding: 10px !important;
+/*pre.prettyprint { padding: 10px !important;
          display: block;
 				  margin: 40px;
           font-size: 12px;
 				  width: auto;
 				  overflow: auto;
           white-space: pre;
-          word-wrap: normal;}
+          word-wrap: normal;} */
 
 .step { border-radius: 50%;
 	-moz-border-radius: 50%;
@@ -131,4 +131,4 @@ pre.prettyprint { padding: 10px !important;
 	margin: 5px 15px 0px 0px;
 	font-family: 'Roboto', Helvetica, sans-serif; }
 
-.prettyprint ol.linenums > li { list-style-type: decimal; }
+/* .prettyprint ol.linenums > li { list-style-type: decimal; } */

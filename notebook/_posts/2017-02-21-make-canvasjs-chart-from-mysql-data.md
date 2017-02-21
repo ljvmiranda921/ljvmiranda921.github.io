@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Make a CanvasJS Chart from MySQL Data"
+title: "How to make a CanvasJS Chart from MySQL Data"
 date: 2017-02-21
 category: notebook
 comments: true
@@ -37,16 +37,14 @@ We do steps 1 to 3 in the first part, and 4 to 5 in the second part.
 ## <a name="receive"></a> Receiving data from a MySQL Database
 First, we invoke an `AJAX` request containing the PHP service required. The structure of our request looks like this:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```javascript
 $.getJSON("myphpService.php", function(result){});
-</pre>
+```
 
 Here, `myphpService.php` contains the SQL queries that will be used to access data from our database. Later on, this data will be stored in the object `result`. Let's then write our `myphpService.php` script:
 
-<?prettify?>
-<pre class="prettyprint linenums">
-< ?php
+```php
+<?php
 /* We first connect to our database */
 $connection = mysqli_connect($dbhost,$user,$password,$database,$port);
 
@@ -75,7 +73,7 @@ else {
 		}
     mysqli_close($connection);
 ?>
-</pre>
+```
 
 So as usual, we connect to our database using `mysqli_connect()`. What we then do is that we declare an array containing our data points, and using SQL queries, we store the desired data in the variable `$result`. We then push everything inside our array, and encode the array in JSON form using `json_encode`. Do not forget to close the connection once you're done!
 
@@ -96,17 +94,15 @@ Another thing that you have to consider is to handle the error if the request di
 
 Let's look back again to our `.getJSON` command:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```javascript
 $.getJSON("myphpService.php", function(result){});
-</pre>
+```
 
 We now focus to our callback function. Remember that we store our JSON object into `result`. In order to access and manipulate that object (or in our case, to make charts out of it), we should write code inside the curly brackets of our callback function.
 
 Thus, inside our callback function, we can write something similar as:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```javascript
 $.getJSON("myphpService.php", function(result){
 var dps= [];
 
@@ -142,4 +138,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 chart.render();
 
 });
-</pre>
+```
+First, we process our `result` object by pushing it into an array `dps`. We do this by iterating over the length of the `result` object, and pushing it into a dictionary-like array given the following keys that we have in our JSON file. Afterwhich, we can simply invoke the chart-making function via `CanvasJS.Chart` and proceed with the necessary code.
+
+I hope that I was able to shed light on this subject more clearly. If you have any questions, don't hesitate to comment below!

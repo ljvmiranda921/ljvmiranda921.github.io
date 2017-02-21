@@ -101,10 +101,9 @@ In my implementation, I designated $$\mathbf{P}_{1}$$ as the initial configurati
 zero-position. This means that the angles are at 0 degrees and the link offset is also zero. I then
 generated the other $$N-1$$ particles using a uniform distribution where it is controlled by the hyperparameter $$\epsilon$$.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```matlab
 currentPos = np.random.uniform(0,1,epsilon, size_params]) * options[4] + params.T
-</pre>
+```
 
 ## Finding the global best solution
 In order to find the global best solution, the swarm must then be moved. This movement is then
@@ -122,15 +121,15 @@ $$
 
 Where $$y_{ij}$$ and $$y_{j}$$ are the personal and global best scores, respectively. Moreover, $$w$$ is the inertia weight that controls the "memory" of the swarm's previous position. In Python, this can be written as:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```matlab
 # Update velocity
 cognitive = (options[1] * np.random.uniform(0,1,[1,6])) * (pBestPos[particle,:] - currentPos[particle,:])
 social = (options[2] * np.random.uniform(0,1,[1,6])) * (gBestPos - currentPos[particle,:])
 velocityMatrix[particle,:] = (options[3] * velocityMatrix[particle,:]) + cognitive + social
 # Update position
 currentPos[particle,:] = currentPos[particle,:] + velocityMatrix[particle,:]
-</pre>
+```
+
 
 ## Simulation Results
 I tested my inverse kinematics implementation by letting the particles find an optimal joint

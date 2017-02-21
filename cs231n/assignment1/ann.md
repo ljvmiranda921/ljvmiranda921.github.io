@@ -24,8 +24,7 @@ In this exercise, a two-layer fully-connected artificial neural network (ANN) wa
 ## <a name="toy"></a> Toy Model Creation
 It is first important to build a small neural network in order to test our loss and gradient computations. This can then save us time and effort when debugging our code. Here, we will create a toy model, and a toy dataset in order to check our implementations:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 input_size = 4
 hidden_size = 10
 num_classes = 3
@@ -43,7 +42,7 @@ def init_toy_data():
 
 net = init_toy_model()
 X, y = init_toy_data()
-</pre>
+```
 
 Remember that `np.random.seed` was used so that our experiments are repeatable. This function makes the random numbers predictable. Thus, if we have a seed reset, the same numbers will appear every time. Again, the reason we do this is because we are implementing code that uses random numbers (i.e., `np.random.randn`) and if we want to debug this, we need this random number generator to output the same numbers _in the meantime_. The [answer](http://stackoverflow.com/questions/21494489/what-does-numpy-random-seed0-do) of John1024 in StackOverflow is also a good explanation of this function.
 
@@ -74,8 +73,7 @@ b2: Second layer biases; has shape (C,)
 ### <a name="loss"></a> Forward Pass: Loss computation
 Before we compute the loss, we need to first perform a forward pass. Because we are implementing a fully-connected layer, the forward pass is simply a straightforward dot matrix operation. We then compute for the pre-activation values `z1` and `z2` for the hidden and output layers respectively, and the activation for the first layer.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 # First layer pre-activation
 z1 = X.dot(W1) + b1
 
@@ -86,45 +84,42 @@ a1 = np.maximum(0, z1)
 z2 = a1.dot(W2) + b2
 
 scores = z2
-</pre>
+```
 
 The `scores` variable keeps the pre-activation values for the output layer. We will be using this in a while to find the activation values in the output layer, and consequently the cross-entropy loss.  
 
 So for the second-layer activation, we have:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 # Second layer activation
 exp_scores = np.exp(scores)
 a2 = exp_scores / np.sum(exp_scores, axis=1, keepdims=True)
-</pre>
+```
+
 
 And to compute for the loss, we perform the following code:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 corect_logprobs = -np.log(a2[range(N), y])
 data_loss = np.sum(corect_logprobs) / N
 reg_loss = 0.5 * reg * np.sum(W1 * W1) + 0.5 * reg * np.sum(W2 * W2)
 loss = data_loss + reg_loss
-</pre>
+```
 
 ### <a name="gradient"></a> Backward Pass: Gradient Computation
 We now implement the backward pass, where we compute the derivatives of the weights and biases and propagate them across the network. In this way, the network gets a feel of the contributions of each individual units, and adjusts itself accordingly so that the weights and biases are optimal.  
 
 We first compute for the gradients, thus we have:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 dscores = a2
 dscores[range(N),y] -= 1
 dscores /= N
-</pre>
+```
 
 And then we propagate them back to our network:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 # W2 and b2
 grads['W2'] = np.dot(a1.T, dscores)
 grads['b2'] = np.sum(dscores, axis=0)
@@ -138,46 +133,42 @@ dhidden[a1 <= 0] = 0
 # Finally into W,b
 grads['W1'] = np.dot(X.T, dhidden)
 grads['b1'] = np.sum(dhidden, axis=0)
-</pre>
+```
 
 We should not also forget to regularize our gradients:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 grads['W2'] += reg * W2
 grads['W1'] += reg * W1
-</pre>
+```
 
 ### <a name="batch"></a> Batch Training
 In our `TwoLayerNet` class, we also implement a `train()` function that trains the neural network using stochastic gradient descent. First, we create a random minibatch of training data and labels, then we store them in `X_batch` and `Y_batch` respectively:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 sample_indices = np.random.choice(np.arange(num_train), batch_size)
 X_batch = X[sample_indices]
 y_batch = y[sample_indices]
-</pre>
+```
 
 And then we update our parameters in our network.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 self.params['W1'] += -learning_rate * grads['W1']
 self.params['b1'] += -learning_rate * grads['b1']
 self.params['W2'] += -learning_rate * grads['W2']
 self.params['b2'] += -learning_rate * grads['b2']
-</pre>
+```
 
 ### Prediction
 Lastly, we implement a `predict()` function that classifies our inputs with respect to the scores and activations found after the output layer. We simply make a forward pass for the input, and then get the maximum of the scores that was found.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 z1 = X.dot(self.params['W1']) + self.params['b1']
 a1 = np.maximum(0, z1) # pass through ReLU activation function
 scores = a1.dot(self.params['W2']) + self.params['b2']
 y_pred = np.argmax(scores, axis=1)
-</pre>
+```
 
 ## <a name="testing"></a> Toy model testing
 Once we've implemented our functions, we can then test them to see if they are working properly. The IPython notebook tests our implementation by checking our computed scores with respect to the `correct scores` hardcoded in the program.
@@ -254,8 +245,7 @@ What we will be doing next is to tune our hyperparameters, and try to achieve a 
 ## Hyperparameter Tuning
 We then tune our parameters by sweeping through different values of learning rates and regularization strengths. For this implementation, I would like to attribute [MyHumbleSelf](https://github.com/MyHumbleSelf/cs231n/tree/master/assignment1)'s solution as my basis for finding a good combination of parameters.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 best_val = -1
 best_stats = None
 learning_rates = [1e-2, 1e-3]
@@ -291,7 +281,7 @@ for lr, reg in sorted(results):
                 lr, reg, train_accuracy, val_accuracy))
 
 print('best validation accuracy achieved during cross-validation: %f' % best_val)
-</pre>
+```
 
 From here, we were able to ramp up our validation accuracy up to `0.497000`. This is particularly good compared to our SVM and Softmax Implementation. If we visualize the learned weights, we can obtain the following figure:
 

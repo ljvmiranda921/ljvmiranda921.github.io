@@ -41,8 +41,7 @@ Thus, for images $$I_{1}$$ and $$I_{2}$$, we perform a sum of squares pixel comp
 ## <a name="twoloop"></a> Two-loop implementation
 The two-loop computation uses a nested-loop in order to compute for the pixel-wise L2 Distance between the test and train images. This is one of the easiest methods to implement, but it takes a toll on speed because of the looping nature.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 num_test = X.shape[0]
 num_train = self.X_train.shape[0]
 dists = np.zeros((num_test, num_train))
@@ -50,26 +49,24 @@ for i in xrange(num_test):
   for j in xrange(num_train):
     dists[i,j] = np.linalg.norm(self.X_train[j,:]-X[i,:])
 return dists
-</pre>
+```
 
 Here, I am implementing the [`np.linalg.norm`](https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.norm.html) function to compute for the norm (which is, in a sense, equivalent to the L2 equation) of `X_train` and `X`. Furthermore, this can also be implemented by religiously following the equation above, and thus we can have something similar below:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 dists[i,j] = np.sqrt(np.sum(np.square(X[i,:]-self.X_train[j,:])))
-</pre>
+```
 
 ## <a name="oneloop"></a> One-loop implementation
 For the one-loop implementation, what we do is that in our `dists` matrix, we compute for the distances _for each example in the test set_ `X` against the examples in the training set `X_train`. As we will see, instead of filling the `dists` matrix cell-by-cell (as we have done in the two-loop computation), we fill the `dists` matrix row-by-row, or in other words, by "test example by test example."
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 num_test = X.shape[0]
 num_train = self.X_train.shape[0]
 dists = np.zeros((num_test, num_train))
 for i in xrange(num_test):
   dists[i, :] = np.linalg.norm(self.X_train - X[i,:], axis = 1)
-</pre>
+```
 
 This is intuitively faster than the previous implementation, because the distance computation against the training set is done in parallel. In the next implementation, we will implement a fully-vectorized computation that can further improve the speed of our computations.
 
@@ -84,13 +81,12 @@ $$
 
 With this equation, we can easily compute for the `dists` matrix without using any loops, for this we implement the following:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 num_test = X.shape[0]
 num_train = self.X_train.shape[0]
 dists = np.zeros((num_test, num_train))
 dists = np.sqrt((X**2).sum(axis=1)[:, np.newaxis] + (self.X_train**2).sum(axis=1) - 2 * X.dot(self.X_train.T))
-</pre>
+```
 
 The vectorized version can in fact provide a very fast performance compared to the looped implementations. Using my own
 machine, I was able to obtain the following execution times:
@@ -102,7 +98,9 @@ No loop version took 6.479004 seconds
 ```
 We were then able to reduce the time it takes to compute for the L2 Distance in a large dataset from 3 minutes to just 6 seconds. Very impressive indeed!
 
-> You may notice that the one-loop implementation is much slower than the two-loop implementation, and it goes against the intuition that we had. The course instructors mentioned that the problem is system dependent and it's nothing to worry about. Source: [badmephisto's answer in "Assignment#1 knn -single loop slower than double loop"](https://www.reddit.com/r/cs231n/comments/451nb3/assignment_1_knn_single_loop_slower_than_double/)
+<div class="alert alert-info">
+ You may notice that the one-loop implementation is much slower than the two-loop implementation, and it goes against the intuition that we had. The course instructors mentioned that the problem is system dependent and it's nothing to worry about. Source: <a href="https://www.reddit.com/r/cs231n/comments/451nb3/assignment_1_knn_single_loop_slower_than_double/">badmephisto's answer in "Assignment#1 knn -single loop slower than double loop"</a>
+</div>
 
 
 ## Visualize the distances
@@ -121,8 +119,7 @@ One good method to know the best value of _k_, or the best number of neighbors t
 
 Firt we split the training set `X_train`:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 num_folds = 5
 k_choices = [1, 3, 5, 8, 10, 12, 15, 20, 50, 100]
 
@@ -131,14 +128,13 @@ y_train_folds = []
 
 X_train_folds = np.array_split(X_train, num_folds)
 y_train_folds = np.array_split(y_train, num_folds)
-</pre>
+```
 
 And then we perform cross-validation. Thus, for each k value, we will run the k-NN algorithm `num_folds` times. Here
 we will use all but one folds as our training data, and the last one as our validation set. We then store the accuracies of each
 fold and all values of k in the `k_to_accuracies` dictionary.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 for k in k_choices:
     k_to_accuracies[k] = []
 
@@ -164,7 +160,7 @@ for k in k_choices:
         accuracy = float(num_correct) / num_test
 
         k_to_accuracies[k].append(accuracy)
-</pre>
+```
 
 In order to see how the value of k changes with respect to our cross validation set, we can visualize them in terms
 of line plot with error bars:

@@ -92,21 +92,19 @@ The following code snippets will show my implementation of the forward kinematic
 #### Transformation Matrix  
 The transformation matrix is expressed as the function `getTransformMatrix`. It takes the DH parameters of a single joint as its input argument, and outputs the corresponding transformation matrix $$T_{i-1}^{i}$$.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```m
 function [T] = getTransformMatrix(theta, d, a, alpha)
 T = [cosd(theta) -sind(theta) * cosd(alpha) sind(theta) * sind(alpha) a * cosd(theta);...
      sind(theta) cosd(theta) * cosd(alpha)  -cosd(theta) * sind(alpha) a * sind(theta);...
      0,sind(alpha),cosd(alpha),d;...
      0,0,0,1];
 end
-</pre>
+```
 
 #### Forward Kinematics
 Forward kinematics then becomes a simple implementation of the `getTransformMatrix` above. By setting the link lengths constant, the end-tip position can be computed. In my case, I wrapped this function inside the method `forwardKinematics`:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```m
 function [T00,T01,T12,T23,T34,T45,T56,Etip] =  forwardKinematics(theta1,theta2,d3,theta4,theta5,theta6)
 
 T00 = [1 0 0 0; 0 1 0 0; 0 0 1 0; 0 0 0 1];
@@ -120,7 +118,7 @@ T56 = getTransformMatrix(theta6,d6,0,0);
 Etip = T00 * T01 * T12 * T23 * T34 * T45 * T56;
 
 end
-</pre>
+```
 
 ## Simulation Results
 Here are some simulations of my work. I tried different values for the joint parameters and then recorded the results in

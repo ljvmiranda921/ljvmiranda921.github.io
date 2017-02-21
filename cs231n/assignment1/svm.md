@@ -43,8 +43,7 @@ In machine learning, it is standard procedure to normalize the input features (o
 
 In Python, we can easily compute for the mean image by using `np.mean`. In this regard, we have:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 # Compute for the mean image
 mean_image = np.mean(X_train, axis=0)
 print(mean_image[:10]) # print a few of the elements
@@ -53,7 +52,7 @@ print(mean_image[:10]) # print a few of the elements
 plt.figure(figsize=(4,4))
 plt.imshow(mean_image.reshape((32,32,3)).astype('uint8'))
 plt.show()
-</pre>
+```
 
 Visualizing the mean image leads us to this figure
 
@@ -63,8 +62,7 @@ __Figure 2:__ _Visualization of mean image_
 
 We then subtract this mean image from our training and test data. Furthermore, we also append our bias matrix (made up of ones) so that our optimizer will treat both the weights and biases at the same time.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 # Subtract the mean image from train and test data
 X_train -= mean_image
 X_val -= mean_image
@@ -79,7 +77,7 @@ X_test = np.hstack([X_test, np.ones((X_test.shape[0], 1))])
 X_dev = np.hstack([X_dev, np.ones((X_dev.shape[0], 1))])
 
 print(X_train.shape, X_val.shape, X_test.shape, X_dev.shape)
-</pre>
+```
 
 This gives an additional dimension to our datasets:
 
@@ -119,8 +117,7 @@ For the equation above, we only count the number of classes that didn't pass thr
 
 In Python, we can implement a naive computation for the the gradient by this code:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 # Compute for the loss and gradient
 num_classes = W.shape[1]
 num_train = X.shape[0]
@@ -147,7 +144,7 @@ for i in range(num_train):
           loss += margin
           dW[:,y[i]] -= X[i,:]
           dW[:,j] += X[i,:]
-</pre>
+```
 
 This means that for each data example, we compute the scores, and take note of the score of the correct class.  
 
@@ -157,19 +154,17 @@ This means that for each data example, we compute the scores, and take note of t
 
 Also, don't forget to sum the gradient over all training examples and regularize it.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 # Divide all over training examples
 dW /= num_train
 # Add regularization
 dW += reg * W
-</pre>
+```
 
 ### <a name="vector"></a> Vectorized implementation of loss and gradient computation
 Implementing a vectorized computation for the loss is quite simple. First we compute the scores of the input with respect to the weights, and then we keep track of the scores, and get the maximum (with respect to 0) as it is being stored to the variable `margin`. Most of these are achievable using the `numpy` library:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 num_train = X.shape[0]
 delta = 1.0
 
@@ -191,12 +186,11 @@ loss /= num_train
 
 # Regularize
 loss += 0.5 * reg * np.sum(W * W)
-</pre>
+```
 
 In order to implement the vectorized version of our gradient computation, we first create a mask that flags the examples when their margin is greater than 0., and then, we proceed normally by counting the number of these examples:
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 # This mask can flag the examples in which their margin is greater than 0
 X_mask = np.zeros(margins.shape)
 X_mask[margins > 0] = 1
@@ -212,15 +206,14 @@ dW /= num_train
 
 # Regularize
 dW += reg*W
-</pre>
+```
 
 ## Stochastic Gradient Descent
 Remember that our main objective is to minimize the loss that was computed by our SVM. One way to do that is through gradient descent. Given then gradient vector that we have obtained earlier, we simply "move" our parameters to the direction that our gradient is pointing.
 
-<?prettify?>
-<pre class="prettyprint linenums">
+```python
 self.W += -learning_rate * grad
-</pre>
+```
 
 We can then train our SVM classifier using gradient descent and plot the loss with respect to the number of iterations.
 
