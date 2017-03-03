@@ -4,6 +4,7 @@ title: "DE Neural Network"
 date: 2017-01-17
 category: projects
 comments: true
+author: "LJ MIRANDA"
 description: "Trained a neural network using differential evolution (DE) to solve the two-spiral problem"
 ---
 
@@ -116,7 +117,7 @@ The best score that was achieved using this optimization algorithm is 84.8684% r
 __Table 2:__ _Parameter Values for DE Implementation_
 {: style="text-align: center;"}
 
-![Generalization ability of DE](http://i.imgur.com/oEHj0Dhl.png){:width="320px"}  
+![Generalization ability of DE](http://i.imgur.com/oEHj0Dhl.png){:width="640px"}  
 __Figure 3:__ _Generalization ability of the DE-trained Neural Network over the whole space_
 {: style="text-align: center;"}
 

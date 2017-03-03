@@ -121,4 +121,16 @@ td{
 	margin: 5px 15px 0px 0px;
 	font-family: 'Roboto', Helvetica, sans-serif; }
 
+.jumbotronTransp {
+ padding: 30px;
+ margin-bottom: 30px;
+ font-size: 21px;
+ font-weight: 200;
+ line-height: 2.1428571435;
+ color: inherit;
+ background-color: transparent;
+}
+
+
+
 /* .prettyprint ol.linenums > li { list-style-type: decimal; } */

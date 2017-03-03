@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: viz
 title: "Forward Kinematics of Stanford Arm"
 date: 2017-01-25
 category: projects
 comments: true
+author: "LJ MIRANDA"
 description: "Simulation of robotic-arm movement using Denavit-Hartenberg parameters"
 ---
 

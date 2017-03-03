@@ -4,6 +4,7 @@ title: "Ant Colony Optimization"
 date: 2017-01-18
 category: projects
 comments: true
+author: "LJ MIRANDA"
 description: "Solution for the berlin52 travelling salesman problem using ant colony optimization"
 ---
 

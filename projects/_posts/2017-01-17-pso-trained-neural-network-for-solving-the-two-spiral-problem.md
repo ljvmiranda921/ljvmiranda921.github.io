@@ -89,11 +89,11 @@ $$\theta_{12}^{(1)}$$) given different values of the social and cognitive compon
 a graph of the cost is traced. One can then see the differences in their behavior by looking on the
 convergence of the "mean best" with respect to the personal and global bests.  
 
-![PSO Run for c1](/res/nn/pso_r_test1_zeroc1.gif){:height="250px" width="280px"} ![PSO Run c2](/res/nn/pso_r_test2_zeroc2.gif){:height="250px" width="280px"}  
+![PSO Run for c1](/res/nn/pso_r_test1_zeroc1.gif){:height="250px" width="320px"} ![PSO Run c2](/res/nn/pso_r_test2_zeroc2.gif){:height="250px" width="320px"}  
 __Figure 2:__ _Swarm behavior at when it is fully social (left) and fully cognitive (right)_
 {: style="text-align: center;"}
 
-![PSO Run for c1](/res/nn/pso_r_test1_zeroc1.png){:height="250px" width="280px"} ![PSO Run c2](/res/nn/pso_r_test2_zeroc2.png){:height="250px" width="280px"}  
+![PSO Run for c1](/res/nn/pso_r_test1_zeroc1.png){:height="250px" width="320px"} ![PSO Run c2](/res/nn/pso_r_test2_zeroc2.png){:height="250px" width="320px"}  
 __Figure 3:__ _Graph of the cost per iteration_
 {: style="text-align: center;"}
 
@@ -120,7 +120,7 @@ __Table 2:__ _Parameter values for PSO Implementation_
 {: style="text-align: center;"}
 
 
-![Generalization ability of PSO](http://i.imgur.com/JtMGhr8l.png){:width="320px"}      
+![Generalization ability of PSO](http://i.imgur.com/JtMGhr8l.png){:width="640px"}      
 __Figure 4:__ _Generalization ability of the PSO-trained Neural Network over the whole space_
 {: style="text-align: center;"}
 
