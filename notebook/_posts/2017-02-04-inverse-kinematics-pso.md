@@ -47,7 +47,7 @@ my constraints are similar as before, and it's shown in the table below:
 | $$\theta_4$$ | $$-\pi$$              | $$\pi$$               |
 | $$\theta_5$$ | $$-\frac{5\pi}{36}$$  | $$\frac{5\pi}{36}$$  |
 | $$\theta_6$$ | $$-\pi$$              |  $$\pi$$              |
-
+{: .table }
 __Table 1:__ _Joint variable physical constraints_
 {: style="text-align: center;"}
 

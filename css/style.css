@@ -5,7 +5,7 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:300,400,700);
 
 
-body { padding-top: 20px; padding-bottom: 40px; font-family: 'Roboto', Georgia, Times; font-size: 16px; font-weight:300; }
+body { padding-top: 20px; padding-bottom: 40px; font-family: 'Roboto', Georgia, Times; font-size: 16px; font-weight:300;}
 
 h1,  h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Roboto', Georgia, Times; font-weight: 400;}
 blockquote p { font-size: 16px; line-height: 1.6em; }
@@ -81,7 +81,7 @@ iframe {font-family: 'Roboto', Georgia, Times; font-size: 16px;}
 
 
 /* Tables */
-
+/*
 table{
     border-collapse: collapse;
     border-spacing: 0;
@@ -95,6 +95,14 @@ th{
 
 td{
     border:1px solid #000000;
+}
+*/
+
+.table {
+    width: 75%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

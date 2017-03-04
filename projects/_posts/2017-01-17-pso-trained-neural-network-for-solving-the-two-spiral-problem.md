@@ -65,7 +65,7 @@ over the search space by distributing it evenly. Using a gaussian distribution t
 | `c_2`           | Social component (exploitation parameter).               |
 | `inertiaWeight` | Inertia weight that controls the movement of particles.  |
 |-----------------+----------------------------------------------------------|  
-
+{: .table}
 __Table 1:__ _Parameters used in PSO Implementation_
 {: style="text-align: center;"}
 
@@ -115,7 +115,7 @@ The best score that was achieved using this optimization algorithm is 85.5264% r
 | `c_2`           | 0.9                                                      |
 | `inertiaWeight` | 0.7                                                      |
 |-----------------+----------------------------------------------------------|  
-
+{: .table}
 __Table 2:__ _Parameter values for PSO Implementation_
 {: style="text-align: center;"}
 

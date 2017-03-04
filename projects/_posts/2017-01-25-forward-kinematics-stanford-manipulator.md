@@ -59,7 +59,7 @@ For the Stanford Arm, here are the DH Parameters:
 | 4     | $$\theta_{4}$$ | $$d_{4}$$ |   0   |     -90    |
 | 5     | $$\theta_{5}$$ |     0     |   0   |     90     |
 | 6     | $$\theta_{6}$$ | $$d_{6}$$ |   0   |      0     |  
-
+{: .table }
 __Table 1:__ _DH Parameters for the Stanford Arm_
 {: style="text-align: center;"}
 
@@ -84,7 +84,7 @@ They are then limited in terms of physical constraints, such that:
 | $$\theta_4$$ | [-180 180] |
 | $$\theta_5$$ | [-25 25]   |
 | $$\theta_6$$ | [-180 180] |  
-
+{: .table}
 __Table 2:__ _Joint variable physical constraints_
 {: style="text-align: center;"}
 

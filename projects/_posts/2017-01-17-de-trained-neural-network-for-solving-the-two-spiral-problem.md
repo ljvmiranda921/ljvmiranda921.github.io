@@ -83,7 +83,7 @@ After all particles are tested, we then have the second generation.
 | `mutationF`      | Degree of mutation effect (exploration parameter)        |
 | `recombinationC` | Degree of recombination effect (exploitation parameter)  |
 |------------------+----------------------------------------------------------|  
-
+{: .table}
 __Table 1:__ _Parameters used in DE Implementation_
 {: style="text-align: center;"}
 
@@ -113,7 +113,7 @@ The best score that was achieved using this optimization algorithm is 84.8684% r
 | `mutationF`      | 0.19                                                     |
 | `recombinationC` | 0.07                                                     |
 |------------------+----------------------------------------------------------|  
-
+{: .table}
 __Table 2:__ _Parameter Values for DE Implementation_
 {: style="text-align: center;"}
 

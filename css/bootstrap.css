@@ -1403,8 +1403,10 @@ th {
 }
 
 .table {
-  width: 100%;
+  width: 75%;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .table thead > tr > th,

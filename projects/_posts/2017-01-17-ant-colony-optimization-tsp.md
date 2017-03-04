@@ -91,7 +91,7 @@ The best solution for ACO was __7548.9927__ _(the optimal solution achieved by c
 | Pheromone Attraction, $$\alpha$$       | 15    |
 | Short-Path Bias, $$\beta$$             | 200   |
 |----------------------------------------+-------|  
-
+{: .table}
 __Table 1:__ _ACO Parameters that was used in the implementation_
 {: style="text-align: center;"}  
 
