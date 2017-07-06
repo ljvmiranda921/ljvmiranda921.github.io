@@ -160,7 +160,7 @@ implementing PSO and it's one of my go-to algorithms when testing out things. Th
 that an algebraically difficult problem can be solved in a different way. Other optimization algorithms can be used, and it may
 even reduce the execution time so that IK problems can be solved in almost real-time.  
 
-Access the repository [here.](https://github.com/ljvmiranda921/inverse-kinematics-pso)
+Access the gist [here.](https://gist.github.com/ljvmiranda921/7d8c48da0aa7565f0b3c01d7c951c5e9)
 
 ***
 

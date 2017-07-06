@@ -115,7 +115,7 @@ much lower as compared in the case of GA where initial costs are very high if a 
 + A. Schriver, "On the history of combinatorial optimization (until 1960)" in _Handbook of Discrete Optimization_, Elsevier, Amsterdam, pp. 1-68, 2005.
 + M. Dorigo. _Optimization, Learning and Natural Algorithms_. PhD thesis, Politecnico di Milano, 1992
 
-You can access the repository [here.](https://github.com/ljvmiranda921/tsp-ant-system)
+You can access the gist [here.](https://gist.github.com/ljvmiranda921/ca93059bc213531fd99af22955b6bf5f)
 
 ***
 

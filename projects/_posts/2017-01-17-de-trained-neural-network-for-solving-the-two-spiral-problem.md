@@ -138,7 +138,7 @@ in Neural Information Processing Systems_, vol. 3, pp. 904-910, 1993.
 + [Two-Spirals in Neural Networks](http://www.ibiblio.org/pub/academic/computer-science/neural-networks/programs/bench/two-spirals), [Accessed: 17 January 2017].   
 
 
-You can access the repository [here.](https://github.com/ljvmiranda921/two-spiral-neural-net)
+You can access the gist [here.](https://gist.github.com/ljvmiranda921/53939299b9e67f0df082e0127c7f229d)
 
 ***
 
