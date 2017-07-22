@@ -50,27 +50,27 @@ $connection = mysqli_connect($dbhost,$user,$password,$database,$port);
 
 /* Capture connection error if any */
 if (mysqli_connect_errno($connection)) {
-		echo "Failed to connect to DataBase: " . mysqli_connect_error();
-	}
+        echo "Failed to connect to DataBase: " . mysqli_connect_error();
+    }
 else {
 
   /* Declare an array containing our data points */
    $data_points = array();
 
   /* Usual SQL Queries */
-	 $query = "SELECT `timeStamp`,`myData2` FROM `myTable`";
-	 $result = mysqli_query($connection, $query);
+     $query = "SELECT `timeStamp`,`myData2` FROM `myTable`";
+     $result = mysqli_query($connection, $query);
 
-	 while($row = mysqli_fetch_array($result))
-		{        
+     while($row = mysqli_fetch_array($result))
+        {        
       /* Push the results in our array */
-			$point = array("ts" =>  $row['timeStamp'] ,"d1" =>  $row['myData1']);
-			array_push($data_points, $point);        
-		}
+            $point = array("ts" =>  $row['timeStamp'] ,"d1" =>  $row['myData1']);
+            array_push($data_points, $point);
+        }
 
     /* Encode this array in JSON form */
-		echo json_encode($data_points, JSON_NUMERIC_CHECK);
-		}
+        echo json_encode($data_points, JSON_NUMERIC_CHECK);
+        }
     mysqli_close($connection);
 ?>
 ```
@@ -113,26 +113,26 @@ for(var i=0; i<result.length;i++) {
 
 //Insert Chart-making function here
 var chart = new CanvasJS.Chart("chartContainer", {
-	zoomEnabled:true,
-	panEnabled:true,
-	animationEnabled:true,
-	title:{
-		text: "myChart from mySQL database"
-	},
+    zoomEnabled:true,
+    panEnabled:true,
+    animationEnabled:true,
+    title:{
+        text: "myChart from mySQL database"
+    },
 
-	axisX:{
-		title: "TimeStamp"
-	},
+    axisX:{
+        title: "TimeStamp"
+    },
 
         axisY:{
-		title: "myDataPoints",
-		minimum: 0
-	},
+        title: "myDataPoints",
+        minimum: 0
+    },
 
-	data: [{
-		type: "spline",
-		dataPoints:
-			dps
+    data: [{
+        type: "spline",
+        dataPoints:
+            dps
               }]
 });
 chart.render();
