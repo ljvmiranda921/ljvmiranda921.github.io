@@ -2,16 +2,30 @@
 @import url(//fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic);
 @import url(//fonts.googleapis.com/css?family=Montserrat);
 */
-@import url(//fonts.googleapis.com/css?family=Roboto:300,400,700);
+@import url(//fonts.googleapis.com/css?family=Roboto:300,400|Lora);
 
 
-body { padding-top: 20px; padding-bottom: 40px; font-family: 'Roboto', Georgia, Times; font-size: 16px; font-weight:400;}
+body {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-family: 'Lora', Georgia, Times;
+    font-size: 18px;
+}
 
-h1,  h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Roboto', Georgia, Times; font-weight: 400;}
-blockquote p { font-size: 16px; line-height: 1.6em; }
+h1,  h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { 
+    font-family: 'Roboto', Georgia, Times;
+    font-weight: 400;
+}
+
+blockquote p {
+    font-size: 16px;
+    line-height: 1.6em;
+}
 
 /* Masthead */
-.header, .footer, .header h3 { font-family: 'Roboto', Helvetica, sans-serif; text-transform: uppercase; font-weight: 400; }
+.header, .footer, .header h3 {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    text-transform: uppercase;}
 
 /* Navigation */
 h3.text-muted a {text-decoration: none; color: #999999; }
@@ -23,8 +37,6 @@ img.avatar { margin-bottom: 30px; }
 .container > hr { margin: 30px 0; }
 .container > hr.footer {margin-bottom: 15px; }
 
-/* E-Mail */
-.obfuscate { unicode-bidi: bidi-override; direction: rtl; }
 
 /* Jumbotron */
 .jumbotron { margin: 80px 0; }
@@ -41,19 +53,6 @@ ul.listnotes li {line-height: 30px; }
 /* Note */
 .note, .contact, .about, .error, .swatches { width: 85%; margin: 0 auto; line-height: 26px; }
 .note h2.date, .swatch-log h2.date { font-size: 24.5px; font-weight: 300; font-style: italic; }
-
-/* Swatches */
-.swatch-log h2.date { margin-bottom: 30px; }
-.swatch-log { margin: 30px auto 70px; height: 140px; }
-ul.swatch { list-style: none; margin: 0 auto; padding: 0; height: 50px; }
-ul.swatch li { text-transform: uppercase; display: inline; float: left; height: 80px; width: 75px; text-indent: -9999px; font-size: 14px; text-align: center; font-family: 'Montserrat', Helvetica, sans-serif; background-image: url(/img/glass.png); background-repeat: repeat-x; background-position: 0 50%;}
-ul.swatch li:hover { height: 75px; width: 75px; vertical-align: middle; text-indent: 0; }
-/*
-ul.swatch li:last-child { webkit-border-top-right-radius: 9px; -webkit-border-bottom-right-radius: 9px; -moz-border-radius-topright: 9px; -moz-border-radius-bottomright: 9px; border-top-right-radius: 9px; border-bottom-right-radius: 9px; }
-ul.swatch li:first-child { webkit-border-top-left-radius: 9px; -webkit-border-bottom-left-radius: 9px; -moz-border-radius-topleft: 9px; -moz-border-radius-bottomleft: 9px; border-top-left-radius: 9px; border-bottom-left-radius: 9px; }
-*/
-.swatch-log p { font-size: 14px; clear: left; margin-top: 10px; font-family: 'Montserrat', Helvetica, sans-serif; text-transform: uppercase; }
-.clear { clear: both; height: 20px; }
 
 /* CV */
 .cv {line-height: 23px; width: 90%; margin: 0 auto;}
@@ -94,31 +93,6 @@ iframe {font-family: 'Roboto', Georgia, Times; font-size: 16px;}
     line-height: 2.1428571435;
     color: inherit;
     background-color: transparent;
-}
-
-/* Guides */
-.guide { width: 90%; margin: 0 auto 60px auto; line-height: 26px;}
-.guide .title { padding: 100px 30px 0px; width: 100%; height: 60%; margin-bottom: 40px; background: #d5d5d5; color: #428bca; }
-.guide .title h1 { font-size: 46px; color: #181818; }
-.guide p { margin: 0 0 1em;  }
-.guide img { border: solid 1px #d5d5d5; border-radius: 4px; margin: 40px auto; display: block; }
-.guide .notes { font-size: 12px; }
-.guide .notes h2 { font-size: 14px; }
-
-.step {
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    background: #4679BD;
-    color: #FFF;
-    float: left;
-    text-align: center;
-    font-size: 24px;
-    padding-top: 5.5px;
-    margin: 5px 15px 0px 0px;
-    font-family: 'Roboto', Helvetica, sans-serif;
 }
 
 .lightParagraph {
