@@ -8,9 +8,6 @@ author: "LJ MIRANDA"
 description: "Trained a neural network using particle swarm optimization (PSO) to solve the two-spiral problem"
 ---
 
-
-
-
 This is a simple implementation of a 2-16-1 neural network trained using Particle Swarm Optimization in order to solve the two-spiral problem. The $$\sin(z)$$ and $$\sigma(z)$$ activation functions were used for the input-hidden and hidden-output layers respectively. The cross-entropy error was used as the cost function. The two-spiral problem is a particularly difficult problem that requires separating two logistic spirals from one another.
 
 ![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)  
