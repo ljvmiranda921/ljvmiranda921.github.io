@@ -1,9 +1,10 @@
 ---
-layout: blog
+layout: post
 title: "Twitter streaming using Python"
 date: 2017-02-24
 category: notebook
 comments: true
+author: "LJ MIRANDA"
 ---
 
 Streaming tweets can be a fun exercise in data mining. With almost a million tweets being published
@@ -36,7 +37,7 @@ following modules, you can simply install them using Git Bash and then `pip inst
 If you don't have a [Twitter](https://twitter.com/) account, make one. Once you're done, head over
 to https://apps.twitter.com/ and "Create a New App." You will then see a similar form below:
 
-![Create New App Form](/res/tuts/twitter/create.PNG){:width="560px"}  
+![Create New App Form](/assets/png/tuts/twitter/create.PNG){:width="560px"}  
 __Figure 1:__ _Create New Application Form_
 {: style="text-align: center;"}
 

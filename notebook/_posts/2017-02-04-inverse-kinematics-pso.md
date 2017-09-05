@@ -4,12 +4,14 @@ title: "Inverse Kinematics using Particle Swarm Optimization"
 date: 2017-02-04
 category: notebook
 comments: true
+math: true
+author: "LJ MIRANDA"
 ---
 In this notebook, I solved a 6-DOF Inverse Kinematics problem by treating it as an optimization problem. In this case,
 I implemented Particle Swarm Optimization (PSO) in order to find an _optimal_ solution from
-a set of candidate solutions.  
+a set of candidate solutions.
 
-Table of Contents:  
+Table of Contents:
 ---
 1. [Introduction](#introduction)
 2. [Treating the IK Problem as an Optimization Problem](#ik-problem-as-an-optimization-problem)  
@@ -137,11 +139,11 @@ configuration for the point (-2,2,3). My PSO parameters are the following:  `c_1
 I plotted the particle movement (in terms of their end-tip positions) in a 3D coordinate system, and made it into a GIF. Moreover,
 the proceeding chart shows the cost history of a single run.
 
-![Inverse Kinematics Simulation](/res/ikpso/swarmMovement.gif){:width="560px"}  
+![Inverse Kinematics Simulation](/assets/png/ikpso/swarmMovement.gif){:width="560px"}  
 __Figure 1:__ _Inverse Kinematics Simulation_
 {: style="text-align: center;"}
 
-![Cost History](/res/ikpso/costHistory.png){:width="560px"}  
+![Cost History](/assets/png/ikpso/costHistory.png){:width="560px"}  
 __Figure 2:__ _Cost History_
 {: style="text-align: center;"}
 
@@ -158,12 +160,6 @@ problem. A standard PSO global best algorithm with inertia weights was implement
 the desired end-tip position in almost a second. The choice of the optimization algorithm is purely personal, I enjoy
 implementing PSO and it's one of my go-to algorithms when testing out things. This notebook is a simple proof-of-concept
 that an algebraically difficult problem can be solved in a different way. Other optimization algorithms can be used, and it may
-even reduce the execution time so that IK problems can be solved in almost real-time.  
+even reduce the execution time so that IK problems can be solved in almost real-time.
 
 Access the gist [here.](https://gist.github.com/ljvmiranda921/7d8c48da0aa7565f0b3c01d7c951c5e9)
-
-***
-
-### Related Posts
-- [PSO-trained Neural Network for Solving the Two Spiral Problem](https://ljvmiranda921.github.io/projects/2017/01/17/pso-trained-neural-network-for-solving-the-two-spiral-problem/)
-- [Forward Kinematics of Stanford Arm](https://ljvmiranda921.github.io/projects/2017/01/25/forward-kinematics-stanford-manipulator/)

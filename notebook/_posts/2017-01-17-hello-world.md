@@ -1,9 +1,10 @@
 ---
-layout: blog
+layout: post
 title: "Hello world!"
 date: 2017-01-17
 category: notebook
 comments: true
+author: "LJ MIRANDA"
 ---
 
 Phew! Took me quite some time to finally set-up my GitHub pages. All thanks to this [tutorial](http://jmcglone.com/guides/github-pages/), and I was

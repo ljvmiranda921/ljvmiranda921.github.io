@@ -1,5 +1,5 @@
 ---
-layout: viz
+layout: post
 title: "Gotta Catch em All!"
 date: 2017-02-18
 category: projects
@@ -8,14 +8,14 @@ author: "LJ MIRANDA"
 description: "A data visualization exploring spawn rate and catch-flee ratios of different Pokemon in Pokemon GO."
 ---
 
-<br> I can describe myself as someone who "just joined the hype" of the recent Pok&eacute;mon GO mobile game. It was a fun summer, but when school kicked in
+I can describe myself as someone who "just joined the hype" of the recent Pok&eacute;mon GO mobile game. It was a fun summer, but when school kicked in
 and winter started taking over, I felt less inclined to go out and fill-up my Pok&eacute;dex. I still remember the days when our neighborhood is just _filled_ with Pidgeys and Rattatas, and _very few_ Abras that were almost "un-catchable." This inspired me to look into how other Pok&eacute;mon fare with respect to their spawn frequency and the ease on how they can be caught.  
 
 So here's a _magic quadrant_ exploring these features. Good thing that data for Pok&eacute;mon GO is already available online. However, please be mindful that several assumptions were made in the methods of data collection, so subtle biases, intended or not, may be present. You can check them [below](#notes). Moreover, if you're planning to use my dataset, you can first refer to my exploratory data analysis [here](https://github.com/ljvmiranda921/pkmn/blob/master/Exploratory%20Data%20Analysis%20of%20Pokemon%20GO%20Dataset.ipynb).
 
 You can play with this chart by hovering on different points so you can see the Pok&eacute;mon it represents. __Which Pok&eacute;mon is the most common and easiest to catch? Which one's the hardest? In which quadrant does more powerful Pok&eacute;mon lie?__ You can also click the legends on the right to hide some types so you can focus or compare between different types. Enjoy!  
 
-<iframe width="1078" height="1078" frameborder="0" scrolling="no" src="//plot.ly/~ljvmiranda/51.embed"></iframe>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~ljvmiranda/51.embed?autosize=True&link=false&width=30%&height=400"></iframe>
 
 ### Notes
 - The data for catch and flee rates was pulled by Reddit user [/u/The_Desert_Rain](https://www.reddit.com/user/The_Desert_Rain). In my visualization, I am using the base rates, this means that catching these Pok&eacute;mon gets harder as your level goes up. What [/u/The_Desert_Rain](https://www.reddit.com/user/The_Desert_Rain) and other Redditors are doing is that they are trying to reverse engineer the formulas and game mechanics in PokemonGO. Because the actual data is hidden, they look for patterns and compute for expected outcomes. It's so geeky and exciting! You can read more of their analyses [here](https://www.reddit.com/r/TheSilphRoad/comments/4vs70r/analysis_on_catch_rates_and_encounters/) and [here](https://www.reddit.com/r/TheSilphRoad/comments/4v52le/base_capture_rate/).

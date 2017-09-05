@@ -1,18 +1,19 @@
 ---
-layout: viz
+layout: post
 title: "DE Neural Network"
 date: 2017-01-17
 category: projects
 comments: true
 author: "LJ MIRANDA"
 description: "Trained a neural network using differential evolution (DE) to solve the two-spiral problem"
+math: true
 ---
 
 This is a simple implementation of a 2-16-1 neural network trained using Particle Swarm Optimization in order to solve the two-spiral problem. The $$\sin(z)$$ and $$\sigma(z)$$ activation functions were used for the input-hidden and hidden-output layers respectively. The cross-entropy error was used as the cost function. The two-spiral problem is a particularly difficult problem that requires separating two logistic spirals from one another [1] [2].
 
-![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)  
+![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)
 __Figure 1:__ _Graph of the Two-Spiral Problem_
-{: style="text-align: center;"}  
+{: style="text-align: center;"}
 
 
 ## Table of Contents
@@ -27,8 +28,7 @@ __Figure 1:__ _Graph of the Two-Spiral Problem_
 4. [Conclusion](#conclusion)
 
 
-
-## Differential Evolution  
+## Differential Evolution
 As a member of a class of different evolutionary algorithms, DE is a population-based optimizer that generates
 perturbations given the current generation. But instead of generating vectors using samples from a predefined
 probability functions, DE perturbs vectors using the scaled difference of two randomly population vectors.
@@ -37,8 +37,7 @@ Differential Evolution produces a trial vector, $$\mathbf{u}_{0}$$, that compete
 vector of the same index. Now, once the last trial vector has been tested, the survivors of the pairwise
 competitions become the parents for the next generation in the evolutionary cycle.
 
-
-## Methodology  
+## Methodology
 For Differential Evolution, a three step process will be done. First, we will initialize the population, set-up the optimization system,
 and then tune the hyperparameters. Initialization will be based from a Gaussian distribution, while the tuning will involve
 the mutation and recombination parameters.
@@ -56,7 +55,6 @@ $$
 The particle matrix __P__ was initialized using uniform distribution. This is to maximize the exploration capability of the particles
 over the search space by distributing it evenly. Using a Gaussian distribution to initialize the particles will "scatter" it in a centered weight
 , reducing the exploration capacity.
-
 
 ### Optimization System  
 1. __Mutation:__ For mutation, three random vectors are chosen, and relate them in order to produce the donor vector
@@ -91,14 +89,11 @@ __Table 1:__ _Parameters used in DE Implementation_
 ### Tuning the mutation and recombination parameters
 Here, I swept over different values of $$m$$ and $$c$$ in order to find good values for my final model.
 
-![Cmatrix for DE params](/res/nn/cmatrix2.png){:width="320px"}       
+![Cmatrix for DE params](/assets/png/nn/cmatrix2.png){:width="320px"}       
 __Figure 2:__ _Heat Map for testing the mutation and recombination parameters_
 {: style="text-align: center;"}
 
 As shown, it may be better to use lower mutation values coupled with very low recombination values.
-
-
-
 
 
 ## Results:
@@ -112,12 +107,12 @@ The best score that was achieved using this optimization algorithm is 84.8684% r
 | `epsilon_de`     | 0.1                                                      |
 | `mutationF`      | 0.19                                                     |
 | `recombinationC` | 0.07                                                     |
-|------------------+----------------------------------------------------------|  
+|------------------+----------------------------------------------------------|
 {: .table}
 __Table 2:__ _Parameter Values for DE Implementation_
 {: style="text-align: center;"}
 
-![Generalization ability of DE](http://i.imgur.com/oEHj0Dhl.png){:width="640px"}  
+![Generalization ability of DE](http://i.imgur.com/oEHj0Dhl.png){:width="640px"}
 __Figure 3:__ _Generalization ability of the DE-trained Neural Network over the whole space_
 {: style="text-align: center;"}
 
@@ -126,7 +121,6 @@ __Figure 3:__ _Generalization ability of the DE-trained Neural Network over the 
 Using the differential evolution to train a neural network is much faster as compared to PSO. However, one problem with PSO is on how the production of a _completely new_ generation is affected by the population size $$N$$. Because each vector is being replaced one by one, it may also require $$N$$ iterations in order to fully replace the current generation and find a more suitable candidate solution.
 
 In terms of performance, DE and PSO's best solutions are not really that far apart. Although these values are achieved in different iterations, i.e., DE needing more time to get to converge to a better solution. In my opinion, it is also possible to modify the DE algorithm by taking into consideration the gradient produced by backpropagation. This gradient may be used as a scale to "mutate" the donor vector, thus making the mutated vectors much better. Although this gradient needs to be modified so that the stochastic element is still present.
-
 
 ## References
 + A. Engelbrecht, *Computational Intelligence: An Introduction*, John Wiley & Sons, Ltd., 2007.  
@@ -137,11 +131,4 @@ in Neural Information Processing Systems_, vol. 3, pp. 904-910, 1993.
 + K.V. Price, R.M. Storn, J.A. Lampinen, _Differential Evolution: A Practical Approach to Global Evolution_, Springer, 2005.
 + [Two-Spirals in Neural Networks](http://www.ibiblio.org/pub/academic/computer-science/neural-networks/programs/bench/two-spirals), [Accessed: 17 January 2017].   
 
-
 You can access the gist [here.](https://gist.github.com/ljvmiranda921/53939299b9e67f0df082e0127c7f229d)
-
-***
-
-### Related Posts
-- [PSO-trained Neural Network for Solving the Two Spiral Problem](https://ljvmiranda921.github.io/projects/2017/01/17/pso-trained-neural-network-for-solving-the-two-spiral-problem/)
-- [Ant Colony Optimization for Solving the Travelling Salesman Problem](https://ljvmiranda921.github.io/projects/2017/01/18/ant-colony-optimization-tsp/)

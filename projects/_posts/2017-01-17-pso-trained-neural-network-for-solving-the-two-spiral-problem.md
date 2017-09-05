@@ -1,11 +1,12 @@
 ---
-layout: viz
+layout: post
 title: "PSO Neural Network"
 date: 2017-01-17
 category: projects
 comments: true
 author: "LJ MIRANDA"
 description: "Trained a neural network using particle swarm optimization (PSO) to solve the two-spiral problem"
+math: true
 ---
 
 This is a simple implementation of a 2-16-1 neural network trained using Particle Swarm Optimization in order to solve the two-spiral problem. The $$\sin(z)$$ and $$\sigma(z)$$ activation functions were used for the input-hidden and hidden-output layers respectively. The cross-entropy error was used as the cost function. The two-spiral problem is a particularly difficult problem that requires separating two logistic spirals from one another.
@@ -71,7 +72,7 @@ __Table 1:__ _Parameters used in PSO Implementation_
 ### Tuning the social and cognitive behaviour of the swarm
 Here, I swept over different values for the social and cognitive components, and came up with this matrix:
 
-![Cmatrix for PSO params](/res/nn/cmatrix.png){:width="320px"}    
+![Cmatrix for PSO params](/assets/png/nn/cmatrix.png){:width="320px"}    
 __Figure 2:__ _Heat map for testing the social and cognitive parameters_
 {: style="text-align: center;"}
 
@@ -86,11 +87,11 @@ $$\theta_{12}^{(1)}$$) given different values of the social and cognitive compon
 a graph of the cost is traced. One can then see the differences in their behavior by looking on the
 convergence of the "mean best" with respect to the personal and global bests.  
 
-![PSO Run for c1](/res/nn/pso_r_test1_zeroc1.gif){:height="250px" width="320px"} ![PSO Run c2](/res/nn/pso_r_test2_zeroc2.gif){:height="250px" width="320px"}  
+![PSO Run for c1](/assets/png/nn/pso_r_test1_zeroc1.gif){:height="250px" width="320px"} ![PSO Run c2](/assets/png/nn/pso_r_test2_zeroc2.gif){:height="250px" width="320px"}  
 __Figure 2:__ _Swarm behavior at when it is fully social (left) and fully cognitive (right)_
 {: style="text-align: center;"}
 
-![PSO Run for c1](/res/nn/pso_r_test1_zeroc1.png){:height="250px" width="320px"} ![PSO Run c2](/res/nn/pso_r_test2_zeroc2.png){:height="250px" width="320px"}  
+![PSO Run for c1](/assets/png/nn/pso_r_test1_zeroc1.png){:height="250px" width="320px"} ![PSO Run c2](/assets/png/nn/pso_r_test2_zeroc2.png){:height="250px" width="320px"}  
 __Figure 3:__ _Graph of the cost per iteration_
 {: style="text-align: center;"}
 
@@ -128,19 +129,10 @@ Compared with the benchmark solution, the PSO has a tendency to run slower. More
 the computational time increases because the size of the matrices to be computed also expands. This problem may be solved
 using advanced vectorization techniques in MATLAB, but overall, the PSO runtime often correlates with the swarm size.
 
-
 ## References
 + A. Engelbrecht, *Computational Intelligence: An Introduction*, John Wiley & Sons, Ltd., 2007.  
 + J.M. Sopena, E. Romero,R. Alquezar, "Neural networks with periodic and monotonic activation functions: a comparative study in classification problems," _ICANN Ninth International Conference on Artificial Neural Networks_, 1999.
 + K.J. Lang and M.J. Witbrock, "Learning to Tell Two Spirals Apart", in: *Proceedings of the 1988 Connectionist Models Summer School*, Morgan Kauffman, 1998.  
 + [Two-Spirals in Neural Networks](http://www.ibiblio.org/pub/academic/computer-science/neural-networks/programs/bench/two-spirals), [Accessed: 17 January 2017].   
 
-
 You can access the gist [here.](https://gist.github.com/ljvmiranda921/53939299b9e67f0df082e0127c7f229d)
-
-***
-
-### Related Posts
-- [Inverse Kinematics using Particle Swarm Optimization](https://ljvmiranda921.github.io/notebook/2017/02/04/inverse-kinematics-pso/)
-- [DE-trained Neural Network for Solving the Two Spiral Problem](https://ljvmiranda921.github.io/projects/2017/01/17/de-trained-neural-network-for-solving-the-two-spiral-problem/)
-- [Ant Colony Optimization for Solving the Travelling Salesman Problem](https://ljvmiranda921.github.io/projects/2017/01/18/ant-colony-optimization-tsp/)

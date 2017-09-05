@@ -1,5 +1,5 @@
 ---
-layout: viz
+layout: post
 title: "Gapminder PH"
 date: 2017-02-12
 category: projects

@@ -4,6 +4,7 @@ title: "Exploratory Data Analysis: Energy Use in the Philippines"
 date: 2017-01-18
 category: notebook
 comments: true
+author: "LJ MIRANDA"
 ---
 
 I am investigating the country's energy use given the World Development Indicators
@@ -33,7 +34,7 @@ The charts below show the percentage of the urban and rural population with acce
 ### Access to electricity over time
 
 
-![Access to electricity over time](/res/eda-energy/output_6_1.png)
+![Access to electricity over time](/assets/png/eda-energy/output_6_1.png)
 
 
 The chart above shows the population's access to electricity over a period of 20 years. Although there was a sharp division of resources in the 90s, access to this need is being
@@ -46,7 +47,7 @@ the steep rise done in the previous years.
 
 ### SEA Comparison
 
-![SEA Comparison](/res/eda-energy/output_9_1.png)
+![SEA Comparison](/assets/png/eda-energy/output_9_1.png)
 
 
 One can observe that both Philippines and Indonesia started out similarly in the 90s,
@@ -78,10 +79,10 @@ global warming and climate change.
 
 ### Energy Mix in the Philippines
 
-![Energy Mix in the Philippines-1](/res/eda-energy/output_13_1.png)
+![Energy Mix in the Philippines-1](/assets/png/eda-energy/output_13_1.png)
 
 
-![Energy Mix in the Philippines-2](/res/eda-energy/output_14_1.png)
+![Energy Mix in the Philippines-2](/assets/png/eda-energy/output_14_1.png)
 
 
 It is evident that the country is still reliant to fossil fuels as a main source of energy.
@@ -102,7 +103,7 @@ use of fossil fuels and the adoption of renewable energy through time.
 #### Fossil Fuel Use
 
 
-![Fossil Fuel Use](/res/eda-energy/output_18_0.png)
+![Fossil Fuel Use](/assets/png/eda-energy/output_18_0.png)
 
 
 The use of fossil fuel in the energy mix is shown in the figure above. It is interesting
@@ -114,7 +115,7 @@ The Philippines, on the other hand, is fourth from below in the level of fossil 
 
 #### Renewable Energy Adoption
 
-![Renewable Energy Adoption](/res/eda-energy/output_21_1.png)
+![Renewable Energy Adoption](/assets/png/eda-energy/output_21_1.png)
 
 
 The figure above shows the renewable energy adoption of different SEA
@@ -131,7 +132,7 @@ gases.
 
 ### Electric power consumption over time
 
-![Electric Power Consumption over time](/res/eda-energy/output_25_1.png)
+![Electric Power Consumption over time](/assets/png/eda-energy/output_25_1.png)
 
 
 It can be observed from the chart above that the power consumption
@@ -142,7 +143,7 @@ sources for our electricity use.
 
 ### Consumption footprint
 
-![Consumption footprint](/res/eda-energy/output_28_1.png)
+![Consumption footprint](/assets/png/eda-energy/output_28_1.png)
 
 
 These unprecedented effects are what we often call as our consumption foot-

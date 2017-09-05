@@ -1,11 +1,12 @@
 ---
-layout: viz
+layout: post
 title: "Forward Kinematics of Stanford Arm"
 date: 2017-01-25
 category: projects
 comments: true
 author: "LJ MIRANDA"
 description: "Simulation of robotic-arm movement using Denavit-Hartenberg parameters"
+math: true
 ---
 
 This is my implementation of the forward kinematics problem in Robotics. The forward kinematics problem involves finding the
@@ -131,7 +132,7 @@ GIF format. I also plotted the top and side views just to see how the manipulato
 $$\theta_{1}$$ = -90, $$\theta_{2}$$ = 90, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$\theta_{5}$$ = 25, $$\theta_{6}$$ = 90
 
 
-![Simulation 1](/res/robosim/fkine01.gif)  
+![Simulation 1](/assets/png/robosim/fkine01.gif)  
 __Figure 1a:__ _Forward Kinematics Simulation_
 {: style="text-align: center;"}
 ![Top and Side View](http://i.imgur.com/uxf2xKtl.png){:height="274px" width="560px"}  
@@ -144,7 +145,7 @@ $$\theta_{1}$$ = 180, $$\theta_{2}$$ = 0, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$
 
 
 
-![Simulation 2](/res/robosim/fkine02.gif)  
+![Simulation 2](/assets/png/robosim/fkine02.gif)  
 __Figure 2a:__ _Forward Kinematics Simulation_
 {: style="text-align: center;"}
 
@@ -158,7 +159,7 @@ __Figure 2b:__ _Top (left) and side (right) views of the manipulator's end-pose_
 $$\theta_{1}$$ = 90, $$\theta_{2}$$ = -45, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$\theta_{5}$$ = -25, $$\theta_{6}$$ = 45
 
 
-![Simulation 3](/res/robosim/fkine03.gif)  
+![Simulation 3](/assets/png/robosim/fkine03.gif)  
 __Figure 3a:__ _Forward Kinematics Simulation_
 {: style="text-align: center;"}
 

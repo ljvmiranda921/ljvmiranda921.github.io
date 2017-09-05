@@ -1,5 +1,5 @@
 ---
-layout: viz
+layout: post
 title: "Experiments with neural style transfer"
 date: 2017-05-28
 category: projects
@@ -10,25 +10,25 @@ description: "Training a convolutional neural network to perform style transfer 
 
 For one of my weekend projects, I chanced upon [this paper](https://arxiv.org/abs/1508.06576) of L.A. Gatys describing how we can use a convolutional neural network to transfer artistic style from one image to another. Here, I used the neural style transfer technique to learn the artistic style of various Filipino paintings. Painters range from Amorsolo to Manansala, and other modern artists such as Zobel. Enjoy!
 
-![Communities](/res/neural-style/communities.png){:width="560px"}   
+![Communities](/assets/png/neural-style/communities.png){:width="560px"}   
 __Figure 1:__ _Vicente Manansala's style in Communities was applied in a photo of the Manila Skyline._
 {: style="text-align: center;"}
 
-![Fruit Gatherer](/res/neural-style/fruit-gatherer.png){:width="560px"}   
+![Fruit Gatherer](/assets/png/neural-style/fruit-gatherer.png){:width="560px"}   
 __Figure 2:__ _Probably one of my favorites. Manansala's brush strokes applied to the facade of his alma mater._
 {: style="text-align: center;"}
 
-![Rivers](/res/neural-style/rivers.png){:width="560px"}   
+![Rivers](/assets/png/neural-style/rivers.png){:width="560px"}   
 __Figure 3:__ _Fernando Zobel's work as implemented into one of the buildings in Ateneo._
 {: style="text-align: center;"}
 
-![Sarimanok](/res/neural-style/sarimanok.png){:width="560px"}   
+![Sarimanok](/assets/png/neural-style/sarimanok.png){:width="560px"}   
 __Figure 4:__ _The work Sarimanok, aptly transfered to a pair of fighting cocks._
 {: style="text-align: center;"}
 
 Here is also Ateneo's Church of the Gesu, rendered in Van Gogh's Starry Night. What beauty!
 
-![Starry Night](/res/neural-style/starry-night.png){:width="560px"}   
+![Starry Night](/assets/png/neural-style/starry-night.png){:width="560px"}   
 __Figure 5:__ _Van Gogh's starry night in Church of the Gesu._
 {: style="text-align: center;"}
 

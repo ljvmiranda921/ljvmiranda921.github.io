@@ -1,9 +1,11 @@
 ---
-layout: blog
+layout: post
 title: "Softmax and the negative log-likelihood"
 date: 2017-08-13
 category: notebook
 comments: true
+author: "LJ MIRANDA"
+math: true
 ---
 
 In this notebook I will explain the softmax function, its relationship
@@ -40,7 +42,7 @@ Thus, given a three-class example below, the scores $$y_i$$ are computed from
 the forward propagation of the network. We then take the softmax and obtain
 the probabilities as shown:
 
-![Softmax computation](/res/cs231n-ann/softmax.png){:width="720px"}  
+![Softmax computation](/assets/png/cs231n-ann/softmax.png){:width="720px"}  
 __Figure 1:__ _Softmax Computation for three classes_
 {: style="text-align: center;"}
 
@@ -76,7 +78,7 @@ So if we are using the negative log-likelihood as our loss function, when
 does it become unhappy? And when does it become happy? Let's try to plot
 its range:
 
-![Negative log-likelihood](/res/cs231n-ann/neg_log.png){:width="720px"}  
+![Negative log-likelihood](/assets/png/cs231n-ann/neg_log.png){:width="720px"}  
 __Figure 2:__ _The loss function reaches infinity when input is 0, and reaches 0 when input is 1._
 {: style="text-align: center;"}
 
@@ -88,7 +90,7 @@ assigns high confidence at the correct class, the unhappiness is low, but
 when the network assigns low confidence at the correct class, the unhappiness
 is high.
 
-![Negative log-likelihood](/res/cs231n-ann/neg_log_demo.png){:width="720px"}  
+![Negative log-likelihood](/assets/png/cs231n-ann/neg_log_demo.png){:width="720px"}  
 __Figure 3:__ _When computing the loss, we can then see that higher confidence at the correct class leads to lower loss and vice-versa._
 {: style="text-align: center;"}
 

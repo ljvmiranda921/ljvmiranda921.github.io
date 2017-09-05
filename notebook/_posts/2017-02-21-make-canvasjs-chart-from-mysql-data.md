@@ -1,13 +1,13 @@
 ---
-layout: blog
+layout: post
 title: "How to make a CanvasJS Chart from MySQL Data"
 date: 2017-02-21
 category: notebook
 comments: true
+author: "LJ MIRANDA"
 ---
 
-> For those who were redirected here from my Wordpress site, I would like to welcome you to my new blog! I will be moving some
-of my older posts here so that in the future,  I can delete the entire Wordpress site entirely. Feel free to look around!
+> For those who were redirected here from my Wordpress site, I would like to welcome you to my new blog! I will be moving some of my older posts here so that in the future,  I can delete the entire Wordpress site entirely. Feel free to look around!
 
 For one of my projects during my undergrad years, I am required to render graphical charts in our website using data found from MySQL.
 Today, everything is much easier for you can use various web frameworks such as [Django](https://www.djangoproject.com/) and [Ruby on Rails](http://rubyonrails.org/). But for some of us who still enjoy the XAMPP stack, this simple task can be quite daunting.
@@ -21,7 +21,7 @@ different companies such as Intel, Boeing, and BMW. In this tutorial, I will tea
 You might need a little bit of Javascript and PHP experience here (although Javascript is given if you're doing web development), but I will
 provide some of the codes below. But first, in order to understand the bigger picture of what we'll do, take a look at the diagram below:
 
-![Diagram](/res/tuts/canvasjstogui.png){:width="560px"}  
+![Diagram](/assets/png/tuts/canvasjstogui.png){:width="560px"}  
 __Figure 1:__ _Task Diagram_
 {: style="text-align: center;"}
 
