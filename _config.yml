@@ -25,7 +25,19 @@ url: "https://ljvmiranda921.github.io" # the base hostname & protocol for your s
 permalink: pretty
 
 # Social settings
-github_username:  ljvmiranda921
+social_sites:
+  #twitter: jekyllrb
+  github:  ljvmiranda921
+  #dribbble: jekyll
+  #facebook: jekyll
+  #flickr: jekyll
+  #instagram: jekyll
+  linkedin: lesterjamesmiranda
+  #pinterest: jekyll
+  #youtube: jekyll
+  #googleplus: +jekyll
+
+rss: rss
 
 # Build settings
 markdown: kramdown
@@ -50,11 +62,11 @@ google_analytics: UA-NNNNNNNN-N
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-#header_pages:
+header_pages:
 #  - about.html
-#  - /cv/
-#  - /notebook/
-#  - /projects/
+  - /cv
+  - /notebook
+  - /projects
 
 
 # Exclude from processing.
