@@ -15,18 +15,6 @@ This is a simple implementation of a 2-16-1 neural network trained using Particl
 __Figure 1:__ _Graph of the Two-Spiral Problem_
 {: style="text-align: center;"}  
 
-
-## Table of Contents
----
-1. [Introduction: Particle Swarm Optimization](#particle-swarm-optimization)
-2. [Methodology](#methodology)
-  - [Particle Initialization](#initialization)
-  - [Implementation Parameters](#implementation-parameters)
-  - [Parameter Tuning: Social and Cognitive Components](#tuning-the-social-and-cognitive-behaviour-of-the-swarm)
-  - [Observation of Swarm Behavior](#observation-of-swarm-behavior)
-3. [Results](#results)
-4. [Conclusion](#conclusion)
-
 ## Particle Swarm Optimization
 Particle swarm optimization is a population-based search algorithm that is based on the social behavior of birds within a
 flock. In PSO, the particles are scattered throughout the hyperdimensional search space. These particles use the results found

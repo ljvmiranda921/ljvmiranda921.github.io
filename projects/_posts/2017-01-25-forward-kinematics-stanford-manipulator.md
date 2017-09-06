@@ -13,22 +13,6 @@ This is my implementation of the forward kinematics problem in Robotics. The for
 end-tip position of a manipulator in a coordinate space given its joint parameters (i.e., joint angles for revolute joints and
 link offset for prismatic joints). This means that given a certain _pose_ of a robotic arm, the xyz coordinates of the hand must be determined. For this implementation, I will be using the 6-DOF Stanford Manipulator as my basis.
 
-
-## Table of Contents
----
-1. [Introduction: Stanford Arm](#stanford-arm)
-2. [Methodology](#methodology)
-  - [Denavit-Hartenberg Parameters](#denavit-hartenberg-parameters)
-  - [MATLAB Implementation](#matlab-implementation)
-    - [Transformation Matrix](#transformation-matrix)
-    - [Forward Kinematics](#forward-kinematics)
-3. [Simulation Results](#simulation-results)
-  - [Simulation 1](#simulation-1)
-  - [Simulation 2](#simulation-2)
-  - [Simulation 3](#simulation-3)
-4. [Conclusion](#conclusion)
-
-
 ## Stanford Arm
 
 The Stanford Arm, designed by Victor Scheinmann in 1969, can be considered to be one of the _classic manipulators_ in robotics, and is one of the first robots that are designed exclusively for computer control. In this project, I performed a forward kinematics procedure in simulating the arm.  
@@ -173,8 +157,3 @@ Solving for the end-tip position given the joint parameters (or doing forward ki
 Limitations should also be imposed in the model with respect to the physical environment it belongs to. This is to avoid “impractical” or “illogical” movements being done by the manipulator.  
 
 Solving for the inverse kinematics proved to be very difficult algebraically. Multiple solutions often arise and it must always be checked with respect to the physical constraints imposed.
-
-***
-
-### Related Posts
-- [Inverse Kinematics using Particle Swarm Optimization](https://ljvmiranda921.github.io/notebook/2017/02/04/inverse-kinematics-pso/)

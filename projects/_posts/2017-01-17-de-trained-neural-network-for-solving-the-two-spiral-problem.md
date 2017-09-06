@@ -15,19 +15,6 @@ This is a simple implementation of a 2-16-1 neural network trained using Particl
 __Figure 1:__ _Graph of the Two-Spiral Problem_
 {: style="text-align: center;"}
 
-
-## Table of Contents
----
-1. [Introduction: Differential Evolution](#differential-evolution)
-2. [Methodology](#methodology)
-  - [Initialization of candidate solutions](#initialization)
-  - [Implementation parameters](#implementation-parameters)
-  - [Parameter Tuning: Mutation and Recombination](#tuning-the-mutation-and-recombination-parameters)
-  - [Optimization System Set-up](#optimization-system)
-3. [Results](#results)
-4. [Conclusion](#conclusion)
-
-
 ## Differential Evolution
 As a member of a class of different evolutionary algorithms, DE is a population-based optimizer that generates
 perturbations given the current generation. But instead of generating vectors using samples from a predefined
