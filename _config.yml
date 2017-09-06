@@ -62,11 +62,11 @@ google_analytics: UA-106021948-1
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-# header_pages:
+#header_pages:
 #  - about.html
-#  - /cv
-#  - /notebook
-#  - /projects
+  #- /cv/index.md
+  #- /notebook/index.md
+  #- /projects/index.md
 
 
 # Exclude from processing.

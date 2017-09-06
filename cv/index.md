@@ -1,7 +1,8 @@
 ---
-layout: default
-title: CV
+layout: page
+title: Curriculum Vitae
 description: Curriculum Vitae of Lester James V. Miranda
+permalink: /cv/
 ---
 
 # Lester James V. Miranda
