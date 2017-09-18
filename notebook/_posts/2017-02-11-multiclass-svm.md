@@ -265,10 +265,3 @@ linear SVM on raw pixels final test set accuracy: 0.380000
 ```
 
 Here we can see an improvement from our k-NN classifier, both in terms of accuracy and speed. By using a linear classifier, we eliminate the need to memorize the training data and look into it every time we see a test example. Instead, what we do is that we create a hypothesis of the training set, build a template, and compare these test examples into the template that we have built.
-
-***
-
-### Related Posts
-- [CS231n Assignment # 1](https://ljvmiranda921.github.io/notebook/2017/02/06/CS231n-Assignment1-Solutions/)
-- [Implementing a k-NN classifier](https://ljvmiranda921.github.io/cs231n/assignment1/knn/)
-- [Two Layer Neural Network](https://ljvmiranda921.github.io/cs231n/assignment1/ann/)

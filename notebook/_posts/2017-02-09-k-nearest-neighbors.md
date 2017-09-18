@@ -179,10 +179,3 @@ Got 141 / 500 correct => accuracy: 0.282000
 ```
 
 And thus we were able to obtain an accuracy of 28.2%. It is not as good as state-of-the-art classifiers today (a Convolutional Neural Network solution in [Kaggle](https://www.kaggle.com/c/cifar-10/leaderboard) was able to reach a whopping 95%). But this is a good start to learn the image classification pipeline and the efficiency of the vectorization method.
-
-***
-
-### Related Posts
-- [CS231n Assignment # 1](https://ljvmiranda921.github.io/notebook/2017/02/06/CS231n-Assignment1-Solutions/)
-- [Training a Support Vector Machine](https://ljvmiranda921.github.io/cs231n/assignment1/svm/)
-- [Two Layer Neural Network](https://ljvmiranda921.github.io/cs231n/assignment1/ann/)
