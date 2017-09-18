@@ -15,9 +15,10 @@ So here's a _magic quadrant_ exploring these features. Good thing that data for 
 
 You can play with this chart by hovering on different points so you can see the Pok&eacute;mon it represents. __Which Pok&eacute;mon is the most common and easiest to catch? Which one's the hardest? In which quadrant does more powerful Pok&eacute;mon lie?__ You can also click the legends on the right to hide some types so you can focus or compare between different types. Enjoy!  
 
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~ljvmiranda/51.embed?autosize=True&link=false&width=30%&height=400"></iframe>
+<iframe width="1200" height="1000" frameborder="0" scrolling="no" src="//plot.ly/~ljvmiranda/51.embed"></iframe>
 
 ### Notes
+
 - The data for catch and flee rates was pulled by Reddit user [/u/The_Desert_Rain](https://www.reddit.com/user/The_Desert_Rain). In my visualization, I am using the base rates, this means that catching these Pok&eacute;mon gets harder as your level goes up. What [/u/The_Desert_Rain](https://www.reddit.com/user/The_Desert_Rain) and other Redditors are doing is that they are trying to reverse engineer the formulas and game mechanics in PokemonGO. Because the actual data is hidden, they look for patterns and compute for expected outcomes. It's so geeky and exciting! You can read more of their analyses [here](https://www.reddit.com/r/TheSilphRoad/comments/4vs70r/analysis_on_catch_rates_and_encounters/) and [here](https://www.reddit.com/r/TheSilphRoad/comments/4v52le/base_capture_rate/).
 - The spawn rate was taken from the Pok&eacute;mon GO Hub's [website](https://pokemongohub.net/pokemon-go-spawn-rate/). Their methodology involves scraping the data from [Pok&eacute; Radar](http://www.pokeradar.io/) and computed the percentages on a one-week period across approximately 100 million historical data points. This then _normalizes_ the spawn rate irrespective of your geographical location (like Mr. Mime showing only in France or Water-type Pok&eacute;mon spawning near bodies of water).
 - The CP was taken as a basis of "strength." The data for this came from [Kaggle](https://www.kaggle.com/abcsds/pokemongo).
