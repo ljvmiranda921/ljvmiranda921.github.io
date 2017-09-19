@@ -12,9 +12,6 @@ dataset provided here in Kaggle. I am particularly interested to how the Philipp
 performing over time, as well as how it performs compared with its South-East Asian Neighbors. If you have any questions
 or suggestions, do not hesitate to reach me through the comments below. I would like to hear and learn from you!
 
-
-## Table of Contents
----
 1. [What percentage of the population has access to electricity?](#access-to-electricity)
     -  [Access to electricity over time](#access-to-electricity-over-time)   
     -  [Comparison to South-East Asian (SEA) countries](#sea-comparison)
