@@ -305,7 +305,36 @@ into an `html` file by Sphinx:
 ## Enabling reusability for my system
 
 According to research, reusability lowers your _hair-pulling-index_ by
-a hundred fold. 
+a hundred fold. Even with mediocre documentation, it is still possible
+to be very efficient with reusable code. But what does reusability mean
+in the context of our research work?
+
+Reusability, in one part, may mean a very effective code reuse. If you
+are using a block of code many times over, it is easier to convert
+them into a program function. If you have dozens of functions all over the
+place, and they all act at the same set of variables, it is much better
+to transform all of them into a class. Reusability then pertains to the
+organization of various components together semantically, that enables
+abstraction and usability through its parts. Programming paradigms such
+as __Object-oriented programming__ may be useful when organizing your
+code base: it lets you arrange parts of your code into meaningful
+components that have their own functions and properties.
+
+Reusability, at the same time, also enables you to peek at different
+versions of your code base during the entire course of its history. This
+is where version control systems such as [Git](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
+become handy. Later on, I will talk about how my Git workflow looks like,
+and how it became useful in my reseaerch.
+
+Lastly, it is then important for a reusable codebase to work on various
+systems and environments, although its importance vary on a case-to-case
+basis. In my work, I usually have my local machine running on Windows
+(my laptop) and a remote lab server on Linux. Software dependencies and
+some changes I make on one machine won't always be the same in the other.
+In such case, I need to have a system that simulates these environments,
+and builds them in a way that is compatible for both. Later on I will talk
+about [Travis CI](travis-ci.org) and how it helped me achieve a better
+build system.
 
 ### Treating everything like a library
 
