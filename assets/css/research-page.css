@@ -1,0 +1,39 @@
+.research {
+    padding-top: 5px;
+}
+
+.research .container {
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.research .title {
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.research span {
+    color: #c51b1b;
+    font-size: 16px;
+}
+
+.research span#date {
+    color: #169616;
+    font-size: 16px;
+}
+
+.research .publication {
+    font-size: 16px;
+}
+
+.research .thumbnail {
+    height: 150px;
+}
+
+.research .abstract {
+    font-size: 14px;
+    text-align: justify;
+    background-color: rgba(116, 208, 231, 0.150);
+    padding: 8px;
+}
