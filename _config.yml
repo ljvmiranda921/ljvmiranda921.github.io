@@ -70,6 +70,8 @@ future: true
   #- /notebook/index.md
   #- /projects/index.md
 
+# Include this line so that travis will not explode
+exclude: [vendor]
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

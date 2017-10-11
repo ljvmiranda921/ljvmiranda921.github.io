@@ -24,7 +24,7 @@ a preliminary abstract of my work.
     </span>
     </div>
     <a class="publication" href="{{ post.url }}">{{ post.publication }}</a>
-    <img class="thumbnail" src="{{ post.thumbnail }}">
+    <img class="thumbnail" src="{{ post.thumbnail }}" alt="Publication thumbnail">
     <div class="abstract">{{ post.abstract }}</div>
 </div>
 {% endfor %}

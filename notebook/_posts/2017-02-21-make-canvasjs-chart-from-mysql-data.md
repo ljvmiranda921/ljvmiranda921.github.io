@@ -78,7 +78,7 @@ else {
 So as usual, we connect to our database using `mysqli_connect()`. What we then do is that we declare an array containing our data points, and using SQL queries, we store the desired data in the variable `$result`. We then push everything inside our array, and encode the array in JSON form using `json_encode`. Do not forget to close the connection once you're done!
 
 <div class="alert alert-warning">
-  <strong>Take note!</strong> Be mindful that in practice, we don't store our user credentials as variables in our script. You can check some of the good PHP practices <a href="https://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17" class="alert-link">here</a> and <a href=" https://phpbestpractices.org/" class="alert-link">here</a>.
+  <strong>Take note!</strong> Be mindful that in practice, we don't store our user credentials as variables in our script. You can check some of the good PHP practices <a href="https://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17" class="alert-link">here</a> and <a href="https://phpbestpractices.org/" class="alert-link">here</a>.
 </div>
 
 Using this script, we can now access data from our database. Note that we're just using very simple SQL queries such as `SELECT` and `FROM`. This can vary depending on your needs, but the most important thing is that these values are pushed into the `$data_points` array so that they can be encoded in JSON form. The idea here is that through the `getJSON` command in our server, we get to receive whatever the .json file the script outputs. It is very handy in managing some of our data and very flexible as well.
