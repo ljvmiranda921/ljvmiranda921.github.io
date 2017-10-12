@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Research Works
-description: Research works of Lester James V. Miranda
+title: Research work
+description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
