@@ -23,7 +23,7 @@ a preliminary abstract of my work.
         {{post.authors}}
     </span>
     </div>
-    <a class="publication" href="{{ post.url }}">{{ post.publication }}</a>
+    <a class="publication" href="{{ post.link }}">{{ post.publication }}</a>
     <img class="thumbnail" src="{{ post.thumbnail }}" alt="Publication thumbnail">
     <div class="abstract">{{ post.abstract }}</div>
 </div>
