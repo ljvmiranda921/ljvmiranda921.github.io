@@ -5,14 +5,16 @@ description: Projects of Lester James V. Miranda
 permalink: /projects/
 ---
 
-Here are some of the works that I've done from my side-projects and 
-course requirements. These projects revolve around the topics of machine
-learning and data science, so I hope you enjoy reading through them!
+I present to you some of the works I've done for my side-projects. Check them out!
 
-<ul>
+<div class="projects-home">
+  <ul class="posts">
     {% for post in site.categories.projects %}
-    <li>
-        <span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li>
+      <li>
+        <span class="post-date">{{ post.date | date_to_string }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {{ post.description }}
+      </li>
     {% endfor %}
-</ul>
+  </ul>
+</div>

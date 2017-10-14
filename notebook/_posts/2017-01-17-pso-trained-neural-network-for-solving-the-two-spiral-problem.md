@@ -2,7 +2,7 @@
 layout: post
 title: "PSO Neural Network"
 date: 2017-01-17
-category: projects
+category: notebook
 comments: true
 author: "LJ MIRANDA"
 description: "Trained a neural network using particle swarm optimization (PSO) to solve the two-spiral problem"

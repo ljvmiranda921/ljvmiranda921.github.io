@@ -1,0 +1,17 @@
+.projects-home h1 { margin-bottom: 25px; }
+
+.projects-home .posts { list-style-type: none; }
+
+.projects-home .posts li { margin-bottom: 30px; }
+
+.projects-home .posts .post-link {
+  font-size: 20px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.projects-home .posts .post-date {
+  display: block;
+  font-size: 15px;
+  color: #818181;
+}

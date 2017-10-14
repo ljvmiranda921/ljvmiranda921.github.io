@@ -5,7 +5,7 @@ date: 2017-02-18
 category: projects
 comments: true
 author: "LJ MIRANDA"
-description: "A data visualization exploring spawn rate and catch-flee ratios of different Pokemon in Pokemon GO."
+description: "A data visualization exploring spawn rate and catch-flee ratios of Gen 1 Pokemon in Pokemon GO."
 ---
 
 I can describe myself as someone who "just joined the hype" of the recent Pok&eacute;mon GO mobile game. It was a fun summer, but when school kicked in
