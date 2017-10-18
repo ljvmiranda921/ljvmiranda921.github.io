@@ -5,7 +5,8 @@ date: 2017-05-28
 category: projects
 comments: true
 author: "LJ MIRANDA"
-description: "Training a convolutional neural network to perform style transfer on some Filipino paintings."
+summary: "Training a convolutional neural network to perform style transfer on some Filipino paintings."
+tags: [neural style transfer, deep learning, filipino paintings, convolutional neural network]
 ---
 
 For one of my weekend projects, I chanced upon [this paper](https://arxiv.org/abs/1508.06576) of L.A. Gatys describing how we can use a convolutional neural network to transfer artistic style from one image to another. Here, I used the neural style transfer technique to learn the artistic style of various Filipino paintings. Painters range from Amorsolo to Manansala, and other modern artists such as Zobel. Enjoy!
