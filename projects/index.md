@@ -13,7 +13,7 @@ I present to you some of the works I've done for my side-projects. Check them ou
       <li>
         <span class="post-date">{{ post.date | date_to_string }}</span>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        {{ post.description }}
+        {{ post.summary }}
       </li>
     {% endfor %}
   </ul>
