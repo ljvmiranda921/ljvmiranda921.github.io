@@ -53,6 +53,9 @@ kramdown:
 # Highlighter settings
 highlighter: rouge
 
+# Excerpt separator
+excerpt_separator: <!--more-->
+
 # Disqus
 disqus:
   shortname: ljvmiranda921-github-io-1

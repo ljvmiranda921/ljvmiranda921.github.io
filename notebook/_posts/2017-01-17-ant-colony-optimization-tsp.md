@@ -6,6 +6,10 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 description: "Solution for the berlin52 travelling salesman problem using ant colony optimization"
+tags:
+- ant colony optimization
+- courses
+- swarm intelligence
 ---
 
 This is an implementation of the Ant Colony Optimization to solve the Traveling Salesman Problem.
