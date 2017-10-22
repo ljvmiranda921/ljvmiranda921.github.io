@@ -1,7 +1,6 @@
 .pagination {
     height: 36px;
     margin: 18px 0;
-    text-align: center;
 }
 
 .pagination ul {
@@ -35,11 +34,11 @@
 
 .pagination a:hover,
 
-.pagination .selected a {
+.pagination .active a {
     background-color: #f5f5f5;
 }
 
-.pagination .selected a {
+.pagination .active a {
     color: #999999;
     cursor: default;
 }

@@ -19,13 +19,14 @@ I'll be posting a lot from a wide range of topics!
   {% for post in paginator.posts %}
     <li>
         <span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        <div class="my-excerpt">{{ post.excerpt }}</div>
+        <div class="my-excerpt"><span><p>&ldquo;{{ post.excerpt | remove: '<p>' | remove: '</p>' }}&hellip;&rdquo;</p></span></div>
     </li>
   {% endfor %}
 </ul>
 
 {% if paginator.total_pages > 1 %}
-  <ul class="pagination">
+<div class="pagination pagination-centered">
+  <ul>
 
       {% if paginator.previous_page %}
       <li class="previous">
@@ -35,7 +36,7 @@ I'll be posting a lot from a wide range of topics!
 
       {% if paginator.page_trail %}
         {% for trail in paginator.page_trail %}
-          <li {% if page.url == trail.path %}class="selected"{% endif %}>
+          <li {% if page.url == trail.path %}class="active"{% endif %}>
               <a href="{{ trail.path | prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}">{{ trail.num }}</a>
           </li>
         {% endfor %}
@@ -48,4 +49,5 @@ I'll be posting a lot from a wide range of topics!
       {% endif %}
 
   </ul>
+</div>
 {% endif %}
