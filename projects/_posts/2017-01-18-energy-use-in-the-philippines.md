@@ -2,7 +2,7 @@
 layout: post
 title: "Exploratory Data Analysis: Energy Use in the Philippines"
 date: 2017-01-18
-category: notebook
+category: projects
 comments: true
 author: "LJ MIRANDA"
 ---

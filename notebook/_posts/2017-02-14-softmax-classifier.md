@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Softmax Classifier"
+title: "Implementing a softmax classifier"
 date: 2017-02-14
 category: notebook
 comments: true

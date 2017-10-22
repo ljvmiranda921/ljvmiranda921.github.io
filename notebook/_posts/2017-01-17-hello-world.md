@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello world!"
-date: 2017-01-17
+date: 2017-01-16
 category: notebook
 comments: true
 author: "LJ MIRANDA"

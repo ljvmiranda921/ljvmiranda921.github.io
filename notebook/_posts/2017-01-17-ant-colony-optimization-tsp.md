@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ant Colony Optimization"
+title: "Solving the travelling salesman problem using ant colony optimization"
 date: 2017-01-18
 category: notebook
 comments: true

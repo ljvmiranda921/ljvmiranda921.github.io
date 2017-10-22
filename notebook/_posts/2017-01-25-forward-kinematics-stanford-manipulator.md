@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Forward Kinematics of Stanford Arm"
+title: "Solving the Forward Kinematics of a Stanford Arm"
 date: 2017-01-25
 category: notebook
 comments: true

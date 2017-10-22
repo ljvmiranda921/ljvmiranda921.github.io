@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Two-Layer Neural Network from scratch"
+title: "Implementing a two-layer neural network from scratch"
 date: 2017-02-17
 category: notebook
 comments: true
