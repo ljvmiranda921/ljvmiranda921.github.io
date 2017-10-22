@@ -7,9 +7,7 @@ comments: true
 author: "LJ MIRANDA"
 ---
 
-> For those who were redirected here from my Wordpress site, I would like to welcome you to my new blog! I will be moving some of my older posts here so that in the future,  I can delete the Wordpress site entirely. Feel free to look around!
-
-In most Raspberry Pi projects, sending data to a website (or in the website’s database) is very crucial. For example, in home automation, if we want to access the room’s sensor and consumption data in our devices through a website in real-time, we must first be able to do data transfer from RPi to website. In this tutorial, I am going to teach you a simple technique to do just that. We will be utilizing a `curl bash` command via Python in RPi, and we’ll build a simple PHP service in our website/client.
+In most Raspberry Pi projects, sending data to a website (or in the website’s database) is very crucial. For example, in home automation, if we want to access the room’s sensor and consumption data in our devices through a website in real-time, we must first be able to do data transfer from RPi to website. In this tutorial, I am going to teach you a simple technique to do just that<!--more-->. We will be utilizing a `curl bash` command via Python in RPi, and we’ll build a simple PHP service in our website/client.
 
 Here, `curl` sounds a very cute command when one hears it for the first time. For Linux users, this is nothing new for you. `curl` is a nifty command line tool for getting or sending files using URL syntax. To help you remember, you can write it this way: `cURL`. Meaning, just by changing the URL syntax, you can easily send data to your website!
 

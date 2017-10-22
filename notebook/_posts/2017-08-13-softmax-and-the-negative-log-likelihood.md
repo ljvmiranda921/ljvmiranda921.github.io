@@ -9,7 +9,7 @@ math: true
 ---
 
 In this notebook I will explain the softmax function, its relationship
-with the negative log-likelihood, and its derivative when doing the backpropagation algorithm. If there are any questions or clarifications,
+with the negative log-likelihood, and its derivative when doing the backpropagation algorithm<!--more-->. If there are any questions or clarifications,
 please leave a comment below.
 
 - [Softmax Activation Function](#softmax-activation-function)

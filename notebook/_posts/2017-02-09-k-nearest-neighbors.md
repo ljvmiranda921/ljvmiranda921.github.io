@@ -8,9 +8,8 @@ math: true
 author: "LJ MIRANDA"
 ---
 
-> I am currently following the [course notes](http://cs231n.github.io/) of CS231n: Convolutional Neural Networks for Visual Recognition in Stanford University. There are programming exercises involved, and I wanted to share my solutions to some of the problems.
-
-The basic idea for the k-Nearest Neighbors classifier is that we find the _k_ closest images in the dataset with
+In this post, we'll be implementing a k-Nearest neighbors classifier from
+scratch. The basic idea for the k-Nearest Neighbors classifier is that we find the _k_ closest images<!--more--> in the dataset with
 respect to our query _x_. Here, we will perform the following processes:
 
 - [Load the CIFAR-10 dataset](#load-the-cifar-10-dataset)

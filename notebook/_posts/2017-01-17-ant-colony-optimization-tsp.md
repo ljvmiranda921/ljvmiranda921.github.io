@@ -9,7 +9,8 @@ description: "Solution for the berlin52 travelling salesman problem using ant co
 ---
 
 This is an implementation of the Ant Colony Optimization to solve the Traveling Salesman Problem.
-In this project, the `berlin52` dataset that maps 52 different points in Berlin, Germany was used.
+In this project, the `berlin52` dataset that maps 52 different points in Berlin, Germany was used<!--more-->
+.
 
 ![Berlin52](http://i.imgur.com/tqkRm4dl.png)  
 __Figure 1:__ _Graph of the Berlin52 Dataset_
