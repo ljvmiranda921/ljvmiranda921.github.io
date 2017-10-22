@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Softmax and the negative log-likelihood"
+title: "Understanding softmax and the negative log-likelihood"
 date: 2017-08-13
 category: notebook
 comments: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PSO Neural Network"
+title: "Training a neural network using particle swarm optimization"
 date: 2017-01-17
 category: notebook
 comments: true

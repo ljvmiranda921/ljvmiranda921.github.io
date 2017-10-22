@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Twitter streaming using Python"
+title: "How to stream Twitter using Python"
 date: 2017-02-24
 category: notebook
 comments: true

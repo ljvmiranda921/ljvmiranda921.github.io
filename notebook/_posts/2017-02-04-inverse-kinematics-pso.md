@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Inverse Kinematics using Particle Swarm Optimization"
+title: "Solving the Inverse Kinematics problem using Particle Swarm Optimization"
 date: 2017-02-04
 category: notebook
 comments: true

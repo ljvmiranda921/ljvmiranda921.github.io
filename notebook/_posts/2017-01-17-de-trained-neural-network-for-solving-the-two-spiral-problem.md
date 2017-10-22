@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DE Neural Network"
+title: "Training a neural network using differential evolution"
 date: 2017-01-17
 category: notebook
 comments: true
