@@ -6,11 +6,15 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 math: true
+tags:
+- softmax
+- machine learning
+- neural networks
 ---
 
 In this notebook I will explain the softmax function, its relationship
 with the negative log-likelihood, and its derivative when doing the backpropagation algorithm. If there are any questions or clarifications,
-please leave a comment below.
+please leave a comment below<!--more-->.
 
 - [Softmax Activation Function](#softmax-activation-function)
 - [Negative log-likelihood](#negative-log-likelihood)

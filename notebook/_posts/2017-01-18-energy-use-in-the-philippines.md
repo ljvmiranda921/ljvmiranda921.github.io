@@ -5,11 +5,16 @@ date: 2017-01-18
 category: notebook
 comments: true
 author: "LJ MIRANDA"
+tags:
+- exploratory data analysis
+- data visualization
+- philippines
+- data project
 ---
 
 I am investigating the country's energy use given the World Development Indicators
 dataset provided here in Kaggle. I am particularly interested to how the Philippines has been
-performing over time, as well as how it performs compared with its South-East Asian Neighbors. If you have any questions
+performing over time, as well as how it performs compared with its South-East Asian Neighbors<!--more-->. If you have any questions
 or suggestions, do not hesitate to reach me through the comments below. I would like to hear and learn from you!
 
 1. [What percentage of the population has access to electricity?](#access-to-electricity)

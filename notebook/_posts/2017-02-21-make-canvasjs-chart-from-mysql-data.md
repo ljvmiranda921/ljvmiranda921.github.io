@@ -5,12 +5,14 @@ date: 2017-02-21
 category: notebook
 comments: true
 author: "LJ MIRANDA"
+tags:
+- canvasjs
+- tutorial
+- web development
 ---
 
-> For those who were redirected here from my Wordpress site, I would like to welcome you to my new blog! I will be moving some of my older posts here so that in the future,  I can delete the Wordpress site entirely. Feel free to look around!
-
 For one of my projects during my undergrad years, I am required to render graphical charts in our website using data found from MySQL.
-Today, everything is much easier for you can use various web frameworks such as [Django](https://www.djangoproject.com/) and [Ruby on Rails](http://rubyonrails.org/). But for some of us who still enjoy the XAMPP stack, this simple task can be quite daunting.
+Today, everything is much easier for you can use various web frameworks such as [Django](https://www.djangoproject.com/) and [Ruby on Rails](http://rubyonrails.org/). But for some of us who still enjoy the XAMPP stack, this simple task can be quite daunting <!--more-->.
 
 Back in those years, I am utilizing a Javascript library called [CanvasJS](http://canvasjs.com/). It is fast and easy, and is being used by
 different companies such as Intel, Boeing, and BMW. In this tutorial, I will teach you how two things, these are:

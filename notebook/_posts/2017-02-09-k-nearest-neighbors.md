@@ -6,11 +6,15 @@ category: notebook
 comments: true
 math: true
 author: "LJ MIRANDA"
+tags:
+- cs231n
+- k-nearest neighbors
+- machine learning
 ---
 
-> I am currently following the [course notes](http://cs231n.github.io/) of CS231n: Convolutional Neural Networks for Visual Recognition in Stanford University. There are programming exercises involved, and I wanted to share my solutions to some of the problems.
-
-The basic idea for the k-Nearest Neighbors classifier is that we find the _k_ closest images in the dataset with
+Here's my write-up for the CS231N class on Convolutional Neural Networks. The first
+assignment requires us to familiarize with the simple k-NN algorithm.
+The basic idea for the k-Nearest Neighbors classifier is that we find the _k_ closest images <!--more--> in the dataset with
 respect to our query _x_. Here, we will perform the following processes:
 
 - [Load the CIFAR-10 dataset](#load-the-cifar-10-dataset)
