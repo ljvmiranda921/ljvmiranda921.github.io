@@ -5,7 +5,10 @@ description: Projects of Lester James V. Miranda
 permalink: /projects/
 ---
 
-I present to you some of the works I've done for my side-projects. Check them out!
+I present to you side-projects that I've built and currently maintaining.
+If you're looking for my [other data projects](/tag/data%20project/),
+I've moved them in the [Notebook](/notebook/) page to showcase here the
+long-term works I've done.
 
 <div class="projects-home">
   <ul class="posts">
