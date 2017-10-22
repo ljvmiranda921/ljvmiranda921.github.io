@@ -10,7 +10,7 @@ author: "LJ MIRANDA"
 Streaming tweets can be a fun exercise in data mining. With almost a million tweets being published
 everyday, there is an enormous wealth of data that can be gathered, and insights to be discovered.
 Today, we will utilize a powerful Python library called [`tweepy`](http://www.tweepy.org/) to access
-tweets from the web in real-time.  
+tweets from the web in real-time<!--more-->.  
 
 The main idea is that we will first (1) generate Twitter credentials online by making a _Twitter App_,
 and then (2) use `tweepy` together with our Twitter credentials to stream tweets depending on our

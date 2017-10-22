@@ -8,11 +8,9 @@ math: true
 author: "LJ MIRANDA"
 ---
 
-> I am currently following the [course notes](http://cs231n.github.io/) of CS231n: Convolutional Neural Networks for Visual Recognition in Stanford University. There are programming exercises involved, and I wanted to share my solutions to some of the problems.
 
-In this notebook, a Multiclass Support Vector Machine (SVM) will be implemented. For this exercise, a linear SVM will be used.  
-
-Linear classifiers differ from k-NN in a sense that instead of memorizing the whole training data every run, the classifier creates a "hypothesis" (called a _parameter_), and adjusts it accordingly during training time. This "adjustment" is then achieved through an optimization algorithm, in this case, via Stochastic Gradient Descent (SGD). The full implementation will be done through the following steps:
+In this notebook, a Multiclass Support Vector Machine (SVM) will be implemented. For this exercise, a linear SVM will be used.
+Linear classifiers differ from k-NN in a sense that instead of memorizing the whole training data every run, the classifier creates a "hypothesis" (called a _parameter_), and adjusts it<!--more--> accordingly during training time. This "adjustment" is then achieved through an optimization algorithm, in this case, via Stochastic Gradient Descent (SGD). The full implementation will be done through the following steps:
 
 - [Data Loading and Preprocessing](#data-loading-and-preprocessing)
   - [Splitting and reshaping the data](#splitting-and-reshaping-the-data)

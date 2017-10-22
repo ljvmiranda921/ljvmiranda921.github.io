@@ -9,7 +9,7 @@ author: "LJ MIRANDA"
 ---
 In this notebook, I solved a 6-DOF Inverse Kinematics problem by treating it as an optimization problem. In this case,
 I implemented Particle Swarm Optimization (PSO) in order to find an _optimal_ solution from
-a set of candidate solutions.
+a set of candidate solutions<!--more-->.
 
 Table of Contents:
 ---

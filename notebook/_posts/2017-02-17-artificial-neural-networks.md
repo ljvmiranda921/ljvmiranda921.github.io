@@ -8,9 +8,7 @@ math: true
 author: "LJ MIRANDA"
 ---
 
-> I am currently following the [course notes](http://cs231n.github.io/) of CS231n: Convolutional Neural Networks for Visual Recognition in Stanford University. There are programming exercises involved, and I wanted to share my solutions to some of the problems.
-
-In this exercise, a two-layer fully-connected artificial neural network (ANN) was developed in order to perform classification in the CIFAR-10 dataset. The full-implementation is done through the following steps:
+In this exercise, a two-layer fully-connected artificial neural network (ANN) was developed in order to perform classification in the CIFAR-10 dataset. The full-implementation is done through the following steps<!--more-->:
 
 - [Toy model creation](#toy)
 - [ANN Implementation](#implementation)

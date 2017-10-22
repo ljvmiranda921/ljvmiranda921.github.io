@@ -60,6 +60,9 @@ pagination:
     before: 2
     after: 2
 
+# Excerpt separator
+excerpt_separator: <!--more-->
+
 # Kramdown settings
 kramdown:
   input: GFM

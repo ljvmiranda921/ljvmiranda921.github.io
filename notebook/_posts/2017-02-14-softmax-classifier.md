@@ -8,9 +8,7 @@ math: true
 author: "LJ MIRANDA"
 ---
 
-> I am currently following the [course notes](http://cs231n.github.io/) of CS231n: Convolutional Neural Networks for Visual Recognition in Stanford University. There are programming exercises involved, and I wanted to share my solutions to some of the problems.
-
-The Softmax classifier is one of the commonly-used classifiers and can be seen to be similar in form with the multiclass logistic regression. Like the linear SVM, Softmax still uses a similar mapping function $$f(x_{i};W) = Wx_{i}$$, but instead of using the _hinge loss_, we are using the cross-entropy loss with the form:
+The Softmax classifier is one of the commonly-used classifiers and can be seen to be similar in form with the multiclass logistic regression. Like the linear SVM, Softmax still uses a similar mapping function $$f(x_{i};W) = Wx_{i}$$, but instead of using the _hinge loss_, we are using the cross-entropy loss with the form<!--more-->:
 
 $$
 L_{i} = -f_{y_{i}} + \log\sum_{j}e^{f_{j}}

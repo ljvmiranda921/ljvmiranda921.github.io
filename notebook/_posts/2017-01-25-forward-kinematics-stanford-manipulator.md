@@ -11,7 +11,8 @@ math: true
 
 This is my implementation of the forward kinematics problem in Robotics. The forward kinematics problem involves finding the
 end-tip position of a manipulator in a coordinate space given its joint parameters (i.e., joint angles for revolute joints and
-link offset for prismatic joints). This means that given a certain _pose_ of a robotic arm, the xyz coordinates of the hand must be determined. For this implementation, I will be using the 6-DOF Stanford Manipulator as my basis.
+link offset for prismatic joints)<!--more-->
+. This means that given a certain _pose_ of a robotic arm, the xyz coordinates of the hand must be determined. For this implementation, I will be using the 6-DOF Stanford Manipulator as my basis.
 
 ## Stanford Arm
 
