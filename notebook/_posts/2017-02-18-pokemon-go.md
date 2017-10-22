@@ -2,7 +2,7 @@
 layout: post
 title: "Gotta Catch em All!"
 date: 2017-02-18
-category: projects
+category: notebook
 comments: true
 author: "LJ MIRANDA"
 description: "A data visualization exploring spawn rate and catch-flee ratios of Gen 1 Pokemon in Pokemon GO."
@@ -14,7 +14,7 @@ tags:
 ---
 
 I can describe myself as someone who "just joined the hype" of the recent Pok&eacute;mon GO mobile game. It was a fun summer, but when school kicked in
-and winter started taking over, I felt less inclined to go out and fill-up my Pok&eacute;dex. I still remember the days when our neighborhood is just _filled_ with Pidgeys and Rattatas, and _very few_ Abras that were almost "un-catchable." This inspired me to look into how other Pok&eacute;mon fare with respect to their spawn frequency and the ease on how they can be caught.  
+and winter started taking over, I felt less inclined to go out and fill-up my Pok&eacute;dex. I still remember the days when our neighborhood is just _filled_ with Pidgeys and Rattatas, and _very few_ Abras that were almost "un-catchable." This inspired me to look into how other Pok&eacute;mon fare with respect to their spawn frequency and the ease on how they can be caught<!--more-->.  
 
 So here's a _magic quadrant_ exploring these features. Good thing that data for Pok&eacute;mon GO is already available online. However, please be mindful that several assumptions were made in the methods of data collection, so subtle biases, intended or not, may be present. You can check them [below](#notes). Moreover, if you're planning to use my dataset, you can first refer to my exploratory data analysis [here](https://github.com/ljvmiranda921/pkmn/blob/master/Exploratory%20Data%20Analysis%20of%20Pokemon%20GO%20Dataset.ipynb).
 
