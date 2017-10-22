@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MRT-3 Passenger Traffic Visualization</title>
+  <meta name="description" content="As a regular MRT-3 passenger, the idea of congestion is strongly familiar. In fact, the ebb and flow of passengers give rise to some familiar patterns that w...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/03/06/mrt3/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>MRT-3 Passenger Traffic Visualization | Lj Miranda</title>
+<meta property="og:title" content="MRT-3 Passenger Traffic Visualization" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As a regular MRT-3 passenger, the idea of congestion is strongly familiar. In fact, the ebb and flow of passengers give rise to some familiar patterns that we observe in our everyday commute. We notice peak hours, highly-congested stations, and overall traffic. In this notebook, I will explore these patterns in our MRT-3 system through data" />
+<meta property="og:description" content="As a regular MRT-3 passenger, the idea of congestion is strongly familiar. In fact, the ebb and flow of passengers give rise to some familiar patterns that we observe in our everyday commute. We notice peak hours, highly-congested stations, and overall traffic. In this notebook, I will explore these patterns in our MRT-3 system through data" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/03/06/mrt3/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/03/06/mrt3/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-03-06T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"As a regular MRT-3 passenger, the idea of congestion is strongly familiar. In fact, the ebb and flow of passengers give rise to some familiar patterns that we observe in our everyday commute. We notice peak hours, highly-congested stations, and overall traffic. In this notebook, I will explore these patterns in our MRT-3 system through data","url":"http://localhost:4000/notebook/2017/03/06/mrt3/","headline":"MRT-3 Passenger Traffic Visualization","dateModified":"2017-03-06T00:00:00+09:00","datePublished":"2017-03-06T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/03/06/mrt3/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">MRT-3 Passenger Traffic Visualization</h1>
+    <p class="post-meta">
+      <time datetime="2017-03-06T00:00:00+09:00" itemprop="datePublished">
+        
+        Mar 6, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>As a regular MRT-3 passenger, the idea of congestion is strongly familiar. In fact, the ebb and flow
+of passengers give rise to some familiar patterns that we observe in our everyday commute. We notice
+peak hours, highly-congested stations, and overall traffic. In this notebook, I will explore these
+patterns in our MRT-3 system through data<!--more-->. The data was sourced from the
+<a href="http://dotr.gov.ph/">open data website</a> of the Department of Transportation
+and Communication (DOTC). This short analysis is divided into three parts:</p>
+
+<ul>
+  <li><a href="#peak-hours-of-the-day">Peak hours of the day</a></li>
+  <li><a href="#station">Passenger Traffic throughout the day</a></li>
+  <li><a href="#passenger-flux">Passenger flux</a></li>
+</ul>
+
+<h2 id="peak-hours-of-the-day">Peak hours of the day</h2>
+<p>Below we can see how many passengers, on average, move in and out of the MRT system throughout the
+day.</p>
+
+<p style="text-align: center;"><img src="/assets/png/mrt/ridership.png" alt="Passenger Count" width="640px" /><br />
+<strong>Figure 1:</strong> <em>MRT-3 Ridership</em></p>
+
+<p>Peak hours in the MRT range from 6:00 to 9:00 in the morning and 4:00 to 7:00 pm in the afternoon.
+These peak hours correspond to the time when people go to work in the morning and go back home in
+the afternoon. We can then observe how large the difference is, in terms of the number of passengers,
+in between the two peak hours.</p>
+
+<p>Although it can easily be advised to <em>avoid the rush hour</em>, not all employees are privileged to do
+that. Riding the MRT-3 by 5:00 AM is a huge sacrifice (imagine going up very early in the morning
+for your 8:00 AM work!), and leaving work before 5:00 PM is impossible. Some people find a hack by
+delaying their travel time by staying at the office until the evening; in which we can see, that the
+frequency of passengers diminishes through the night.</p>
+
+<h2 id="-passenger-traffic-throughout-the-day"><a name="station"></a> Passenger Traffic throughout the day</h2>
+<p>Next, I would like to see how congestion differs for each station throughout the day. In this case,
+I created a heatmap, where intense colors represent higher congestion. All the MRT-3 stations are at
+the y-axis, and the hour of the day at the x-axis.</p>
+
+<p style="text-align: center;"><img src="/assets/png/mrt/passenger-traffic-01.png" alt="Passenger Traffic" width="720px" /><br />
+<strong>Figure 2:</strong> <em>Passenger Traffic throughout the day</em></p>
+
+<p>Looking at the heatmap on the left, we can see the stations where most people enter: North Avenue
+Station and Taft. We can also see in the same map that Taft Station always has a constant influx of
+passengers throughout the day. In addition, the North Avenue congestion can be attributed to the
+fact that most employees go to work in places like Makati and Ayala, thus congesting the Southbound
+trip. It may take a lot of urban planning, but it is important that the congestion in the first
+station is distributed evenly among the other stations. This may entail the addition of jobs and
+offices that can be located near these points.</p>
+
+<p>As we progress through the day, we can see the peak points (or areas of stronger intensity)
+developing along Araneta, Shaw, and Ayala. Intuitively, these places are all near Commercial
+Business Districts (CBD), and we see an influx of people entering these stations around our
+peak hours.</p>
+
+<p>In our right-hand heatmap, we can then see the frequency of passengers that alight the MRT. In the
+morning, we see most of them exiting through Shaw (and some in Ortigas), Ayala, and Taft. In the
+afternoon/evening, most of the people alight the MRT in Araneta, Taft, and North Avenue. This is
+then consistent to the idea that most employees from the North go Southbound to work in places like
+Makati. In fact, if we look in our same heatmap, we can observe (in the morning) the places where
+people go, and the places where people go home to (in the evening).</p>
+
+<h2 id="passenger-flux">Passenger Flux</h2>
+<p>I am then interested on how passenger flow changes througout the day. Below is an animated chart
+showing areas of higher passenger frequency (more intense colors) with respect to the stations
+throughout the day.</p>
+
+<p style="text-align: center;"><img src="/assets/png/mrt/flux.gif" alt="Passenger Flux" width="720px" /><br />
+<strong>Figure 3:</strong> <em>Passenger Flux</em></p>
+
+<p>In the morning, we see that the influx of passengers often originate in the north, specifically in
+North Avenue, Quezon Avenue, and GMA Kamuning. Over time, we can then see how the congestion in the
+stations build-up, as more people are going in from different points of the MRT. We can also observe
+the stations where most passengers alight, and it is consistent to our observations from the heatmaps
+above.</p>
+
+<p>In addition, as we progress through the night, we can see that the outflow of passengers develop in
+Araneta, and more so in North Avenue. It is then evident that the passenger flux in the morning go
+Southbound, while in the afternoon they go Northbound.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>It is interesting how data can help us see patterns especially in a transportation system like the
+MRT. From data, we can determine usage patterns and see how they develop throughout the day. I hope
+that in the future, more fine-grained data will be collected for the MRT-3 (and perhaps for our
+other train lines as well). As of now, the data we have is coarse, and seems to generalize a lot.
+It may be interesting to see usage patters in the weekend, and the exact origin-destination of
+passengers that take the MRT-3</p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

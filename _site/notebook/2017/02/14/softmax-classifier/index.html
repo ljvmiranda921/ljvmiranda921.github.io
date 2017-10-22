@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Softmax Classifier</title>
+  <meta name="description" content="The Softmax classifier is one of the commonly-used classifiers and can be seen to be similar in form with the multiclass logistic regression. Like the linear...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/02/14/softmax-classifier/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Softmax Classifier | Lj Miranda</title>
+<meta property="og:title" content="Softmax Classifier" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The Softmax classifier is one of the commonly-used classifiers and can be seen to be similar in form with the multiclass logistic regression. Like the linear SVM, Softmax still uses a similar mapping function , but instead of using the hinge loss, we are using the cross-entropy loss with the form" />
+<meta property="og:description" content="The Softmax classifier is one of the commonly-used classifiers and can be seen to be similar in form with the multiclass logistic regression. Like the linear SVM, Softmax still uses a similar mapping function , but instead of using the hinge loss, we are using the cross-entropy loss with the form" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/02/14/softmax-classifier/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/02/14/softmax-classifier/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-02-14T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"The Softmax classifier is one of the commonly-used classifiers and can be seen to be similar in form with the multiclass logistic regression. Like the linear SVM, Softmax still uses a similar mapping function , but instead of using the hinge loss, we are using the cross-entropy loss with the form","url":"http://localhost:4000/notebook/2017/02/14/softmax-classifier/","headline":"Softmax Classifier","dateModified":"2017-02-14T00:00:00+09:00","datePublished":"2017-02-14T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/02/14/softmax-classifier/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Softmax Classifier</h1>
+    <p class="post-meta">
+      <time datetime="2017-02-14T00:00:00+09:00" itemprop="datePublished">
+        
+        Feb 14, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>The Softmax classifier is one of the commonly-used classifiers and can be seen to be similar in form with the multiclass logistic regression. Like the linear SVM, Softmax still uses a similar mapping function <script type="math/tex">f(x_{i};W) = Wx_{i}</script>, but instead of using the <em>hinge loss</em>, we are using the cross-entropy loss with the form<!--more-->:</p>
+
+<script type="math/tex; mode=display">L_{i} = -f_{y_{i}} + \log\sum_{j}e^{f_{j}}</script>
+
+<p>Here, <script type="math/tex">f_{j}</script> is the j-th element of the vector of class scores <script type="math/tex">f</script>. In this implementation of the Sofmax classifier, we perform the following steps:</p>
+
+<ol>
+  <li><a href="#naive">Naive implementation of the loss function and analytic gradient.</a></li>
+  <li><a href="#vector">Fully-vectorized implementation of the loss function and analytic gradient.</a></li>
+</ol>
+
+<p>Now, I am excluding the “Data Loading and Preprocessing” section because they are similar with the SVM and kNN implementations. Moreover, the hyperparameter tuning and results can be seen in my <a href="https://github.com/ljvmiranda921/cs231n-assignments/blob/master/assignment1/softmax.ipynb">IPython Notebook</a>. This time, I will be keeping this post short, because <em>I am so excited to do the neural networks assignment!!</em></p>
+
+<h2 id="-naive-implementation"><a name="naive"></a> Naive Implementation</h2>
+<p>For the loss function, we can simply follow the equations in the <a href="http://cs231n.github.io/linear-classify/#softmax">course notes</a>. Thus, we can also write the equation above as:</p>
+
+<script type="math/tex; mode=display">L_{i} = -\log\dfrac{e^{f_{y_{i}}}}{\sum_{j} e^{f_{j}}}</script>
+
+<p>Now, in the case of the gradient, we can then have the following:</p>
+
+<script type="math/tex; mode=display">\dfrac{\partial L_{i}}{\partial f_{k}} = p_{k} - 1 (y_{1} = k)</script>
+
+<p>Where <script type="math/tex">p_{k}</script> is equivalent to</p>
+
+<script type="math/tex; mode=display">p_{k} = \dfrac{e^{f_{k}}}{\sum_{j} e^{f_{j}}}</script>
+
+<p>And we simply run this through all examples in our training set:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">num_train</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">num_classes</span> <span class="o">=</span> <span class="n">W</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_train</span><span class="p">):</span>
+
+  <span class="n">f_i</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W</span><span class="p">)</span>
+  <span class="n">f_i</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="nb">max</span><span class="p">(</span><span class="n">f_i</span><span class="p">)</span>
+
+  <span class="n">sum_j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">f_i</span><span class="p">))</span>
+  <span class="n">p</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">f_i</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="o">/</span> <span class="n">sum_j</span>
+  <span class="n">loss</span> <span class="o">+=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">p</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+
+  <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_classes</span><span class="p">):</span>
+    <span class="n">p_k</span> <span class="o">=</span> <span class="n">p</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+    <span class="n">dW</span><span class="p">[:,</span> <span class="n">k</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="n">p_k</span> <span class="o">-</span> <span class="p">(</span><span class="n">k</span> <span class="o">==</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span> <span class="o">*</span> <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Notice that the form is similar to the SVM exercise that we had. Moreover, the <script type="math/tex">p_{k}</script> equation above is expressed in code in terms of a lambda function. This makes everything much easier to do. Lastly, don’t forget to regularize and normalize our <code class="highlighter-rouge">loss</code> and <code class="highlighter-rouge">dW</code> before returning them.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># This is implemented outside our</span>
+<span class="c"># nested loops</span>
+<span class="n">loss</span> <span class="o">/=</span> <span class="n">num_train</span>
+<span class="n">loss</span> <span class="o">+=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">reg</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">W</span> <span class="o">*</span> <span class="n">W</span><span class="p">)</span>
+<span class="n">dW</span> <span class="o">/=</span> <span class="n">num_train</span>
+<span class="n">dW</span> <span class="o">+=</span> <span class="n">reg</span><span class="o">*</span><span class="n">W</span>
+
+<span class="k">return</span> <span class="n">loss</span><span class="p">,</span> <span class="n">dW</span>
+</code></pre>
+</div>
+
+<h2 id="-vectorized-implementation"><a name="vector"></a> Vectorized Implementation</h2>
+<p>I honestly found the vectorized implementation way easier than the naive one. It is because one has to simply follow the equations above. In this case, we have the following for the loss function:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">num_train</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+ <span class="n">f</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W</span><span class="p">)</span>
+ <span class="n">f</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="nb">max</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+ <span class="n">sum_f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">f</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+ <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">/</span><span class="n">sum_f</span>
+
+ <span class="n">loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">num_train</span><span class="p">),</span> <span class="n">y</span><span class="p">]))</span>
+</code></pre>
+</div>
+
+<p>And we have the following for the gradient:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="n">ind</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">num_train</span><span class="p">),</span> <span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">dW</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="n">ind</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>As usual, we should not forget to regularize and normalize our loss and gradient matrices.</p>
+
+<p>I am currently keeping this post short because most of the questions and the exercises are in Softmax are quite similar to SVM. So I just focused on the more important parts such as the implementation of the loss and gradient. Furthermore, I’ve been itching to try out the
+neural networks assignment because it will be my first time to implement an ANN manually using Python!</p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

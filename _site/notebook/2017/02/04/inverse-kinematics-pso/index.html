@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Inverse Kinematics using Particle Swarm Optimization</title>
+  <meta name="description" content="In this notebook, I solved a 6-DOF Inverse Kinematics problem by treating it as an optimization problem. In this case, I implemented Particle Swarm Optimizat...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/02/04/inverse-kinematics-pso/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Inverse Kinematics using Particle Swarm Optimization | Lj Miranda</title>
+<meta property="og:title" content="Inverse Kinematics using Particle Swarm Optimization" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this notebook, I solved a 6-DOF Inverse Kinematics problem by treating it as an optimization problem. In this case, I implemented Particle Swarm Optimization (PSO) in order to find an optimal solution from a set of candidate solutions" />
+<meta property="og:description" content="In this notebook, I solved a 6-DOF Inverse Kinematics problem by treating it as an optimization problem. In this case, I implemented Particle Swarm Optimization (PSO) in order to find an optimal solution from a set of candidate solutions" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/02/04/inverse-kinematics-pso/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/02/04/inverse-kinematics-pso/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-02-04T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"In this notebook, I solved a 6-DOF Inverse Kinematics problem by treating it as an optimization problem. In this case, I implemented Particle Swarm Optimization (PSO) in order to find an optimal solution from a set of candidate solutions","url":"http://localhost:4000/notebook/2017/02/04/inverse-kinematics-pso/","headline":"Inverse Kinematics using Particle Swarm Optimization","dateModified":"2017-02-04T00:00:00+09:00","datePublished":"2017-02-04T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/02/04/inverse-kinematics-pso/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Inverse Kinematics using Particle Swarm Optimization</h1>
+    <p class="post-meta">
+      <time datetime="2017-02-04T00:00:00+09:00" itemprop="datePublished">
+        
+        Feb 4, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this notebook, I solved a 6-DOF Inverse Kinematics problem by treating it as an optimization problem. In this case,
+I implemented Particle Swarm Optimization (PSO) in order to find an <em>optimal</em> solution from
+a set of candidate solutions<!--more-->.</p>
+
+<h2 id="table-of-contents">Table of Contents:</h2>
+<ol>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#ik-problem-as-an-optimization-problem">Treating the IK Problem as an Optimization Problem</a></li>
+  <li><a href="#initializing-the-swarm">Initializing the swarm</a></li>
+  <li><a href="#finding-the-global-best-solution">Finding the global best solution</a></li>
+  <li><a href="#simulation-results">Simulation Results</a></li>
+  <li><a href="#conclusion">Conclusion</a></li>
+</ol>
+
+<h2 id="introduction">Introduction</h2>
+<p>Inverse Kinematics (IK) is one of the most challenging problems in robotics. The problem
+involves finding an optimal <em>pose</em> for a manipulator given the position of the end-tip effector.
+This can be seen in contrast with <a href="https://ljvmiranda921.github.io/projects/2017/01/25/forward-kinematics-stanford-manipulator/">forward kinematics</a>, where the end-tip position is sought given the pose or joint configuration. Normally, this position is expressed as a point in a coordinate system (e.g., in a
+Cartesian system, it is a point comprising of <script type="math/tex">x</script>, <script type="math/tex">y</script>, and <script type="math/tex">z</script> coordinates.). On the
+other hand, the manipulator’s pose can be expressed as the collection of joint variables that
+can describe the angle of bending or twist (in revolute joints) or length of extension (in prismatic joints).</p>
+
+<p>IK is particularly difficult because multiple solutions can arise. Intuitively, a robotic arm
+can have multiple ways of reaching through a certain point. Moreover, calculation can
+prove to be very difficult. Simple solutions can be found for 3-DOF manipulators, but a 6-DOF or
+higher can be very challenging to solve algebraically.</p>
+
+<h2 id="ik-problem-as-an-optimization-problem">IK Problem as an Optimization Problem</h2>
+<p>In this implementation, I am using the same set-up during my forward kinematics project
+as shown <a href="https://ljvmiranda921.github.io/projects/2017/01/25/forward-kinematics-stanford-manipulator/">here</a>.
+I am using a <em>6-DOF Stanford Manipulator</em>, with 5 revolute joints and 1 prismatic joint. Furthermore,
+my constraints are similar as before, and it’s shown in the table below:</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th style="text-align: center">Parameters</th>
+      <th style="text-align: center">Lower Boundary</th>
+      <th style="text-align: center">Upper Boundary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">\theta_1</script></td>
+      <td style="text-align: center"><script type="math/tex">-\pi</script></td>
+      <td style="text-align: center"><script type="math/tex">\pi</script></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">\theta_2</script></td>
+      <td style="text-align: center"><script type="math/tex">-\frac{\pi}{2}</script></td>
+      <td style="text-align: center"><script type="math/tex">\frac{\pi}{2}</script></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">d_3</script></td>
+      <td style="text-align: center"><script type="math/tex">1</script></td>
+      <td style="text-align: center"><script type="math/tex">3</script></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">\theta_4</script></td>
+      <td style="text-align: center"><script type="math/tex">-\pi</script></td>
+      <td style="text-align: center"><script type="math/tex">\pi</script></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">\theta_5</script></td>
+      <td style="text-align: center"><script type="math/tex">-\frac{5\pi}{36}</script></td>
+      <td style="text-align: center"><script type="math/tex">\frac{5\pi}{36}</script></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">\theta_6</script></td>
+      <td style="text-align: center"><script type="math/tex">-\pi</script></td>
+      <td style="text-align: center"><script type="math/tex">\pi</script></td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: center;"><strong>Table 1:</strong> <em>Joint variable physical constraints</em></p>
+
+<p>Now, if we’re given with an <em>end-tip position</em> (in this case, an <script type="math/tex">xyz</script> coordinate), we need to find the
+optimal parameters with the constraints imposed above. These conditions are then sufficient in order to
+treat this problem as an optimization problem. We should then define our parameters <script type="math/tex">\mathbf{X}</script> as:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\mathbf{X} \equiv \begin{bmatrix}
+\theta_{1} & \theta_{2} & d_{3} & \theta_{5} & \theta_{6}
+\end{bmatrix} %]]></script>
+
+<p>And then we impose the end-tip position as a target <script type="math/tex">\mathbf{T}</script> as:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\mathbf{T} \equiv \begin{bmatrix}
+T_{x} & T_{y} & T_{z}
+\end{bmatrix} %]]></script>
+
+<p>We can then start implementing our optimization algorithm.</p>
+
+<h2 id="initializing-the-swarm">Initializing the Swarm</h2>
+<p>The main idea for PSO is that we set a swarm <script type="math/tex">\mathbf{S}</script> composed of particles <script type="math/tex">\mathbf{P}_{n}</script> into
+a search space in order to find the optimal solution. The movement of the swarm depends on the cognitive (<script type="math/tex">c_{1}</script>)
+and social (<script type="math/tex">c_{2}</script>) behavior of the particles composing it. The cognitive component speaks of the particle’s bias
+towards its personal best from its past experience (i.e., how attracted is it to its own best position). The social component
+controls how the particles are attracted to the best score found by the swarm (or global best). High <script type="math/tex">c_{1}</script> and low <script type="math/tex">c_{2}</script>
+can often cause the swarm to stagnate. The inverse can cause the swarm to converge very fast, resulting to suboptimal solutions.
+A visualization of its effect can be found <a href="https://ljvmiranda921.github.io/projects/2017/01/17/pso-trained-neural-network-for-solving-the-two-spiral-problem/#observation-of-swarm-behavior">here</a>.</p>
+
+<p>We then define our particle <script type="math/tex">\mathbf{P}</script> as:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\mathbf{P} \equiv \mathbf{X} = \begin{bmatrix}
+\theta_{1} & \theta_{2} & d_{3} & \theta_{5} & \theta_{6}
+\end{bmatrix} %]]></script>
+
+<p>And define the swarm as being composed of particles <script type="math/tex">\mathbf{P}_{n}</script> with certain positions at
+a timestep t:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\mathbf{S}_{t} \equiv \begin{bmatrix}
+\mathbf{P}_{1} & \mathbf{P}_{2} & \mathbf{P}_{3} & \ldots & \mathbf{P}_{N}
+\end{bmatrix} %]]></script>
+
+<p>In my implementation, I designated <script type="math/tex">\mathbf{P}_{1}</script> as the initial configuration of the manipulator at
+zero-position. This means that the angles are at 0 degrees and the link offset is also zero. I then
+generated the other <script type="math/tex">N-1</script> particles using a uniform distribution where it is controlled by the hyperparameter <script type="math/tex">\epsilon</script>.</p>
+
+<div class="language-matlab highlighter-rouge"><pre class="highlight"><code><span class="n">currentPos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">epsilon</span><span class="p">,</span> <span class="n">size_params</span><span class="p">])</span> <span class="o">*</span> <span class="n">options</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="n">params</span><span class="o">.</span><span class="n">T</span>
+</code></pre>
+</div>
+
+<h2 id="finding-the-global-best-solution">Finding the global best solution</h2>
+<p>In order to find the global best solution, the swarm must then be moved. This movement is then
+translated by an update of the current position given the swarm velocity <script type="math/tex">V</script>. That is,</p>
+
+<script type="math/tex; mode=display">\mathbf{S}_{t+1} = \mathbf{S}_{t} + \mathbf{V}_{t+1}</script>
+
+<p>The velocity is then computed as the following:</p>
+
+<script type="math/tex; mode=display">\mathbf{V}_{t+1} = w\mathbf{V}_{t} + c_{1}r_{t}[y_{ij} - x_{ij}] + c_{2}r_{2}[y - x_{ij}]</script>
+
+<p>Where <script type="math/tex">y_{ij}</script> and <script type="math/tex">y_{j}</script> are the personal and global best scores, respectively. Moreover, <script type="math/tex">w</script> is the inertia weight that controls the “memory” of the swarm’s previous position. In Python, this can be written as:</p>
+
+<div class="language-matlab highlighter-rouge"><pre class="highlight"><code><span class="err">#</span> <span class="n">Update</span> <span class="n">velocity</span>
+<span class="n">cognitive</span> <span class="o">=</span> <span class="p">(</span><span class="n">options</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">]))</span> <span class="o">*</span> <span class="p">(</span><span class="n">pBestPos</span><span class="p">[</span><span class="n">particle</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">currentPos</span><span class="p">[</span><span class="n">particle</span><span class="p">,:])</span>
+<span class="n">social</span> <span class="o">=</span> <span class="p">(</span><span class="n">options</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">]))</span> <span class="o">*</span> <span class="p">(</span><span class="n">gBestPos</span> <span class="o">-</span> <span class="n">currentPos</span><span class="p">[</span><span class="n">particle</span><span class="p">,:])</span>
+<span class="n">velocityMatrix</span><span class="p">[</span><span class="n">particle</span><span class="p">,:]</span> <span class="o">=</span> <span class="p">(</span><span class="n">options</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="n">velocityMatrix</span><span class="p">[</span><span class="n">particle</span><span class="p">,:])</span> <span class="o">+</span> <span class="n">cognitive</span> <span class="o">+</span> <span class="n">social</span>
+<span class="err">#</span> <span class="n">Update</span> <span class="n">position</span>
+<span class="n">currentPos</span><span class="p">[</span><span class="n">particle</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">currentPos</span><span class="p">[</span><span class="n">particle</span><span class="p">,:]</span> <span class="o">+</span> <span class="n">velocityMatrix</span><span class="p">[</span><span class="n">particle</span><span class="p">,:]</span>
+</code></pre>
+</div>
+
+<h2 id="simulation-results">Simulation Results</h2>
+<p>I tested my inverse kinematics implementation by letting the particles find an optimal joint
+configuration for the point (-2,2,3). My PSO parameters are the following:  <code class="highlighter-rouge">c_1 = c_2 = 1.5</code>, <code class="highlighter-rouge">swarmSize = 20</code>, <code class="highlighter-rouge">w = 0.5</code>, and <code class="highlighter-rouge">epsilon = 1.0</code>.
+I plotted the particle movement (in terms of their end-tip positions) in a 3D coordinate system, and made it into a GIF. Moreover,
+the proceeding chart shows the cost history of a single run.</p>
+
+<p style="text-align: center;"><img src="/assets/png/ikpso/swarmMovement.gif" alt="Inverse Kinematics Simulation" width="560px" /><br />
+<strong>Figure 1:</strong> <em>Inverse Kinematics Simulation</em></p>
+
+<p style="text-align: center;"><img src="/assets/png/ikpso/costHistory.png" alt="Cost History" width="560px" /><br />
+<strong>Figure 2:</strong> <em>Cost History</em></p>
+
+<h3 id="execution-time">Execution Time</h3>
+<p>The average execution time (in 10 trials) for my simulation is: <code class="highlighter-rouge">1.099</code> seconds.</p>
+
+<p>I also ran a test to see the performance speed of PSO. For 10 trials, I generated
+a random point <script type="math/tex">(x,y,z)</script> and fed it into the algorithm. I then computed for the mean and I got
+<code class="highlighter-rouge">0.8971</code> seconds.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>This simple experiment showed that a 6-DOF inverse kinematics problem can be solved by treating it as an optimization
+problem. A standard PSO global best algorithm with inertia weights was implemented and the results showed that it can achieve
+the desired end-tip position in almost a second. The choice of the optimization algorithm is purely personal, I enjoy
+implementing PSO and it’s one of my go-to algorithms when testing out things. This notebook is a simple proof-of-concept
+that an algebraically difficult problem can be solved in a different way. Other optimization algorithms can be used, and it may
+even reduce the execution time so that IK problems can be solved in almost real-time.</p>
+
+<p>Access the gist <a href="https://gist.github.com/ljvmiranda921/7d8c48da0aa7565f0b3c01d7c951c5e9">here.</a></p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

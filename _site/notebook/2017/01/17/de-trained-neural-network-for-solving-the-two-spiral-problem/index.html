@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DE Neural Network</title>
+  <meta name="description" content="This is a simple implementation of a 2-16-1 neural network trained using Particle Swarm Optimization in order to solve the two-spiral problem. The and activa...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/01/17/de-trained-neural-network-for-solving-the-two-spiral-problem/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>DE Neural Network | Lj Miranda</title>
+<meta property="og:title" content="DE Neural Network" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Trained a neural network using differential evolution (DE) to solve the two-spiral problem" />
+<meta property="og:description" content="Trained a neural network using differential evolution (DE) to solve the two-spiral problem" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/01/17/de-trained-neural-network-for-solving-the-two-spiral-problem/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/01/17/de-trained-neural-network-for-solving-the-two-spiral-problem/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-01-17T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"Trained a neural network using differential evolution (DE) to solve the two-spiral problem","url":"http://localhost:4000/notebook/2017/01/17/de-trained-neural-network-for-solving-the-two-spiral-problem/","headline":"DE Neural Network","dateModified":"2017-01-17T00:00:00+09:00","datePublished":"2017-01-17T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/01/17/de-trained-neural-network-for-solving-the-two-spiral-problem/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">DE Neural Network</h1>
+    <p class="post-meta">
+      <time datetime="2017-01-17T00:00:00+09:00" itemprop="datePublished">
+        
+        Jan 17, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>This is a simple implementation of a 2-16-1 neural network trained using Particle Swarm Optimization in order to solve the two-spiral problem. The <script type="math/tex">\sin(z)</script> and <script type="math/tex">\sigma(z)</script> activation functions were used for the input-hidden and hidden-output layers respectively. The cross-entropy error was used as the cost function<!--more-->
+. The two-spiral problem is a particularly difficult problem that requires separating two logistic spirals from one another [1] [2].</p>
+
+<p style="text-align: center;"><img src="http://i.imgur.com/AB14SHCl.png" alt="Two Spiral Problem" />
+<strong>Figure 1:</strong> <em>Graph of the Two-Spiral Problem</em></p>
+
+<h2 id="differential-evolution">Differential Evolution</h2>
+<p>As a member of a class of different evolutionary algorithms, DE is a population-based optimizer that generates
+perturbations given the current generation. But instead of generating vectors using samples from a predefined
+probability functions, DE perturbs vectors using the scaled difference of two randomly population vectors.</p>
+
+<p>Differential Evolution produces a trial vector, <script type="math/tex">\mathbf{u}_{0}</script>, that competes against the population
+vector of the same index. Now, once the last trial vector has been tested, the survivors of the pairwise
+competitions become the parents for the next generation in the evolutionary cycle.</p>
+
+<h2 id="methodology">Methodology</h2>
+<p>For Differential Evolution, a three step process will be done. First, we will initialize the population, set-up the optimization system,
+and then tune the hyperparameters. Initialization will be based from a Gaussian distribution, while the tuning will involve
+the mutation and recombination parameters.</p>
+
+<h3 id="initialization">Initialization</h3>
+<p>For any particle <script type="math/tex">n = 1,2, \dots , N</script>, its position <script type="math/tex">P</script> at time-step <script type="math/tex">t</script> with respect to the ANN parameters are expressed as:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+P_{n,t} \equiv \begin{bmatrix}
+\Theta_{11}^{(1)} & \Theta_{12}^{(1)} & \dots & \Theta_{ij}^{(1)}\\
+\Theta_{11}^{(2)} & \Theta_{21}^{(2)} & \dots & \Theta_{jk}^{(2)}
+\end{bmatrix} %]]></script>
+
+<p>The particle matrix <strong>P</strong> was initialized using uniform distribution. This is to maximize the exploration capability of the particles
+over the search space by distributing it evenly. Using a Gaussian distribution to initialize the particles will “scatter” it in a centered weight
+, reducing the exploration capacity.</p>
+
+<h3 id="optimization-system">Optimization System</h3>
+<ol>
+  <li>
+    <p><strong>Mutation:</strong> For mutation, three random vectors are chosen, and relate them in order to produce the donor vector
+,<script type="math/tex">v_{i,G+1}</script>. This method is controlled by the parameter <script type="math/tex">F</script> (<script type="math/tex">F \in [0,2]</script>). The equation for producing the
+donor vector is <script type="math/tex">v_{i,G+1} = x_{r1,G} + F (x_{r2,G} - x_{r3,G})</script></p>
+  </li>
+  <li>
+    <p><strong>Recombination:</strong> For recombination, the trial vector is built using the elements of the donor vector (donorVec)
+and the elements of your target vector. This means that for each particle in the population (for each row of
+particle) and for each dimension of that particle (for each column of each row of particle), a comparison is made with respect to the
+parameter <script type="math/tex">CR</script>.</p>
+  </li>
+  <li>
+    <p><strong>Selection:</strong> For selection, the target vector is then compared against the trial vector if the fitness value is less
+than the computed fitness of the target, then that particle is replaced  with the one captured from the trial vector.
+After all particles are tested, we then have the second generation.</p>
+  </li>
+</ol>
+
+<h3 id="implementation-parameters">Implementation Parameters</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">genMax</code></td>
+      <td>Number of generations that the DE algorithm will run</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">population</code></td>
+      <td>Number of particles in the search space.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">epsilon_de</code></td>
+      <td>Scattering degree of the particles during initialization</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">mutationF</code></td>
+      <td>Degree of mutation effect (exploration parameter)</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">recombinationC</code></td>
+      <td>Degree of recombination effect (exploitation parameter)</td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: center;"><strong>Table 1:</strong> <em>Parameters used in DE Implementation</em></p>
+
+<h3 id="tuning-the-mutation-and-recombination-parameters">Tuning the mutation and recombination parameters</h3>
+<p>Here, I swept over different values of <script type="math/tex">m</script> and <script type="math/tex">c</script> in order to find good values for my final model.</p>
+
+<p style="text-align: center;"><img src="/assets/png/nn/cmatrix2.png" alt="Cmatrix for DE params" width="320px" />     <br />
+<strong>Figure 2:</strong> <em>Heat Map for testing the mutation and recombination parameters</em></p>
+
+<p>As shown, it may be better to use lower mutation values coupled with very low recombination values.</p>
+
+<h2 id="results">Results:</h2>
+<p>The best score that was achieved using this optimization algorithm is 84.8684% recall. The figure below shows the generalization ability that the algorithm can attain. Moreover, the table below shows the values I set for the parameters.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">genMax</code></td>
+      <td>5,000</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">population</code></td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">epsilon_de</code></td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">mutationF</code></td>
+      <td>0.19</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">recombinationC</code></td>
+      <td>0.07</td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: center;"><strong>Table 2:</strong> <em>Parameter Values for DE Implementation</em></p>
+
+<p style="text-align: center;"><img src="http://i.imgur.com/oEHj0Dhl.png" alt="Generalization ability of DE" width="640px" />
+<strong>Figure 3:</strong> <em>Generalization ability of the DE-trained Neural Network over the whole space</em></p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Using the differential evolution to train a neural network is much faster as compared to PSO. However, one problem with PSO is on how the production of a <em>completely new</em> generation is affected by the population size <script type="math/tex">N</script>. Because each vector is being replaced one by one, it may also require <script type="math/tex">N</script> iterations in order to fully replace the current generation and find a more suitable candidate solution.</p>
+
+<p>In terms of performance, DE and PSO’s best solutions are not really that far apart. Although these values are achieved in different iterations, i.e., DE needing more time to get to converge to a better solution. In my opinion, it is also possible to modify the DE algorithm by taking into consideration the gradient produced by backpropagation. This gradient may be used as a scale to “mutate” the donor vector, thus making the mutated vectors much better. Although this gradient needs to be modified so that the stochastic element is still present.</p>
+
+<h2 id="references">References</h2>
+<ul>
+  <li>A. Engelbrecht, <em>Computational Intelligence: An Introduction</em>, John Wiley &amp; Sons, Ltd., 2007.</li>
+  <li>E.B. Baum and K.J. Lang, “Constructing Hidden Units Using Examples and Queries” <em>Advances
+in Neural Information Processing Systems</em>, vol. 3, pp. 904-910, 1993.</li>
+  <li>J.M. Sopena, E. Romero,R. Alquezar, “Neural networks with periodic and monotonic activation functions: a comparative study in classification problems,” <em>ICANN Ninth International Conference on Artificial Neural Networks</em>, 1999.</li>
+  <li>K.J. Lang and M.J. Witbrock, “Learning to Tell Two Spirals Apart”, in: <em>Proceedings of the 1988 Connectionist Models Summer School</em>, Morgan Kauffman, 1998.</li>
+  <li>K.V. Price, R.M. Storn, J.A. Lampinen, <em>Differential Evolution: A Practical Approach to Global Evolution</em>, Springer, 2005.</li>
+  <li><a href="http://www.ibiblio.org/pub/academic/computer-science/neural-networks/programs/bench/two-spirals">Two-Spirals in Neural Networks</a>, [Accessed: 17 January 2017].</li>
+</ul>
+
+<p>You can access the gist <a href="https://gist.github.com/ljvmiranda921/53939299b9e67f0df082e0127c7f229d">here.</a></p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

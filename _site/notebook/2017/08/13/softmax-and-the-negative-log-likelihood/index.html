@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Softmax and the negative log-likelihood</title>
+  <meta name="description" content="In this notebook I will explain the softmax function, its relationship with the negative log-likelihood, and its derivative when doing the backpropagation al...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Softmax and the negative log-likelihood | Lj Miranda</title>
+<meta property="og:title" content="Softmax and the negative log-likelihood" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this notebook I will explain the softmax function, its relationship with the negative log-likelihood, and its derivative when doing the backpropagation algorithm" />
+<meta property="og:description" content="In this notebook I will explain the softmax function, its relationship with the negative log-likelihood, and its derivative when doing the backpropagation algorithm" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-08-13T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"In this notebook I will explain the softmax function, its relationship with the negative log-likelihood, and its derivative when doing the backpropagation algorithm","url":"http://localhost:4000/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/","headline":"Softmax and the negative log-likelihood","dateModified":"2017-08-13T00:00:00+09:00","datePublished":"2017-08-13T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Softmax and the negative log-likelihood</h1>
+    <p class="post-meta">
+      <time datetime="2017-08-13T00:00:00+09:00" itemprop="datePublished">
+        
+        Aug 13, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this notebook I will explain the softmax function, its relationship
+with the negative log-likelihood, and its derivative when doing the backpropagation algorithm<!--more-->. If there are any questions or clarifications,
+please leave a comment below.</p>
+
+<ul>
+  <li><a href="#softmax-activation-function">Softmax Activation Function</a></li>
+  <li><a href="#negative-log-likelihood">Negative log-likelihood</a></li>
+  <li><a href="#derivative-of-the-softmax">Derivative of the Softmax</a></li>
+</ul>
+
+<h2 id="softmax-activation-function">Softmax Activation Function</h2>
+
+<p>The softmax activation function is often placed at the output layer of a
+neural network. It’s commonly used in multi-class learning problems where
+a set of features can be related to one-of-$K$ classes. For example, in
+the CIFAR-10 image classification problem, given a set of pixels as input,
+we need to classify if a particular sample belongs to one-of-ten available classes: i.e., cat, dog, airplane, etc.</p>
+
+<p>Its equation is simple, we just have to compute for
+the normalized exponential function of all the units in the layer.
+In such case,</p>
+
+<script type="math/tex; mode=display">S(f_{y_i}) = \dfrac{f_{y_i}}{\sum_{j}e^{f_j}}</script>
+
+<p>Intuitively, what the softmax does is that it <em>squashes</em> a vector of size
+<script type="math/tex">K</script> between <script type="math/tex">0</script> and <script type="math/tex">1</script>. Furthermore, because it is a normalization of the
+exponential, the sum of this whole vector equates to <script type="math/tex">1</script>. We can then
+interpret the output of the softmax as the probabilities that a certain
+set of features belongs to a certain class.</p>
+
+<p>Thus, given a three-class example below, the scores <script type="math/tex">y_i</script> are computed from
+the forward propagation of the network. We then take the softmax and obtain
+the probabilities as shown:</p>
+
+<p style="text-align: center;"><img src="/assets/png/cs231n-ann/softmax.png" alt="Softmax computation" width="720px" /><br />
+<strong>Figure 1:</strong> <em>Softmax Computation for three classes</em></p>
+
+<p>The output of the softmax describes the probability (or if you may, the
+confidence) of the neural network that a particular sample belongs to a
+certain class. Thus, for the first example above, the neural network
+assigns a confidence of 0.71 that it is a cat, 0.26 that it is a dog,
+and 0.04 that it is a horse. The same goes for each of the samples above.</p>
+
+<p>We can then see that one advantage of using the softmax at the output
+layer is that it improves the interpretability of the neural network. By
+looking at the softmax output in terms of the network’s confidence, we can
+then reason about the behavior of our model.</p>
+
+<h2 id="negative-log-likelihood">Negative Log-Likelihood</h2>
+
+<p>In practice, the softmax function is used in tandem with the negative
+log-likelihood. This loss function is very interesting if we interpret
+it in relation to the behavior of softmax. First, let’s write down our
+loss function:</p>
+
+<script type="math/tex; mode=display">L(\mathbf{y}) = -\log(\mathbf{y})</script>
+
+<p>This is summed for all the correct classes.</p>
+
+<p>Recall that when training a model, we aspire to find the minima of a
+loss function given a set of parameters (in a neural network, these are
+the weights and biases). We can interpret the loss as the “unhappiness” of the network with respect to its parameters. The higher the loss, the higher the unhappiness: we don’t want that. We want to make our models happy.</p>
+
+<p>So if we are using the negative log-likelihood as our loss function, when
+does it become unhappy? And when does it become happy? Let’s try to plot
+its range:</p>
+
+<p style="text-align: center;"><img src="/assets/png/cs231n-ann/neg_log.png" alt="Negative log-likelihood" width="720px" /><br />
+<strong>Figure 2:</strong> <em>The loss function reaches infinity when input is 0, and reaches 0 when input is 1.</em></p>
+
+<p>The negative log-likelihood becomes unhappy at smaller values, where it
+can reach infinite unhappiness (that’s too sad), and becomes less unhappy
+at larger values. Because we are summing the loss function to all the 
+correct classes, what’s actually happening is that whenever the network 
+assigns high confidence at the correct class, the unhappiness is low, but
+when the network assigns low confidence at the correct class, the unhappiness
+is high.</p>
+
+<p style="text-align: center;"><img src="/assets/png/cs231n-ann/neg_log_demo.png" alt="Negative log-likelihood" width="720px" /><br />
+<strong>Figure 3:</strong> <em>When computing the loss, we can then see that higher confidence at the correct class leads to lower loss and vice-versa.</em></p>
+
+<h2 id="derivative-of-the-softmax">Derivative of the Softmax</h2>
+
+<p>In this part, we will differentiate the softmax function with respect to the negative log-likelihood. Following the convention at the <a href="http://cs231n.github.io/neural-networks-case-study/#grad">CS231n course</a>, we let <script type="math/tex">f</script> as a vector containing the class scores for a single example, that is, the output of the network. Thus <script type="math/tex">f_k</script> is an element for a certain class <script type="math/tex">k</script> in all <script type="math/tex">j</script> classes.</p>
+
+<p>We can then rewrite the softmax output as</p>
+
+<script type="math/tex; mode=display">p_k = \dfrac{e^{f_k}}{\sum_{j} e^{f_j}}</script>
+
+<p>and the negative log-likelihood as</p>
+
+<script type="math/tex; mode=display">L_i = -log(p_{y_{i}})</script>
+
+<p>Now, recall that when performing backpropagation, the first thing we have to do is to compute how the loss changes with respect to the output of the network. Thus, we are looking for <script type="math/tex">\dfrac{\partial L_i}{\partial f_k}</script>.</p>
+
+<p>Because <script type="math/tex">L</script> is dependent on <script type="math/tex">p_k</script>, and <script type="math/tex">p</script> is dependent on <script type="math/tex">f_k</script>, we can simply relate them via chain rule:</p>
+
+<script type="math/tex; mode=display">\dfrac{\partial L_i}{\partial f_k} = \dfrac{\partial L_i}{\partial p_k} \dfrac{\partial p_k}{\partial f_k}</script>
+
+<p>There are now two parts in our approach. First (the easiest one), we solve <script type="math/tex">\dfrac{\partial L_i}{\partial p_k}</script>, then we solve <script type="math/tex">\dfrac{\partial p_{y_i}}{\partial f_k}</script>. The first is simply the derivative of the log, the second is a bit more involved.</p>
+
+<p>Let’s do the first one then,</p>
+
+<script type="math/tex; mode=display">\dfrac{\partial L_i}{\partial p_k} = -\dfrac{1}{p_k}</script>
+
+<p>For the second one, we have to recall the quotient rule for derivatives, let the derivative be represented by the operator <script type="math/tex">\mathbf{D}</script>:</p>
+
+<script type="math/tex; mode=display">\dfrac{f(x)}{g(x)} = \dfrac{g(x) \mathbf{D} f(x) - f(x) \mathbf{D} g(x)}{g(x)^2}</script>
+
+<p>We let <script type="math/tex">\sum_{j} e^{f_j} = \Sigma</script>, and by substituting, we obtain</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{eqnarray}
+\dfrac{\partial p_k}{\partial f_k} &=& \dfrac{\partial}{\partial f_k} \left(\dfrac{e^{f_k}}{\sum_{j} e^{f_j}}\right) \\
+&=& \dfrac{\Sigma \mathbf{D} e^{f_k} - e^{f_k} \mathbf{D} \Sigma}{\Sigma^2} \\
+&=& \dfrac{e^{f_k}(\Sigma - e^{f_k})}{\Sigma^2}
+\end{eqnarray} %]]></script>
+
+<p>The reason why <script type="math/tex">\mathbf{D}\Sigma=e^{f_k}</script> is because if we take the input array <script type="math/tex">f</script> in the softmax function, we’re always “looking” or we’re always taking the derivative of the k-th element. In this case, the derivative with respect to the <script type="math/tex">k</script>-th element will always be <script type="math/tex">0</script> in those elements that are non-<script type="math/tex">k</script>, but <script type="math/tex">e^{f_k}</script> at <script type="math/tex">k</script>.</p>
+
+<p>Continuing our derivation,</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{eqnarray}
+\dfrac{\partial p_k}{\partial f_k} &=& \dfrac{e^{f_k}(\Sigma - e^{f_k})}{\Sigma^2} \\
+&=& \dfrac{e^{f_k}}{\Sigma} \dfrac{\Sigma - e^{f_k}}{\Sigma} \\
+&=& p_k * (1-p_k)
+\end{eqnarray} %]]></script>
+
+<p>By combining the two derivatives we’ve computed earlier, we have:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{eqnarray}
+\dfrac{\partial L_i}{\partial f_k} &=& \dfrac{\partial L_i}{\partial p_k} \dfrac{\partial p_k}{\partial f_k} \\
+&=& -\dfrac{1}{p_k} (p_k * (1-p_k)) \\
+&=& (p_k - 1)
+\end{eqnarray} %]]></script>
+
+<p>And thus we have differentatied the negative log likelihood with respect to the softmax layer.</p>
+
+<h2 id="sources">Sources</h2>
+<ul>
+  <li><a href="http://cs231n.github.io/">Stanford CS231N Convolutional Neural Networks for Visual Recognition</a>. <em>This course inspired this blog post. The derivation of the softmax was left as an exercise and I decided to derive it here.</em></li>
+  <li><a href="http://eli.thegreenplace.net/2016/the-softmax-function-and-its-derivative/">The Softmax Function and Its Derivative</a>. <em>A more thorough treatment of the softmax function’s derivative</em></li>
+  <li><a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR 10</a>. <em>Benchmark dataset for visual recognition.</em></li>
+</ul>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

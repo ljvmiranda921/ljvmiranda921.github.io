@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ant Colony Optimization</title>
+  <meta name="description" content="This is an implementation of the Ant Colony Optimization to solve the Traveling Salesman Problem. In this project, the berlin52 dataset that maps 52 differen...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/01/18/ant-colony-optimization-tsp/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Ant Colony Optimization | Lj Miranda</title>
+<meta property="og:title" content="Ant Colony Optimization" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Solution for the berlin52 travelling salesman problem using ant colony optimization" />
+<meta property="og:description" content="Solution for the berlin52 travelling salesman problem using ant colony optimization" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/01/18/ant-colony-optimization-tsp/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/01/18/ant-colony-optimization-tsp/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-01-18T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"Solution for the berlin52 travelling salesman problem using ant colony optimization","url":"http://localhost:4000/notebook/2017/01/18/ant-colony-optimization-tsp/","headline":"Ant Colony Optimization","dateModified":"2017-01-18T00:00:00+09:00","datePublished":"2017-01-18T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/01/18/ant-colony-optimization-tsp/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Ant Colony Optimization</h1>
+    <p class="post-meta">
+      <time datetime="2017-01-18T00:00:00+09:00" itemprop="datePublished">
+        
+        Jan 18, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>This is an implementation of the Ant Colony Optimization to solve the Traveling Salesman Problem.
+In this project, the <code class="highlighter-rouge">berlin52</code> dataset that maps 52 different points in Berlin, Germany was used<!--more-->
+.</p>
+
+<p style="text-align: center;"><img src="http://i.imgur.com/tqkRm4dl.png" alt="Berlin52" /><br />
+<strong>Figure 1:</strong> <em>Graph of the Berlin52 Dataset</em></p>
+
+<h2 id="ant-colony-optimization">Ant Colony Optimization</h2>
+<p>The Ant Colony Optimization algorithm is inspired by the foraging behaviour of ants. The behavior of the ants are controlled by two
+main parameters: <script type="math/tex">\alpha</script>, or the pheromone’s attractiveness to the ant, and <script type="math/tex">\beta</script>, or the exploration capability of the ant.
+If <script type="math/tex">\alpha</script> is very large, the pheromones left by previous ants in a certain path will be deemed very attractive, making most
+of the ants divert its way towards only one route (exploitation), if <script type="math/tex">\beta</script> is large, ants are more independent in finding the best path (exploration). This ACO implementation used the Ant-System (AS) variant where the movement from
+node <script type="math/tex">i</script> to node <script type="math/tex">j</script> is defined by:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+p_{ij}^{k}(t)=  \begin{cases}
+      \dfrac{\tau_{ij}^{\alpha}(t)\eta_{ij}^{\beta}(t)}{\sum_{u \in \mathcal{N}_{i}^{k}(t)} \tau_{iu}^{\alpha}(t)\eta_{iu}^{\beta}(t)} &if~~~ j \in \mathcal{N}_{i}^{k}(t) \\
+      0 &if~~~ j \not\in \mathcal{N}_{i}^{k}(t)
+   \end{cases} %]]></script>
+
+<h2 id="methodology">Methodology</h2>
+<p>As mentioned, the <script type="math/tex">\alpha</script> and <script type="math/tex">\beta</script> parameters control the exploitation and exploration behaviour of the ants by setting the
+attractiveness of pheromone deposits or the “shortness” of the path. The graphs below (in clockwise order, starting from the upper left)
+describe the <em>(i)</em> city locations, the <em>(ii)</em> solution found by the algorithm, the <em>(iii)</em> (mean) behaviour of the ants, and the
+<em>(iv)</em> minimum tour distance for each iteration.</p>
+
+<h3 id="increased-exploration">Increased exploration</h3>
+<p style="text-align: center;"><strong>Parameters:</strong> <script type="math/tex">\alpha</script> = 15, <script type="math/tex">\beta</script> = 20, <script type="math/tex">\rho</script> = 0.15
+<img src="http://i.imgur.com/lVuDTDkl.png" alt="ACO Test 1" /><br />
+<strong>Figure 2:</strong> <em>ACO Simulation when the exploration parameter is higher</em></p>
+
+<h3 id="increased-exploitation">Increased exploitation</h3>
+<p style="text-align: center;"><strong>Parameters:</strong> <script type="math/tex">\alpha</script> = 20, <script type="math/tex">\beta</script> = 15, <script type="math/tex">\rho</script> = 0.15
+<img src="http://i.imgur.com/SnW6hVll.png" alt="ACO Test 2" /><br />
+<strong>Figure 3:</strong> <em>ACO Simulation when the exploitation parameter is higher</em></p>
+
+<p>The <code class="highlighter-rouge">rho</code> parameter controls the evaporation of pheromone for each time step <script type="math/tex">t</script>. In this case, setting a small <code class="highlighter-rouge">rho</code>
+leads to a slow evaporation of the pheromones, which affects the ants’ exploitation ability as shown below. On the other hand,
+setting a very high evaporation coefficient makes the pheromones for each time step evaporate quickly. This means that ants are
+constantly doing random searches for each iteration.</p>
+
+<h3 id="increased-pheromone-evaporation-rate">Increased pheromone evaporation rate</h3>
+<p style="text-align: center;"><strong>Parameters:</strong> <script type="math/tex">\alpha</script> = <script type="math/tex">\beta</script> = 15, <script type="math/tex">\rho</script> = 0.8
+<img src="http://i.imgur.com/1mqQCyrl.png" alt="ACO Test 3" /><br />
+<strong>Figure 4:</strong> <em>ACO Simulation when pheromone evaporation is high</em></p>
+
+<h3 id="decreased-pheromone-evaporation-rate">Decreased pheromone evaporation rate</h3>
+<p style="text-align: center;"><strong>Parameters:</strong> <script type="math/tex">\alpha</script> = <script type="math/tex">\beta</script> = 15, <script type="math/tex">\rho</script> = 0.01
+<img src="http://i.imgur.com/ISCpfpkl.png" alt="ACO Test 4" /><br />
+<strong>Figure 4:</strong> <em>ACO Simulation when pheromone evaporation is low</em></p>
+
+<h2 id="results">Results</h2>
+<p>The best solution for ACO was <strong>7548.9927</strong> <em>(the optimal solution achieved by current research so far is 7542.00)</em> . It was obtained with the following parameters:</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Iterations</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>Colony Size</td>
+      <td>0.7</td>
+    </tr>
+    <tr>
+      <td>Evaporation Coefficient, <script type="math/tex">\rho~~~</script></td>
+      <td>0.1</td>
+    </tr>
+    <tr>
+      <td>Pheromone Attraction, <script type="math/tex">\alpha</script></td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Short-Path Bias, <script type="math/tex">\beta</script></td>
+      <td>200</td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: center;"><strong>Table 1:</strong> <em>ACO Parameters that was used in the implementation</em></p>
+
+<p style="text-align: center;"><img src="http://i.imgur.com/neFD3JDl.png" alt="ACO Best" /><br />
+<strong>Figure 5:</strong> <em>ACO Best Solution</em></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this ACO implementation, arriving at the best solution requires balancing the exploitation-exploration tradeoff.
+Setting the evaporation coefficient low makes the pheromones stay longer. However, this was balanced by setting the path
+bias of the colony very high, so that they get to explore more options near the route with the highest pheromone concentration
+(instead of causally settling in it). In contrast with the GA implementation, ACO is much easier to control. There are few
+parameters needed and the exploration capability doesn’t necessarily go out of control. It also helps that the ants are
+randomly placed in different areas of the map and allowed to make a “guided” initial tour. This makes the initial values
+much lower as compared in the case of GA where initial costs are very high if a greedy search is not first implemented to construct the initial tour.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>A. Engelbrecht, <em>Computational Intelligence: An Introduction</em>, John Wiley &amp; Sons, Ltd., 2007.</li>
+  <li>A. Schriver, “On the history of combinatorial optimization (until 1960)” in <em>Handbook of Discrete Optimization</em>, Elsevier, Amsterdam, pp. 1-68, 2005.</li>
+  <li>M. Dorigo. <em>Optimization, Learning and Natural Algorithms</em>. PhD thesis, Politecnico di Milano, 1992</li>
+</ul>
+
+<p>You can access the gist <a href="https://gist.github.com/ljvmiranda921/ca93059bc213531fd99af22955b6bf5f">here.</a></p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

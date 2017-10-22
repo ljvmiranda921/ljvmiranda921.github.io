@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Forward Kinematics of Stanford Arm</title>
+  <meta name="description" content="This is my implementation of the forward kinematics problem in Robotics. The forward kinematics problem involves finding the end-tip position of a manipulato...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/01/25/forward-kinematics-stanford-manipulator/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Forward Kinematics of Stanford Arm | Lj Miranda</title>
+<meta property="og:title" content="Forward Kinematics of Stanford Arm" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Simulation of robotic-arm movement using Denavit-Hartenberg parameters" />
+<meta property="og:description" content="Simulation of robotic-arm movement using Denavit-Hartenberg parameters" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/01/25/forward-kinematics-stanford-manipulator/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/01/25/forward-kinematics-stanford-manipulator/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-01-25T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"Simulation of robotic-arm movement using Denavit-Hartenberg parameters","url":"http://localhost:4000/notebook/2017/01/25/forward-kinematics-stanford-manipulator/","headline":"Forward Kinematics of Stanford Arm","dateModified":"2017-01-25T00:00:00+09:00","datePublished":"2017-01-25T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/01/25/forward-kinematics-stanford-manipulator/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Forward Kinematics of Stanford Arm</h1>
+    <p class="post-meta">
+      <time datetime="2017-01-25T00:00:00+09:00" itemprop="datePublished">
+        
+        Jan 25, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>This is my implementation of the forward kinematics problem in Robotics. The forward kinematics problem involves finding the
+end-tip position of a manipulator in a coordinate space given its joint parameters (i.e., joint angles for revolute joints and
+link offset for prismatic joints)<!--more-->
+. This means that given a certain <em>pose</em> of a robotic arm, the xyz coordinates of the hand must be determined. For this implementation, I will be using the 6-DOF Stanford Manipulator as my basis.</p>
+
+<h2 id="stanford-arm">Stanford Arm</h2>
+
+<p>The Stanford Arm, designed by Victor Scheinmann in 1969, can be considered to be one of the <em>classic manipulators</em> in robotics, and is one of the first robots that are designed exclusively for computer control. In this project, I performed a forward kinematics procedure in simulating the arm.</p>
+
+<p>Forward Kinematics uses different kinematic equations in order to compute for the end-tip position of a manipulator given its joint parameters. Joint parameters can refer to joint angles <script type="math/tex">\theta</script> for revolute joints, or link lengths for prismatic joints. In solving for the Forward Kinematics, I utilized the Denavit-Hartenberg (DH) Parameters.</p>
+
+<h2 id="methodology">Methodology</h2>
+
+<h3 id="denavit-hartenberg-parameters">Denavit Hartenberg Parameters</h3>
+
+<p>With DH Parameters, solving for the Forward Kinematics is easy. I only need to take four parameters for each joint <script type="math/tex">i</script>: <script type="math/tex">\theta_{i}</script> for the joint angle, <script type="math/tex">\alpha_{i}</script> for the link twist, <script type="math/tex">d_{i}</script> for the link offset, and <script type="math/tex">a_{i}</script> for the link length. Once I’ve obtained them, I can just  plug them in to this transformation matrix:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+T_{i-1}^{i} = \begin{bmatrix}
+\cos(\theta_{i}) & -cos(\alpha_{i})\cdot sin(\theta_{i}) & \sin(\alpha_{i})\cdot\sin(\theta_{i}) & a_{i} \cdot cos(\theta_{i}) \\
+\sin(\theta_{i}) & cos(\alpha_{i}) \cdot cos(\theta_{i})  & -sin(\alpha_{i}) \cdot cos(\theta_{i}) & a_{i} \cdot sin(\theta_{i}) \\
+ 0 & sin(\alpha_{i})  & cos(\alpha_{i})  & d_{i} \\
+0 & 0 & 0   & 1
+\end{bmatrix} %]]></script>
+
+<p>For the Stanford Arm, here are the DH Parameters:</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th style="text-align: center">Joint</th>
+      <th style="text-align: center">Joint Angle</th>
+      <th style="text-align: center">Link Offset</th>
+      <th style="text-align: center">Link Length</th>
+      <th style="text-align: center">Link Twist</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center"><script type="math/tex">\theta_{1}</script></td>
+      <td style="text-align: center"><script type="math/tex">d_{1}</script></td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">-90</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center"><script type="math/tex">\theta_{2}</script></td>
+      <td style="text-align: center"><script type="math/tex">d_{2}</script></td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">-90</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">-90</td>
+      <td style="text-align: center"><script type="math/tex">d_{3}</script></td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center"><script type="math/tex">\theta_{4}</script></td>
+      <td style="text-align: center"><script type="math/tex">d_{4}</script></td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">-90</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center"><script type="math/tex">\theta_{5}</script></td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">90</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center"><script type="math/tex">\theta_{6}</script></td>
+      <td style="text-align: center"><script type="math/tex">d_{6}</script></td>
+      <td style="text-align: center">0</td>
+      <td style="text-align: center">0</td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: center;"><strong>Table 1:</strong> <em>DH Parameters for the Stanford Arm</em></p>
+
+<p>The joint variables are then expressed as a vector <script type="math/tex">V</script>:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+V \equiv \begin{bmatrix}
+\theta_{1} & \theta_{2} & d_{3} & \theta_{5} & \theta_{6}
+\end{bmatrix} %]]></script>
+
+<p>They are then limited in terms of physical constraints, such that:</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th style="text-align: center">Parameters</th>
+      <th style="text-align: center">Limitation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">\theta_1</script></td>
+      <td style="text-align: center">[-180 180]</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">\theta_2</script></td>
+      <td style="text-align: center">[-90 90]</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">d_3</script></td>
+      <td style="text-align: center">[1 3]</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">\theta_4</script></td>
+      <td style="text-align: center">[-180 180]</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">\theta_5</script></td>
+      <td style="text-align: center">[-25 25]</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><script type="math/tex">\theta_6</script></td>
+      <td style="text-align: center">[-180 180]</td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: center;"><strong>Table 2:</strong> <em>Joint variable physical constraints</em></p>
+
+<h3 id="matlab-implementation">MATLAB Implementation</h3>
+<p>The following code snippets will show my implementation of the forward kinematics of the Stanford Manipulator in MATLAB.</p>
+
+<h4 id="transformation-matrix">Transformation Matrix</h4>
+<p>The transformation matrix is expressed as the function <code class="highlighter-rouge">getTransformMatrix</code>. It takes the DH parameters of a single joint as its input argument, and outputs the corresponding transformation matrix <script type="math/tex">T_{i-1}^{i}</script>.</p>
+
+<div class="language-m highlighter-rouge"><pre class="highlight"><code><span class="k">function</span> <span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="o">=</span> <span class="n">getTransformMatrix</span><span class="p">(</span><span class="n">theta</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="nb">alpha</span><span class="p">)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="p">[</span><span class="nb">cosd</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">-</span><span class="nb">sind</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">*</span> <span class="nb">cosd</span><span class="p">(</span><span class="nb">alpha</span><span class="p">)</span> <span class="nb">sind</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">*</span> <span class="nb">sind</span><span class="p">(</span><span class="nb">alpha</span><span class="p">)</span> <span class="n">a</span> <span class="o">*</span> <span class="nb">cosd</span><span class="p">(</span><span class="n">theta</span><span class="p">);</span><span class="k">...</span>
+     <span class="nb">sind</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="nb">cosd</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">*</span> <span class="nb">cosd</span><span class="p">(</span><span class="nb">alpha</span><span class="p">)</span>  <span class="o">-</span><span class="nb">cosd</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">*</span> <span class="nb">sind</span><span class="p">(</span><span class="nb">alpha</span><span class="p">)</span> <span class="n">a</span> <span class="o">*</span> <span class="nb">sind</span><span class="p">(</span><span class="n">theta</span><span class="p">);</span><span class="k">...</span>
+     <span class="mi">0</span><span class="p">,</span><span class="nb">sind</span><span class="p">(</span><span class="nb">alpha</span><span class="p">),</span><span class="nb">cosd</span><span class="p">(</span><span class="nb">alpha</span><span class="p">),</span><span class="n">d</span><span class="p">;</span><span class="k">...</span>
+     <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">];</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h4 id="forward-kinematics">Forward Kinematics</h4>
+<p>Forward kinematics then becomes a simple implementation of the <code class="highlighter-rouge">getTransformMatrix</code> above. By setting the link lengths constant, the end-tip position can be computed. In my case, I wrapped this function inside the method <code class="highlighter-rouge">forwardKinematics</code>:</p>
+
+<div class="language-m highlighter-rouge"><pre class="highlight"><code><span class="k">function</span> <span class="p">[</span><span class="n">T00</span><span class="p">,</span><span class="n">T01</span><span class="p">,</span><span class="n">T12</span><span class="p">,</span><span class="n">T23</span><span class="p">,</span><span class="n">T34</span><span class="p">,</span><span class="n">T45</span><span class="p">,</span><span class="n">T56</span><span class="p">,</span><span class="n">Etip</span><span class="p">]</span> <span class="o">=</span>  <span class="n">forwardKinematics</span><span class="p">(</span><span class="n">theta1</span><span class="p">,</span><span class="n">theta2</span><span class="p">,</span><span class="n">d3</span><span class="p">,</span><span class="n">theta4</span><span class="p">,</span><span class="n">theta5</span><span class="p">,</span><span class="n">theta6</span><span class="p">)</span>
+
+<span class="n">T00</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span> <span class="mi">0</span><span class="p">;</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="p">];</span>
+<span class="n">T01</span> <span class="o">=</span> <span class="n">getTransformMatrix</span><span class="p">(</span><span class="n">theta1</span><span class="p">,</span><span class="n">d1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">90</span><span class="p">);</span>
+<span class="n">T12</span> <span class="o">=</span> <span class="n">getTransformMatrix</span><span class="p">(</span><span class="n">theta2</span><span class="p">,</span><span class="n">d2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">90</span><span class="p">);</span>
+<span class="n">T23</span> <span class="o">=</span> <span class="n">getTransformMatrix</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">d3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">90</span><span class="p">);</span>
+<span class="n">T34</span> <span class="o">=</span> <span class="n">getTransformMatrix</span><span class="p">(</span><span class="n">theta4</span><span class="p">,</span><span class="n">d4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">90</span><span class="p">);</span>
+<span class="n">T45</span> <span class="o">=</span> <span class="n">getTransformMatrix</span><span class="p">(</span><span class="n">theta5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">90</span><span class="p">);</span>
+<span class="n">T56</span> <span class="o">=</span> <span class="n">getTransformMatrix</span><span class="p">(</span><span class="n">theta6</span><span class="p">,</span><span class="n">d6</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="n">Etip</span> <span class="o">=</span> <span class="n">T00</span> <span class="o">*</span> <span class="n">T01</span> <span class="o">*</span> <span class="n">T12</span> <span class="o">*</span> <span class="n">T23</span> <span class="o">*</span> <span class="n">T34</span> <span class="o">*</span> <span class="n">T45</span> <span class="o">*</span> <span class="n">T56</span><span class="p">;</span>
+
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<h2 id="simulation-results">Simulation Results</h2>
+<p>Here are some simulations of my work. I tried different values for the joint parameters and then recorded the results in
+GIF format. I also plotted the top and side views just to see how the manipulator is posed in terms of the x-y and x-z coordinates.</p>
+
+<h3 id="simulation-1">Simulation 1</h3>
+<p><script type="math/tex">\theta_{1}</script> = -90, <script type="math/tex">\theta_{2}</script> = 90, <script type="math/tex">d_{3}</script> = 6, <script type="math/tex">\theta_{4}</script> = 45, <script type="math/tex">\theta_{5}</script> = 25, <script type="math/tex">\theta_{6}</script> = 90</p>
+
+<p style="text-align: center;"><img src="/assets/png/robosim/fkine01.gif" alt="Simulation 1" /><br />
+<strong>Figure 1a:</strong> <em>Forward Kinematics Simulation</em></p>
+<p style="text-align: center;"><img src="http://i.imgur.com/uxf2xKtl.png" alt="Top and Side View" height="274px" width="560px" /><br />
+<strong>Figure 1b:</strong> <em>Top (left) and side (right) views of the manipulator’s end-pose</em></p>
+
+<h3 id="simulation-2">Simulation 2</h3>
+<p><script type="math/tex">\theta_{1}</script> = 180, <script type="math/tex">\theta_{2}</script> = 0, <script type="math/tex">d_{3}</script> = 6, <script type="math/tex">\theta_{4}</script> = 45, <script type="math/tex">\theta_{5}</script> = 25, <script type="math/tex">\theta_{6}</script> = 0</p>
+
+<p style="text-align: center;"><img src="/assets/png/robosim/fkine02.gif" alt="Simulation 2" /><br />
+<strong>Figure 2a:</strong> <em>Forward Kinematics Simulation</em></p>
+
+<p style="text-align: center;"><img src="http://i.imgur.com/AjVMtIGl.png" alt="Top and Side View" height="274px" width="560px" /><br />
+<strong>Figure 2b:</strong> <em>Top (left) and side (right) views of the manipulator’s end-pose</em></p>
+
+<h3 id="simulation-3">Simulation 3</h3>
+<p><script type="math/tex">\theta_{1}</script> = 90, <script type="math/tex">\theta_{2}</script> = -45, <script type="math/tex">d_{3}</script> = 6, <script type="math/tex">\theta_{4}</script> = 45, <script type="math/tex">\theta_{5}</script> = -25, <script type="math/tex">\theta_{6}</script> = 45</p>
+
+<p style="text-align: center;"><img src="/assets/png/robosim/fkine03.gif" alt="Simulation 3" /><br />
+<strong>Figure 3a:</strong> <em>Forward Kinematics Simulation</em></p>
+
+<p style="text-align: center;"><img src="http://i.imgur.com/StBp7rGl.png" alt="Top and Side View" height="274px" width="560px" /><br />
+<strong>Figure 3b:</strong> <em>Top (left) and side (right) views of the manipulator’s end-pose</em></p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Solving for the end-tip position given the joint parameters (or doing forward kinematics) is much easier algebraically when one is using the DH parameters. It is then a lot easier to model a manipulator because four parameters are only needed in order to define a certain joint.</p>
+
+<p>Limitations should also be imposed in the model with respect to the physical environment it belongs to. This is to avoid “impractical” or “illogical” movements being done by the manipulator.</p>
+
+<p>Solving for the inverse kinematics proved to be very difficult algebraically. Multiple solutions often arise and it must always be checked with respect to the physical constraints imposed.</p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

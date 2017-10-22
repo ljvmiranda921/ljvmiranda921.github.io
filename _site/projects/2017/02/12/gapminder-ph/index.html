@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Gapminder PH</title>
+  <meta name="description" content="In honor of Hans Rosling, who passed away last week, I decided to create a Gapminder plot for the Philippines. So here are the provinces of our country, plus...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/projects/2017/02/12/gapminder-ph/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Gapminder PH | Lj Miranda</title>
+<meta property="og:title" content="Gapminder PH" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In honor of Hans Rosling, who passed away last week, I decided to create a Gapminder plot for the Philippines. So here are the provinces of our country, plus Metro Manila, mapped in terms of health and wealth. (Note: Loading with Plotly may take some time) How to use Drag the slider to switch years from 2001 to 2015. You can also access the panel above in order to zoom-in/out, pan, or select a subset of data. If you get lost, simply click the “Autoscale” button and the “Reset Axis” button. Furthermore, you can check the data and the Python scripts I used in my Github! Notes The expenses were plotted in a logarithmic scale. Dinagat Islands officially became a province by the end of 2006, although the rulings flipped (and flopped) by 2010 and 2011. One can then see how it changed financially from 2006 to 2007. Prior to that year, data for Dinagat Islands was taken from Surigao del Norte. Population data is only available for the years 2000, 2010, and 2015. Linear regression was implemented to fill the missing years. Similarly, life expectancy data is only available for the years 1997 to 2012 in three-year intervals. Linear regression was also implemented to fill the missing years. Kudos to Department of Finance for having their LGU-level data available and organized. Expenses were treated as an “indicator” of wealth [4] Update: Expenses were adjusted using the price index (CPI) in order to take inflation into account. Sources Bureau of Local Government Finance, Department of Finance, Republic of the Philippines (accessed: 10 Feb 2017) “2012-2013 Philippine Human Development Report,” Human Development Network (HDN), 2013. “2015 Census of Population,” Philippine Statistics Authority, Republic of the Philippines (accessed: 10 Feb 2017) “Measuring Living Standards, Household Consumption and Wealth Indices,” Quantitative Techniques for Health Equity Analysis: Technical Note 14, World Bank (accessed: 11 Feb 2017) “Consumer Price Index: Philippines,” World Bank G. Thompson “Statistical Literacy Guide: How to adjust for inflation,” Library House of Commons, 2009. Also, I found another implementation of Gapminder PH (by Dr. Reina Reyes) which I saw last night, check it out here." />
+<meta property="og:description" content="In honor of Hans Rosling, who passed away last week, I decided to create a Gapminder plot for the Philippines. So here are the provinces of our country, plus Metro Manila, mapped in terms of health and wealth. (Note: Loading with Plotly may take some time) How to use Drag the slider to switch years from 2001 to 2015. You can also access the panel above in order to zoom-in/out, pan, or select a subset of data. If you get lost, simply click the “Autoscale” button and the “Reset Axis” button. Furthermore, you can check the data and the Python scripts I used in my Github! Notes The expenses were plotted in a logarithmic scale. Dinagat Islands officially became a province by the end of 2006, although the rulings flipped (and flopped) by 2010 and 2011. One can then see how it changed financially from 2006 to 2007. Prior to that year, data for Dinagat Islands was taken from Surigao del Norte. Population data is only available for the years 2000, 2010, and 2015. Linear regression was implemented to fill the missing years. Similarly, life expectancy data is only available for the years 1997 to 2012 in three-year intervals. Linear regression was also implemented to fill the missing years. Kudos to Department of Finance for having their LGU-level data available and organized. Expenses were treated as an “indicator” of wealth [4] Update: Expenses were adjusted using the price index (CPI) in order to take inflation into account. Sources Bureau of Local Government Finance, Department of Finance, Republic of the Philippines (accessed: 10 Feb 2017) “2012-2013 Philippine Human Development Report,” Human Development Network (HDN), 2013. “2015 Census of Population,” Philippine Statistics Authority, Republic of the Philippines (accessed: 10 Feb 2017) “Measuring Living Standards, Household Consumption and Wealth Indices,” Quantitative Techniques for Health Equity Analysis: Technical Note 14, World Bank (accessed: 11 Feb 2017) “Consumer Price Index: Philippines,” World Bank G. Thompson “Statistical Literacy Guide: How to adjust for inflation,” Library House of Commons, 2009. Also, I found another implementation of Gapminder PH (by Dr. Reina Reyes) which I saw last night, check it out here." />
+<link rel="canonical" href="http://localhost:4000/projects/2017/02/12/gapminder-ph/" />
+<meta property="og:url" content="http://localhost:4000/projects/2017/02/12/gapminder-ph/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-02-12T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"In honor of Hans Rosling, who passed away last week, I decided to create a Gapminder plot for the Philippines. So here are the provinces of our country, plus Metro Manila, mapped in terms of health and wealth. (Note: Loading with Plotly may take some time) How to use Drag the slider to switch years from 2001 to 2015. You can also access the panel above in order to zoom-in/out, pan, or select a subset of data. If you get lost, simply click the “Autoscale” button and the “Reset Axis” button. Furthermore, you can check the data and the Python scripts I used in my Github! Notes The expenses were plotted in a logarithmic scale. Dinagat Islands officially became a province by the end of 2006, although the rulings flipped (and flopped) by 2010 and 2011. One can then see how it changed financially from 2006 to 2007. Prior to that year, data for Dinagat Islands was taken from Surigao del Norte. Population data is only available for the years 2000, 2010, and 2015. Linear regression was implemented to fill the missing years. Similarly, life expectancy data is only available for the years 1997 to 2012 in three-year intervals. Linear regression was also implemented to fill the missing years. Kudos to Department of Finance for having their LGU-level data available and organized. Expenses were treated as an “indicator” of wealth [4] Update: Expenses were adjusted using the price index (CPI) in order to take inflation into account. Sources Bureau of Local Government Finance, Department of Finance, Republic of the Philippines (accessed: 10 Feb 2017) “2012-2013 Philippine Human Development Report,” Human Development Network (HDN), 2013. “2015 Census of Population,” Philippine Statistics Authority, Republic of the Philippines (accessed: 10 Feb 2017) “Measuring Living Standards, Household Consumption and Wealth Indices,” Quantitative Techniques for Health Equity Analysis: Technical Note 14, World Bank (accessed: 11 Feb 2017) “Consumer Price Index: Philippines,” World Bank G. Thompson “Statistical Literacy Guide: How to adjust for inflation,” Library House of Commons, 2009. Also, I found another implementation of Gapminder PH (by Dr. Reina Reyes) which I saw last night, check it out here.","url":"http://localhost:4000/projects/2017/02/12/gapminder-ph/","headline":"Gapminder PH","dateModified":"2017-02-12T00:00:00+09:00","datePublished":"2017-02-12T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/2017/02/12/gapminder-ph/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Gapminder PH</h1>
+    <p class="post-meta">
+      <time datetime="2017-02-12T00:00:00+09:00" itemprop="datePublished">
+        
+        Feb 12, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><br /> In honor of Hans Rosling, who passed away last week, I decided to create a Gapminder plot for the Philippines. So here
+are the provinces of our country, plus Metro Manila, mapped in terms of health and wealth. <em>(Note: Loading with Plotly may take some time)</em></p>
+
+<iframe width="850" height="750" frameborder="0" scrolling="no" src="//plot.ly/~ljvmiranda/49.embed"></iframe>
+
+<h3 id="how-to-use">How to use</h3>
+<p>Drag the slider to switch years from 2001 to 2015. You can also access the panel above
+in order to zoom-in/out, pan, or select a subset of data. If you get lost, simply click
+the “Autoscale” button and the “Reset Axis” button. Furthermore, you can check the data and the Python
+scripts I used in my <a href="https://github.com/ljvmiranda921/gapminder-ph">Github</a>!</p>
+
+<h3 id="notes">Notes</h3>
+<ul>
+  <li>The expenses were plotted in a logarithmic scale.</li>
+  <li>Dinagat Islands officially became a province by the end of 2006, although the rulings flipped (and flopped) by 2010 and 2011. One can then see how it changed financially from 2006 to 2007. Prior to that year, data for Dinagat Islands was taken from Surigao del Norte.</li>
+  <li>Population data is only available for the years 2000, 2010, and 2015. Linear regression was implemented to fill the missing years.</li>
+  <li>Similarly, life expectancy data is only available for the years 1997 to 2012 in three-year intervals. Linear regression was also implemented to fill the missing years.</li>
+  <li>Kudos to Department of Finance for having their LGU-level data available and organized.</li>
+  <li>Expenses were treated as an “indicator” of wealth [4]</li>
+  <li><em>Update:</em> Expenses were adjusted using the price index (CPI) in order to take inflation into account.</li>
+</ul>
+
+<h3 id="sources">Sources</h3>
+<ol>
+  <li><a href="http://blgf.gov.ph/lgu-fiscal-data/"><em>Bureau of Local Government Finance</em>, Department of Finance, Republic of the Philippines (accessed: 10 Feb 2017)</a></li>
+  <li>“2012-2013 Philippine Human Development Report,” Human Development Network (HDN), 2013.</li>
+  <li><a href="https://psa.gov.ph/statistics/census/2015-census-of-population">“2015 Census of Population,” Philippine Statistics Authority, Republic of the Philippines (accessed: 10 Feb 2017)</a></li>
+  <li><a href="http://siteresources.worldbank.org/INTPAH/Resources/Publications/Quantitative-Techniques/health_eq_tn04.pdf">“Measuring Living Standards, Household Consumption and Wealth Indices,” <em>Quantitative Techniques for Health Equity Analysis: Technical Note 14</em>, World Bank (accessed: 11 Feb 2017)</a></li>
+  <li><a href="http://data.worldbank.org/indicator/FP.CPI.TOTL?locations=PH">“Consumer Price Index: Philippines,” World Bank</a></li>
+  <li><a href="http://www.parliament.uk/briefing-papers/sn04962.pdf">G. Thompson “Statistical Literacy Guide: How to adjust for inflation,” Library House of Commons, 2009.</a></li>
+</ol>
+
+<p>Also, I found another implementation of Gapminder PH (by Dr. Reina Reyes) which I saw last night, check it out <a href="https://pinayobserver.wordpress.com/2012/09/01/gapminder/">here.</a></p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Twitter streaming using Python</title>
+  <meta name="description" content="Streaming tweets can be a fun exercise in data mining. With almost a million tweets being published everyday, there is an enormous wealth of data that can be...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/02/24/twitter-streaming-using-python/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Twitter streaming using Python | Lj Miranda</title>
+<meta property="og:title" content="Twitter streaming using Python" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Streaming tweets can be a fun exercise in data mining. With almost a million tweets being published everyday, there is an enormous wealth of data that can be gathered, and insights to be discovered. Today, we will utilize a powerful Python library called tweepy to access tweets from the web in real-time" />
+<meta property="og:description" content="Streaming tweets can be a fun exercise in data mining. With almost a million tweets being published everyday, there is an enormous wealth of data that can be gathered, and insights to be discovered. Today, we will utilize a powerful Python library called tweepy to access tweets from the web in real-time" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/02/24/twitter-streaming-using-python/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/02/24/twitter-streaming-using-python/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-02-24T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"Streaming tweets can be a fun exercise in data mining. With almost a million tweets being published everyday, there is an enormous wealth of data that can be gathered, and insights to be discovered. Today, we will utilize a powerful Python library called tweepy to access tweets from the web in real-time","url":"http://localhost:4000/notebook/2017/02/24/twitter-streaming-using-python/","headline":"Twitter streaming using Python","dateModified":"2017-02-24T00:00:00+09:00","datePublished":"2017-02-24T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/02/24/twitter-streaming-using-python/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Twitter streaming using Python</h1>
+    <p class="post-meta">
+      <time datetime="2017-02-24T00:00:00+09:00" itemprop="datePublished">
+        
+        Feb 24, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Streaming tweets can be a fun exercise in data mining. With almost a million tweets being published
+everyday, there is an enormous wealth of data that can be gathered, and insights to be discovered.
+Today, we will utilize a powerful Python library called <a href="http://www.tweepy.org/"><code class="highlighter-rouge">tweepy</code></a> to access
+tweets from the web in real-time<!--more-->.</p>
+
+<p>The main idea is that we will first (1) generate Twitter credentials online by making a <em>Twitter App</em>,
+and then (2) use <code class="highlighter-rouge">tweepy</code> together with our Twitter credentials to stream tweets depending on our
+settings. We can then opt to (3) save these tweets in a database, so that we can perform our own
+search queries or (4) export them later as <code class="highlighter-rouge">.csv</code> files for analysis.</p>
+
+<p>In this tutorial, we will create two files, the Twitter scraper routine <code class="highlighter-rouge">scraper.py</code>, and the .csv
+exporter <code class="highlighter-rouge">dumper.py</code>. Steps 1 to 3 correspond to the scraper while the last step is for the dumper:</p>
+
+<ol>
+  <li><a href="#credentials">Generate Twitter credentials</a></li>
+  <li><a href="#listener">Create the <code class="highlighter-rouge">StreamListener</code> class using <code class="highlighter-rouge">tweepy</code></a></li>
+  <li><a href="#database">Save tweets into an <code class="highlighter-rouge">SQL</code> database</a></li>
+  <li><a href="#dump">Convert database into a .csv file</a></li>
+</ol>
+
+<h2 id="dependencies">Dependencies</h2>
+<p>I’ll be using Python 3 (3.5.2) in conjunction with the following libraries. If you don’t have the
+following modules, you can simply install them using Git Bash and then <code class="highlighter-rouge">pip install &lt;module&gt;</code>:</p>
+
+<ul>
+  <li><a href="https://github.com/tweepy/tweepy">Tweepy</a>,<code class="highlighter-rouge">tweepy</code>, for streaming Tweets. This is required, obviously.</li>
+  <li><a href="http://dataset.readthedocs.io/en/latest/">dataset</a>, <code class="highlighter-rouge">dataset</code>, a lightweight database module where we can store our tweets.</li>
+  <li><a href="http://www.sqlalchemy.org/download.html">SQL Alchemy</a>, <code class="highlighter-rouge">SQLAlchemy</code>, an object relational mapper (ORM) that can be used for Python.</li>
+</ul>
+
+<h2 id="-generate-twitter-credentials"><a name="credentials"></a> Generate Twitter Credentials</h2>
+<p>If you don’t have a <a href="https://twitter.com/">Twitter</a> account, make one. Once you’re done, head over
+to https://apps.twitter.com/ and “Create a New App.” You will then see a similar form below:</p>
+
+<p style="text-align: center;"><img src="/assets/png/tuts/twitter/create.PNG" alt="Create New App Form" width="560px" /><br />
+<strong>Figure 1:</strong> <em>Create New Application Form</em></p>
+
+<p>For the Name field, simply write a name for your application. It can be “MyApp” or anything. In the
+Description field, you can write something about your application so that you can be reminded later
+of what it does. Lastly, for the Website field, you can enter your own website, but if you don’t
+have any, https://www.site.com will suffice.</p>
+
+<p>Note that we are not writing anything down in the Callback URL field. Leave that blank for now.
+Once you’re done, tick the agreement checkbox and click “Create your Twitter Application”</p>
+
+<p>Once your application has already been created, a dashboard will appear in your browser. Go to “Keys
+and Access Tokens” tab and generate your consumer keys and access tokens if they’re not yet available.
+By the end of this process, we now have the following keys, and we’ll refer to them as the following:</p>
+
+<ul>
+  <li>Consumer Key (API Key), <code class="highlighter-rouge">consumer_key</code></li>
+  <li>Consumer Secret (API Secret), <code class="highlighter-rouge">consumer_secret</code></li>
+  <li>Access Token, <code class="highlighter-rouge">access_token</code></li>
+  <li>Access Token Secret, <code class="highlighter-rouge">access_token_secret</code></li>
+</ul>
+
+<p>Take note of these variables for we’ll use them later on.</p>
+
+<h2 id="-create-the-streamlistener-class-using-tweepy"><a name="listener"></a> Create the <code class="highlighter-rouge">StreamListener</code> class using <code class="highlighter-rouge">tweepy</code></h2>
+<p>We wil create the listener class that will inherit from the <code class="highlighter-rouge">StreamListener</code> object in <code class="highlighter-rouge">tweepy</code>.
+We’ll create a wrapper, and then define methods that will be activated depending on what the listener
+is hearing. In our case, we’ll build the <code class="highlighter-rouge">on_status</code> and  <code class="highlighter-rouge">on_error</code> methods inside the
+<code class="highlighter-rouge">StdOutListener</code> class. The structure of our listener class is very short and easy. In its entirety,
+this is what it looks like:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">StdOutListener</span><span class="p">(</span><span class="n">StreamListener</span><span class="p">):</span>
+    <span class="s">""" A listener handles tweets that are received from the stream.
+    This is a basic listener that just prints received tweets to stdout.
+    """</span>
+    <span class="k">def</span> <span class="nf">on_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">True</span>
+
+    <span class="k">def</span> <span class="nf">on_error</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status_code</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">status_code</span> <span class="o">==</span> <span class="mi">420</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+</code></pre>
+</div>
+
+<ul>
+  <li>The method <code class="highlighter-rouge">on_status</code> is activated whenever a tweet has been heard. Its input is the variable <code class="highlighter-rouge">status</code>, which is the actual Tweet it heard plus the metadata. Here, <code class="highlighter-rouge">status</code> can be seen as an object with different parameters. For example, <code class="highlighter-rouge">status.text</code>is the actual tweet in UTF-8 encoding, <code class="highlighter-rouge">status.favorite_count</code> is the number of favorites the tweet has and so on. You can look for the different parameters <a href="https://dev.twitter.com/overview/api/tweets">here</a>.</li>
+  <li>The method <code class="highlighter-rouge">on_error</code> serves as an error handler for our listener. Sometimes, Error 420 are being sent in our listener because of Twitter’s rate limit policy. Whenever this kind of error arrives, it will prompt our listener to disconnect.</li>
+</ul>
+
+<p>As you can see, it is in the <code class="highlighter-rouge">on_status</code> method where we’ll put all the manipulations required. This
+can include storing Tweets into the database and other things. As long as we hear something through
+the listener, <code class="highlighter-rouge">on_status</code> is executed and it does all the things we put into it.</p>
+
+<p>Our listener class, <code class="highlighter-rouge">StdOutListener()</code>, can then be used in order to stream tweets. In the same file
+(<code class="highlighter-rouge">scraper.py</code>), we write the following:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">absolute_import</span><span class="p">,</span> <span class="n">print_function</span>
+
+<span class="c"># Import modules</span>
+<span class="kn">from</span> <span class="nn">tweepy.streaming</span> <span class="kn">import</span> <span class="n">StreamListener</span>
+<span class="kn">from</span> <span class="nn">tweepy</span> <span class="kn">import</span> <span class="n">OAuthHandler</span>
+<span class="kn">from</span> <span class="nn">tweepy</span> <span class="kn">import</span> <span class="n">Stream</span>
+<span class="kn">import</span> <span class="nn">dataset</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.exc</span> <span class="kn">import</span> <span class="n">ProgrammingError</span>
+
+<span class="c"># Your credentials go here</span>
+<span class="n">consumer_key</span> <span class="o">=</span> <span class="s">" "</span>
+<span class="n">consumer_secret</span> <span class="o">=</span> <span class="s">" "</span>
+<span class="n">access_token</span> <span class="o">=</span> <span class="s">" "</span>
+<span class="n">access_token_secret</span> <span class="o">=</span> <span class="s">" "</span>
+
+<span class="s">"""
+The code for our listener class above goes here!
+"""</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="n">StdOutListener</span><span class="p">()</span>
+    <span class="n">auth</span> <span class="o">=</span> <span class="n">OAuthHandler</span><span class="p">(</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="p">)</span>
+    <span class="n">auth</span><span class="o">.</span><span class="n">set_access_token</span><span class="p">(</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="p">)</span>
+
+    <span class="n">stream</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">(</span><span class="n">auth</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+    <span class="n">stream</span><span class="o">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">track</span><span class="o">=</span><span class="p">[</span><span class="s">'github'</span><span class="p">,</span> <span class="s">'tweepy'</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<p>We simply import all our modules, and then plug in the credentials we obtained in the earlier step.
+<strong>Remember to put the code for our listener class right after</strong> <em>(see comment)</em>. In our main function,
+we simply invoke an instance of our listener, and then use the <code class="highlighter-rouge">tweepy</code> methods
+in order to connect to our application.</p>
+
+<div class="alert alert-info">
+  Normally, it's a good practice that you store your Twitter credentials, or anything that is private
+  in a separate file away from your source code. I suggest storing them in a config.ini file, then
+  accessing them using the ConfigParser module in Python.
+</div>
+
+<p>We can then add filters in the way we stream using the <code class="highlighter-rouge">stream.filter()</code> method. The <code class="highlighter-rouge">track</code> parameter
+is an array of keywords that will be listened into. This means that as our listener is running,
+it will only listen to tweets that contain the keywords below (logical OR).</p>
+
+<p>You can actually try this one out right now. Just copy the code below, supply your credentials, and
+then type <code class="highlighter-rouge">python scraper.py</code> in your cmd!</p>
+
+<div class="alert alert-warning">
+  <strong>Take note!</strong>
+Depending on your machine, sometimes there are errors that will appear such as:
+<pre>charmap can't encode character</pre>
+One very fast workaround that I <b>don't</b> recommend, but you'll find in most StackOverflow threads is to type
+<pre>chcp 65001</pre>
+in your console before running the scraper. The error often comes in the console and this solution is quite hack-ish and not much of a good practice.
+I suggest <a href="http://stackoverflow.com/questions/14630288/unicodeencodeerror-charmap-codec-cant-encode-character-maps-to-undefined">Dirk Stocker's</a> answer for this. Using a wrapper is much more scalable and gives you good practice early on. But if you think his solution is quite difficult, I won't stop you from using chcp.
+</div>
+
+<h2 id="-save-tweets-into-an-sql-database"><a name="database"></a> Save tweets into an <code class="highlighter-rouge">SQL</code> database</h2>
+
+<p>We will now extend our <code class="highlighter-rouge">on_status</code> method to include database storage. In this case, it will look
+like this:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">on_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">status</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">status</span><span class="o">.</span><span class="n">retweeted</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="n">id_str</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">id_str</span>
+    <span class="n">created</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">created_at</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">fav</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">favorite_count</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">screen_name</span>
+    <span class="n">description</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">description</span>
+    <span class="n">loc</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">location</span>
+    <span class="n">user_created</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">created_at</span>
+    <span class="n">followers</span> <span class="o">=</span> <span class="n">status</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">followers_count</span>
+
+    <span class="n">table</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="s">'myTable'</span><span class="p">]</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">table</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">id_str</span><span class="o">=</span><span class="n">id_str</span><span class="p">,</span>
+            <span class="n">created</span><span class="o">=</span><span class="n">created</span><span class="p">,</span>
+            <span class="n">text</span><span class="o">=</span><span class="n">text</span><span class="p">,</span>
+            <span class="n">fav_count</span><span class="o">=</span><span class="n">fav</span><span class="p">,</span>
+            <span class="n">user_name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">user_description</span><span class="o">=</span><span class="n">description</span><span class="p">,</span>
+            <span class="n">user_location</span><span class="o">=</span><span class="n">loc</span><span class="p">,</span>
+            <span class="n">user_created</span><span class="o">=</span><span class="n">user_created</span><span class="p">,</span>
+            <span class="n">user_followers</span><span class="o">=</span><span class="n">followers</span><span class="p">,</span>
+        <span class="p">))</span>
+    <span class="k">except</span> <span class="n">ProgrammingError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>As you can see, we’re accessing different parameters of the Tweet such as the user ID of the one who
+created the Tweet, the number of favorites, the location, and even the time it was created. We simply
+store them in different variables so that we can access them easily. Next, we create a table named
+<code class="highlighter-rouge">myTable</code>, and this is where we’ll store our Tweets. Using the <code class="highlighter-rouge">dataset</code> library, we can simply do
+this by invoking the <code class="highlighter-rouge">table.insert</code> command and supplying it with the dictionary made up of our
+Tweet parameters.</p>
+
+<p>Lastly, don’t forget that we need to connect to our database, we do that by adding another line in
+our <code class="highlighter-rouge">main</code> routine like below:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">"sqlite:///tweets.db"</span><span class="p">)</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="n">StdOutListener</span><span class="p">()</span>
+    <span class="n">auth</span> <span class="o">=</span> <span class="n">OAuthHandler</span><span class="p">(</span><span class="n">consumer_key</span><span class="p">,</span> <span class="n">consumer_secret</span><span class="p">)</span>
+    <span class="n">auth</span><span class="o">.</span><span class="n">set_access_token</span><span class="p">(</span><span class="n">access_token</span><span class="p">,</span> <span class="n">access_token_secret</span><span class="p">)</span>
+
+    <span class="n">stream</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">(</span><span class="n">auth</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+    <span class="n">stream</span><span class="o">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">track</span><span class="o">=</span><span class="p">[</span><span class="s">'github'</span><span class="p">,</span> <span class="s">'tweepy'</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<p>We are then connecting to the database called <code class="highlighter-rouge">tweets.db</code>, and we’re doing that in just a single line!
+As you can see, this is quite easy! We can now start scraping our Twitter data! Again, just hit the
+console and type:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ python scraper.py
+</code></pre>
+</div>
+<p>If we want to end the stream, just press CTRL + C.</p>
+
+<h2 id="-convert-database-into-a-csv-file"><a name="dump"></a> Convert database into a .csv file</h2>
+<p>In this section, we will then create another file, <code class="highlighter-rouge">dumper.py</code>. It is made up of just four lines so
+here we go:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">dataset</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">"sqlite:///tweets.db"</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="s">'myTable'</span><span class="p">]</span><span class="o">.</span><span class="nb">all</span><span class="p">()</span>
+<span class="n">dataset</span><span class="o">.</span><span class="n">freeze</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">format</span><span class="o">=</span><span class="s">'csv'</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s">'tweets.csv'</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Here, we are connecting again to the <code class="highlighter-rouge">tweets</code> database. We then retrieve the values that can be found
+in our table <code class="highlighter-rouge">myTable</code> and store it in the variable <code class="highlighter-rouge">result</code>. Afterwhich, we invoke the <code class="highlighter-rouge">freeze</code> command
+in order to “convert” our database into a .csv file with the filename
+<code class="highlighter-rouge">tweets.csv</code>.</p>
+
+<p>Thus, after scraping, we can then run this dumper using the following command:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ python dumper.py
+</code></pre>
+</div>
+
+<p>This will then generate a file in the same directory as this code.</p>
+
+<p>I hope that you were able to use this little tutorial in streaming your Tweets! Data scraping is
+one of the most useful tools in data science and getting sentiments from Twitter can prove to be
+valuable with its wide-range of applications. The final code for the scraper can be seen
+in this <a href="https://gist.github.com/ljvmiranda921/3fcbed4d69f4aced752304fa8f36353b">gist</a>.</p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

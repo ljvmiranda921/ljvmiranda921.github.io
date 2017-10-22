@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Implemeting a k-Nearest Neighbor classifier</title>
+  <meta name="description" content="In this post, we’ll be implementing a k-Nearest neighbors classifier from scratch. The basic idea for the k-Nearest Neighbors classifier is that we find the ...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/02/09/k-nearest-neighbors/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Implemeting a k-Nearest Neighbor classifier | Lj Miranda</title>
+<meta property="og:title" content="Implemeting a k-Nearest Neighbor classifier" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this post, we’ll be implementing a k-Nearest neighbors classifier from scratch. The basic idea for the k-Nearest Neighbors classifier is that we find the k closest images" />
+<meta property="og:description" content="In this post, we’ll be implementing a k-Nearest neighbors classifier from scratch. The basic idea for the k-Nearest Neighbors classifier is that we find the k closest images" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/02/09/k-nearest-neighbors/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/02/09/k-nearest-neighbors/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-02-09T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"In this post, we’ll be implementing a k-Nearest neighbors classifier from scratch. The basic idea for the k-Nearest Neighbors classifier is that we find the k closest images","url":"http://localhost:4000/notebook/2017/02/09/k-nearest-neighbors/","headline":"Implemeting a k-Nearest Neighbor classifier","dateModified":"2017-02-09T00:00:00+09:00","datePublished":"2017-02-09T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/02/09/k-nearest-neighbors/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Implemeting a k-Nearest Neighbor classifier</h1>
+    <p class="post-meta">
+      <time datetime="2017-02-09T00:00:00+09:00" itemprop="datePublished">
+        
+        Feb 9, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this post, we’ll be implementing a k-Nearest neighbors classifier from
+scratch. The basic idea for the k-Nearest Neighbors classifier is that we find the <em>k</em> closest images<!--more--> in the dataset with
+respect to our query <em>x</em>. Here, we will perform the following processes:</p>
+
+<ul>
+  <li><a href="#load-the-cifar-10-dataset">Load the CIFAR-10 dataset</a></li>
+  <li><a href="#compute-for-the-l2-distance">Compute for the L2 (Euclidean) Distance</a>
+    <ul>
+      <li><a href="#twoloop">Two-Loop Implementation</a></li>
+      <li><a href="#oneloop">One-Loop Implementation</a></li>
+      <li><a href="#noloop">No-Loop Implementation</a></li>
+    </ul>
+  </li>
+  <li><a href="#visualize-the-distances">Visualize the distances</a></li>
+  <li><a href="#crossval">Perform cross-validation to find the best <em>k</em></a></li>
+</ul>
+
+<h2 id="load-the-cifar-10-dataset">Load the CIFAR-10 Dataset</h2>
+<p>CIFAR-10 is a labeled dataset that houses 80 million tiny images. It was created by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton. It contains 60,000 32x32 color images with 6,000 images per class.</p>
+
+<p>We can visualize some examples in CIFAR-10, here we can see a sample of 10 classes with 7 examples each.</p>
+
+<p style="text-align: center;"><img src="/assets/png/cs231n-knn/output_3_0.png" alt="CIFAR Sample" width="560px" /><br />
+<strong>Figure 1:</strong> <em>Samples of the CIFAR-10 Dataset</em></p>
+
+<p>As we can see, for each class, there are distinct images related to it. For example, the <code class="highlighter-rouge">car</code> class is represented by different car images, some of which have different orientation or color. These images then make-up a certain “template” that can be used by the classifier in order to categorize a test image.</p>
+
+<h1 id="compute-for-the-l2-distance">Compute for the L2 Distance</h1>
+<p>Distance computation is a quantifiable means of comparing two images together. To compute for distance, pixel-wise differences are often implemented. In this method, distance is computed “pixel-by-pixel” and then the elements of the corresponding matrix is added together. Highly similar images will have lower values while different images will have higher values. Moreover, images that are exactly similar have a 0 distance. The choice of distance that was used in the assignment is the L2 distance:</p>
+
+<script type="math/tex; mode=display">d_{2}(I_{1}, I_{2}) = \sqrt{\sum_{p}(I_{1}^{p} - I_{2}^{p})^{2}}</script>
+
+<p>Thus, for images <script type="math/tex">I_{1}</script> and <script type="math/tex">I_{2}</script>, we perform a sum of squares pixel computation for each <script type="math/tex">p</script> and then get the square root. The assignment requires us to implement the L2 distance in three different ways.</p>
+
+<h2 id="-two-loop-implementation"><a name="twoloop"></a> Two-loop implementation</h2>
+<p>The two-loop computation uses a nested-loop in order to compute for the pixel-wise L2 Distance between the test and train images. This is one of the easiest methods to implement, but it takes a toll on speed because of the looping nature.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">num_test</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">num_train</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dists</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_test</span><span class="p">,</span> <span class="n">num_train</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">num_test</span><span class="p">):</span>
+  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">num_train</span><span class="p">):</span>
+    <span class="n">dists</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_train</span><span class="p">[</span><span class="n">j</span><span class="p">,:]</span><span class="o">-</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,:])</span>
+<span class="k">return</span> <span class="n">dists</span>
+</code></pre>
+</div>
+
+<p>Here, I am implementing the <a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.norm.html"><code class="highlighter-rouge">np.linalg.norm</code></a> function to compute for the norm (which is, in a sense, equivalent to the L2 equation) of <code class="highlighter-rouge">X_train</code> and <code class="highlighter-rouge">X</code>. Furthermore, this can also be implemented by religiously following the equation above, and thus we can have something similar below:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">dists</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">X_train</span><span class="p">[</span><span class="n">j</span><span class="p">,:])))</span>
+</code></pre>
+</div>
+
+<h2 id="-one-loop-implementation"><a name="oneloop"></a> One-loop implementation</h2>
+<p>For the one-loop implementation, what we do is that in our <code class="highlighter-rouge">dists</code> matrix, we compute for the distances <em>for each example in the test set</em> <code class="highlighter-rouge">X</code> against the examples in the training set <code class="highlighter-rouge">X_train</code>. As we will see, instead of filling the <code class="highlighter-rouge">dists</code> matrix cell-by-cell (as we have done in the two-loop computation), we fill the <code class="highlighter-rouge">dists</code> matrix row-by-row, or in other words, by “test example by test example.”</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">num_test</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">num_train</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dists</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_test</span><span class="p">,</span> <span class="n">num_train</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">num_test</span><span class="p">):</span>
+  <span class="n">dists</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_train</span> <span class="o">-</span> <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,:],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>This is intuitively faster than the previous implementation, because the distance computation against the training set is done in parallel. In the next implementation, we will implement a fully-vectorized computation that can further improve the speed of our computations.</p>
+
+<h2 id="-no-loop-implementation"><a name="noloop"></a> No-loop implementation</h2>
+<p>The no-loop computation is a fully-vectorized implementation of the L2 distance. This eliminates the loops entirely, replacing a cell by cell (or row by row) implementation into a single matrix solution.</p>
+
+<p>My workaround for this is to implement another form of the L2 Distance, which can actually be derived from the equation above. In this case, for two vectors <script type="math/tex">\mathbf{I}_{1}</script> and <script type="math/tex">\mathbf{I}_{2}</script>. We can also compute for the L2 Distance as:</p>
+
+<script type="math/tex; mode=display">d_{2}(\mathbf{I}_{1}, \mathbf{I}_{2}) =  \left\lvert \left\lvert \mathbf{I}_{1} - \mathbf{I}_{2} \right\rvert \right\rvert  = \sqrt{\left\lvert \left\lvert\mathbf{I}_{1} \right\rvert \right\rvert^{2} +  \left\lvert \left\lvert \mathbf{I}_{2}\right\rvert \right\rvert^{2} - 2 \mathbf{I}_{1} \cdot \mathbf{I}_{2}}</script>
+
+<p>With this equation, we can easily compute for the <code class="highlighter-rouge">dists</code> matrix without using any loops, for this we implement the following:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">num_test</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">num_train</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">dists</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">num_test</span><span class="p">,</span> <span class="n">num_train</span><span class="p">))</span>
+<span class="n">dists</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">X</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_train</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">X</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X_train</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+</code></pre>
+</div>
+
+<p>The vectorized version can in fact provide a very fast performance compared to the looped implementations. Using my own
+machine, I was able to obtain the following execution times:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Two loop version took 92.134323 seconds
+One loop version took 213.639710 seconds
+No loop version took 6.479004 seconds
+</code></pre>
+</div>
+<p>We were then able to reduce the time it takes to compute for the L2 Distance in a large dataset from 3 minutes to just 6 seconds. Very impressive indeed!</p>
+
+<div class="alert alert-info">
+ You may notice that the one-loop implementation is much slower than the two-loop implementation, and it goes against the intuition that we had. The course instructors mentioned that the problem is system dependent and it's nothing to worry about. Source: <a href="https://www.reddit.com/r/cs231n/comments/451nb3/assignment_1_knn_single_loop_slower_than_double/">badmephisto's answer in "Assignment#1 knn -single loop slower than double loop"</a>
+</div>
+
+<h2 id="visualize-the-distances">Visualize the distances</h2>
+<p>We can plot the <code class="highlighter-rouge">dists</code> matrix and visualize the distances of our test examples with respect to different training examples. Here, as you look down, we are looking at a representation of our test examples. As you look from left to right, we see the training examples. Thus we have over 500 test examples and over 5000 training examples. Darker regions represent areas of low distance (more similar images) while lighter regions represent areas of high distance (more different images).</p>
+
+<p style="text-align: center;"><img src="/assets/png/cs231n-knn/output_9_0.png" alt="Plot distance" width="560px" /><br />
+<strong>Figure 2:</strong> <em>Visualization of the <code class="highlighter-rouge">dists</code> matrix</em></p>
+
+<p>The distinctly visible rows (say, the dark rows in the 300 mark or the white rows in the 400 mark) represent test examples that are similar (or different) to most of the training examples. Let’s focus on the dark rows in the 300 mark. The reason why distinct dark rows can be seen in it is because there could be many classes in the training set that was found to be similar to it. This can be attributed to similar backgrounds or hues that can confuse our classifier into thinking that it belongs to the same class.</p>
+
+<p>On the other hand, the columns we see are in fact training examples that are not similar to any of the test examples. Perhaps a certain training example was found to have no any significant similarity to any of the test examples. This will then result to a high L2 distance, and consequently, generate a white column into our visualization.</p>
+
+<h2 id="-perform-cross-validation-to-find-the-best-k"><a name="crossval"></a> Perform cross-validation to find the best k</h2>
+<p>One good method to know the best value of <em>k</em>, or the best number of neighbors that will do the “majority vote” to identify the class is through cross-validation. What we will do here is to split the training set into 5 folds, and compute the accuracies with respect to an array of k choices. From this we sort the accuracies and obtain the best value of k.</p>
+
+<p>Firt we split the training set <code class="highlighter-rouge">X_train</code>:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">num_folds</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">k_choices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+
+<span class="n">X_train_folds</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">y_train_folds</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">X_train_folds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">num_folds</span><span class="p">)</span>
+<span class="n">y_train_folds</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array_split</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">num_folds</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>And then we perform cross-validation. Thus, for each k value, we will run the k-NN algorithm <code class="highlighter-rouge">num_folds</code> times. Here
+we will use all but one folds as our training data, and the last one as our validation set. We then store the accuracies of each
+fold and all values of k in the <code class="highlighter-rouge">k_to_accuracies</code> dictionary.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">k_choices</span><span class="p">:</span>
+    <span class="n">k_to_accuracies</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">k_choices</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'k=</span><span class="si">%</span><span class="s">d'</span> <span class="o">%</span> <span class="n">k</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_folds</span><span class="p">):</span>
+        <span class="c"># Use all but one folds as our crossval training set</span>
+        <span class="n">X_train_crossval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">X_train_folds</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">X_train_folds</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>
+        <span class="c"># Use the last fold as our crossval test set</span>
+        <span class="n">X_test_crossval</span> <span class="o">=</span> <span class="n">X_train_folds</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+
+        <span class="n">y_train_crossval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span><span class="n">y_train_folds</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">j</span><span class="p">]</span><span class="o">+</span><span class="n">y_train_folds</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>
+        <span class="n">y_test_crossval</span> <span class="o">=</span> <span class="n">y_train_folds</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+
+        <span class="c"># Train the k-NN Classifier using the crossval training set</span>
+        <span class="n">classifier</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">X_train_crossval</span><span class="p">,</span> <span class="n">y_train_crossval</span><span class="p">)</span>
+
+        <span class="c"># Use the trained classifer to compute the distance of our crossval test set</span>
+        <span class="n">dists_crossval</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">compute_distances_no_loops</span><span class="p">(</span><span class="n">X_test_crossval</span><span class="p">)</span>
+
+        <span class="n">y_test_pred</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict_labels</span><span class="p">(</span><span class="n">dists_crossval</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+        <span class="n">num_correct</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">y_test_pred</span> <span class="o">==</span> <span class="n">y_test_crossval</span><span class="p">)</span>
+        <span class="n">accuracy</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">num_correct</span><span class="p">)</span> <span class="o">/</span> <span class="n">num_test</span>
+
+        <span class="n">k_to_accuracies</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>In order to see how the value of k changes with respect to our cross validation set, we can visualize them in terms
+of line plot with error bars:</p>
+
+<p style="text-align: center;"><img src="/assets/png/cs231n-knn/output_21_0.png" alt="Cross validation" width="560px" /><br />
+<strong>Figure 3:</strong> <em>Visualization of the cross-validation procedure with different k values</em></p>
+
+<p>From now, we can choose a good k value. Let’s take <code class="highlighter-rouge">k = 10</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Got 141 / 500 correct =&gt; accuracy: 0.282000
+</code></pre>
+</div>
+
+<p>And thus we were able to obtain an accuracy of 28.2%. It is not as good as state-of-the-art classifiers today (a Convolutional Neural Network solution in <a href="https://www.kaggle.com/c/cifar-10/leaderboard">Kaggle</a> was able to reach a whopping 95%). But this is a good start to learn the image classification pipeline and the efficiency of the vectorization method.</p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

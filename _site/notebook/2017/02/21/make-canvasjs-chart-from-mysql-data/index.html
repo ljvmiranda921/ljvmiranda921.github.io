@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How to make a CanvasJS Chart from MySQL Data</title>
+  <meta name="description" content="For one of my projects during my undergrad years, I am required to render graphical charts in our website using data found from MySQL. Today, everything is m...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/02/21/make-canvasjs-chart-from-mysql-data/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>How to make a CanvasJS Chart from MySQL Data | Lj Miranda</title>
+<meta property="og:title" content="How to make a CanvasJS Chart from MySQL Data" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="For one of my projects during my undergrad years, I am required to render graphical charts in our website using data found from MySQL. Today, everything is much easier for you can use various web frameworks such as Django and Ruby on Rails. But for some of us who still enjoy the XAMPP stack, this simple task can be quite daunting" />
+<meta property="og:description" content="For one of my projects during my undergrad years, I am required to render graphical charts in our website using data found from MySQL. Today, everything is much easier for you can use various web frameworks such as Django and Ruby on Rails. But for some of us who still enjoy the XAMPP stack, this simple task can be quite daunting" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/02/21/make-canvasjs-chart-from-mysql-data/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/02/21/make-canvasjs-chart-from-mysql-data/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-02-21T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"For one of my projects during my undergrad years, I am required to render graphical charts in our website using data found from MySQL. Today, everything is much easier for you can use various web frameworks such as Django and Ruby on Rails. But for some of us who still enjoy the XAMPP stack, this simple task can be quite daunting","url":"http://localhost:4000/notebook/2017/02/21/make-canvasjs-chart-from-mysql-data/","headline":"How to make a CanvasJS Chart from MySQL Data","dateModified":"2017-02-21T00:00:00+09:00","datePublished":"2017-02-21T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/02/21/make-canvasjs-chart-from-mysql-data/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">How to make a CanvasJS Chart from MySQL Data</h1>
+    <p class="post-meta">
+      <time datetime="2017-02-21T00:00:00+09:00" itemprop="datePublished">
+        
+        Feb 21, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>For one of my projects during my undergrad years, I am required to render graphical charts in our website using data found from MySQL.
+Today, everything is much easier for you can use various web frameworks such as <a href="https://www.djangoproject.com/">Django</a> and <a href="http://rubyonrails.org/">Ruby on Rails</a>. But for some of us who still enjoy the XAMPP stack, this simple task can be quite daunting<!--more-->.</p>
+
+<p>Back in those years, I am utilizing a Javascript library called <a href="http://canvasjs.com/">CanvasJS</a>. It is fast and easy, and is being used by
+different companies such as Intel, Boeing, and BMW. In this tutorial, I will teach you how two things, these are:</p>
+
+<ul>
+  <li><a href="#receive">Receiving data from a MySQL Database</a></li>
+  <li><a href="#chart">Using the received data to make CanvasJS charts</a></li>
+</ul>
+
+<p>You might need a little bit of Javascript and PHP experience here (although Javascript is given if you’re doing web development), but I will
+provide some of the codes below. But first, in order to understand the bigger picture of what we’ll do, take a look at the diagram below:</p>
+
+<p style="text-align: center;"><img src="/assets/png/tuts/canvasjstogui.png" alt="Diagram" width="560px" /><br />
+<strong>Figure 1:</strong> <em>Task Diagram</em></p>
+
+<p>Let me first explain what we’ll do one-by-one:</p>
+<ol>
+  <li>From our server, we will invoke an <code class="highlighter-rouge">AJAX</code> request, typically a <code class="highlighter-rouge">getJSON()</code> command in order to access the PHP service that gets the data from our MySQL database.</li>
+  <li>This PHP service connects to the database and does lookup, select, and processing of our data. In summary, we put our SQL queries inside this PHP service to access our data. Moreover, this PHP service also prepares our data into JSON format.</li>
+  <li>Once the PHP service is “activated,” the database will then churn out the necessary data, and <em>through the PHP service</em> send this JSON file into our server.</li>
+  <li>The server then receives the data in JSON form and stores it in an object. For the sake of discussion, we call this object <code class="highlighter-rouge">result</code>.</li>
+  <li>We treat <code class="highlighter-rouge">result</code> as an object where we can access different keys and values as how we normally treat JavaScript objects. In our case, we use this object to render a chart.</li>
+</ol>
+
+<p>We do steps 1 to 3 in the first part, and 4 to 5 in the second part.</p>
+
+<h2 id="-receiving-data-from-a-mysql-database"><a name="receive"></a> Receiving data from a MySQL Database</h2>
+<p>First, we invoke an <code class="highlighter-rouge">AJAX</code> request containing the PHP service required. The structure of our request looks like this:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s2">"myphpService.php"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">){});</span>
+</code></pre>
+</div>
+
+<p>Here, <code class="highlighter-rouge">myphpService.php</code> contains the SQL queries that will be used to access data from our database. Later on, this data will be stored in the object <code class="highlighter-rouge">result</code>. Let’s then write our <code class="highlighter-rouge">myphpService.php</code> script:</p>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="cm">/* We first connect to our database */</span>
+<span class="nv">$connection</span> <span class="o">=</span> <span class="nb">mysqli_connect</span><span class="p">(</span><span class="nv">$dbhost</span><span class="p">,</span><span class="nv">$user</span><span class="p">,</span><span class="nv">$password</span><span class="p">,</span><span class="nv">$database</span><span class="p">,</span><span class="nv">$port</span><span class="p">);</span>
+
+<span class="cm">/* Capture connection error if any */</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">mysqli_connect_errno</span><span class="p">(</span><span class="nv">$connection</span><span class="p">))</span> <span class="p">{</span>
+        <span class="k">echo</span> <span class="s2">"Failed to connect to DataBase: "</span> <span class="o">.</span> <span class="nx">mysqli_connect_error</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+
+  <span class="cm">/* Declare an array containing our data points */</span>
+   <span class="nv">$data_points</span> <span class="o">=</span> <span class="k">array</span><span class="p">();</span>
+
+  <span class="cm">/* Usual SQL Queries */</span>
+     <span class="nv">$query</span> <span class="o">=</span> <span class="s2">"SELECT `timeStamp`,`myData2` FROM `myTable`"</span><span class="p">;</span>
+     <span class="nv">$result</span> <span class="o">=</span> <span class="nx">mysqli_query</span><span class="p">(</span><span class="nv">$connection</span><span class="p">,</span> <span class="nv">$query</span><span class="p">);</span>
+
+     <span class="k">while</span><span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nx">mysqli_fetch_array</span><span class="p">(</span><span class="nv">$result</span><span class="p">))</span>
+        <span class="p">{</span>        
+      <span class="cm">/* Push the results in our array */</span>
+            <span class="nv">$point</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s2">"ts"</span> <span class="o">=&gt;</span>  <span class="nv">$row</span><span class="p">[</span><span class="s1">'timeStamp'</span><span class="p">]</span> <span class="p">,</span><span class="s2">"d1"</span> <span class="o">=&gt;</span>  <span class="nv">$row</span><span class="p">[</span><span class="s1">'myData1'</span><span class="p">]);</span>
+            <span class="nb">array_push</span><span class="p">(</span><span class="nv">$data_points</span><span class="p">,</span> <span class="nv">$point</span><span class="p">);</span>
+        <span class="p">}</span>
+
+    <span class="cm">/* Encode this array in JSON form */</span>
+        <span class="k">echo</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$data_points</span><span class="p">,</span> <span class="nx">JSON_NUMERIC_CHECK</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="nx">mysqli_close</span><span class="p">(</span><span class="nv">$connection</span><span class="p">);</span>
+<span class="cp">?&gt;</span>
+</code></pre>
+</div>
+
+<p>So as usual, we connect to our database using <code class="highlighter-rouge">mysqli_connect()</code>. What we then do is that we declare an array containing our data points, and using SQL queries, we store the desired data in the variable <code class="highlighter-rouge">$result</code>. We then push everything inside our array, and encode the array in JSON form using <code class="highlighter-rouge">json_encode</code>. Do not forget to close the connection once you’re done!</p>
+
+<div class="alert alert-warning">
+  <strong>Take note!</strong> Be mindful that in practice, we don't store our user credentials as variables in our script. You can check some of the good PHP practices <a href="https://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17" class="alert-link">here</a> and <a href="https://phpbestpractices.org/" class="alert-link">here</a>.
+</div>
+
+<p>Using this script, we can now access data from our database. Note that we’re just using very simple SQL queries such as <code class="highlighter-rouge">SELECT</code> and <code class="highlighter-rouge">FROM</code>. This can vary depending on your needs, but the most important thing is that these values are pushed into the <code class="highlighter-rouge">$data_points</code> array so that they can be encoded in JSON form. The idea here is that through the <code class="highlighter-rouge">getJSON</code> command in our server, we get to receive whatever the .json file the script outputs. It is very handy in managing some of our data and very flexible as well.</p>
+
+<p>Say that our PHP service is successful, the json object will then be stored in <code class="highlighter-rouge">result</code> and can be manipulated through the callback function. You can refer to the API documentation of <code class="highlighter-rouge">.getJSON</code> <a href="http://api.jquery.com/jquery.getjson/">here</a> for more information. The idea is that the callback function is executed once the request succeeds.</p>
+
+<div class="alert alert-warning">
+  <strong>Take note!</strong>
+Another thing that you have to consider is to handle the error if the request didn't succeed. I will not discuss about it here, for I will assume that our PHP service will always give the JSON object needed by our server. There are a lot of ways to handle errors, and I will refer you <a href="http://stackoverflow.com/questions/1740218/error-handling-in-getjson-calls">here</a> to get you started in this.
+</div>
+
+<h2 id="-using-the-received-data-to-make-canvasjs-charts"><a name="chart"></a> Using the received data to make CanvasJS charts</h2>
+
+<p>Let’s look back again to our <code class="highlighter-rouge">.getJSON</code> command:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s2">"myphpService.php"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">){});</span>
+</code></pre>
+</div>
+
+<p>We now focus to our callback function. Remember that we store our JSON object into <code class="highlighter-rouge">result</code>. In order to access and manipulate that object (or in our case, to make charts out of it), we should write code inside the curly brackets of our callback function.</p>
+
+<p>Thus, inside our callback function, we can write something similar as:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s2">"myphpService.php"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">){</span>
+<span class="kd">var</span> <span class="nx">dps</span><span class="o">=</span> <span class="p">[];</span>
+
+<span class="c1">//Insert Array Assignment function here</span>
+<span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">result</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">dps</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="s2">"label"</span><span class="p">:</span><span class="nx">result</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">ts</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">:</span><span class="nx">result</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">d1</span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="c1">//Insert Chart-making function here</span>
+<span class="kd">var</span> <span class="nx">chart</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CanvasJS</span><span class="p">.</span><span class="nx">Chart</span><span class="p">(</span><span class="s2">"chartContainer"</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">zoomEnabled</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+    <span class="na">panEnabled</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+    <span class="na">animationEnabled</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
+    <span class="na">title</span><span class="p">:{</span>
+        <span class="na">text</span><span class="p">:</span> <span class="s2">"myChart from mySQL database"</span>
+    <span class="p">},</span>
+
+    <span class="na">axisX</span><span class="p">:{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">"TimeStamp"</span>
+    <span class="p">},</span>
+
+        <span class="na">axisY</span><span class="p">:{</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s2">"myDataPoints"</span><span class="p">,</span>
+        <span class="na">minimum</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+
+    <span class="na">data</span><span class="p">:</span> <span class="p">[{</span>
+        <span class="na">type</span><span class="p">:</span> <span class="s2">"spline"</span><span class="p">,</span>
+        <span class="na">dataPoints</span><span class="p">:</span>
+            <span class="nx">dps</span>
+              <span class="p">}]</span>
+<span class="p">});</span>
+<span class="nx">chart</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+
+<span class="p">});</span>
+</code></pre>
+</div>
+<p>First, we process our <code class="highlighter-rouge">result</code> object by pushing it into an array <code class="highlighter-rouge">dps</code>. We do this by iterating over the length of the <code class="highlighter-rouge">result</code> object, and pushing it into a dictionary-like array given the following keys that we have in our JSON file. Afterwhich, we can simply invoke the chart-making function via <code class="highlighter-rouge">CanvasJS.Chart</code> and proceed with the necessary code.</p>
+
+<p>I hope that I was able to shed light on this subject more clearly. If you have any questions, don’t hesitate to comment below!</p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

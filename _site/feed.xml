@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-10-22T19:32:24+09:00</updated><id>http://localhost:4000/</id><title type="html">Lj Miranda</title><subtitle>Some notes on software development, data science, machine learning, and research.
+</subtitle><entry><title type="html">Feature Extraction using Stacked Denoising Autoencoders for Protein Function Prediction</title><link href="http://localhost:4000/research/2017/11/14/feature-extraction-stacked-denoising/" rel="alternate" type="text/html" title="Feature Extraction using Stacked Denoising Autoencoders for Protein Function Prediction" /><published>2017-11-14T00:00:00+09:00</published><updated>2017-11-14T00:00:00+09:00</updated><id>http://localhost:4000/research/2017/11/14/feature-extraction-stacked-denoising</id><content type="html" xml:base="http://localhost:4000/research/2017/11/14/feature-extraction-stacked-denoising/"></content><author><name></name></author><category term="research" /><summary type="html"></summary></entry><entry><title type="html">Reallocative k-Sparse Autoencoder for Selective Feature Extraction</title><link href="http://localhost:4000/research/2017/09/10/reallocative-sparse-autoencoder/" rel="alternate" type="text/html" title="Reallocative k-Sparse Autoencoder for Selective Feature Extraction" /><published>2017-09-10T00:00:00+09:00</published><updated>2017-09-10T00:00:00+09:00</updated><id>http://localhost:4000/research/2017/09/10/reallocative-sparse-autoencoder</id><content type="html" xml:base="http://localhost:4000/research/2017/09/10/reallocative-sparse-autoencoder/"></content><author><name></name></author><category term="research" /><summary type="html"></summary></entry><entry><title type="html">Softmax and the negative log-likelihood</title><link href="http://localhost:4000/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/" rel="alternate" type="text/html" title="Softmax and the negative log-likelihood" /><published>2017-08-13T00:00:00+09:00</published><updated>2017-08-13T00:00:00+09:00</updated><id>http://localhost:4000/notebook/2017/08/13/softmax-and-the-negative-log-likelihood</id><content type="html" xml:base="http://localhost:4000/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/">&lt;p&gt;In this notebook I will explain the softmax function, its relationship
+with the negative log-likelihood, and its derivative when doing the backpropagation algorithm&lt;!--more--&gt;. If there are any questions or clarifications,
+please leave a comment below.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#softmax-activation-function&quot;&gt;Softmax Activation Function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#negative-log-likelihood&quot;&gt;Negative log-likelihood&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#derivative-of-the-softmax&quot;&gt;Derivative of the Softmax&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;softmax-activation-function&quot;&gt;Softmax Activation Function&lt;/h2&gt;
+
+&lt;p&gt;The softmax activation function is often placed at the output layer of a
+neural network. It’s commonly used in multi-class learning problems where
+a set of features can be related to one-of-$K$ classes. For example, in
+the CIFAR-10 image classification problem, given a set of pixels as input,
+we need to classify if a particular sample belongs to one-of-ten available classes: i.e., cat, dog, airplane, etc.&lt;/p&gt;
+
+&lt;p&gt;Its equation is simple, we just have to compute for
+the normalized exponential function of all the units in the layer.
+In such case,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;S(f_{y_i}) = \dfrac{f_{y_i}}{\sum_{j}e^{f_j}}&lt;/script&gt;
+
+&lt;p&gt;Intuitively, what the softmax does is that it &lt;em&gt;squashes&lt;/em&gt; a vector of size
+&lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; between &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; and &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;. Furthermore, because it is a normalization of the
+exponential, the sum of this whole vector equates to &lt;script type=&quot;math/tex&quot;&gt;1&lt;/script&gt;. We can then
+interpret the output of the softmax as the probabilities that a certain
+set of features belongs to a certain class.&lt;/p&gt;
+
+&lt;p&gt;Thus, given a three-class example below, the scores &lt;script type=&quot;math/tex&quot;&gt;y_i&lt;/script&gt; are computed from
+the forward propagation of the network. We then take the softmax and obtain
+the probabilities as shown:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/cs231n-ann/softmax.png&quot; alt=&quot;Softmax computation&quot; width=&quot;720px&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;Figure 1:&lt;/strong&gt; &lt;em&gt;Softmax Computation for three classes&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The output of the softmax describes the probability (or if you may, the
+confidence) of the neural network that a particular sample belongs to a
+certain class. Thus, for the first example above, the neural network
+assigns a confidence of 0.71 that it is a cat, 0.26 that it is a dog,
+and 0.04 that it is a horse. The same goes for each of the samples above.&lt;/p&gt;
+
+&lt;p&gt;We can then see that one advantage of using the softmax at the output
+layer is that it improves the interpretability of the neural network. By
+looking at the softmax output in terms of the network’s confidence, we can
+then reason about the behavior of our model.&lt;/p&gt;
+
+&lt;h2 id=&quot;negative-log-likelihood&quot;&gt;Negative Log-Likelihood&lt;/h2&gt;
+
+&lt;p&gt;In practice, the softmax function is used in tandem with the negative
+log-likelihood. This loss function is very interesting if we interpret
+it in relation to the behavior of softmax. First, let’s write down our
+loss function:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;L(\mathbf{y}) = -\log(\mathbf{y})&lt;/script&gt;
+
+&lt;p&gt;This is summed for all the correct classes.&lt;/p&gt;
+
+&lt;p&gt;Recall that when training a model, we aspire to find the minima of a
+loss function given a set of parameters (in a neural network, these are
+the weights and biases). We can interpret the loss as the “unhappiness” of the network with respect to its parameters. The higher the loss, the higher the unhappiness: we don’t want that. We want to make our models happy.&lt;/p&gt;
+
+&lt;p&gt;So if we are using the negative log-likelihood as our loss function, when
+does it become unhappy? And when does it become happy? Let’s try to plot
+its range:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/cs231n-ann/neg_log.png&quot; alt=&quot;Negative log-likelihood&quot; width=&quot;720px&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;Figure 2:&lt;/strong&gt; &lt;em&gt;The loss function reaches infinity when input is 0, and reaches 0 when input is 1.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The negative log-likelihood becomes unhappy at smaller values, where it
+can reach infinite unhappiness (that’s too sad), and becomes less unhappy
+at larger values. Because we are summing the loss function to all the 
+correct classes, what’s actually happening is that whenever the network 
+assigns high confidence at the correct class, the unhappiness is low, but
+when the network assigns low confidence at the correct class, the unhappiness
+is high.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/cs231n-ann/neg_log_demo.png&quot; alt=&quot;Negative log-likelihood&quot; width=&quot;720px&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;Figure 3:&lt;/strong&gt; &lt;em&gt;When computing the loss, we can then see that higher confidence at the correct class leads to lower loss and vice-versa.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;derivative-of-the-softmax&quot;&gt;Derivative of the Softmax&lt;/h2&gt;
+
+&lt;p&gt;In this part, we will differentiate the softmax function with respect to the negative log-likelihood. Following the convention at the &lt;a href=&quot;http://cs231n.github.io/neural-networks-case-study/#grad&quot;&gt;CS231n course&lt;/a&gt;, we let &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; as a vector containing the class scores for a single example, that is, the output of the network. Thus &lt;script type=&quot;math/tex&quot;&gt;f_k&lt;/script&gt; is an element for a certain class &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt; in all &lt;script type=&quot;math/tex&quot;&gt;j&lt;/script&gt; classes.&lt;/p&gt;
+
+&lt;p&gt;We can then rewrite the softmax output as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;p_k = \dfrac{e^{f_k}}{\sum_{j} e^{f_j}}&lt;/script&gt;
+
+&lt;p&gt;and the negative log-likelihood as&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;L_i = -log(p_{y_{i}})&lt;/script&gt;
+
+&lt;p&gt;Now, recall that when performing backpropagation, the first thing we have to do is to compute how the loss changes with respect to the output of the network. Thus, we are looking for &lt;script type=&quot;math/tex&quot;&gt;\dfrac{\partial L_i}{\partial f_k}&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Because &lt;script type=&quot;math/tex&quot;&gt;L&lt;/script&gt; is dependent on &lt;script type=&quot;math/tex&quot;&gt;p_k&lt;/script&gt;, and &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; is dependent on &lt;script type=&quot;math/tex&quot;&gt;f_k&lt;/script&gt;, we can simply relate them via chain rule:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\dfrac{\partial L_i}{\partial f_k} = \dfrac{\partial L_i}{\partial p_k} \dfrac{\partial p_k}{\partial f_k}&lt;/script&gt;
+
+&lt;p&gt;There are now two parts in our approach. First (the easiest one), we solve &lt;script type=&quot;math/tex&quot;&gt;\dfrac{\partial L_i}{\partial p_k}&lt;/script&gt;, then we solve &lt;script type=&quot;math/tex&quot;&gt;\dfrac{\partial p_{y_i}}{\partial f_k}&lt;/script&gt;. The first is simply the derivative of the log, the second is a bit more involved.&lt;/p&gt;
+
+&lt;p&gt;Let’s do the first one then,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\dfrac{\partial L_i}{\partial p_k} = -\dfrac{1}{p_k}&lt;/script&gt;
+
+&lt;p&gt;For the second one, we have to recall the quotient rule for derivatives, let the derivative be represented by the operator &lt;script type=&quot;math/tex&quot;&gt;\mathbf{D}&lt;/script&gt;:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\dfrac{f(x)}{g(x)} = \dfrac{g(x) \mathbf{D} f(x) - f(x) \mathbf{D} g(x)}{g(x)^2}&lt;/script&gt;
+
+&lt;p&gt;We let &lt;script type=&quot;math/tex&quot;&gt;\sum_{j} e^{f_j} = \Sigma&lt;/script&gt;, and by substituting, we obtain&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{eqnarray}
+\dfrac{\partial p_k}{\partial f_k} &amp;=&amp; \dfrac{\partial}{\partial f_k} \left(\dfrac{e^{f_k}}{\sum_{j} e^{f_j}}\right) \\
+&amp;=&amp; \dfrac{\Sigma \mathbf{D} e^{f_k} - e^{f_k} \mathbf{D} \Sigma}{\Sigma^2} \\
+&amp;=&amp; \dfrac{e^{f_k}(\Sigma - e^{f_k})}{\Sigma^2}
+\end{eqnarray} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;The reason why &lt;script type=&quot;math/tex&quot;&gt;\mathbf{D}\Sigma=e^{f_k}&lt;/script&gt; is because if we take the input array &lt;script type=&quot;math/tex&quot;&gt;f&lt;/script&gt; in the softmax function, we’re always “looking” or we’re always taking the derivative of the k-th element. In this case, the derivative with respect to the &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;-th element will always be &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; in those elements that are non-&lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;, but &lt;script type=&quot;math/tex&quot;&gt;e^{f_k}&lt;/script&gt; at &lt;script type=&quot;math/tex&quot;&gt;k&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Continuing our derivation,&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{eqnarray}
+\dfrac{\partial p_k}{\partial f_k} &amp;=&amp; \dfrac{e^{f_k}(\Sigma - e^{f_k})}{\Sigma^2} \\
+&amp;=&amp; \dfrac{e^{f_k}}{\Sigma} \dfrac{\Sigma - e^{f_k}}{\Sigma} \\
+&amp;=&amp; p_k * (1-p_k)
+\end{eqnarray} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;By combining the two derivatives we’ve computed earlier, we have:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{eqnarray}
+\dfrac{\partial L_i}{\partial f_k} &amp;=&amp; \dfrac{\partial L_i}{\partial p_k} \dfrac{\partial p_k}{\partial f_k} \\
+&amp;=&amp; -\dfrac{1}{p_k} (p_k * (1-p_k)) \\
+&amp;=&amp; (p_k - 1)
+\end{eqnarray} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;And thus we have differentatied the negative log likelihood with respect to the softmax layer.&lt;/p&gt;
+
+&lt;h2 id=&quot;sources&quot;&gt;Sources&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cs231n.github.io/&quot;&gt;Stanford CS231N Convolutional Neural Networks for Visual Recognition&lt;/a&gt;. &lt;em&gt;This course inspired this blog post. The derivation of the softmax was left as an exercise and I decided to derive it here.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://eli.thegreenplace.net/2016/the-softmax-function-and-its-derivative/&quot;&gt;The Softmax Function and Its Derivative&lt;/a&gt;. &lt;em&gt;A more thorough treatment of the softmax function’s derivative&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cs.toronto.edu/~kriz/cifar.html&quot;&gt;CIFAR 10&lt;/a&gt;. &lt;em&gt;Benchmark dataset for visual recognition.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>LJ MIRANDA</name></author><category term="notebook" /><summary type="html">In this notebook I will explain the softmax function, its relationship with the negative log-likelihood, and its derivative when doing the backpropagation algorithm</summary></entry><entry><title type="html">PySwarms: a particle swarm optimization library in Python</title><link href="http://localhost:4000/projects/2017/08/11/pyswarms/" rel="alternate" type="text/html" title="PySwarms: a particle swarm optimization library in Python" /><published>2017-08-11T00:00:00+09:00</published><updated>2017-08-11T00:00:00+09:00</updated><id>http://localhost:4000/projects/2017/08/11/pyswarms</id><content type="html" xml:base="http://localhost:4000/projects/2017/08/11/pyswarms/">&lt;p&gt;For the past few weeks, I’ve started an open-source project in Python by building a research toolkit
+for Particle Swarm Optimization (PSO). PSO is a heuristic search algorithm that was inspired by the
+social dynamics of birds and bees. What made me interested in PSO is that it tries to simulate group
+behavior when faced with a certain objective, something that can also be observed in humans. Furthermore,
+the standard algorithm is simple, and can be used in a variety of applications.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/png/pyswarms/pyswarms-header.png&quot; alt=&quot;PySwarms&quot; width=&quot;640px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://badge.fury.io/py/pyswarms&quot;&gt;&lt;img src=&quot;https://badge.fury.io/py/pyswarms.svg&quot; alt=&quot;PyPI version&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://travis-ci.org/ljvmiranda921/pyswarms&quot;&gt;&lt;img src=&quot;https://img.shields.io/travis/ljvmiranda921/pyswarms.svg&quot; alt=&quot;Build Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://pyswarms.readthedocs.io/en/latest/?badge=latest&quot;&gt;&lt;img src=&quot;https://readthedocs.org/projects/pyswarms/badge/?version=latest&quot; alt=&quot;Documentation Status&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://landscape.io/github/ljvmiranda921/pyswarms/master&quot;&gt;&lt;img src=&quot;https://landscape.io/github/ljvmiranda921/pyswarms/master/landscape.svg?style=flat&quot; alt=&quot;Code Health&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://pyup.io/repos/github/ljvmiranda921/pyswarms/&quot;&gt;&lt;img src=&quot;https://pyup.io/repos/github/ljvmiranda921/pyswarms/shield.svg&quot; alt=&quot;Updates&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://raw.githubusercontent.com/ljvmiranda921/pyswarms/master/LICENSE&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/license-MIT-blue.svg&quot; alt=&quot;License&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Documentation:&lt;/strong&gt; &lt;a href=&quot;https://pyswarms.readthedocs.io/en/latest/&quot;&gt;https://pyswarms.readthedocs.io/en/latest/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Github Page:&lt;/strong&gt; &lt;a href=&quot;https://github.com/ljvmiranda921/pyswarms&quot;&gt;https://github.com/ljvmiranda921/pyswarms&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h2&gt;
+
+&lt;p&gt;If one is to look at published literature, there is a multitude of variations in the standard
+PSO algorithm, all of these being applied in different situations. It then becomes hard for researchers
+to benchmark their results because there’s no unified framework to do it. Hopefully, a standard library
+should exist for implementing not only the classic PSO algorithms, but also the state-of-the-art variations
+in literature.&lt;/p&gt;
+
+&lt;p&gt;In addition, I found some of the current implementations a bit lacking. &lt;a href=&quot;https://github.com/tisimst/pyswarm&quot;&gt;tisimst’s&lt;/a&gt;
+work, although useful, is not extensible and works only on one type of problem (although I named my project
+with respect to theirs). On the other hand &lt;a href=&quot;http://esa.github.io/pygmo/&quot;&gt;PyGMO&lt;/a&gt; and &lt;a href=&quot;https://github.com/DEAP/deap&quot;&gt;DEAP&lt;/a&gt;,
+although mature, are more generalized to evolutionary computation algorithms.&lt;/p&gt;
+
+&lt;h2 id=&quot;features&quot;&gt;Features&lt;/h2&gt;
+
+&lt;p&gt;I realized that if I am to build an optimization library, it must have three important features: (1) the
+user-facing API must be easy-to-use, that is, an optimization can already be done in less than 5-8 lines
+of code, (2) supporting utilities must be included to assess optimizer performance, and (3) the programming
+API must be highly-extensible. These three are the guiding principles when I built PySwarms.&lt;/p&gt;
+
+&lt;h3 id=&quot;easy-to-use-optimization-tool&quot;&gt;Easy-to-use optimization tool&lt;/h3&gt;
+
+&lt;p&gt;This feature is highly important especially for users who just wanted a quick-and-easy optimization process.
+I hope that this can minimize “frustration” in setting up various configurables and the like. For example,
+if we want to find the minima of a sphere function using global-best PSO, we only need to import the
+&lt;code class=&quot;highlighter-rouge&quot;&gt;pyswarms.single.GlobalBestPSO&lt;/code&gt; class and the built-in &lt;code class=&quot;highlighter-rouge&quot;&gt;pyswarms.utils.functions.single_obj&lt;/code&gt; module to
+do optimization:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Import PySwarms&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyswarms&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ps&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyswarms.utils.functions&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;single_obj&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fx&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Set-up hyperparameters&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'c1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'c2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'w'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Call instance of PSO&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;optimizer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GlobalBestPSO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_particles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dimensions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Perform optimization&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optimizer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;optimize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sphere_func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print_step&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iters&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Excluding the comments and spaces, it only takes five lines to perform optimization. Compare this to
+&lt;a href=&quot;http://deap.readthedocs.io/en/master/overview.html&quot;&gt;DEAP’s implementation&lt;/a&gt;. Although in all fairness,
+DEAP can be seen as a lower-level computational tool than what PySwarms is aspiring to be.&lt;/p&gt;
+
+&lt;p&gt;More examples can be seen at the &lt;a href=&quot;https://pyswarms.readthedocs.io/en/latest/examples/usecases.html&quot;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;supporting-utilities-to-assess-optimizer-performance&quot;&gt;Supporting utilities to assess optimizer performance&lt;/h3&gt;
+
+&lt;p&gt;Enhancements such as support-utilties are very important in assessing swarm behavior and optimizer
+performance. As of now, a &lt;code class=&quot;highlighter-rouge&quot;&gt;PlotEnvironment&lt;/code&gt; class is implemented to perform such tasks. The idea is
+to pass the optimizer in this environment in order to call various methods such as &lt;code class=&quot;highlighter-rouge&quot;&gt;plot_cost()&lt;/code&gt; or
+&lt;code class=&quot;highlighter-rouge&quot;&gt;plot_particles2D()&lt;/code&gt;. The visualization tool is built on top of Matplotlib in order to provide
+deeper customizability to the plots.&lt;/p&gt;
+
+&lt;p&gt;However, the default settings are already decent. Consider the same example as above as we pass it in
+the plot environment:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Import PySwarms&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyswarms&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;ps&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyswarms.utils.functions&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;single_obj&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fx&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyswarms.utils.environments&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PlotEnvironment&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Create optimizer&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'c1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'c2'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'w'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;optimizer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;single&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GlobalBestPSO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n_particles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dimensions&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Pass to plot environment&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt_env&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PlotEnvironment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;optimizer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sphere_func&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;From this we can call various methods already. If we call &lt;code class=&quot;highlighter-rouge&quot;&gt;plot_cost()&lt;/code&gt;, then we can obtain a plot
+similar to the one below&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/pyswarms/output_9_0.png&quot; alt=&quot;Cost History&quot; width=&quot;560px&quot; /&gt; &lt;br /&gt;
+&lt;strong&gt;Figure 1:&lt;/strong&gt; &lt;em&gt;Calling the &lt;code class=&quot;highlighter-rouge&quot;&gt;plot_cost()&lt;/code&gt; method generates a cost history line plot.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;More so, we can even animate swarm movement. Recall that we are using a Global-best PSO algorithm,
+where each particle compares itself with the best-performing particle in the group. Notice in the
+figure below how these particles converge on the global-best at position &lt;code class=&quot;highlighter-rouge&quot;&gt;(0,0,0)&lt;/code&gt;. To generate
+a 3-d animation, we just need to call the &lt;code class=&quot;highlighter-rouge&quot;&gt;plot_particles3D()&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/pyswarms/output_3d.gif&quot; alt=&quot;3D particle movement&quot; width=&quot;560px&quot; /&gt; &lt;br /&gt;
+&lt;strong&gt;Figure 2:&lt;/strong&gt; &lt;em&gt;Particle movement generated by calling the &lt;code class=&quot;highlighter-rouge&quot;&gt;plot_particles3D()&lt;/code&gt; method.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;highly-extensible-api&quot;&gt;Highly-extensible API&lt;/h3&gt;
+
+&lt;p&gt;I think that it is important to build an easy to use API for researchers an contributors who wanted
+to implement their own techniques or add new features. Honestly, this has become a challenge for myself,
+being new in the open-source field. I’m still iterating my base classes but I’m confident that most of
+these are now extensible as I’ve imagined.&lt;/p&gt;
+
+&lt;p&gt;The main idea for this is to inherit from base classes in order to implement new techniques. Most of the
+development time goes to the base classes, making sure that they are applicable in the most general sense.
+These include an array of getters, attributes, and abstract methods that I deem universal in most PSO
+implementations. Thus, if one is to observe the implementations on &lt;code class=&quot;highlighter-rouge&quot;&gt;pyswarms.single.GlobalBestPSO&lt;/code&gt; and
+&lt;code class=&quot;highlighter-rouge&quot;&gt;pyswarms.single.LocalBestPSO&lt;/code&gt;, not much redundancy exists between the two.&lt;/p&gt;
+
+&lt;p&gt;The main idea for implementing an optimizer can be seen in this &lt;a href=&quot;https://pyswarms.readthedocs.io/en/latest/contributing.optimizer.html&quot;&gt;guide&lt;/a&gt;. You can also view the API
+documentation &lt;a href=&quot;https://pyswarms.readthedocs.io/en/latest/api/pyswarms.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;tutorials&quot;&gt;Tutorials&lt;/h2&gt;
+
+&lt;p&gt;I wrote some accompanying tutorials on using PySwarms, most of these include use-cases on where to
+use Particle Swarm Optimization in some problems, and how PySwarms can make the implementations much
+easier. They are all in the documentation, but I will list some of them here:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pyswarms.readthedocs.io/en/latest/examples/basic_optimization.html&quot;&gt;Basic Optimization&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pyswarms.readthedocs.io/en/latest/examples/train_neural_network.html&quot;&gt;Training a neural network classifier&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pyswarms.readthedocs.io/en/latest/examples/feature_subset_selection.html&quot;&gt;Feature subset selection&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;for-developers&quot;&gt;For Developers&lt;/h2&gt;
+
+&lt;p&gt;If you wish to contribute on PySwarms, simply check the instructions in &lt;a href=&quot;https://pyswarms.readthedocs.io/en/latest/contributing.html&quot;&gt;this&lt;/a&gt; link. In case you are interested and found this project nice, please leave a star on GitHub!&lt;/p&gt;</content><author><name>LJ MIRANDA</name></author><category term="projects" /><category term="particle swarm optimization" /><category term="open source" /><category term="python" /><category term="research" /><summary type="html">For the past few weeks, I’ve started an open-source project in Python by building a research toolkit for Particle Swarm Optimization (PSO). PSO is a heuristic search algorithm that was inspired by the social dynamics of birds and bees. What made me interested in PSO is that it tries to simulate group behavior when faced with a certain objective, something that can also be observed in humans. Furthermore, the standard algorithm is simple, and can be used in a variety of applications. Documentation: https://pyswarms.readthedocs.io/en/latest/ Github Page: https://github.com/ljvmiranda921/pyswarms Inspiration If one is to look at published literature, there is a multitude of variations in the standard PSO algorithm, all of these being applied in different situations. It then becomes hard for researchers to benchmark their results because there’s no unified framework to do it. Hopefully, a standard library should exist for implementing not only the classic PSO algorithms, but also the state-of-the-art variations in literature. In addition, I found some of the current implementations a bit lacking. tisimst’s work, although useful, is not extensible and works only on one type of problem (although I named my project with respect to theirs). On the other hand PyGMO and DEAP, although mature, are more generalized to evolutionary computation algorithms. Features I realized that if I am to build an optimization library, it must have three important features: (1) the user-facing API must be easy-to-use, that is, an optimization can already be done in less than 5-8 lines of code, (2) supporting utilities must be included to assess optimizer performance, and (3) the programming API must be highly-extensible. These three are the guiding principles when I built PySwarms. Easy-to-use optimization tool This feature is highly important especially for users who just wanted a quick-and-easy optimization process. I hope that this can minimize “frustration” in setting up various configurables and the like. For example, if we want to find the minima of a sphere function using global-best PSO, we only need to import the pyswarms.single.GlobalBestPSO class and the built-in pyswarms.utils.functions.single_obj module to do optimization: # Import PySwarms import pyswarms as ps from pyswarms.utils.functions import single_obj as fx # Set-up hyperparameters options = {'c1': 0.5, 'c2': 0.3, 'w':0.9} # Call instance of PSO optimizer = ps.single.GlobalBestPSO(n_particles=10, dimensions=2, options=options) # Perform optimization cost, pos = optimizer.optimize(fx.sphere_func, print_step=100, iters=1000, verbose=2) Excluding the comments and spaces, it only takes five lines to perform optimization. Compare this to DEAP’s implementation. Although in all fairness, DEAP can be seen as a lower-level computational tool than what PySwarms is aspiring to be. More examples can be seen at the documentation. Supporting utilities to assess optimizer performance Enhancements such as support-utilties are very important in assessing swarm behavior and optimizer performance. As of now, a PlotEnvironment class is implemented to perform such tasks. The idea is to pass the optimizer in this environment in order to call various methods such as plot_cost() or plot_particles2D(). The visualization tool is built on top of Matplotlib in order to provide deeper customizability to the plots. However, the default settings are already decent. Consider the same example as above as we pass it in the plot environment: # Import PySwarms import pyswarms as ps from pyswarms.utils.functions import single_obj as fx from pyswarms.utils.environments import PlotEnvironment # Create optimizer options = {'c1':0.5, 'c2':0.3, 'w':0.9} optimizer = ps.single.GlobalBestPSO(n_particles=10, dimensions=3, options=options) # Pass to plot environment plt_env = PlotEnvironment(optimizer, fx.sphere_func, 1000) From this we can call various methods already. If we call plot_cost(), then we can obtain a plot similar to the one below Figure 1: Calling the plot_cost() method generates a cost history line plot. More so, we can even animate swarm movement. Recall that we are using a Global-best PSO algorithm, where each particle compares itself with the best-performing particle in the group. Notice in the figure below how these particles converge on the global-best at position (0,0,0). To generate a 3-d animation, we just need to call the plot_particles3D() method. Figure 2: Particle movement generated by calling the plot_particles3D() method. Highly-extensible API I think that it is important to build an easy to use API for researchers an contributors who wanted to implement their own techniques or add new features. Honestly, this has become a challenge for myself, being new in the open-source field. I’m still iterating my base classes but I’m confident that most of these are now extensible as I’ve imagined. The main idea for this is to inherit from base classes in order to implement new techniques. Most of the development time goes to the base classes, making sure that they are applicable in the most general sense. These include an array of getters, attributes, and abstract methods that I deem universal in most PSO implementations. Thus, if one is to observe the implementations on pyswarms.single.GlobalBestPSO and pyswarms.single.LocalBestPSO, not much redundancy exists between the two. The main idea for implementing an optimizer can be seen in this guide. You can also view the API documentation here. Tutorials I wrote some accompanying tutorials on using PySwarms, most of these include use-cases on where to use Particle Swarm Optimization in some problems, and how PySwarms can make the implementations much easier. They are all in the documentation, but I will list some of them here: Basic Optimization Training a neural network classifier Feature subset selection For Developers If you wish to contribute on PySwarms, simply check the instructions in this link. In case you are interested and found this project nice, please leave a star on GitHub!</summary></entry><entry><title type="html">Experiments with neural style transfer</title><link href="http://localhost:4000/projects/2017/05/28/experiments-with-neural-style-transfer/" rel="alternate" type="text/html" title="Experiments with neural style transfer" /><published>2017-05-28T00:00:00+09:00</published><updated>2017-05-28T00:00:00+09:00</updated><id>http://localhost:4000/projects/2017/05/28/experiments-with-neural-style-transfer</id><content type="html" xml:base="http://localhost:4000/projects/2017/05/28/experiments-with-neural-style-transfer/">&lt;p&gt;For one of my weekend projects, I chanced upon &lt;a href=&quot;https://arxiv.org/abs/1508.06576&quot;&gt;this paper&lt;/a&gt; of L.A. Gatys describing how we can use a convolutional neural network to transfer artistic style from one image to another. Here, I used the neural style transfer technique to learn the artistic style of various Filipino paintings. Painters range from Amorsolo to Manansala, and other modern artists such as Zobel. Enjoy!&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/neural-style/communities.png&quot; alt=&quot;Communities&quot; width=&quot;560px&quot; /&gt; &lt;br /&gt;
+&lt;strong&gt;Figure 1:&lt;/strong&gt; &lt;em&gt;Vicente Manansala’s style in Communities was applied in a photo of the Manila Skyline.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/neural-style/fruit-gatherer.png&quot; alt=&quot;Fruit Gatherer&quot; width=&quot;560px&quot; /&gt; &lt;br /&gt;
+&lt;strong&gt;Figure 2:&lt;/strong&gt; &lt;em&gt;Probably one of my favorites. Manansala’s brush strokes applied to the facade of his alma mater.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/neural-style/rivers.png&quot; alt=&quot;Rivers&quot; width=&quot;560px&quot; /&gt; &lt;br /&gt;
+&lt;strong&gt;Figure 3:&lt;/strong&gt; &lt;em&gt;Fernando Zobel’s work as implemented into one of the buildings in Ateneo.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/neural-style/sarimanok.png&quot; alt=&quot;Sarimanok&quot; width=&quot;560px&quot; /&gt; &lt;br /&gt;
+&lt;strong&gt;Figure 4:&lt;/strong&gt; &lt;em&gt;The work Sarimanok, aptly transfered to a pair of fighting cocks.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is also Ateneo’s Church of the Gesu, rendered in Van Gogh’s Starry Night. What beauty!&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/neural-style/starry-night.png&quot; alt=&quot;Starry Night&quot; width=&quot;560px&quot; /&gt; &lt;br /&gt;
+&lt;strong&gt;Figure 5:&lt;/strong&gt; &lt;em&gt;Van Gogh’s starry night in Church of the Gesu.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to implement this technique, you can use &lt;a href=&quot;https://github.com/ljvmiranda921/style-transfer&quot;&gt;my work&lt;/a&gt; written in Python 2.X and Tensorflow. I am running this above our lab’s GPU (NVIDIA Titan X), and it takes around 2-3 minutes for a single style transfer, depending on the resolution (I’m using 72dpi). I haven’t tested this with a normal CPU, but from previous experience, this may take more than 30 minutes to run.&lt;/p&gt;
+
+&lt;h3 id=&quot;sources&quot;&gt;Sources&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1508.06576&quot;&gt;L.A. Gatys, et al, A Neural Algorithm for Style Transfer, 2015.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://harishnarayanan.org/writing/artistic-style-transfer/&quot;&gt;Convolutional neural networks for artistic style transfer&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;other-neural-style-implementations&quot;&gt;Other neural style implementations&lt;/h3&gt;
+&lt;p&gt;My neural style implementation is still naive and dirty, and doesn’t have the degree of freedom to blend various artistic styles perfectly. If you prefer using other implementations, take a look at the following below.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jcjohnson/neural-style&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;jcjohnson&lt;/code&gt;’s original implementation, using Lua and Torch.&lt;/a&gt; &lt;em&gt;(Probably one of the most comprehensive implementations around. It enables you to blend various styles, and control the degree of blending).&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/fzliu/style-transfer&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;fzliu&lt;/code&gt;’s implementation, using Python and Caffe.&lt;/a&gt; &lt;em&gt;(Here’s something that’s much closer to home. If you’re a Caffe user, this implementation might be more of a breeze. I don’t use Caffe so I opted for Tensorflow).&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/anishathalye/neural-style&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;anishathalye&lt;/code&gt;s implementation, using Python and Tensorflow.&lt;/a&gt; &lt;em&gt;(A straightforward implementation using Tensorflow. This also adopts various parameters set by jcjohnson, but works under the Tensorflow API)&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>LJ MIRANDA</name></author><category term="projects" /><category term="neural style transfer" /><category term="deep learning" /><category term="filipino paintings" /><category term="convolutional neural network" /><summary type="html">For one of my weekend projects, I chanced upon this paper of L.A. Gatys describing how we can use a convolutional neural network to transfer artistic style from one image to another. Here, I used the neural style transfer technique to learn the artistic style of various Filipino paintings. Painters range from Amorsolo to Manansala, and other modern artists such as Zobel. Enjoy! Figure 1: Vicente Manansala’s style in Communities was applied in a photo of the Manila Skyline. Figure 2: Probably one of my favorites. Manansala’s brush strokes applied to the facade of his alma mater. Figure 3: Fernando Zobel’s work as implemented into one of the buildings in Ateneo. Figure 4: The work Sarimanok, aptly transfered to a pair of fighting cocks. Here is also Ateneo’s Church of the Gesu, rendered in Van Gogh’s Starry Night. What beauty! Figure 5: Van Gogh’s starry night in Church of the Gesu. If you want to implement this technique, you can use my work written in Python 2.X and Tensorflow. I am running this above our lab’s GPU (NVIDIA Titan X), and it takes around 2-3 minutes for a single style transfer, depending on the resolution (I’m using 72dpi). I haven’t tested this with a normal CPU, but from previous experience, this may take more than 30 minutes to run. Sources L.A. Gatys, et al, A Neural Algorithm for Style Transfer, 2015. Convolutional neural networks for artistic style transfer Other neural style implementations My neural style implementation is still naive and dirty, and doesn’t have the degree of freedom to blend various artistic styles perfectly. If you prefer using other implementations, take a look at the following below. jcjohnson’s original implementation, using Lua and Torch. (Probably one of the most comprehensive implementations around. It enables you to blend various styles, and control the degree of blending). fzliu’s implementation, using Python and Caffe. (Here’s something that’s much closer to home. If you’re a Caffe user, this implementation might be more of a breeze. I don’t use Caffe so I opted for Tensorflow). anishathalyes implementation, using Python and Tensorflow. (A straightforward implementation using Tensorflow. This also adopts various parameters set by jcjohnson, but works under the Tensorflow API)</summary></entry><entry><title type="html">MRT-3 Passenger Traffic Visualization</title><link href="http://localhost:4000/notebook/2017/03/06/mrt3/" rel="alternate" type="text/html" title="MRT-3 Passenger Traffic Visualization" /><published>2017-03-06T00:00:00+09:00</published><updated>2017-03-06T00:00:00+09:00</updated><id>http://localhost:4000/notebook/2017/03/06/mrt3</id><content type="html" xml:base="http://localhost:4000/notebook/2017/03/06/mrt3/">&lt;p&gt;As a regular MRT-3 passenger, the idea of congestion is strongly familiar. In fact, the ebb and flow
+of passengers give rise to some familiar patterns that we observe in our everyday commute. We notice
+peak hours, highly-congested stations, and overall traffic. In this notebook, I will explore these
+patterns in our MRT-3 system through data&lt;!--more--&gt;. The data was sourced from the
+&lt;a href=&quot;http://dotr.gov.ph/&quot;&gt;open data website&lt;/a&gt; of the Department of Transportation
+and Communication (DOTC). This short analysis is divided into three parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#peak-hours-of-the-day&quot;&gt;Peak hours of the day&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#station&quot;&gt;Passenger Traffic throughout the day&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#passenger-flux&quot;&gt;Passenger flux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;peak-hours-of-the-day&quot;&gt;Peak hours of the day&lt;/h2&gt;
+&lt;p&gt;Below we can see how many passengers, on average, move in and out of the MRT system throughout the
+day.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/mrt/ridership.png&quot; alt=&quot;Passenger Count&quot; width=&quot;640px&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;Figure 1:&lt;/strong&gt; &lt;em&gt;MRT-3 Ridership&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Peak hours in the MRT range from 6:00 to 9:00 in the morning and 4:00 to 7:00 pm in the afternoon.
+These peak hours correspond to the time when people go to work in the morning and go back home in
+the afternoon. We can then observe how large the difference is, in terms of the number of passengers,
+in between the two peak hours.&lt;/p&gt;
+
+&lt;p&gt;Although it can easily be advised to &lt;em&gt;avoid the rush hour&lt;/em&gt;, not all employees are privileged to do
+that. Riding the MRT-3 by 5:00 AM is a huge sacrifice (imagine going up very early in the morning
+for your 8:00 AM work!), and leaving work before 5:00 PM is impossible. Some people find a hack by
+delaying their travel time by staying at the office until the evening; in which we can see, that the
+frequency of passengers diminishes through the night.&lt;/p&gt;
+
+&lt;h2 id=&quot;-passenger-traffic-throughout-the-day&quot;&gt;&lt;a name=&quot;station&quot;&gt;&lt;/a&gt; Passenger Traffic throughout the day&lt;/h2&gt;
+&lt;p&gt;Next, I would like to see how congestion differs for each station throughout the day. In this case,
+I created a heatmap, where intense colors represent higher congestion. All the MRT-3 stations are at
+the y-axis, and the hour of the day at the x-axis.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/mrt/passenger-traffic-01.png&quot; alt=&quot;Passenger Traffic&quot; width=&quot;720px&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;Figure 2:&lt;/strong&gt; &lt;em&gt;Passenger Traffic throughout the day&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Looking at the heatmap on the left, we can see the stations where most people enter: North Avenue
+Station and Taft. We can also see in the same map that Taft Station always has a constant influx of
+passengers throughout the day. In addition, the North Avenue congestion can be attributed to the
+fact that most employees go to work in places like Makati and Ayala, thus congesting the Southbound
+trip. It may take a lot of urban planning, but it is important that the congestion in the first
+station is distributed evenly among the other stations. This may entail the addition of jobs and
+offices that can be located near these points.&lt;/p&gt;
+
+&lt;p&gt;As we progress through the day, we can see the peak points (or areas of stronger intensity)
+developing along Araneta, Shaw, and Ayala. Intuitively, these places are all near Commercial
+Business Districts (CBD), and we see an influx of people entering these stations around our
+peak hours.&lt;/p&gt;
+
+&lt;p&gt;In our right-hand heatmap, we can then see the frequency of passengers that alight the MRT. In the
+morning, we see most of them exiting through Shaw (and some in Ortigas), Ayala, and Taft. In the
+afternoon/evening, most of the people alight the MRT in Araneta, Taft, and North Avenue. This is
+then consistent to the idea that most employees from the North go Southbound to work in places like
+Makati. In fact, if we look in our same heatmap, we can observe (in the morning) the places where
+people go, and the places where people go home to (in the evening).&lt;/p&gt;
+
+&lt;h2 id=&quot;passenger-flux&quot;&gt;Passenger Flux&lt;/h2&gt;
+&lt;p&gt;I am then interested on how passenger flow changes througout the day. Below is an animated chart
+showing areas of higher passenger frequency (more intense colors) with respect to the stations
+throughout the day.&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/mrt/flux.gif&quot; alt=&quot;Passenger Flux&quot; width=&quot;720px&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;Figure 3:&lt;/strong&gt; &lt;em&gt;Passenger Flux&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In the morning, we see that the influx of passengers often originate in the north, specifically in
+North Avenue, Quezon Avenue, and GMA Kamuning. Over time, we can then see how the congestion in the
+stations build-up, as more people are going in from different points of the MRT. We can also observe
+the stations where most passengers alight, and it is consistent to our observations from the heatmaps
+above.&lt;/p&gt;
+
+&lt;p&gt;In addition, as we progress through the night, we can see that the outflow of passengers develop in
+Araneta, and more so in North Avenue. It is then evident that the passenger flux in the morning go
+Southbound, while in the afternoon they go Northbound.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;It is interesting how data can help us see patterns especially in a transportation system like the
+MRT. From data, we can determine usage patterns and see how they develop throughout the day. I hope
+that in the future, more fine-grained data will be collected for the MRT-3 (and perhaps for our
+other train lines as well). As of now, the data we have is coarse, and seems to generalize a lot.
+It may be interesting to see usage patters in the weekend, and the exact origin-destination of
+passengers that take the MRT-3&lt;/p&gt;</content><author><name>LJ MIRANDA</name></author><category term="notebook" /><summary type="html">As a regular MRT-3 passenger, the idea of congestion is strongly familiar. In fact, the ebb and flow of passengers give rise to some familiar patterns that we observe in our everyday commute. We notice peak hours, highly-congested stations, and overall traffic. In this notebook, I will explore these patterns in our MRT-3 system through data</summary></entry><entry><title type="html">Twitter streaming using Python</title><link href="http://localhost:4000/notebook/2017/02/24/twitter-streaming-using-python/" rel="alternate" type="text/html" title="Twitter streaming using Python" /><published>2017-02-24T00:00:00+09:00</published><updated>2017-02-24T00:00:00+09:00</updated><id>http://localhost:4000/notebook/2017/02/24/twitter-streaming-using-python</id><content type="html" xml:base="http://localhost:4000/notebook/2017/02/24/twitter-streaming-using-python/">&lt;p&gt;Streaming tweets can be a fun exercise in data mining. With almost a million tweets being published
+everyday, there is an enormous wealth of data that can be gathered, and insights to be discovered.
+Today, we will utilize a powerful Python library called &lt;a href=&quot;http://www.tweepy.org/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tweepy&lt;/code&gt;&lt;/a&gt; to access
+tweets from the web in real-time&lt;!--more--&gt;.&lt;/p&gt;
+
+&lt;p&gt;The main idea is that we will first (1) generate Twitter credentials online by making a &lt;em&gt;Twitter App&lt;/em&gt;,
+and then (2) use &lt;code class=&quot;highlighter-rouge&quot;&gt;tweepy&lt;/code&gt; together with our Twitter credentials to stream tweets depending on our
+settings. We can then opt to (3) save these tweets in a database, so that we can perform our own
+search queries or (4) export them later as &lt;code class=&quot;highlighter-rouge&quot;&gt;.csv&lt;/code&gt; files for analysis.&lt;/p&gt;
+
+&lt;p&gt;In this tutorial, we will create two files, the Twitter scraper routine &lt;code class=&quot;highlighter-rouge&quot;&gt;scraper.py&lt;/code&gt;, and the .csv
+exporter &lt;code class=&quot;highlighter-rouge&quot;&gt;dumper.py&lt;/code&gt;. Steps 1 to 3 correspond to the scraper while the last step is for the dumper:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#credentials&quot;&gt;Generate Twitter credentials&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#listener&quot;&gt;Create the &lt;code class=&quot;highlighter-rouge&quot;&gt;StreamListener&lt;/code&gt; class using &lt;code class=&quot;highlighter-rouge&quot;&gt;tweepy&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#database&quot;&gt;Save tweets into an &lt;code class=&quot;highlighter-rouge&quot;&gt;SQL&lt;/code&gt; database&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#dump&quot;&gt;Convert database into a .csv file&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;dependencies&quot;&gt;Dependencies&lt;/h2&gt;
+&lt;p&gt;I’ll be using Python 3 (3.5.2) in conjunction with the following libraries. If you don’t have the
+following modules, you can simply install them using Git Bash and then &lt;code class=&quot;highlighter-rouge&quot;&gt;pip install &amp;lt;module&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tweepy/tweepy&quot;&gt;Tweepy&lt;/a&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;tweepy&lt;/code&gt;, for streaming Tweets. This is required, obviously.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://dataset.readthedocs.io/en/latest/&quot;&gt;dataset&lt;/a&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;dataset&lt;/code&gt;, a lightweight database module where we can store our tweets.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sqlalchemy.org/download.html&quot;&gt;SQL Alchemy&lt;/a&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;SQLAlchemy&lt;/code&gt;, an object relational mapper (ORM) that can be used for Python.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-generate-twitter-credentials&quot;&gt;&lt;a name=&quot;credentials&quot;&gt;&lt;/a&gt; Generate Twitter Credentials&lt;/h2&gt;
+&lt;p&gt;If you don’t have a &lt;a href=&quot;https://twitter.com/&quot;&gt;Twitter&lt;/a&gt; account, make one. Once you’re done, head over
+to https://apps.twitter.com/ and “Create a New App.” You will then see a similar form below:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/tuts/twitter/create.PNG&quot; alt=&quot;Create New App Form&quot; width=&quot;560px&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;Figure 1:&lt;/strong&gt; &lt;em&gt;Create New Application Form&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For the Name field, simply write a name for your application. It can be “MyApp” or anything. In the
+Description field, you can write something about your application so that you can be reminded later
+of what it does. Lastly, for the Website field, you can enter your own website, but if you don’t
+have any, https://www.site.com will suffice.&lt;/p&gt;
+
+&lt;p&gt;Note that we are not writing anything down in the Callback URL field. Leave that blank for now.
+Once you’re done, tick the agreement checkbox and click “Create your Twitter Application”&lt;/p&gt;
+
+&lt;p&gt;Once your application has already been created, a dashboard will appear in your browser. Go to “Keys
+and Access Tokens” tab and generate your consumer keys and access tokens if they’re not yet available.
+By the end of this process, we now have the following keys, and we’ll refer to them as the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Consumer Key (API Key), &lt;code class=&quot;highlighter-rouge&quot;&gt;consumer_key&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Consumer Secret (API Secret), &lt;code class=&quot;highlighter-rouge&quot;&gt;consumer_secret&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Access Token, &lt;code class=&quot;highlighter-rouge&quot;&gt;access_token&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Access Token Secret, &lt;code class=&quot;highlighter-rouge&quot;&gt;access_token_secret&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Take note of these variables for we’ll use them later on.&lt;/p&gt;
+
+&lt;h2 id=&quot;-create-the-streamlistener-class-using-tweepy&quot;&gt;&lt;a name=&quot;listener&quot;&gt;&lt;/a&gt; Create the &lt;code class=&quot;highlighter-rouge&quot;&gt;StreamListener&lt;/code&gt; class using &lt;code class=&quot;highlighter-rouge&quot;&gt;tweepy&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;We wil create the listener class that will inherit from the &lt;code class=&quot;highlighter-rouge&quot;&gt;StreamListener&lt;/code&gt; object in &lt;code class=&quot;highlighter-rouge&quot;&gt;tweepy&lt;/code&gt;.
+We’ll create a wrapper, and then define methods that will be activated depending on what the listener
+is hearing. In our case, we’ll build the &lt;code class=&quot;highlighter-rouge&quot;&gt;on_status&lt;/code&gt; and  &lt;code class=&quot;highlighter-rouge&quot;&gt;on_error&lt;/code&gt; methods inside the
+&lt;code class=&quot;highlighter-rouge&quot;&gt;StdOutListener&lt;/code&gt; class. The structure of our listener class is very short and easy. In its entirety,
+this is what it looks like:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;StdOutListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;StreamListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot; A listener handles tweets that are received from the stream.
+    This is a basic listener that just prints received tweets to stdout.
+    &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;on_status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;on_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status_code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status_code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;420&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The method &lt;code class=&quot;highlighter-rouge&quot;&gt;on_status&lt;/code&gt; is activated whenever a tweet has been heard. Its input is the variable &lt;code class=&quot;highlighter-rouge&quot;&gt;status&lt;/code&gt;, which is the actual Tweet it heard plus the metadata. Here, &lt;code class=&quot;highlighter-rouge&quot;&gt;status&lt;/code&gt; can be seen as an object with different parameters. For example, &lt;code class=&quot;highlighter-rouge&quot;&gt;status.text&lt;/code&gt;is the actual tweet in UTF-8 encoding, &lt;code class=&quot;highlighter-rouge&quot;&gt;status.favorite_count&lt;/code&gt; is the number of favorites the tweet has and so on. You can look for the different parameters &lt;a href=&quot;https://dev.twitter.com/overview/api/tweets&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;The method &lt;code class=&quot;highlighter-rouge&quot;&gt;on_error&lt;/code&gt; serves as an error handler for our listener. Sometimes, Error 420 are being sent in our listener because of Twitter’s rate limit policy. Whenever this kind of error arrives, it will prompt our listener to disconnect.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As you can see, it is in the &lt;code class=&quot;highlighter-rouge&quot;&gt;on_status&lt;/code&gt; method where we’ll put all the manipulations required. This
+can include storing Tweets into the database and other things. As long as we hear something through
+the listener, &lt;code class=&quot;highlighter-rouge&quot;&gt;on_status&lt;/code&gt; is executed and it does all the things we put into it.&lt;/p&gt;
+
+&lt;p&gt;Our listener class, &lt;code class=&quot;highlighter-rouge&quot;&gt;StdOutListener()&lt;/code&gt;, can then be used in order to stream tweets. In the same file
+(&lt;code class=&quot;highlighter-rouge&quot;&gt;scraper.py&lt;/code&gt;), we write the following:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;__future__&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absolute_import&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print_function&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Import modules&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tweepy.streaming&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StreamListener&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tweepy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OAuthHandler&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;tweepy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Stream&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;dataset&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sqlalchemy.exc&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProgrammingError&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Your credentials go here&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;consumer_key&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;consumer_secret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;access_token&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;access_token_secret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+The code for our listener class above goes here!
+&quot;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StdOutListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OAuthHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;consumer_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;consumer_secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_access_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;access_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;access_token_secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;track&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'github'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'tweepy'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We simply import all our modules, and then plug in the credentials we obtained in the earlier step.
+&lt;strong&gt;Remember to put the code for our listener class right after&lt;/strong&gt; &lt;em&gt;(see comment)&lt;/em&gt;. In our main function,
+we simply invoke an instance of our listener, and then use the &lt;code class=&quot;highlighter-rouge&quot;&gt;tweepy&lt;/code&gt; methods
+in order to connect to our application.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-info&quot;&gt;
+  Normally, it's a good practice that you store your Twitter credentials, or anything that is private
+  in a separate file away from your source code. I suggest storing them in a config.ini file, then
+  accessing them using the ConfigParser module in Python.
+&lt;/div&gt;
+
+&lt;p&gt;We can then add filters in the way we stream using the &lt;code class=&quot;highlighter-rouge&quot;&gt;stream.filter()&lt;/code&gt; method. The &lt;code class=&quot;highlighter-rouge&quot;&gt;track&lt;/code&gt; parameter
+is an array of keywords that will be listened into. This means that as our listener is running,
+it will only listen to tweets that contain the keywords below (logical OR).&lt;/p&gt;
+
+&lt;p&gt;You can actually try this one out right now. Just copy the code below, supply your credentials, and
+then type &lt;code class=&quot;highlighter-rouge&quot;&gt;python scraper.py&lt;/code&gt; in your cmd!&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-warning&quot;&gt;
+  &lt;strong&gt;Take note!&lt;/strong&gt;
+Depending on your machine, sometimes there are errors that will appear such as:
+&lt;pre&gt;charmap can't encode character&lt;/pre&gt;
+One very fast workaround that I &lt;b&gt;don't&lt;/b&gt; recommend, but you'll find in most StackOverflow threads is to type
+&lt;pre&gt;chcp 65001&lt;/pre&gt;
+in your console before running the scraper. The error often comes in the console and this solution is quite hack-ish and not much of a good practice.
+I suggest &lt;a href=&quot;http://stackoverflow.com/questions/14630288/unicodeencodeerror-charmap-codec-cant-encode-character-maps-to-undefined&quot;&gt;Dirk Stocker's&lt;/a&gt; answer for this. Using a wrapper is much more scalable and gives you good practice early on. But if you think his solution is quite difficult, I won't stop you from using chcp.
+&lt;/div&gt;
+
+&lt;h2 id=&quot;-save-tweets-into-an-sql-database&quot;&gt;&lt;a name=&quot;database&quot;&gt;&lt;/a&gt; Save tweets into an &lt;code class=&quot;highlighter-rouge&quot;&gt;SQL&lt;/code&gt; database&lt;/h2&gt;
+
+&lt;p&gt;We will now extend our &lt;code class=&quot;highlighter-rouge&quot;&gt;on_status&lt;/code&gt; method to include database storage. In this case, it will look
+like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;on_status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retweeted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;id_str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id_str&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;created&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;created_at&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fav&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;favorite_count&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;screen_name&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;description&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;location&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;user_created&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;created_at&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;followers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;followers_count&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'myTable'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;id_str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id_str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;created&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;created&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;fav_count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fav&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;user_name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;user_description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;user_location&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;user_created&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user_created&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;user_followers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;followers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;except&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProgrammingError&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;As you can see, we’re accessing different parameters of the Tweet such as the user ID of the one who
+created the Tweet, the number of favorites, the location, and even the time it was created. We simply
+store them in different variables so that we can access them easily. Next, we create a table named
+&lt;code class=&quot;highlighter-rouge&quot;&gt;myTable&lt;/code&gt;, and this is where we’ll store our Tweets. Using the &lt;code class=&quot;highlighter-rouge&quot;&gt;dataset&lt;/code&gt; library, we can simply do
+this by invoking the &lt;code class=&quot;highlighter-rouge&quot;&gt;table.insert&lt;/code&gt; command and supplying it with the dictionary made up of our
+Tweet parameters.&lt;/p&gt;
+
+&lt;p&gt;Lastly, don’t forget that we need to connect to our database, we do that by adding another line in
+our &lt;code class=&quot;highlighter-rouge&quot;&gt;main&lt;/code&gt; routine like below:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'__main__'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sqlite:///tweets.db&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StdOutListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OAuthHandler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;consumer_key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;consumer_secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_access_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;access_token&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;access_token_secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;track&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'github'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'tweepy'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We are then connecting to the database called &lt;code class=&quot;highlighter-rouge&quot;&gt;tweets.db&lt;/code&gt;, and we’re doing that in just a single line!
+As you can see, this is quite easy! We can now start scraping our Twitter data! Again, just hit the
+console and type:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python scraper.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;If we want to end the stream, just press CTRL + C.&lt;/p&gt;
+
+&lt;h2 id=&quot;-convert-database-into-a-csv-file&quot;&gt;&lt;a name=&quot;dump&quot;&gt;&lt;/a&gt; Convert database into a .csv file&lt;/h2&gt;
+&lt;p&gt;In this section, we will then create another file, &lt;code class=&quot;highlighter-rouge&quot;&gt;dumper.py&lt;/code&gt;. It is made up of just four lines so
+here we go:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;dataset&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;db&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sqlite:///tweets.db&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'myTable'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dataset&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;freeze&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'tweets.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Here, we are connecting again to the &lt;code class=&quot;highlighter-rouge&quot;&gt;tweets&lt;/code&gt; database. We then retrieve the values that can be found
+in our table &lt;code class=&quot;highlighter-rouge&quot;&gt;myTable&lt;/code&gt; and store it in the variable &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt;. Afterwhich, we invoke the &lt;code class=&quot;highlighter-rouge&quot;&gt;freeze&lt;/code&gt; command
+in order to “convert” our database into a .csv file with the filename
+&lt;code class=&quot;highlighter-rouge&quot;&gt;tweets.csv&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thus, after scraping, we can then run this dumper using the following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python dumper.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This will then generate a file in the same directory as this code.&lt;/p&gt;
+
+&lt;p&gt;I hope that you were able to use this little tutorial in streaming your Tweets! Data scraping is
+one of the most useful tools in data science and getting sentiments from Twitter can prove to be
+valuable with its wide-range of applications. The final code for the scraper can be seen
+in this &lt;a href=&quot;https://gist.github.com/ljvmiranda921/3fcbed4d69f4aced752304fa8f36353b&quot;&gt;gist&lt;/a&gt;.&lt;/p&gt;</content><author><name>LJ MIRANDA</name></author><category term="notebook" /><summary type="html">Streaming tweets can be a fun exercise in data mining. With almost a million tweets being published everyday, there is an enormous wealth of data that can be gathered, and insights to be discovered. Today, we will utilize a powerful Python library called tweepy to access tweets from the web in real-time</summary></entry><entry><title type="html">How to send data from RPI to Server</title><link href="http://localhost:4000/notebook/2017/02/21/send-data-from-rpi-to-server/" rel="alternate" type="text/html" title="How to send data from RPI to Server" /><published>2017-02-21T00:00:00+09:00</published><updated>2017-02-21T00:00:00+09:00</updated><id>http://localhost:4000/notebook/2017/02/21/send-data-from-rpi-to-server</id><content type="html" xml:base="http://localhost:4000/notebook/2017/02/21/send-data-from-rpi-to-server/">&lt;p&gt;In most Raspberry Pi projects, sending data to a website (or in the website’s database) is very crucial. For example, in home automation, if we want to access the room’s sensor and consumption data in our devices through a website in real-time, we must first be able to do data transfer from RPi to website. In this tutorial, I am going to teach you a simple technique to do just that&lt;!--more--&gt;. We will be utilizing a &lt;code class=&quot;highlighter-rouge&quot;&gt;curl bash&lt;/code&gt; command via Python in RPi, and we’ll build a simple PHP service in our website/client.&lt;/p&gt;
+
+&lt;p&gt;Here, &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; sounds a very cute command when one hears it for the first time. For Linux users, this is nothing new for you. &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; is a nifty command line tool for getting or sending files using URL syntax. To help you remember, you can write it this way: &lt;code class=&quot;highlighter-rouge&quot;&gt;cURL&lt;/code&gt;. Meaning, just by changing the URL syntax, you can easily send data to your website!&lt;/p&gt;
+
+&lt;p&gt;In a sense, you will be having a URL that looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http://www.example.com/phpService.php?a1=val1&amp;amp;a2=val2&amp;amp;a3=val3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;(If you try a Google Search, their URL will be somehow similar to the format above!)&lt;/p&gt;
+
+&lt;p&gt;We can denote &lt;code class=&quot;highlighter-rouge&quot;&gt;a1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;a2&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;a3&lt;/code&gt; as three different variables, and &lt;code class=&quot;highlighter-rouge&quot;&gt;val1&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;val2&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;val3&lt;/code&gt; as their respective values. We will do the following tasks:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-curl-command&quot;&gt;Write a curl command that will create an HTTP request&lt;/a&gt;; and&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#php&quot;&gt;Write a PHP script in our website to process the HTTP request&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-curl-command&quot;&gt;The cURL command&lt;/h2&gt;
+
+&lt;p&gt;In order to use the &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; command, we need to import the &lt;code class=&quot;highlighter-rouge&quot;&gt;os&lt;/code&gt; module into Python. After which, we provide the necessary code to access our data (it may be an MySQL query, or another thing entirely). In this example, I will just provide arbitrary values for our data. We “package” the HTTP request nicely and then invoke the &lt;code class=&quot;highlighter-rouge&quot;&gt;curl&lt;/code&gt; command. Here’s an example of how we can do it:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#Import necessary libraries&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#Write code here to access your data&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;val1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;val2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;val3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#Construct the cURL bash&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;http_address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;http://example.com/phpService.php?&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;request_string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http_address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;a1=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;amp;a2=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&amp;amp;a3=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;#Invoke the command&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'curl'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&quot;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request_string&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&quot;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Including the &lt;code class=&quot;highlighter-rouge&quot;&gt;os&lt;/code&gt; library is important so that the command will work. Your data may be stored inside your RPi’s local database, so just call the appropriate query and store those values inside your variables. Another note, you cannot concatenate integers and strings together, thus the reason for enclosing the val variables in an str() function.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-danger&quot;&gt;
+  &lt;strong&gt;Warning!&lt;/strong&gt; My example here is a very simple one and is just used to demonstrate how the data transfer works. The problem with HTTP request is that
+  your data is &quot;exposed&quot; in the transfer process, and may be prone to compromise. It is strongly recommended to encrypt one's data first before using the HTTP request.
+&lt;/div&gt;
+
+&lt;p&gt;Next we’ll be writing a PHP service that can understand the URL set by the curl command and thus give you an opportunity to do the necessary operations.&lt;/p&gt;
+
+&lt;h2 id=&quot;-php-service-to-process-the-curl-command&quot;&gt;&lt;a name=&quot;php&quot;&gt;&lt;/a&gt; PHP Service to process the cURL command&lt;/h2&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;!DOCTYPE HTML PUBLIC &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-//W3C//DTD XHTML 1.0 Strict//EN&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;gt;
+    &amp;lt;html xmlns=&quot;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;://&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;www&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;w3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1999&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;xhtml&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; xml:lang=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;en&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; lang=&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;en&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;gt;
+        &amp;lt;head&amp;gt;
+        &amp;lt;/head&amp;gt;
+        &amp;lt;body&amp;gt;&amp;amp;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_SERVER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'REQUEST_METHOD'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;GET) {
+               &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$storeVal1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_GET[&quot;a1&quot;]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;;
+               &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$storeVal2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_GET[&quot;a2&quot;]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;;
+               &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$storeVal3&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; = &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_GET[&quot;a3&quot;]&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;;
+            //Now you have the values of val1, val2, val3 stored in storeVal1, storeVal2, storeVal3 respectively.
+            }
+        print &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In web development jargon, what we just did is called an HTTP GET Request, if you’ve been scouring different programming forums, you might have read about the HTTP POST Request. Normally, I use POST requests on Forms (like in entering your Username and Password) and GET for simple services like this.&lt;/p&gt;
+
+&lt;p&gt;My own implementation of the curl bash command can be found &lt;a href=&quot;https://gist.github.com/ljvmiranda921/f5b815013b96e4801007&quot;&gt;here&lt;/a&gt;, while the PHP service can be found &lt;a href=&quot;https://gist.github.com/ljvmiranda921/c0d943541a6392470c23&quot;&gt;here&lt;/a&gt;. I first gathered the data from my RPI’s local database, and then send them to the web to be stored in the server database.&lt;/p&gt;</content><author><name>LJ MIRANDA</name></author><category term="notebook" /><summary type="html">In most Raspberry Pi projects, sending data to a website (or in the website’s database) is very crucial. For example, in home automation, if we want to access the room’s sensor and consumption data in our devices through a website in real-time, we must first be able to do data transfer from RPi to website. In this tutorial, I am going to teach you a simple technique to do just that</summary></entry><entry><title type="html">How to make a CanvasJS Chart from MySQL Data</title><link href="http://localhost:4000/notebook/2017/02/21/make-canvasjs-chart-from-mysql-data/" rel="alternate" type="text/html" title="How to make a CanvasJS Chart from MySQL Data" /><published>2017-02-21T00:00:00+09:00</published><updated>2017-02-21T00:00:00+09:00</updated><id>http://localhost:4000/notebook/2017/02/21/make-canvasjs-chart-from-mysql-data</id><content type="html" xml:base="http://localhost:4000/notebook/2017/02/21/make-canvasjs-chart-from-mysql-data/">&lt;p&gt;For one of my projects during my undergrad years, I am required to render graphical charts in our website using data found from MySQL.
+Today, everything is much easier for you can use various web frameworks such as &lt;a href=&quot;https://www.djangoproject.com/&quot;&gt;Django&lt;/a&gt; and &lt;a href=&quot;http://rubyonrails.org/&quot;&gt;Ruby on Rails&lt;/a&gt;. But for some of us who still enjoy the XAMPP stack, this simple task can be quite daunting&lt;!--more--&gt;.&lt;/p&gt;
+
+&lt;p&gt;Back in those years, I am utilizing a Javascript library called &lt;a href=&quot;http://canvasjs.com/&quot;&gt;CanvasJS&lt;/a&gt;. It is fast and easy, and is being used by
+different companies such as Intel, Boeing, and BMW. In this tutorial, I will teach you how two things, these are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#receive&quot;&gt;Receiving data from a MySQL Database&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#chart&quot;&gt;Using the received data to make CanvasJS charts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You might need a little bit of Javascript and PHP experience here (although Javascript is given if you’re doing web development), but I will
+provide some of the codes below. But first, in order to understand the bigger picture of what we’ll do, take a look at the diagram below:&lt;/p&gt;
+
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/assets/png/tuts/canvasjstogui.png&quot; alt=&quot;Diagram&quot; width=&quot;560px&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;Figure 1:&lt;/strong&gt; &lt;em&gt;Task Diagram&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Let me first explain what we’ll do one-by-one:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;From our server, we will invoke an &lt;code class=&quot;highlighter-rouge&quot;&gt;AJAX&lt;/code&gt; request, typically a &lt;code class=&quot;highlighter-rouge&quot;&gt;getJSON()&lt;/code&gt; command in order to access the PHP service that gets the data from our MySQL database.&lt;/li&gt;
+  &lt;li&gt;This PHP service connects to the database and does lookup, select, and processing of our data. In summary, we put our SQL queries inside this PHP service to access our data. Moreover, this PHP service also prepares our data into JSON format.&lt;/li&gt;
+  &lt;li&gt;Once the PHP service is “activated,” the database will then churn out the necessary data, and &lt;em&gt;through the PHP service&lt;/em&gt; send this JSON file into our server.&lt;/li&gt;
+  &lt;li&gt;The server then receives the data in JSON form and stores it in an object. For the sake of discussion, we call this object &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;We treat &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt; as an object where we can access different keys and values as how we normally treat JavaScript objects. In our case, we use this object to render a chart.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;We do steps 1 to 3 in the first part, and 4 to 5 in the second part.&lt;/p&gt;
+
+&lt;h2 id=&quot;-receiving-data-from-a-mysql-database&quot;&gt;&lt;a name=&quot;receive&quot;&gt;&lt;/a&gt; Receiving data from a MySQL Database&lt;/h2&gt;
+&lt;p&gt;First, we invoke an &lt;code class=&quot;highlighter-rouge&quot;&gt;AJAX&lt;/code&gt; request containing the PHP service required. The structure of our request looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getJSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;myphpService.php&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here, &lt;code class=&quot;highlighter-rouge&quot;&gt;myphpService.php&lt;/code&gt; contains the SQL queries that will be used to access data from our database. Later on, this data will be stored in the object &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt;. Let’s then write our &lt;code class=&quot;highlighter-rouge&quot;&gt;myphpService.php&lt;/code&gt; script:&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;/* We first connect to our database */&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$connection&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mysqli_connect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$dbhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$password&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$database&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$port&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;/* Capture connection error if any */&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;mysqli_connect_errno&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Failed to connect to DataBase: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mysqli_connect_error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;cm&quot;&gt;/* Declare an array containing our data points */&lt;/span&gt;
+   &lt;span class=&quot;nv&quot;&gt;$data_points&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+  &lt;span class=&quot;cm&quot;&gt;/* Usual SQL Queries */&lt;/span&gt;
+     &lt;span class=&quot;nv&quot;&gt;$query&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;SELECT `timeStamp`,`myData2` FROM `myTable`&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mysqli_query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+     &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mysqli_fetch_array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;        
+      &lt;span class=&quot;cm&quot;&gt;/* Push the results in our array */&lt;/span&gt;
+            &lt;span class=&quot;nv&quot;&gt;$point&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ts&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;  &lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'timeStamp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;d1&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;  &lt;span class=&quot;nv&quot;&gt;$row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'myData1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+            &lt;span class=&quot;nb&quot;&gt;array_push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$data_points&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;cm&quot;&gt;/* Encode this array in JSON form */&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;json_encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$data_points&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;JSON_NUMERIC_CHECK&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;mysqli_close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$connection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;?&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So as usual, we connect to our database using &lt;code class=&quot;highlighter-rouge&quot;&gt;mysqli_connect()&lt;/code&gt;. What we then do is that we declare an array containing our data points, and using SQL queries, we store the desired data in the variable &lt;code class=&quot;highlighter-rouge&quot;&gt;$result&lt;/code&gt;. We then push everything inside our array, and encode the array in JSON form using &lt;code class=&quot;highlighter-rouge&quot;&gt;json_encode&lt;/code&gt;. Do not forget to close the connection once you’re done!&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-warning&quot;&gt;
+  &lt;strong&gt;Take note!&lt;/strong&gt; Be mindful that in practice, we don't store our user credentials as variables in our script. You can check some of the good PHP practices &lt;a href=&quot;https://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17&quot; class=&quot;alert-link&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://phpbestpractices.org/&quot; class=&quot;alert-link&quot;&gt;here&lt;/a&gt;.
+&lt;/div&gt;
+
+&lt;p&gt;Using this script, we can now access data from our database. Note that we’re just using very simple SQL queries such as &lt;code class=&quot;highlighter-rouge&quot;&gt;SELECT&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;FROM&lt;/code&gt;. This can vary depending on your needs, but the most important thing is that these values are pushed into the &lt;code class=&quot;highlighter-rouge&quot;&gt;$data_points&lt;/code&gt; array so that they can be encoded in JSON form. The idea here is that through the &lt;code class=&quot;highlighter-rouge&quot;&gt;getJSON&lt;/code&gt; command in our server, we get to receive whatever the .json file the script outputs. It is very handy in managing some of our data and very flexible as well.&lt;/p&gt;
+
+&lt;p&gt;Say that our PHP service is successful, the json object will then be stored in &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt; and can be manipulated through the callback function. You can refer to the API documentation of &lt;code class=&quot;highlighter-rouge&quot;&gt;.getJSON&lt;/code&gt; &lt;a href=&quot;http://api.jquery.com/jquery.getjson/&quot;&gt;here&lt;/a&gt; for more information. The idea is that the callback function is executed once the request succeeds.&lt;/p&gt;
+
+&lt;div class=&quot;alert alert-warning&quot;&gt;
+  &lt;strong&gt;Take note!&lt;/strong&gt;
+Another thing that you have to consider is to handle the error if the request didn't succeed. I will not discuss about it here, for I will assume that our PHP service will always give the JSON object needed by our server. There are a lot of ways to handle errors, and I will refer you &lt;a href=&quot;http://stackoverflow.com/questions/1740218/error-handling-in-getjson-calls&quot;&gt;here&lt;/a&gt; to get you started in this.
+&lt;/div&gt;
+
+&lt;h2 id=&quot;-using-the-received-data-to-make-canvasjs-charts&quot;&gt;&lt;a name=&quot;chart&quot;&gt;&lt;/a&gt; Using the received data to make CanvasJS charts&lt;/h2&gt;
+
+&lt;p&gt;Let’s look back again to our &lt;code class=&quot;highlighter-rouge&quot;&gt;.getJSON&lt;/code&gt; command:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getJSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;myphpService.php&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;We now focus to our callback function. Remember that we store our JSON object into &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt;. In order to access and manipulate that object (or in our case, to make charts out of it), we should write code inside the curly brackets of our callback function.&lt;/p&gt;
+
+&lt;p&gt;Thus, inside our callback function, we can write something similar as:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getJSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;myphpService.php&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//Insert Array Assignment function here&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;dps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;label&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;y&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;//Insert Chart-making function here&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;chart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CanvasJS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Chart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;chartContainer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;zoomEnabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;panEnabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;animationEnabled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;myChart from mySQL database&quot;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+    &lt;span class=&quot;na&quot;&gt;axisX&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;TimeStamp&quot;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+        &lt;span class=&quot;na&quot;&gt;axisY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;myDataPoints&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;minimum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+    &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;spline&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;dataPoints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;dps&lt;/span&gt;
+              &lt;span class=&quot;p&quot;&gt;}]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;chart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;First, we process our &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt; object by pushing it into an array &lt;code class=&quot;highlighter-rouge&quot;&gt;dps&lt;/code&gt;. We do this by iterating over the length of the &lt;code class=&quot;highlighter-rouge&quot;&gt;result&lt;/code&gt; object, and pushing it into a dictionary-like array given the following keys that we have in our JSON file. Afterwhich, we can simply invoke the chart-making function via &lt;code class=&quot;highlighter-rouge&quot;&gt;CanvasJS.Chart&lt;/code&gt; and proceed with the necessary code.&lt;/p&gt;
+
+&lt;p&gt;I hope that I was able to shed light on this subject more clearly. If you have any questions, don’t hesitate to comment below!&lt;/p&gt;</content><author><name>LJ MIRANDA</name></author><category term="notebook" /><summary type="html">For one of my projects during my undergrad years, I am required to render graphical charts in our website using data found from MySQL. Today, everything is much easier for you can use various web frameworks such as Django and Ruby on Rails. But for some of us who still enjoy the XAMPP stack, this simple task can be quite daunting</summary></entry><entry><title type="html">Gotta Catch em All!</title><link href="http://localhost:4000/notebook/2017/02/18/pokemon-go/" rel="alternate" type="text/html" title="Gotta Catch em All!" /><published>2017-02-18T00:00:00+09:00</published><updated>2017-02-18T00:00:00+09:00</updated><id>http://localhost:4000/notebook/2017/02/18/pokemon-go</id><content type="html" xml:base="http://localhost:4000/notebook/2017/02/18/pokemon-go/">&lt;p&gt;I can describe myself as someone who “just joined the hype” of the recent Pokémon GO mobile game. It was a fun summer, but when school kicked in
+and winter started taking over, I felt less inclined to go out and fill-up my Pokédex. I still remember the days when our neighborhood is just &lt;em&gt;filled&lt;/em&gt; with Pidgeys and Rattatas, and &lt;em&gt;very few&lt;/em&gt; Abras that were almost “un-catchable.” This inspired me to look into how other Pokémon fare with respect to their spawn frequency and the ease on how they can be caught&lt;!--more--&gt;.&lt;/p&gt;
+
+&lt;p&gt;So here’s a &lt;em&gt;magic quadrant&lt;/em&gt; exploring these features. Good thing that data for Pokémon GO is already available online. However, please be mindful that several assumptions were made in the methods of data collection, so subtle biases, intended or not, may be present. You can check them &lt;a href=&quot;#notes&quot;&gt;below&lt;/a&gt;. Moreover, if you’re planning to use my dataset, you can first refer to my exploratory data analysis &lt;a href=&quot;https://github.com/ljvmiranda921/pkmn/blob/master/Exploratory%20Data%20Analysis%20of%20Pokemon%20GO%20Dataset.ipynb&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can play with this chart by hovering on different points so you can see the Pokémon it represents. &lt;strong&gt;Which Pokémon is the most common and easiest to catch? Which one’s the hardest? In which quadrant does more powerful Pokémon lie?&lt;/strong&gt; You can also click the legends on the right to hide some types so you can focus or compare between different types. Enjoy!&lt;/p&gt;
+
+&lt;iframe width=&quot;1200&quot; height=&quot;1000&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;//plot.ly/~ljvmiranda/51.embed&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;notes&quot;&gt;Notes&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The data for catch and flee rates was pulled by Reddit user &lt;a href=&quot;https://www.reddit.com/user/The_Desert_Rain&quot;&gt;/u/The_Desert_Rain&lt;/a&gt;. In my visualization, I am using the base rates, this means that catching these Pokémon gets harder as your level goes up. What &lt;a href=&quot;https://www.reddit.com/user/The_Desert_Rain&quot;&gt;/u/The_Desert_Rain&lt;/a&gt; and other Redditors are doing is that they are trying to reverse engineer the formulas and game mechanics in PokemonGO. Because the actual data is hidden, they look for patterns and compute for expected outcomes. It’s so geeky and exciting! You can read more of their analyses &lt;a href=&quot;https://www.reddit.com/r/TheSilphRoad/comments/4vs70r/analysis_on_catch_rates_and_encounters/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://www.reddit.com/r/TheSilphRoad/comments/4v52le/base_capture_rate/&quot;&gt;here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;The spawn rate was taken from the Pokémon GO Hub’s &lt;a href=&quot;https://pokemongohub.net/pokemon-go-spawn-rate/&quot;&gt;website&lt;/a&gt;. Their methodology involves scraping the data from &lt;a href=&quot;http://www.pokeradar.io/&quot;&gt;Poké Radar&lt;/a&gt; and computed the percentages on a one-week period across approximately 100 million historical data points. This then &lt;em&gt;normalizes&lt;/em&gt; the spawn rate irrespective of your geographical location (like Mr. Mime showing only in France or Water-type Pokémon spawning near bodies of water).&lt;/li&gt;
+  &lt;li&gt;The CP was taken as a basis of “strength.” The data for this came from &lt;a href=&quot;https://www.kaggle.com/abcsds/pokemongo&quot;&gt;Kaggle&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;In my case, I engineered two features for my x and y axes. First, I took the log (base 10) of the swarm rate and plotted it along the x-axis. For the y-axis, I simply plotted the ratio between the catch rate and the flee rate. Thus, we have &lt;code class=&quot;highlighter-rouge&quot;&gt;x_arg = np.log10(swarm_rate)&lt;/code&gt; for the x-axis and &lt;code class=&quot;highlighter-rouge&quot;&gt;y_arg = catch_rate/flee_rate&lt;/code&gt; for the y-axis. If &lt;code class=&quot;highlighter-rouge&quot;&gt;y_arg&lt;/code&gt; is high, then the denominator is low so that catch rate is higher than the flee rate and so on.&lt;/li&gt;
+  &lt;li&gt;To make the “magic quadrant” more pleasing to look at, I applied zero-mean centering in my data. This means that I took the mean of the two features, and subtracted it to all my samples. You can access the &lt;a href=&quot;https://github.com/ljvmiranda921/pkmn&quot;&gt;GitHub repo&lt;/a&gt; for the source code.&lt;/li&gt;
+  &lt;li&gt;As you can see, I am only plotting the Primary types of each Pokémon. I still haven’t figured an elegant way of showing those that are double-typed. That’s why you’ll see Pidgey and Spearow classified as Normal-types, and Seel and Dewgong as Water-types. If you have nice ideas, just comment below!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;sources&quot;&gt;Sources&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/TheSilphRoad/comments/4vs70r/analysis_on_catch_rates_and_encounters/&quot;&gt;Analysis on Catch Rates and Encounters&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/TheSilphRoad/comments/4v52le/base_capture_rate/&quot;&gt;Base Capture Rate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pokemongohub.net/pokemon-go-spawn-rate/&quot;&gt;Pokemon GO Spawn Rate, &lt;em&gt;PokemonGO Hub&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/abcsds/pokemongo&quot;&gt;Kaggle, Pokemon GO&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>LJ MIRANDA</name></author><category term="notebook" /><category term="data visualization" /><category term="pokemon go" /><summary type="html">I can describe myself as someone who “just joined the hype” of the recent Pokémon GO mobile game. It was a fun summer, but when school kicked in and winter started taking over, I felt less inclined to go out and fill-up my Pokédex. I still remember the days when our neighborhood is just filled with Pidgeys and Rattatas, and very few Abras that were almost “un-catchable.” This inspired me to look into how other Pokémon fare with respect to their spawn frequency and the ease on how they can be caught</summary></entry></feed>

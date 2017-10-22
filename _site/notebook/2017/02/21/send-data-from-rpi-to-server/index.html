@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How to send data from RPI to Server</title>
+  <meta name="description" content="In most Raspberry Pi projects, sending data to a website (or in the website’s database) is very crucial. For example, in home automation, if we want to acces...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/02/21/send-data-from-rpi-to-server/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>How to send data from RPI to Server | Lj Miranda</title>
+<meta property="og:title" content="How to send data from RPI to Server" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In most Raspberry Pi projects, sending data to a website (or in the website’s database) is very crucial. For example, in home automation, if we want to access the room’s sensor and consumption data in our devices through a website in real-time, we must first be able to do data transfer from RPi to website. In this tutorial, I am going to teach you a simple technique to do just that" />
+<meta property="og:description" content="In most Raspberry Pi projects, sending data to a website (or in the website’s database) is very crucial. For example, in home automation, if we want to access the room’s sensor and consumption data in our devices through a website in real-time, we must first be able to do data transfer from RPi to website. In this tutorial, I am going to teach you a simple technique to do just that" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/02/21/send-data-from-rpi-to-server/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/02/21/send-data-from-rpi-to-server/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-02-21T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"In most Raspberry Pi projects, sending data to a website (or in the website’s database) is very crucial. For example, in home automation, if we want to access the room’s sensor and consumption data in our devices through a website in real-time, we must first be able to do data transfer from RPi to website. In this tutorial, I am going to teach you a simple technique to do just that","url":"http://localhost:4000/notebook/2017/02/21/send-data-from-rpi-to-server/","headline":"How to send data from RPI to Server","dateModified":"2017-02-21T00:00:00+09:00","datePublished":"2017-02-21T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/02/21/send-data-from-rpi-to-server/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">How to send data from RPI to Server</h1>
+    <p class="post-meta">
+      <time datetime="2017-02-21T00:00:00+09:00" itemprop="datePublished">
+        
+        Feb 21, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In most Raspberry Pi projects, sending data to a website (or in the website’s database) is very crucial. For example, in home automation, if we want to access the room’s sensor and consumption data in our devices through a website in real-time, we must first be able to do data transfer from RPi to website. In this tutorial, I am going to teach you a simple technique to do just that<!--more-->. We will be utilizing a <code class="highlighter-rouge">curl bash</code> command via Python in RPi, and we’ll build a simple PHP service in our website/client.</p>
+
+<p>Here, <code class="highlighter-rouge">curl</code> sounds a very cute command when one hears it for the first time. For Linux users, this is nothing new for you. <code class="highlighter-rouge">curl</code> is a nifty command line tool for getting or sending files using URL syntax. To help you remember, you can write it this way: <code class="highlighter-rouge">cURL</code>. Meaning, just by changing the URL syntax, you can easily send data to your website!</p>
+
+<p>In a sense, you will be having a URL that looks like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>http://www.example.com/phpService.php?a1=val1&amp;a2=val2&amp;a3=val3
+</code></pre>
+</div>
+
+<p>(If you try a Google Search, their URL will be somehow similar to the format above!)</p>
+
+<p>We can denote <code class="highlighter-rouge">a1</code>, <code class="highlighter-rouge">a2</code>, <code class="highlighter-rouge">a3</code> as three different variables, and <code class="highlighter-rouge">val1</code>, <code class="highlighter-rouge">val2</code>, <code class="highlighter-rouge">val3</code> as their respective values. We will do the following tasks:</p>
+
+<ul>
+  <li><a href="#the-curl-command">Write a curl command that will create an HTTP request</a>; and</li>
+  <li><a href="#php">Write a PHP script in our website to process the HTTP request</a></li>
+</ul>
+
+<h2 id="the-curl-command">The cURL command</h2>
+
+<p>In order to use the <code class="highlighter-rouge">curl</code> command, we need to import the <code class="highlighter-rouge">os</code> module into Python. After which, we provide the necessary code to access our data (it may be an MySQL query, or another thing entirely). In this example, I will just provide arbitrary values for our data. We “package” the HTTP request nicely and then invoke the <code class="highlighter-rouge">curl</code> command. Here’s an example of how we can do it:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#Import necessary libraries</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c">#Write code here to access your data</span>
+<span class="n">val1</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">val2</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">val3</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="c">#Construct the cURL bash</span>
+<span class="n">http_address</span> <span class="o">=</span> <span class="s">"http://example.com/phpService.php?"</span>
+<span class="n">request_string</span> <span class="o">=</span> <span class="n">http_address</span> <span class="o">+</span> <span class="s">"a1="</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val1</span><span class="p">)</span> <span class="o">+</span> <span class="s">"&amp;a2="</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val2</span><span class="p">)</span> <span class="o">+</span> <span class="s">"&amp;a3="</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">val3</span><span class="p">)</span>
+
+<span class="c">#Invoke the command</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s">'curl'</span> <span class="o">+</span> <span class="s">'"'</span> <span class="o">+</span> <span class="n">request_string</span> <span class="o">+</span> <span class="s">'"'</span><span class="p">)</span>
+</code></pre>
+</div>
+<p>Including the <code class="highlighter-rouge">os</code> library is important so that the command will work. Your data may be stored inside your RPi’s local database, so just call the appropriate query and store those values inside your variables. Another note, you cannot concatenate integers and strings together, thus the reason for enclosing the val variables in an str() function.</p>
+
+<div class="alert alert-danger">
+  <strong>Warning!</strong> My example here is a very simple one and is just used to demonstrate how the data transfer works. The problem with HTTP request is that
+  your data is "exposed" in the transfer process, and may be prone to compromise. It is strongly recommended to encrypt one's data first before using the HTTP request.
+</div>
+
+<p>Next we’ll be writing a PHP service that can understand the URL set by the curl command and thus give you an opportunity to do the necessary operations.</p>
+
+<h2 id="-php-service-to-process-the-curl-command"><a name="php"></a> PHP Service to process the cURL command</h2>
+
+<div class="language-php highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+<span class="k">print</span><span class="s2">"&lt;!DOCTYPE HTML PUBLIC </span><span class="se">\"</span><span class="s2">-//W3C//DTD XHTML 1.0 Strict//EN</span><span class="se">\"</span><span class="s2"> </span><span class="se">\"</span><span class="s2">http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd</span><span class="se">\"</span><span class="s2">&gt;
+    &lt;html xmlns="</span><span class="nx">http</span><span class="o">://</span><span class="nx">www</span><span class="o">.</span><span class="nx">w3</span><span class="o">.</span><span class="nx">org</span><span class="o">/</span><span class="mi">1999</span><span class="o">/</span><span class="nx">xhtml</span><span class="s2">" xml:lang=</span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2"> lang=</span><span class="se">\"</span><span class="s2">en</span><span class="se">\"</span><span class="s2">&gt;
+        &lt;head&gt;
+        &lt;/head&gt;
+        &lt;body&gt;&amp;"</span><span class="p">;</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'REQUEST_METHOD'</span><span class="p">]</span> <span class="o">==</span> <span class="s2">"GET) {
+               </span><span class="nv">$storeVal1</span><span class="s2"> = </span><span class="nv">$_GET["a1"]</span><span class="s2">;
+               </span><span class="nv">$storeVal2</span><span class="s2"> = </span><span class="nv">$_GET["a2"]</span><span class="s2">;
+               </span><span class="nv">$storeVal3</span><span class="s2"> = </span><span class="nv">$_GET["a3"]</span><span class="s2">;
+            //Now you have the values of val1, val2, val3 stored in storeVal1, storeVal2, storeVal3 respectively.
+            }
+        print "</span><span class="o">&lt;/</span><span class="nx">body</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre>
+</div>
+
+<p>In web development jargon, what we just did is called an HTTP GET Request, if you’ve been scouring different programming forums, you might have read about the HTTP POST Request. Normally, I use POST requests on Forms (like in entering your Username and Password) and GET for simple services like this.</p>
+
+<p>My own implementation of the curl bash command can be found <a href="https://gist.github.com/ljvmiranda921/f5b815013b96e4801007">here</a>, while the PHP service can be found <a href="https://gist.github.com/ljvmiranda921/c0d943541a6392470c23">here</a>. I first gathered the data from my RPI’s local database, and then send them to the web to be stored in the server database.</p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

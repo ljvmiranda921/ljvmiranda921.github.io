@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Research work</title>
+  <meta name="description" content="Some notes on software development, data science, machine learning, and research.">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/research/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Research work | Lj Miranda</title>
+<meta property="og:title" content="Research work" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Research work of Lester James V. Miranda" />
+<meta property="og:description" content="Research work of Lester James V. Miranda" />
+<link rel="canonical" href="http://localhost:4000/research/" />
+<meta property="og:url" content="http://localhost:4000/research/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<script type="application/ld+json">
+{"name":null,"description":"Research work of Lester James V. Miranda","url":"http://localhost:4000/research/","headline":"Research work","dateModified":null,"datePublished":null,"sameAs":null,"@type":"WebPage","author":null,"image":null,"publisher":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Research work</h1>
+  </header>
+
+  <div class="post-content">
+    <p>This page shows my research activities, both finished and ongoing. I’ve
+attached preprints for works that have already been completed. Unfortunately,
+for works with a copyright claim (e.g. IEEE), I can only provide the link
+to the publisher’s website. For ongoing research, I will only attach
+a preliminary abstract of my work.</p>
+
+<hr />
+
+<div class="research">
+
+<div class="container">
+    <div class="title">Feature Extraction using Stacked Denoising Autoencoders for Protein Function Prediction</div>
+    <div>
+    <span>
+        <span id="date">[14 Nov 2017]</span>
+        Lester James V. Miranda and Jinglu Hu
+    </span>
+    </div>
+    <a class="publication" href="http://www.waseda.jp/assoc-ics/2017/index.html">11th International Collaboration Symposium in Information, Production, and Systems</a>
+    <img class="thumbnail" src="/assets/jpg/thumbs/isips2017.pdf.jpg" alt="Publication thumbnail" />
+    <div class="abstract">Predicting protein functions using machine learning techniques is a major challenge in bioinformatics. Previous works address this problem by directly feeding raw data in a classifier. However, feature-space interdependence is underused, and interesting structure in the data may be left underutilized. In addition, constructing features manually is tedious and time-consuming. In this research, a stacked denoising autoencoder was implemented to extract new features automatically before classification. A gene annotation pipeline, consisting of the autoencoder and a multi-label support-vector machine, is proposed. It was tested on benchmark datasets, including the A. thaliana specie, and showed significant improvements in various metrics. This research demonstrates that adding an unsupervised phase before classification can aid in the multi-label learning of protein functions.</div>
+</div>
+
+<div class="container">
+    <div class="title">Reallocative k-Sparse Autoencoder for Selective Feature Extraction</div>
+    <div>
+    <span>
+        <span id="date">[10 Sep 2017]</span>
+        Lester James V. Miranda
+    </span>
+    </div>
+    <a class="publication" href="http://www.waseda.jp/sem-hflab/nclab/">Furuzuki Neurocomputing Systems Laboratory</a>
+    <img class="thumbnail" src="/assets/jpg/thumbs/fall-2017-proposal-report.pdf.jpg" alt="Publication thumbnail" />
+    <div class="abstract">An autoencoder is often used to extract features from raw data. However, given the goal of reconstructing the input, they tend to greedily create features to satisfy the objective–without concern whether the features were relevant or not. A Reallocative k-Sparse Autoencoder (RSAE) is proposed to automatically select features before reconstruction. After the feedforward phase, a competitive layer where each hidden unit’s energy will be computed. The k% highest units will then be reallocated with the energy (controlled by a parameter α ) of the non-k units, as the latter’s activation is set to 0. This scheme ensures the extraction of sparse and important features that can be used for classification or network pre-training.</div>
+</div>
+
+<div class="container">
+    <div class="title">Appliance Recognition using Hall-Effect Current Sensors and K-Nearest Neighbors for Power Management Systems</div>
+    <div>
+    <span>
+        <span id="date">[22 Nov 2016]</span>
+        Lester James V. Miranda, Marian Joice S. Gutierrez, Samuel Matthew G. Dumlao, and Rosula S.J. Reyes
+    </span>
+    </div>
+    <a class="publication" href="http://ieeexplore.ieee.org/document/7847947/">IEEE Technical Conference 2016</a>
+    <img class="thumbnail" src="/assets/jpg/thumbs/07847947.pdf.jpg" alt="Publication thumbnail" />
+    <div class="abstract">Power management systems employ appliance recognition such that the burden of manually configuring the system for each appliance is lifted from the user. This research then aims to develop an appliance recognition functionality through current readings gathered from a data acquisition (DAQ) device consisting of Hall Effect current sensors, and through a machine learning classification algorithm called k-nearest neighbors. Ten appliances were tested, comprising of 6,500 samples of test data in the four outlets tested. The average accuracy for the trials is 92.73%. In addition, the appliance recognition functionality was embedded to a cloud-based power management system following an Internet of Things (IoT) architecture. In the end, the developed system can gather data from plugged appliances, perform recognition, and carry out various power management functionalities such as monitoring and appliance–level smart–recommendations.</div>
+</div>
+
+<div class="container">
+    <div class="title">Expulsion from Eden: The Saga of the Calauit Safari Island Park</div>
+    <div>
+    <span>
+        <span id="date">[06 Jun 2016]</span>
+        Lester James V. Miranda
+    </span>
+    </div>
+    <a class="publication" href="https://www.amazon.com/APEIRON-Filos%C3%B3fica-Universidade-Philosophy-Filosofia/dp/1533659788">APEIRON Revista Filosófica dos Alunos da Universidade do Minho</a>
+    <img class="thumbnail" src="/assets/jpg/thumbs/envi-ethics.pdf.jpg" alt="Publication thumbnail" />
+    <div class="abstract">The Calauit Safari Island Park is a classic case of tampering with biodiversity, with the introduction of non-native fauna and the expulsion of the Tagbanuas as stewards of the land. Three major themes will be discussed in this paper. First of which is the overlaying theme of biodiversity. The paper will tackle what it means to have greater diversity; and its impact in ecological processes and in maintaining a state of balance and justice. The second theme will discuss intrinsic value, following the notion that entities—whether species, individuals, or things have an innate worth—regardless of human benefits. Lastly, this framework will be applied to discuss sustainable eco-tourism, especially to the management of zoos, sanctuaries, dive spots and the like, where there is significant human intervention in natural areas. The case of Calauit will be analyzed in parallel with these three themes, and a short reflection will be provided at the end.</div>
+</div>
+
+</div>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

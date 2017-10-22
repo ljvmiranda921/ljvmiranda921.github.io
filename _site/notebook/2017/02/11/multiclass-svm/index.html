@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Implementing a multiclass support-vector machine</title>
+  <meta name="description" content="In this notebook, a Multiclass Support Vector Machine (SVM) will be implemented. For this exercise, a linear SVM will be used. Linear classifiers differ from...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/notebook/2017/02/11/multiclass-svm/">
+  <link rel="alternate" type="application/rss+xml" title="Lj Miranda" href="/feed.xml">
+  <link rel="icon" type="image/png" href="/assets/favicon.ico">
+  
+  
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+   
+
+  
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Implementing a multiclass support-vector machine | Lj Miranda</title>
+<meta property="og:title" content="Implementing a multiclass support-vector machine" />
+<meta name="author" content="LJ MIRANDA" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this notebook, a Multiclass Support Vector Machine (SVM) will be implemented. For this exercise, a linear SVM will be used. Linear classifiers differ from k-NN in a sense that instead of memorizing the whole training data every run, the classifier creates a “hypothesis” (called a parameter), and adjusts it" />
+<meta property="og:description" content="In this notebook, a Multiclass Support Vector Machine (SVM) will be implemented. For this exercise, a linear SVM will be used. Linear classifiers differ from k-NN in a sense that instead of memorizing the whole training data every run, the classifier creates a “hypothesis” (called a parameter), and adjusts it" />
+<link rel="canonical" href="http://localhost:4000/notebook/2017/02/11/multiclass-svm/" />
+<meta property="og:url" content="http://localhost:4000/notebook/2017/02/11/multiclass-svm/" />
+<meta property="og:site_name" content="Lj Miranda" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-02-11T00:00:00+09:00" />
+<script type="application/ld+json">
+{"name":null,"description":"In this notebook, a Multiclass Support Vector Machine (SVM) will be implemented. For this exercise, a linear SVM will be used. Linear classifiers differ from k-NN in a sense that instead of memorizing the whole training data every run, the classifier creates a “hypothesis” (called a parameter), and adjusts it","url":"http://localhost:4000/notebook/2017/02/11/multiclass-svm/","headline":"Implementing a multiclass support-vector machine","dateModified":"2017-02-11T00:00:00+09:00","datePublished":"2017-02-11T00:00:00+09:00","sameAs":null,"@type":"BlogPosting","author":{"@type":"Person","name":"LJ MIRANDA"},"image":null,"publisher":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/notebook/2017/02/11/multiclass-svm/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" href="/">Lj Miranda</a>
+  
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="/downloads/LMiranda.pdf">CV</a>
+            <a class="page-link" href="/research/">Research</a>
+            <a class="page-link" href="/projects/">Projects</a>
+            <a class="page-link" href="/notebook/">Notebook</a>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Implementing a multiclass support-vector machine</h1>
+    <p class="post-meta">
+      <time datetime="2017-02-11T00:00:00+09:00" itemprop="datePublished">
+        
+        Feb 11, 2017
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">LJ MIRANDA</span></span>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this notebook, a Multiclass Support Vector Machine (SVM) will be implemented. For this exercise, a linear SVM will be used.
+Linear classifiers differ from k-NN in a sense that instead of memorizing the whole training data every run, the classifier creates a “hypothesis” (called a <em>parameter</em>), and adjusts it<!--more--> accordingly during training time. This “adjustment” is then achieved through an optimization algorithm, in this case, via Stochastic Gradient Descent (SGD). The full implementation will be done through the following steps:</p>
+
+<ul>
+  <li><a href="#data-loading-and-preprocessing">Data Loading and Preprocessing</a>
+    <ul>
+      <li><a href="#splitting-and-reshaping-the-data">Splitting and reshaping the data</a></li>
+      <li><a href="#mean-image">Computing and subtracting the mean image</a></li>
+    </ul>
+  </li>
+  <li><a href="#svm-classifier-implementation">SVM classifier Implementation</a>
+    <ul>
+      <li><a href="#gradient-computation">Gradient computation</a></li>
+      <li><a href="#vector">Vectorized implementation of loss and gradient computation</a></li>
+    </ul>
+  </li>
+  <li><a href="#stochastic-gradient-descent">Stochastic Gradient Descent</a></li>
+  <li><a href="#tuning">Hyperparameter Tuning</a></li>
+  <li><a href="#results">Results</a></li>
+</ul>
+
+<h2 id="data-loading-and-preprocessing">Data Loading and Preprocessing</h2>
+<p>Similar with the other exercise, the CIFAR-10 dataset is also being utilized. As a simple way of sanity-checking, we load and visualize a subset of this training example as shown below:</p>
+
+<p style="text-align: center;"><img src="/assets/png/cs231n-svm/output_4_0.png" alt="CIFAR Sample" width="560px" /><br />
+<strong>Figure 1:</strong> <em>Samples of the CIFAR-10 Dataset</em></p>
+
+<h3 id="splitting-and-reshaping-the-data">Splitting and reshaping the data</h3>
+<p>Here, we split the data into training, validation, and test sets. Moreover, a small development set will be created from our training data. Moreover, we also reshape the image data into different rows. We can then arrive with the following sizes for our data:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Training data shape:  (49000, 3072)
+Validation data shape:  (1000, 3072)
+Test data shape:  (1000, 3072)
+dev data shape:  (500, 3072)
+</code></pre>
+</div>
+
+<h3 id="computing-and-subtracting-the-mean-image"><a name="mean-image"></a>Computing and subtracting the mean image</h3>
+<p>In machine learning, it is standard procedure to normalize the input features (or pixels, in the case of images) in such a way that the data is <em>centered</em> and the mean is removed. For images, a <strong>mean image</strong> is computed across all training images and then subtracted from our datasets.</p>
+
+<p>In Python, we can easily compute for the mean image by using <code class="highlighter-rouge">np.mean</code>. In this regard, we have:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Compute for the mean image</span>
+<span class="n">mean_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">mean_image</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span> <span class="c"># print a few of the elements</span>
+
+<span class="c"># Visualize the mean image</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mean_image</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">32</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s">'uint8'</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<p>Visualizing the mean image leads us to this figure</p>
+
+<p style="text-align: center;"><img src="/assets/png/cs231n-svm/output_7_1.png" alt="CIFAR Sample" width="280px" /><br />
+<strong>Figure 2:</strong> <em>Visualization of mean image</em></p>
+
+<p>We then subtract this mean image from our training and test data. Furthermore, we also append our bias matrix (made up of ones) so that our optimizer will treat both the weights and biases at the same time.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Subtract the mean image from train and test data</span>
+<span class="n">X_train</span> <span class="o">-=</span> <span class="n">mean_image</span>
+<span class="n">X_val</span> <span class="o">-=</span> <span class="n">mean_image</span>
+<span class="n">X_test</span> <span class="o">-=</span> <span class="n">mean_image</span>
+<span class="n">X_dev</span> <span class="o">-=</span> <span class="n">mean_image</span>
+
+<span class="c"># Append the bias dimension of ones (i.e. bias trick) so that our SVM</span>
+<span class="c"># only has to worry about optimizing a single weight matrix W.</span>
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">X_train</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">))])</span>
+<span class="n">X_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">X_val</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">X_val</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">))])</span>
+<span class="n">X_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">X_test</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">))])</span>
+<span class="n">X_dev</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([</span><span class="n">X_dev</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">X_dev</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">))])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_val</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">X_dev</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>This gives an additional dimension to our datasets:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>(49000, 3073) (1000, 3073) (1000, 3073) (500, 3073)
+</code></pre>
+</div>
+
+<h2 id="svm-classifier-implementation">SVM Classifier Implementation</h2>
+<p>The set-up behind the Multiclass SVM Loss is that for a query image, the SVM prefers that its correct class will have a score higher than the incorrect classes by some margin <script type="math/tex">\Delta</script>.</p>
+
+<p>In this case, for the pixels of image <script type="math/tex">x_{i}</script> with label <script type="math/tex">y_{i}</script>, we compute for the score for each class <script type="math/tex">j</script> as <script type="math/tex">s_{j} \equiv f(x_{i}, W)</script>. We then describe the behavior stated above in the following equation:</p>
+
+<script type="math/tex; mode=display">L_{i} = \sum_{j \neq y_{i}} max(0,s_{j} - s_{y_{i}} + \Delta)</script>
+
+<p>For our purposes, we will often deal with the equation shown above. A thorough discussion of SVM can (obviously) be found in the <a href="http://cs231n.github.io/linear-classify/#svm">course notes</a>. We will then build the SVM classifier found in <code class="highlighter-rouge">linear_svm.py</code> by first filling-in the gradient computation, and then implementing its vectorized version.</p>
+
+<h3 id="gradient-computation">Gradient Computation</h3>
+<p>In order to implement the code for the gradient, we simply go back to the representation of our loss function in SVM. In fact, we can can represent the equation above as the following:</p>
+
+<script type="math/tex; mode=display">L_{i} = \sum_{j \neq y_{i}} max(0,w_{j}^{T}x_{i} - w_{y_{i}}^{T}x_{i} + \Delta)</script>
+
+<p>In order to obtain the gradient, we need to differentiate this function with respect to <script type="math/tex">w_{y_{i}}</script> and <script type="math/tex">w_{j}</script>:</p>
+
+<script type="math/tex; mode=display">\nabla_{w_{y_{i}}} L_{i} = - \left(\sum_{j \neq y_{i}} 1 (w_{j}^{T}x_{i} - w_{y_{i}}^{T}x_{i} + \Delta > 0)\right)x_{i}</script>
+
+<script type="math/tex; mode=display">\nabla_{w_{j}} L_{i} = 1 (w_{j}^{T}x_{i} - w_{y_{i}}^{T}x_{i} + \Delta > 0) x_{i}</script>
+
+<p>For the equation above, we only count the number of classes that didn’t pass through the margin (<script type="math/tex">j \neq y_{i}</script>). Remember that sometimes, a given example’s class will not always be classified correctly (or given a higher score). The SVM loss function then penalizes these mishaps. So for every example, we sum all the incorrect classes that was computed, and <script type="math/tex">x_{i}</script> is scaled by that number.</p>
+
+<p>In Python, we can implement a naive computation for the the gradient by this code:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Compute for the loss and gradient</span>
+<span class="n">num_classes</span> <span class="o">=</span> <span class="n">W</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">num_train</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_train</span><span class="p">):</span>
+  <span class="c"># For each training example, we will count the</span>
+  <span class="c"># scores and keep track of the correct class score</span>
+  <span class="n">scores</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W</span><span class="p">)</span>
+  <span class="n">correct_class_score</span> <span class="o">=</span> <span class="n">scores</span><span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+
+  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_classes</span><span class="p">):</span>
+  <span class="c"># We then compare it for each class</span>
+      <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+          <span class="k">continue</span>
+
+      <span class="c"># Compute the margin    </span>
+      <span class="n">margin</span> <span class="o">=</span> <span class="n">scores</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">-</span> <span class="n">correct_class_score</span> <span class="o">+</span> <span class="mi">1</span>
+
+      <span class="c"># If margin is greater than zero, the class</span>
+      <span class="c"># contributes to the loss. And the gradient</span>
+      <span class="c"># is computed</span>
+      <span class="k">if</span> <span class="n">margin</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+          <span class="n">loss</span> <span class="o">+=</span> <span class="n">margin</span>
+          <span class="n">dW</span><span class="p">[:,</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">-=</span> <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+          <span class="n">dW</span><span class="p">[:,</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span>
+</code></pre>
+</div>
+
+<p>This means that for each data example, we compute the scores, and take note of the score of the correct class.</p>
+
+<p>Then we compare the scores for each class . We then compute for the <code class="highlighter-rouge">margin</code> and see if it is greater than <code class="highlighter-rouge">0</code>. Take note that certain data examples can be classified incorrectly (i.e., a ship, because of its blue-ish background, may be mistaken as an airplane in a blue sky). This then contributes to our loss.</p>
+
+<p>For the gradient, we simply count the number of classes that didn’t meet the margin, and this will contribute to our gradient vector <code class="highlighter-rouge">dW</code>. The expression <code class="highlighter-rouge">dW[:,y[i]] -= X[i,:]</code> is analogous to <script type="math/tex">\nabla_{w_{y_{i}}} L_{i}</script> as <code class="highlighter-rouge">dW[:,j] += X[i,:] </code> is to <script type="math/tex">\nabla_{w_{j} L_{i}}</script>.</p>
+
+<p>Also, don’t forget to sum the gradient over all training examples and regularize it.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Divide all over training examples</span>
+<span class="n">dW</span> <span class="o">/=</span> <span class="n">num_train</span>
+<span class="c"># Add regularization</span>
+<span class="n">dW</span> <span class="o">+=</span> <span class="n">reg</span> <span class="o">*</span> <span class="n">W</span>
+</code></pre>
+</div>
+
+<h3 id="-vectorized-implementation-of-loss-and-gradient-computation"><a name="vector"></a> Vectorized implementation of loss and gradient computation</h3>
+<p>Implementing a vectorized computation for the loss is quite simple. First we compute the scores of the input with respect to the weights, and then we keep track of the scores, and get the maximum (with respect to 0) as it is being stored to the variable <code class="highlighter-rouge">margin</code>. Most of these are achievable using the <code class="highlighter-rouge">numpy</code> library:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">num_train</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">delta</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="c"># Compute for the scores</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">W</span><span class="p">)</span>
+
+<span class="c"># Record the score of the example's correct class</span>
+<span class="n">correct_class_score</span> <span class="o">=</span> <span class="n">scores</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">num_train</span><span class="p">),</span> <span class="n">y</span><span class="p">]</span>
+
+<span class="c"># Compute for the margin by getting the max between 0 and the computed expression</span>
+<span class="n">margins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">scores</span> <span class="o">-</span> <span class="n">correct_class_score</span><span class="p">[:,</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span> <span class="o">+</span> <span class="n">delta</span><span class="p">)</span>
+<span class="n">margins</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">num_train</span><span class="p">),</span> <span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c"># Add all the losses together</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">margins</span><span class="p">)</span>
+
+<span class="c"># Divide the loss all over the number of training examples</span>
+<span class="n">loss</span> <span class="o">/=</span> <span class="n">num_train</span>
+
+<span class="c"># Regularize</span>
+<span class="n">loss</span> <span class="o">+=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">reg</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">W</span> <span class="o">*</span> <span class="n">W</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>In order to implement the vectorized version of our gradient computation, we first create a mask that flags the examples when their margin is greater than 0., and then, we proceed normally by counting the number of these examples:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># This mask can flag the examples in which their margin is greater than 0</span>
+<span class="n">X_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">margins</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">X_mask</span><span class="p">[</span><span class="n">margins</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c"># As usual, we count the number of these examples where margin &gt; 0</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">X_mask</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">X_mask</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">num_train</span><span class="p">),</span><span class="n">y</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">count</span>
+
+<span class="n">dW</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X_mask</span><span class="p">)</span>
+
+<span class="c"># Divide the gradient all over the number of training examples</span>
+<span class="n">dW</span> <span class="o">/=</span> <span class="n">num_train</span>
+
+<span class="c"># Regularize</span>
+<span class="n">dW</span> <span class="o">+=</span> <span class="n">reg</span><span class="o">*</span><span class="n">W</span>
+</code></pre>
+</div>
+
+<h2 id="stochastic-gradient-descent">Stochastic Gradient Descent</h2>
+<p>Remember that our main objective is to minimize the loss that was computed by our SVM. One way to do that is through gradient descent. Given then gradient vector that we have obtained earlier, we simply “move” our parameters to the direction that our gradient is pointing.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="bp">self</span><span class="o">.</span><span class="n">W</span> <span class="o">+=</span> <span class="o">-</span><span class="n">learning_rate</span> <span class="o">*</span> <span class="n">grad</span>
+</code></pre>
+</div>
+
+<p>We can then train our SVM classifier using gradient descent and plot the loss with respect to the number of iterations.</p>
+
+<p style="text-align: center;"><img src="/assets/png/cs231n-svm/output_19_0.png" alt="CIFAR Sample" width="360px" /><br />
+<strong>Figure 3:</strong> <em>Cost History during SVM training</em></p>
+
+<p>We see that the curve is smooth (due to regularization), and is descending. We can then infer that our SVM and cost implementations are correct. Normally, fuzzy curves are caused by non-regularized losses. It may be an important point of experiment later on.</p>
+
+<p>If we use the trained parameters to predict our classes, we often arrive at the following results:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>training accuracy: 0.363959
+validation accuracy: 0.382000
+</code></pre>
+</div>
+
+<p>We can still improve our accuracies by tuning our learning rate and regularization hyperparameters.</p>
+
+<h2 id="-hyperparameter-tuning"><a name="tuning"></a> Hyperparameter Tuning</h2>
+<p>One good way to tune our hyperparameters is to train and test our classifier over a matrix of values. In this case,
+we are training our SVM classifier with a matrix containing learning rate and regularization values. We then record their accuracies, and take the maximum value we encounter. Normally, the set of parameters that obtained the maximum accuracy can be deemed as a good hyperparameter setting.</p>
+
+<p>For my implementation, I would like to give credit to <a href="https://github.com/bruceoutdoors/CS231n/blob/master/assignment1/svm.ipynb">bruceoutdoors</a>’ for providing a good set of working values for the learning rate and regularization strengths.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>learning_rates = [1e-8, 1e-7, 2e-7]
+regularization_strengths = [1e4, 2e4, 3e4, 4e4, 5e4, 6e4, 7e4, 8e4, 1e5]
+</code></pre>
+</div>
+<p>We can then visualize our values so that we can observe the behavior of our hyperparameters:</p>
+
+<p style="text-align: center;"><img src="/assets/png/cs231n-svm/output_22_0.png" alt="CIFAR Sample" width="560px" /><br />
+<strong>Figure 4:</strong> <em>Hyperparameter accuracies in the test and validation sets</em></p>
+
+<h2 id="results">Results</h2>
+<p>Using the best set of hyperparameters that we have, we can then visualize the learned weights for each class. These weights can serve as “templates” for our classifier when comparing to a test example.</p>
+
+<p style="text-align: center;"><img src="/assets/png/cs231n-svm/output_24_0.png" alt="CIFAR Sample" width="560px" /><br />
+<strong>Figure 5:</strong> <em>Visualization of learned weights for a subset of the classes in CIFAR-10</em></p>
+
+<p>Above, we can see how some classes, such as the <code class="highlighter-rouge">ship</code> and <code class="highlighter-rouge">plane</code> class, have pretty similar templates. This can be attributed to the fact that the background of both vehicles are blue, and this can often lead to misclassification. In order to test our parameters, we predict again using our SVM classifier, and we can obtain the following result:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>linear SVM on raw pixels final test set accuracy: 0.380000
+</code></pre>
+</div>
+
+<p>Here we can see an improvement from our k-NN classifier, both in terms of accuracy and speed. By using a linear classifier, we eliminate the need to memorize the training data and look into it every time we see a test example. Instead, what we do is that we create a hypothesis of the training set, build a template, and compare these test examples into the template that we have built.</p>
+
+  </div>
+
+  
+    
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Lj Miranda</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Lj Miranda
+            
+            </li>
+            
+            <li><a href="mailto:ljvmiranda@gmail.com">ljvmiranda@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+          <ul class="social-media-list">
+    
+    
+    
+    <li><a href="https://github.com/ljvmiranda921"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg> <span class="username">Github</span></a></li>
+    
+    <li><a href="https://www.linkedin.com/in/lesterjamesmiranda"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#linkedin"></use></svg> <span class="username">Linkedin</span></a></li>
+    
+    
+    
+    
+    <li><a href="/feed.xml"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg> <span>RSS</span></a></li>
+</ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Some notes on software development, data science, machine learning, and research.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
