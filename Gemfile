@@ -28,3 +28,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # HTML Proofer
 gem "html-proofer"
+
+# Add sitemap
+gem 'jekyll-sitemap'
