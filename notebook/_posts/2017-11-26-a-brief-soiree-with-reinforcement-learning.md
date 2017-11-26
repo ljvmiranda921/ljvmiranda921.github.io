@@ -89,7 +89,50 @@ along, right?
 
 ## Applying the cross entropy method
 
+In order for our policy to create better decisions, we can employ a scheme to update
+the parameters every time step. The cross-entropy method (CEM) is an effective
+way to search for a good set of parameters by updating our current $$\theta$$
+with the mean of the elite parameters generated from a noisy version of $$\theta$$:
+$$\theta_{i} = \theta + \epsilon_{i}$$.
+
+The algorithm can be seen as follows:
+
+- Until the policy converges, repeat the following:
+- Call the current policy parameters $$\theta$$
+- For $$i=1,\dots,N$$ sample a vector $$\epsilon_{i}$$ representing the noise and set $$\theta_{i} = \theta + \epsilon_{i}$$
+- For $$i=1,\dots,N$$ reset the environment, run the agent for one episode using $$\theta_{i}$$ as parameters, and calculate the reward.
+- Calculate the mean of the $$\theta_{i}$$ vectors whose return was among the top $$100p\%$$ and update $$\theta$$ to that value.
+
+Here, $$N$$ and $$p$$ will be our hyperparameters. The former indicates
+the size of the samples generated from the current parameter, and the
+latter describes how much of these samples will be taken as elites to
+obtain the new parameters from.
+
 ## Combining them all together
+
+Now that we have the environment, the policy, and our optimization algorithm, how
+can we formalize the problem properly? In addition, we also know that
+*every action results into a new state which results into a different
+action and so on*. In order to represent this concept, we take some
+inspiration from Markovian decision processes and see that every
+state-action pairs are related in the following manner:
+
+$$
+p_{\theta}(\mathbf{o}_{1}, \mathbf{a}_{1}, \dots, \mathbf{o}_{T}, \mathbf{a}_{T}) = p(\mathbf{o}_{1})\prod_{t=1}^{T}\pi_{\theta}(\mathbf{a}_{t}|\mathbf{o}_{t})p(\mathbf{o}_{t+1} | \mathbf{o}_{t}, \mathbf{a}_{t})
+$$
+
+The left-hand side describes a certain distribution (or if I may, a
+*trajectory*) of state-action pairs from the initial time to $$T$$. On
+the right-hand side, we can see that it's simply a product of all
+observations and actions occuring at our finit timesteps.
+
+From this, we define the optimization problem as:
+
+$$
+\theta^{*} = \arg \max_{\theta} \sum_{t=1}^{T} E_{(\mathbf{o}_{t}, \mathbf{a}_{t})~p_{\theta}(\mathbf{o}_{t}, \mathbf{a}_{t})}\left[r(\mathbf{o}_{t}, \mathbf{a}_{t})\right]
+$$
+
+This means that we need to find the parameters $$\theta^{*}$$ that maximizes the expected reward $$r$$. Again, the way we achieve this is via the cross-entropy method.
 
 ## Implementation
 
