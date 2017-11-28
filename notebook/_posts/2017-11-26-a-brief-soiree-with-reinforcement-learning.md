@@ -27,8 +27,9 @@ learning model so that it outputs an action&mdash;i.e., move left or right
 of using only *the Python standard library*, so usual matrix dependencies
 such as `numpy` are forbidden.
 
-![Demo](/assets/png/pfn2017rl/cartpole.gif)
-__Figure 1:__ _Cartpole simulation from OpenAI Gym. We'll be using a simpler one provided by Preferred Networks_
+![Demo](/assets/png/pfn2017rl/cartpole.gif)  
+__Figure 1:__ _Cartpole simulation from OpenAI Gym._  
+_We'll be using a simpler one provided by Preferred Networks_
 {: style="text-align: center;"}
 
 I'll be talking about my project in the following order:
@@ -49,6 +50,12 @@ After that, the environment resets and another *episode* is called. Each
 episode consists of resetting the environment and balancing the cartpole
 until it drops or the 500th timestep is reached. For the PFN task, success
 is achieved when the pole is balanced for 95 out of 100 episodes.
+
+![Cartpole Environment](/assets/png/pfn2017rl/env.png)  
+__Figure 2:__ _The Cartpole Environment._  
+_Given an action, the environment updates its internal state and outputs a new state._  
+_(For now, we're only considering fully-observed systems)_  
+{: style="text-align: center;"}
 
 There are various signals that goes in and out the environment:
 
@@ -72,6 +79,12 @@ of the environment. In most cases, determining the action is
 explicitly parametrized. We can then frame the policy in the following
 distribution: $$\pi_{\theta}(\mathbf{a}_{t} | \mathbf{o}_{t})$$. Where 
 $$\theta$$ corresponds to the parameters that governs the policy $$\pi$$.
+
+![Linear Model](/assets/png/pfn2017rl/lm.png)  
+__Figure 3:__ _The Linear Model._  
+_The linear model generates an action based on the observation._  
+_In this task, the model is explicitly parameterized_  
+{: style="text-align: center;"}
 
 In the case of a linear policy, the action is determined by the **sign of the inner product**
 of the observation $$\mathbf{o}_{t}$$ and parameters $$\theta$$. Simply put,
@@ -97,6 +110,10 @@ the parameters every time step. The cross-entropy method (CEM) is an effective
 way to search for a good set of parameters by updating our current $$\theta$$
 with the mean of the elite parameters generated from a noisy version of $$\theta$$:
 $$\theta_{i} = \theta + \epsilon_{i}$$.
+
+![Cross Entropy Method](/assets/png/pfn2017rl/cem.png)  
+__Figure 3:__ _Cross-entropy Method for updating the parameters._  
+{: style="text-align: center;"}
 
 The algorithm can be seen as follows:
 
