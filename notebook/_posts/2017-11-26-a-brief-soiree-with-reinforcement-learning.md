@@ -38,7 +38,7 @@ I'll be talking about my project in the following order:
 - [What kind of model I trained to make the decisions](#linear-policy)
 - [The optimization algorithm to find the best model parameters](#applying-the-cross-entropy-method)
 - [Combining the three elements above together](#combining-them-all-together)
-- [My software implementation of the RL task](#software-implementation)
+- [My software implementation of the RL task](#implementation)
 - [And some analyses of model behaviour!](#analysis)
 
 ## The Cartpole Environment
