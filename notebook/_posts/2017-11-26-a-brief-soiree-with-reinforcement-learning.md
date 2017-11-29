@@ -158,6 +158,10 @@ via the cross-entropy method.
 
 ## Implementation
 
+![API Implementation](/assets/png/pfn2017rl/api.png)  
+__Figure 4:__ _Software Implementation of the RL model_  
+{: style="text-align: center;"}
+
 This figure shows how each component of the RL task interacts with one
 another in terms of object-oriented models. The code repository for this
 project can be found in this [Github link](https://github.com/ljvmiranda921/pfn-rl-practice)
@@ -250,4 +254,86 @@ command-line arguments is demonstrated below:
 
 ## Analysis
 
+For our analysis, we'll be adjusting three hyperparameters, (1) the amount
+of noisy samples generated during CEM, $$N$$, (2) the number of elite parameters
+to be taken, $$p$$, and (3) the number of steps taken for each episode.
+We'll be plotting them against a reward, which I describe as the ratio between
+the score and the total number of steps. Here, we'll be examining how
+each of these hyperparameters contribute to model convergence.
+
+To expound the reward further, take for example our default model with
+500 steps per episode. If the RL task was completed successfully, then
+it has a score of 500, and a reward of `500 / 500 = 1.0`. On the other hand,
+say we only obtained a score of 350 because the pole fell at the 351st timestep.
+We then compute its reward as `350 / 500 = 0.7`. I decided to represent
+the reward this way to standardize the score once we start changing the
+number of timesteps.
+
+### Adjusting the number of noisy samples
+
+In our model, increasing the number of noisy samples generated during the
+cross-entropy method has helped hasten convergence. In effect, we can see
+that a small number of samples (e.g. 25), causes multiple dips during
+training.
+
+![Examining the N hyperparameter](/assets/png/pfn2017rl/n_val_demo.png)  
+__Figure 5:__ _When the number of noisy samples is increased,_  
+_the model converges faster. A low value tends to have several dips during training_  
+{: style="text-align: center;"}
+
+Coming from an evolutionary computation background, I can imagine how $$N$$
+represents the number of "particles" or "population" of searchers in a
+search-based method. Increasing the number of $$N$$ can help cover all bases
+in the search-space, whereas decreasing it creates a small cluster that needs
+to look at the whole space causing the dips.
+
+### Adjusting the number of elite parameters
+
+As we decrease the amount of elites, i.e. $$p$$ for an elite
+count of $$N \times p$$, the convergence of the model hastens. Interestingly,
+very high values of $$p$$ tend to hurt model convergence as seen in the
+Figure below:
+
+![Examining the p hyperparameter](/assets/png/pfn2017rl/p_val_demo.png)  
+__Figure 6:__ _When the number of elite samples is decreased,_  
+_the model converges faster. Interestingly, higher numbers didn't converge well_  
+{: style="text-align: center;"}
+
+I presume that the number of elites control the exploitation vs. exploration
+behavior of the model. Decreasing it focuses the distribution of top parameters
+into its top-performing samples, while increasing it spreads the distribution
+where all samples contribute to the new parameters.
+
+### Adjusting the step size
+
+Lastly, we will try to adjust the step size, or the number of timesteps
+for each episode, and see how it affects the model's convergence. Interestingly,
+higher timesteps tend to have a relatively slower convergence, with 750 and
+1000 reaching the `1.0` mark later on. Although we had some momentary dip
+with `500` timesteps, most model variants have a uniform behaviour after
+convergence.
+
+![Adjusting the step size](/assets/png/pfn2017rl/z_val_demo.png)  
+__Figure 7:__ _Adjusting the model's number of timesteps_  
+{: style="text-align: center;"}
+
 ## Final thoughts
+
+By doing this project, I realized how rich the literature in reinforcement learning
+is, and how much problems/problem-variants still remain unsolved. What if
+we have partial observations? What if there is a delay when passing information?
+What if there are multiple agents working at once? All of these questions
+are very interesting to work on in the future!
+
+At the same time, I appreciated how deep learning techniques we have today
+can be used to model the policy: perhaps a convolutional neural network
+for an image-like problem, a recurrent neural network for a sequence task
+and so on. I'm also betting that evolutionary computing methods such as
+genetic algorithms (GAs) or particle swarm optimization (PSO) can make their
+resurgence through RL primarily because reward functions need not to be
+differentiable. Today's an exciting time for RL indeed! This piqued my
+interest with RL problems, and I hope I can do research on them in the future!
+
+So here closes my brief soirée with reinforcement learning. I'm aware that
+there may be some mistakes in my implementation or analysis, so please feel
+free to message me and point them out!
