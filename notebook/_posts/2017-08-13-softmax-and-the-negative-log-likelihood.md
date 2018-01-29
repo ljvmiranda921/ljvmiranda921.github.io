@@ -29,7 +29,7 @@ the normalized exponential function of all the units in the layer.
 In such case,
 
 $$
-S(f_{y_i}) = \dfrac{f_{y_i}}{\sum_{j}e^{f_j}}
+S(f_{y_i}) = \dfrac{e^{f_{y_i}}}{\sum_{j}e^{f_j}}
 $$
 
 Intuitively, what the softmax does is that it _squashes_ a vector of size
