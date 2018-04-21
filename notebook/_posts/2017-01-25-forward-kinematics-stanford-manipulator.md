@@ -9,21 +9,36 @@ description: "Simulation of robotic-arm movement using Denavit-Hartenberg parame
 math: true
 ---
 
-This is my implementation of the forward kinematics problem in Robotics. The forward kinematics problem involves finding the
-end-tip position of a manipulator in a coordinate space given its joint parameters (i.e., joint angles for revolute joints and
-link offset for prismatic joints). This means that given a certain _pose_ of a robotic arm, the xyz coordinates of the hand must be determined. For this implementation, I will be using the 6-DOF Stanford Manipulator as my basis.
+This is my implementation of the forward kinematics problem in Robotics. The
+forward kinematics problem involves finding the end-tip position of a
+manipulator in a coordinate space given its joint parameters (i.e., joint
+angles for revolute joints and link offset for prismatic joints). This means
+that given a certain _pose_ of a robotic arm, the xyz coordinates of the hand
+must be determined. For this implementation, I will be using the 6-DOF
+Stanford Manipulator as my basis.
 
 ## Stanford Arm
 
-The Stanford Arm, designed by Victor Scheinmann in 1969, can be considered to be one of the _classic manipulators_ in robotics, and is one of the first robots that are designed exclusively for computer control. In this project, I performed a forward kinematics procedure in simulating the arm.  
+The Stanford Arm, designed by Victor Scheinmann in 1969, can be considered to
+be one of the _classic manipulators_ in robotics, and is one of the first
+robots that are designed exclusively for computer control. In this project, I
+performed a forward kinematics procedure in simulating the arm.
 
-Forward Kinematics uses different kinematic equations in order to compute for the end-tip position of a manipulator given its joint parameters. Joint parameters can refer to joint angles $$\theta$$ for revolute joints, or link lengths for prismatic joints. In solving for the Forward Kinematics, I utilized the Denavit-Hartenberg (DH) Parameters.  
+Forward Kinematics uses different kinematic equations in order to compute for
+the end-tip position of a manipulator given its joint parameters. Joint
+parameters can refer to joint angles $$\theta$$ for revolute joints, or link
+lengths for prismatic joints. In solving for the Forward Kinematics, I
+utilized the Denavit-Hartenberg (DH) Parameters.
 
 ## Methodology
 
 ### Denavit Hartenberg Parameters
 
-With DH Parameters, solving for the Forward Kinematics is easy. I only need to take four parameters for each joint $$i$$: $$\theta_{i}$$ for the joint angle, $$\alpha_{i}$$ for the link twist, $$d_{i}$$ for the link offset, and $$a_{i}$$ for the link length. Once I've obtained them, I can just  plug them in to this transformation matrix:  
+With DH Parameters, solving for the Forward Kinematics is easy. I only need
+to take four parameters for each joint $$i$$: $$\theta_{i}$$ for the joint
+angle, $$\alpha_{i}$$ for the link twist, $$d_{i}$$ for the link offset, and
+$$a_{i}$$ for the link length. Once I've obtained them, I can just plug them
+in to this transformation matrix:
 
 $$
 T_{i-1}^{i} = \begin{bmatrix}
@@ -74,10 +89,15 @@ __Table 2:__ _Joint variable physical constraints_
 {: style="text-align: center;"}
 
 ### MATLAB Implementation  
-The following code snippets will show my implementation of the forward kinematics of the Stanford Manipulator in MATLAB.
+
+The following code snippets will show my implementation of the forward
+kinematics of the Stanford Manipulator in MATLAB.
 
 #### Transformation Matrix  
-The transformation matrix is expressed as the function `getTransformMatrix`. It takes the DH parameters of a single joint as its input argument, and outputs the corresponding transformation matrix $$T_{i-1}^{i}$$.
+
+The transformation matrix is expressed as the function `getTransformMatrix`.
+It takes the DH parameters of a single joint as its input argument, and
+outputs the corresponding transformation matrix $$T_{i-1}^{i}$$.
 
 ```m
 function [T] = getTransformMatrix(theta, d, a, alpha)
@@ -89,7 +109,11 @@ end
 ```
 
 #### Forward Kinematics
-Forward kinematics then becomes a simple implementation of the `getTransformMatrix` above. By setting the link lengths constant, the end-tip position can be computed. In my case, I wrapped this function inside the method `forwardKinematics`:
+
+Forward kinematics then becomes a simple implementation of the
+`getTransformMatrix` above. By setting the link lengths constant, the end-tip
+position can be computed. In my case, I wrapped this function inside the
+method `forwardKinematics`:
 
 ```m
 function [T00,T01,T12,T23,T34,T45,T56,Etip] =  forwardKinematics(theta1,theta2,d3,theta4,theta5,theta6)
@@ -108,8 +132,11 @@ end
 ```
 
 ## Simulation Results
-Here are some simulations of my work. I tried different values for the joint parameters and then recorded the results in
-GIF format. I also plotted the top and side views just to see how the manipulator is posed in terms of the x-y and x-z coordinates.
+
+Here are some simulations of my work. I tried different values for the joint
+parameters and then recorded the results in GIF format. I also plotted the
+top and side views just to see how the manipulator is posed in terms of the
+x-y and x-z coordinates.
 
 
 ### Simulation 1
@@ -152,8 +179,15 @@ __Figure 3b:__ _Top (left) and side (right) views of the manipulator's end-pose_
 {: style="text-align: center;"}  
 
 ## Conclusion
-Solving for the end-tip position given the joint parameters (or doing forward kinematics) is much easier algebraically when one is using the DH parameters. It is then a lot easier to model a manipulator because four parameters are only needed in order to define a certain joint.  
+Solving for the end-tip position given the joint parameters (or doing forward
+kinematics) is much easier algebraically when one is using the DH parameters.
+It is then a lot easier to model a manipulator because four parameters are
+only needed in order to define a certain joint.
 
-Limitations should also be imposed in the model with respect to the physical environment it belongs to. This is to avoid “impractical” or “illogical” movements being done by the manipulator.  
+Limitations should also be imposed in the model with respect to the physical
+environment it belongs to. This is to avoid “impractical” or “illogical”
+movements being done by the manipulator.
 
-Solving for the inverse kinematics proved to be very difficult algebraically. Multiple solutions often arise and it must always be checked with respect to the physical constraints imposed.
+Solving for the inverse kinematics proved to be very difficult algebraically.
+Multiple solutions often arise and it must always be checked with respect to
+the physical constraints imposed.

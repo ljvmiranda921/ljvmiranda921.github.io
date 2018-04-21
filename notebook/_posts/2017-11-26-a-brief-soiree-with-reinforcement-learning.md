@@ -12,16 +12,16 @@ math: true
 <a href="https://github.com/ljvmiranda921/pfn-rl-practice"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/567c3a48d796e2fc06ea80409cc9dd82bf714434/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png"></a>
 
 Given the recent success of AlphaGo and OpenAI's win in DoTA, I decided to
-dedicate a few weeks studying reinforcement learning (RL). It turns out
-that RL is a different ball game, and in effect, I need to learn
-a whole new schema of concepts and ideas. It was overwhelming at first so
-to just dip my toes in RL, I decided to make a small project.
+dedicate a few weeks studying reinforcement learning (RL). It turns out that
+RL is a different ball game, and in effect, I need to learn a whole new
+schema of concepts and ideas. It was overwhelming at first so to just dip my
+toes in RL, I decided to make a small project.
 
-Good thing, I found [this problem set](https://github.com/pfnet/intern-coding-tasks)
-from Preferred Networks. It's actually a set of tasks
-for their 2017 internship program, and focuses on an RL problem that
-I presume is beginner-friendly. Too bad I discovered this quite late,
-it may have been really nice to apply!
+Good thing, I found [this problem
+set](https://github.com/pfnet/intern-coding-tasks) from Preferred Networks.
+It's actually a set of tasks for their 2017 internship program, and focuses
+on an RL problem that I presume is beginner-friendly. Too bad I discovered
+this quite late, it may have been really nice to apply!
 
 So, the challenge is to balance a cartpole by training a reinforcement
 learning model so that it outputs an action&mdash;i.e., move left or right
@@ -50,8 +50,8 @@ number of timesteps (500 in the default case). The environment ends when
 you've successfully balanced the pole for all timesteps, or when it falls.
 After that, the environment resets and another *episode* is called. Each
 episode consists of resetting the environment and balancing the cartpole
-until it drops or the 500th timestep is reached. For the PFN task, success
-is achieved when the pole is balanced for 95 out of 100 episodes.
+until it drops or the 500th timestep is reached. For the PFN task, success is
+achieved when the pole is balanced for 95 out of 100 episodes.
 
 ![Cartpole Environment](/assets/png/pfn2017rl/env.png)  
 __Figure 2:__ _The Cartpole Environment._  
@@ -67,19 +67,20 @@ There are various signals that goes in and out the environment:
 
 In the software implementation, we have an additional boolean signal `done`,
 where `done`$$\in \{0, 1\}$$, that simply indicates if the environment has
-ended or not. If we designate the Cartpole environment
-as $$p$$, we can obtain a joint conditional probability where the next state
-is determined by (1) the previous state and (2) the action applied: $$ p(\mathbf{o}_{t+1} | \mathbf{o}_{t}, \mathbf{a}_{t}) $$
+ended or not. If we designate the Cartpole environment as $$p$$, we can
+obtain a joint conditional probability where the next state is determined by
+(1) the previous state and (2) the action applied: $$ p(\mathbf{o}_{t+1} |
+\mathbf{o}_{t}, \mathbf{a}_{t}) $$
 
 But how do we determine the action $$a_{t}$$ to be done? This is where the
 policy comes in.
 
 ## Linear Policy
 
-A policy, denoted as $$\pi$$, determines the action given the current observation
-of the environment. In most cases, determining the action is
+A policy, denoted as $$\pi$$, determines the action given the current
+observation of the environment. In most cases, determining the action is
 explicitly parametrized. We can then frame the policy in the following
-distribution: $$\pi_{\theta}(\mathbf{a}_{t} | \mathbf{o}_{t})$$. Where 
+distribution: $$\pi_{\theta}(\mathbf{a}_{t} | \mathbf{o}_{t})$$. Where
 $$\theta$$ corresponds to the parameters that governs the policy $$\pi$$.
 
 ![Linear Model](/assets/png/pfn2017rl/lm.png)  
@@ -88,8 +89,9 @@ _The linear model generates an action based on the observation._
 _In this task, the model is explicitly parameterized_  
 {: style="text-align: center;"}
 
-In the case of a linear policy, the action is determined by the **sign of the inner product**
-of the observation $$\mathbf{o}_{t}$$ and parameters $$\theta$$. Simply put,
+In the case of a linear policy, the action is determined by the **sign of the
+inner product** of the observation $$\mathbf{o}_{t}$$ and parameters
+$$\theta$$. Simply put,
 
 $$
 \mathbf{a}_{t} = \begin{cases}
@@ -98,20 +100,20 @@ $$
 \end{cases}
 $$
 
-Again, $$+1$$ means "move right" and $$-1$$ means "move left." As we can
-see, the actions are governed by the values of these parameters $$\theta$$.
-At the initial timestep, we can just assign random values to $$\theta$$
-(in this case we sampled from a normal distribution $$\mathcal{N}(\mu=0,\sigma=1)$$),
-but we need to find a way to obtain a set of good parameters as we go
-along, right?
+Again, $$+1$$ means "move right" and $$-1$$ means "move left." As we can see,
+the actions are governed by the values of these parameters $$\theta$$. At the
+initial timestep, we can just assign random values to $$\theta$$ (in this
+case we sampled from a normal distribution $$\mathcal{N}(\mu=0,\sigma=1)$$),
+but we need to find a way to obtain a set of good parameters as we go along,
+right?
 
 ## Applying the cross entropy method
 
-In order for our policy to create better decisions, we can employ a scheme to update
-the parameters every time step. The cross-entropy method (CEM) is an effective
-way to search for a good set of parameters by updating our current $$\theta$$
-with the mean of the elite parameters generated from a noisy version of $$\theta$$:
-$$\theta_{i} = \theta + \epsilon_{i}$$.
+In order for our policy to create better decisions, we can employ a scheme to
+update the parameters every time step. The cross-entropy method (CEM) is an
+effective way to search for a good set of parameters by updating our current
+$$\theta$$ with the mean of the elite parameters generated from a noisy
+version of $$\theta$$: $$\theta_{i} = \theta + \epsilon_{i}$$.
 
 ![Cross Entropy Method](/assets/png/pfn2017rl/cem.png)  
 __Figure 3:__ _Cross-entropy Method for updating the parameters._  
@@ -125,19 +127,19 @@ The algorithm can be seen as follows:
 - For $$i=1,\dots,N$$ reset the environment, run the agent for one episode using $$\theta_{i}$$ as parameters, and calculate the reward.
 - Calculate the mean of the $$\theta_{i}$$ vectors whose return was among the top $$100p\%$$ and update $$\theta$$ to that value.
 
-Here, $$N$$ and $$p$$ will be our hyperparameters. The former indicates
-the size of the samples generated from the current parameter, and the
-latter describes how much of these samples will be taken as elites to
-obtain the new parameters from.
+Here, $$N$$ and $$p$$ will be our hyperparameters. The former indicates the
+size of the samples generated from the current parameter, and the latter
+describes how much of these samples will be taken as elites to obtain the new
+parameters from.
 
 ## Combining them all together
 
-Now that we have the environment, the policy, and our optimization algorithm, how
-can we formalize the problem properly? In addition, we also know that
+Now that we have the environment, the policy, and our optimization algorithm,
+how can we formalize the problem properly? In addition, we also know that
 *every action results into a new state which results into a different
 action and so on*. In order to represent this concept, we take some
-inspiration from Markovian decision processes and see that every
-state-action pairs are related in the following manner:
+inspiration from Markovian decision processes and see that every state-action
+pairs are related in the following manner:
 
 $$
 p_{\theta}(\mathbf{o}_{1}, \mathbf{a}_{1}, \dots, \mathbf{o}_{T}, \mathbf{a}_{T}) = p(\mathbf{o}_{1})\prod_{t=1}^{T}\pi_{\theta}(\mathbf{a}_{t}|\mathbf{o}_{t})p(\mathbf{o}_{t+1} | \mathbf{o}_{t}, \mathbf{a}_{t})
@@ -154,9 +156,9 @@ $$
 \theta^{*} = \arg \max_{\theta} \sum_{t=1}^{T} E_{(\mathbf{o}_{t}, \mathbf{a}_{t})~p_{\theta}(\mathbf{o}_{t}, \mathbf{a}_{t})}\left[r(\mathbf{o}_{t}, \mathbf{a}_{t})\right]
 $$
 
-This means that we need to find the parameters $$\theta^{*}$$ that
-maximizes the expected reward $$r$$. Again, the way we achieve this is
-via the cross-entropy method.
+This means that we need to find the parameters $$\theta^{*}$$ that maximizes
+the expected reward $$r$$. Again, the way we achieve this is via the
+cross-entropy method.
 
 ## Implementation
 
