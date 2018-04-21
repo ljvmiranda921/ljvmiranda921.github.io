@@ -24,16 +24,6 @@ full-implementation is done through the following steps:
 - [Toy model testing](#testing)
 - [Training](#training)
 - [Hyperparameter Tuning](#hyperparameter-tuning)
-  - [<a name="toy"></a> Toy Model Creation](#a-nametoy-a-toy-model-creation)
-  - [<a name="implementation"></a> Artificial Neural Network (ANN) Implementation](#a-nameimplementation-a-artificial-neural-network-ann-implementation)
-    - [<a name="architecture"></a> Architecture set-up](#a-namearchitecture-a-architecture-set-up)
-    - [<a name="loss"></a> Forward Pass: Loss computation](#a-nameloss-a-forward-pass--loss-computation)
-    - [<a name="gradient"></a> Backward Pass: Gradient Computation](#a-namegradient-a-backward-pass--gradient-computation)
-    - [<a name="batch"></a> Batch Training](#a-namebatch-a-batch-training)
-    - [Prediction](#prediction)
-  - [<a name="testing"></a> Toy model testing](#a-nametesting-a-toy-model-testing)
-  - [Training](#training)
-  - [Hyperparameter Tuning](#hyperparameter-tuning)
 - [Results](#results)
 
 ## <a name="toy"></a> Toy Model Creation
