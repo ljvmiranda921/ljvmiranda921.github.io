@@ -5,10 +5,8 @@ description: Projects of Lester James V. Miranda
 permalink: /projects/
 ---
 
-I present to you some of the data projects that I have done. I also enjoy
-applying data science and machine learning techniques in the
-Philippine context, for it gives me a unique take in understanding
-our culture, society, and systems. Check them out!
+I love to build software, experiment with data, and implement machine
+learning systems. Check-out some of my works!
 
 <ul>
   {% for post in site.categories.projects %}

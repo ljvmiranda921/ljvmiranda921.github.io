@@ -5,11 +5,9 @@ description: Notes of Lester James V. Miranda
 permalink: /notebook/
 ---
 
-Here I write about the things that interest me: thoughts on a certain
-topic, solutions for an online course, or tutorials for a specific
-problem. As of now, I would like to treat this page as a repository of
-the things that I experiment on, so expect that
-I'll be posting a lot from a wide range of topics!
+Whenver I want to scratch an itch or solve a specific problem, I make sure
+to document everything so that I can remember them in the future.
+Hopefully, this notebook will interest you as others did.  
 
 <ul>
   {% for post in site.categories.notebook %}
