@@ -5,7 +5,7 @@ description: Notes of Lester James V. Miranda
 permalink: /notebook/
 ---
 
-Whenver I want to scratch an itch or solve a specific problem, I make sure
+Whenever I want to scratch an itch or solve a specific problem, I make sure
 to document everything so that I can remember them in the future.
 Hopefully, this notebook will interest you as others did.  
 
