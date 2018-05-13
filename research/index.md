@@ -15,5 +15,6 @@ Below is a list of my research publications. Pre-prints are also attached. You c
 ### Masters Thesis
 Selected works during my time in Furuzuki Neurocomputing Systems Laboratory (NCLab) in Waseda University. Most of these are unpublished seminar presentations and papers:
 
+- [Applying Reinforcement Learning to the Protein Folding Problem](https://drive.google.com/open?id=1u1jlDE2BIsAy0vkbcu5zapimPUv27XOV) _Laboratory Seminar Presentation (and a side-project of mine)_, April 2018.
 - [Selective Feature Extraction via a Mutually-Competitive Autoencoder for Protein Function Prediction](https://drive.google.com/file/d/1lj9jfbv3kFbKmP8opMoKA1a-I4XQ8Oyn/view?usp=sharing) _Midterm Defense Presentation_, April 2018.
 - [Feature Extraction using a Stacked Denoising Autoencoder for Protein Function Prediction](https://drive.google.com/file/d/1JAmf1S0pMucXBWoNGIX_mVPX6FHP4KyS/view?usp=sharing) _11th International Collaboration Symposium on Information, Production, and Systems_, November 2017.
