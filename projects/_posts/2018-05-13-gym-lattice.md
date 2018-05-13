@@ -98,7 +98,7 @@ problem as an RL problem.
 ### A typical reinforcement learning problem
 
 Most reinforcement learning problems are formulated as the following (Sutton
-and Barto, [1998](sutton1998reinforcement)):
+and Barto, [1998](#sutton1998reinforcement)):
 - We have an **agent** ($$\mathcal{A}$$) that decides an action $$a$$ given
 an observation $$o$$ and reward $$r$$. Sometimes, the agent's policy (how it
 acts given an observation and reward) is parameterized by $$\theta$$. It
