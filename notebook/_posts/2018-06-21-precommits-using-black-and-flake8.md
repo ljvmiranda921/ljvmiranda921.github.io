@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Automate Python workflow using Pre-commits: black and flake8"
+title: "Automate Python workflow using pre-commits: black and flake8"
 date: 2018-06-21
 category: notebook
 comments: true
 author: "LJ MIRANDA"
+tags: [python, black, precommit, flake8, git, automation, workflow]
 ---
 
 > Before I commit my staged Python files, `black` formats my code and `flake8`
@@ -147,4 +148,10 @@ __Figure:__ _Pre-commit pipeline with `black` and `flake8` for checking my `.py`
 {: style="text-align: center;"}
 
 Now that we have a pre-commit framework set-up with black and flake8, let's see
-it in action!
+it in action! Here we'll see how black formats a Python file automagically: 
+
+![Diagram](/assets/png/tuts/precommit_demo.gif){:width="640px"}  
+__Figure:__ _Short demo on pre-commit hooks_
+{: style="text-align: center;"}
+
+Awesome right? Hope you learned something new today!
