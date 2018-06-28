@@ -7,15 +7,25 @@ permalink: /research/
 
 Below is a list of my research publications. Pre-prints are also attached. You can check my ORCID profile [here](https://orcid.org/0000-0002-7872-6464/print):
 
-- [Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction](https://drive.google.com/open?id=1tal0uLXMaaeeZqIHGoYEnSa5U_p81yzl) <br> L. J. V. Miranda and J. Hu, "Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction," _IEEE International Conference on System, Man, and Cybernetics_, IEEE, October 2018. (Accepted)
-- [A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction](https://drive.google.com/file/d/1sf-RRD-LTmTAzxURoFVfhegJDRpXTfF8/view?usp=sharing) <br> L. J. V. Miranda and J. Hu, "A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction," _42nd IEEE Computer Society Signature Conference on Computers, Software, and Applications_, IEEE, July 2018. (Accepted) 
-- [PySwarms, a research-toolkit for Particle Swarm Optimization in Python](https://drive.google.com/file/d/12gfjDsFARvQjbLBfEzPWvMRQi90vqCF5/view?usp=sharing) <br> L. J. V. Miranda, “PySwarms, a research-toolkit for Particle Swarm Optimization in Python," _Journal of Open Source Software_, vol. 3, no. 433, 2018. [doi: 10.21105/joss.00433](http://joss.theoj.org/papers/235299884212b9223bce909631e3938b).
-- [Appliance Recognition using Hall-Effect Sensors and k-Nearest Neighbors for Power Management Systems](https://drive.google.com/file/d/1pcJhB1YzDEB6uQg_zi-rhMJJ4jHLtg7g/view?usp=sharing) <br> L. J. V. Miranda, M. J. Gutierrez, S. M. Dumlao, and R. Reyes, “Appliance Recognition using Hall-Effect Sensors and k-Nearest Neighbors for Power Management Systems,” in _Proceedings of the 2016 IEEE Region 10 Conference 2016_, IEEE, November 2016.
-- [Expulsion from Eden: the saga of the Calauit Safari Island Park](https://drive.google.com/file/d/1LO8juv1ihBUOS81sExqKsuFx28qslvmT/view?usp=sharing) <br> L. J. V. Miranda, “Expulsion from Eden: the saga of the Calauit Safari Island Park,” _APEIRON Student Journal of Philosophy_, no. 8, pp. 201–219, 2016. ISBN: 1533659788.
+- [Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction](https://www.dropbox.com/s/wfgklrndflpqstv/smc2018feature.pdf?dl=0) <br> L. J. V. Miranda and J. Hu, "Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction," _IEEE International Conference on System, Man, and Cybernetics_, IEEE, October 2018. (Accepted)
+- [A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction](https://www.dropbox.com/s/qlj0vxb3ieijmg4/compsac2018deep.pdf?dl=0) <br> L. J. V. Miranda and J. Hu, "A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction," _42nd IEEE Computer Society Signature Conference on Computers, Software, and Applications_, IEEE, July 2018. (Accepted) 
+- [PySwarms, a research-toolkit for Particle Swarm Optimization in Python](https://www.dropbox.com/s/8nrtfwpssdv1hn3/joss2018pyswarms.pdf?dl=0) <br> L. J. V. Miranda, “PySwarms, a research-toolkit for Particle Swarm Optimization in Python," _Journal of Open Source Software_, vol. 3, no. 433, 2018. [doi: 10.21105/joss.00433](http://joss.theoj.org/papers/235299884212b9223bce909631e3938b).
+- [Appliance Recognition using Hall-Effect Sensors and k-Nearest Neighbors for Power Management Systems](https://www.dropbox.com/s/iawdrt9rm73siw2/tencon2016power.pdf?dl=0) <br> L. J. V. Miranda, M. J. Gutierrez, S. M. Dumlao, and R. Reyes, “Appliance Recognition using Hall-Effect Sensors and k-Nearest Neighbors for Power Management Systems,” in _Proceedings of the 2016 IEEE Region 10 Conference 2016_, IEEE, November 2016.
+- [Expulsion from Eden: the saga of the Calauit Safari Island Park](https://www.dropbox.com/s/j36m11rvhbl963e/apeiron2016expulsion.pdf?dl=0) <br> L. J. V. Miranda, “Expulsion from Eden: the saga of the Calauit Safari Island Park,” _APEIRON Student Journal of Philosophy_, no. 8, pp. 201–219, 2016. ISBN: 1533659788.
 
 ### Masters Thesis
-Selected works during my time in Furuzuki Neurocomputing Systems Laboratory (NCLab) in Waseda University. Most of these are unpublished seminar presentations and papers:
 
-- [Applying Reinforcement Learning to the Protein Folding Problem](https://drive.google.com/open?id=1u1jlDE2BIsAy0vkbcu5zapimPUv27XOV) _Laboratory Seminar Presentation (and a side-project of mine)_, April 2018.
-- [Selective Feature Extraction via a Mutually-Competitive Autoencoder for Protein Function Prediction](https://drive.google.com/file/d/1lj9jfbv3kFbKmP8opMoKA1a-I4XQ8Oyn/view?usp=sharing) _Midterm Defense Presentation_, April 2018.
-- [Feature Extraction using a Stacked Denoising Autoencoder for Protein Function Prediction](https://drive.google.com/file/d/1JAmf1S0pMucXBWoNGIX_mVPX6FHP4KyS/view?usp=sharing) _11th International Collaboration Symposium on Information, Production, and Systems_, November 2017.
+My Masters thesis involves the prediction of protein functions using
+autoencoder-based techniques. You can find an unpublished version of
+my manuscript (work-in-progress) below:
+
+- [Autoencoder-based Feature Extraction Techniques for Protein Function
+  Prediction](https://www.dropbox.com/s/345u99e4anukj9u/main-latest.pdf?dl=0) _Masters Thesis_, Waseda University, Unpublished, June 2018.
+
+In addition, here are some selected works during my time in Furuzuki
+Neurocomputing Systems Laboratory (NCLab) in Waseda University. Most of these
+are unpublished seminar presentations and papers:
+
+- [Applying Reinforcement Learning to the Protein Folding Problem](https://www.dropbox.com/s/h4f5ybkn2bhssu7/lab2018applying.pdf?dl=0) _Laboratory Seminar Presentation_, April 2018.
+- [Selective Feature Extraction via a Mutually-Competitive Autoencoder for Protein Function Prediction](https://www.dropbox.com/s/zh7d5z3jb5tiijv/midterms-handouts.pdf?dl=0) _Midterm Defense Presentation_, April 2018.
+- [Feature Extraction using a Stacked Denoising Autoencoder for Protein Function Prediction](https://www.dropbox.com/s/dq21pwd67mu4u5z/isips2017feature.pdf?dl=0) _11th International Collaboration Symposium on Information, Production, and Systems_, November 2017.
