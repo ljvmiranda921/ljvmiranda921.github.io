@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/ljvmiranda
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://ljvmiranda921.github.io
+  * I am ljvmiranda (https://keybase.io/ljvmiranda) on keybase.
+  * I have a public key with fingerprint 376B DF4D EA41 70D5 B37B  AAA9 6C14 1C78 7DF0 930A
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120b9bd16bb0d2fe88665037cc724eb026d97ec6aa94837a967ce14a13ba970a5d60a",
+      "fingerprint": "376bdf4dea4170d5b37baaa96c141c787df0930a",
+      "host": "keybase.io",
+      "key_id": "6c141c787df0930a",
+      "kid": "0101680d937214c49877471bc4948b24e2aa9037bf72e80408ab21668e35f7585b310a",
+      "uid": "19606c9af144bcc81fbc59aec8e77b19",
+      "username": "ljvmiranda"
+    },
+    "service": {
+      "hostname": "ljvmiranda921.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1530179902,
+  "expire_in": 157680000,
+  "prev": "c32f18aaf5135612bc585eec668500b00640552a6f3e73430ebd39bcc1f1ec85",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.77
+Comment: https://keybase.io/crypto
+
+yMN2AnicbVJ7UFVFHOYCodwgsAdWXMY6ghEDdPa89hxkBAwcekijGQySwtlz9sDh
+cS/ce0EeImbCSKA4UcYjEjQitRJHSBubKRRGRLthj0FGBESQ0SiB0YIeTHsp/6r9
+Z3d/833f7/t+u93ebi5GQ/ajpsLS6Vqj4WLXh/kuKdyJNSUUsqhFVEQJlYUXN5yt
+Yps9NUtXqQiKBgyNJKQCASFaZTQsioLA0yxUFMhwGNGMoEoQK4IsS5zIQlkSoIIB
+JwMWyRKkZV4VaJkKpTTdnI6tuVbdbCeyLBSQqnEqljkAaZVHLEQykRAUwAEFilDV
+aIldJGZYbE4GMYdkGw7XLaRGLqmL9v4Hf983DQSRViUWMoBTOEmEkIMAkRMnIuKc
+Id1IDKRBBos0R4syYoAgiJjlNciLxBFYlMtflAOSQAuKJGuA45CiiEBDCi/JWBEx
+hAhITqANW81yDibo7MyCHN0qm1WZKg2lSL1AV7BztM4s/8FIDAhP1+0Z+eifcLlW
+i92iWLIJKMNuz7VFOEXsRblO1jaMUv/VS0W6WSVDJYwCbLXpFjMVAQhSsevOBoBn
+aQAliWZCKVyYq1txqu5E8JCMhSxnH1xAJBWW0YAoyxoPWF4ADAkm8pi8qCDyNI1o
+WuBonmdkQWMxZDmWxkhlJTIEoAGSn6ecCfPMFipCIDbldCJp09PNsj3fiqnSs12v
+u7sYjC4eD7g6P5uL0dP3/hf8+VmfhdDAa0W/1OVFVXeVJrQmllceAav3VWtbEq6P
+J/zohSIix6N3H0Onft/VxvfnfF8c2PLIxDshOxeqXJ+YiHn3OfOYebhy0sqeH+ir
+eXjaf7pcj/OqnilJPngk5s7eS0WDwUvPnQmeuNK+y3H66bcfHI/b1PmngO+0157I
+vzz4fu7AwvYlDRuCOnzpGtPaScn147bNR2P9zhrnK7LiT7rPnV85pRq+Zi3JvcYL
+IYdXDPd4GKJHWp9Rnz/UHmi9N/NYdN2pnl+bb1ZOxI0E7Zttko+b1nXEvzDa/5OQ
+2ns9Pr7JtHHHiqOXvrx6ty8q6Iv+NzNRnPvUUMieBvTpAZ+WxvUGuLKvrMy2uasT
+Zldl+u+PHfJuWO847HU7bOvy3dHwvfq6sjUtX322we4obS02n1yb2Fxa8Im+KiG0
++8ItNTswoHHgqlv3xZi/voniI713OJJz5sMWyviA8pid1cKSQuW7OJQU/dKo8YPf
+Os90JU41v3jI8bhbx+3Cy0ltTyZxrWXeN7d/NDna47LqFbfozOS0LU+9Ghv+1q2K
+CkdMY4qvyef4Qx616U2Rhv0505u+9Rw23zh477ViX/mP8bHZZX4pvF/a6pl5a9u5
+gPqqu3uuHTuwbK+9daS3as5a45/28mjYbF7w5/VRP4zGbZTmarojt1YOhV+RPLNu
+DC59o+v0clPmApc3lrfOK8d/m+VvNy3BZQ==
+=XVjc
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ljvmiranda
+
+==================================================================
