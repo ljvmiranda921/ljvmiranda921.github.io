@@ -22,7 +22,7 @@ my manuscript (work-in-progress) below:
 - [Autoencoder-based Feature Extraction Techniques for Protein Function
   Prediction](https://www.dropbox.com/s/345u99e4anukj9u/main-latest.pdf?dl=0) _Masters Thesis_, Waseda University, Unpublished, June 2018.
 
-In addition, here are some selected works during my time in Furuzuki
+In addition, here are some selected works during my time at Furuzuki
 Neurocomputing Systems Laboratory (NCLab) in Waseda University. Most of these
 are unpublished seminar presentations and papers:
 
