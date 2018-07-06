@@ -56,13 +56,13 @@ with a set of pre-commit hooks out of the box (batteries included!). To adopt
 
 1. Install pre-commit: `pip install pre-commit`
 2. Add `pre-commit` to `requirements.txt` (or `requirements-dev.txt`)
-3. Define `pre-commit-config.yaml` with the hooks you want to include.
+3. Define `.pre-commit-config.yaml` with the hooks you want to include.
 4. Execute `pre-commit install` to install git hooks in your `.git/` directory.
 
 The YAML file configures the sources where the hooks will be taken from. In our
 case, `flake8`'s already been included in this framework so we just need
 to specify its id. On the other hand, we need to define where to source `black`
-using few lines of code. Below is a sample `pre-commit-config.yaml` file that I
+using few lines of code. Below is a sample `.pre-commit-config.yaml` file that I
 use in my project:
 
 ```
