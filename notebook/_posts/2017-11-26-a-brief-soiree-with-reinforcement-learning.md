@@ -14,6 +14,10 @@ math: true
 ![python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)
 [![Build Status](https://travis-ci.org/ljvmiranda921/pfn-rl-practice.svg?branch=master)](https://travis-ci.org/ljvmiranda921/pfn-rl-practice)
 
+> Update (2018-08): I got an internship offer in Preferred Networks! This year,
+the intern task is about [Adversarial Examples](https://github.com/pfnet/intern-coding-tasks/tree/master/2018/ml). 
+Awesome task, but I'm not sure if I can share my solutions anymore.
+
 Given the recent success of AlphaGo and OpenAI's win in DoTA, I decided to
 dedicate a few weeks studying reinforcement learning (RL). It turns out that
 RL is a different ball game, and in effect, I need to learn a whole new
