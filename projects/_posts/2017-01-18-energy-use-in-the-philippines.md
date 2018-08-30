@@ -7,7 +7,7 @@ comments: true
 author: "LJ MIRANDA"
 ---
 
-> You can find the original post in [Kaggle](https://www.kaggle.com/ljvmiranda/philippines-energy-use).
+> This was my very first data science project (circa 2016). You can find the original post in [Kaggle](https://www.kaggle.com/ljvmiranda/philippines-energy-use).
 
 I am investigating the country's energy use given the World Development
 Indicators dataset provided here in Kaggle. I am particularly interested to
