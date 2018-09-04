@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Projects
-description: Thoughts about the research/developer life
+title: Life
+description: Thoughts about the researcher and developer life
 permalink: /life/
 ---
 
 Inasmuch as I want to use this blog to showcase some of the works I've done, I
 also want to use this platform to reflect upon various things on my
-developer/researcher life. 
+developer and researcher life. 
 
 <ul>
   {% for post in site.categories.life %}
