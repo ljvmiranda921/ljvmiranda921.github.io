@@ -20,7 +20,7 @@ say in **git commits**:
 
 For those who aren't familiar with version-control systems, a git commit is
 simply a log or savepoint in any software project. Each log keeps a history of
-the things you've done. If there is a commit history of my usual day, it would
+the things you've done. If there is a commit history of my Tuesday, it would
 look like this:
 
 * Cook breakfast and lunch
