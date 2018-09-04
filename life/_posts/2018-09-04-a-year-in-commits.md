@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "My year in commits: lessons and perspectives"
+title: "My life in commits: lessons and perspectives"
 date: 2018-09-04
 category: life
 comments: true
 author: "LJ MIRANDA"
-summary: "My year in commits: examining my Github contribution graph"
+summary: "My life in commits: examining my Github contribution graph"
 tags: [github, contributions, software development, life, commits]
 ---
 
@@ -35,8 +35,12 @@ For software projects, They usually look like this (from my project, [PySwarms](
 
 The chart above shows how many logs I have done every single day for the past
 year. It's not necessarily a measure of productivity, but you get the gist. 
+
 Today, I'd like to talk about how a year in commits changed my perspective in
 software, some lessons I've learned, and new challenges I'll set myself on for
-the next year.
+the next year. I think, that as I end my Masters degree and transition into a
+new phase in life, it's good to look back on the things I've done so far.
 
-But first, let's have a brief tour of my year in commits: 
+First, let's have a brief tour of my life in commits. I've included my
+commit history from July 2017 and added some annotations on significant life
+events during the past year:
