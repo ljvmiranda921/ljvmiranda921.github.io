@@ -5,8 +5,9 @@ description: Thoughts about the researcher and developer life
 permalink: /life/
 ---
 
-Some reflections on the developer and researcher life. Opinions are solely my
-own and do not reflect those of my institution or affiliation.
+Some reflections on the developer and researcher life. Adding a personal touch
+to code. Opinions are solely my own and do not reflect those of my institution
+or affiliation.
 
 <ul>
   {% for post in site.categories.life %}
