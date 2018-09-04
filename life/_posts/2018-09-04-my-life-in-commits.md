@@ -34,7 +34,9 @@ For software projects, They usually look like this (from my project, [PySwarms](
 * Remove deprecated modules
 
 The chart above shows how many logs I have done every single day for the past
-year. It's not necessarily a measure of productivity, but you get the gist. 
+year. Greener boxes means more commits, whereas gray boxes are zero commits.
+It's not necessarily a measure of productivity, but an approximation of
+one's tech life. 
 
 Today, I'd like to talk about how a year in commits changed my perspective in
 software, some lessons I've learned, and new challenges I'll set myself on for
