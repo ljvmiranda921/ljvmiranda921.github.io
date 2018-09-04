@@ -5,7 +5,7 @@ date: 2018-09-04
 category: life
 comments: true
 author: "LJ MIRANDA"
-summary: "My life in commits: examining my Github contribution graph"
+summary: "My year in commits: examining my Github contribution graph"
 tags: [github, contributions, software development, life, commits]
 ---
 
@@ -148,3 +148,11 @@ in the short-to-medium term:
   quite some time. I actually started a [small project in
   Haskell](https://github.com/ljvmiranda921/pokecatch), might as well finish
   it. I also purchased [Get Programming with Haskell](https://www.manning.com/books/get-programming-with-haskell), hopefully it accelerates my learning. 
+* **Less commits on weekends**. For the past few months, it seems that I've
+  been writing code every day. Not that I'm complaining, but even if I love
+  programming, doing it too much can lead to burnout. Grayed-out top and bottom
+  rows should be in my commit graph next year.
+
+As a close, I think that doing this yearly review helped me reflect on my
+journey in tech and software. I learned a **ton** of things, and I'm very
+excited to learn more in the future.
