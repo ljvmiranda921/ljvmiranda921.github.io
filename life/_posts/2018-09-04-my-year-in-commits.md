@@ -67,7 +67,7 @@ highlights:
   Right now, the project is growing. We have two more maintainers and fourteen
   contributors all-in-all. Not bad for my first soiree.
 * **Building my research code (August 2017--)** Git commits for my thesis were
-  usually done in 2-3 week bursts. PySwarms thought me a lot about software
+  usually done in 2-3 week bursts. PySwarms taught me a lot about software
   development, and I decided to apply them in my research code.
 * **Long rests (Parts of July and August, December 2017)**. I took a good
   amount of breaks last year, but it seems that I worked non-stop since
