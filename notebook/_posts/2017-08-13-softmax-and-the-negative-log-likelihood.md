@@ -21,7 +21,7 @@ please leave a comment below.
 
 The softmax activation function is often placed at the output layer of a
 neural network. It's commonly used in multi-class learning problems where a
-set of features can be related to one-of-$K$ classes. For example, in the
+set of features can be related to one-of-$$K$$ classes. For example, in the
 CIFAR-10 image classification problem, given a set of pixels as input, we
 need to classify if a particular sample belongs to one-of-ten available
 classes: i.e., cat, dog, airplane, etc.
