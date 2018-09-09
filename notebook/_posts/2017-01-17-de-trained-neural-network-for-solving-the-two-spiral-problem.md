@@ -42,7 +42,7 @@ while the tuning will involve the mutation and recombination parameters.
 
 Our neural network simply consists of one hidden layer with a $$sin(x)$$
 activation function (Sopena, Romero, et al.,
-[1999](#sopena1999neural))
+[1999](#sopena1999neural)).
 
 ### Initialization
 For any particle $$n = 1,2, \dots , N$$, its position $$P$$ at time-step
@@ -157,7 +157,7 @@ still present.
   "Learning to Tell Two Spirals Apart". In: *Proceedings of the 1988
   Connectionist Models Summer School*
 - <a id="price2005differential">Price, K.V., Storn, R.M., and Lampinen,
-  J.A.</a> (2005). "Differential Evolution: A Practical Approach to Global
-  Evolution", Springer.
+  J.A.</a> (2005). *Differential Evolution: A Practical Approach to Global
+  Evolution*, Springer.
 
 You can access the gist [here.](https://gist.github.com/ljvmiranda921/53939299b9e67f0df082e0127c7f229d)
