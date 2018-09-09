@@ -12,21 +12,22 @@ math: true
 This is a simple implementation of a 2-16-1 neural network trained using
 Particle Swarm Optimization in order to solve the two-spiral problem. The
 $$\sin(z)$$ and $$\sigma(z)$$ activation functions were used for the
-input-hidden and hidden-output layers respectively. The cross-entropy error
-was used as the cost function. The two-spiral problem is a particularly
-difficult problem that requires separating two logistic spirals from one
-another [1] [2].
+input-hidden and hidden-output layers respectively. The cross-entropy error was
+used as the cost function. The two-spiral problem is a particularly difficult
+problem that requires separating two logistic spirals from one another (Lang
+and Witbrock, [1998](#lang1998learning)).
 
-![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)
+![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)  
 __Figure 1:__ _Graph of the Two-Spiral Problem_
 {: style="text-align: center;"}
 
 ## Differential Evolution
 As a member of a class of different evolutionary algorithms, DE is a
 population-based optimizer that generates perturbations given the current
-generation. But instead of generating vectors using samples from a predefined
-probability functions, DE perturbs vectors using the scaled difference of two
-randomly population vectors.
+generation (Price and Storn, [2005](#price2005differential)). But instead of
+generating vectors using samples from a predefined probability functions, DE
+perturbs vectors using the scaled difference of two randomly population
+vectors.
 
 Differential Evolution produces a trial vector, $$\mathbf{u}_{0}$$, that
 competes against the population vector of the same index. Now, once the last
@@ -38,6 +39,10 @@ For Differential Evolution, a three step process will be done. First, we will
 initialize the population, set-up the optimization system, and then tune the
 hyperparameters. Initialization will be based from a Gaussian distribution,
 while the tuning will involve the mutation and recombination parameters.
+
+Our neural network simply consists of one hidden layer with a $$sin(x)$$
+activation function (Sopena, Romero, et al.,
+[1999](#sopena1999neural))
 
 ### Initialization
 For any particle $$n = 1,2, \dots , N$$, its position $$P$$ at time-step
@@ -122,7 +127,7 @@ the parameters.
 __Table 2:__ _Parameter Values for DE Implementation_
 {: style="text-align: center;"}
 
-![Generalization ability of DE](http://i.imgur.com/oEHj0Dhl.png){:width="640px"}
+![Generalization ability of DE](http://i.imgur.com/oEHj0Dhl.png){:width="640px"}  
 __Figure 3:__ _Generalization ability of the DE-trained Neural Network over the whole space_
 {: style="text-align: center;"}
 
@@ -145,12 +150,14 @@ Although this gradient needs to be modified so that the stochastic element is
 still present.
 
 ## References
-+ A. Engelbrecht, *Computational Intelligence: An Introduction*, John Wiley & Sons, Ltd., 2007.  
-+ E.B. Baum and K.J. Lang, "Constructing Hidden Units Using Examples and Queries" _Advances
-in Neural Information Processing Systems_, vol. 3, pp. 904-910, 1993.
-+ J.M. Sopena, E. Romero,R. Alquezar, "Neural networks with periodic and monotonic activation functions: a comparative study in classification problems," _ICANN Ninth International Conference on Artificial Neural Networks_, 1999.
-+ K.J. Lang and M.J. Witbrock, "Learning to Tell Two Spirals Apart", in: *Proceedings of the 1988 Connectionist Models Summer School*, Morgan Kauffman, 1998.  
-+ K.V. Price, R.M. Storn, J.A. Lampinen, _Differential Evolution: A Practical Approach to Global Evolution_, Springer, 2005.
-+ [Two-Spirals in Neural Networks](http://www.ibiblio.org/pub/academic/computer-science/neural-networks/programs/bench/two-spirals), [Accessed: 17 January 2017].   
+- <a id="sopena1999neural">Sopena, J.M., Romero, E. and Alquezar, R.</a>
+  (1999). “Neural networks with periodic and monotonic activation functions: a
+  comparative study in classification problems”. In: *ICANN Ninth International Conference on Artificial Neural Networks*.
+- <a id="lang1998learning">Lang, K.J. and Witbrock, M.J.</a> (1988).
+  "Learning to Tell Two Spirals Apart". In: *Proceedings of the 1988
+  Connectionist Models Summer School*
+- <a id="price2005differential">Price, K.V., Storn, R.M., and Lampinen,
+  J.A.</a> (2005). "Differential Evolution: A Practical Approach to Global
+  Evolution", Springer.
 
 You can access the gist [here.](https://gist.github.com/ljvmiranda921/53939299b9e67f0df082e0127c7f229d)
