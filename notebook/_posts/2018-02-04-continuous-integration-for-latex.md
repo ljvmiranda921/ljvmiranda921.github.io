@@ -9,7 +9,12 @@ description: "A tutorial on how to set-up continuous integration via Travis-CI, 
 math: true
 ---
 
-> For every successful build, the output document from your LaTeX file will automatically be uploaded to your Dropbox---syncing across all your devices everywhere.
+> For every successful build, the output document from your LaTeX file will
+> automatically be uploaded to your Dropbox---syncing across all your devices
+> everywhere.
+
+**Note:** I shifted to a Docker-based solution. Know more
+[here](https://ljvmiranda921.github.io/notebook/2018/04/23/postmortem-shift-to-docker/).
 
 When working with collaborators in large projects, an efficient continuous 
 integration and deployment pipeline will keep your sanity. The same goes 
