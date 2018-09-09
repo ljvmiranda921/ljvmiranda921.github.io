@@ -9,8 +9,12 @@ layout: page
 
 Hi, I'm Lj Miranda and welcome to my blog!
 
-I hailed from the Philippines and currently pursuing graduate studies in Waseda
-University, Japan. I'm a member of the [Furuzuki Neurocomputing Systems
-Laboratory](http://www.waseda.jp/sem-hflab/nclab/), where we study various
-algorithms that imitate nature.  In this blog, I write about my interests in
-anything about machine learning, software development, and research.
+I'm currently a Machine Learning Researcher at [Thinking Machines Data
+Science](https://thinkingmachin.es/), a data science consultancy startup in the
+Philippines.
+
+Previously, I received my Masters degree from [Waseda
+University](https://www.waseda.jp/top/en) and did an internship in [Preferred
+Networks](https://www.preferred-networks.jp/en/) (Summer 2018). In this blog, I write about
+my interests in anything about machine learning, software development, and
+research.
