@@ -2,7 +2,7 @@
 layout: post
 title: "Hello world!"
 date: 2017-01-16
-category: notebook
+category: life
 comments: true
 author: "LJ MIRANDA"
 ---
