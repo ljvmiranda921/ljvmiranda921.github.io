@@ -12,10 +12,12 @@ math: true
 This is a simple implementation of a 2-16-1 neural network trained using
 Particle Swarm Optimization in order to solve the two-spiral problem. The
 $$\sin(z)$$ and $$\sigma(z)$$ activation functions were used for the
-input-hidden and hidden-output layers respectively. The cross-entropy error
+input-hidden and hidden-output layers respectively (Sopena, Romero, et al.,
+[1999](#sopena1999neural)). The cross-entropy error
 was used as the cost function. The two-spiral problem is a particularly
 difficult problem that requires separating two logistic spirals from one
-another.
+another (Lang
+and Witbrock, [1998](#lang1998learning)).
 
 ![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)  
 __Figure 1:__ _Graph of the Two-Spiral Problem_
@@ -24,7 +26,7 @@ __Figure 1:__ _Graph of the Two-Spiral Problem_
 ## Particle Swarm Optimization
 
 Particle swarm optimization is a population-based search algorithm that is
-based on the social behavior of birds within a flock. In PSO, the particles
+based on the social behavior of birds within a flock (Engelbrecht, [2007](#engelbrecht2007computational)). In PSO, the particles
 are scattered throughout the hyperdimensional search space. These particles
 use the results found by the others in order to build a better solution.
 
@@ -156,9 +158,12 @@ problem may be solved using advanced vectorization techniques in MATLAB, but
 overall, the PSO runtime often correlates with the swarm size.
 
 ## References
-+ A. Engelbrecht, *Computational Intelligence: An Introduction*, John Wiley & Sons, Ltd., 2007.  
-+ J.M. Sopena, E. Romero,R. Alquezar, "Neural networks with periodic and monotonic activation functions: a comparative study in classification problems," _ICANN Ninth International Conference on Artificial Neural Networks_, 1999.
-+ K.J. Lang and M.J. Witbrock, "Learning to Tell Two Spirals Apart", in: *Proceedings of the 1988 Connectionist Models Summer School*, Morgan Kauffman, 1998.  
-+ [Two-Spirals in Neural Networks](http://www.ibiblio.org/pub/academic/computer-science/neural-networks/programs/bench/two-spirals), [Accessed: 17 January 2017].   
+- <a id="engelbrecht2007computational">Engelbrecht, Andres</a> (2007). *Computational Intelligence: An Introduction*, John Wiley & Sons.
+- <a id="sopena1999neural">Sopena, J.M., Romero, E. and Alquezar, R.</a>
+  (1999). “Neural networks with periodic and monotonic activation functions: a
+  comparative study in classification problems”. In: *ICANN Ninth International Conference on Artificial Neural Networks*.
+- <a id="lang1998learning">Lang, K.J. and Witbrock, M.J.</a> (1988).
+  "Learning to Tell Two Spirals Apart". In: *Proceedings of the 1988
+  Connectionist Models Summer School*
 
 You can access the gist [here.](https://gist.github.com/ljvmiranda921/53939299b9e67f0df082e0127c7f229d)

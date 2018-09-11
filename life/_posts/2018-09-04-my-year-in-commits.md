@@ -89,32 +89,47 @@ highlights:
   were the most difficult months for me. I'd probably write more about that in
   the future.
 
-Overall, I think that I had a good year in programming and software. I learned
-a lot, and realized that the tech world is really large. I still consider
-myself a newbie, and I guess it would be nice to share some nuggets along
+Overall, I think that I had a good year in programming and software. With
+PySwarms, it seems that I crossed an imaginary line from programming *just to
+make things work* into being aware of design patterns, idiomatic code, and
+software systems. The latter forced me to become more attuned to a software's
+lifecycle and flow rather than just its logic.
+
+I learned a lot, and realized that the tech world is really huge. Before, I
+thought that knowing Python (or any programming language) is enough. But
+there's a whole world of software practices that I'm not aware of:
+continuous integration, deployment, testing, etc. New and exciting things to
+discover!  
+
+I still consider myself a newbie, and perhaps I'll always be a newbie for the
+rest of my career in tech. Perhaps it would be nice to share some nuggets along
 the way.
 
 ## Some lessons learned
 
 As I've said before, I'm still starting out. I think I just got a lucky break
-in PySwarms, for it accelerated my learning (mostly by necessity). Let me
-write down some lessons I'd bring as I go forward on this journey in software
-and tech. I may not be the most qualified person to give nuggets of wisdom, but
-hey, maybe you'll also find them useful: 
+in PySwarms, for it accelerated my learning&mdash;mostly by necessity. In this
+section, I'll write down some lessons I'd bring as I go forward on this journey
+in software and tech. I may not be the most qualified person to give nuggets of
+wisdom, but hey, maybe you'll also find them useful: 
 
 * **Strive to write readable and idiomatic code**. I think I will never
-  consider myself as a 10x programmer, perhaps a 1x programmer with good
+  consider myself as a 10x programmer, just a 1x programmer with good
   habits. One good habit is writing *readable and well-documented* code. They say
   that research code is frustratingly hard-to-read (just look at
   [OpenAI](https://www.reddit.com/r/MachineLearning/comments/95ft1j/d_are_openai_codes_difficult_to_read_or_is_it/)),
   but I think it's an opportunity for improvement. We can start from there.
+  Well-documented code doesn't just help other developers, it helps you as
+  well.
 * **Create a large volume of work**. As with all creative work, I think one way
   to acquire "taste" and improve one's craft is to keep on building things (see
   [Ira Glass on the Creative
   Process](https://www.youtube.com/watch?v=PbC4gqZGPSY)). I realized that every
   gist, commit, or project never goes to waste. It's always a chance to build
-  something new, iterate, and improve. 
-* **Find your heroes**. I realized that it's actually important to look for
+  something new, iterate, and improve. I'd love to maintain PySwarms because
+  it's one of my very first breakthrough projects, but I'd love to see myself
+  building new tools and products in the future. 
+* **Find your heroes**. I realized that it's important to look for
   models to look up to. Much better if they're still actively participating in
   the craft. For me, I look up to [Scott Hanselman](https://www.hanselman.com/)
   (Software Eng'g), [Saron Yitbarek](https://www.codenewbie.org/) (Software
@@ -123,11 +138,32 @@ hey, maybe you'll also find them useful:
   Learning). One common denominator among them is that they go out of their way
   to make their craft accessible to everyone. Find your heroes and be inspired
   by them. 
-* **Be nice**. Treat everyone with respect, be patient, and be chill.
+* **Be nice**. Treat everyone with respect, be patient, and be chill. Be it in
+  code reviews, answering issues, or teaching others, a little niceness goes a
+  long way.
 
-One important thing I learned from two years of seriously doing software is to
-treat it like a craft. The software space is big, there is an infinite amount
-of things to learn, and infinitely more resources to learn from.  
+Two more important things: a certain philosophy that I'm practicing right now
+is to **always learn the stack immediately below and above mine.** There's no
+need to become full-stack&mdash;as long as you can do your own thing with deep
+expertise, and you're aware of the context of your field&mdash;you're already
+fine.  It's difficult to learn everything, especially in a rapidly-growing
+field. Strive to do one thing extremely well, while understanding the
+peripheries in an intermediate capacity. With this in mind, you don't run the
+risk of spreading yourself too thin nor becoming a one-trick pony.
+
+For example: my current stack is in machine learning, then that means I need to
+learn *how the data is being sourced* (stack below me), and *how my models can
+affect an organization's decision* (stack above me). I don't need to fully-grok
+all management principles or ETL techniques, but *as long as I'm aware*, and I
+can do them an intermediate person would, then I think I'm good. I can focus my
+energy in machine learning, but still aware of the larger context of what I'm
+doing. 
+
+Lastly, I learned from a year of seriously doing software is to **treat it like
+a craft**: there's really no level where I can say, "I've mastered this." Truth
+is, tech is a moving target: the techniques that I know today might be
+irrelevant tomorrow. Thus, the best way to set goals is to make short-term and
+lean achievements.  
 
 ## Next steps
 
@@ -146,13 +182,17 @@ in the short-to-medium term:
   manage IT projects.
 * **Finally learn Haskell**. Yeah, this is something I've been putting off for
   quite some time. I actually started a [small project in
-  Haskell](https://github.com/ljvmiranda921/pokecatch), might as well finish
+  Haskell](https://github.com/ljvmiranda921/pokemonad), might as well finish
   it. I also purchased [Get Programming with Haskell](https://www.manning.com/books/get-programming-with-haskell), hopefully it accelerates my learning. 
 * **Less commits on weekends**. For the past few months, it seems that I've
   been writing code every day. Not that I'm complaining, but even if I love
   programming, doing it too much can lead to burnout. Grayed-out top and bottom
   rows should be in my commit graph next year.
 
-As a close, I think that doing this yearly review helped me reflect on my
-journey in tech and software. I learned a **ton** of things, and I'm very
-excited to learn more in the future.
+## Conclusion
+
+As a close, I think that doing this yearly review has helped me reflect on my
+journey in tech and software. Looking back, just one year of programming has
+provided me with new skills and perspectives. Now, tech has become more
+than just code&mdash;it's design, community, and craft. As I transition to the next
+phase of my life, I'm excited to see what the next few years will bring.

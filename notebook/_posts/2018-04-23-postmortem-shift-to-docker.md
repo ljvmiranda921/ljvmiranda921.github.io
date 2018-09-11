@@ -60,8 +60,8 @@ TexLive follows a two-step process:
 
 The FTP command returns an error code in the `400 series` most of the time. A
 quick search of [FTP error
-codes](https://en.wikipedia.org/wiki/List_of_FTP_server_return_codes) reveal
-that a return code of 400 means that 
+codes](https://en.wikipedia.org/wiki/List_of_FTP_server_return_codes) reveals
+that a return code of 400 indicates that: 
 
 > the command was not accepted and the
 requested action did not take place, but the error condition is temporary and
@@ -71,7 +71,7 @@ Okay, that is not deterministic. Sure, we can have some gotchas in Travis
 where we keep on retrying the download until it succeeds, but this makes our
 system all the more unreliable. Remember, we are not installing the full
 TexLive version (about 3 GB). We only install a minimal version, and
-incrementally add the package dependencies according to our project needs. If
+incrementally add package dependencies according to our project needs. If
 we have, say, 20 dependencies and atleast one of them fails, then the whole
 compilation will fail. 
 

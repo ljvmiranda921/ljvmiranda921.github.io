@@ -18,7 +18,7 @@ __Figure 1:__ _Graph of the Berlin52 Dataset_
 
 ## Ant Colony Optimization
 The Ant Colony Optimization algorithm is inspired by the foraging behaviour
-of ants. The behavior of the ants are controlled by two main parameters:
+of ants (Dorigo, [1992](#dorigo1992optimization)) . The behavior of the ants are controlled by two main parameters:
 $$\alpha$$, or the pheromone's attractiveness to the ant, and $$\beta$$, or
 the exploration capability of the ant. If $$\alpha$$ is very large, the
 pheromones left by previous ants in a certain path will be deemed very
@@ -38,7 +38,7 @@ $$
 ## Methodology
 As mentioned, the $$\alpha$$ and $$\beta$$ parameters control the
 exploitation and exploration behaviour of the ants by setting the
-attractiveness of pheromone deposits or the "shortness" of the path. The
+attractiveness of pheromone deposits or the "shortness" of the path (Engelbrecht, [2007](#engelbrecht2007computational)). The
 graphs below (in clockwise order, starting from the upper left) describe the
 _(i)_ city locations, the _(ii)_ solution found by the algorithm, the _(iii)_
 (mean) behaviour of the ants, and the _(iv)_ minimum tour distance for each
@@ -112,8 +112,7 @@ first implemented to construct the initial tour.
 
 ## References
 
-- A. Engelbrecht, *Computational Intelligence: An Introduction*, John Wiley & Sons, Ltd., 2007.
-- A. Schriver, "On the history of combinatorial optimization (until 1960)" in _Handbook of Discrete Optimization_, Elsevier, Amsterdam, pp. 1-68, 2005.
-- M. Dorigo. _Optimization, Learning and Natural Algorithms_. PhD thesis, Politecnico di Milano, 1992
+- <a id="engelbrecht2007computational">Engelbrecht, Andres</a> (2007). *Computational Intelligence: An Introduction*, John Wiley & Sons.
+- <a id="dorigo1992optimization">Dorigo, Marco</a> (1992). *Optimization, Learning, and Natural Algorithms*, PhD Thesis, Politecnico di Milano.
 
 You can access the gist [here.](https://gist.github.com/ljvmiranda921/ca93059bc213531fd99af22955b6bf5f)
