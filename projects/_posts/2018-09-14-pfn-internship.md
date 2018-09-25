@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ChainerRL Parallelization (PFN Internship)"
+title: "ChainerRL Parallelization"
 date: 2018-09-14
 category: projects
 comments: true
@@ -35,8 +35,8 @@ outline:
 * [A short introduction to ChainerRL](#intro)
 * [Continuous training in reinforcement learning](#continuous)
 * [Batch Proximal Policy Optimization (PPO) implementation](#batchppo)
-* Simulation results (Gym and MuJoCo environments)
-* Conclusion
+* [Simulation results (Gym and MuJoCo environments)](#results)
+* [Conclusion](#conclusion)
 
 ## <a id="intro"></a> A short introduction to ChainerRL
 
@@ -44,15 +44,18 @@ ChainerRL is a reinforcement learning framework built on-top of Chainer (think
 Tensorflow or Pytorch). It contains an extensive API that allows you to define
 your agent, its policy, the environment, and the overall training routine:
 
-![overview](/assets/png/pfn2018intern/chainerrl-overview.png){:width="720px"}
+![overview](/assets/png/pfn2018intern/chainerrl-overview.png){:width="720px"}  
+__Figure:__ _ChainerRL is a feature-rich reinforcement learning framework_
+{: style="text-align: center;"}
 
-It is convenient to use ChainerRL: simply create a model and an optimizer, pass
-them into an instance of your agent, and have your agent interact with the training
-environment. There's a variety of policies and agents included in the library,
-you just need to import them and set their hyperparameters. Its basic usage can
-be summarized in a diagram:
+It is convenient to use ChainerRL: simply (1) create a model and an optimizer,
+(2) pass them into an instance of your agent, and (3) have your agent interact
+with the training environment. There's a variety of policies and agents
+included in the library, you just need to import them and set their
+hyperparameters. Its basic usage can be summarized in a diagram:
 
-![usage](/assets/png/pfn2018intern/chainerrl-basic-usage.png){:width="640px"}
+![usage](/assets/png/pfn2018intern/chainerrl-basic-usage.png){:width="640px"}  
+__Figure:__ _Basic usage of ChainerRL_
 {: style="text-align: center;"}
 
 > If your interest was piqued with what I just mentioned, feel free to go over
@@ -62,17 +65,18 @@ be summarized in a diagram:
 In ChainerRL, the interaction between the agent and the environment is done in
 an episodic manner. This means that once a `done` signal is sent, the
 interaction simply ends. Here's a simple Markov diagram explaining this process
-(At time $$t$$, $$S_t$$ is the state, $$A_t$$ is the action, and $$R_t$$ is the
-reward): 
+(At time $$t$$, where $$S_t$$ is the state, $$A_t$$ is the action, and $$R_t$$
+is the reward): 
 
 
-![episodic](/assets/png/pfn2018intern/chainerrl-episodic.png){:width="480px"}
+![episodic](/assets/png/pfn2018intern/chainerrl-episodic.png){:width="360px"}  
+__Figure:__ _Episodic training scheme, the usual way we do RL_
 {: style="text-align: center;"}
 
 Given a state $$S_t$$, we take an action $$A_{t}$$ to produce the next state
 $$S_{t+1}$$. We do this for a number of timesteps until the environment signals
 that the interaction is already done. The agent does not recognize the value
-of being in the terminal state, $$V(S) = 0$$ if done, and so we repeat
+of being in the terminal state, i.e. $$V(S) = 0$$ if done, and so we repeat
 another episode (or terminate) into a clean slate. 
 
 This is the usual way of doing reinforcement learning, nothing fishy about it.
@@ -90,7 +94,8 @@ parallelization. There are two main differences in this method:
   done.
 * The environment is reset right away when proceeding into the next episode.
 
-![continuous](/assets/png/pfn2018intern/chainerrl-continuous.png){:width="640px"}
+![continuous](/assets/png/pfn2018intern/chainerrl-continuous.png){:width="480px"}  
+__Figure:__ _Continuous training scheme to support parallelization_
 {: style="text-align: center;"}
 
 The main consequence of these changes is that the agent still considers the
@@ -106,15 +111,18 @@ PPO) algorithm comes in.
 
 ## <a id="batchppo"></a> Batch Proximal Policy Optimization (Batch PPO)
 
-The main idea for Batch PPO is that we run $$N$$ processes/simulators in
-parallel (now possible because of the continuous training scheme), have them
-accummulate a specified number of transitions, and then update the model
+The main idea for Batch PPO is that (1) we run $$N$$ processes/simulators in
+parallel (now possible because of the continuous training scheme), (2) have them
+accummulate a specified number of transitions, and then (3) update the model
 synchronously. Thus, we can think of Batch PPO as a method that **performs
 synchronous updates in order to maximize compute in a processing unit
 (CPU/GPU)**. This is known as PPO-style parallelization (Schulman et al.,
-[2017](#schulman2017ppo))
+[2017](#schulman2017ppo)).
 
 ![parallel](/assets/png/pfn2018intern/parallel-env-stepping.png){:width="720px"}
+__Figure:__ _PPO-style parallelization. Perform an update after a
+certain number of timesteps_
+{: style="text-align: center;"}
 
 What happens is that we let our $$N$$ simulators run for a certain number
 of batch timesteps $$T$$, then after some number of transitions $$NT$$, we
@@ -142,7 +150,10 @@ this parallelization scheme is the following (inspired by my favorite anime):
 ![instances](/assets/png/pfn2018intern/naruto-01.gif){:width="240px"
 height="140px"}
 ![train](/assets/png/pfn2018intern/naruto-02.jpeg){:width="240px"}
-![learn](/assets/png/pfn2018intern/naruto-03.png){:width="240px"}
+![learn](/assets/png/pfn2018intern/naruto-03.png){:width="240px"}  
+__Figure:__ _Parallelization in Naruto: (1) create multiple simulators, (2)
+then train them (sync/async), in order to (3) learn the task at less time_
+{: style="text-align: center;"}
 
 1. First, we create multiple instances of our simulator (Naruto doing multiple
    shadow clones)
@@ -168,39 +179,62 @@ encountered along the way. Let me highlight two of them.
 The extended API currently has a `batch_act` and `batch_observe` calls for
 continuous training. The former takes the observation and produces an action
 depending on the policy, whereas the latter updates the policy while performing
-an action. The main problem is that sometimes, these two calls need to share
-data that propagates through time. When you've failed saving the data, then
+an action. The main problem is that, sometimes, **the two calls need to share
+data that propagates through time**. When you've failed saving the data, then
 it's gone forever. 
 
 It took me some time to solve this problem but I got around it by implementing
-an accummulator data structure. One call saves the data into the accummulator,
-while the other takes it via reference. Because the size of the accummulator
+an accummulator data structure. One call saves the data into the accumulator,
+while the other takes it via reference. Because the size of the accumulator
 grows through time (the amount of data it collects increases with the
 number of transitions), we simply flush the older contents as time passes. With
 this technique, it's easier to share data between two API calls without
-confusing ourselves
+the risk of losing information.
 
-![accummulator](/assets/png/pfn2018intern/chainerrl-accummulator.png){:width="640px"}
+![accummulator](/assets/png/pfn2018intern/chainerrl-accummulator.png){:width="640px"}  
+__Figure:__ _Accumulator data structure for passing data between two API calls_
+{: style="text-align: center;"}
 
 ### Reporting the reward's moving average
 
-Because we're not just concerned with a single simulator, we need to report the
-moving average of $$N$$ simulators at a certain collection of timesteps. With
-that in mind, we implemented a first-in-first-out (FIFO) deque data structure
-to handle our rewards. 
+Because we're not just concerned with a single simulator's performance, **we
+need to report the moving average of $$N$$ simulators** during the training
+process. With that in mind, we implemented a first-in-first-out (FIFO) deque
+data structure to handle our rewards. If we set our deque length to 100, then
+we collect the average reward of the last $$NT=100$$ transitions and report it
+as a single floating-point number.  This gives us a consistent reward structure
+throughout the library. In the ChainerRL API, the size of the deque is treated
+as a hyperparameter. A simple diagram is shown below: 
 
-![fifo](/assets/png/pfn2018intern/chainerrl-fifo.png){:width="720px"}
 
-If we set our deque length to 100, then we collect the average reward of the
-last $$NT$$ transitions and report it as a single floating-point number. This
-gives us a consistent reward structure throughout the library.
+![fifo](/assets/png/pfn2018intern/chainerrl-fifo.png){:width="720px"}  
+__Figure:__ _Deque data structure to report a reward stream's moving average_
+{: style="text-align: center;"}
 
-## Simulation Results
+
+## <a id="results"></a> Simulation Results
 
 In order to confirm that parallelization indeed hastens training time, I tested
 it on both Gym and MuJoCo environments. For Gym, I tested on CartPole-v1 and
 Pendulum-v0. For MuJoCo, I tested on Hopper-v2, Reacher-v2, and HalfCheetah-v2.
 The graphs below show the moving average for different number of simulators.
+
+## Conclusion
+
+In this post, I have shared the design process and some information about my
+intern project at Preferred Networks. I've talked about the ChainerRL library,
+its usual API for episodic training, and how it cannot support parallelization.
+Then, I've discussed continuous training that enables parallel
+agent-environment interactions (simulators), an algorithm to update our model
+(BatchPPO), and some difficulties/challenges I encountered during
+implementation. Lastly, we tested the extended API to the Gym and MuJoCo
+environments, and saw how increasing the number of simulators speeds-up
+experimentation. 
+
+Overall, this intern project pushed my boundaries in software development and
+reinforcement learning as a whole. I would like to thank my mentors,  Yasuhiro
+Fujita-san and Toshiki Kataoka-san, for the insightful comments and helpful
+guidance.
 
 ## References
 
