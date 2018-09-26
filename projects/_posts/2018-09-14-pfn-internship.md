@@ -44,7 +44,7 @@ ChainerRL is a reinforcement learning framework built on-top of Chainer (think
 Tensorflow or Pytorch). It contains an extensive API that allows you to define
 your agent, its policy, the environment, and the overall training routine:
 
-![overview](/assets/png/pfn2018intern/chainerrl-overview.png){:width="720px"}  
+![overview](/assets/png/pfn2018intern/chainerrl-overview.png){:width="640px"}  
 __Figure:__ _ChainerRL is a feature-rich reinforcement learning framework_
 {: style="text-align: center;"}
 
@@ -54,7 +54,7 @@ with the training environment. There's a variety of policies and agents
 included in the library, you just need to import them and set their
 hyperparameters. Its basic usage can be summarized in a diagram:
 
-![usage](/assets/png/pfn2018intern/chainerrl-basic-usage.png){:width="640px"}  
+![usage](/assets/png/pfn2018intern/chainerrl-basic-usage.png){:width="520px"}  
 __Figure:__ _Basic usage of ChainerRL_
 {: style="text-align: center;"}
 
