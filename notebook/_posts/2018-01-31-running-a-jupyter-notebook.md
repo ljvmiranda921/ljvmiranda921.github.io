@@ -27,7 +27,8 @@ and all its dependencies](http://jupyter.readthedocs.io/en/latest/install.html)
 are installed in both machines. Here's a quick diagram of the whole process, I
 will discuss them one-by-one in the next section:
 
-![overview](/assets/png/tuts/jupyternotebook.png){:width="560px"}
+![overview](/assets/png/tuts/jupyternotebook.png){:width="640px"}  
+__Figure:__ _A simple three-step process for running a remote Jupyter notebook._
 {: style="text-align: center;"}
 
 ### Step 1: Run Jupyter Notebook from remote machine
