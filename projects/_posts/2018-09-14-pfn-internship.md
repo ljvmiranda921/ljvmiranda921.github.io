@@ -9,13 +9,6 @@ summary: "Discussion of my open-source internship project in Preferred Networks"
 tags: [reinforcement learning, chainer, chainerrl, parallelization, internship, preferred networks]
 ---
 
-> This work was done as part of my internship in Preferred Networks.
-> I'll only discuss parts of my work that are open-source and
-> publicly-available as stipulated in NDA. 
-
-![chainerrl-logo](https://i.imgur.com/CgGgAN8.png){:width="360px"}
-![pfn-logo](https://i.imgur.com/vm1NMSH.png){:width="360px"}
-
 
 This summer, I joined [Preferred
 Networks](https://www.preferred-networks.jp/ja/) as an intern and worked on
@@ -43,6 +36,13 @@ outline:
 * [Batch Proximal Policy Optimization (PPO) implementation](#batchppo)
 * [Simulation results (Gym and MuJoCo environments)](#results)
 * [Conclusion](#conclusion)
+
+> I'll only discuss parts of my work that are open-source and
+> publicly-available as stipulated in the NDA. 
+
+![chainerrl-logo](https://i.imgur.com/CgGgAN8.png){:width="240px"}
+![pfn-logo](https://i.imgur.com/vm1NMSH.png){:width="240px"}
+{: style="text-align: center;"}
 
 ## <a id="intro"></a> A short introduction to ChainerRL
 
