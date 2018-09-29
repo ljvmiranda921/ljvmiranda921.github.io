@@ -17,6 +17,9 @@ please leave a comment below.
 - [Negative log-likelihood](#negative-log-likelihood)
 - [Derivative of the Softmax](#derivative-of-the-softmax)
 
+#### Changelog
+* 09-29-2018: Update figures using TikZ for consistency
+
 ## Softmax Activation Function
 
 The softmax activation function is often placed at the output layer of a
@@ -43,8 +46,8 @@ Thus, given a three-class example below, the scores $$y_i$$ are computed from
 the forward propagation of the network. We then take the softmax and obtain
 the probabilities as shown:
 
-![Softmax computation](/assets/png/cs231n-ann/softmax.png){:width="720px"}  
-__Figure 1:__ _Softmax Computation for three classes_
+![Softmax computation](/assets/png/cs231n-ann/softmax.png){:width="640px"}  
+__Figure:__ _Softmax Computation for three classes_
 {: style="text-align: center;"}
 
 The output of the softmax describes the probability (or if you may, the
@@ -58,11 +61,11 @@ is that it improves the interpretability of the neural network. By looking at
 the softmax output in terms of the network's confidence, we can then reason
 about the behavior of our model.
 
-## Negative Log-Likelihood
+## Negative Log-Likelihood (NLL)
 
 In practice, the softmax function is used in tandem with the negative
-log-likelihood. This loss function is very interesting if we interpret it in
-relation to the behavior of softmax. First, let's write down our loss
+log-likelihood (NLL). This loss function is very interesting if we interpret it
+in relation to the behavior of softmax. First, let's write down our loss
 function:
 
 $$
@@ -81,8 +84,9 @@ So if we are using the negative log-likelihood as our loss function, when
 does it become unhappy? And when does it become happy? Let's try to plot its
 range:
 
-![Negative log-likelihood](/assets/png/cs231n-ann/neg_log.png){:width="720px"}  
-__Figure 2:__ _The loss function reaches infinity when input is 0, and reaches 0 when input is 1._
+![Negative log-likelihood](/assets/png/cs231n-ann/neg_log.png){:width="480px"}  
+__Figure:__ _The loss function reaches infinity when input   
+is 0, and reaches 0 when input is 1._
 {: style="text-align: center;"}
 
 The negative log-likelihood becomes unhappy at smaller values, where it can
@@ -93,7 +97,8 @@ confidence at the correct class, the unhappiness is low, but when the network
 assigns low confidence at the correct class, the unhappiness is high.
 
 ![Negative log-likelihood](/assets/png/cs231n-ann/neg_log_demo.png){:width="720px"}  
-__Figure 3:__ _When computing the loss, we can then see that higher confidence at the correct class leads to lower loss and vice-versa._
+__Figure__ _When computing the loss, we can then see that higher   
+confidence at the correct class leads to lower loss and vice-versa._
 {: style="text-align: center;"}
 
 ## Derivative of the Softmax
