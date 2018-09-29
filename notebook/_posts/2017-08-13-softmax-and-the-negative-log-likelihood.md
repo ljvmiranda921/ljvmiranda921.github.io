@@ -14,7 +14,7 @@ backpropagation algorithm. If there are any questions or clarifications,
 please leave a comment below.
 
 - [Softmax Activation Function](#softmax-activation-function)
-- [Negative log-likelihood](#negative-log-likelihood)
+- [Negative log-likelihood (NLL)](#nll)
 - [Derivative of the Softmax](#derivative-of-the-softmax)
 
 #### Changelog
@@ -61,7 +61,7 @@ is that it improves the interpretability of the neural network. By looking at
 the softmax output in terms of the network's confidence, we can then reason
 about the behavior of our model.
 
-## Negative Log-Likelihood (NLL)
+## <a id="nll"></a> Negative Log-Likelihood (NLL)
 
 In practice, the softmax function is used in tandem with the negative
 log-likelihood (NLL). This loss function is very interesting if we interpret it
