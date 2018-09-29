@@ -10,6 +10,12 @@ tags: [reinforcement learning, chainer, chainerrl, parallelization, internship, 
 ---
 
 > This work was done as part of my internship in Preferred Networks.
+> I'll only discuss parts of my work that are open-source and
+> publicly-available as stipulated in NDA. 
+
+![chainerrl-logo](https://i.imgur.com/CgGgAN8.png){:width="360px"}
+![pfn-logo](https://i.imgur.com/vm1NMSH.png){:width="360px"}
+
 
 This summer, I joined [Preferred
 Networks](https://www.preferred-networks.jp/ja/) as an intern and worked on
@@ -218,6 +224,54 @@ In order to confirm that parallelization indeed hastens training time, I tested
 it on both Gym and MuJoCo environments. For Gym, I tested on CartPole-v1 and
 Pendulum-v0. For MuJoCo, I tested on Hopper-v2, Reacher-v2, and HalfCheetah-v2.
 The graphs below show the moving average for different number of simulators.
+
+### Reward for Gym Environments
+
+The OpenAI Gym environments present a set of pretty tasks to test
+our algorithm (_Well except CartPole, it's like the MNIST of reinforcement
+learning_). I am using an Asynchronous Advantage Actor-Critic (A3C)
+algorithm with a size 200-200 multilayer perceptron (softmax output). 
+
+![CartPole-v1](https://i.imgur.com/37Pr9Rm.png){:width="320px"}
+![Pendulum-v0](https://i.imgur.com/ppeLL0x.png){:width="320px"}  
+__Figure:__ _Moving average of the reward for Gym Environments.  
+Notice that convergence is faster with a high number of simulators_
+{: style="text-align: center;"}
+
+Here, we can see that training speed, in terms of environmental
+stepping, scales well with respect to the number of simulators. However, there
+seems to be a problem in Pendulum-v0, where we can observe Sim-1 (nb. of
+processes = 1) to surpass the performance of others.
+
+
+### Reward MuJoCo Environments
+
+Next, I tested on MuJoCo environments. These are physics-based environments
+with difficult learning tasks. What I personally like about them is that they
+are very nice to simulate once training is done.
+
+For this task, I used another A3C model with a fully-connected Gaussian policy
+(state-independent covariance). We tested on 200,000 steps for good measure (in
+fact, most papers use a million steps as baseline). The results are shown below
+
+![Hopper-v2](https://i.imgur.com/aezXER6.png){:width="320px"}
+![HalfCheetah-v2](https://i.imgur.com/SJDjPk7.png){:width="320px"}  
+![Reacher-v2](https://i.imgur.com/4FaUjxW.png){:width="320px"}   
+__Figure:__ _Moving average of the reward for MuJoCo Environments.  
+Notice that convergence is faster with a high number of simulators_
+{: style="text-align: center;"}
+
+Same thing can be observed here as with the Gym environments: as we increase
+the number of parallel simulators, the convergence speed becomes faster.
+Lastly, the GIFs below show what the final agent looks like after training.
+Remember that during evaluation, we don't need to show multiple
+agent-environment interactions since we're only updating one "master" model.
+
+![Hopper-v2](https://i.imgur.com/vshQdEq.gif){:width="240px"} 
+![HalfCheetah-v2](https://i.imgur.com/0EMydkG.gif){:width="240px"} 
+![Reacher-v2](https://i.imgur.com/bbYwW6D.gif){:width="240px"}   
+__Figure:__ _Simulation results for the final model for the three MuJoCo environments_
+{: style="text-align: center;"}
 
 ## Conclusion
 
