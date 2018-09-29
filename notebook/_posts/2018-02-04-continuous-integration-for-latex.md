@@ -28,7 +28,7 @@ Travis-CI will attempt to build your document. If the build is successful,
 the output (mostly the `.pdf` file) will be automatically uploaded to your
 Drobox. Our pipeline will look like this:
 
-![Diagram](/assets/png/tuts/workflow.png){:width="560px"}  
+![Diagram](/assets/png/tuts/latex-ci.png){:width="480px"}  
 __Figure 1:__ _LaTeX with Continuous Integration and Deployment Workflow_
 {: style="text-align: center;"}
 
