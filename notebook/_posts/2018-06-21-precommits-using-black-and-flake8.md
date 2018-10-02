@@ -155,3 +155,6 @@ __Figure:__ _Short demo on pre-commit hooks_
 {: style="text-align: center;"}
 
 Awesome right? Hope you learned something new today!
+
+#### Changelog
+* 06-05-2018: Update pre-commit config filename (by [@asottile](https://github.com/asottile))

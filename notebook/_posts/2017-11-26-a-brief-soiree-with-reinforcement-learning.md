@@ -348,3 +348,6 @@ interest with RL problems, and I hope I can do research on them in the future!
 So here closes my brief soirée with reinforcement learning. I'm aware that
 there may be some mistakes in my implementation or analysis, so please feel
 free to message me and point them out!
+
+#### Changelog
+* 08-12-2018: Add update on RL task and PFN internship

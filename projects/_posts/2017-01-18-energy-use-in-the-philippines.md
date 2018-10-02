@@ -187,3 +187,6 @@ adoption. Lastly, the electricity consumption of the country is still on the
 rise, and will still be, given the trend for the last twenty years. This can
 then be followed by an increasing carbon footprint, which may lead to
 unprecedented effects if left unmitigated.
+
+#### Changelog
+* 06-11-2018: Add original Kaggle link

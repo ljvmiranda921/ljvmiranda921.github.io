@@ -250,3 +250,6 @@ or suggestions to make this thing easier!
 
 - This [tutorial](https://hv.pizza/blog/document-building-versioning-with-tex-document-git-continuous-integration-dropbox/) by H. Vakharia is good. Here, he uses Sephamore CI and Docker in his workflow. I adapted this work for a regular Travis-CI build. 
 - This [short tutorial](https://labs.consol.de/travis/dropbox/2015/11/04/upload-travis-artifacts-to-dropbox.html) for uploading Travis artifacts to Dropbox is also nice.
+
+#### Changelog
+* 09-28-2018: Update figure using Tikz for consistency
