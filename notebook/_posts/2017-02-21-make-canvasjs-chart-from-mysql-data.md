@@ -30,7 +30,7 @@ of the codes below. But first, in order to understand the bigger picture of
 what we'll do, take a look at the diagram below:
 
 ![Diagram](/assets/png/tuts/canvasjstogui.png){:width="560px"}  
-__Figure 1:__ _Task Diagram_
+__Figure:__ _Task Diagram_
 {: style="text-align: center;"}
 
 Let me first explain what we'll do one-by-one:
@@ -181,3 +181,7 @@ JSON file. Afterwhich, we can simply invoke the chart-making function via
 
 I hope that I was able to shed light on this subject more clearly. If you
 have any questions, don't hesitate to comment below!
+
+#### Changelog
+
+* 10-04-2018: Update figures using Tikz for consistency
