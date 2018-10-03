@@ -17,8 +17,6 @@ please leave a comment below.
 - [Negative log-likelihood (NLL)](#nll)
 - [Derivative of the Softmax](#derivative-of-the-softmax)
 
-#### Changelog
-* 09-29-2018: Update figures using TikZ for consistency
 
 ## Softmax Activation Function
 
@@ -189,3 +187,6 @@ the softmax layer.
 * [Stanford CS231N Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/). _This course inspired this blog post. The derivation of the softmax was left as an exercise and I decided to derive it here._
 * [The Softmax Function and Its Derivative](http://eli.thegreenplace.net/2016/the-softmax-function-and-its-derivative/). _A more thorough treatment of the softmax function's derivative_
 * [CIFAR 10](https://www.cs.toronto.edu/~kriz/cifar.html). _Benchmark dataset for visual recognition._
+
+#### Changelog
+* 09-29-2018: Update figures using TikZ for consistency

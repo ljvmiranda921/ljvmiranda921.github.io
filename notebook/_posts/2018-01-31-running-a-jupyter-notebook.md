@@ -147,3 +147,7 @@ In my use-case, I don't have the Tensorflow GPU library in my local machine
 so I need to run notebooks on-top of our laboratory's server. This enabled me
 to decrease development time, and helped me perform fast analyses of my
 models.
+
+#### Changelog
+* 09-29-2018: Update figure using Tikz for consistency
+* 09-11-2018: Add diagram to Jupyter notebook tutorial
