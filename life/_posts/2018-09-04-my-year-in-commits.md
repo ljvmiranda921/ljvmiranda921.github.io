@@ -18,10 +18,10 @@ say in **git commits**:
 ![github](/assets/png/life/my-life-in-commits.png){:width="720px"}
 {: style="text-align: center;"}
 
-For those who aren't familiar with version-control systems, a git commit is
+For those who aren't familiar with version-control systems (VCS), a git commit is
 simply a log or savepoint in any software project. Each log keeps a history of
-the things you've done so that you can track them in the future. If there is a
-commit history of my Tuesday, it would look like this:
+the things you've done so far, so that you can track them in the future. If
+there is a commit history of my Tuesday, it would look like this:
 
 ```
 Cook breakfast and lunch
@@ -39,10 +39,10 @@ Remove deprecated modules
 
 The chart above shows how many logs I have done every single day for the past
 year. Greener boxes mean more commits, whereas gray boxes are zero commits.
-It's not necessarily a measure of productivity, but just an approximation of
+It's not necessarily a measure of productivity, more of an approximation of
 one's tech life. 
 
-In this post, I'd like to review my year in commits, and discuss in brief some
+In this post, I'd like to review my year in commits, then discuss in brief some
 lessons I've learned and challenges I'll set for myself next year. I think,
 that as I end my Masters degree and transition into a new phase in life, it's
 good to look back on the things I've done so far.
@@ -63,9 +63,9 @@ highlights:
 
 * **The programming bug (July 2017)**. Perhaps, the "programming bug" bit me
   when I started PySwarms back in July 2017. Although my blog has been set-up
-  back then, I only started taking this craft seriously through that library.
-  Right now, the project is growing. We have two more maintainers and fourteen
-  contributors all-in-all. Not bad for my first soiree.
+  back then, I only started programming seriously with that library.
+  Right now, the project is growing: we have two more maintainers and fourteen
+  contributors all-in-all&mdash; not bad for my first soirée.
 * **Building my research code (August 2017--)** Git commits for my thesis were
   usually done in 2-3 week bursts. PySwarms taught me a lot about software
   development, and I decided to apply them in my research code.
@@ -73,8 +73,8 @@ highlights:
   amount of breaks last year, but it seems that I worked non-stop since
   January. The last few trips I had were in Matsue and Miyazaki.  Then, the
   "final" long break happened during the Christmas holidays, when my mom and
-  girlfriend came.  After that, all trips were just business trips (an
-  internship in Kobe and a conference in Tokyo). 
+  girlfriend came.  After that, all trips were just business trips: an
+  internship in Kobe and a conference in Tokyo. 
 * **LaTeX manuscript (February--June 2018)**. I did enjoy preparing my
   manuscript. I started five months before the deadline, so I think there was
   no pressure back then. Since we wrote some papers beforehand, I didn't start
@@ -109,18 +109,17 @@ the way.
 
 As I've said before, I'm still starting out. I think I just got a lucky break
 in PySwarms, for it accelerated my learning&mdash;mostly by necessity. In this
-section, I'll write down some lessons I'd bring as I go forward on this journey
+section, I'll write down some lessons I'd bring as I go forward in this journey
 in software and tech. I may not be the most qualified person to give nuggets of
-wisdom, but hey, maybe you'll also find them useful: 
+wisdom, but hey, maybe you'll find them useful: 
 
 * **Strive to write readable and idiomatic code**. I think I will never
-  consider myself as a 10x programmer, just a 1x programmer with good
-  habits. One good habit is writing *readable and well-documented* code. They say
-  that research code is frustratingly hard-to-read (just look at
+  consider myself as a 10x programmer, just a 1x programmer with good habits.
+  One good habit is writing *readable and well-documented* code. They say that
+  research code is frustratingly hard-to-read (just look at
   [OpenAI](https://www.reddit.com/r/MachineLearning/comments/95ft1j/d_are_openai_codes_difficult_to_read_or_is_it/)),
-  but I think it's an opportunity for improvement. We can start from there.
-  Well-documented code doesn't just help other developers, it helps you as
-  well.
+  but I think it's an opportunity for improvement.  Well-documented code
+  doesn't just help other developers, it helps you as well.
 * **Create a large volume of work**. As with all creative work, I think one way
   to acquire "taste" and improve one's craft is to keep on building things (see
   [Ira Glass on the Creative
@@ -142,7 +141,7 @@ wisdom, but hey, maybe you'll also find them useful:
   code reviews, answering issues, or teaching others, a little niceness goes a
   long way.
 
-Two more important things: a certain philosophy that I'm practicing right now
+Two more things: a certain philosophy that I'm practicing right now
 is to **always learn the stack immediately below and above mine.** There's no
 need to become full-stack&mdash;as long as you can do your own thing with deep
 expertise, and you're aware of the context of your field&mdash;you're already
@@ -154,7 +153,7 @@ risk of spreading yourself too thin nor becoming a one-trick pony.
 For example: my current stack is in machine learning, then that means I need to
 learn *how the data is being sourced* (stack below me), and *how my models can
 affect an organization's decision* (stack above me). I don't need to fully-grok
-all management principles or ETL techniques, but *as long as I'm aware*, and I
+all management principles nor ETL techniques, but *as long as I'm aware*, and I
 can do them an intermediate person would, then I think I'm good. I can focus my
 energy in machine learning, but still aware of the larger context of what I'm
 doing. 
@@ -196,3 +195,6 @@ journey in tech and software. Looking back, just one year of programming has
 provided me with new skills and perspectives. Now, tech has become more
 than just code&mdash;it's design, community, and craft. As I transition to the next
 phase of my life, I'm excited to see what the next few years will bring.
+
+#### Changelog
+* 10-02-2018: Update some grammar mistakes
