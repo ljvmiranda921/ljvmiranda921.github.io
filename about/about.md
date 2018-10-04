@@ -27,7 +27,7 @@ Philippines.
 
 Prior to that, I obtained my Masters degree from [Waseda
 University](https://www.waseda.jp/top/en), where I did some research on protein
-function prediction using unsupervised learning techniques.  Before graduation,
+function prediction using unsupervised learning techniques. Before graduation,
 I spent the summer as an intern at [Preferred
 Networks](https://www.preferred-networks.jp/en/), an AI startup in Japan.
 During that time I worked on a reinforcement learning library called
