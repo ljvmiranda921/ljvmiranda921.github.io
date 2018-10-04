@@ -37,7 +37,7 @@ of using only *the Python standard library*, so usual matrix dependencies
 such as `numpy` are forbidden.
 
 ![Demo](/assets/png/pfn2017rl/cartpole.gif)  
-__Figure 1:__ _Cartpole simulation from OpenAI Gym._  
+__Figure:__ _Cartpole simulation from OpenAI Gym._  
 _We'll be using a simpler one provided by Preferred Networks_
 {: style="text-align: center;"}
 
@@ -60,8 +60,8 @@ episode consists of resetting the environment and balancing the cartpole
 until it drops or the 500th timestep is reached. For the PFN task, success is
 achieved when the pole is balanced for 95 out of 100 episodes.
 
-![Cartpole Environment](/assets/png/pfn2017rl/env.png)  
-__Figure 2:__ _The Cartpole Environment._  
+![Cartpole Environment](/assets/png/pfn2017rl/env.png){:width="480px"}  
+__Figure:__ _The Cartpole Environment._  
 _Given an action, the environment updates its internal state and outputs a new state._  
 _(For now, we're only considering fully-observed systems)_  
 {: style="text-align: center;"}
@@ -90,8 +90,8 @@ explicitly parametrized. We can then frame the policy in the following
 distribution: $$\pi_{\theta}(\mathbf{a}_{t} | \mathbf{o}_{t})$$. Where
 $$\theta$$ corresponds to the parameters that governs the policy $$\pi$$.
 
-![Linear Model](/assets/png/pfn2017rl/lm.png)  
-__Figure 3:__ _The Linear Model._  
+![Linear Model](/assets/png/pfn2017rl/lm.png){:width="480px"}  
+__Figure:__ _The Linear Model._  
 _The linear model generates an action based on the observation._  
 _In this task, the model is explicitly parameterized_  
 {: style="text-align: center;"}
@@ -122,8 +122,8 @@ effective way to search for a good set of parameters by updating our current
 $$\theta$$ with the mean of the elite parameters generated from a noisy
 version of $$\theta$$: $$\theta_{i} = \theta + \epsilon_{i}$$.
 
-![Cross Entropy Method](/assets/png/pfn2017rl/cem.png)  
-__Figure 3:__ _Cross-entropy Method for updating the parameters._  
+![Cross Entropy Method](/assets/png/pfn2017rl/cem.png){:width="480px"}  
+__Figure:__ _Cross-entropy Method for updating the parameters._  
 {: style="text-align: center;"}
 
 The algorithm can be seen as follows:
@@ -169,8 +169,8 @@ cross-entropy method.
 
 ## Implementation
 
-![API Implementation](/assets/png/pfn2017rl/api.png)  
-__Figure 4:__ _Software Implementation of the RL model_  
+![API Implementation](/assets/png/pfn2017rl/api.png){:width="480px"}  
+__Figure:__ _Software Implementation of the RL model_  
 {: style="text-align: center;"}
 
 This figure shows how each component of the RL task interacts with one
@@ -288,7 +288,7 @@ that a small number of samples (e.g. 25), causes multiple dips during
 training.
 
 ![Examining the N hyperparameter](/assets/png/pfn2017rl/n_val_demo.png)  
-__Figure 5:__ _When the number of noisy samples is increased,_  
+__Figure:__ _When the number of noisy samples is increased,_  
 _the model converges faster. A low value tends to have several dips during training_  
 {: style="text-align: center;"}
 
@@ -306,7 +306,7 @@ very high values of $$p$$ tend to hurt model convergence as seen in the
 Figure below:
 
 ![Examining the p hyperparameter](/assets/png/pfn2017rl/p_val_demo.png)  
-__Figure 6:__ _When the number of elite samples is decreased,_  
+__Figure:__ _When the number of elite samples is decreased,_  
 _the model converges faster. Interestingly, higher numbers didn't converge well_  
 {: style="text-align: center;"}
 
@@ -325,7 +325,7 @@ with `500` timesteps, most model variants have a uniform behaviour after
 convergence.
 
 ![Adjusting the step size](/assets/png/pfn2017rl/z_val_demo.png)  
-__Figure 7:__ _Adjusting the model's number of timesteps_  
+__Figure:__ _Adjusting the model's number of timesteps_  
 {: style="text-align: center;"}
 
 ## Final thoughts
@@ -350,4 +350,6 @@ there may be some mistakes in my implementation or analysis, so please feel
 free to message me and point them out!
 
 #### Changelog
+* 10-04-2018: Update figures using Tikz for consistency
 * 08-12-2018: Add update on RL task and PFN internship
+
