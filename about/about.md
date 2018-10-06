@@ -9,7 +9,7 @@ Hi friends, my name is Lj Miranda and welcome to my blog!
 
 I like [building things](https://github.com/ljvmiranda921).
 
-I started this site to tell the story of my journey in tech. I believe in
+I started this site to tell the story of my tech journey. I believe in
 **technology's enabling power, especially in developing countries like the
 Philippines**. I aspire to usher that potential&mdash;even for just a tiny bit.
 There is still a long way to go, and this site records my progress. 
@@ -36,9 +36,9 @@ training parallelization framework.  Further back, I received my undergraduate
 degree in Electronics Engineering (*cum laude*) and a minor in Philosophy from
 [Ateneo de Manila University](www.ateneo.edu). 
 
-I'm interested in problems concerning machine learning deployment and its
-applications, especially those that deal with development, engineering, and
-scaling. Furthermore, I want to understand more the role of technology in
+I'm interested in problems concerning machine learning and its
+applications, especially those that deal with its deployment, engineering, and
+use. Furthermore, I want to understand more the role of technology in
 underserved communities (and developing countries), and how it affects our
 lives as a whole. 
 
