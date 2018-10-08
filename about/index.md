@@ -34,7 +34,7 @@ During that time I worked on a reinforcement learning library called
 [ChainerRL](https://github.com/chainer/chainerrl), where I implemented a
 training parallelization framework.  Further back, I received my undergraduate
 degree in Electronics Engineering (*cum laude*) and a minor in Philosophy from
-[Ateneo de Manila University](www.ateneo.edu). 
+[Ateneo de Manila University](https://www.ateneo.edu). 
 
 I'm interested in problems concerning machine learning and its
 applications, especially those that deal with its deployment, engineering, and
