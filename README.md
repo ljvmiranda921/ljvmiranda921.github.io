@@ -42,4 +42,9 @@ $ bundle install
 $ bundle exec jekyll serve
 ```
 
-The page, by default, should be running at localhost:4000
+The page, by default, should be running at [localhost:4000](localhost:4000)
+
+## Contribute
+
+If you found some errors in spelling/grammar, mistakes in content and the like, then feel
+free to fork this repository and make a Pull Request!
