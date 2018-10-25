@@ -25,9 +25,11 @@ should consider whenever you adopt a merge or rebase workflow. Lastly, I will
 share a Git workflow and set of policies that may be useful in a
 fairly-experienced dev team.
 
-- Non-negotiable best practices for any git workflow
+- Best practices for any git workflow
 - Rebase policy for a cleaner history
 - Merge policy for a verbose history
 - A workflow we're trying to develop
+
+## Best practices for any git workflow
 
 
