@@ -45,12 +45,47 @@ the commit hash is represented as a single letter_
 
 ## Merge policy for a verbose history
 
+The easiest way to merge two branches together is through the merge policy.
+This simply consolidates the two diverging histories of your `master` and
+`feature` branches via a merge-commit. You can perform a merge that adheres to
+a merge policy by executing the following commands (assuming that you're
+coming from the `feature` branch):
+
+```shell
+$ git checkout master # go back to master
+$ git merge feature # merge changes
+```
+
+This presents a commit history that usually look like this:
 
 ![Diagram](/assets/png/gitflow/merge.png){:width="480px"}  
 __Figure:__ _A merge policy creates a merge commit, then preserves the
 connections (or the history) of the created branches. This is a non-destructive
 option_
 {: style="text-align: center;"}
+
+Usually, what I do is merge upstream changes in `master` (while in the
+`feature` branch), then merge the changes in the `feature` branch back into
+the master. However, if you have a `master` branch that changes quite often,
+this might lead to a dirty commit history. 
+
+```shell
+$ git merge master # while in feature branch
+$ git checkout master # go back to master
+$ git merge feature # merge changes
+```
+
+One advantage of using this policy is that you can have a verbose git history
+that details how each feature branch interacted with the master (or to one
+another). However, given multiple team members working on different feature
+branches, this can lead to spurious merge-commits scattered around the git
+history. 
+
+> In Github, you can check your commit history by going to your project's
+> repository, then "Insights" > "Network". In your terminal, you can find
+> pretty git log settings in this [StackOverflow
+> thread](https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs)
+
 
 ## Rebase policy for a cleaner history
 
