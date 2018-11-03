@@ -89,6 +89,7 @@ history.
 
 ## Rebase policy for a cleaner history
 
+
 ![Diagram](/assets/png/gitflow/rebase.png){:width="480px"}  
 __Figure:__ _A rebase policy effectively changes your commits and rewrites your
 project history. In effect, you create a linear history in your `master` branch._
