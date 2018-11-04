@@ -114,7 +114,10 @@ to help with your team's workflow:
 
 In summary, a merge policy avails you with verbosity, but having too much of it
 can lead to obfuscation. It may be useful to adopt different branching models
-and whitelists so that the history is well-maintained.
+and whitelists so that the history is well-maintained. In most of my
+open-source projects, I usually adopt this policy. In order to avoid obfuscated
+git histories, I often ask my contributors to rebase cleanup their branches,
+and restrict `push` access to `master` from non-maintainers.
 
 ## Rebase policy for a cleaner history
 
