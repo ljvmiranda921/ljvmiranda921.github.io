@@ -22,7 +22,7 @@ Assuming that your team already practices [feature
 branching](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
 and [rebase as
 cleanup](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase),
-how do you then integrate all your devs' commits onto your `master` branch?
+how will you then integrate all your devs' commits onto your `master` branch?
 Here, I will highlight some **pros, cons, and decision points** you should
 consider whenever you adopt a merge or rebase workflow. Then, I will share a
 Git workflow and set of policies that may be useful in a fairly-experienced dev
@@ -83,15 +83,15 @@ history.
 
 > In Github, you can check your commit history by going to your project's
 > repository, then "Insights" > "Network". In your terminal, you can find
-> pretty git log settings in this [StackOverflow
-> thread](https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs)
+> pretty git log settings in this [StackOverflow thread](https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs)
 
 
 ## Rebase policy for a cleaner history
 
 ![Diagram](/assets/png/gitflow/rebase.png){:width="480px"}  
 __Figure:__ _A rebase policy effectively changes your commits and rewrites your
-project history. In effect, you create a linear history in your `master` branch._
+project history. In effect, you create a linear history in your `master`
+branch._
 {: style="text-align: center;"}
 
-Using the rebase policy, 
+Using the rebase policy. 
