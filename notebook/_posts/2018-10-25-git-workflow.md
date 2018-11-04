@@ -118,10 +118,97 @@ and restrict `push` access to `master` from non-maintainers.
 
 ## Rebase policy for a cleaner history
 
+Rebase is a powerful tool that enables you to effectively rewrite your history.
+As we all know, each commit is associated with an SHA-1 checksum (a hash) that
+differentiates one commit from the other. Even if two commits have the same
+changes when `git diff` is run, they are still considered different given
+non-identical hashes. Rebasing a commit (or set of commits) reapplies the
+changes you've made with a different hash, so again, even if the commit message
+(or `git diff`) is the same, Git still treats them as two different commits.
+
+This mechanic makes `git rebase` a popular merge policy. What it does is that
+it applies the changes from your feature branch to `master` but with a
+different commit hash. Because these commits are totally different (even if
+they propose the same change), you get a *nice-looking, linear commit history*:
+
 ![Diagram](/assets/png/gitflow/rebase.png){:width="480px"}  
 __Figure:__ _A rebase policy effectively changes your commits and rewrites your
 project history. In effect, you create a linear history in your `master`
 branch._
 {: style="text-align: center;"}
 
-Using the rebase policy. 
+Assuming we are in `master`, we can merge using the rebase policy by following
+these steps:
+
+```shell
+$ git checkout feature # go to feature branch first
+$ git rebase master # reapplies commits onto master
+$ git checkout master # go to master branch
+```
+
+In the diagram above, commits **d**, **e** and **<u>d</u>**, **<u>e</u>** are
+different from one another yet have the some set of changes. If you delete the
+feature branch (`git branch -D feature`), you'll be left with a linear history
+(sweet!).
+
+Another nifty trick when rebasing is to add the interactive `-i` option, as in
+`git rebase -i master`. This will open up an editor where you can control how
+the history will turn out. Say we just want to combine **<u>d</u>** and
+**<u>e</u>** together, when we run `git rebase -i master`, we'll get:
+
+```shell
+pick d* Commit message for d*
+pick e* Commit message for e*
+```
+
+We can change `pick` into `fixup` (or `squash`), so that the resulting commit
+to be merged is just one: `master: a -> b -> c -> f (squashed d, e)`
+
+One advantage of having a linear history is that it's easier to surgically
+manipulate whenever error arises (say, you just committed your company's secret API
+keys on your public repo). Of course, you tradeoff verbosity offered in merge
+policies.
+
+In summary, here's what the rebase policy can offer you and your team:
+- **PRO**: A linear history that is easy to follow and change (if needed!)
+- **PRO**: High-level of control as to how the history will turn out
+- **CON**: Lose context on your history, who made that feature branch? when did
+    this branch out? Of course you can trace this by looking at the commits
+    (and some `grep`-fu), but it's easier to see on a merge policy.
+- **CON**: One wrong rebase can mess up the history, leading to multiple
+    commits that just do the same changes.
+
+Thus, here are some considerations when you choose to adopt a rebase policy:
+
+- **Follow the [golden rule of
+  rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)**.
+  Never rebase on a public branch! Once you've introduced upstream changes to
+  `master`, other contributors with the outdated branch will create a set of
+  duplicate commits with the same diffs, making your history more confusing and
+  unmeaningful.
+- **Onboard new developers with `rebase` right away**. Most blog posts and
+    developer forums tout rebase as a magical weapon that can destroy or help
+    your git project. If you're a senior developer, help reduce this friction
+    by introducing them the basics of rebasing. This can help them familiarize
+    with how the workflow works and what happens in their commits whenever they
+    execute this command.
+
+In summary, a rebase policy gives you the flexibility to control how your
+commit history would look like, with emphasis on linear and easy-to-follow set
+of commits. Of course, this is useful if the team is familiar with rebase, and
+are extra cautious whenever they try merging onto `master`. In my work, a
+linear commit history is preferred, and I already start seeing the perks of
+a rebase policy: high-flexibility, cleaner commmits, and a more presentable git
+project.
+
+## Summary
+
+In this post, we've looked into two different policies for git workflows: merge
+and rebase. We saw that a merge policy enables us to create a verbose history,
+but we must be wary of being too verbose that invariably obfuscates our
+project's history. On the other hand, we saw that the rebase policy offers us a
+powerful tool to create linear and easy-to-read histories, but must be handled
+with caution. Both policies are good, and choosing between them should be
+attuned to what your dev team prioritizes and what would make you more
+productive.
+
