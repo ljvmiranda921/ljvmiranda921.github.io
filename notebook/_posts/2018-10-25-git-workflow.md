@@ -24,13 +24,10 @@ and [rebase as
 cleanup](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase),
 how will you then integrate all your devs' commits onto your `master` branch?
 Here, I will highlight some **pros, cons, and decision points** you should
-consider whenever you adopt a merge or rebase workflow. Then, I will share a
-Git workflow and set of policies that may be useful in a fairly-experienced dev
-team.
+consider whenever you adopt a merge or rebase workflow.
 
 - [Merge policy for a verbose history](#merge-policy-for-a-verbose-history)
 - [Rebase policy for a cleaner history](#rebase-policy-for-a-cleaner-history)
-- A workflow we're trying to develop
 
 For this short post, let's look into this simple example of a feature branch
 trying to merge into `master`. Each circle represents a commit, and the commit
