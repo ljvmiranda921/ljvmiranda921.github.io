@@ -157,4 +157,6 @@ __Figure:__ _Short demo on pre-commit hooks_
 Awesome right? Hope you learned something new today!
 
 #### Changelog
+* 09-15-2018: This post was featured in [Episode #95](https://pythonbytes.fm/episodes/show/95/unleash-the-py-spy) of Python Bytes! Thank you [Mike](https://twitter.com/mkennedy?lang=en) and [Brian](https://twitter.com/brianokken?lang=en)! 
 * 06-05-2018: Update pre-commit config filename (by [@asottile](https://github.com/asottile))
+
