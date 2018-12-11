@@ -1,4 +1,4 @@
-# Github pages for ljvmiranda921.github.io
+# ljvmiranda921.github.io
 
 [![Build Status](https://travis-ci.org/ljvmiranda921/ljvmiranda921.github.io.svg?branch=master)](https://travis-ci.org/ljvmiranda921/ljvmiranda921.github.io) 
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
@@ -50,3 +50,5 @@ The page, by default, should be running at [localhost:4000](localhost:4000)
 
 If you found some errors in spelling/grammar, mistakes in content and the like, then feel
 free to fork this repository and make a Pull Request!
+
+[![licensebuttons by](https://licensebuttons.net/l/by/3.0/88x31.png)](https://creativecommons.org/licenses/by/4.0)
