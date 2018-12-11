@@ -1,6 +1,8 @@
 # Github pages for ljvmiranda921.github.io
 
 [![Build Status](https://travis-ci.org/ljvmiranda921/ljvmiranda921.github.io.svg?branch=master)](https://travis-ci.org/ljvmiranda921/ljvmiranda921.github.io) 
+[![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 
 
 This is the source code for my [blog](ljvmiranda921.github.io). It's a static
@@ -18,7 +20,7 @@ information:
 
 - Ruby==2.3.1
 - gem==2.5.2.1
-- jekyll=3.5.2
+- jekyll=3.6.3
 - minima==2.0
 - html-proofer
 - jekyll-sitemap
@@ -29,13 +31,13 @@ information:
 
 Make sure that you have bundler in your system:
 
-```
+```shell
 $ sudo gem install bundler
 ```
 
 Then, build the dependencies and call `jekyll serve`
 
-```
+```shell
 $ git clone https://github.com/ljvmiranda921/ljvmiranda921.github.io.git 
 $ cd ljvmiranda921.github.io/
 $ bundle install
