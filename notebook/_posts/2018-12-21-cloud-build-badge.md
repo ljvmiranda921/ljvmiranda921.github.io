@@ -31,8 +31,8 @@ this:
 [!Full architecture]()
 
 Then, we'll follow the steps below:
-1. Create SVG files for your badges then store to Cloud Storage 
-2. Write a Cloud Function and deploy
+1. [Create SVG files for your badges then store to Cloud Storage](#create-svg-files-for-badge-templates) 
+2. [Write a Cloud Function and deploy](#write-a-cloud-function-and-deploy)
 3. Trigger a build, then embed the generated badge into your README
 
 ## To whom is this tutorial good for?
@@ -49,13 +49,46 @@ Before we begin, some prerequisites and assumptions:
 - You have already [configured](https://github.com/marketplace/google-cloud-build) your Github project with the Cloud Build App
 
 
-## Create SVG files for your badges 
+## Create SVG files for badge templates 
 
-The first step is to first SVG files for your badges then store them
-in Google Cloud Storage. We use a vector file like SVG because of its
-"highly-scalable" resolution. Truth is, most out-of-the-box badges in CI
-services are in SVG. Now, let's create a badge for our `SUCCESS` and `FAILURE` status. You can create custom SVG files either from:
-- [Shields.IO](https://shields.io/#/) 
+The first step is to create badge templates as SVG files then store them in
+Google Cloud Storage. We use this file format because of its "highly-scalable"
+resolution. For now, we need to create a badge for both `SUCCESS` and `FAILURE`
+status. You can create custom SVG files from
+[Shields.IO](https://shields.io/#/), or just use our badges here:
+
+- Success badge ([link](https://storage.googleapis.com/tm-github-builds/build/success.svg)): ![link](https://storage.googleapis.com/tm-github-builds/build/success.svg) 
+- Failure badge ([link](https://storage.googleapis.com/tm-github-builds/build/failure.svg)): ![link](https://storage.googleapis.com/tm-github-builds/build/failure.svg) 
+
+These badges will sever as your badge templates whenever a *specific badge for
+your project* is created. So if your latest build was successful, then the
+success template is used. The same goes whenever the build fails.
+
+Note that these badges should be stored in your project's Google Cloud Storage
+(GCS) bucket. It is preferable to have a directory, `build`, that will contain all
+badge-related artifacts. 
+```
+# Directory structure for gs://<MY-PROJECT-BUCKET> 
+.
+./build/
+./build/success.svg
+./build/failure.svg
+```
+
+Lastly, it is **highly-recommended** that these objects are
+**publicly-accessible**.
 
 
+## Write a Cloud Function and deploy 
 
+The next step is to write a Cloud Function for deployment. For the purposes of
+this tutorial, we'll use Javascript (Node.js 6)[^1]. [You can
+use Python too](https://cloud.google.com/functions/docs/concepts/python-runtime),  as long
+as you follow the execution pattern below:
+
+1. Check if the PubSub event corresponds to the repository and branch
+2. Get the even status for the latest build (success or fail)
+3. Depending on the status, copy the badge over to a new file (preferably `<PROJECT>-<BRANCH>.svg`)
+4. Update the newly-created badge's accessibility to public
+
+[^1]: I chose to write in Javascript because I want to use this project as an opportunity to learn the language.
