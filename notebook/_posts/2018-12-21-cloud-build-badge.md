@@ -32,7 +32,7 @@ this:
 
 Then, we'll follow the steps below:
 1. [Create SVG files for your badges then store to Cloud Storage](#create-svg-files-for-badge-templates) 
-2. [Write a Cloud Function and deploy](#write-a-cloud-function-and-deploy)
+2. [Write a Cloud Function and deploy](#write-a-cloud-function-to-deploy)
 3. Trigger a build, then embed the generated badge into your README
 
 ## To whom is this tutorial good for?
@@ -60,7 +60,7 @@ status. You can create custom SVG files from
 - Success badge ([link](https://storage.googleapis.com/tm-github-builds/build/success.svg)): ![link](https://storage.googleapis.com/tm-github-builds/build/success.svg) 
 - Failure badge ([link](https://storage.googleapis.com/tm-github-builds/build/failure.svg)): ![link](https://storage.googleapis.com/tm-github-builds/build/failure.svg) 
 
-These badges will sever as your badge templates whenever a *specific badge for
+These badges will serve as your **badge templates** whenever a *specific badge for
 your project* is created. So if your latest build was successful, then the
 success template is used. The same goes whenever the build fails.
 
@@ -75,20 +75,29 @@ badge-related artifacts.
 ./build/failure.svg
 ```
 
-Lastly, it is **highly-recommended** that these objects are
-**publicly-accessible**.
+## Write a Cloud Function to deploy 
 
-
-## Write a Cloud Function and deploy 
-
-The next step is to write a Cloud Function for deployment. For the purposes of
-this tutorial, we'll use Javascript (Node.js 6)[^1]. [You can
-use Python too](https://cloud.google.com/functions/docs/concepts/python-runtime),  as long
+The next step is to write a Cloud Function for deployment. The purpose of the
+Cloud Function is to listen for the build status (in terms of PubSub events),
+and performs some logic to update the build badge for our specific project. For
+the purposes of this tutorial, we'll use Javascript (Node.js 6)[^1]. [You can
+use Python
+too](https://cloud.google.com/functions/docs/concepts/python-runtime),  as long
 as you follow the execution pattern below:
 
 1. Check if the PubSub event corresponds to the repository and branch
-2. Get the even status for the latest build (success or fail)
+2. Get the event status for the latest build (success or fail)
 3. Depending on the status, copy the badge over to a new file (preferably `<PROJECT>-<BRANCH>.svg`)
 4. Update the newly-created badge's accessibility to public
+
+I'll walk you through each step of the execution process (with some code
+snippets along the way), then I'll put the overall deploy code that I
+often use at the end.
+
+### Check PubSub event details
+
+The way we'll know the status of our builds is through GCP's messaging tool called
+PubSub. Cloud Build automatically publishes build details as a topic and we
+just need to set-up a subscriber to pull messages from that. 
 
 [^1]: I chose to write in Javascript because I want to use this project as an opportunity to learn the language.
