@@ -9,8 +9,7 @@ tags: [cloud build, google, google cloud platform, google cloud build, badge]
 ---
 
 > Using a combination of Cloud PubSub and Cloud Functions, it is possible to
-> trigger the creation of badges everytime you build. Read more to find out
-> how!
+> create status badges everytime you build. Read more to find out how!
 
 
 Recently, Github
