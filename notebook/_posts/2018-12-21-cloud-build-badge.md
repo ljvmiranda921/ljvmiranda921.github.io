@@ -97,6 +97,15 @@ often use at the end.
 
 The way we'll know the status of our builds is through GCP's messaging tool called
 PubSub. Cloud Build automatically publishes build details as a topic and we
-just need to set-up a subscriber to pull messages from that. 
+just need to set-up a subscriber to pull messages from that. We'll start by writing a scaffold of our main method. We should `export` this
+function and it must take an `event` and a `callback` as its [arguments](https://cloud.google.com/functions/docs/writing/background): 
+
+- `event` (Object): an object representing the event that triggered the function
+- `callback` (Function): a signal indicating the completion of the function
+    execution. 
+
+The `event` object that we obtain is a [PubSubMessage](https://cloud.google.com/pubsub/docs/reference/rest/v1/PubsubMessage)
+
+
 
 [^1]: I chose to write in Javascript because I want to use this project as an opportunity to learn the language.
