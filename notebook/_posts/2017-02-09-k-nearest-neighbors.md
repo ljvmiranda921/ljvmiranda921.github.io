@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Implemeting a k-Nearest Neighbor classifier"
+title: "Implementing a k-Nearest Neighbor classifier"
 date: 2017-02-09
 category: notebook
 comments: true
@@ -254,3 +254,6 @@ state-of-the-art classifiers today (a Convolutional Neural Network solution
 in [Kaggle](https://www.kaggle.com/c/cifar-10/leaderboard) was able to reach
 a whopping 95%). But this is a good start to learn the image classification
 pipeline and the efficiency of the vectorization method.
+
+#### Changelog
+* 12-16-2018: Update cross-validation plot, thanks [@earnshae](https://disqus.com/by/earnshae/) for spotting the error!
