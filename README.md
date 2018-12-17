@@ -8,7 +8,7 @@
 This is the source code for my [blog](ljvmiranda921.github.io). It's a static
 website powered by [Jekyll](https://jekyllrb.com/). 
 
-The build script can be found on `./script/cibuild`. It runs the `html-proofer`
+The build script can be found on `./deploy/cibuild`. It runs the `html-proofer`
 gem which checks for inconsistencies in the generated page. Whenever you want
 to create a new post, or develop the site, always make a Pull Request so that
 the proofer can investigate the changes you've made.
