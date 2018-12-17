@@ -31,3 +31,6 @@ gem "html-proofer"
 
 # Add sitemap
 gem 'jekyll-sitemap'
+
+# Add travis-CI
+gem 'travis'
