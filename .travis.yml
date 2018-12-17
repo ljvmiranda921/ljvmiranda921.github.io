@@ -1,16 +1,16 @@
+sudo: false
 language: ruby
-rvm:
-- 2.3.3
-
-before_script:
- - chmod +x ./script/cibuild # or do this locally and commit
-
-# Assume bundler is being used, therefore
-# the `install` step will run `bundle install` by default.
-script: ./script/cibuild
-
+rvm: 2.3.3
+script: "./deploy/cibuild"
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN 
+  on:
+    branch: master
 env:
   global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
-sudo: false # route your build to the container-based infrastructure for a faster build
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GITHUB_REPO: ljvmiranda921/ljvmiranda921.github.io
+  - secure: HAEn7KbXbuJk4LQhHFtg62Rx9d+ZK1zsv2AKFLSH/D3tQ9jeMkjnoW/Oxz+mNl25VymldK2svZZ9Uh0QqZoCHd2LGubktNXq3f/kriQChlpWRNsomcmGxjq8Q79jE9bI8Ur6f8WwlTAJxeR/yvJe+CSvNCSqv1yFyhr907kveuEzeyTW0JimD3xwvQCtbh63d7vYUwJXmrXPbpq4pDxwwBa4+SxpJP2NaFLLxeIBFs94As8oDypkjZAdwHwOwRiKiueDWc6F6fozC3M6d7c+3TaYaQvDBOnKYEO+GE59h8tQ9Sey/1erbIbUfKAH0HZc8HAoqMJx9oiFw+f0MFWJhIw7l7N9oFMCjwMlG7AlnRb72eBbXPzGFDw2kp1kKKbMHdemaCS+EJMs/4lvlzZNbetVKRsPha7uvXel019G0nzJNxAcYkasOi78Qpn/EApIAGRiEp0e62EdNv1YGEDn4yDO3GGLaojXkVq6U1Akpl1lC2rQEZEmsupIwHktHejIcQLMMlJUzE01EdWdlu7imarILJvPBTUPXWg3NKVFI2CFX9XpSXbQ95KyD6bM7prEWkFz6DWgO5k9bI1jKVHkj/kq9H9pyX39DfNEaZh9xQcK7sTiRI+wVyIjGLHyX0Sp5tFIGwalPp7wuTc1jeWn6Duo63HIE6MVm2FP4N7U+LQ=
