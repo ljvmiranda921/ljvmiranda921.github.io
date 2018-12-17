@@ -66,7 +66,8 @@ success template is used. The same goes whenever the build fails.
 Note that these badges should be stored in your project's Google Cloud Storage
 (GCS) bucket. It is preferable to have a directory, `build`, that will contain all
 badge-related artifacts. 
-```
+
+```s
 # Directory structure for gs://<MY-PROJECT-BUCKET> 
 .
 ./build/
@@ -97,15 +98,61 @@ often use at the end.
 
 The way we'll know the status of our builds is through GCP's messaging tool called
 PubSub. Cloud Build automatically publishes build details as a topic and we
-just need to set-up a subscriber to pull messages from that. We'll start by writing a scaffold of our main method. We should `export` this
+just need to set-up a subscriber to receive push messages. We'll start by writing a scaffold of our main method. We should `export` this
 function and it must take an `event` and a `callback` as its [arguments](https://cloud.google.com/functions/docs/writing/background): 
 
 - `event` (Object): an object representing the event that triggered the function
 - `callback` (Function): a signal indicating the completion of the function
     execution. 
 
-The `event` object that we obtain is a [PubSubMessage](https://cloud.google.com/pubsub/docs/reference/rest/v1/PubsubMessage)
+The `event` object that we'll obtain is a
+[PubSubMessage](https://cloud.google.com/pubsub/docs/reference/rest/v1/PubsubMessage).
+It contains the field, `data`, where we can access all relevant details from
+our build. We do this by parsing the JSON object:
 
+```javascript
+const pubsubMessage = event.data;
+if (pubsubMessage.data) {
+    buildResource = JSON.parse(Buffer.from(pubsubMessage.data, "base64").toString());
+}
+```
+
+### Get the event status of the latest build
+
+From our snippet above, all event details will be stored inside the variable
+`buildResource`. You can actually check all available fields by running `gcloud
+builds describe <BUILD-ID>`. For our specific use-case, we'll need the
+following[^2]:
+
+- **Repository name**: `buildResource.substitutions.REPO_NAME`
+- **Branch name**: `buildResource.substitutions.BRANCH_NAME` 
+- **Build status**: `buildResource.status`
+
+So let's access the variables now:
+
+```javascript
+// If using Github as your source repository 
+repoName = buildResource.substitutions.REPO_NAME;
+branch = buildResource.substitutions.BRANCH_NAME;
+
+// If using Cloud Source Repository
+repoName = buildResource.source.repoSource.repoName;
+branch = buildResource.source.repoSource.branchName;
+
+// Doesn't matter where your repository is
+status = buildResource.status;
+```
+
+### Perform some logic depending on the build status
+
+Now, depending on the build status, we can update the SVG file in GCS that we
+will use for our README. If the build succeeds, then we copy over the "success"
+badge onto our new badge. The same goes whenever the build fails.
+
+In my workflow, I usually name the output badge as `{repoName}-{branch}.svg`.
+Note that we also need to set the resulting object as publicly accessible so
+that it will show up.
 
 
 [^1]: I chose to write in Javascript because I want to use this project as an opportunity to learn the language.
+[^2]: If your repository is in [Cloud Source Repositories](https://cloud.google.com/source-repositories/), you need to use `buildResource.source.repoSource` to access the repository and branch respectively (`repoName`, `branchName`). 
