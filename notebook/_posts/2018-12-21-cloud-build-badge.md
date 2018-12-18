@@ -30,9 +30,10 @@ this:
 ![Full Architecture](https://i.imgur.com/f3nK7gh.png)
 
 Then, we'll follow the steps below:
-1. [Create SVG files for your badges then store to Cloud Storage](#create-svg-files-for-badge-templates) 
-2. [Write a Cloud Function and deploy](#write-a-cloud-function-to-deploy)
-3. Trigger a build, then embed the generated badge into your README
+1. [Create SVG files for your badges then store to Cloud Storage](#step-1-create-svg-files-for-badge-templates) 
+2. [Write a Cloud Function to deploy](#step-2-write-a-cloud-function-to-deploy)
+3. [Deploy, trigger a build, then embed the generated badge into your
+   README](#step-3-deploy-and-trigger-a-build)
 
 ## To whom is this tutorial good for?
 
@@ -48,7 +49,7 @@ Before we begin, some prerequisites and assumptions:
 - You have already [configured](https://github.com/marketplace/google-cloud-build) your Github project with the Cloud Build App
 
 
-## Create SVG files for badge templates 
+## Step 1: Create SVG files for badge templates 
 
 The first step is to create badge templates as SVG files then store them in
 Google Cloud Storage. We use this file format because of its "highly-scalable"
@@ -75,7 +76,7 @@ badge-related artifacts.
 ./build/failure.svg
 ```
 
-## Write a Cloud Function to deploy 
+## Step 2: Write a Cloud Function to deploy 
 
 The next step is to write a Cloud Function for deployment. The purpose of the
 Cloud Function is to listen for the build status (in terms of PubSub events),
@@ -92,7 +93,8 @@ as you follow the execution pattern below:
 
 I'll walk you through each step of the execution process (with some code
 snippets along the way), then I'll put the overall deploy code that I
-often use at the end.
+often use at the end. **Note that your Cloud Function must be stored either in
+`index.js` or `function.js`**
 
 ### Check PubSub event details
 
@@ -150,9 +152,62 @@ will use for our README. If the build succeeds, then we copy over the "success"
 badge onto our new badge. The same goes whenever the build fails.
 
 In my workflow, I usually name the output badge as `{repoName}-{branch}.svg`.
-Note that we also need to set the resulting object as publicly accessible so
-that it will show up.
+Note that we also need to set the resulting object as publicly accessible for
+it to show up.
 
+So here's how the update works whenever the build succeeds:
+
+```javascript
+const filename = "build/myRepoName-" + branch + ".svg";
+const storage = new Storage();
+
+if (repo && branch && status == "SUCCESS") {
+    console.log("Detected a successful build!")
+    // Copy file from our success.svg template onto
+    // {repoName}-{branch}.svg
+    storage
+        .bucket("my-bucket")
+        .file("build/success.svg")
+        .copy(storage.bucket("my-bucket").file(filename))
+    // Set the output artifact to public        
+    storage
+        .bucket("my-bucket")
+        .file(filename)
+        .makePublic(function(err, apiResponse) {});
+}
+```
+
+Then we just repeat the same thing whenever the build fails. In this case, we
+just change the status string to `"FAILURE"` and copy over `build/failure.svg`
+to our `filename`.
+
+If you want to see the full template for writing a Cloud Function, you
+can definitely check the gist below, and this small project of mine called
+[cloud-build-badge](https://www.npmjs.com/package/cloud-build-badge)[^3]!
+
+<script src="https://gist.github.com/ljvmiranda921/419e7c078d98069e8fc145d6cf0b540c.js"></script>
+
+## Step 3: Deploy and trigger a build 
+
+Recall that your cloud function should be stored either in `index.js` or
+`function.js`. This is crucial because the deployment tool will look for
+these files and vomit an error if not found. To deploy your function, execute
+the following command:
+
+```shell
+gcloud functions deploy myFunction              \
+    --runtime nodejs6                           \
+    --trigger-resource cloud-builds             \
+    --trigger-event google.pubsub.topic.publish \
+```
+
+You can find the official documentation for `gcloud functions deploy`
+[here](https://cloud.google.com/sdk/gcloud/reference/functions/deploy).
+If deployment is successful, you should see an SVG file in your GCS bucket
+that you can use for your markdown READMEs!
+
+## Footnotes
 
 [^1]: I chose to write in Javascript because I want to use this project as an opportunity to learn the language.
 [^2]: If your repository is in [Cloud Source Repositories](https://cloud.google.com/source-repositories/), you need to use `buildResource.source.repoSource` to access the repository and branch respectively (`repoName`, `branchName`). 
+[^3]: `cloud-build-badge` was actually inspired by Samuel Sendelback's [tutorial on creating cloud build badges](https://github.com/sbsends/cloud-build-badge) in 2 minutes. I decided to create a more verbose version of his work in this blog, and an easy tool to create deploy functions using the npm package.
