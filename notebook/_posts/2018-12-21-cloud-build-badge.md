@@ -206,7 +206,7 @@ You can find the official documentation for `gcloud functions deploy`
 If deployment is successful, you should see an SVG file in your GCS bucket
 that you can use for your markdown READMEs!
 
-## Footnotes
+### Footnotes
 
 [^1]: I chose to write in Javascript because I want to use this project as an opportunity to learn the language.
 [^2]: If your repository is in [Cloud Source Repositories](https://cloud.google.com/source-repositories/), you need to use `buildResource.source.repoSource` to access the repository and branch respectively (`repoName`, `branchName`). 
