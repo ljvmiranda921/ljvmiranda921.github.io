@@ -5,6 +5,7 @@ date: 2017-01-16
 category: life
 comments: true
 author: "LJ MIRANDA"
+tags: [github pages, github, jekyll, ruby, wordpress, wordpress to github pages]
 ---
 
 Hello world! 
@@ -33,7 +34,25 @@ Here are some reasons why I decided to go for Github pages:
     correct them myself. Github integration is pretty good, and I'd love to
     leverage that[^1].
 
-On the other hand, there are still some things
+On the other hand, there are still some things that may need some improvement:
+
+- **Plugins require setup**. For Wordpress, I just virtually need to
+    drag and drop plugins I want to have. SEO and Analytics are automatically
+    available. With Github Pages, I need to setup Disqus for comments, Google 
+    Analytics for stats, and other things. *Github pages doesn't support
+    plugins out-of-the-box*, so if I want to do that, I need to push the
+    locally generated files instead [^2].
+- **No databases, etc.**. That's definitely expected, especially on static-site
+    generators. If you want the full blogging experience, I'd say stick to
+    other services for that. If you want a clean and lightweight experience,
+    then Github pages is a good solution for you.
+
+With that in mind, I won't suggest Jekyll + Github Pages for non-developers who
+don't want to roll-up their sleeves and tinker around their site. If you want
+an easy and no-ops way of blogging, use other providers such as Medium or
+Wordpress. But, if you find joy in building things and making things work, then
+Github pages is definitely the best solution for you!
 
 ### Footnotes
 [^1]: Of course, the source code is available [on Github](https://github.com/ljvmiranda921/ljvmiranda921.github.io)
+[^2]: I solved this problem by integrating Travis-CI in my workflow. Whenever the checks on the `master` passed, it automatically deploys the **locally-generated files** to `gh-pages`, and is deployed to the website.
