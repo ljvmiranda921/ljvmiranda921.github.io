@@ -206,8 +206,19 @@ You can find the official documentation for `gcloud functions deploy`
 If deployment is successful, you should see an SVG file in your GCS bucket
 that you can use for your markdown READMEs!
 
+## Summary
+
+In this tutorial, we have learned how to add status badges to our Google Cloud
+Builds using Cloud Functions and PubSub.  The main idea is that we copy over
+the appropriate badge (stored in GCS) into the new badge given the latest
+build's status. To accomplish that, we wrote a Cloud Functions script that
+reads the build status as a PubSubMessage and applies the appropriate logic
+depending on the result. The final product is a continually updating status
+badge for our specific project and branch that we can use in our READMEs!
+
 ### Footnotes
 
 [^1]: I chose to write in Javascript because I want to use this project as an opportunity to learn the language.
 [^2]: If your repository is in [Cloud Source Repositories](https://cloud.google.com/source-repositories/), you need to use `buildResource.source.repoSource` to access the repository and branch respectively (`repoName`, `branchName`). 
 [^3]: `cloud-build-badge` was actually inspired by Samuel Sendelback's [tutorial on creating cloud build badges](https://github.com/sbsends/cloud-build-badge) in 2 minutes. I decided to create a more verbose version of his work in this blog, and an easy tool to create deploy functions using the npm package.
+
