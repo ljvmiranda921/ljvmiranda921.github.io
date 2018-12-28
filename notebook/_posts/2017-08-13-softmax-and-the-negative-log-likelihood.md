@@ -182,11 +182,15 @@ $$\begin{eqnarray}
 And thus we have differentatied the negative log likelihood with respect to
 the softmax layer.
 
-
 ## Sources
 * [Stanford CS231N Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/). _This course inspired this blog post. The derivation of the softmax was left as an exercise and I decided to derive it here._
 * [The Softmax Function and Its Derivative](http://eli.thegreenplace.net/2016/the-softmax-function-and-its-derivative/). _A more thorough treatment of the softmax function's derivative_
 * [CIFAR 10](https://www.cs.toronto.edu/~kriz/cifar.html). _Benchmark dataset for visual recognition._
 
 #### Changelog
+
 * 09-29-2018: Update figures using TikZ for consistency
+* 09-15-2018: [Micheleen Harris](https://twitter.com/rheartpython) made a [really cool illustration](https://twitter.com/rheartpython/status/1040963091670986752) of negative log-likelihood loss. Check it out below! Thank you Micheleen!
+
+![Imgur](https://i.imgur.com/hU252jE.jpg){:width="640px"}
+{: style="text-align: center;"}
