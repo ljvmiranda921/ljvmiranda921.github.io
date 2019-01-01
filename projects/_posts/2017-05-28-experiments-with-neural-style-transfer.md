@@ -10,7 +10,7 @@ tags: [neural style transfer, deep learning, filipino paintings, convolutional n
 ---
 
 For one of my weekend projects, I chanced upon [this
-paper](https://arxiv.org/abs/1508.06576) of L.A. Gatys describing how we can
+paper](https://arxiv.org/abs/1508.06576) of L.A. Gatys (Gatys et al. [2015](#gatys2015neural)) describing how we can
 use a convolutional neural network to transfer artistic style from one image
 to another. Here, I used the neural style transfer technique to learn the
 artistic style of various Filipino paintings. Painters range from Amorsolo to
@@ -46,9 +46,9 @@ it takes around 2-3 minutes for a single style transfer, depending on the
 resolution (I'm using 72dpi). I haven't tested this with a normal CPU, but
 from previous experience, this may take more than 30 minutes to run.
 
-### Sources
-1. [L.A. Gatys, et al, A Neural Algorithm for Style Transfer, 2015.](https://arxiv.org/abs/1508.06576)
-2. [Convolutional neural networks for artistic style transfer](https://harishnarayanan.org/writing/artistic-style-transfer/)
+## References
+
+* <a id="gatys2015neural">Gatys, Leaon, Echker, Alexander and Bethge, Matthias</a> (2015). "A Neural Algorithm of Artistic Style". In: *arXiv:1508.06576[cs.CV]*
 
 ### Other neural style implementations
 
