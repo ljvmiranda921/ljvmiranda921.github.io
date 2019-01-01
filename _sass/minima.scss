@@ -47,8 +47,7 @@ $on-laptop:        800px !default;
 @import
   "minima/base",
   "minima/layout",
-//  "minima/syntax-highlighting",
-  "css/syntax-highlighting-custom.css",
+  "minima/syntax-highlighting",
   "css/better-gist-styles.css",
   "fonts/Sans/cmun-sans.css"
 ;
