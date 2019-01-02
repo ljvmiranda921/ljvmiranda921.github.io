@@ -49,6 +49,6 @@ The page, by default, should be running at [localhost:4000](localhost:4000)
 ## Contribute
 
 If you found some errors in spelling/grammar, mistakes in content and the like, then feel
-free to fork this repository and make a Pull Request!
+free to fork this repository and [make a Pull Request!](https://help.github.com/articles/creating-a-pull-request/)
 
 [![licensebuttons by](https://licensebuttons.net/l/by/3.0/88x31.png)](https://creativecommons.org/licenses/by/4.0)
