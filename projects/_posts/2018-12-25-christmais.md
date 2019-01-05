@@ -150,6 +150,8 @@ __Figure:__ _We built a web application in our website. Check it out [here](http
 
 ![Dope holiday cards](https://i.imgur.com/Dl5Gj8X.jpg)
 
+![Fun artwork prints](https://i.imgur.com/gHiMAgS.jpg)
+
 - We got noticed by David Ha! He's the author of the original Sketch-RNN, and
     probably one of the big names in machine learning and creativity (from
     Google Brain). Perhaps this is one of the highlights of this project.
