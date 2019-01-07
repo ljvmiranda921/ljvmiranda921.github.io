@@ -21,7 +21,7 @@ application.
 > [link](https://stories.thinkingmachin.es/ai-art-holiday-cards/) and the
 > open-source repository [here](https://github.com/thinkingmachines/christmais)
 
-![AI Holiday Cards](https://i.imgur.com/TFGRexp.jpg)
+![AI Holiday Cards](https://i.imgur.com/TFGRexp.jpg){:width="560px"}  
 __Figure:__ _Artworks produced by our AI-art generator.  
 Credits: [Thinking Machines Data Science](https://thinkingmachin.es/)_
 {: style="text-align: center;"}
@@ -94,7 +94,7 @@ dataset](https://github.com/googlecreativelab/quickdraw-dataset) as primitives
 for our Drawing System. It's simply a set of drawings made by real players from
 the game [Quick, Draw!](https://quickdraw.withgoogle.com/)
 
-![Quick, Draw! Preview](https://i.imgur.com/zwM2tib.jpg)  
+![Quick, Draw! Preview](https://i.imgur.com/zwM2tib.jpg){:width="560px"}   
 __Figure:__ _Some samples of the Quick, Draw! dataset_
 {: style="text-align: center;"}
 
@@ -108,7 +108,7 @@ class in a single distribution, then samples from it. So for a set of "book"
 doodles, the generative model finds the distribution that perfectly fits (or
 represents) all of them, then creates new drawings based on that.
 
-![Generated books](https://i.imgur.com/V746am3.png)   
+![Generated books](https://i.imgur.com/V746am3.png){:width="560px"}  
 __Figure:__ _Generated "book" samples. These were not drawn by any human player_
 {: style="text-align: center;"}
 
@@ -138,25 +138,22 @@ __Figure:__ _Final pipeline for the ChristmAIs project_
 I'm pretty proud of our final product. Mainly because of my amazing and
 talented teammates who helped productionalize this machine learning system!
 
-- We built a web application where people can try entering any given text and
-choose the artistic style to create AI generated holiday cards! The backend
-uses a Google Compute Engine (GCE) instance.  
+- We built a **web application** where people can try entering any given text and
+    choose the artistic style to create AI generated holiday cards! The backend
+    uses a Google Compute Engine (GCE) instance.  
 
-![WebApp Screenshot](https://i.imgur.com/1NP4p2J.png)  
-__Figure:__ _We built a web application in our website. Check it out [here](https://stories.thinkingmachin.es/ai-art-holiday-cards/)!_
+- We also printed some **holiday cards and artworks** that look really dope!
+
+![Fun artwork prints](https://i.imgur.com/gHiMAgS.jpg){:width="560px"}  
 {: style="text-align: center;"}
 
-- We also printed some holiday cards and artworks that look really dope!
 
-![Dope holiday cards](https://i.imgur.com/Dl5Gj8X.jpg)
-
-![Fun artwork prints](https://i.imgur.com/gHiMAgS.jpg)
-
-- We got noticed by David Ha! He's the author of the original Sketch-RNN, and
+- We **got noticed by David Ha! He's the author of the original Sketch-RNN**, and
     probably one of the big names in machine learning and creativity (from
     Google Brain). Perhaps this is one of the highlights of this project.
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Happy Holidays 🎉<br><br>Someone made this holiday card generator using Sketch-RNN and Style Transfer:<a href="https://t.co/50dWllrga8">https://t.co/50dWllrga8</a><a href="https://t.co/Tag9IwVenP">https://t.co/Tag9IwVenP</a> <a href="https://t.co/68Q0fPL5eP">pic.twitter.com/68Q0fPL5eP</a></p>&mdash; hardmaru (@hardmaru) <a href="https://twitter.com/hardmaru/status/1077537402133012480?ref_src=twsrc%5Etfw">December 25, 2018</a></blockquote>
+<center>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Happy Holidays 🎉<br><br>Someone made this holiday card generator using Sketch-RNN and Style Transfer:<a href="https://t.co/50dWllrga8">https://t.co/50dWllrga8</a><a href="https://t.co/Tag9IwVenP">https://t.co/Tag9IwVenP</a> <a href="https://t.co/68Q0fPL5eP">pic.twitter.com/68Q0fPL5eP</a></p>&mdash; hardmaru (@hardmaru) <a href="https://twitter.com/hardmaru/status/1077537402133012480?ref_src=twsrc%5Etfw">December 25, 2018</a></blockquote></center>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Conclusion
