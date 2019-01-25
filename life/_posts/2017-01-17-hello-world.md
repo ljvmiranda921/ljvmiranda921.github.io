@@ -10,7 +10,7 @@ tags: [github pages, github, jekyll, ruby, wordpress, wordpress to github pages]
 
 Hello world! 
 
-I'm now transferring my blog from Worpress into Github pages &mdash;the former
+I'm now transferring my blog from Wordpress into Github pages &mdash;the former
 site will be deleted soon. So, if you cannot access
 [this](https://ljvmiranda.wordpress.com) link anymore, then that means I have
 already done the deed. It seems that I have some pretty popular articles in my
