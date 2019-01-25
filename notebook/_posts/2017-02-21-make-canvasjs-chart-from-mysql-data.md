@@ -93,9 +93,10 @@ queries, we store the desired data in the variable `$result`. We then push
 everything inside our array, and encode the array in JSON form using
 `json_encode`. Do not forget to close the connection once you're done!
 
-<div class="alert alert-warning">
-  <strong>Take note!</strong> Be mindful that in practice, we don't store our user credentials as variables in our script. You can check some of the good PHP practices <a href="https://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17" class="alert-link">here</a> and <a href="https://phpbestpractices.org/" class="alert-link">here</a>.
-</div>
+> **Take note!** Be mindful that in practice, we don't store our user credentials
+> as variables in our script. You can check some of the [good MySQLxPHP](https://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17)
+> and [general PHP practices](https://phpbestpractices.org/) in the links
+> provided.
 
 Using this script, we can now access data from our database. Note that we're
 just using very simple SQL queries such as `SELECT` and `FROM`. This can vary
@@ -111,15 +112,12 @@ refer to the API documentation of `.getJSON`
 [here](http://api.jquery.com/jquery.getjson/) for more information. The idea
 is that the callback function is executed once the request succeeds.
 
-<div class="alert alert-warning">
-  <strong>Take note!</strong>
-Another thing that you have to consider is to handle the error if the request
-didn't succeed. I will not discuss about it here, for I will assume that our
-PHP service will always give the JSON object needed by our server. There are
-a lot of ways to handle errors, and I will refer you <a
-href="http://stackoverflow.com/questions/1740218/error-handling-in-getjson-calls">here</a>
-to get you started in this.
-</div>
+> **Take note!** Another thing that you have to consider is to handle the error
+> if the request didn't succeed. I will not discuss about it here, for I will
+> assume that our PHP service will always give the JSON object needed by our
+> server. There are a lot of ways to handle errors, and I will refer you to
+> this [link](http://stackoverflow.com/questions/1740218/error-handling-in-getjson-calls")
+> to get you started in this.
 
 ## <a name="chart"></a> Using the received data to make CanvasJS charts
 
@@ -184,4 +182,5 @@ have any questions, don't hesitate to comment below!
 
 #### Changelog
 
+* 01-27-2019: Turn divs into quotes for "Take note!" 
 * 10-04-2018: Update figures using Tikz for consistency
