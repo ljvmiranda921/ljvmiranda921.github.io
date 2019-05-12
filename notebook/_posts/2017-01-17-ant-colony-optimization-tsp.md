@@ -12,7 +12,7 @@ This is an implementation of the Ant Colony Optimization to solve the
 Traveling Salesman Problem. In this project, the `berlin52` dataset that maps
 52 different points in Berlin, Germany was used.
 
-![Berlin52](http://i.imgur.com/tqkRm4dl.png)  
+![Berlin52](https://i.imgur.com/tqkRm4dl.png)  
 __Figure 1:__ _Graph of the Berlin52 Dataset_
 {: style="text-align: center;"}
 
@@ -46,13 +46,13 @@ iteration.
 
 ### Increased exploration
 __Parameters:__ $$\alpha$$ = 15, $$\beta$$ = 20, $$\rho$$ = 0.15
-![ACO Test 1](http://i.imgur.com/lVuDTDkl.png)  
+![ACO Test 1](https://i.imgur.com/lVuDTDkl.png)  
 __Figure 2:__ _ACO Simulation when the exploration parameter is higher_
 {: style="text-align: center;"}
 
 ### Increased exploitation
 __Parameters:__ $$\alpha$$ = 20, $$\beta$$ = 15, $$\rho$$ = 0.15
-![ACO Test 2](http://i.imgur.com/SnW6hVll.png)  
+![ACO Test 2](https://i.imgur.com/SnW6hVll.png)  
 __Figure 3:__ _ACO Simulation when the exploitation parameter is higher_
 {: style="text-align: center;"}
 
@@ -65,13 +65,13 @@ constantly doing random searches for each iteration.
 
 ### Increased pheromone evaporation rate
 __Parameters:__ $$\alpha$$ = $$\beta$$ = 15, $$\rho$$ = 0.8
-![ACO Test 3](http://i.imgur.com/1mqQCyrl.png)  
+![ACO Test 3](https://i.imgur.com/1mqQCyrl.png)  
 __Figure 4:__ _ACO Simulation when pheromone evaporation is high_
 {: style="text-align: center;"}
 
 ### Decreased pheromone evaporation rate
 __Parameters:__ $$\alpha$$ = $$\beta$$ = 15, $$\rho$$ = 0.01
-![ACO Test 4](http://i.imgur.com/ISCpfpkl.png)  
+![ACO Test 4](https://i.imgur.com/ISCpfpkl.png)  
 __Figure 4:__ _ACO Simulation when pheromone evaporation is low_
 {: style="text-align: center;"}
 
@@ -91,7 +91,7 @@ The best solution for ACO was __7548.9927__ _(the optimal solution achieved by c
 __Table 1:__ _ACO Parameters that was used in the implementation_
 {: style="text-align: center;"}
 
-![ACO Best](http://i.imgur.com/neFD3JDl.png)  
+![ACO Best](https://i.imgur.com/neFD3JDl.png)  
 __Figure 5:__ _ACO Best Solution_
 {: style="text-align: center;"}
 

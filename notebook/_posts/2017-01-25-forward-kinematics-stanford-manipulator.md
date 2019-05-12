@@ -146,7 +146,7 @@ $$\theta_{1}$$ = -90, $$\theta_{2}$$ = 90, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $
 ![Simulation 1](/assets/png/robosim/fkine01.gif)  
 __Figure 1a:__ _Forward Kinematics Simulation_
 {: style="text-align: center;"}
-![Top and Side View](http://i.imgur.com/uxf2xKtl.png){:height="274px" width="560px"}  
+![Top and Side View](https://i.imgur.com/uxf2xKtl.png){:height="274px" width="560px"}  
 __Figure 1b:__ _Top (left) and side (right) views of the manipulator's end-pose_
 {: style="text-align: center;"}
 
@@ -160,7 +160,7 @@ $$\theta_{1}$$ = 180, $$\theta_{2}$$ = 0, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$
 __Figure 2a:__ _Forward Kinematics Simulation_
 {: style="text-align: center;"}
 
-![Top and Side View](http://i.imgur.com/AjVMtIGl.png){:height="274px" width="560px"}  
+![Top and Side View](https://i.imgur.com/AjVMtIGl.png){:height="274px" width="560px"}  
 __Figure 2b:__ _Top (left) and side (right) views of the manipulator's end-pose_
 {: style="text-align: center;"}
 
@@ -174,7 +174,7 @@ $$\theta_{1}$$ = 90, $$\theta_{2}$$ = -45, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $
 __Figure 3a:__ _Forward Kinematics Simulation_
 {: style="text-align: center;"}
 
-![Top and Side View](http://i.imgur.com/StBp7rGl.png){:height="274px" width="560px"}  
+![Top and Side View](https://i.imgur.com/StBp7rGl.png){:height="274px" width="560px"}  
 __Figure 3b:__ _Top (left) and side (right) views of the manipulator's end-pose_
 {: style="text-align: center;"}  
 
