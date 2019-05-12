@@ -17,7 +17,7 @@ used as the cost function. The two-spiral problem is a particularly difficult
 problem that requires separating two logistic spirals from one another (Lang
 and Witbrock, [1998](#lang1998learning)).
 
-![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)  
+![Two Spiral Problem](https://i.imgur.com/AB14SHCl.png)  
 __Figure 1:__ _Graph of the Two-Spiral Problem_
 {: style="text-align: center;"}
 
@@ -127,7 +127,7 @@ the parameters.
 __Table 2:__ _Parameter Values for DE Implementation_
 {: style="text-align: center;"}
 
-![Generalization ability of DE](http://i.imgur.com/oEHj0Dhl.png){:width="640px"}  
+![Generalization ability of DE](https://i.imgur.com/oEHj0Dhl.png){:width="640px"}  
 __Figure 3:__ _Generalization ability of the DE-trained Neural Network over the whole space_
 {: style="text-align: center;"}
 

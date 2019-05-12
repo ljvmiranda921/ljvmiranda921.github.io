@@ -19,7 +19,7 @@ difficult problem that requires separating two logistic spirals from one
 another (Lang
 and Witbrock, [1998](#lang1998learning)).
 
-![Two Spiral Problem](http://i.imgur.com/AB14SHCl.png)  
+![Two Spiral Problem](https://i.imgur.com/AB14SHCl.png)  
 __Figure 1:__ _Graph of the Two-Spiral Problem_
 {: style="text-align: center;"}  
 
@@ -136,7 +136,7 @@ __Table 2:__ _Parameter values for PSO Implementation_
 {: style="text-align: center;"}
 
 
-![Generalization ability of PSO](http://i.imgur.com/JtMGhr8l.png){:width="640px"}      
+![Generalization ability of PSO](https://i.imgur.com/JtMGhr8l.png){:width="640px"}      
 __Figure 4:__ _Generalization ability of the PSO-trained Neural Network over the whole space_
 {: style="text-align: center;"}
 
