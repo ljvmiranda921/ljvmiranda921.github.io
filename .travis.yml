@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.3.3
+script: |
+    bundle exec jekyll build
+    bundle exec htmlproofer ./_site --disable-external
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true 
+sudo: false
