@@ -113,7 +113,7 @@ in delivering this awesome project!
 ### 2. Tiffany: Convert to TIFF any Google Static Maps Image 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/thinkingmachines/tiffany/master/assets/tiffany-logo.png">
+<img src="https://raw.githubusercontent.com/thinkingmachines/tiffany/master/assets/tiffany-logo.png" alt="tiffany logo">
 </p>
 
 <a class="github-button" href="https://github.com/thinkingmachines/tiffany" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star thinkingmachines/tiffany on GitHub">Star</a>
@@ -141,7 +141,7 @@ So if you want to download a static map given a coordinate, you just run:
 tiffany 14.546943935986324 121.01974525389744
 ```
 <p align="center">
-<img src="https://storage.googleapis.com/tm-tiffany/assets/tiffany_single_demo_no_window.svg">
+<img src="https://storage.googleapis.com/tm-tiffany/assets/tiffany_single_demo_no_window.svg" alt="tiffany demo single">
 </p>
 
 This then downloads a 400x400-sized image that is already georeferenced (you
@@ -161,13 +161,13 @@ tiffany batch coordinates.csv
 ```
 
 <p align="center">
-<img src="https://storage.googleapis.com/tm-tiffany/assets/tiffany_batch_demo_no_window.svg">
+<img src="https://storage.googleapis.com/tm-tiffany/assets/tiffany_batch_demo_no_window.svg" alt="tiffany demo batch">
 </p>
 
 ### 3. Seagull: Python Library for Conway's Game of Life 
 
 <p align="center">
-    <img src="https://imgur.com/Vgt6a5y.png" width="200">
+    <img src="https://imgur.com/Vgt6a5y.png" width="200" alt="Seagull logo">
 </p>
 
 <a class="github-button" href="https://github.com/ljvmiranda921/seagull" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ljvmiranda921/seagull on GitHub">Star</a>
@@ -206,7 +206,7 @@ sim.run(sg.rules.conway_classic, iters=1000)
 You then just call `sim.animate()` to view your animation like so:
 
 <p align="center">
-  <img src="https://imgur.com/sgCrP9f.gif" width="720">
+  <img src="https://imgur.com/sgCrP9f.gif" width="720" alt="animation sample">
 </p>
 
 I also made a [nice collection of
