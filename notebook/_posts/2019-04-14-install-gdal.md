@@ -5,7 +5,7 @@ date: 2019-04-13
 category: notebook
 comments: true
 author: "LJ MIRANDA"
-tags: [gdal, ogr, geospatial, how-to]
+tags: [gdal, ogr, geospatial, how-to, how to install gdal]
 ---
 
 If you're working on geospatial data, then [GDAL/OGR](https://www.gdal.org/)
@@ -25,6 +25,8 @@ free to comment!
 - [Installation](#installation)
     + [Using conda](#using-conda)
     + [Using your package manager](#using-your-package-manager)
+- [Bindings](#bindings)
+    + [Python bindings](#python-bindings)
 
 ## Installation
 
@@ -113,6 +115,24 @@ export C_INCLUDE_PATH=/usr/include/gdal
 
 ## Bindings
 
+Bindings are necessary in case you want to write or use libraries that depend on
+GDAL/OGR. This is still a growing list, so feel free to comment if you want to
+add more!
+
 ### Python bindings
 
-### Go bindings
+I think one of the most important GDAL-related python package is `osgeo`. This
+is in fact a [Python binding for both GDAL and OGR](https://pypi.org/project/GDAL/).
+Installing this also gives you access to the `gdal_merge.py` command-line
+utility. To install, run:
+
+```
+pip3 install                                    \
+    --global-option=build_ext                   \ 
+    --global-option="-I/usr/include/gdal"       \
+    GDAL==`gdal-config --version`
+```
+
+Note that you need to have gdal installed first in your system before executing
+the command above. This automatically installs the proper binding given the
+GDAL version in your system. 
