@@ -91,17 +91,17 @@ compile commands (`pdflatex`, `biber`, etc.) inside it.
 [Docker](https://www.docker.com/) is wonderful. It gives me a container-based
 solution that jives beautifully with my continuous integration practice.
 Thankfully, for LaTeX, we have
-[`blang`'s](https://github.com/blang/latex-docker) LaTeX docker container.
+[`blang`'s](https://github.com/blang/latex-docker) LaTeX docker image.
 The way it's even advertised seems to be a direct answer for my needs:
 
 > This container helps compiling latex sources without the need to install
 all latex packages on your system
 
-Awesome! Now I just need to set-up Travis-CI to pull from this container and
-I can go on my merry way. But before that, a little bit more about this container:
+Awesome! Now I just need to set-up Travis-CI to pull this image and
+I can go on my merry way. But before that, a little bit more about this image:
 
 - You don't have to write your own Dockerfile, that's what these pre-made
-containers are for.
+images are for.
 - It provides three different images for all your needs: a full LaTeX version,
 a full CTAN version, and a minimal version.
 - Fortunately, command wrappers are also provided for portability (you just need to
@@ -209,3 +209,7 @@ containerized capabilities of Docker. I don't need to worry about Linux
 versions anymore, and I don't have to painstakingly jot down all dependencies
 for every new project. I just need to spin a new container (`ctanfull`),
 set-up my `.travis.yml`, and focus on my writing.
+
+#### Changelog
+
+- 06-16-2019: Change the word "container" to "images" when appropriate
