@@ -33,7 +33,7 @@ tasks (build, checks, etc.). To achieve that, we need to do the following (TLDR)
 
 3. Go to Drone CI and add `$HOME/.docker/config.json` as a secret. At this time
    of writing, you can just copy the contents from that file to the secrets
-   text box. The, refer it to your `.drone.yml` in the `image_pull_secrets` key:
+   text box. Then, refer it to your `.drone.yml` in the `image_pull_secrets` key:
 
    ```yaml
    kind: pipeline
