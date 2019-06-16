@@ -15,10 +15,11 @@ Cloud for our open-source projects but also maintain an internal Drone server
 residing in a [Google Compute Engine (GCE)](https://cloud.google.com/compute/)
 instance.
 
-In Drone, each step occurs inside a Docker container. Sometimes, we need Drone
-to pull images from our private [Google Container Registry
+In Drone, each step occurs inside a Docker container. Everything is
+straightforward if the image is public, but sometimes, we need Drone to pull
+images from our private [Google Container Registry
 (GCR)](https://cloud.google.com/container-registry/), and use it for downstream
-tasks (build, checks, etc.). To achieve that, we need to do the following (TLDR):
+tasks (build, checks, etc.). To achieve that, we need to do the following:
 
 1. Create a [service
    account](https://cloud.google.com/iam/docs/understanding-service-accounts)
