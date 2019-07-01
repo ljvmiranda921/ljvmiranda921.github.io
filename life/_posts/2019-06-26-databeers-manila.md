@@ -28,3 +28,6 @@ friends and new, and talk about data over beer!
 <!-- picture here -->
 
 Will definitely come back for more!
+
+You can find my slides [here](bit.ly/DataBeersGeomancer). For more information,
+check Geomancer's [github page](https://github.com/thinkingmachines/geomancer).
