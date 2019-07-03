@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Databeers Manila"
+title: "Speaking at Databeers Manila"
 date: 2019-06-26
 category: life
 comments: true
