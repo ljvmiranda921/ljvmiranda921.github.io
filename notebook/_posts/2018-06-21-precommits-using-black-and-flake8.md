@@ -85,12 +85,12 @@ In the next section, I will discuss my code formatter (`black`) and checker
 
 The black code formatter in Python is an opinionated tool that formats your
 code in the best way possible. You can check its design decisions in the
-[repository itself](https://github.com/ambv/black). Some notable formatting
+[repository itself](https://github.com/psf/black). Some notable formatting
 decisions, in my opinion:
 
 - Unlike in PEP8, code length is 88 characters, not 79.
 - Use of double-quotes than single-quotes in strings.
-- If there are many function args, each arg will be [wrapped per line](https://github.com/ambv/black#how-black-wraps-lines).
+- If there are many function args, each arg will be [wrapped per line](https://github.com/psf/black#how-black-wraps-lines).
 
 I'd rather maintain the recommended 79 character length. Good thing, they have
 an option to do so. I just need to configure my `pyproject.toml` to
@@ -157,6 +157,7 @@ __Figure:__ _Short demo on pre-commit hooks_
 Awesome right? Hope you learned something new today!
 
 #### Changelog
+* 07-25-2019: Update github link of black from `ambv` to `psf`. Thanks for catching, Peter Schutt!
 * 09-15-2018: This post was featured in [Episode #95](https://pythonbytes.fm/episodes/show/95/unleash-the-py-spy) of Python Bytes! Thank you [Mike](https://twitter.com/mkennedy?lang=en) and [Brian](https://twitter.com/brianokken?lang=en)! 
 * 06-05-2018: Update pre-commit config filename (by [@asottile](https://github.com/asottile))
 
