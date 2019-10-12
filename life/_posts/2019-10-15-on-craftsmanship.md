@@ -51,7 +51,7 @@ it?*
 
 The day went on: we made our own noodles, cooked some zaru soba (ざるそば), ate
 it, and went home. Little did I know that watching an old man making
-soba&mdash;knowing that he's been doing it all his life&mdash;will become a
+soba[^1]&mdash;knowing that he's been doing it all his life&mdash;will become a
 theme of my Japanese journey. Looking back, Japan seems to have a strong
 tradition of craftsmanship. Be it in pottery, brewing sake (酒), or [making
 fountain pens](https://www.youtube.com/watch?v=1F12qUyIACM), there's always
@@ -61,7 +61,7 @@ The idea of a craftsman has been stamped on me ever since that day. Being able
 to build things and manifest oneself into something tangible is a meaningful
 life to be in. 
 
-## Software as a craft
+## Seeing software as craft
 
 > *"The programmer, like the poet, works only slightly removed from pure
 > thought-stuff. He builds his castles in the air, from air, creating by
@@ -78,3 +78,23 @@ life to be in.
 >
 > &mdash; The Joys of the Craft, Mythical Man-Month, Brooks, 1975
 
+<!-- talk about how this quote speaks to you because of your experience in
+Heights, etc. -->
+The quote above from Frederick Brooks struck me when I was reading *Mythical
+Man-Month*. The way he describes the art of programming as building castles in
+the air as if you're a wizard conjuring thought-stuff from mere incantations
+reflects how magical I see programming even up to this day. Another reason is
+that he likened a programmer to a poet, and this brought back some memories of
+my undergraduate years.
+
+For 
+
+<!-- you started taking software seriously within open-source, primarly as a
+hobby, no deadlines no clients, etc. -->
+
+
+<!-- describe the three things that it allowed you to do -->
+
+### Footnotes
+
+[^1]: Seeing this [video of a man making soba](https://www.youtube.com/watch?v=V3zFiwa8fKs) circulating in the internet motivated me to finish this post. It brought back memories of my experience when I was in Japan.
