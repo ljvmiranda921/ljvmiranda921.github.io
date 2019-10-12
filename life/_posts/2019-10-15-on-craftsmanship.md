@@ -111,19 +111,60 @@ counters blind mass-production.
 Fast forward to today, I realized that **working in open-source allowed me to
 recreate the same experience of craftsmanship** during my Heights days. I'd
 consider myself lucky that my initial experience of "serious programming"[^3]
-is in open-source. I had the freedom to choose what projects I want to create,
-and in no way restrained by any spec or requirements that I should adhere to.
-It's like when someone gave me a blank piece of paper and told me: "draw whatever
-you want." This may be different, say, if I took a computer science degree and
-labored over machine problems or started out programming in a job where I have
-lesser freedom to the projects I'll take. Starting out in open-source has been
-vital in internalizing the idea that software can be treated as a craft.
+is as an open-source hobbyist. I had the freedom to choose what projects I want
+to create, and in no way restrained by any spec or requirements that I should
+adhere to.  It's like when someone gave me a blank piece of paper and told me:
+"draw whatever you want." This may be different, say, if I took a computer
+science degree and labored over machine problems or started out programming in
+a job where I have lesser freedom to the projects I'll take. Starting out in
+open-source has been vital in internalizing the idea that software can be
+treated as a craft.
 
-> *"[Starting out in open-source] is like when someone gave me a blank piece of
-> paper and told me: 'draw whatever you want.'"*
+> With software, the dark terminal has become my canvas and the blinking cursor
+> my brush
 
+With software, the dark terminal has become my canvas and the blinking
+cursor my brush. I was able to build things and express myself in a way I want
+to. The best part is that it is deeply connected (and integral) to my field in
+technology, and has allowed to fully express myself through my medium. When I
+was building [PySwarms](https://github.com/ljvmiranda921/pyswarms) back in grad
+school, I imagine myself trudging the long nights typing on my keyboard under
+some faint fluorescent light. I push to PyPI, look at my creation, and tell
+myself "this is how I make software, this is different from how other's make
+software because it's mine".
 
 <!-- describe the three things that it allowed you to do -->
+Because of this, there are three things I learned when treating the act of
+writing software as a craft. I don't want to fully romanticize these points,
+thus, I'm also going to put a counterweight for each regarding the challenges
+(or perils) of software craftsmanship.
+
+* **Deeper and personal connection to your work**
+<!-- 
+personal connection, feels like an artwork, bad: too much connection in
+mass production 
+--> 
+* **Maintaining a high-standard of software quality**
+<!-- 
+sometimes though you have to let go of standards to ship your software right
+away. However, I think this is just a matter of improving how we organize
+ourselves in making things
+-->
+* **Sharing the craft to the community**
+<!-- 
+I am lucky because I can share my passion in open-source and software
+craftsmanship in Thinking Machines. But of course the larger community can be toxic 
+and can lead to me burniing out
+-->
+
+
+<!--
+clear this up. Is this more of an industry open-source difference? I don't think so.
+It is possible to create 
+-->
+
+
+
 
 ### Footnotes
 
