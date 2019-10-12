@@ -23,7 +23,7 @@ on how I'm doing today and what these reflections meant for me and my career.
 
 Similar to [my previous blogpost](/life/2018/09/04/my-year-in-commits/), this
 is a highly-personal essay on my journey, but I hope that a few nuggets of
-wisdom and insight will surface as you read through my stories and reflections.
+insight will surface as you read through my stories and reflections.
 
 ## The soba story
 
@@ -50,9 +50,10 @@ buckwheat flour in a large bowl, you knead it, you flatten it, and then you
 slice it into strips.  While he's doing that, one of the translators mentioned
 that **he's been making soba noodles all his life.** I was so entranced
 watching him: he seemed to retain the same vigor and enthusiasm of making soba
-from his childhood years. I was also confused and a question stuck to me: 
+from his childhood years. I was also confused and a question stuck to me: "How
+can you do one thing for all your life and not be bored by it?"
 
-> *How can you do one thing for all your life and not be bored by it?*
+> *"How can you do one thing for all your life and not be bored by it?"*
 
 The day went on: we made our own noodles, cooked some zaru soba (ざるそば), ate
 it, and went home. Little did I know that watching an old man making soba[^1]
@@ -90,25 +91,37 @@ reflects how magical I see programming even up to this day. Another reason is
 that he likened a programmer to a poet, and this brought back some memories of
 my undergraduate years.
 
-In hindsight, I've been looking for a semblance of craftsmanship early on when
-I was an undergrad. I joined [Heights](https://heights-ateneo.org/), an
+In hindsight, I may have been looking for a semblance of craftsmanship early on
+when I was an undergrad. I joined [Heights](https://heights-ateneo.org/), an
 artistic and literary publication, and practiced writing poems and making art.
 Encountering various works and artists during deliberations and workshops gave
 me an insight on how a medium is used to convey an idea or express one's self.
 The experience of **expressing yourself through a medium** has enamored me, and
 it's something that I want to recreate in my field.
 
+Again, I imagine the recurring image of the soba-maker: using the flour as his
+medium, he trudges the long nights kneading dough and making noodles under some
+faint tungsten light. At the end of it all, he looks to his creation and says
+to himself: "this is how I make soba, this is different from how other's make
+soba because it's mine." Expressing yourself through the medium is a way of
+marking yourself to that object&mdash; a deeper connection to one's work that
+counters blind mass-production.
+
 <!-- Always look for ways to find the same experience in tech -->
 Fast forward to today, I realized that **working in open-source allowed me to
 recreate the same experience of craftsmanship** during my Heights days. I'd
-consider myself lucky that my initial experience of "serious programming"[^2] is in
-open-source. 
+consider myself lucky that my initial experience of "serious programming"[^2]
+is in open-source. I had the freedom to choose what projects I want to create,
+and in no way restrained by any spec or requirements that I should adhere to.
+It's like when someone gave me a blank piece of paper and told me: "draw whatever
+you want." This may be different, say, if I took a computer science degree and
+labored over machine problems or started out programming in a job where I have
+lesser freedom to the projects I'll take. Starting out in open-source has been
+vital in internalizing the idea that software can be treated as a craft.
 
-<!-- why? because it's done purely out of volition. Not as a requirement, say,
-if I started seriously doing programming in a job, and not as a precursor to a
-grade, say, if I took a computer science degree back in college. Starting-out
-with open-source means that I'm doing it without the restraint of any
-requirement. --> 
+> *"[Starting out in open-source] is like when someone gave me a blank piece of
+> paper and told me: 'draw whatever you want.'"*
+
 
 <!-- describe the three things that it allowed you to do -->
 
