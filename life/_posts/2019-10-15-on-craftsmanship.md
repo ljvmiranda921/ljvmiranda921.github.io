@@ -45,13 +45,13 @@ healthy and strong as with the standard for most Japanese seniors.
 After some greetings and remarks, one of the soba chefs, probably the most
 senior of them by his looks, came to the front and demonstrated how to make
 soba. He stepped on the small makeshift stage, dipped his hands in water, and
-started his handiwork. It was very methodical: you make small clumps of
-buckwheat flour in a large bowl, you knead it, you flatten it, and then you
-slice it into strips.  While he's doing that, one of the translators mentioned
-that **he's been making soba noodles all his life.** I was so entranced
-watching him: he seemed to retain the same vigor and enthusiasm of making soba
-from his childhood years. I was also confused and a question stuck to me: "How
-can you do one thing for all your life and not be bored by it?"
+started his handiwork. It was very methodical: he first made small clumps of
+buckwheat flour in a large bowl, then kneaded it, flattened it, and sliced it
+into strips.  While making soba, one of the translators mentioned that
+*he's been making soba noodles all his life.* I was so entranced watching
+him: he seemed to retain the same vigor and enthusiasm of making soba from his
+childhood years. I was also confused as a question stuck on me: "How can you
+do one thing for all your life and not be bored by it?"
 
 > *"How can you do one thing for all your life and not be bored by it?"*
 
@@ -60,7 +60,7 @@ it, and went home. Little did I know that watching an old man making soba[^1]
 will become a theme of my Japanese journey. Looking back, Japan seems to have a
 strong tradition of craftsmanship. Be it in pottery, brewing sake (酒), or
 [making fountain pens](https://www.youtube.com/watch?v=1F12qUyIACM), there's
-always this recurring image of an old man doing something all his life. 
+always this recurring image of an old person doing something all their lives. 
 
 The idea of a craftsman has been stamped on me ever since that day. Being able
 to build things and manifest oneself into something tangible is very
@@ -84,12 +84,12 @@ sought ways on finding and honing my craft.
 >
 > &mdash; The Joys of the Craft, Mythical Man-Month, Brooks, 1975
 
-The quote above from Frederick Brooks struck me when I was reading *Mythical
+The quote from Frederick Brooks struck me when I was reading *Mythical
 Man-Month*. The way he describes the art of programming as building castles in
-the air, as if you're a wizard conjuring thought-stuff from mere incantations
-reflects how magical I see programming even up to this day. Another reason is
-that he likened a programmer to a poet, and this brought back some memories of
-my undergraduate years.
+the air&mdash; as if you're a wizard conjuring thought-stuff from mere
+incantations&mdash; reflects how magical I see programming even up to this
+day.[^2] Another reason is that he likened a programmer to a poet, and this
+brought back some memories of my undergraduate years.
 
 In hindsight, I may have been looking for a semblance of craftsmanship early on
 when I was an undergrad. I joined [Heights](https://heights-ateneo.org/), an
@@ -110,7 +110,7 @@ counters blind mass-production.
 <!-- Always look for ways to find the same experience in tech -->
 Fast forward to today, I realized that **working in open-source allowed me to
 recreate the same experience of craftsmanship** during my Heights days. I'd
-consider myself lucky that my initial experience of "serious programming"[^2]
+consider myself lucky that my initial experience of "serious programming"[^3]
 is in open-source. I had the freedom to choose what projects I want to create,
 and in no way restrained by any spec or requirements that I should adhere to.
 It's like when someone gave me a blank piece of paper and told me: "draw whatever
@@ -128,4 +128,5 @@ vital in internalizing the idea that software can be treated as a craft.
 ### Footnotes
 
 [^1]: Seeing this [video of a man making soba](https://www.youtube.com/watch?v=V3zFiwa8fKs) circulating in the internet motivated me to finish this post. It brought back memories of my experience when I was in Japan.
-[^2]: Let me qualify this word further. Serious programming in this sense means being attuned with industry practices such as testing, documentation, and CI/CD. Although I've learned how to program since high school, I just type-in things without any sensibility if my code is idiomatic.
+[^2]: Of course, he followed this with a chapter called "The Woes of the Craft," which is equally true.
+[^3]: Let me qualify this word further. Serious programming in this sense means being attuned with industry practices such as testing, documentation, and CI/CD. Although I've learned how to program since high school, I just type-in things without any sensibility if my code is idiomatic.
