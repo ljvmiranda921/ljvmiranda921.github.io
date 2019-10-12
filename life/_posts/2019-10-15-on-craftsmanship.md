@@ -52,12 +52,29 @@ it?*
 The day went on: we made our own noodles, cooked some zaru soba (ざるそば), ate
 it, and went home. Little did I know that watching an old man making
 soba&mdash;knowing that he's been doing it all his life&mdash;will become a
-theme of my Japanese journey. Looking back, Japan seems to have a
-strong tradition of craftsmanship. Be it in pottery, brewing sake (酒), or
-[making fountain pens](https://www.youtube.com/watch?v=1F12qUyIACM), there's
-always this recurring image of an old man doing something all his life.
+theme of my Japanese journey. Looking back, Japan seems to have a strong
+tradition of craftsmanship. Be it in pottery, brewing sake (酒), or [making
+fountain pens](https://www.youtube.com/watch?v=1F12qUyIACM), there's always
+this recurring image of an old man doing something all his life. 
 
-The image of a craftsman has been stamped on me ever since that day. Being able
+The idea of a craftsman has been stamped on me ever since that day. Being able
 to build things and manifest oneself into something tangible is a meaningful
 life to be in. 
+
+## Software as a craft
+
+> *"The programmer, like the poet, works only slightly removed from pure
+> thought-stuff. He builds his castles in the air, from air, creating by
+> exertion of the imagination.*
+>
+> *Yet the program construct, unlike the poet's words, is real in the sense that
+> it moves and works, producing visible outputs separate from the construct
+> itself...The magic of myth and legend has come true in our time. One types
+> the correct incantation on a keyboard, and a display screen comes to life,
+> showing things that never were nor could be.*
+>
+> *Programming then is fun because it gratifies creative longings built deep
+> within us and delights sensibilities we have in common with all men."*
+>
+> &mdash; The Joys of the Craft, Mythical Man-Month, Brooks, 1975
 
