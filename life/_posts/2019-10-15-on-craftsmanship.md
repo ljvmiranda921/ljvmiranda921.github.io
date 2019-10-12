@@ -90,7 +90,6 @@ reflects how magical I see programming even up to this day. Another reason is
 that he likened a programmer to a poet, and this brought back some memories of
 my undergraduate years.
 
-<!-- part of heights, can't really see craft in ECE, used to write poems and make artworks, not particularly good at it, but enjoyed it because of the craftsmanship involved --> 
 In hindsight, I've been looking for a semblance of craftsmanship early on when
 I was an undergrad. I joined [Heights](https://heights-ateneo.org/), an
 artistic and literary publication, and practiced writing poems and making art.
@@ -100,13 +99,20 @@ The experience of **expressing yourself through a medium** has enamored me, and
 it's something that I want to recreate in my field.
 
 <!-- Always look for ways to find the same experience in tech -->
+Fast forward to today, I realized that **working in open-source allowed me to
+recreate the same experience of craftsmanship** during my Heights days. I'd
+consider myself lucky that my initial experience of "serious programming"[^2] is in
+open-source. 
 
-<!-- you started taking software seriously within open-source, primarly as a
-hobby, no deadlines no clients, etc. -->
-
+<!-- why? because it's done purely out of volition. Not as a requirement, say,
+if I started seriously doing programming in a job, and not as a precursor to a
+grade, say, if I took a computer science degree back in college. Starting-out
+with open-source means that I'm doing it without the restraint of any
+requirement. --> 
 
 <!-- describe the three things that it allowed you to do -->
 
 ### Footnotes
 
 [^1]: Seeing this [video of a man making soba](https://www.youtube.com/watch?v=V3zFiwa8fKs) circulating in the internet motivated me to finish this post. It brought back memories of my experience when I was in Japan.
+[^2]: Let me qualify this word further. Serious programming in this sense means being attuned with industry practices such as testing, documentation, and CI/CD. Although I've learned how to program since high school, I just type-in things without any sensibility if my code is idiomatic.
