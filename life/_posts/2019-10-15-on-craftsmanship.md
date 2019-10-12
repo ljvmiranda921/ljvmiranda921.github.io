@@ -133,24 +133,39 @@ some faint fluorescent light. I push to PyPI, look at my creation, and tell
 myself "this is how I make software, this is different from how other's make
 software because it's mine".
 
-<!-- describe the three things that it allowed you to do -->
-Because of this, there are three things I learned when treating the act of
-writing software as a craft. I don't want to fully romanticize these points,
-thus, I'm also going to put a counterweight for each regarding the challenges
-(or perils) of software craftsmanship.
+Due to this, there are three things I learned when treating software as craft.
+I don't want to fully romanticize these points, thus, I'm adding a
+counterweight to discuss the challenges involved for each learning:
 
-* **Deeper and personal connection to your work**
-<!-- 
-personal connection, feels like an artwork, bad: too much connection in
-mass production 
---> 
-* **Maintaining a high-standard of software quality**
-<!-- 
-sometimes though you have to let go of standards to ship your software right
-away. However, I think this is just a matter of improving how we organize
-ourselves in making things
--->
-* **Sharing the craft to the community**
+* **Deeper connection to your work** I think one of the main
+    strengths of craftsmanship is one's connection to his/her work. Open-source
+    projects, which I believe are good exemplars of crafted artifacts, thrive
+    because of the community (or the creator) that cares for it. 
+
+    Of course, the downside is that in this highly-industrialized world, things
+    that work stays and things that don't are left behind. Laboring over some
+    software that in the end, will not be used or worse, triggered negative
+    responses from users may be seen as a personal injury to the craftsman.
+    Personally, I try to practice some level of stoicism to these [disordered
+    attachments](http://spiritual-exercises.com/ignatian-spirituality/disordered-attachments/).
+    This bullet-point definitely deserves its own post.
+
+* **Maintaining a high-standard of software quality** Craftsmanship allowed me
+    to acquire ["taste,"](https://vimeo.com/24715531) by creating a large
+    volume of work and/or by refining the software projects I've created. I
+    never realized the extent of my learning back then until I started
+    introducing some open-source software practices right away a few weeks into
+    my job.
+
+    However, in most cases, we don't have the luxury of time to continuously
+    refine and refactor our work. One thing I learned on-the-job is that there
+    will always be reasons to polish our software, so it's important to know
+    when to call something as done and start shipping. There's an element of
+    practicality that's lost in pursuing perfection so a healthy amount of
+    agility (coupled with continuous integration and development) is necessary. 
+
+* **Sharing the craft to the community** Seeing software as a craft goes beyond
+    the individual as it is shared to the community.
 <!-- 
 I am lucky because I can share my passion in open-source and software
 craftsmanship in Thinking Machines. But of course the larger community can be toxic 
