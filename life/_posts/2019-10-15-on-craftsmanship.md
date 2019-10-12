@@ -22,7 +22,7 @@ it manifests into my work life (it's not always good!). In the end, I'll
 provide a short meta-reflection on how I'm doing today and what these
 reflections mean in my career.
 
-## The Soba Story
+## The soba story
 
 The year was 2017, and I'm still fresh into my grad school journey in Japan.
 I'm starting to settle down, moved to a newer apartment, and made friends with
