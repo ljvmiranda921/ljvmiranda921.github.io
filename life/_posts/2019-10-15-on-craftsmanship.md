@@ -43,8 +43,8 @@ After some greetings and remarks, one of the soba chefs, probably the most
 senior of them all by his looks, came to the front and demonstrated how to
 make soba. It was very methodical: you make small clumps of buckwheat flour in
 a large bowl, you knead it, you flatten it, and then you slice it into strips.
-While he's doing that, one of the translators mentioned that he's been making
-soba noodles all his life. I was so entranced watching him: he seemed to retain
+While he's doing that, one of the translators mentioned that **he's been making
+soba noodles all his life.** I was so entranced watching him: he seemed to retain
 the same vigor and enthusiasm of making soba from his childhood years. I was
 also confused: *how can you do one thing for all your life and not be bored by
 it?*
@@ -82,12 +82,14 @@ life to be in.
 Heights, etc. -->
 The quote above from Frederick Brooks struck me when I was reading *Mythical
 Man-Month*. The way he describes the art of programming as building castles in
-the air as if you're a wizard conjuring thought-stuff from mere incantations
+the air, as if you're a wizard conjuring thought-stuff from mere incantations
 reflects how magical I see programming even up to this day. Another reason is
 that he likened a programmer to a poet, and this brought back some memories of
 my undergraduate years.
 
-For 
+<!-- part of heights, can't really see craft in ECE, used to write poems and make artworks, not particularly good at it, but enjoyed it because of the craftsmanship involved --> 
+
+<!-- Always look for ways to find the same experience in tech -->
 
 <!-- you started taking software seriously within open-source, primarly as a
 hobby, no deadlines no clients, etc. -->
