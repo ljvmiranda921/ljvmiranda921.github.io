@@ -34,7 +34,7 @@ beautiful country, we took part in some Japanese cultural activities provided
 by the school&mdash; one of which is making soba noodles.
 
 I didn't expect much from spending the weekend making soba noodles, *how life
-transforming could it be?* So we entered the function hall and there are around
+transforming could it be?* So I entered the function hall and saw around
 six tables laid out with some utensils already set up. In front, of course, are
 the welcoming faces of the Japanese cultural group. With them, I presume, are
 the soba chefs. I could tell because they have these aprons around them and a
@@ -104,8 +104,7 @@ medium, he trudges the long nights kneading dough and making noodles under some
 faint tungsten light. At the end of it all, he looks to his creation and says
 to himself: "this is how I make soba, this is different from how other's make
 soba because it's mine." Expressing yourself through the medium is a way of
-marking yourself to that object&mdash; a deeper connection to one's work that
-counters blind mass-production.
+marking yourself to that object&mdash; and a deeper connection to one's work.
 
 <!-- Always look for ways to find the same experience in tech -->
 Fast forward to today, I realized that **working in open-source allowed me to
@@ -113,9 +112,9 @@ recreate the same experience of craftsmanship** during my Heights days. I'd
 consider myself lucky that my initial experience of "serious programming"[^3]
 is as an open-source hobbyist. I had the freedom to choose what projects I want
 to create, and in no way restrained by any spec or requirements that I should
-adhere to.  It's like when someone gave me a blank piece of paper and told me:
+adhere to.  It's like someone gave me a blank piece of paper and told me:
 "draw whatever you want." This may be different, say, if I took a computer
-science degree and labored over machine problems or started out programming in
+science degree laboring over machine problems or started out programming in
 a job where I have lesser freedom to the projects I'll take. Starting out in
 open-source has been vital in internalizing the idea that software can be
 treated as a craft.
