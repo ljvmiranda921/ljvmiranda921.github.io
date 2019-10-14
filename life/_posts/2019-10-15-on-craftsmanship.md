@@ -164,20 +164,34 @@ counterweight to discuss the challenges involved for each learning:
     agility (coupled with continuous integration and development) is necessary. 
 
 * **Sharing the craft to the community** Seeing software as a craft goes beyond
-    the individual as it is shared to the community.
-<!-- 
-I am lucky because I can share my passion in open-source and software
-craftsmanship in Thinking Machines. But of course the larger community can be toxic 
-and can lead to me burniing out
--->
+    the individual as it is shared to the community. I am lucky because I can
+    share my passion in open-source and software craftsmanship in Thinking
+    Machines. Recently, we launched [Open TM](thinkingmachin.es/open-tm), and
+    did a lot of strides in open-source this year.
 
+    Open-source is always about community, but this can be a double-edged
+    sword. Communities can be toxic: rude comments, gatekeepers, you name it!
+    I guess the good thing is that most of the communities I've been into have
+    the kindest and most talented people in tech. I'm happy to be inspired by
+    them!
 
-<!--
-clear this up. Is this more of an industry open-source difference? I don't think so.
-It is possible to create 
--->
+## Conclusion 
 
+I decided to reflect on this simply because the archetype of a craftsman has
+become an anchor in my professional life. *I build things*, and I find my purpose
+in the act of creation (and creative destruction when refactoring code!). I
+guess the next step for me is to learn how to organize people to create
+*bigger* things, and to learn how share my craft to a wider audience. I've been
+talking a lot about open-source recently primarily because it was my main
+vehicle for craftsmanship, but I think that same concepts can be applied to
+any aspect of technology.
 
+I definitely feel that this approach in life has worked for me so far. I feel
+that the ability to create is being more crucial in this rapidly-changing
+world. Sometimes it's better to shape your surroundings than blindly-accept
+what's being handed to you. Perhaps I'm wrong, and I'll look back to this post
+full of disagreement, but I'm hinging on the idea that I'm approximately
+correct.
 
 
 ### Footnotes
