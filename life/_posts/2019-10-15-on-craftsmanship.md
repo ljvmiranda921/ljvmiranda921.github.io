@@ -124,8 +124,8 @@ treated as a craft.
 
 With software, the dark terminal has become my canvas and the blinking
 cursor my brush. I was able to build things and express myself in a way I want
-to. The best part is that it is deeply connected (and integral) to my field in
-technology, and has allowed to fully express myself through my medium. When I
+to. The best part is that it is integral to my field in
+technology, and has allowed to express myself through my medium. When I
 was building [PySwarms](https://github.com/ljvmiranda921/pyswarms) back in grad
 school, I imagine myself trudging the long nights typing on my keyboard under
 some faint fluorescent light. I push to PyPI, look at my creation, and tell
@@ -133,7 +133,7 @@ myself "this is how I make software, this is different from how other's make
 software because it's mine".
 
 Due to this, there are three things I learned when treating software as craft.
-I don't want to fully romanticize these points, thus, I'm adding a
+I don't want to romanticize these points, thus, I'm adding a
 counterweight to discuss the challenges involved for each learning:
 
 * **Deeper connection to your work** I think one of the main
@@ -145,9 +145,9 @@ counterweight to discuss the challenges involved for each learning:
     that work stays and things that don't are left behind. Laboring over some
     software that in the end, will not be used or worse, triggered negative
     responses from users may be seen as a personal injury to the craftsman.
-    Personally, I try to practice some level of stoicism to these [disordered
+    I try to practice some level of stoicism to these [disordered
     attachments](http://spiritual-exercises.com/ignatian-spirituality/disordered-attachments/).
-    This bullet-point definitely deserves its own post.
+    This bullet-point deserves its own post.
 
 * **Maintaining a high-standard of software quality** Craftsmanship allowed me
     to acquire ["taste,"](https://vimeo.com/24715531) by creating a large
@@ -156,7 +156,7 @@ counterweight to discuss the challenges involved for each learning:
     introducing some open-source software practices right away a few weeks into
     my job.
 
-    However, in most cases, we don't have the luxury of time to continuously
+    However, in most cases, we don't have the luxury of time to
     refine and refactor our work. One thing I learned on-the-job is that there
     will always be reasons to polish our software, so it's important to know
     when to call something as done and start shipping. There's an element of
@@ -166,7 +166,7 @@ counterweight to discuss the challenges involved for each learning:
 * **Sharing the craft to the community** Seeing software as a craft goes beyond
     the individual as it is shared to the community. I am lucky because I can
     share my passion in open-source and software craftsmanship in Thinking
-    Machines. Recently, we launched [Open TM](thinkingmachin.es/open-tm), and
+    Machines. Last month, we launched [Open TM](thinkingmachin.es/open-tm), and
     did a lot of strides in open-source this year.
 
     Open-source is always about community, but this can be a double-edged
@@ -177,17 +177,18 @@ counterweight to discuss the challenges involved for each learning:
 
 ## Conclusion 
 
-I decided to reflect on this simply because the archetype of a craftsman has
-become an anchor in my professional life. *I build things*, and I find my purpose
-in the act of creation (and creative destruction when refactoring code!). I
-guess the next step for me is to learn how to organize people to create
-*bigger* things, and to learn how share my craft to a wider audience. I've been
-talking a lot about open-source recently primarily because it was my main
-vehicle for craftsmanship, but I think that same concepts can be applied to
-any aspect of technology.
+I decided to reflect on this because the archetype of a craftsman has
+become an anchor in my professional life. *I build things*, and I find my
+purpose in the act of creation (and creative destruction when refactoring
+code!). I guess the next step for me is to learn how to organize people to
+create *bigger* things, and to learn how to share my craft to a wider audience.
 
-I definitely feel that this approach in life has worked for me so far. I feel
-that the ability to create is being more crucial in this rapidly-changing
+I've been talking a lot about open-source because it is my
+primary vehicle for craftsmanship, but I think that same concepts can be applied
+to any aspect of technology.
+
+I feel that this approach in life has worked for me so far. I feel
+that the ability to create is now crucial in this rapidly-changing
 world. Sometimes it's better to shape your surroundings than blindly-accept
 what's being handed to you. Perhaps I'm wrong, and I'll look back to this post
 full of disagreement, but I'm hinging on the idea that I'm approximately
@@ -199,3 +200,7 @@ correct.
 [^1]: Seeing this [video of a man making soba](https://www.youtube.com/watch?v=V3zFiwa8fKs) circulating in the internet motivated me to finish this post. It brought back memories of my experience when I was in Japan.
 [^2]: Of course, he followed this with a chapter called "The Woes of the Craft," which is equally true.
 [^3]: Let me qualify this word further. Serious programming in this sense means being attuned with industry practices such as testing, documentation, and CI/CD. Although I've learned how to program since high school, I just type-in things without any sensibility if my code is idiomatic.
+
+
+#### Changelog
+* 10-15-2019: Update some grammar mistakes
