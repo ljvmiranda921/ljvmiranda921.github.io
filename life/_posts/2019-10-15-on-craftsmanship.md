@@ -194,6 +194,8 @@ what's being handed to you. Perhaps I'm wrong, and I'll look back to this post
 full of disagreement, but I'm hinging on the idea that I'm approximately
 correct.
 
+#### Changelog
+* 10-15-2019: Update some grammar mistakes
 
 ### Footnotes
 
@@ -202,5 +204,3 @@ correct.
 [^3]: Let me qualify this word further. Serious programming in this sense means being attuned with industry practices such as testing, documentation, and CI/CD. Although I've learned how to program since high school, I just type-in things without any sensibility if my code is idiomatic.
 
 
-#### Changelog
-* 10-15-2019: Update some grammar mistakes
