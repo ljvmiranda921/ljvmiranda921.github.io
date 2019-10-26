@@ -1,18 +1,22 @@
 @charset "utf-8";
 
 // Define defaults for each variable.
-
-$base-font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$base-font-family: "Bitter", "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Fira Sans", sans-serif; }
+code {
+  font-family: "Fira Mono", monospace; }
+
 $spacing-unit:     30px !default;
 
 $text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
+$background-color: #fffff8 !default;
+$brand-color:      #a00000 !default;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -48,6 +52,5 @@ $on-laptop:        800px !default;
   "minima/base",
   "minima/layout",
   "minima/syntax-highlighting",
-  "css/better-gist-styles.css",
-  "fonts/Sans/cmun-sans.css"
+  "css/better-gist-styles.css"
 ;
