@@ -7,7 +7,7 @@ permalink: /about/
 
 Hi friends, my name is Lj Miranda and welcome to my blog! 
 
-I like [building things](https://github.com/ljvmiranda921).
+I [build things](https://github.com/ljvmiranda921).
 
 I started this site to tell the story of my tech journey. I believe in
 **technology's enabling power, especially in developing countries like the
