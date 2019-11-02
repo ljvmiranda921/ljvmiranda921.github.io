@@ -81,9 +81,9 @@ As we've seen, the Mcdonalds near our office has implemented something called a
     periodically to the LED screen to check if my McNugget's ready. 
 
 By this time, I hope you're having a sense of what Flask, Celery, and Redis are
-trying to achieve&mdash; i.e., creating a task queue. In the next section, we'll
-discuss the various components of Mcdonald's task queue and how they map to the
-three technologies above.
+trying to achieve&mdash; i.e., **creating a task queue.** In the next section,
+we'll discuss the various components of Mcdonald's task queue and how they map
+to the three technologies above.
 
 ## Diving into Mcdonald's Task Queue
 
@@ -91,16 +91,41 @@ In the Mcdonalds near our office, there are three major components that are in p
 
 * **The *Ate*/*Kuya* cashier**: they're the ones who talk to customers, take
     their orders, and give them their reference numbers *(remember that in the
-    Mcdo near our apartment, they're also the ones who prepares the food, which
+    Mcdo near our apartment, they're also the ones who prepares the meal, which
     is inefficient)*. 
 * **The *Ate*/*Kuya* worker crew**: they're the ones who receives the placed
-    order and prepares or cooks our food.
-* **The large LED screen**: it stores information 
+    order and prepares or cooks our meal.
+* **The database behind the LED screen**: the LED screen displays information
+    on the customers' reference numbers and order status, but we know that it's
+    job is to *only show* information. The actual workhorse is the database
+    behind it. Think of it as a large, invisible table that stores whatever the
+    LED screen displays.
+
+All in all, we see that these components relate to one another via the
+illustration below:
+
+
+
+1. The customer talks to the cashier to place their order.
+2. The cashier takes their order, put it in the database queue (with a `PENDING` status), so that free workers can
+   take them on. The customer receives a reference number and sits on the side.
+   The cashier is then free to take-on the next customer.
+3. A free worker takes on the order and prepares the meal.
+4. Once the worker is done preparing, he updates the status of the reference
+   number from `PENDING` to `SUCCESS`.
+5. The LED displays this change, and the customer sees that his order is now
+   done preparing. He takes his order and goes on his merry way!
+
+Now, let's step-out of Mcdonalds and start thinking of these components in a
+more abstracted manner.
+
+
+### Stepping-out of Mcdonalds
 
 
 
 
-
+### Ye Old Switcheroo
 
 
 
