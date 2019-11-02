@@ -70,11 +70,9 @@ As we've seen, the Mcdonalds near our office has implemented something called a
     the order and the one who prepares the food, the time-to-respond for each
     customer has been greatly reduced. For myself, I don't need to wait for
     everyone in front of me to get their orders before I can start with mine.
-
-* **Better task delegation**. The *Ate* or *Kuya* who takes my order is
+* **Better task delegation**. The *Ate* or *Kuya*[^2] who takes my order is
     different from the one who prepares it. It's less stress for both parties
     and each can just focus on doing their respective tasks!
-
 * **Customers can just sit back and relax**. I don't need to be anxious of the
     people behind me because once I received my reference number, I can just
     sit down and relax while waiting for my order to complete. I'll just refer
@@ -87,6 +85,20 @@ three technologies above.
 
 ## Diving into Mcdonald's Task Queue
 
+Whenever I enter the Mcdonalds near our office, there are always three major
+components that I observe in their system:
+
+* **The *Ate*/*Kuya* cashier**: they're the ones who talk to customers, take
+    their orders, and give them their reference numbers. Remember that in the
+    Mcdo near our apartment, they're also the ones who prepares the food (which
+    is inefficient). In our system, they reduce the time it takes a customer
+    enters the store and places their order.
+* **The *Ate*/*Kuya* worker crew**: they're the ones who receives the placed
+    order and prepares our food. They're involved in reducing the time it takes
+    upon receiving an order and preparing it. They might also enlist the help
+    of other services (cooks, etc.) when a certain item still needs to be
+    cooked.
+
 
 
 
@@ -98,6 +110,7 @@ three technologies above.
 ### Footnotes
 
 [^1]: ELI5: Explain like I'm five. There's a [subreddit](https://www.reddit.com/r/explainlikeimfive/) on it!
+[^2]: *Ate* means older sister while *Kuya* means older brother in Filipino. For those who are not from the Philippines, we usually call everyone (even our fastfood service crews) as older brothers and sisters.
 
 
 
