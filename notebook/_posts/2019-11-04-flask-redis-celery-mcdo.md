@@ -19,7 +19,9 @@ knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge). This time, let's
 step back and do an ELI5[^1] on how these technologies relate to one another.
 
 In this blogpost, I'll explain why we need Flask, Celery, and Redis by sharing
-my adventures in buying McNuggets from Mcdonalds. 
+my adventures in buying McNuggets from Mcdonalds. Using these three (or
+technologies similar to them) is integral in web backend development that
+allows scaling of our applications.
 
 
 ## A Tale of Two McDonalds
@@ -79,26 +81,21 @@ As we've seen, the Mcdonalds near our office has implemented something called a
     periodically to the LED screen to check if my McNugget's ready. 
 
 By this time, I hope you're having a sense of what Flask, Celery, and Redis are
-trying to achieve (i.e., creating a task queue). In the next section, we'll
+trying to achieve&mdash; i.e., creating a task queue. In the next section, we'll
 discuss the various components of Mcdonald's task queue and how they map to the
 three technologies above.
 
 ## Diving into Mcdonald's Task Queue
 
-Whenever I enter the Mcdonalds near our office, there are always three major
-components that I observe in their system:
+In the Mcdonalds near our office, there are three major components that are in play:
 
 * **The *Ate*/*Kuya* cashier**: they're the ones who talk to customers, take
-    their orders, and give them their reference numbers. Remember that in the
-    Mcdo near our apartment, they're also the ones who prepares the food (which
-    is inefficient). In our system, they reduce the time it takes a customer
-    enters the store and places their order.
+    their orders, and give them their reference numbers *(remember that in the
+    Mcdo near our apartment, they're also the ones who prepares the food, which
+    is inefficient)*. 
 * **The *Ate*/*Kuya* worker crew**: they're the ones who receives the placed
-    order and prepares our food. They're involved in reducing the time it takes
-    upon receiving an order and preparing it. They might also enlist the help
-    of other services (cooks, etc.) when a certain item still needs to be
-    cooked.
-
+    order and prepares or cooks our food.
+* **The large LED screen**: it stores information 
 
 
 
