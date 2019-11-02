@@ -20,8 +20,8 @@ step back and do an ELI5[^1] on how these technologies relate to one another.
 
 In this blogpost, I'll explain why we need Flask, Celery, and Redis by sharing
 my adventures in buying McNuggets from Mcdonalds. Using these three (or
-technologies similar to them) is integral in web backend development that
-allows scaling of our applications.
+technologies similar to them) is integral to web backend development so that we
+can scale our applications.
 
 
 ## A Tale of Two McDonalds
