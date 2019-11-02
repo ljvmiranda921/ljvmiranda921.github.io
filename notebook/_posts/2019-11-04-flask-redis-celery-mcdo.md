@@ -119,7 +119,7 @@ illustration below:
 Now, let's step-out of Mcdonalds and start thinking of these components in a
 more abstracted manner.
 
-### Stepping-out of Mcdonalds
+## Stepping-out of Mcdonalds
 
 
 <!-- Put a table on the left is Mcdo, Center is abstracted component, and right
@@ -132,7 +132,7 @@ is web backend dev (on this case, put question marks)-->
 | Database behind LED screen 	| **Database backend** 	| ?           	|
 
 
-### Ye Old Switcheroo
+## Ye Old Switcheroo
 
 | Mcdonalds                  	| Abstract Component 	| Web Backend       	|
 |----------------------------	|--------------------	|-------------------	|
@@ -140,6 +140,10 @@ is web backend dev (on this case, put question marks)-->
 | Worker crew                	| Worker             	| **Celery Worker**   	|
 | Database behind LED screen 	| Database backend   	| **Redis**           	|
 
+
+## Conclusion 
+
+<!-- Add some disclaimers to avoid know-it-alls -->
 
 
 ### Footnotes
