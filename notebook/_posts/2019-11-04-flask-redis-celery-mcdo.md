@@ -125,8 +125,20 @@ more abstracted manner.
 <!-- Put a table on the left is Mcdo, Center is abstracted component, and right
 is web backend dev (on this case, put question marks)-->
 
+| Mcdonalds                  	| Abstract Component 	| Web Backend 	|
+|----------------------------	|--------------------	|-------------	|
+| Cashier crew               	| **Application**      	| ?           	|
+| Worker crew                	| **Worker**           	| ?           	|
+| Database behind LED screen 	| **Database backend** 	| ?           	|
+
 
 ### Ye Old Switcheroo
+
+| Mcdonalds                  	| Abstract Component 	| Web Backend       	|
+|----------------------------	|--------------------	|-------------------	|
+| Cashier crew               	| Application        	| **Flask Application** |
+| Worker crew                	| Worker             	| **Celery Worker**   	|
+| Database behind LED screen 	| Database backend   	| **Redis**           	|
 
 
 
