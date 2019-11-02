@@ -119,10 +119,11 @@ illustration below:
 Now, let's step-out of Mcdonalds and start thinking of these components in a
 more abstracted manner.
 
-
 ### Stepping-out of Mcdonalds
 
 
+<!-- Put a table on the left is Mcdo, Center is abstracted component, and right
+is web backend dev (on this case, put question marks)-->
 
 
 ### Ye Old Switcheroo
