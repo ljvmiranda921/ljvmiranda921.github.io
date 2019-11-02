@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why do we need Flask, Celery, and Redis? (with McNuggets in Between)"
-date: 2019-11-04
+date: 2019-11-09
 category: notebook
 comments: true
 author: "LJ MIRANDA"
