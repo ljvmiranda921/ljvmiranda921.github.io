@@ -109,7 +109,7 @@ illustration below:
 1. The customer talks to the cashier to place their order.
 2. The cashier takes their order, put it in the database queue (with a `PENDING` status), so that free workers can
    take them on. The customer receives a reference number and sits on the side.
-   The cashier is then free to take-on the next customer.
+   The cashier is then free to take-on another order.
 3. A free worker takes on the order and prepares the meal.
 4. Once the worker is done preparing, he updates the status of the reference
    number from `PENDING` to `SUCCESS`.
@@ -198,26 +198,18 @@ to the others we've seen, we just switched-out the icons):
     any other data storage you can think of, like MySQL, PostgresSQL, and the
     like.
 
-Ok, there's one thing I haven't told you. How do these three work together? How
-do these technologies communicate with one another? In the Mcdonalds example,
-what is the "stuff" that allows cashiers to talk to workers, the workers to
-update the database, etc.? What is this "invisible framework" that allows all
-these components to jive with one another?
+Together, these three form a task queuing system. What happens then is:
 
-The answer is
-[Celery](http://docs.celeryproject.org/en/latest/getting-started/introduction.html).
-
-### More about Celery
-
-As I've alluded to earlier, Celery is not just the worker that allows you to
-run these services asynchronously. It is a framework that enables this whole
-task queueing thing to exist!
-
-
-To setup a 
-
-
-
+1. The Client talks to the Flask Application to place their request.
+2. The App takes the request, put it in the database queue (with a `PENDING` status), so that Celery workers can
+   take them on. The Client receives a JobID and polls on the side.
+   The App is then free to take-on the next request.
+3. A Celery worker takes on the request and runs the service.
+4. Once the worker is done, it updates the job's status from `PENDING` to
+   `SUCCESS`.
+5. The App signals this change (or returned when polled), and the Client sees
+   that his request is now done processing. He takes his response and goes on
+   his merry way!
 
 
 ## Conclusion 
