@@ -116,8 +116,10 @@ illustration below:
 5. The LED displays this change, and the customer sees that his order is now
    done preparing. He takes his order and goes on his merry way!
 
-Now, let's step-out of Mcdonalds and start seeing these components in a
-more abstracted manner.
+So far we've familiarized ourselves with the concept of a task queue and how it
+plays out within the context of our favorite fastfood restaurant. Now, let's
+step-out of Mcdonalds and start seeing these components in a more abstracted
+manner.
 
 ## Stepping-out of Mcdonalds
 
@@ -128,10 +130,27 @@ the diagram above and switch-out some parts:
 <!-- Insert illustration of the system architecture here -->
 
 We consider ourselves as the
-[**Client**](https://en.wikipedia.org/wiki/Client%E2%80%93server_model), for we're
-the ones who makes an order or **Request**. The cashier crew and the LED screen
-that we interact with is the **Application**. 
+[**Client**](https://en.wikipedia.org/wiki/Client%E2%80%93server_model), for
+we're the ones asking for a service or making a **Request**.[^3] The cashier
+crew and the LED screen that we interact with is the **Application**. 
 
+Notice that I lumped the cashier crew and the LED screen together? It's because
+these are the two interfaces that we interact with during our time in Mcdo. The
+LED screen is just a conduit of the actual database that stores and manages
+data behind it (the **Database Backend**). Lastly, the actual processes that
+takes our request and makes something out of it are called our **Workers**.
+
+So far, we've learned the following:
+- What a task queue is and why it's important. 
+- The components of the Mcdonald's task queue: cashier, worker, database behind
+    LED screen
+- How these components look like in more general terms: application, worker,
+    database backend.
+
+The table below maps the Mcdonalds components that we currently know to the
+abstract general component that we're going to use from this point forward.
+Now, we're ready to use what we know so far and map these components to Flask,
+Celery, and Redis!
 
 <!-- Put a table on the left is Mcdo, Center is abstracted component, and right
 is web backend dev (on this case, put question marks)-->
@@ -146,12 +165,59 @@ is web backend dev (on this case, put question marks)-->
 
 ## Ye Old Switcheroo
 
+This should be simple now, so here's ye old switcheroo!
+
 | Mcdonalds                  	| Abstract Component 	| Web Backend       	|
 |----------------------------	|--------------------	|-------------------	|
 | Customer              	| Client            	| **Client**           	|
 | Cashier crew               	| Application        	| **Flask Application** |
 | Worker crew                	| Worker             	| **Celery Worker**   	|
 | Database behind LED screen 	| Database backend   	| **Redis**           	|
+
+
+To see them in action, let's look at the illustration below (this one's similar
+to the others we've seen, we just switched-out the icons):
+
+<!-- Insert illustration of the system architecture here -->
+
+* **Flask Application**. This the web application that accepts requests
+    and returns responses depending on that request. When you talk to the
+    cashier, you make a request (likely a
+    [`/POST`](https://en.wikipedia.org/wiki/POST_(HTTP))). When you look at the
+    LED screen, you're also making a request (likely a
+    [`/GET`](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)). 
+* **Celery Worker**. *Now we're talking*. Celery provides the framework to
+    write workers for running your services. Remember, **celery is not just
+    the worker**. It is a framework that allows your workers to communicate
+    with the database backend, "talk" to one another and the like. A celery
+    worker is just one piece of the Celery "ecosystem".
+* **Redis**. This one holds information on the reference numbers (also known
+    as IDs) and status of each job. Redis is an in-memory data store, think of
+    global variables on steroids.  Perhaps, the *actual* database backend in
+    Mcdonalds is built on-top of Redis.  Truth is, you can swap-out Redis with
+    any other data storage you can think of, like MySQL, PostgresSQL, and the
+    like.
+
+Ok, there's one thing I haven't told you. How do these three work together? How
+do these technologies communicate with one another? In the Mcdonalds example,
+what is the "stuff" that allows cashiers to talk to workers, the workers to
+update the database, etc.? What is this "invisible framework" that allows all
+these components to jive with one another?
+
+The answer is
+[Celery](http://docs.celeryproject.org/en/latest/getting-started/introduction.html).
+
+### More about Celery
+
+As I've alluded to earlier, Celery is not just the worker that allows you to
+run these services asynchronously. It is a framework that enables this whole
+task queueing thing to exist!
+
+
+To setup a 
+
+
+
 
 
 ## Conclusion 
@@ -163,6 +229,7 @@ is web backend dev (on this case, put question marks)-->
 
 [^1]: ELI5: Explain like I'm five. There's a [subreddit](https://www.reddit.com/r/explainlikeimfive/) on it!
 [^2]: *Ate* means older sister while *Kuya* means older brother in Filipino. For those who are not from the Philippines, we usually call everyone (even our fastfood service crews) as older brothers and sisters.
+[^3]: This is definitely a hand-wavy definition of what a Client does. In client-server architectures, you have someone who provides a resource or service (Server) and the one who asks for it (Client). 
 
 
 
