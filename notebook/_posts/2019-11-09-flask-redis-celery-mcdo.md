@@ -104,7 +104,7 @@ In the Mcdonalds near our office, there are three major components that are in p
 All in all, we see that these components relate to one another via the
 illustration below:
 
-
+<!-- Insert illustration of the system architecture here -->
 
 1. The customer talks to the cashier to place their order.
 2. The cashier takes their order, put it in the database queue (with a `PENDING` status), so that free workers can
@@ -116,10 +116,21 @@ illustration below:
 5. The LED displays this change, and the customer sees that his order is now
    done preparing. He takes his order and goes on his merry way!
 
-Now, let's step-out of Mcdonalds and start thinking of these components in a
+Now, let's step-out of Mcdonalds and start seeing these components in a
 more abstracted manner.
 
 ## Stepping-out of Mcdonalds
+
+Ok, so we're out of Mcdonalds. Let's stop thinking about cashiers and LED
+screens and start thinking in more abstract components. So we'll just reuse
+the diagram above and switch-out some parts:
+
+<!-- Insert illustration of the system architecture here -->
+
+We consider ourselves as the
+[**Client**](https://en.wikipedia.org/wiki/Client%E2%80%93server_model), for we're
+the ones who makes an order or **Request**. The cashier crew and the LED screen
+that we interact with is the **Application**. 
 
 
 <!-- Put a table on the left is Mcdo, Center is abstracted component, and right
@@ -127,6 +138,7 @@ is web backend dev (on this case, put question marks)-->
 
 | Mcdonalds                  	| Abstract Component 	| Web Backend 	|
 |----------------------------	|--------------------	|-------------	|
+| Customer              	| **Client**      	| ?           	|
 | Cashier crew               	| **Application**      	| ?           	|
 | Worker crew                	| **Worker**           	| ?           	|
 | Database behind LED screen 	| **Database backend** 	| ?           	|
@@ -136,6 +148,7 @@ is web backend dev (on this case, put question marks)-->
 
 | Mcdonalds                  	| Abstract Component 	| Web Backend       	|
 |----------------------------	|--------------------	|-------------------	|
+| Customer              	| Client            	| **Client**           	|
 | Cashier crew               	| Application        	| **Flask Application** |
 | Worker crew                	| Worker             	| **Celery Worker**   	|
 | Database behind LED screen 	| Database backend   	| **Redis**           	|
