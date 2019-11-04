@@ -34,8 +34,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="626.29039"
-     inkscape:cy="432.14646"
+     inkscape:cx="545.47818"
+     inkscape:cy="351.33426"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1-4"
      showgrid="false"
@@ -421,14 +421,14 @@
            sodipodi:nodetypes="cscacsc"
            inkscape:connector-curvature="0"
            id="path941-0"
-           d="m 14.545675,118.26496 c 0.37525,1.31339 13.234535,23.04005 12.766855,43.44811 -0.47447,20.70438 -13.90078,43.86451 -13.90078,43.86451 0,0 14.41692,-7.60502 19.61624,-13.63709 6.32534,-7.33844 12.889615,-26.05043 12.889615,-26.05043 0,0 -4.004365,-20.03325 -9.38024,-28.523 -5.50915,-8.70024 -21.99169,-19.1021 -21.99169,-19.1021 z"
+           d="m -19.077846,118.26496 c -0.37525,1.31339 -13.234535,23.04005 -12.766855,43.44811 0.47447,20.70438 13.90078,43.86451 13.90078,43.86451 0,0 -14.41692,-7.60502 -19.61624,-13.63709 -6.32534,-7.33844 -12.889615,-26.05043 -12.889615,-26.05043 0,0 4.004365,-20.03325 9.38024,-28.523 5.50915,-8.70024 21.99169,-19.1021 21.99169,-19.1021 z"
            style="opacity:0.1;fill:#000000;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
         <path
            sodipodi:nodetypes="ccccccc"
            inkscape:connector-curvature="0"
            id="path943-4"
-           d="m 30.04264,201.41985 -16.63089,4.15773 3.391085,41.95506 -5.65894,38.1759 19.6547,1.88988 2.632635,-40.07519 z"
-           style="opacity:0.1;fill:#000000;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+           d="m -38.927719,193.88328 20.983798,11.6943 6.166512,41.95506 -4.318057,38.1759 -30.063036,-2.26281 11.897353,-35.9225 z"
+           style="opacity:0.1;fill:#000000;stroke:#000000;stroke-width:0.23886871px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
         <ellipse
            transform="matrix(0.9647751,0.26307604,-0.24318365,0.96998026,0,0)"
            ry="18.583645"
