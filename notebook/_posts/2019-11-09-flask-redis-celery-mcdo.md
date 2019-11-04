@@ -9,8 +9,7 @@ tags: [flask, celery, redis, python, backend, web development, mcdonalds]
 description: "Understanding this web backend triumvirate while eating Mcdonald's Large Fries"
 ---
 
-A few weeks ago, someone at work asked me: "why do we need Flask, Celery, and
-Redis?" 
+A few weeks ago, someone at work asked me: 
 
 ![](/assets/png/flask-celery-redis/scene_00.svg)
 
@@ -35,23 +34,27 @@ go to. No matter what level of a cook you are, it's impossible to mess up a
 fried nugget. Fortunately, there's a McDonalds near my (A) apartment and my (B)
 office building. 
 
-Both serve delicious McNuggets, but *man*, <u>I hate buying from the one near my
-apartment.</u>
+Both serve delicious McNuggets, but *man*, <u>I hate buying from the one near
+my apartment.</u> The reason? **The lines are too slow and long**. 
 
-<!-- Insert illustration of two mcdonalds near office and apartment -->
+![](/assets/png/flask-celery-redis/scene_01.svg)
 
-The reason? **The lines are too slow and long**. My usual order is a 6-pc.
-Chicken McNuggets. They don't take a long time to prepare, but because there's
-only one person who takes my order and processes it, my ordering time is
-affected by anyone who has lined-up before me. So if someone orders a ton
-(more food to prepare) during their turn, then I'm in for a waiting game.
+My usual order is a 6-pc.  Chicken McNuggets. They don't take a long time to
+prepare, but because there's only one person who takes my order and processes
+it, my ordering time is affected by anyone who has lined-up before me. So if
+someone orders a ton (more food to prepare) during their turn, then I'm in for
+a waiting game.
+
 
 > In the Mcdo near my apartment: I need to wait for everyone who lined-up
 > before me to finish and get their orders before I can start with mine.
 
-Now, the Mcdo near our office has solved this problem with a nifty trick: first
-they take my order, but they don't process it in front of me right away.
-Instead, they give me a **reference number** so that I can check the status of
+**Now**, the Mcdo near our office has solved this problem with a nifty trick: 
+
+
+
+First they take my order, but they don't process it in front of me right away.
+Instead, they give me a *reference number* so that I can check the status of
 my order on a large display.
 
 The large display is placed near the counter and it shows all reference numbers
