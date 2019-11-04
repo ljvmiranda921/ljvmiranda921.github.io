@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why do we need Flask, Celery, and Redis? (with McNuggets in Between)"
+title: "Why do we need Flask, Celery, and Redis? (with McDonalds in Between)"
 date: 2019-11-09
 category: notebook
 comments: true
@@ -24,6 +24,18 @@ my adventures in buying McNuggets from Mcdonalds. Using these three (or
 technologies similar to them) is integral to web backend development so that we
 can scale our applications.
 
+- [Part 1: A Tale of Two Mcdonalds](#a-tale-of-two-mcdonalds). First, I'll
+  explain the concept and intuition of a task queue in order to motivate the
+  technologies mentioned above.
+- [Part 2: Diving into Mcdonalds Task Queue](#diving-into-mcdonalds-task-queue). Then, we'll look into the various components found in the Mcdonalds task queue and how they relate to one another.
+- [Part 3: Stepping out of Mcdonalds](#stepping-out-of-mcdonalds). In this
+    section, we'll abstract our knowledge of the task queue components so that
+    we can apply them to systems outside Mcdo.
+- [Part 4: Ye Old Switcheroo](#ye-old-switcheroo). We'll then substitute our
+    previous knowledge of a task queue with Flask, Celery, and Redis. By this
+    time, we should have an idea of how these technologies fall together.
+
+Ready? Let's go!
 
 ## A Tale of Two McDonalds
 
@@ -45,6 +57,7 @@ it, my ordering time is affected by anyone who has lined-up before me. So if
 someone orders a ton (more food to prepare) during their turn, then I'm in for
 a waiting game.
 
+![](/assets/png/flask-celery-redis/scene_02.svg)
 
 > In the Mcdo near my apartment: I need to wait for everyone who lined-up
 > before me to finish and get their orders before I can start with mine.
@@ -52,6 +65,7 @@ a waiting game.
 **Now**, the Mcdo near our office has solved this problem with a nifty trick: 
 
 
+![](/assets/png/flask-celery-redis/scene_03.svg)
 
 First they take my order, but they don't process it in front of me right away.
 Instead, they give me a *reference number* so that I can check the status of
@@ -105,6 +119,8 @@ In the Mcdonalds near our office, there are three major components that are in p
     job is to *only show* information. The actual workhorse is the database
     behind it. Think of it as a large, invisible table that stores whatever the
     LED screen displays.
+
+![](/assets/png/flask-celery-redis/cashier.svg)
 
 All in all, we see that these components relate to one another via the
 illustration below:
