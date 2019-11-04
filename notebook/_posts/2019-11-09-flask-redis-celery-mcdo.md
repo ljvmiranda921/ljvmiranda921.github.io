@@ -12,6 +12,8 @@ description: "Understanding this web backend triumvirate while eating Mcdonald's
 A few weeks ago, someone at work asked me: "why do we need Flask, Celery, and
 Redis?" 
 
+![](/assets/png/flask-celery-redis/scene_00.svg)
+
 *Good question, And below is a longer version of my quick explanation back
 then.* There's a wealth of resources and tutorials out there, but they mostly
 suffer from the [curse of
