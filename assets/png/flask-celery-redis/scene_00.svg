@@ -26,16 +26,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="531.69809"
+     inkscape:cx="307.41238"
      inkscape:cy="445.71429"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="928"
-     inkscape:window-height="1028"
+     inkscape:window-width="1855"
+     inkscape:window-height="1056"
      inkscape:window-x="65"
      inkscape:window-y="24"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata1641">
     <rdf:RDF>
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -341,20 +341,5 @@
        id="path1884"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cac" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="208.26472"
-       y="294.26855"
-       id="text2652"><tspan
-         sodipodi:role="line"
-         x="208.26472"
-         y="294.26855"
-         id="tspan2650"
-         style="stroke-width:0.26458332"><tspan
-           x="208.26472"
-           y="294.26855"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Fira code';-inkscape-font-specification:'Fira code';fill:#808080;stroke-width:0.26458332"
-           id="tspan2648">ljvmiranda921.github.io</tspan></tspan></text>
   </g>
 </svg>

@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="562.51766"
+     inkscape:cx="403.92371"
      inkscape:cy="385.82053"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -343,21 +343,6 @@
          d="m 92.475254,80.244411 3.741775,1.069078"
          style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="208.26472"
-       y="294.26855"
-       id="text2652"><tspan
-         sodipodi:role="line"
-         x="208.26472"
-         y="294.26855"
-         id="tspan2650"
-         style="stroke-width:0.26458332"><tspan
-           x="208.26472"
-           y="294.26855"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.3499999px;font-family:'Fira code';-inkscape-font-specification:'Fira code';fill:#808080;stroke-width:0.26458332"
-           id="tspan2648">ljvmiranda921.github.io</tspan></tspan></text>
     <path
        style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 179.7171,205.88989 c -6.41447,7.48354 -5.87993,7.48354 -5.87993,7.48354 l 8.01809,-3.4745 -1.60362,7.21628 5.87993,-6.41447 4.00904,6.1472 1.87089,-7.21628 5.61266,6.1472 0.80181,-6.94901 6.1472,2.93997 -6.94901,-8.01809 -2.6727,-2.13816 -4.27631,3.20724 -0.26727,-2.13816 -2.40542,1.60362 -2.6727,0.80181 0.80181,-2.40543 -2.6727,1.87089 -2.13815,-2.6727 z"

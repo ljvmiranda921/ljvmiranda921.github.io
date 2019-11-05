@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why do we need Flask, Celery, and Redis? (with McDonalds in Between)"
+title: "Distill: Why do we need Flask, Celery, and Redis? (with McDonalds in Between)"
 date: 2019-11-09
 category: notebook
 comments: true
@@ -126,6 +126,8 @@ All in all, we see that these components relate to one another via the
 illustration below:
 
 <!-- Insert illustration of the system architecture here -->
+![](/assets/png/flask-celery-redis/task_queue_01.svg){:width="480px"}
+{: style="text-align: center;"}
 
 1. The customer talks to the cashier to place their order.
 2. The cashier takes their order, put it in the database queue (with a `PENDING` status), so that free workers can
@@ -144,11 +146,12 @@ manner.
 
 ## Stepping-out of Mcdonalds
 
-Ok, so we're out of Mcdonalds. Let's stop thinking about cashiers and LED
-screens and start thinking in more abstract components. So we'll just reuse
-the diagram above and switch-out some parts:
+![](/assets/png/flask-celery-redis/land_of_abstraction.svg){:width="360px"}
+{: style="text-align: center;"}
 
-<!-- Insert illustration of the system architecture here -->
+
+Ok, so we're out of Mcdonalds. Let's stop thinking about cashiers and LED
+screens and start thinking in more abstract components. 
 
 We consider ourselves as the
 [**Client**](https://en.wikipedia.org/wiki/Client%E2%80%93server_model), for
@@ -159,7 +162,7 @@ Notice that I lumped the cashier crew and the LED screen together? It's because
 these are the two interfaces that we interact with during our time in Mcdo. The
 LED screen is just a conduit of the actual database that stores and manages
 data behind it (the **Database Backend**). Lastly, the actual processes that
-takes our request and makes something out of it are called our **Workers**.
+take our request and make something out of it are called our **Workers**.
 
 So far, we've learned the following:
 - What a task queue is and why it's important. 
