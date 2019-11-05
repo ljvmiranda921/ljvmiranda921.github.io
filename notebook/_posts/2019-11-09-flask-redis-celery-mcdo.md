@@ -253,6 +253,10 @@ Together, these three form a task queuing system. What happens then is:
 <!-- Add some disclaimers to avoid know-it-alls -->
 
 
+![](/assets/png/flask-celery-redis/something_new.svg){:width="420px"}
+{: style="text-align: center;"}
+
+
 ### Footnotes
 
 [^1]: ELI5: Explain like I'm five. There's a [subreddit](https://www.reddit.com/r/explainlikeimfive/) on it!
