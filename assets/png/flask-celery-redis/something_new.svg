@@ -26,10 +26,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="571.42857"
-     inkscape:cy="760"
+     inkscape:cx="685.71429"
+     inkscape:cy="302.85714"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer1-0"
      showgrid="false"
      inkscape:snap-global="false"
      inkscape:window-width="1855"
@@ -215,29 +215,7 @@
            id="tspan4849-7-1-8-5-4-0"
            x="107.13541"
            y="127.67741"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;font-family:Anatolian;-inkscape-font-specification:'Anatolian, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">every month*</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Anatolian;-inkscape-font-specification:'Anatolian, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         x="100.62653"
-         y="293.05157"
-         id="text4851-8-8-7-2-3-9-1"><tspan
-           sodipodi:role="line"
-           id="tspan4849-7-1-8-5-4-0-9"
-           x="100.62653"
-           y="293.05157"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777805px;font-family:Anatolian;-inkscape-font-specification:'Anatolian, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">*Or every other month</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:1.25;font-family:Anatolian;-inkscape-font-specification:'Anatolian, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         x="101.07118"
-         y="301.05844"
-         id="text4851-8-8-7-2-3-9-1-6"><tspan
-           sodipodi:role="line"
-           id="tspan4849-7-1-8-5-4-0-9-2"
-           x="101.07118"
-           y="301.05844"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87777805px;font-family:Anatolian;-inkscape-font-specification:'Anatolian, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">Depends on my schedule haha!</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.69999981px;font-family:Anatolian;-inkscape-font-specification:'Anatolian, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">every month</tspan></text>
       <path
          style="fill:none;stroke:#000000;stroke-width:0.85000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 115.49738,33.505204 c 0,0 2.74895,-0.170413 6.22171,2.663563 3.91164,3.192117 5.68454,5.462926 5.68454,5.462926"
