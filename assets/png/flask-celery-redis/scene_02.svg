@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="403.92371"
-     inkscape:cy="385.82053"
+     inkscape:zoom="0.7"
+     inkscape:cx="616.75833"
+     inkscape:cy="185.82053"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -376,29 +376,95 @@
        id="path5633-3"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cacac" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:18.93055153px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.4732638"
-       x="78.289154"
-       y="214.86394"
-       id="text5655"
-       transform="matrix(0.8051555,0.04903338,-0.07535718,1.2374069,0,0)"><tspan
-         sodipodi:role="line"
-         id="tspan5653"
-         x="78.289154"
-         y="214.86394"
-         style="fill:#ffff00;stroke-width:0.4732638">m</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:18.93055153px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.4732638"
-       x="197.21944"
-       y="194.54309"
-       id="text5655-1"
-       transform="matrix(0.80509236,0.05005936,-0.07693396,1.2373099,0,0)"><tspan
-         sodipodi:role="line"
-         id="tspan5653-1"
-         x="197.21944"
-         y="194.54309"
-         style="fill:#ffff00;stroke-width:0.4732638">m</tspan></text>
+    <g
+       id="g35698-0"
+       transform="matrix(0.02991268,0.00212544,-0.00212544,0.02991271,48.403323,255.02776)"
+       inkscape:transform-center-x="2.7988748"
+       inkscape:transform-center-y="-0.83257286">
+      <g
+         id="g35642-8"
+         style="enable-background:new">
+        <path
+           id="path35640-8"
+           d="M 368,32 C 322.752,32 282.4,92.288 256,186.528 229.632,92.288 189.248,32 144,32 64.48,32 0,232.576 0,480 H 64 C 64,250.24 99.84,64 144,64 c 44.192,0 80,171.936 80,384 h 64 c 0,-212.064 35.84,-384 80,-384 44.192,0 80,186.24 80,416 h 64 C 512,232.576 447.52,32 368,32 Z"
+           style="fill:#ffc107"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g35644-5" />
+      <g
+         id="g35646-0" />
+      <g
+         id="g35648-9" />
+      <g
+         id="g35650-6" />
+      <g
+         id="g35652-3" />
+      <g
+         id="g35654-8" />
+      <g
+         id="g35656-5" />
+      <g
+         id="g35658-6" />
+      <g
+         id="g35660-1" />
+      <g
+         id="g35662-1" />
+      <g
+         id="g35664-5" />
+      <g
+         id="g35666-9" />
+      <g
+         id="g35668-8" />
+      <g
+         id="g35670-4" />
+      <g
+         id="g35672-8" />
+    </g>
+    <g
+       id="g35698-0-8"
+       transform="matrix(0.02924344,6.1320759e-4,-6.1320821e-4,0.02924347,145.15395,236.60885)"
+       inkscape:transform-center-x="2.4946119"
+       inkscape:transform-center-y="-0.79867161">
+      <g
+         id="g35642-8-7"
+         style="enable-background:new">
+        <path
+           id="path35640-8-2"
+           d="M 368,32 C 322.752,32 282.4,92.288 256,186.528 229.632,92.288 189.248,32 144,32 64.48,32 0,232.576 0,480 H 64 C 64,250.24 99.84,64 144,64 c 44.192,0 80,171.936 80,384 h 64 c 0,-212.064 35.84,-384 80,-384 44.192,0 80,186.24 80,416 h 64 C 512,232.576 447.52,32 368,32 Z"
+           style="fill:#ffc107"
+           inkscape:connector-curvature="0" />
+      </g>
+      <g
+         id="g35644-5-8" />
+      <g
+         id="g35646-0-2" />
+      <g
+         id="g35648-9-9" />
+      <g
+         id="g35650-6-9" />
+      <g
+         id="g35652-3-6" />
+      <g
+         id="g35654-8-0" />
+      <g
+         id="g35656-5-2" />
+      <g
+         id="g35658-6-7" />
+      <g
+         id="g35660-1-6" />
+      <g
+         id="g35662-1-1" />
+      <g
+         id="g35664-5-3" />
+      <g
+         id="g35666-9-2" />
+      <g
+         id="g35668-8-1" />
+      <g
+         id="g35670-4-5" />
+      <g
+         id="g35672-8-9" />
+    </g>
   </g>
 </svg>

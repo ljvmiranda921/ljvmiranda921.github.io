@@ -151,7 +151,12 @@ manner.
 
 
 Ok, so we're out of Mcdonalds. Let's stop thinking about cashiers and LED
-screens and start thinking in more abstract components. 
+screens and start thinking in more abstract components. Here's the same task
+queue but from the Land of Abstraction:
+
+![](/assets/png/flask-celery-redis/task_queue_02.svg){:width="520px"}
+{: style="text-align: center;"}
+
 
 We consider ourselves as the
 [**Client**](https://en.wikipedia.org/wiki/Client%E2%80%93server_model), for
@@ -191,6 +196,10 @@ is web backend dev (on this case, put question marks)-->
 
 This should be simple now, so here's ye old switcheroo!
 
+![](/assets/png/flask-celery-redis/switcheroo.svg){:width="360px"}
+{: style="text-align: center;"}
+
+
 | Mcdonalds                  	| Abstract Component 	| Web Backend       	|
 |----------------------------	|--------------------	|-------------------	|
 | Customer              	| Client            	| **Client**           	|
@@ -198,11 +207,13 @@ This should be simple now, so here's ye old switcheroo!
 | Worker crew                	| Worker             	| **Celery Worker**   	|
 | Database behind LED screen 	| Database backend   	| **Redis**           	|
 
-
-To see them in action, let's look at the illustration below (this one's similar
-to the others we've seen, we just switched-out the icons):
+*See what we did there?* We just switched-out the components of the Mcdonalds
+task queue to its web backend counterpart. To see them in action, let's look at
+the illustration below:
 
 <!-- Insert illustration of the system architecture here -->
+![](/assets/png/flask-celery-redis/task_queue_03.svg){:width="520px"}
+{: style="text-align: center;"}
 
 * **Flask Application**. This the web application that accepts requests
     and returns responses depending on that request. When you talk to the
