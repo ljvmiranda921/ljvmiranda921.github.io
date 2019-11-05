@@ -126,7 +126,7 @@ All in all, we see that these components relate to one another via the
 illustration below:
 
 <!-- Insert illustration of the system architecture here -->
-![](/assets/png/flask-celery-redis/task_queue_01.svg){:width="480px"}
+![](/assets/png/flask-celery-redis/task_queue_01.svg){:width="520px"}
 {: style="text-align: center;"}
 
 1. The customer talks to the cashier to place their order.
@@ -210,11 +210,12 @@ to the others we've seen, we just switched-out the icons):
     [`/POST`](https://en.wikipedia.org/wiki/POST_(HTTP))). When you look at the
     LED screen, you're also making a request (likely a
     [`/GET`](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)). 
-* **Celery Worker**. *Now we're talking*. Celery provides the framework to
-    write workers for running your services. Remember, **celery is not just
-    the worker**. It is a framework that allows your workers to communicate
-    with the database backend, "talk" to one another and the like. A celery
-    worker is just one piece of the Celery "ecosystem".
+* **Celery Worker**. Workers run the processes in your web application:
+  classifying an image, processing an email, and much more!  Celery provides
+  the framework to write workers for running your services. Remember, **celery
+  is not just the worker**. It is a framework that allows your workers to
+  communicate with the database backend, "talk" to one another and the like. A
+  celery worker is just one piece of the Celery "ecosystem".
 * **Redis**. This one holds information on the reference numbers (also known
     as IDs) and status of each job. Redis is an in-memory data store, think of
     global variables on steroids.  Perhaps, the *actual* database backend in
