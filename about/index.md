@@ -10,19 +10,19 @@ Hi friends, my name is Lj Miranda and welcome to my blog!
 I [build things](https://github.com/ljvmiranda921).
 
 I started this site to tell the story of my tech journey. I believe in
-**technology's enabling power, especially in developing countries like the
-Philippines**. I aspire to usher that potential&mdash;even for just a tiny bit.
-There is still a long way to go, and this site records my progress. 
+**technology that is open, enabling, and life-giving**. I aspire to usher that
+potential&mdash;even for just a tiny bit.  There is still a long way to go, and
+this site records my progress. 
 
 Here, you'll find some of my **thoughts, works, and notes** on software
-development, data science, machine learning, and research. I hope that
+development, systems, machine learning, and research. I hope that
 you'll spend a nice time here, so go grab yourself a cup of coffee and feel
 free to look around! 
 
 ## Background
 
 I'm currently a Machine Learning Researcher at [Thinking
-Machines](https://thinkingmachin.es/), a data science startup in the
+Machines](https://thinkingmachin.es/), a data science consultancy in the
 Philippines.
 
 Prior to that, I obtained my Masters degree from [Waseda
@@ -36,11 +36,9 @@ training parallelization framework.  Further back, I received my undergraduate
 degree in Electronics Engineering (*cum laude*) and a minor in Philosophy from
 [Ateneo de Manila University](https://www.ateneo.edu). 
 
-I'm interested in problems concerning machine learning and its
-applications, especially those that deal with its deployment, engineering, and
-use. Furthermore, I want to understand more the role of technology in
-underserved communities (and developing countries), and how it affects our
-lives as a whole. 
+I'm interested in problems concerning machine learning and its applications,
+especially those that deal with its deployment, engineering, and use.
+Furthermore, I'm also learning about distributed systems and infrastructure. 
 
 Lastly, I'm well-involved in open-source and have some projects of my own:
 [PySwarms](https://github.com/ljvmiranda921/pyswarms), a particle swarm
