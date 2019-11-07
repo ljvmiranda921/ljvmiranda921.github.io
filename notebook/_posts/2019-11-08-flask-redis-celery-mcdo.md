@@ -7,6 +7,7 @@ comments: true
 author: "LJ MIRANDA"
 tags: [flask, celery, redis, python, backend, web development, mcdonalds]
 description: "Understanding Flask, Celery, and Redis through Mcdonalds"
+header-img: /assets/png/flask-celery-redis/header.png
 excerpt: "Understanding Flask, Celery, and Redis through Mcdonalds"
 ---
 
