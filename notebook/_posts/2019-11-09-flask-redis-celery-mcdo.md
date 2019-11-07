@@ -247,10 +247,44 @@ Together, these three form a task queuing system. What happens then is:
    that his request is now done processing. He takes his response and goes on
    his merry way!
 
+### I forgot to tell you something 
+
+As we now know, [Celery](http://www.celeryproject.org/) acts as the framework
+that brings all the components above together. This includes your Flask
+Application, the Database Backend, and the Workers. *I forgot to tell you
+something*, there's another important component, the **Message queue**.
+
+Simply put, you can think of this as the squiggly lines that connect these
+services together. For Celery, technologies that can act as a messaging queue
+are Redis, RabbitMQ, Memcache, and the like. You can see a [list of
+technologies](http://docs.celeryproject.org/en/latest/getting-started/brokers/)
+here.
+
+### Is it really just Flask, Celery, and Redis?
+
+From our land of abstraction, we knew that the task queue is a general approach
+to solve a problem and we just substituted (*switcheroo'd*) various
+technologies to fulfill such roles. We can definitely use a variety of tech for
+each component. For example, we can use MySQL as our database backend and
+RabbitMQ as our message queue. We still achieve the same thing, but with
+different technologies.
 
 ## Conclusion 
 
-<!-- Add some disclaimers to avoid know-it-alls -->
+In this blog post, I showed how Flask, Celery, and Redis work together to form
+a task queue. We then learned the following:
+
+- What a task queue is and why it's important to our systems.
+- The general components of a task queue and how these components relate to one
+    another.
+- How Flask, Celery, and Redis fit into these general components to fulfill
+    their roles.
+
+We also learned that systems like these require a messaging queue (squiggly
+lines) and that it's possible to switch-out these technologies with other
+frameworks while achieving the same goal. Hope this fun blog post shed some
+light on backend web development, please let me know if any concepts I've
+missed in this Distill!
 
 
 ![](/assets/png/flask-celery-redis/something_new.svg){:width="420px"}
@@ -262,10 +296,3 @@ Together, these three form a task queuing system. What happens then is:
 [^1]: ELI5: Explain like I'm five. There's a [subreddit](https://www.reddit.com/r/explainlikeimfive/) on it!
 [^2]: *Ate* means older sister while *Kuya* means older brother in Filipino. For those who are not from the Philippines, we usually call everyone (even our fastfood service crews) as older brothers and sisters.
 [^3]: This is definitely a hand-wavy definition of what a Client does. In client-server architectures, you have someone who provides a resource or service (Server) and the one who asks for it (Client). 
-
-
-
-<!-- why do we need queing? what's the problem if we don't have that? -->
-<!-- parallels in mcdonalds and flask, celery, redis -->
-<!-- a deep dive into architecture -->
-<!-- common production patterns -->
