@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Distill: Why do we need Flask, Celery, and Redis? (with McDonalds in Between)"
-date: 2019-11-09
+date: 2019-11-08
 category: notebook
 comments: true
 author: "LJ MIRANDA"
