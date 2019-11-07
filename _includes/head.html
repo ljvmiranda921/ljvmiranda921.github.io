@@ -6,8 +6,14 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+  <!-- Twitter Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:site" content="@ljvmiranda921">
+  <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   {% if page.header-img %}
     <meta property="og:image" content="{{ site.url }}/{{ page.header-img }}" />
+    <meta property="twitter:image" content="{{ site.url }}/{{ page.header-img }}" />
   {% else %}
     <meta property="og:image" content="{{ site.url }}/assets/logo.png" />
     <meta property="og:image:height" content="474">
