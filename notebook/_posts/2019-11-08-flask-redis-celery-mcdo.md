@@ -6,7 +6,8 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 tags: [flask, celery, redis, python, backend, web development, mcdonalds]
-description: "Understanding this web backend triumvirate while eating Mcdonald's Large Fries"
+description: "Understanding Flask, Celery, and Redis through Mcdonalds"
+excerpt: "Understanding Flask, Celery, and Redis through Mcdonalds"
 ---
 
 A few weeks ago, someone at work asked me: 
