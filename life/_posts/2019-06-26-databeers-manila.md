@@ -6,6 +6,10 @@ category: life
 comments: true
 author: "LJ MIRANDA"
 summary: "I gave a talk in Databeers Manila!"
+description: |
+    Last night, I gave a talk about Geomancer in Databeers Manila. It was a great
+    night! I was able to share one of my works in Thinking Machines and talk more
+    about my passion in open-source.
 tags: [databeers, databeers manila, opensource, geomancer, thinking machines]
 ---
 
