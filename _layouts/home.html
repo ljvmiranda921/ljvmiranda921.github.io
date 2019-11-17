@@ -18,10 +18,10 @@ layout: default
 {% for post in site.posts limit:3 %}
   <li>
     {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <span class="post-meta">{{ post.date | date: date_format }} &verbar; {{ post.category | upcase }}</span>
 
     <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-    <p style="color:#828282">{{post.description}}</p>
+    <p style="color:#828282">{{ post.description }}</p>
   </li>
 {% endfor %}
 </ul>
