@@ -6,7 +6,11 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 tags: [flask, celery, redis, python, backend, web development, mcdonalds]
-description: "Understanding Flask, Celery, and Redis through Mcdonalds"
+description: |
+    A few weeks ago, someone at work asked me how Flask,
+    Celery, and Redis work together. I realized it's best
+    to explain it through a fun comic on buying McNuggets
+    in Mcdonalds!
 header-img: /assets/png/flask-celery-redis/header.png
 excerpt: "Understanding Flask, Celery, and Redis through Mcdonalds"
 ---
