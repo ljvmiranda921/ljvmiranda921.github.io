@@ -9,9 +9,9 @@ summary: "A reflection on my journey in technology and software"
 description: |
     This is a long post encompassing some of my reflections
     on craftsmanship, software, and life. I'll start off by
-    narrating my first cathartic encounter with a craftsman,
-    then move into my journey of finding my craft, and how
-    it manifests into my work life. 
+    narrating my first encounter with a craftsman, then move
+    into my journey of finding my craft, and how it
+    manifests into my work life. 
 tags: [software, craftsmanship, deep work, life]
 ---
 
