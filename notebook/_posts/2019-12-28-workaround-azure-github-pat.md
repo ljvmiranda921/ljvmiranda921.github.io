@@ -23,14 +23,17 @@ for it, but I encountered this annoying error in my builds:
 ![](/assets/png/workaround-azure/annoying_error.png){:width="520px"}
 {: style="text-align: center;"}
 
-I checked if my service connection exists, it does! I've already set it up by
-creating a [Github Personal Access
+> Error: Invalid Github service connection scheme: Token. Only OAuth and Github personal access token connections are allowed. 
+
+I checked if my service connection exists and if it's a token, they're all
+there! I've set it up by creating a [Github Personal Access
 Token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line),
 and adding it to [Azure's "Service
-Connections"](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml).
-What's weird is that my **authentication scheme is being detected as `Token`,
-instead of `Github personal access token`!**. This is a potential bug, so I
-scoured Github Issues if someone has reported it.
+Connections"](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml),
+so I shouldn't be encountering this error.  What's weird is that my
+**authentication scheme is being detected as `Token`, instead of `Github
+personal access token`**! This is a potential bug, so I scoured Github Issues
+if someone has reported it.
 
 There is an
 [Issue](https://github.com/microsoft/azure-pipelines-tasks/issues/11558) for
@@ -39,10 +42,10 @@ it, but it's been open for almost three months!
 ![](/assets/png/workaround-azure/github_issue.png){:width="520px"}
 {: style="text-align: center;"}
 
-Luckily, the conversation thread has discovered a workaround: **create the
-service token via an API request.** There's some cURL magic happening, and the
-thread has left out some important parts, so I hope this tutorial can walk you
-through the steps.
+Luckily, the conversation thread discovered a workaround: **create the service
+token via an API request.** There's some cURL magic happening, and the thread
+has left out some important parts, so I hope the following tutorial can walk
+you through the steps in detail.
 
 ## The Workaround
 
@@ -56,10 +59,10 @@ Azure Devops REST API. You can do so by following the instructions
 [here](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page).
 Some notes on my case:
 - The minimal scope for the token can be: `Service Connections (Read, query, &
-    manage)`. Be sure to click the "other 27 scores" so this category would
+    manage)`. Be sure to click the "other 27 scopes" so this category would
     appear.
-- I didn't need to change the token expiry. Since you're going to hopefully use
-    this atleast once, you're free to set it in a nearer date.
+- I didn't need to change the token expiry. Since you're going to use
+    this once, you're free to set it at a nearer date.
 
 ![](/assets/png/workaround-azure/create_access_token.png){:width="520px"}
 {: style="text-align: center;"}
@@ -107,7 +110,9 @@ Hope it helps!
 ## Final thoughts
 
 Creating Github Releases from a Continuous Delivery pipeline is one of the most
-common tasks in open-source software dev. However, this simple bug in Azure
-Pipelines can prove to be very frustrating for developers. I hope that this bug
-will be fixed soon, but for now, you can just follow this workaround!
+common tasks in open-source software dev't. However, this simple bug in Azure
+Pipelines can prove to be very frustrating for developers, it was for me!
+Ideally, we shouldn't be doing these steps (i.e., making cURL requests and
+whatnot). I hope that this bug will be fixed soon, but for now, you can just
+follow this workaround!
 
