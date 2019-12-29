@@ -107,6 +107,39 @@ Access Token`. It's really weird.
 
 Hope it helps!
 
+## Update: I made a PR!
+
+Good thing, the source code for the Github Release Task is
+[open-source](https://github.com/microsoft/azure-pipelines-tasks). At first, I
+got intimidated by Typescript, but upon checking the code, it seems that a
+fix is possible. What I need to do is add another statement to include `Token`,
+alongside `PersonalAccessToken`:
+
+```js
+if (!!githubEndpointObject) {
+    tl.debug("Endpoint scheme: " + githubEndpointObject.scheme);
+    
+    if (githubEndpointObject.scheme === 'PersonalAccessToken') {
+        githubEndpointToken = githubEndpointObject.parameters.accessToken
+    } else if (githubEndpointObject.scheme === 'OAuth'){
+        // scheme: 'OAuth'
+        githubEndpointToken = githubEndpointObject.parameters.AccessToken
+    } else if (githubEndpointObject.scheme === 'Token'){
+        // scheme: 'Token' (this is the line I added)
+        githubEndpointToken = githubEndpointObject.parameters.AccessToken
+    } else if (githubEndpointObject.scheme) {
+        throw new Error(tl.loc("InvalidEndpointAuthScheme", githubEndpointObject.scheme));
+    }
+}
+```
+
+It all made sense now! That's why we're sending the scheme
+`PersonalAccessToken` in the payload because that's the only thing being
+detected.  I made a Pull Request
+[here](https://github.com/microsoft/azure-pipelines-tasks/pull/12049/files),
+hoping this gets reviewed and merged pretty soon.
+
+
 ## Final thoughts
 
 Creating Github Releases from a Continuous Delivery pipeline is one of the most
