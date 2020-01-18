@@ -76,7 +76,7 @@ this new concept I've learned???" -->
 (With the gift of hindsight, this statement has already hinted the
 idea of Deployments.) 
 
-I think the main reason why a Pod is a poor starting point in learning
+I think the main reason why Pods are a poor starting point in learning
 Kubernetes is because **it does not provide an "actionable" mapping of what I
 already know and what I'm trying to learn.** Even if I now know that a Pod is a
 basic unit and it maps to a container, it is not actionable enough that I can
@@ -101,8 +101,8 @@ However, as I scrolled through the documentation, I saw things about external
 IPs, memory, PID pressure, and whatnot. Upon seeing these words, I was
 intimidated. *Wait! I thought one benefit of "Serverless and The Cloud" is
 that I don't need to think about what's happening in my machine?* The concept
-of Nodes got a bit too low-level right away that I was sucked into the kubelet
-rabbit-hole and enrolled myself into a ["Learn Kubernetes the Hard
+of Nodes got a bit too low-level right away that I was sucked into the
+`kubelet` rabbit-hole and enrolled myself into a ["Learn Kubernetes the Hard
 Way"](https://github.com/kelseyhightower/kubernetes-the-hard-way) course in
 [LinuxAcademy](https://linuxacademy.com/) (which I wasn't able to finish by the
 way). 
