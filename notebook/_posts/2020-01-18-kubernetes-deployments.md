@@ -44,8 +44,8 @@ internet." Perhaps this has affected my learning trajectory for k8s, and might
 be different for you or your team.
 
 Lastly, this is not a tutorial about Deployments and Services. I may be
-explaining these concepts at the latter part of my post, but I might pull-in
-some basic Kubernetes concepts here and there.
+explaining these concepts along the way, but I might pull-in some Kubernetes
+concepts here and there.
 
 ## Why starting with Pods or Nodes didn't help me
 
