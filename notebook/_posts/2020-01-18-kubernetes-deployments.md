@@ -78,10 +78,43 @@ Kubernetes is because **it does not provide an "actionable" mapping of what I
 already know and what I'm trying to learn.** Even if I now know that a Pod is a
 basic unit and it maps to a container, it is not actionable enough that I can
 apply this knowledge when using Kubernetes. On another note, starting from Pods
-will inadvertently add another hoop to jump onto&mdash; I need to now know what
+will inadvertently add another hoop to jump into&mdash; I need to now know what
 Controllers are, and there's [three of
 them](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#pods-and-controllers)
-for my novice mind to learn.  
+for my novice mind to learn.
+
+### Nodes pull you into the architecture rabbit-hole
+
+Just like Pods,
+[Nodes](https://kubernetes.io/docs/concepts/architecture/nodes/) are
+unassuming: they're just worker machines where processes are run. The
+documentation says that they may be "a VM or a physical machine depending on the
+cluster." *Cool! That's useful!* As someone who used to SSH into VMs and run
+Python programs there, Nodes may be a relatable starting point.
+
+However, as I scrolled through the documentation, I saw things about external
+IPs, memory, PID pressure, and whatnot. Upon seeing these words, I immediately
+got intimidated. *Wait! I thought one benefit of "Serverless and The Cloud" is
+that I don't need to think about what's happening in my machine?* The concept
+of Nodes got a bit too low-level immediately that I was sucked into the kubelet
+rabbit-hole and enrolled myself into a ["Learn Kubernetes the Hard
+Way"](https://github.com/kelseyhightower/kubernetes-the-hard-way) course in
+[LinuxAcademy](https://linuxacademy.com/) (which I wasn't able to finish by the
+way). 
+
+The problem with Nodes is that they are **too low-level of an abstraction for
+me to get started.** Even if it's a natural progression from virtual machines 
+conceptually, it didn't lead me to do what I need to do, that is, to *just* deploy an
+application. 
+
+### Some things are good conceptually but bad practically 
+
+Understanding Pods and Nodes are good conceptually, since they are a natural
+progression of what I know so far: Docker containers can be mapped into Pods, and
+the machines where these containers are run can be mapped into Nodes. However in
+practice, this bottom-up approach didn't help because **there's more to
+Kubernetes than Pods and Nodes**. If I want to deploy an application, there's
+a lot of things I still need to think about. 
 
 
 ## Why starting from D&S clicked right away
