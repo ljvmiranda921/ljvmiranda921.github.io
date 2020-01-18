@@ -54,7 +54,8 @@ concepts here and there.
 Most tutorials I've seen in the Internet starts with a
 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/), and for good
 reason: because you can think of Pods as a basic unit in Kubernetes. In many
-cases, a Pod is often mapped to a container. 
+cases, a Pod is often mapped to a container&mdash;and hey, Kubernetes is a
+*container* orchestration tool! 
 
 *Ok, that's cool! I can now map what I know to this new Kubernetes concept!* So
 where did the confusion began? It began when I saw notes like these:
