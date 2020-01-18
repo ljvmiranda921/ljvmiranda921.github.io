@@ -61,7 +61,7 @@ where did the confusion began? It began when I saw notes like these:
 
 > "Pods (can) run multiple containers that need to work together." [("Understanding Pods", Kubernetes Documentation)](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#understanding-pods)
 
-*Ok sure, that's new, I guess I can deal with that.*
+<!-- Insert animation of "Ok sure, that's new I guess I can deal with that..." -->
 
 > "Kubernetes uses a higher-level abstraction, called a Controller, that
 > handles the work of managing the relatively disposable Pod instances. Thus,
@@ -69,11 +69,13 @@ where did the confusion began? It began when I saw notes like these:
 > to manage your pods using a Controller." [("Working with Pods", Kubernetes
 Documentation)](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#working-with-pods)
 
-*So now I need to learn another concept just to apply this new concept I've
-learned?* (With the gift of hindsight, this statement has already hinted the
+<!-- Insert animation of "now I need to learn another concept just to apply
+this new concept I've learned???" -->
+
+(With the gift of hindsight, this statement has already hinted the
 idea of Deployments.) 
 
-I think that the main reason why a Pod is a poor starting point in learning
+I think the main reason why a Pod is a poor starting point in learning
 Kubernetes is because **it does not provide an "actionable" mapping of what I
 already know and what I'm trying to learn.** Even if I now know that a Pod is a
 basic unit and it maps to a container, it is not actionable enough that I can
@@ -89,14 +91,16 @@ Just like Pods,
 [Nodes](https://kubernetes.io/docs/concepts/architecture/nodes/) are
 unassuming: they're just worker machines where processes are run. The
 documentation says that they may be "a VM or a physical machine depending on the
-cluster." *Cool! That's useful!* As someone who used to SSH into VMs and run
-Python programs there, Nodes may be a relatable starting point.
+cluster." As someone who used to SSH into VMs and run
+Python programs, Nodes may be a relatable starting point.
+
+<!-- Insert animation of me SSH-ing into VMs -->
 
 However, as I scrolled through the documentation, I saw things about external
-IPs, memory, PID pressure, and whatnot. Upon seeing these words, I immediately
-got intimidated. *Wait! I thought one benefit of "Serverless and The Cloud" is
+IPs, memory, PID pressure, and whatnot. Upon seeing these words, I was
+intimidated. *Wait! I thought one benefit of "Serverless and The Cloud" is
 that I don't need to think about what's happening in my machine?* The concept
-of Nodes got a bit too low-level immediately that I was sucked into the kubelet
+of Nodes got a bit too low-level right away that I was sucked into the kubelet
 rabbit-hole and enrolled myself into a ["Learn Kubernetes the Hard
 Way"](https://github.com/kelseyhightower/kubernetes-the-hard-way) course in
 [LinuxAcademy](https://linuxacademy.com/) (which I wasn't able to finish by the
@@ -115,6 +119,11 @@ the machines where these containers are run can be mapped into Nodes. However in
 practice, this bottom-up approach didn't help because **there's more to
 Kubernetes than Pods and Nodes**. If I want to deploy an application, there's
 a lot of things I still need to think about. 
+
+In the next section, I'll discuss why the concept of Deployments and Services
+provide the "right amount of abstraction" in order for me to (1) understand
+what's happening and (2) be productive with it right away. On this level, we can
+even **consider Deployments as a functional unit of a Kubernetes cluster.**
 
 
 ## Why starting from D&S clicked right away
