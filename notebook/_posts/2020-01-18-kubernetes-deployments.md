@@ -59,7 +59,7 @@ cases, a Pod is often mapped to a container.
 *Ok, that's cool! I can now map what I know to this new Kubernetes concept!* So
 where did the confusion began? It began when I saw notes like these:
 
-> "Pods that (can) run multiple containers that need to work together." [("Understanding Pods", Kubernetes Documentation)](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#understanding-pods)
+> "Pods (can) run multiple containers that need to work together." [("Understanding Pods", Kubernetes Documentation)](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#understanding-pods)
 
 *Ok sure, that's new, I guess I can deal with that.*
 
