@@ -13,12 +13,13 @@ description: |
 excerpt: "I should've first learnt Kubernetes through Deployments and Services"
 ---
 
+<!-- Picture of me looking like a pirate and steering a ship -->
 
 It took me a long time to wrap my head around the idea of
 [Kubernetes](https://kubernetes.io/). Even if I've done some projects using k8s
 before, there's still this voice at the back of my head saying: *"Ok, I really
-don't how this whole thing works."* However, a few months ago, I've learned
-about
+don't know how this whole thing works."* However, a few months ago, I've
+learned about
 [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 and
 [Services](https://kubernetes.io/docs/concepts/services-networking/service/),
