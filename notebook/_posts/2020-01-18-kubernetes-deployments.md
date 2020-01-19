@@ -13,7 +13,8 @@ description: |
 excerpt: "I should've first learnt Kubernetes through Deployments and Services"
 ---
 
-<!-- Picture of me looking like a pirate and steering a ship -->
+![](/assets/png/kubernetes-deployments/pirate_focused.svg){:width="320px"}
+{: style="text-align: center;"}
 
 It took me a long time to wrap my head around the idea of
 [Kubernetes](https://kubernetes.io/). Even if I've done some projects using k8s
@@ -33,8 +34,8 @@ Deployments and Services is a good place to begin. Lastly, I'd argue that k8s
 
 
 This post is divided into three parts:
-- Why starting with Pods and Nodes didn't help me
-- Why starting with Deployments and Services clicked right away
+- [Why starting with Pods and Nodes didn't help me](#pods-or-nodes)
+- [Why starting with Deployments and Services clicked right away](#deployments-and-services)
 - How we should start thinking about Deployments and Services
 
 Before we begin, a little something about myself: before learning Kubernetes,
@@ -48,7 +49,7 @@ Lastly, this is not a tutorial about Deployments and Services. I may be
 explaining these concepts along the way, but I might pull-in some Kubernetes
 concepts here and there.
 
-## Why starting with Pods or Nodes didn't help me
+## <a name="pods-or-nodes"/> Why starting with Pods or Nodes didn't help me
 
 ### Pods are simple at first, but overloads you in a while
 
@@ -64,6 +65,9 @@ where did the confusion began? It began when I saw notes like these:
 > "Pods (can) run multiple containers that need to work together." [("Understanding Pods", Kubernetes Documentation)](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#understanding-pods)
 
 <!-- Insert animation of "Ok sure, that's new I guess I can deal with that..." -->
+
+![](/assets/png/kubernetes-deployments/scene_00.svg){:width="720px"}
+{: style="text-align: center;"}
 
 > "Kubernetes uses a higher-level abstraction, called a Controller, that
 > handles the work of managing the relatively disposable Pod instances. Thus,
@@ -128,7 +132,7 @@ what's happening and (2) be productive with it right away. On this level, we can
 even **consider Deployments as a functional unit of a Kubernetes cluster.**
 
 
-## Why starting from D&S clicked right away
+## <a name="deployments-and-services"/> Why starting from D&S clicked right away
 
 
 We should start with D&S because: 
