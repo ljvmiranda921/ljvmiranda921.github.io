@@ -19,12 +19,14 @@ excerpt: "I should've first learnt Kubernetes through Deployments and Services"
 It took me a long time to wrap my head around the idea of
 [Kubernetes](https://kubernetes.io/). Even if I've done some projects using k8s
 before, there's still this voice at the back of my head saying: *"Ok, I really
-don't know how this whole thing works."* However, a few months ago, I've
+don't know how this whole thing works."* 
+
+A few months ago, I
 learned about
 [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 and
 [Services](https://kubernetes.io/docs/concepts/services-networking/service/),
-and the whole thing suddenly clicked!
+and everything suddenly clicked!
 
 In this blogpost, I'll talk about my journey in understanding Kubernetes&mdash;where
 learning Pods and Nodes proved to be a false start&mdash;and why I think that
@@ -39,15 +41,16 @@ This post is divided into three parts:
 - How we should start thinking about Deployments and Services
 
 Before we begin, a little something about myself: before learning Kubernetes,
-I'm already familiar with container tools such as Docker or docker-compose.
+I'm already familiar with container tools such as Docker and docker-compose.
 I've built simple web applications before and deployed them to platforms like
 [Heroku](https://www.heroku.com/) or [App Engine](https://cloud.google.com/appengine/) so I kinda get the idea of "putting something in the
 internet." Perhaps this has affected my learning trajectory for k8s, and might
 be different for you or your team.
 
-Lastly, this is not a tutorial about Deployments and Services. I may be
-explaining these concepts along the way, but I might pull-in some Kubernetes
-concepts here and there.
+Lastly, this is not a tutorial about Deployments & Services nor Kubernetes as
+a whole. **Here, I'll try to be reflective but informative.** I may be explaining
+some terminologies along the way, but will pull-in Kubernetes concepts here
+and there.
 
 ## <a name="pods-or-nodes"/> Why starting with Pods or Nodes didn't help me
 
@@ -64,10 +67,14 @@ where did the confusion began? It began when I saw notes like these:
 
 > "Pods (can) run multiple containers that need to work together." [("Understanding Pods", Kubernetes Documentation)](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#understanding-pods)
 
-<!-- Insert animation of "Ok sure, that's new I guess I can deal with that..." -->
 
 ![](/assets/png/kubernetes-deployments/scene_00.svg){:width="720px"}
 {: style="text-align: center;"}
+
+It's not really that bad, but it set off a *conceptual alarm* that Pods may
+not be as straightforward as what they appear to be. This proved to be true,
+because as it turns out in practice, you don't directly work with Pods, you
+delegate a Controller to manage them for you.
 
 > "Kubernetes uses a higher-level abstraction, called a Controller, that
 > handles the work of managing the relatively disposable Pod instances. Thus,
