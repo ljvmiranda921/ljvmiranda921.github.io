@@ -37,7 +37,6 @@ Deployments and Services is a good place to begin. Lastly, I'd argue that k8s
 This post is divided into three parts:
 - [Why starting with Pods and Nodes didn't help me](#pods-or-nodes)
 - [Why starting with Deployments and Services clicked right away](#deployments-and-services)
-- How we should start thinking about Deployments and Services
 
 Before we begin, a little something about myself: before learning Kubernetes,
 I'm already familiar with container tools such as Docker and docker-compose.
@@ -65,10 +64,6 @@ cases, a Pod is often mapped to a container&mdash;and hey, Kubernetes is a
 where did the confusion began? It began when I saw notes like these:
 
 > "Pods (can) run multiple containers that need to work together." [("Understanding Pods", Kubernetes Documentation)](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/#understanding-pods)
-
-
-![](/assets/png/kubernetes-deployments/scene_00.svg){:width="720px"}
-{: style="text-align: center;"}
 
 It's not bad, but it sets off a *conceptual alarm* that Pods may
 not be as straightforward as what they appear to be. This proved to be true
@@ -139,10 +134,8 @@ even **consider Deployments as a functional unit of a Kubernetes cluster.**
 
 ## <a name="deployments-and-services"/> Why start from Deployments and Services 
 
-### Makes you productive from Day One 
-
-By first learning about deployments and services, I immediately had a handle on
-the **simplest and oft-used Kubernetes use-case**: "I want to have X in my
+By first learning about deployments and services, **I immediately had a handle on
+the simplest and oft-used Kubernetes use-case**: "I want to have X in my
 cluster."
 
 > The simplest and oft-used Kubernetes use-case: "I want to have X in my
@@ -166,16 +159,60 @@ spec:
         image: redis  # ..this image
 ```
 
+In contrast to the Pods analogy, Deployments provide a **one-to-one and
+actionable conceptual mapping** of "what you want to do" and "how you can do it."
+Every time I want to have X in my cluster, I can just think of any Docker image
+at my disposal (e.g. a machine learning service, a node backend, or a Postgres
+database).
+
+Next, we can incorporate the idea of Services when we expand the statement
+above into: *"I want to have X in my cluster that is accessible via Y."*
+Kubernetes is a clever way of orchestrating processes and networks together
+where Deployments fill-in the former and Services the latter.
+
+> "I want to have X in my cluster that is accessible via Y."
+
+So if we want to say: "I want to have **Redis** in my cluster that is
+accessible **only within the cluster**", then we just map this sentence into a
+configuration file consisting of a Deployment and a Service[^3]:
+
+```yaml
+# "I want to have <X> Redis in my cluster that is accessible 
+# <Y> only within the cluster"
+apiVersion: apps/v1
+kind: Deployment 
+spec:
+  # ...
+  selector:
+    matchLabels:
+      app: redis 
+  template:
+    spec:
+      containers:  # Make me a container... 
+      - name: redis   # ...named `redis` based on...
+        image: redis  # ..this image
+---
+apiVersion: v1
+kind: Service
+spec:
+  type: ClusterIP
+  ports:
+    - port: 6379
+      targetPort: 6379
+  selector:
+    app: redis
+```
+
+By thinking in terms of Deployments and Services, it is easier to transform a
+declaration (*"I want..."*) into a configuration file. In my experience, this
+conceptual framework helped me grok the concept of Kubernetes. 
+
+## Conclusion
 
 
-
-
-### Easily onboards someone into your k8s project
-
-
-## How we should start thinking about D&S 
 
 ### Footnotes
 
 [^1]: Kudos to the Kubernetes Documentation team for following a similar pattern in one of their [tutorials!](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
 [^2]: Note that whenever we say "I want X," we're referring to a Docker image. Thus, if I say "I want Redis," we're providing Kubernetes a [Docker image of Redis](https://hub.docker.com/_/redis/).
+[^3]: See this [post](https://matthewpalmer.net/kubernetes-app-developer/articles/service-kubernetes-example-tutorial.html) for a nice tutorial on Services and Deployments:
