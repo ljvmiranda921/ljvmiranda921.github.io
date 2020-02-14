@@ -31,8 +31,7 @@ and everything suddenly clicked!
 In this blogpost, I'll talk about my journey in understanding Kubernetes&mdash;where
 learning Pods and Nodes proved to be a false start&mdash;and why I think that
 Deployments and Services is a good place to begin. Lastly, I'd argue that k8s
-*may* be better taught first with the concept of Deployments and Services
-(D&S)![^1] 
+*may* be better taught first with the concept of Deployments and Services![^1] 
 
 
 This post is divided into three parts:
@@ -54,7 +53,7 @@ and there.
 
 ## <a name="pods-or-nodes"/> Why starting with Pods or Nodes didn't help me
 
-### Pods are simple at first, but overloads you in a while
+### Pods are simple at first, but overloads you after a while
 
 Most tutorials I've seen in the Internet starts with a
 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/), and for good
@@ -71,9 +70,9 @@ where did the confusion began? It began when I saw notes like these:
 ![](/assets/png/kubernetes-deployments/scene_00.svg){:width="720px"}
 {: style="text-align: center;"}
 
-It's not really that bad, but it set off a *conceptual alarm* that Pods may
-not be as straightforward as what they appear to be. This proved to be true,
-because as it turns out in practice, you don't directly work with Pods, you
+It's not bad, but it sets off a *conceptual alarm* that Pods may
+not be as straightforward as what they appear to be. This proved to be true
+because in practice, you don't directly work with Pods, you
 delegate a Controller to manage them for you.
 
 > "Kubernetes uses a higher-level abstraction, called a Controller, that
@@ -85,8 +84,7 @@ Documentation)](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/
 <!-- Insert animation of "now I need to learn another concept just to apply
 this new concept I've learned???" -->
 
-(With the gift of hindsight, this statement has already hinted the
-idea of Deployments.) 
+(With the gift of hindsight, this statement hinted the idea of Deployments.) 
 
 I think the main reason why Pods are a poor starting point in learning
 Kubernetes is because **it does not provide an "actionable" mapping of what I
@@ -139,16 +137,45 @@ what's happening and (2) be productive with it right away. On this level, we can
 even **consider Deployments as a functional unit of a Kubernetes cluster.**
 
 
-## <a name="deployments-and-services"/> Why starting from D&S clicked right away
+## <a name="deployments-and-services"/> Why start from Deployments and Services 
+
+### Makes you productive from Day One 
+
+By first learning about deployments and services, I immediately had a handle on
+the **simplest and oft-used Kubernetes use-case**: "I want to have X in my
+cluster."
+
+> The simplest and oft-used Kubernetes use-case: "I want to have X in my
+> cluster"
+
+As an illustration, let's say that we are [implementing a task
+queue](https://ljvmiranda921.github.io/notebook/2019/11/08/flask-redis-celery-mcdo/),
+and we want Redis[^2] inside our cluster. We can easily map this use-case in a
+Deployment configuration:
+
+```yaml
+# "I want to have Redis in my cluster"
+apiVersion: apps/v1
+kind: Deployment 
+spec:
+  # ...
+  template:
+    spec:
+      containers:  # Make me a container... 
+      - name: redis   # ...named `redis` based on...
+        image: redis  # ..this image
+```
 
 
-We should start with D&S because: 
-1. Gives a good framework to think about Kubernetes 
-2. Easily onboards someone on your Kubernetes project; and
-3. Serves as a starting point for learning about Kubernetse objects
+
+
+
+### Easily onboards someone into your k8s project
+
 
 ## How we should start thinking about D&S 
 
 ### Footnotes
 
 [^1]: Kudos to the Kubernetes Documentation team for following a similar pattern in one of their [tutorials!](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
+[^2]: Note that whenever we say "I want X," we're referring to a Docker image. Thus, if I say "I want Redis," we're providing Kubernetes a [Docker image of Redis](https://hub.docker.com/_/redis/).
