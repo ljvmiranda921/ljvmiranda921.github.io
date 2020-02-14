@@ -209,7 +209,19 @@ conceptual framework helped me grok the concept of Kubernetes.
 
 ## Conclusion
 
+In this blogpost, I talked about my journey in learning Kubernetes, and how
+learning about Deployments and Services made k8s concepts suddenly click.
+First, I illustrated how Pods and Nodes proved to be false starts: Pods have
+"hidden concepts" that overloads you after a while, and Nodes can bring you
+into an architecture rabbit-hole. Then, I briefly talked about Deployments and
+Services and why we should start with them.
 
+What made Deployments and Services stand-out is because we can easily have an
+actionable mapping of "what we want to do" versus "how we can do it." Thus,
+when we think about "I want X in my cluster," we can conveniently transform that into
+a Kubernetes configuration file.
+
+I hope you learned something new in this brief blogpost!
 
 ### Footnotes
 
