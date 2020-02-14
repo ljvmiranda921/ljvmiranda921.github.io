@@ -10,6 +10,7 @@ description: |
     I've been using Kubernetes for a few months, but this tech only *clicked*
     when I learned about Deployments and Services. I argue that all
     "Introduction to Kubernetes" tutorials should start with that.
+header-img: /assets/png/kubernetes-deployments/header.png
 excerpt: "I should've first learnt Kubernetes through Deployments and Services"
 ---
 
