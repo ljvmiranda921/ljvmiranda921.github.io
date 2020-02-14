@@ -35,7 +35,7 @@ Deployments and Services is a good place to begin. Lastly, I'd argue that k8s
 *may* be better taught first with the concept of Deployments and Services![^1] 
 
 
-This post is divided into three parts:
+This post is divided into two parts:
 - [Why starting with Pods and Nodes didn't help me](#pods-or-nodes)
 - [Why starting with Deployments and Services clicked right away](#deployments-and-services)
 
