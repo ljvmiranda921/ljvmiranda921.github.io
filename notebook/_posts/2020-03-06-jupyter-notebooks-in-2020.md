@@ -12,13 +12,13 @@ excerpt: "A review of the Jupyter Notebook ecosystem for 2020"
 ---
 
 *Ah, Jupyter Notebooks.* Love it or hate it, they're here to stay.[^1] The last
-time I wrote about Notebooks was two years ago (it's about [running a notebook
+time I wrote about them was two years ago (it's about [running a notebook
 from a remote
 server](https://ljvmiranda921.github.io/notebook/2018/01/31/running-a-jupyter-notebook/)),
 and the ecosystem has grown ever since&mdash;even how I interact with notebooks
 totally changed! 
 
-This blog post is my 2020 review on the Notebook ecosystem. More specifically, I'll
+This blog post is my 2020 review on the Notebook ecosystem. Here, I'll
 talk about:
 - The three forces that's changing how we will use notebooks
 - How I use Notebooks nowadays
@@ -32,9 +32,13 @@ code, I also read (and attempt to reproduce) others' notebook analyses. With
 that said, I have a strong bias to production code and software
 best practices, yet I still use notebooks in my day-to-day.[^2]
 
-
 ## The three forces of change
 
+- Demand for quicker turnaround of analyses into production code
+- Higher collaboration across data science and engineering teams
+- Increased adoption of the Cloud to accommodate compute and storage requirements
+
+<! -- managed notebooks to accommodate hardware requirements for analyses -->
 
 
 
