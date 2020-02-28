@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jupyter Notebooks in 2020"
-date: 2020-02-23
+date: 2020-03-06
 category: notebook
 comments: true
 author: "LJ MIRANDA"
@@ -37,6 +37,8 @@ best practices, yet I still use notebooks in my day-to-day.[^2]
 
 
 
+
+### Footnotes
 
 
 [^1]: Not necessarily Jupyter or the tool itself, but rather the *idea* of [literate programming](https://en.wikipedia.org/wiki/Literate_programming) and how we use them in our day-to-day data science work
