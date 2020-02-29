@@ -22,7 +22,6 @@ This blog post is my 2020 review on the Notebook ecosystem. Here, I'll
 talk about:
 - The three forces that's changing how we will use notebooks
 - How I use Notebooks nowadays
-- Opportunities and potential workflows
 
 To give context, a little more [about
 me](https://ljvmiranda921.github.io/about/): as a data scientist, I alternate
@@ -34,13 +33,31 @@ best practices, yet I still use notebooks in my day-to-day.[^2]
 
 ## The three forces of change
 
-- Demand for quicker turnaround of analyses into production code
-- Higher collaboration across data science and engineering teams
-- Increased adoption of the Cloud to accommodate compute and storage requirements
+#### Demand for quicker turnaround of analyses into production code
+
+#### Higher collaboration across data science and engineering teams
+
+#### Increased adoption of the Cloud
 
 <! -- managed notebooks to accommodate hardware requirements for analyses -->
 
+## How I use Notebooks nowadays
 
+#### In general
+
+
+#### For version-control and gitflow integration 
+
+
+#### For publishing 
+
+
+#### Automation and production work
+
+
+## Conclusion
+
+---
 
 ### Footnotes
 
