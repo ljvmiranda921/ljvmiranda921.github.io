@@ -59,6 +59,9 @@ him: he seemed to retain the same vigor and enthusiasm of making soba from his
 childhood years. I was also confused as a question stuck on me: "How can you
 do one thing for all your life and not be bored by it?"
 
+![](/assets/png/life/soba.png){:width="700px"}
+{: style="text-align: center;"}
+
 > *"How can you do one thing for all your life and not be bored by it?"*
 
 The day went on: we made our own noodles, cooked some zaru soba (ざるそば), ate
@@ -124,6 +127,9 @@ science degree laboring over machine problems or started out programming in
 a job where I have lesser freedom to the projects I'll take. Starting out in
 open-source has been vital in internalizing the idea that software can be
 treated as a craft.
+
+![](/assets/png/life/craftsman.png){:width="700px"}
+{: style="text-align: center;"}
 
 > With software, the dark terminal has become my canvas and the blinking cursor
 > my brush
@@ -200,7 +206,11 @@ what's being handed to you. Perhaps I'm wrong, and I'll look back to this post
 full of disagreement, but I'm hinging on the idea that I'm approximately
 correct.
 
+
+*(Credits to [Mitya Ivanov](https://unsplash.com/@aka_opex) and [Ian Schneider](https://unsplash.com/@goian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) from Unsplash for the photos)*
+
 #### Changelog
+* 03-01-2020: Add some Splash photos
 * 10-15-2019: Update some grammar mistakes
 
 ### Footnotes
@@ -208,5 +218,4 @@ correct.
 [^1]: Seeing this [video of a man making soba](https://www.youtube.com/watch?v=V3zFiwa8fKs) circulating in the internet motivated me to finish this post. It brought back memories of my experience when I was in Japan.
 [^2]: Of course, he followed this with a chapter called "The Woes of the Craft," which is equally true.
 [^3]: Let me qualify this word further. Serious programming in this sense means being attuned with industry practices such as testing, documentation, and CI/CD. Although I've learned how to program since high school, I just type-in things without any sensibility if my code is idiomatic.
-
 
