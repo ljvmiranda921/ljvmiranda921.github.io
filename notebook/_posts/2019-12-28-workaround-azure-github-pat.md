@@ -139,7 +139,6 @@ detected.  I made a Pull Request
 [here](https://github.com/microsoft/azure-pipelines-tasks/pull/12049/files),
 hoping this gets reviewed and merged pretty soon.
 
-
 ## Final thoughts
 
 Creating Github Releases from a Continuous Delivery pipeline is one of the most
@@ -148,4 +147,9 @@ Pipelines can prove to be very frustrating for developers, it was for me!
 Ideally, we shouldn't be doing these steps (i.e., making cURL requests and
 whatnot). I hope that this bug will be fixed soon, but for now, you can just
 follow this workaround!
+
+**Update (03-04-2020)** They merged my Pull Request! Thank you for all the
+software developers who nudged the maintainers to take a look at my PR. Also,
+major props to the Azure DevOps team for making their product open-source and
+taking point on any maintenance tasks!
 
