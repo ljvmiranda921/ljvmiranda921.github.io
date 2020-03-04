@@ -208,21 +208,48 @@ By thinking in terms of Deployments and Services, it is easier to transform a
 declaration (*"I want..."*) into a configuration file. In my experience, this
 conceptual framework helped me grok the concept of Kubernetes. 
 
+### Why Deployments and Services clicked
+
+There are three reasons why the concepts of deployments and services easily
+clicked for me:
+
+1. **It is a direct mapping between "what I want to do" and "how to do it"**.
+   As we have seen from the previous examples, it is straightforward and there
+   are no conceptual hoops to jump on to. As long as I can declare "I want X in
+   my cluster," I can conveniently transform that into a k8s configuration
+   file.
+2. **It is an easy next-step after learning about Containers**. Deployments
+   only care about the container image you have&mdash;plus some other settings that
+   you may or may not use. In order to be productive in Kubernetes, I just
+   need to know what those settings are (replicas, labels, etc.). It's a small
+   delta between Kubernetes and Containers, and it made me productive in k8s
+   immediately.
+3. **It is easy to onboard people to your infrastructure**. Once I start with
+   Deployments and Services, I found it easier to onboard people in my cluster
+   setup. I just show them the images I've built and the deployment
+   configuration file. Then once I've established their connection, they can
+   now work with my cluster immediately. 
+
 ## Conclusion
 
 In this blogpost, I talked about my journey in learning Kubernetes, and how
 learning about Deployments and Services made k8s concepts suddenly click.
 First, I illustrated how Pods and Nodes proved to be false starts: Pods have
 "hidden concepts" that overloads you after a while, and Nodes can bring you
-into an architecture rabbit-hole. Then, I briefly talked about Deployments and
-Services and why we should start with them.
+into an architecture rabbit-hole. Then, I talked about Deployments and
+Services and why we should start with them. It clicked because:
+- It provides a direct mapping of what I want to do and how to do it
+- It is an easy next-step after learning about Containers, and
+- It is easy to onboard people into my cluster setup
 
-What made Deployments and Services stand-out is because we can easily have an
-actionable mapping of "what we want to do" versus "how we can do it." Thus,
-when we think about "I want X in my cluster," we can conveniently transform that into
-a Kubernetes configuration file.
+Learning Kubernetes was really challenging and fun. It seems that after I
+grokked these concepts, I unlocked a whole new world of possibilities! This
+made me more excited to work on distributed systems and infrastructure. Wish me
+luck!
 
-I hope you learned something new in this brief blogpost!
+#### Changelog
+* 03-04-2020: Update and flesh-out the conclusion and why it clicked
+
 
 ### Footnotes
 
