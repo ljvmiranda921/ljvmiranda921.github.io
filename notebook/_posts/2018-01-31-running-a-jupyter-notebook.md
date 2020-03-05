@@ -9,6 +9,9 @@ description: "Running a Jupyter notebook from a remote server"
 math: true
 ---
 
+> **Update**: Read my review of the Jupyter Notebook ecosystem in 2020 
+> in [this link](/notebook/2020/03/06/jupyter-notebooks-in-2020)
+
 In my research, I usually work with remote servers to run deep learning
 models inside machines more powerful than my laptop. In some cases, I find
 myself needing to fire up a Jupyter notebook to draw quick-and-easy
@@ -148,6 +151,11 @@ so I need to run notebooks on-top of our laboratory's server. This enabled me
 to decrease development time, and helped me perform fast analyses of my
 models.
 
+> Hi there, I've been using notebooks for a long time now and it may be good to
+> give a review of the notebook ecosystem for 2020. You can read it in [this
+> link](/notebook/2020/03/06/jupyter-notebooks-in-2020).
+
 #### Changelog
+* 03-06-2020: Add link for Jupyter Notebooks review
 * 09-29-2018: Update figure using Tikz for consistency
 * 09-11-2018: Add diagram to Jupyter notebook tutorial
