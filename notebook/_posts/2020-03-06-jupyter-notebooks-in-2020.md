@@ -64,7 +64,7 @@ Notebooks today.**
 
 ### Higher collaboration across data science and engineering teams
 
-<! -- version control and git integration -->
+<! -- version control and git integration, docker for repro -->
 
 ### Increased adoption of the Cloud
 
