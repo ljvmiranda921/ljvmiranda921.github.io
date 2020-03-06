@@ -63,6 +63,12 @@ programming tools such as RMarkdown or Wolfram Alpha&mdash;yet it's ease of use 
 intuitive design [changed how science is
 done](https://www.gw-openscience.org/GW150914data/GW150914_tutorial.html).
 
+
+![](/assets/png/jupyter2020/scientific_paper_obsolete.png){:width="560px"}  
+_**"The Scientific Paper is Obsolete"** The Atlantic's article that featured Jupyter Notebooks as a catalyst of change
+in scientific publishing_
+{: style="text-align: center;"}
+
 Five years past, and the Jupyter Notebook ecosystem has grown: we now have
 JupyterLab, more plugins, new kernels for other languages, and third-party
 tooling available at our disposal. Sure, we can still run notebooks by typing
