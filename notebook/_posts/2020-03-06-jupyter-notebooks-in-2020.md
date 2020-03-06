@@ -32,7 +32,7 @@ code, I also read (and attempt to reproduce) others' notebook analyses. With
 that said, I have a strong bias to production code and software
 best practices, yet I still use notebooks in my day-to-day.[^2]
 
-## The forces of change
+## Data science today
 
 The field of data science has [changed for the past two
 years](https://veekaybee.github.io/2019/02/13/data-science-is-different/).
@@ -42,20 +42,37 @@ and ["data is the new
 oil"](https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data)
 have become old catchphrases and replaced by more realistic business problems
 with grounded technical challenges. There has also been a shift into more
-"engineering-type of work with the rise of [machine learning engineers and data
+engineering type of work with the rise of [machine learning engineers and data
 science software
 developers](https://d2wahc834rj2un.cloudfront.net/Workera%20Report.pdf).
 Lastly, machine learning has been heavily-democratized with the continuous
-adoption of popular frameworks such as scikit-learn, Pytorch, and HuggingFace's
-transformers among many others.
+adoption of popular frameworks like scikit-learn, Pytorch, & HuggingFace's
+transformers, among many others. All these forces set the stage as the tools
+around us begin to evolve&mdash; including Jupyter Notebooks. 
 
 ![](/assets/png/jupyter2020/data-is-new-oil.jpg){:width="420px"}
 {: style="text-align: center;"}
 
-This sets the stage as the tools around us begin to evolve&mdash; including
-Jupyter Notebooks. In the face of these shifts in usage and adoption,
-I'd like to focus on **three major forces that drive how I use Jupyter
-Notebooks today.**
+Started in 2015, Notebooks have become a staple of the data science workflow.
+Instead of a typical text editor, you are presented with cells containing
+either text (richly-formatted through Markdown) or code. As a user, you can
+rearrange cells or run them in any order you want. Sure, these features are
+[hotly-debated](https://www.reddit.com/r/MachineLearning/comments/9a7usg/d_i_dont_like_notebooks/)
+and the idea isn't novel (similar principles can be found in literate
+programming tools such as RMarkdown or Wolfram Alpha) yet it's ease of use and
+intuitive design [changed how science is
+done](https://www.gw-openscience.org/GW150914data/GW150914_tutorial.html).
+
+Five years past, and the Jupyter Notebook ecosystem has grown: we now have
+JupyterLab, more plugins, new kernels for other languages, and third-party
+tooling available at our disposal. Sure, we can still run notebooks by typing
+`jupyter notebook` in our terminals, but it's now more than that! This then
+begs the question: **what are the forces that prompted these changes?**, and
+**how can we leverage this larger notebook ecosystem to respond to the changes
+in data science today?** In this blog post, I would like to share my thoughts
+on the demands that prompted the ecosystem to adapt, and how I take advantage
+of these changes in my side-projects and day-to-day work.
+
 
 ### Demand for quicker turnaround time from analysis to production
 
