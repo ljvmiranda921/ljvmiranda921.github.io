@@ -58,8 +58,8 @@ Instead of a typical text editor, you are presented with cells containing
 either text (richly-formatted through Markdown) or code. As a user, you can
 rearrange cells or run them in any order you want. Sure, these features are
 [hotly-debated](https://www.reddit.com/r/MachineLearning/comments/9a7usg/d_i_dont_like_notebooks/)
-and the idea isn't novel (similar principles can be found in literate
-programming tools such as RMarkdown or Wolfram Alpha) yet it's ease of use and
+and the idea isn't novel&mdash;similar principles can be found in literate
+programming tools such as RMarkdown or Wolfram Alpha&mdash;yet it's ease of use and
 intuitive design [changed how science is
 done](https://www.gw-openscience.org/GW150914data/GW150914_tutorial.html).
 
