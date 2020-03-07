@@ -27,7 +27,7 @@ totally changed!
 
 **In this post, I'd review my oft-used tool in the data science toolbox,
 Jupyter Notebooks, and how I use them in modern times.** First, I'll talk about
-the general data science climate for the year 2020. Then, I'll zoom into the
+the general data science landscape for the year 2020. Then, I'll zoom into the
 three main forces that changed the way how I use Jupyter Notebooks today.
 Lastly, I'll conclude by writing a short reflection and a lookahead of the
 Notebook ecosystem in the future.
@@ -40,7 +40,7 @@ code, I also read (and attempt to reproduce) others' notebook analyses. With
 that said, I have a strong bias to production code and software
 best practices, yet I still use notebooks in my day-to-day.[^2]
 
-## The data science climate today
+## The data science landscape today
 
 The field of data science is [rapidly changing
 ](https://veekaybee.github.io/2019/02/13/data-science-is-different/).  We've
@@ -48,12 +48,15 @@ now entered a time where phrases like ["sexiest job of the 21st
 century"](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century)
 and ["data is the new
 oil"](https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data)
-have become old and replaced by more realistic business problems and
-grounded technical challenges. I posit this change as two-fold: there is now a
-(1) need for productionizing analyses and experiments, and the (2) rapid
-adoption of the Cloud.
+have become old and replaced by more realistic business problems and grounded
+technical challenges. I posit this change as two-fold: we now need to support
+both the (1) demand for productionizing analyses and experiments, and the (2)
+rapid adoption of the Cloud.
 
 <!-- insert axis here -->
+![](/assets/png/jupyter2020/axis.png){:width="480px"}  
+"We now need to support all four facets of data science"
+{: style="text-align: center;"}
 
 First, **the need for production**, i.e., creation of data products or
 deploying experiment artifacts within the software engineering lifecycle, has
@@ -77,6 +80,10 @@ isn't meant for these changes.
 
 <!-- insert axis here with Jupyter notebooks -->
 
+![](/assets/png/jupyter2020/axis_with_jupyter.png){:width="480px"}  
+"We now need to support all four facets of data science"
+{: style="text-align: center;"}
+
 As I've said, the Jupyter Notebook we've come to know isn't meant for these changes. 
 They're meant for exploration, not production. They're meant to run in a single
 machine, not a fleet of pods. However, for the past five years, the Jupyter
@@ -90,6 +97,12 @@ I would like to share my thoughts on the demands that prompted the ecosystem to
 adapt, and how I take advantage of these changes in my side-projects and
 day-to-day work.
 
+
+## Forces of change 
+
+![](/assets/png/jupyter2020/axis_with_jupyter_forces.png){:width="480px"}  
+"We now need to support all four facets of data science"
+{: style="text-align: center;"}
 
 ### Demand for quicker turnaround time from analysis to production
 
