@@ -9,12 +9,12 @@ tags: [jupyter notebooks, 2020, technical review, git, data science, software en
 description: |
     Love it or hate it, they're here to stay. The field of data science has
     evolved, and the tools around us begin to change&mdash; same goes for
-    Jupyter Notebooks. In this blog post I'll review, the Notebook ecosystem and
+    Jupyter Notebooks. In this blog post I'll review the Notebook ecosystem and
     talk about my workflow.
 excerpt: |
     Love it or hate it, they're here to stay. The field of data science has
     evolved, and the tools around us begin to change&mdash; same goes for
-    Jupyter Notebooks. In this blog post I'll review, the Notebook ecosystem and
+    Jupyter Notebooks. In this blog post I'll review the Notebook ecosystem and
     talk about my workflow.
 ---
 
@@ -42,7 +42,7 @@ best practices, yet I still use notebooks in my day-to-day.[^2]
 
 ## The data science climate today
 
-The field of data science is [changing rapidly
+The field of data science is [rapidly changing
 ](https://veekaybee.github.io/2019/02/13/data-science-is-different/).  We've
 now entered a time where phrases like ["sexiest job of the 21st
 century"](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century)
@@ -61,9 +61,9 @@ grown through the years. This is evidenced by an uptake for more
 engineering type of work with the rise of [machine learning engineers and data
 science software
 developers](https://d2wahc834rj2un.cloudfront.net/Workera%20Report.pdf).
-Furthermore, analysis and experiments aren't confined anymore inside
-publications or charts, for there is now a growing demand for experiment
-reproducibility and artifact deployment. 
+Furthermore, analyses aren't confined anymore inside
+publications or charts, for there is now a growing demand for experiments to be
+reproduced and its artifacts to be deployed.
 
 Next, the exponential increase of data necessitates the
 **adoption of the Cloud**.  We cannot just load a 1TB dataset in pandas using
@@ -77,10 +77,10 @@ isn't meant for these changes.
 
 <!-- insert axis here with Jupyter notebooks -->
 
-All those things above are not immediately possible using Jupyter Notebooks.
+As I've said, the Jupyter Notebook we've come to know isn't meant for these changes. 
 They're meant for exploration, not production. They're meant to run in a single
 machine, not a fleet of pods. However, for the past five years, the Jupyter
-Notebook ecosystem has grown: we now have JupyterLab, more plugins, new kernels
+Notebook ecosystem has grown: we now have JupyterLab, several plugins, new kernels
 for other languages, and third-party tooling available at our disposal. Sure,
 we can still run notebooks by typing `jupyter notebook` in our terminals, but
 it's now more than that! This then begs the question: **what are the forces
@@ -92,25 +92,6 @@ day-to-day work.
 
 
 ### Demand for quicker turnaround time from analysis to production
-
-When we say we want an analysis in production, we may mean:
-* "How can I produce those charts given different inputs quickly?"
-* "How can I apply your feature transformations for my dataset and store them in
-    a database?"
-* "How can I reuse the model you've just trained on my dataset?"
-* "How can I deploy your model in a web server?"
-
-...in short, we want **not only the artifacts** of one's analyses, **but also the
-process** that generated those artifacts.
-
-Before, Jupyter notebooks are seen as a one-off analysis tool: just write your
-code, generate your plots, and go on your merry way. Whenever we want to put
-these Notebooks into production, we hand them over to a software engineer so
-that they convert it into a Python script.
-
-
-
-
 
 
 <! -- Include tools like papermill, restart and run kernel -->
