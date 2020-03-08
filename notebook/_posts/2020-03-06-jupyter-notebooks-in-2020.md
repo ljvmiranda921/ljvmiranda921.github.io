@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "How to use Jupyter Notebooks in 2020"
+title: "How to use Jupyter Notebooks in 2020 (Part 1: The data science
+landscape)"
 date: 2020-03-06
 category: notebook
 comments: true
@@ -8,15 +9,19 @@ author: "LJ MIRANDA"
 tags: [jupyter notebooks, 2020, technical review, git, data science, software engineering, machine learning]
 description: |
     Love it or hate it, they're here to stay. The field of data science has
-    evolved, and the tools around us begin to change&mdash; including
-    Jupyter Notebooks. In this blog post I'll review the Notebook ecosystem and
-    talk about my workflow.
+    evolved, and the tools around us begin to change&mdash; including Jupyter
+    Notebooks. In this three-part blog post I'll review the Notebook ecosystem
+    and talk about my workflow.
 excerpt: |
     Love it or hate it, they're here to stay. The field of data science has
-    evolved, and the tools around us begin to change&mdash; including
-    Jupyter Notebooks. In this blog post I'll review the Notebook ecosystem and
-    talk about my workflow.
+    evolved, and the tools around us begin to change&mdash; including Jupyter
+    Notebooks. In this three-part blog post I'll review the Notebook ecosystem
+    and talk about my workflow.
 ---
+
+> This is the first of a three-part blog post on the Jupyter Notebook ecosystem. 
+> Here, I'll talk about the data science landscape, and the forces that pushes
+> our tools to evolve.
 
 *Ah, Jupyter Notebooks.* Love it or hate it, they're here to stay.[^1] The last
 time I wrote about them was two years ago (it's about [running a notebook
@@ -25,23 +30,20 @@ server](https://ljvmiranda921.github.io/notebook/2018/01/31/running-a-jupyter-no
 and the ecosystem has grown ever since&mdash;even how I interact with notebooks
 totally changed! 
 
-**In this post, I'd review my oft-used tool in the data science toolbox,
-Jupyter Notebooks, and how I use them in modern times.** First, I'll talk about
-the general data science landscape for the year 2020. Then, I'll zoom into the
-three main forces that changed the way how I use Jupyter Notebooks today.
-Lastly, I'll conclude by writing a short reflection and a lookahead of the
-Notebook ecosystem in the future.
+In this multi-part blogpost, I'd review my oft-used tool in the data science
+toolbox, Jupyter Notebooks, and how I use them in modern times. I divided
+this post into three:
 
-#### Table of Contents
-
-* [The data science landscape today](#the-data-science-landscape-today)
-* [Forces of change](#forces-of-change)
-    * [Experiment on the Cloud](#experiment-on-the-cloud)
-    * [Support for developer workflow](#support-for-developer-workflow)
-    * [Quick turnaround from analysis to
-        production](#quick-turnaround-from-analysis-to-production)
-* My wishlist for notebooks
-* Conclusion
+* **Part I: The data science landscape** *(This page)*. I'd like to look into how the
+    practice of data science has changed for the past few years. Then, I'll
+    zoom into the three main forces that changed the way I use Notebooks today.
+* **Part II: How I use Notebooks in 2020** *(Coming Soon)*. Given these
+    changes, new tools in the Notebook ecosystem emerged. I'd like to share
+    what I like (and don't like) about them, and how I use them in my
+    day-to-day.
+* **Part III: Notebooks and the future** *(Coming Soon)*. Here I'll share my
+    wishlist for Notebooks, potential gaps that the community can still
+    fill-in, and why Notebooks are still awesome! 
 
 To give context, a little more [about
 me](https://ljvmiranda921.github.io/about/): as a data scientist, I alternate
@@ -64,7 +66,6 @@ technical challenges. I see this change as two-fold: we now need to support
 both the (1) demand for productionizing analyses and experiments, and the (2)
 rapid adoption of the Cloud.
 
-<!-- insert axis here -->
 ![](/assets/png/jupyter2020/axis.png){:width="480px"}  
 **Figure**: A simplified framework on how to think about the advancements in  
 the data science process for the past years
@@ -89,9 +90,6 @@ infrastructure when managing our workloads. However, the previous Jupyter
 Notebook ecosystem, as much as it is a staple in the data scientist toolbox,
 isn't meant for these changes:
 
-
-<!-- insert axis here with Jupyter notebooks -->
-
 ![](/assets/png/jupyter2020/axis_with_jupyter.png){:width="480px"}  
 **Figure**: The Notebooks we know only cover a small domain of the data science
 ecosystem
@@ -103,15 +101,13 @@ machine, not a fleet of pods. However, for the past five years, the Jupyter
 Notebook ecosystem has grown: we now have JupyterLab, several plugins, new kernels
 for other languages, and third-party tooling available at our disposal. Sure,
 we can still run notebooks by typing `jupyter notebook` in our terminals, but
-it's now more than that! This then begs the question: **what are the forces
-that prompted these changes?**, and **how can we leverage this larger notebook
-ecosystem to respond to the changes in data science today?** In this blog post,
-I would like to share my thoughts on the demands that prompted the ecosystem to
-adapt, and how I take advantage of these changes in my side-projects and
-day-to-day work.
+it's now more than that! 
 
+This then begs the question: *what are the forces
+that prompted these changes?*, and *how can we leverage this larger notebook
+ecosystem to respond to the changes in data science today?* 
 
-## Forces of change 
+## The three forces of change
 
 The Jupyter Notebook ecosystem is growing, and I posit that this is driven by
 three forces:
@@ -129,36 +125,9 @@ three forces:
 **Figure**: The growth of the Notebook ecosystem is driven by these forces
 {: style="text-align: center;"}
 
-
-### Experiment on the cloud
-
-
-<!-- managed notebooks to accommodate hardware requirements for analyses -->
- Experimenting on the Cloud allows us to iterate quickly while taking
-    advantage of the massive compute and storage it offers.
-
-
-### Support for developer workflow
-
-<!-- version control and git integration, docker for repro -->
-
-
-
-### Quick turnaround from analysis to production
-
-<!-- Include tools like papermill, restart and run kernel -->
-
-
-
-
-
-
-
-
-## Conclusion
-
-
-<!-- wishlist -->
+For the next few sections, I'll talk about how we can use Jupyter Notebooks
+given these forces of change. I'll mention some tools and workflows that have
+helped me in my day-to-day work and side-projects.
 
 
 
