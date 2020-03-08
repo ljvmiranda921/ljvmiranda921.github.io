@@ -8,12 +8,12 @@ author: "LJ MIRANDA"
 tags: [jupyter notebooks, 2020, technical review, git, data science, software engineering, machine learning]
 description: |
     Love it or hate it, they're here to stay. The field of data science has
-    evolved, and the tools around us begin to change&mdash; same goes for
+    evolved, and the tools around us begin to change&mdash; including
     Jupyter Notebooks. In this blog post I'll review the Notebook ecosystem and
     talk about my workflow.
 excerpt: |
     Love it or hate it, they're here to stay. The field of data science has
-    evolved, and the tools around us begin to change&mdash; same goes for
+    evolved, and the tools around us begin to change&mdash; including
     Jupyter Notebooks. In this blog post I'll review the Notebook ecosystem and
     talk about my workflow.
 ---
@@ -32,6 +32,14 @@ three main forces that changed the way how I use Jupyter Notebooks today.
 Lastly, I'll conclude by writing a short reflection and a lookahead of the
 Notebook ecosystem in the future.
 
+* [The data science landscape today](#the-data-science-landscape-today)
+* [Forces of change](#forces-of-change)
+    * Experiment on the Cloud
+    * Support for developer workflow
+    * Quick turnaround from analysis to production
+* My wishlist for notebooks
+* Conclusion
+
 To give context, a little more [about
 me](https://ljvmiranda921.github.io/about/): as a data scientist, I alternate
 between doing analyses on notebooks and writing production code for data
@@ -49,13 +57,14 @@ century"](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-cen
 and ["data is the new
 oil"](https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data)
 have become old and replaced by more realistic business problems and grounded
-technical challenges. I posit this change as two-fold: we now need to support
+technical challenges. I see this change as two-fold: we now need to support
 both the (1) demand for productionizing analyses and experiments, and the (2)
 rapid adoption of the Cloud.
 
 <!-- insert axis here -->
 ![](/assets/png/jupyter2020/axis.png){:width="480px"}  
-"We now need to support all four facets of data science"
+**Figure**: A simplified framework on how to think about the advancements in  
+the data science process for the past years
 {: style="text-align: center;"}
 
 First, **the need for production**, i.e., creation of data products or
@@ -75,13 +84,14 @@ allowed us to scale our data-processing workloads at unprecedented levels.
 Cloud adoption means that we take care of scaling, resource provisioning, and
 infrastructure when managing our workloads. However, the previous Jupyter
 Notebook ecosystem, as much as it is a staple in the data scientist toolbox,
-isn't meant for these changes.
+isn't meant for these changes:
 
 
 <!-- insert axis here with Jupyter notebooks -->
 
 ![](/assets/png/jupyter2020/axis_with_jupyter.png){:width="480px"}  
-"We now need to support all four facets of data science"
+**Figure**: The Notebooks we know only cover a small domain of the data science
+ecosystem
 {: style="text-align: center;"}
 
 As I've said, the Jupyter Notebook we've come to know isn't meant for these changes. 
@@ -100,9 +110,23 @@ day-to-day work.
 
 ## Forces of change 
 
+The Jupyter Notebook ecosystem is growing, and I posit that this is driven by
+three forces:
+* **Experiment on the Cloud**: big data demands large compute and storage,
+    something that your average consumer-grade machine will not always capable
+    of.
+* **Support for developer workflow**: more and more data science teams are
+    starting to adopt software engineering best
+    practices&mdash;version-control, gitfow, pull requests, and more.
+* **Quick turnaround from analysis to production**: it's not enough to test
+    hypotheses under controlled environments. Software written for analysis
+    should be easily reused for prod.
+
 ![](/assets/png/jupyter2020/axis_with_jupyter_forces.png){:width="480px"}  
-"We now need to support all four facets of data science"
+**Figure**: The growth of the Notebook ecosystem is driven by these forces
 {: style="text-align: center;"}
+
+
 
 ### Demand for quicker turnaround time from analysis to production
 
@@ -119,6 +143,8 @@ day-to-day work.
 ### Increased adoption of the Cloud
 
 <! -- managed notebooks to accommodate hardware requirements for analyses -->
+ Experimenting on the Cloud allows us to iterate quickly while taking
+    advantage of the massive compute and storage it offers.
 
 
 ## Conclusion
