@@ -12,6 +12,7 @@ description: |
     evolved, and the tools around us begin to change&mdash; including Jupyter
     Notebooks. In this three-part series I'll review the Notebook ecosystem
     and talk about my workflow.
+header-img: /assets/png/jupyter2020/axis_with_jupyter_forces.png
 excerpt: |
     Love it or hate it, they're here to stay. The field of data science has
     evolved, and the tools around us begin to change&mdash; including Jupyter
