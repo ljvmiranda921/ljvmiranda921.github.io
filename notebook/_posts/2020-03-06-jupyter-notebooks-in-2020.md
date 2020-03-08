@@ -32,11 +32,14 @@ three main forces that changed the way how I use Jupyter Notebooks today.
 Lastly, I'll conclude by writing a short reflection and a lookahead of the
 Notebook ecosystem in the future.
 
+#### Table of Contents
+
 * [The data science landscape today](#the-data-science-landscape-today)
 * [Forces of change](#forces-of-change)
-    * Experiment on the Cloud
-    * Support for developer workflow
-    * Quick turnaround from analysis to production
+    * [Experiment on the Cloud](#experiment-on-the-cloud)
+    * [Support for developer workflow](#support-for-developer-workflow)
+    * [Quick turnaround from analysis to
+        production](#quick-turnaround-from-analysis-to-production)
 * My wishlist for notebooks
 * Conclusion
 
@@ -127,30 +130,35 @@ three forces:
 {: style="text-align: center;"}
 
 
-
-### Demand for quicker turnaround time from analysis to production
-
-
-<! -- Include tools like papermill, restart and run kernel -->
+### Experiment on the cloud
 
 
-### Higher collaboration across data science and engineering teams
-
-
-<! -- version control and git integration, docker for repro -->
-
-
-### Increased adoption of the Cloud
-
-<! -- managed notebooks to accommodate hardware requirements for analyses -->
+<!-- managed notebooks to accommodate hardware requirements for analyses -->
  Experimenting on the Cloud allows us to iterate quickly while taking
     advantage of the massive compute and storage it offers.
+
+
+### Support for developer workflow
+
+<!-- version control and git integration, docker for repro -->
+
+
+
+### Quick turnaround from analysis to production
+
+<!-- Include tools like papermill, restart and run kernel -->
+
+
+
+
+
+
 
 
 ## Conclusion
 
 
-<! -- wishlist -->
+<!-- wishlist -->
 
 
 
