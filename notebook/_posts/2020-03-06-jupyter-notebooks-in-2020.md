@@ -23,7 +23,7 @@ excerpt: |
 > Here, I'll talk about the data science landscape, and the forces that pushes
 > our tools to evolve.
 
-*Ah, Jupyter Notebooks.* Love it or hate it, they're here to stay.[^1] The last
+*Ah, Jupyter Notebooks.* Love it or hate it, they're here to stay. The last
 time I wrote about them was two years ago (it's about [running a notebook
 from a remote
 server](https://ljvmiranda921.github.io/notebook/2018/01/31/running-a-jupyter-notebook/)),
@@ -51,7 +51,7 @@ between doing analyses on notebooks and writing production code for data
 products. My work environment is highly-collaborative so I don't just review
 code, I also read (and attempt to reproduce) others' notebook analyses. With
 that said, I have a strong bias to production code and software
-best practices, yet I still use notebooks in my day-to-day.[^2]
+best practices, yet I still use notebooks in my day-to-day.
 
 ## The data science landscape today
 
@@ -125,14 +125,33 @@ three forces:
 **Figure**: The growth of the Notebook ecosystem is driven by these forces
 {: style="text-align: center;"}
 
-For the next few sections, I'll talk about how we can use Jupyter Notebooks
-given these forces of change. I'll mention some tools and workflows that have
-helped me in my day-to-day work and side-projects.
+Growing towards a more Cloud-first environment means that we can perform
+Notebook-based tasks in machines more powerful than our own. For example,
+managed notebook instances enabled us to run Jupyter notebooks from a remote
+server with no-ops and setup. On the other hand, growing towards a more
+Production workflow provides us with a set of tools to endow our notebook-based
+tasks with software engineering practices. We'll see more of these tools in the
+next part of this post.
 
+Finally, note that the growth of a tool doesn't depend on a single entity or
+organization. As we will see later on, filling these gaps may stem from
+individuals who contribute third-party plugins or organizations offering managed
+services from notebooks.
 
+## Conclusion
 
-### Footnotes
+In the first part of this series, we looked into the two drivers of growth in
+the data science landscape: the (1) adoption of the Cloud, and the (2)
+increasing demand for production. We saw that Jupyter Notebooks only fill a
+small part of this ecosystem, i.e., it's often used for exploration (not
+production) and only ran in our local machines (not in the Cloud). 
 
+Then, using that same framework, we identified three forces of change that
+allowed the Jupyter Notebook ecosystem to grow: increased experimentation on
+the Cloud, support for developer workflow, and quicker turnaround from analysis
+to production. These forces may have brought in the development of new tools,
+plugins, and Notebook-like products to satisfy such gaps. 
 
-[^1]: Not necessarily Jupyter or the tool itself, but rather the *idea* of [literate programming](https://en.wikipedia.org/wiki/Literate_programming) and how we use them in our day-to-day data science work
-[^2]: Rereading that sentence felt like it's a punchline to a joke haha! Adhering to software best practices and using Jupyter Notebooks aren't mutually exclusive!
+For the next part of this series, I'll talk about how we can use Jupyter
+Notebooks given these forces of change. I'll review some of the tools and
+workflows that have helped me in my day-to-day work and side-projects.
