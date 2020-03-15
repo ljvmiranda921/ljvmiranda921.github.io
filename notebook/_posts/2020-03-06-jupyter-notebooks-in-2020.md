@@ -38,7 +38,7 @@ this post into three:
 * **Part I: The data science landscape** *(This page)*. I'd like to look into how the
     practice of data science has changed for the past few years. Then, I'll
     zoom into the three main forces that changed the way I use Notebooks today.
-* **Part II: How I use Notebooks in 2020** *(Coming Soon)*. Given these
+* [**Part II: How I use Notebooks in 2020**](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2/). Given these
     changes, new tools in the Notebook ecosystem emerged. I'd like to share
     what I like (and don't like) about them, and how I use them in my
     day-to-day.
