@@ -38,11 +38,9 @@ and see if it holds ground. I'd approach this in a two-fold manner: first, with
 Notebooks as a programming paradigm, and second, with Notebooks as the
 technology itself (i.e., Jupyter Notebooks by Project Jupyter).
 
+<!-- As a paradigm, it's here to stay -->
 <!-- Notebooks aren't a new concept, you can see them as an offshoot of
 literate programming -->
-
-
-<!-- As a paradigm, it's here to stay -->
 
 
 <!-- As a technology, the space will get diluted -->
