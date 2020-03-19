@@ -22,11 +22,14 @@ excerpt: |
 > Notebook experience. You'll find Part One [in this link](/notebook/2020/03/06/jupyter-notebooks-in-2020/) and Part Two
 > [here](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2).
 
-<!-- short summary of what we have so far from Parts One and Two -->
-To recap what we know so far, we first created a framework in [Part
-One](/notebook/2020/03/06/jupyter-notebooks-in-2020/) that identifies two
-directions of growth&mdash; cloud adoption and production systems&mdash; and
-three forces of change (represented by purple arrows):
+Hi friends! Thanks for accompanying me in the final part of this series. Let's
+jump right into it!
+
+To recap what we know so far, in [Part
+One](/notebook/2020/03/06/jupyter-notebooks-in-2020/), we created a framework
+that identifies two directions of growth&mdash; cloud adoption and production
+systems&mdash; and three forces of change that push the Jupyter ecosystem
+forward (as represented by the purple arrows):
 
 
 ![](/assets/png/jupyter2020/axis_with_jupyter_forces.png){:width="480px"}  
@@ -36,8 +39,8 @@ three forces of change (represented by purple arrows):
 We saw that Jupyter Notebooks, by themselves, occupy the bottom-left portion of
 the quadrant: they work best as an exploration or prototyping tool, and we
 typically use them in our own laptops. However, **the data science landscape in
-2020 is different**, we now work mostly in the Cloud and there is a stress on
-writing production systems. Given that, in [Part
+2020 is different**: (i) most of our work happens in the Cloud and (ii) there is
+more emphasis on writing production data systems. Given that, in [Part
 Two](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2), we explored
 various tools and extensions that helped bridge the gap:
 
@@ -69,8 +72,8 @@ I opened up this series with the statement:
 
 Given what we know and what we've learned so far, let's revisit this assertion
 and see if it holds ground. I'd approach this in a two-fold manner: first, with
-Notebooks as a programming paradigm, and second, with Notebooks as the
-technology itself (i.e., Jupyter Notebooks by Project Jupyter).
+Notebooks as a paradigm, and second, with Notebooks as a product (i.e., Jupyter
+Notebooks by Project Jupyter).
 
 <!-- As a paradigm, it's here to stay -->
 <!-- Notebooks aren't a new concept, you can see them as an offshoot of
@@ -100,3 +103,5 @@ literate programming -->
 <!-- I wrote this essay because... my blogpost back in 2018 is outdated -->
 <!-- personally, i love notebooks and they don't deserve the animosity they get -->
 <!-- there's a right tool for the job. -->
+
+<!-- acknowledgments for accompanying me through these series! -->
