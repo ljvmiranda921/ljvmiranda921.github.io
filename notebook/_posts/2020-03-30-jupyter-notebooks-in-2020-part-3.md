@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to use Jupyter Notebooks in 2020 (Part 3: Final thoughts and my wishlist)"
+title: "How to use Jupyter Notebooks in 2020 (Part 3: Final thoughts)"
 date: 2020-03-30
 category: notebook
 comments: true
@@ -23,6 +23,40 @@ excerpt: |
 > [here](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2).
 
 <!-- short summary of what we have so far from Parts One and Two -->
+To recap what we know so far, we first created a framework in [Part
+One](/notebook/2020/03/06/jupyter-notebooks-in-2020/) that identifies two
+directions of growth&mdash; cloud adoption and production systems&mdash; and
+three forces of change (represented by purple arrows):
+
+
+![](/assets/png/jupyter2020/axis_with_jupyter_forces.png){:width="480px"}  
+{: style="text-align: center;"}
+
+
+We saw that Jupyter Notebooks, by themselves, occupy the bottom-left portion of
+the quadrant: they work best as an exploration or prototyping tool, and we
+typically use them in our own laptops. However, **the data science landscape in
+2020 is different**, we now work mostly in the Cloud and there is a stress on
+writing production systems. Given that, in [Part
+Two](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2), we explored
+various tools and extensions that helped bridge the gap:
+
+![](/assets/png/jupyter2020/everything.png){:width="480px"}  
+{: style="text-align: center;"}
+
+[Part Two](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2) is chock-full
+of tactical information so I'd suggest that you read through it. It closes off
+by offering a [strategic framework called the **threshold of
+modularization**](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2/#putting-it-together),
+where it allows one to decide when to highly-optimize a software artifact:
+
+
+![](/assets/png/jupyter2020/notebook_principles_01.png){:width="480px"}  
+{: style="text-align: center;"}
+
+As we close this series off, I'd like to give a short reflection on Jupyter
+Notebooks, a short meta-thesis on why I'm writing these blogposts, and my
+wishlist for the Notebook ecosystem in the future.
 
 
 ## Conclusion 
