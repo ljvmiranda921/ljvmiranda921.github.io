@@ -75,12 +75,25 @@ and see if it holds ground. I'd approach this in a two-fold manner: first, with
 Notebooks as a paradigm, and second, with Notebooks as a product (i.e., Jupyter
 Notebooks by Project Jupyter).
 
-<!-- As a paradigm, it's here to stay -->
-<!-- Notebooks aren't a new concept, you can see them as an offshoot of
-literate programming -->
+**As a paradigm, it's here to stay**. The idea of interspersing text and code
+is not a new concept. We can see this as an offshoot of Donald Knuth's
+[literate programming
+paradigm](https://en.wikipedia.org/wiki/Literate_programming)&mdash;where
+instead of developing with respect to computer logic, we develop with respect
+to human thoughts. There have been many "products"[^1] built around this, like
+Wolfram's [Mathematica](https://www.wolfram.com/mathematica/) or Rlang's
+[RMarkdown Notebooks](https://rmarkdown.rstudio.com/lesson-10.html).  I'd say
+that given the boom in data science, especially the practice of [exploratory
+data analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis) and
+[open science](https://en.wikipedia.org/wiki/Open_science), Notebooks as a literate programming paradigm found its home.
 
-
-<!-- As a technology, the space will get diluted -->
+**As a technology/product, the space will get diluted**&mdash; and that's a
+good thing! As we've seen in Part Two, 
+<!-- there are many new technologies that doesn't involve jupyter notebooks -->
+<!-- i imagine that more of these will come up for more specific use-cases, for
+example, observable hq, maybe REPL.it?-->
+<!-- That's better because Jupyter Notebooks can be an "open standard" on how
+to structure Notebook-based products -->
 
 
 ### My wishlist 
@@ -105,3 +118,6 @@ literate programming -->
 <!-- there's a right tool for the job. -->
 
 <!-- acknowledgments for accompanying me through these series! -->
+
+
+[^1]: I am using the term "product" loosely here. It doesn't have to be a paid service, it can be a *libre* open-source project.
