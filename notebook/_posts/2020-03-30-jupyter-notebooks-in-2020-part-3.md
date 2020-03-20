@@ -87,8 +87,21 @@ that given the boom in data science, especially the practice of [exploratory
 data analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis) and
 [open science](https://en.wikipedia.org/wiki/Open_science), Notebooks as a literate programming paradigm found its home.
 
-**As a technology/product, the space will get diluted**&mdash; and that's a
-good thing! As we've seen in Part Two, 
+**As a technology, Jupyter Notebooks will become an open standard**. My
+fearless forecast is that we'll start seeing an emergence of Notebook-type
+products based from Jupyter Notebooks, such as Google Colaboratory. These
+companies aren't reinventing the wheel, rather, they're adopting the Jupyter
+open standard to create platforms for their specific use-case&mdash; e.g.,
+[ObservableHQ](https://observablehq.com/) for data visualization,
+[CoCalc](https://cocalc.com/) for online courses, and [Kaggle
+Kernels](https://www.kaggle.com/kernels) for data science competitions. As
+Jupyter Notebook becomes an open standard, my only hope is that tools can still
+provide interoperability between them.
+
+
+As we've
+seen in Part Two, there's an emergence of Notebook-type products
+based from Jupyter Notebooks. 
 <!-- there are many new technologies that doesn't involve jupyter notebooks -->
 <!-- i imagine that more of these will come up for more specific use-cases, for
 example, observable hq, maybe REPL.it?-->
