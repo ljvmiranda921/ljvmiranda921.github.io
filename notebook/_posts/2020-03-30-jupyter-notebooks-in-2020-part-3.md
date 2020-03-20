@@ -98,30 +98,19 @@ Kernels](https://www.kaggle.com/kernels) for data science competitions. As
 Jupyter Notebook becomes an open standard, my only hope is that tools can still
 provide interoperability between them.
 
-
-As we've
-seen in Part Two, there's an emergence of Notebook-type products
-based from Jupyter Notebooks. 
-<!-- there are many new technologies that doesn't involve jupyter notebooks -->
-<!-- i imagine that more of these will come up for more specific use-cases, for
-example, observable hq, maybe REPL.it?-->
-<!-- That's better because Jupyter Notebooks can be an "open standard" on how
-to structure Notebook-based products -->
+I believe that the future of Jupyter Notebooks is bright if done right. It
+combines the "perfect storm" of a well-established paradigm, and a possibility
+to become an open standard. In the next section, I'll talk about some of my
+wishes for the Jupyter Notebook ecosystem and things it can still improve upon.
 
 
 ### My wishlist 
 
-<!-- 1. Make Restart Kernel and Run All a first-class citizen -->
-
-<!-- 2. Notebook IDEs -->
-
-<!-- 3. Integrate with virtual environments for easier kernel switching -->
-
-
-<!-- 4. A cell-lock mode? -->
-
-<!-- 5. A user-friendly way for cell testing -->
-
+* **Make "Restart Kernel and Run All" a first-class citizen**
+* **More Notebook IDEs**
+* **Better integration with virtual envs for easier kernel switching**
+* **A cell-lock mode?**
+* **A user-friendly way for cell testing**
 
 ### Final thoughts
 
