@@ -106,11 +106,29 @@ wishes for the Jupyter Notebook ecosystem and things it can still improve upon.
 
 ### My wishlist 
 
-* **Make "Restart Kernel and Run All" a first-class citizen**
-* **More Notebook IDEs**
-* **Better integration with virtual envs for easier kernel switching**
-* **A cell-lock mode?**
-* **A user-friendly way for cell testing**
+Just three:
+
+* **Make "Restart Kernel and Run All" (RKRA) a first-class citizen** I always
+    think of RKRA, loosely, like a compiler: first it inspects if the logic flow
+    of your notebook checks out, and transforms it into a readable material.
+    Whenever I hit RKRA and it "passes," then I have a certain level of
+    confidence that I don't have undeclared variables, unordered rows, or
+    unimported libraries. I hope that RKRA can be displayed more prominently in
+    the interface.
+* **More Notebook IDEs** The tool `nbdev` seems to be a good leap forward, but
+    I hope that there would be more players in this space. We have discussed
+    various tools like `nbstripout` and `nbdime`, and I hope that there's an
+    IDE (or an opinionated Jupyter "distribution") that ships this right off
+    the bat. Perhaps Jupyter Notebooks can be treated as "editors" with
+    easily-customizable configs, and us developers can just save and share our
+    configs like in `tmux` or `vim`. It would be fun looking at other's configs
+    that way!
+* **A cell-lock mode?** The ability to order cells freely is both bane and
+    boon. On one hand, it allows me to switch context and be more flexible in
+    how I organize my cells. On the other, it facilitates misuse and discourage
+    software best practices. I wish that there's a simple toggle to enable a
+    cell-lock mode, where I'm not allowed to move cells back and forth and
+    force me in a linear workflow.
 
 ### Final thoughts
 
