@@ -132,12 +132,31 @@ Just three:
 
 ### Final thoughts
 
+I wrote this essay because I've seen a lot of people reading my **outdated**
+tutorial on ["Running Jupyter Notebooks in a remote
+server"](/notebook/2018/01/31/running-a-jupyter-notebook/) back in 2018. I'd
+say it's outdated because there are now more ways of accomplishing the same
+task with considerably less effort&mdash; i.e., if I were to do it again I'll
+probably use Colab or SageMaker instead.
 
-<!-- I wrote this essay because... my blogpost back in 2018 is outdated -->
-<!-- personally, i love notebooks and they don't deserve the animosity they get -->
-<!-- there's a right tool for the job. -->
+Jupyter Notebooks are great, and they don't deserve the *animosity* they get.
+There's always a right tool for the job, we use editors when doing this and
+notebooks for doing that. In addition, Notebooks eased me in when I was still
+learning Python and data science. They're a useful tool, with a growing and
+thriving ecosystem.
 
-<!-- acknowledgments for accompanying me through these series! -->
+**I'd like to thank you, reader, for accompanying me in this journey.** I hope you
+enjoyed your time here and learned something new. Feel free to drop a comment
+below if you see any inaccuracies, or if you'd just like to share your
+workflow! Until next time!
 
+#### Other Resources
+
+* Reddit Discussion for [Part One](https://www.reddit.com/r/Python/comments/fflyup/how_to_use_jupyter_notebooks_in_2020_part_1_the/?utm_source=share&utm_medium=web2x) and [Part Two](https://www.reddit.com/r/datascience/comments/fj9y80/how_to_use_jupyter_notebooks_in_2020_part_2/?utm_source=share&utm_medium=web2x)
+* Joel Grus' JupyterCon presentation on ["I don't like notebooks."](https://www.youtube.com/watch?v=7jiPeIFXb6U)
+* Yihui Xie's blog post on ["The First Notebook War."](https://yihui.org/en/2018/09/notebook-war/)
+
+
+#### Footnotes
 
 [^1]: I am using the term "product" loosely here. It doesn't have to be a paid service, it can be a *libre* open-source project.
