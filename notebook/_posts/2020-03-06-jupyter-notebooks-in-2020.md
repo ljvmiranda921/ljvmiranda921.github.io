@@ -42,7 +42,7 @@ this post into three:
     changes, new tools in the Notebook ecosystem emerged. I'd like to share
     what I like (and don't like) about them, and how I use them in my
     day-to-day.
-* [**Part III: Notebooks and the future**](http://localhost:4000/notebook/2020/03/30/jupyter-notebooks-in-2020-part-3/). Here I'll share my
+* [**Part III: Notebooks and the future**](/notebook/2020/03/30/jupyter-notebooks-in-2020-part-3/). Here I'll share my
     wishlist for Notebooks, potential gaps that the community can still
     fill-in, and why Notebooks are still awesome! 
 
