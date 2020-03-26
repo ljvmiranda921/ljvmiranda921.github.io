@@ -19,7 +19,7 @@ excerpt: |
 
 Almost a year ago, I wrote a library for Conway's Game of
 Life&mdash;[Seagull](https://github.com/ljvmiranda921/seagull). It's a fun
-project that serves as an outlet for my interests in [cellular automata](https://en.wikipedia.org/wiki/Cellular_automaton).[^1]
+project that serves as an outlet for my interests in [cellular automata](https://en.wikipedia.org/wiki/Cellular_automaton).
 This year, I used it for generating procedural art:
 
 <!-- add examples -->
@@ -57,10 +57,3 @@ app)](https://cellular-sprites.herokuapp.com)
 <iframe src="https://cellular-sprites.herokuapp.com" width="700" height="600">
   <p>Your browser does not support iframes.</p>
 </iframe>
-
-
-
-
-### Footnotes
-
-[^1]: In addition, I used it as an opportunity to learn and enforce [type hints in Python](https://realpython.com/python-type-checking/)
