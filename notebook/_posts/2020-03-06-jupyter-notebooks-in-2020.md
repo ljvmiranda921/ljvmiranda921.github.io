@@ -153,6 +153,6 @@ the Cloud, support for developer workflow, and quicker turnaround from analysis
 to production. These forces may have brought in the development of new tools,
 plugins, and Notebook-like products to satisfy such gaps. 
 
-For the next part of this series, I'll talk about how we can use Jupyter
+For the [next part of this series](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2/), I'll talk about how we can use Jupyter
 Notebooks given these forces of change. I'll review some of the tools and
 workflows that have helped me in my day-to-day work and side-projects.

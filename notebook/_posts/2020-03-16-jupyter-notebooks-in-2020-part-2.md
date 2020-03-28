@@ -21,9 +21,9 @@ excerpt: |
 
 
 > This is the second of a three-part blog post on the Jupyter Notebook
-> ecosystem.  Here, I'll discuss various tools that I use alongside
-> Notebooks, and how I incorporate them in my day-to-day work. You'll find Part
-> One [in this link](/notebook/2020/03/06/jupyter-notebooks-in-2020/).
+> ecosystem.  Here, I'll discuss various tools that I use alongside Notebooks,
+> and how I incorporate them in my day-to-day work. You'll find Part One [in this link](/notebook/2020/03/06/jupyter-notebooks-in-2020/) and Part Three
+> [here](/notebook/2020/03/30/jupyter-notebooks-in-2020-part-3/).
 
 Hello, thanks for joining me in the Second Part of this series! Let's jump
 right into it. 
@@ -464,10 +464,10 @@ notebooks such that they're production-ready and can handle large amounts of
 data at-scale. In turn, I introduced the concept of the Threshold of
 Modularization, which I highly-recommend data teams to consider and set.
 
-In the final part of this series, I'd conclude by looking into how data teams
-can best leverage notebooks in a technology-management perspective, my wishlist
-for the Jupyter Notebook ecosystem, and a lookahead into the future of Jupyter
-Notebooks.
+In the [final part](/notebook/2020/03/30/jupyter-notebooks-in-2020-part-3/) of
+this series, I'd conclude by looking into how data teams can best leverage
+notebooks in a technology-management perspective, my wishlist for the Jupyter
+Notebook ecosystem, and a lookahead into the future of Jupyter Notebooks.
 
 
 ### Footnotes
