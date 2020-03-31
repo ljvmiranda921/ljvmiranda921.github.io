@@ -113,8 +113,8 @@ ecosystem to respond to the changes in data science today?*
 The Jupyter Notebook ecosystem is growing, and I posit that this is driven by
 three forces:
 * **Experiment on the Cloud**: big data demands large compute and storage,
-    something that your average consumer-grade machine will not always capable
-    of.
+    something that your average consumer-grade machine will not always be
+    capable of.
 * **Support for developer workflow**: more and more data science teams are
     starting to adopt software engineering best
     practices&mdash;version-control, gitfow, pull requests, and more.

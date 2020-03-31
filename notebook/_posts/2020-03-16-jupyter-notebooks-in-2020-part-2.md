@@ -160,8 +160,8 @@ alongside notebooks!
 
 Native-tooling that resembles the Git workflow **and** a
 standardized project-structure will always hit the mark. First, I recommend
-using the [datascience
-cookiecutter](https://github.com/drivendata/cookiecutter-data-science) when
+using [cookiecutter
+-data-science](https://github.com/drivendata/cookiecutter-data-science) when
 organizing your data science projects. It definitely works out-of-the-box, and
 you can configure it the way you like!
 
@@ -271,7 +271,7 @@ notebooks into production workloads.
 The third force of change transforms Jupyter Notebooks from an analysis
 tool into a software component. This means that an engineer can treat
 Notebooks as a blackbox with expected inputs and outputs, then run it as
-she would any other process. In this section, will look into how notebooks
+she would any other process. In this section, we will look into how notebooks
 behave as software components and how it integrates with some standard
 engineering tools.
 
