@@ -26,7 +26,7 @@ This year, I used it for generating procedural art:
 ![](/assets/png/general/cellular-sprites.png){:width="640px"}  
 {: style="text-align: center;"}
 
-In [Cellular Sprites](bit.ly/CellularSprites), you generate 8-bit sprites using
+In [Cellular Sprites](https://bit.ly/CellularSprites), you generate 8-bit sprites using
 Conway's Game of Life:
 * Any live cell with two or three neighbors survives
 * Any dead cell with one or less live neighbors becomes a live cell
@@ -42,7 +42,7 @@ example](https://pyseagull.readthedocs.io/en/latest/notebooks/sprator.html#Sprat
 on how it's done.
 
 Lastly, Cellular Sprites was a learning opportunity for me to build and deploy
-a [Streamlit](streamlit.io) application. Streamlit is awesome. I talked about
+a [Streamlit](https://streamlit.io) application. Streamlit is awesome. I talked about
 it at length in [one of my blog posts on Jupyter
 Notebooks](https://ljvmiranda921.github.io/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2/#quick-turnaround-from-prototype-to-prod).
 I'm not a web-developer (I suck at frontend), but I was able to create a decent
