@@ -40,16 +40,16 @@ I'm interested in problems concerning machine learning and its applications,
 especially those that deal with its deployment, engineering, and use.
 Furthermore, I'm also learning about distributed systems and infrastructure. 
 
-Lastly, I'm well-involved in open-source and have some projects of my own:
-[PySwarms](https://github.com/ljvmiranda921/pyswarms), a particle swarm
-optimization toolkit in Python, and
-[Gym-Lattice](https://github.com/ljvmiranda921/gym-lattice), a reinforcement
-learning library for protein folding. PySwarms has been more successful, I've
-seen it being used in [quantum physics](https://arxiv.org/abs/1801.07686),
+Lastly, I'm well-involved in open-source and has authored several projects like
+[pyswarms](https://github.com/ljvmiranda921/pyswarms),
+[seagull](https://github.com/ljvmiranda921/seagull),
+[burnout-barometer](https://github.com/ljvmiranda921/burnout-barometer), and
+[gym-lattice](https://github.com/ljvmiranda921/gym-lattice). PySwarms has been
+quite successful, I've seen it being used in [quantum
+physics](https://arxiv.org/abs/1801.07686),
 [chemistry](https://pubs.acs.org/doi/abs/10.1021/acscentsci.8b00307), and
-[teaching](http://gousios.org/courses/algo-ds/book/string-distance.html#sop-example-using-pyswarms).
-I also contribute to other projects such as scikit-multilearn, scikit-plot, and
-chainerrl.
+[teaching](http://gousios.org/courses/algo-ds/book/string-distance.html#sop-example-using-pyswarms)
+to name a few.  I code mainly in Python and Go, while learning some Elixir.
 
 ## Contact
 
