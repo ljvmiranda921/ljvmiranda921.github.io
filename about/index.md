@@ -49,7 +49,7 @@ quite successful, I've seen it being used in [quantum
 physics](https://arxiv.org/abs/1801.07686),
 [chemistry](https://pubs.acs.org/doi/abs/10.1021/acscentsci.8b00307), and
 [teaching](http://gousios.org/courses/algo-ds/book/string-distance.html#sop-example-using-pyswarms)
-to name a few.  I code mainly in Python and Go, while learning some Elixir.
+to name a few.  I code mainly in Python and Go, while learning some Elixir and Vue.
 
 ## Contact
 
