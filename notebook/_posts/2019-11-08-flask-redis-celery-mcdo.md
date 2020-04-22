@@ -296,6 +296,10 @@ missed in this Distill!
 ![](/assets/png/flask-celery-redis/something_new.svg){:width="420px"}
 {: style="text-align: center;"}
 
+#### Changelog
+
+* 04-22-2020: This blogpost was featured on [Hacker News](https://news.ycombinator.com/item?id=22901857)! Thanks to [Feross](https://feross.org/) for posting it, and for everyone who found this post helpful.
+
 
 ### Footnotes
 
