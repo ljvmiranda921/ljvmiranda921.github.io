@@ -39,7 +39,7 @@ can scale our applications.
     we can apply them to systems outside Mcdo.
 - [Part 4: Ye Old Switcheroo](#ye-old-switcheroo). We'll then substitute our
     previous knowledge of a task queue with Flask, Celery, and Redis. By this
-    time, we should have an idea of how these technologies fall together.
+    time, we should have an idea of how these technologies hold together.
 
 Ready? Let's go!
 
@@ -100,7 +100,7 @@ As we've seen, the Mcdonalds near our office has implemented something called a
 * **Better task delegation**. The *Ate* or *Kuya*[^2] who takes my order is
     different from the one who prepares it. It's less stress for both parties
     and each can just focus on doing their respective tasks!
-* **Customers can just sit back and relax**. I don't need to be anxious of the
+* **Customers can just sit back and relax**. I don't need to be anxious about the
     people behind me because once I received my reference number, I can just
     sit down and relax while waiting for my order to complete. I'll just refer
     periodically to the LED screen to check if my McNugget's ready. 
@@ -116,12 +116,12 @@ In the Mcdonalds near our office, there are three major components that are in p
 
 * **The *Ate*/*Kuya* cashier**: they're the ones who talk to customers, take
     their orders, and give them their reference numbers *(remember that in the
-    Mcdo near our apartment, they're also the ones who prepares the meal, which
+    Mcdo near our apartment, they're also the ones who prepare the meal, which
     is inefficient)*. 
-* **The *Ate*/*Kuya* worker crew**: they're the ones who receives the placed
-    order and prepares or cooks our meal.
+* **The *Ate*/*Kuya* worker crew**: they're the ones who receive the placed
+    order and prepare or cook our meal.
 * **The database behind the LED screen**: the LED screen displays information
-    on the customers' reference numbers and order status, but we know that it's
+    on the customers' reference numbers and order status, but we know that its
     job is to *only show* information. The actual workhorse is the database
     behind it. Think of it as a large, invisible table that stores whatever the
     LED screen displays.
@@ -136,18 +136,18 @@ illustration below:
 {: style="text-align: center;"}
 
 1. The customer talks to the cashier to place their order.
-2. The cashier takes their order, put it in the database queue (with a `PENDING` status), so that free workers can
+2. The cashier takes their order, puts it in the database queue (with a `PENDING` status), so that free workers can
    take them on. The customer receives a reference number and sits on the side.
    The cashier is then free to take-on another order.
 3. A free worker takes on the order and prepares the meal.
 4. Once the worker is done preparing, he updates the status of the reference
    number from `PENDING` to `SUCCESS`.
 5. The LED displays this change, and the customer sees that his order is now
-   done preparing. He takes his order and goes on his merry way!
+   done being prepared. He takes his order and goes on his merry way!
 
 So far we've familiarized ourselves with the concept of a task queue and how it
 plays out within the context of our favorite fastfood restaurant. Now, let's
-step-out of Mcdonalds and start seeing these components in a more abstracted
+step-out of Mcdonalds and start seeing these components in a more abstract
 manner.
 
 ## Stepping-out of Mcdonalds
@@ -171,7 +171,7 @@ crew and the LED screen that we interact with is the **Application**.
 
 Notice that I lumped the cashier crew and the LED screen together? It's because
 these are the two interfaces that we interact with during our time in Mcdo. The
-LED screen is just a conduit of the actual database that stores and manages
+LED screen is just a view of the actual database that stores and manages
 data behind it (the **Database Backend**). Lastly, the actual processes that
 take our request and make something out of it are called our **Workers**.
 
@@ -179,7 +179,7 @@ So far, we've learned the following:
 - What a task queue is and why it's important. 
 - The components of the Mcdonald's task queue: cashier, worker, database behind
     LED screen
-- How these components look like in more general terms: application, worker,
+- How these components look in more general terms: application, worker,
     database backend.
 
 The table below maps the Mcdonalds components that we currently know to the
@@ -214,7 +214,7 @@ This should be simple now, so here's ye old switcheroo!
 | Database behind LED screen 	| Database backend   	| **Redis**           	|
 
 *See what we did there?* We just switched-out the components of the Mcdonalds
-task queue to its web backend counterpart. To see them in action, let's look at
+task queue to their web backend counterpart. To see them in action, let's look at
 the illustration below:
 
 <!-- Insert illustration of the system architecture here -->
@@ -231,19 +231,19 @@ the illustration below:
   classifying an image, processing an email, and much more!  Celery provides
   the framework to write workers for running your services. Remember, **celery
   is not just the worker**. It is a framework that allows your workers to
-  communicate with the database backend, "talk" to one another and the like. A
+  communicate with the database backend, "talk" to one another, and the like. A
   celery worker is just one piece of the Celery "ecosystem".
 * **Redis**. This one holds information on the reference numbers (also known
     as IDs) and status of each job. Redis is an in-memory data store, think of
     global variables on steroids.  Perhaps, the *actual* database backend in
     Mcdonalds is built on-top of Redis.  Truth is, you can swap-out Redis with
-    any other data storage you can think of, like MySQL, PostgresSQL, and the
+    any other database you can think of, like MySQL, PostgresSQL, and the
     like.
 
 Together, these three form a task queuing system. What happens then is:
 
 1. The Client talks to the Flask Application to place their request.
-2. The App takes the request, put it in the database queue (with a `PENDING` status), so that Celery workers can
+2. The App takes the request, puts it in the database queue (with a `PENDING` status), so that Celery workers can
    take them on. The Client receives a JobID and polls on the side.
    The App is then free to take-on the next request.
 3. A Celery worker takes on the request and runs the service.
@@ -283,13 +283,12 @@ a task queue. We then learned the following:
 - What a task queue is and why it's important to our systems.
 - The general components of a task queue and how these components relate to one
     another.
-- How Flask, Celery, and Redis fit into these general components to fulfill
-    their roles.
+- How Flask, Celery, and Redis fulfill these roles.
 
 We also learned that systems like these require a messaging queue (squiggly
 lines) and that it's possible to switch-out these technologies with other
-frameworks while achieving the same goal. Hope this fun blog post shed some
-light on backend web development, please let me know if any concepts I've
+frameworks while achieving the same goal. Hope this fun blog post sheds some
+light on backend web development, please let me know of any concepts I've
 missed in this Distill!
 
 
@@ -298,6 +297,7 @@ missed in this Distill!
 
 #### Changelog
 
+* 04-27-2020: Thank you to Jon Forrest for helping me out in fixing some grammar mistakes!
 * 04-22-2020: This blogpost was featured on [Hacker News](https://news.ycombinator.com/item?id=22901857)! Thanks to [Feross](https://feross.org/) for posting it, and for everyone who found this post helpful.
 
 
