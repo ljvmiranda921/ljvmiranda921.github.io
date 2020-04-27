@@ -1,0 +1,23 @@
+@media (min-width: 768px) {
+  .divider {
+    display: flex;
+  }
+}
+
+.left {
+  flex: 0 0 40%;
+  text-align: center;
+  padding: 10px;
+}
+
+.right {
+  flex: 1;
+  padding: 10px;
+}
+
+#profilepic {
+    border-radius: 50%;
+    width: 200;
+    height: 200;
+    text-align: center;
+}
