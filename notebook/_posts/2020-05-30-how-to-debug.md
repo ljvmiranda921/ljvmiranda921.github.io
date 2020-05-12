@@ -19,11 +19,12 @@ description: |
 
 ## Introduction
 
-There was a time when I get to maintain a system that we've built, and fix it
-iteratively whenever users encounter any bugs. Hence, we're **not** on
-building-mode: the priority isn't the next killer feature or the next phase
-in the roadmap. During those weeks of squashing bugs and triaging errors, I
-realized that debugging isn't as straightforward as I thought it was!
+There was a time when I was tasked to maintain a system, and fix it iteratively
+whenever users report bugs. I was **not** on building-mode: the priority
+isn't the next killer feature or the next phase in the roadmap&mdash;it's
+simply to ensure that the software is working as expected. During those weeks
+of squashing bugs and triaging errors, I realized that debugging isn't as
+straightforward as I thought it was!
 
 **Debugging seems to be a skill expected from anyone entering into tech, but
 the knowledge on how to effectively do so is siloed-out.** It makes sense
@@ -55,5 +56,5 @@ it to you through Pixel Art[^2]!
 
 ### Footnotes
 
-[^1]: I think of tacit or latent knowledge as know-how that is not explicitly defined&mdash; just like riding a bike. Got the idea from latent knowledge in [representation learning](https://arxiv.org/abs/1206.5538) (Bengio, Courville, and Vincent, 2012).
+[^1]: I think of tacit knowledge as know-how that is not explicitly defined or transferrable&mdash; just like riding a bike.
 [^2]: Yes, I do Pixel Art! 
