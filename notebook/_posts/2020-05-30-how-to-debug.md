@@ -43,6 +43,10 @@ it to you through Pixel Art[^2]!
 
 ## Code R.E.D.
 
+<!-- Code RED hints at urgency. I treat bugs as first-class enemies, I don't
+want to ship a bug or keep it in production. Code RED also sounds nice, and in
+theme with the space force pixel art below! -->
+
 ### R is for Reproduce
 
 
