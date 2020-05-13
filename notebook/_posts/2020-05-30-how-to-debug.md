@@ -43,9 +43,14 @@ it to you through Pixel Art[^2]!
 
 ## Code R.E.D.
 
-<!-- Code RED hints at urgency. I treat bugs as first-class enemies, I don't
-want to ship a bug or keep it in production. Code RED also sounds nice, and in
-theme with the space force pixel art below! -->
+<!-- emergency light pixel art animation??? -->
+
+**Why Code RED?** RED hints at urgency: imagine those movie scenes where
+enemy aliens attack and all emergency alarms are set off&mdash;that's how I imagine
+the process of debugging. Of course, in the middle of an emergency, I don't
+want to lose my composure, so Code R.E.D. also stands for the mental framework
+that I'm trying to practice. Lastly, Code RED sounds nice, it's on theme
+with my Space Force pixel art below!
 
 ### R is for Reproduce
 
