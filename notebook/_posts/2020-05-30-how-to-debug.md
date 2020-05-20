@@ -41,20 +41,39 @@ For the most part, I'm just relying on my tacit knowledge and practical
 experience. Hence, I devised a three-part framework for myself, and I'm sharing
 it to you through Pixel Art[^2]!
 
-## Code R.E.D.
+## Code R.E.D.: my mental framework for debugging
 
 <!-- emergency light pixel art animation??? -->
 
-**Why Code RED?** RED hints at urgency: can you imagine those movie scenes where
-enemy aliens attack and all emergency alarms are set off? That's how I imagine
+**Why Code RED?** Red hints at urgency: can you imagine those movie scenes where
+enemy aliens attack and all emergency alarms are set off? That's how I see
 the process of debugging. Of course, in the middle of an emergency, I don't
 want to lose my composure, so Code R.E.D. also stands for the mental framework
-that I'm trying to practice. Lastly, Code RED sounds nice, it's on theme
+that I'm trying to practice. Lastly, "Code RED" sounds nice, it's on theme
 with my Space Force pixel art!
 
 ### R is for Reproduce
 
+One of my first steps in debugging is to reproduce the bug in a controlled
+environment. There are two reasons why I usually do this:
+1. **To confirm if the bug exists**: sometimes "bugs" may be expected
+   behaviours, or can be attributed to user misuse. This enables easier
+   triaging of Issues later down the line.
+2. **To isolate the bug given a minimum set of variables:** this allows
+   me to inspect the problem without the presence of any extraneous variables.
+   Personally, it's less cognitive load: if the bug is a computation error,
+   then I only need the input, output and the code that causes it. 
 
+In some of my open-source projects, I specifically ask users to provide a
+minimum working environment (MWE). For Pyswarms, it contains:
+- The version where the bug was discovered
+- Operating system (some dependencies act differently in Windows or Linux-based systems)
+- [Minimal, complete and verifiable example](https://stackoverflow.com/help/minimal-reproducible-example) that causes the bug
+
+
+<!-- The work of reproduction starts even before a bug is reported. Setup systems that allow easily-reproducible environments  -->
+
+<!-- Some practices I learned from the past  -->
 
 
 ### E is for Execute
