@@ -6,6 +6,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 tags: [software development, debugging, python, software engineering, life]
+header-img: /assets/png/how-to-debug/TitleCard.png
 description: |
     It seems that any software engineer is expected to know how to debug.
     However, there's not much material or structured framework on how to
@@ -43,7 +44,8 @@ it to you through Pixel Art[^2]!
 
 ## Code R.E.D.: my mental framework for debugging
 
-<!-- emergency light pixel art animation??? -->
+![](/assets/png/how-to-debug/Blog-TitleCard.png)
+
 
 **Why Code RED?** Red hints at urgency: can you imagine those movie scenes where
 enemy aliens attack and all emergency alarms are set off? That's how I see
@@ -53,6 +55,8 @@ that I'm trying to practice. Lastly, "Code RED" sounds nice, it's on theme
 with my Space Force pixel art!
 
 ### R is for Reproduce
+
+![](/assets/png/how-to-debug/Blog-CodeRED-Reproduce.gif)
 
 One of my first steps in debugging is to reproduce the bug in a controlled
 environment. There are two reasons why I usually do this:
@@ -78,8 +82,14 @@ minimum working environment (MWE). For Pyswarms, it contains:
 
 ### E is for Execute
 
+![](/assets/png/how-to-debug/Blog-CodeRED-Execute.gif)
+
 
 ### D is for Document
+
+
+![](/assets/png/how-to-debug/Blog-CodeRED-Document.gif)
+
 
 ## Conclusion
 
