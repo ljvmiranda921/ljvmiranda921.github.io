@@ -42,6 +42,9 @@ For the most part, I'm just relying on my tacit knowledge and practical
 experience. Hence, I devised a three-part framework for myself, and I'm sharing
 it to you through Pixel Art[^2]!
 
+**Note:** Debugging is universal for any language, but I may pull-in some
+things specific to Python or Golang, two languages I often use!
+
 ## Code R.E.D.: my mental framework for debugging
 
 ![](/assets/png/how-to-debug/Blog-TitleCard.png)
@@ -94,15 +97,24 @@ minimum working environment (MWE). For example in
 
 The work of reproduction starts even before a bug is reported. What I've been
 constantly learning is that I should setup systems that allow
-easily-reproducible environments.
+easily-reproducible environments: 
 
-
-
-
-
-<!-- The work of reproduction starts even before a bug is reported. Setup systems that allow easily-reproducible environments  -->
-
-<!-- Some practices I learned from the past  -->
+* **Pin dependency versions:** I find it easier if I can minimize the number of
+    variables that I need to check. This definitely includes dependency
+    versions in my software. In Python, I use a combination of [pip-tools](https://github.com/jazzband/pip-tools)
+    and [virtualenv](https://github.com/pypa/virtualenv). The former automates
+    the management of dependencies while the latter isolates my devlopment
+    environment from the rest of my system. Saved me quite a few times in the
+    past!
+* **Create isolated environments:** I've mentioned this in passing via
+    virtualenv, but this can also come in the form of Docker containers solely
+    made for debugging, `conda` environments, or a small VM. Ensure that you
+    can easily access it and have it up and running in no time.
+* **Document how to setup a local dev environment:** You probably just need to
+    setup your local dev environment once, but there are cases when I updated
+    my steps and forgot to document it&mdash; causing some headaches in the
+    future. Make a point to have an updated local dev environment setup
+    instructions.
 
 
 ### E is for Execute
