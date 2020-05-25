@@ -123,9 +123,12 @@ easily-reproducible environments:
 ![](/assets/png/how-to-debug/Blog-CodeRED-Execute.gif)
 
 When I was still starting out, I immediately jump into this step and brute
-force my debugging process. As I squashed more bugs in my career, I learned how
-to be tactical, thorough, and precise. There's a logical reason why bugs
-happen, and it's important to narrow-down what causes this behaviour.
+force my way into the debugging process. As I squashed more bugs in my career,
+I learned how to be tactical, thorough, and precise. There's a logical reason
+why bugs happen, and it's important to narrow-down what causes this behaviour.
+
+There are three tools that helped me in this process: debuggers, loggers, and
+the test suite.
 
 <!-- Use the best tool for the job -->
 
