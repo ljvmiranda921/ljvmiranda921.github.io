@@ -130,6 +130,12 @@ why bugs happen, and it's important to narrow-down what causes this behaviour.
 There are three tools that helped me in this process: debuggers, loggers, and
 the test suite.
 
+#### Debuggers
+
+#### Loggers
+
+#### Test Suite
+
 <!-- Use the best tool for the job -->
 
 <!-- Build confidence: run the tests first without changing anything -->
