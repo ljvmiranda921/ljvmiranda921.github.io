@@ -60,7 +60,7 @@ with my Space Force pixel art!
 
 One of my first steps in debugging is to reproduce the bug in a controlled
 environment. There are two reasons why I usually do this:
-1. **To confirm if the bug exists**: sometimes "bugs" may be expected
+1. **To confirm that the bug exists**: sometimes "bugs" may be expected
    behaviours, or can be attributed to user misuse. This enables easier
    triaging of Issues later down the line.
 2. **To isolate the bug given a minimum set of variables:** this allows
@@ -69,10 +69,31 @@ environment. There are two reasons why I usually do this:
    then I only need the input, output and the code that causes it. 
 
 In some of my open-source projects, I specifically ask users to provide a
-minimum working environment (MWE). For Pyswarms, it contains:
-- The version where the bug was discovered
-- Operating system (some dependencies act differently in Windows or Linux-based systems)
-- [Minimal, complete and verifiable example](https://stackoverflow.com/help/minimal-reproducible-example) that causes the bug
+minimum working environment (MWE). For example in
+[Pyswarms](https://github.com/ljvmiranda921/pyswarms), it includes:
+- **The version where the bug was discovered:** in most cases, a bug that was
+    reported in version 1.0.0 was already patched in 1.0.1. It's just a matter
+    of updating it to the latest version to resolve the issue.
+- **Dependencies (operating system, etc.):** the goal here is that you want to
+    approximate a similar environment to the user who reported the issue. This
+    is tricky, because sometimes our business logic behaves differently based
+    on its dependencies. I got bitten by this [several
+    times](https://github.com/ljvmiranda921/pyswarms/issues/174) when I'm
+    testing against multiple Python versions while expecting the same results.
+- **[Minimal, complete and verifiable example](https://stackoverflow.com/help/minimal-reproducible-example) that causes the bug:** if you're reporting a bug, maintainers like me will highly-appreciate providing sample code that ideally we can just copy-paste in our terminals. I love reporters who do this because it requires some effort on their part to trim down their code into its relevant parts! This also lessens the back-and-forth between the maintainer and reporter since the problem was already communicated succintly.
+- **The error message and the expected return:** in Python, this can come in
+    the form of a [traceback](https://realpython.com/python-traceback/). At
+    first I fear it (much like Golang's panic messages), but nowadays I see it
+    as a convenience. Tracebacks allow me to *trace back* the specific
+    function calls that led to the error, and pinpoint exactly what caused it.
+
+
+The work of reproduction starts even before a bug is reported. What I've been
+constantly learning is that I should setup systems that allow
+easily-reproducible environments.
+
+
+
 
 
 <!-- The work of reproduction starts even before a bug is reported. Setup systems that allow easily-reproducible environments  -->
