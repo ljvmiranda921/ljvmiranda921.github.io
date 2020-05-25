@@ -107,8 +107,8 @@ easily-reproducible environments:
     environment from the rest of my system. Saved me quite a few times in the
     past!
 * **Create isolated environments:** I've mentioned this in passing via
-    virtualenv, but this can also come in the form of Docker containers solely
-    made for debugging, `conda` environments, or a small VM. Ensure that you
+    virtualenv, but this can also come in the form of [Docker containers solely
+    made for debugging](https://code.visualstudio.com/docs/containers/debug-common), `conda` environments, or a small VM. Ensure that you
     can easily access it and have it up and running in no time.
 * **Document how to setup a local dev environment:** You probably just need to
     setup your local dev environment once, but there are cases when I updated
