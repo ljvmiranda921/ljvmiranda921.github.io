@@ -106,11 +106,12 @@ easily-reproducible environments:
     the management of dependencies while the latter isolates my devlopment
     environment from the rest of my system. Saved me quite a few times in the
     past!
-* **Create isolated environments:** I've mentioned this in passing via
-    virtualenv, but this can also come in the form of [Docker containers solely
-    made for debugging](https://code.visualstudio.com/docs/containers/debug-common), `conda` environments, or a small VM. Ensure that you
-    can easily access it and have it up and running in no time.
-* **Document how to setup a local dev environment:** You probably just need to
+* **Write readable logs and error messages:** you don't need to write custom
+    errors every time, but if you can catch an error early on, then there's no
+    need to propagate towards the low-level functions of your program. Catching
+    potential user-errors freed me from tracing numpy or pandas errors that are
+    far removed from the context of the problem.
+* **Keep an updated local dev environment setup instructions:** you probably just need to
     setup your local dev environment once, but there are cases when I updated
     my steps and forgot to document it&mdash; causing some headaches in the
     future. Make a point to have an updated local dev environment setup
@@ -120,6 +121,11 @@ easily-reproducible environments:
 ### E is for Execute
 
 ![](/assets/png/how-to-debug/Blog-CodeRED-Execute.gif)
+
+<!-- Use the best tool for the job -->
+
+
+<!-- Use breakpoints and debugger -->
 
 
 ### D is for Document
