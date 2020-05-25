@@ -60,6 +60,7 @@ with my Space Force pixel art!
 
 One of my first steps in debugging is to reproduce the bug in a controlled
 environment. There are two reasons why I usually do this:
+
 1. **To confirm that the bug exists**: sometimes "bugs" may be expected
    behaviours, or can be attributed to user misuse. This enables easier
    triaging of Issues later down the line.
@@ -67,6 +68,8 @@ environment. There are two reasons why I usually do this:
    me to inspect the problem without the presence of any extraneous variables.
    Personally, it's less cognitive load: if the bug is a computation error,
    then I only need the input, output and the code that causes it. 
+
+#### Minimum working environment
 
 In some of my open-source projects, I specifically ask users to provide a
 minimum working environment (MWE). For example in
@@ -87,6 +90,7 @@ minimum working environment (MWE). For example in
     as a convenience. Tracebacks allow me to *trace back* the specific
     function calls that led to the error, and pinpoint exactly what caused it.
 
+#### Setup systems that enable easy reproduction
 
 The work of reproduction starts even before a bug is reported. What I've been
 constantly learning is that I should setup systems that allow
