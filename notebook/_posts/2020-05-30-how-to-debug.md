@@ -14,9 +14,6 @@ description: |
     some pixel art!
 ---
 
-<!-- Put the PNG header here -->
-
-<!-- Start with a story -->
 
 ## Introduction
 
@@ -56,6 +53,18 @@ the process of debugging. Of course, in the middle of an emergency, I don't
 want to lose my composure, so Code R.E.D. also stands for the mental framework
 that I'm trying to practice. Lastly, "Code RED" sounds nice, it's on theme
 with my Space Force pixel art!
+
+
+- R is for Reproduce 
+    - Minimum working environment
+    - Setup sytems that enable easy reproduction
+- E is for Execute
+    - Debuggers to inspect code thoroughly
+    - Loggers to get full context of the bug
+    - Test Suite to set guard rails when fixing the bug
+- D is for Document
+    - 
+
 
 ### R is for Reproduce
 
@@ -127,20 +136,63 @@ force my way into the debugging process. As I squashed more bugs in my career,
 I learned how to be tactical, thorough, and precise. There's a logical reason
 why bugs happen, and it's important to narrow-down what causes this behaviour.
 
-There are three tools that helped me in this process: debuggers, loggers, and
+There are three tools that helped me in this process: loggers, debuggers,  and
 the test suite.
-
-#### Debuggers
 
 #### Loggers
 
+Whenever I encounter a bug that was reported from a running system, one of my
+first instincts is to check the logs. Setting-up a good logging system is very
+important to localize where (and when) the bug happened. I usually prefer the
+following information in my logs:
+
+- The time and date
+- The log-level, to easily filter across logs, and
+- The error message and traceback, if it exists
+
+Given this information, I already know **when** the bug happened, **what**
+happened, and **where** it happened in the source-code. Most programming
+languages have their own logging module. For Python, I prefer
+[loguru](https://github.com/Delgan/loguru), and for Golang I use structured
+logging via [logrus](https://github.com/sirupsen/logrus).
+
+
+#### Debuggers
+
+Debuggers enable me to inspect the current state of my program while it is
+running. In Python, it already comes built-in using the [pdb
+module](https://docs.python.org/3/library/pdb.html). There's definitely a bit
+of a learning curve involved when using debuggers, but I assure you that
+learning this is worth the effort!
+
+Real Python has an excellent [tutorial on using
+`pdb`](https://realpython.com/python-debugging-pdb/). A common use-case that I
+do is to step through the codebase and see if the [values of a variable
+changed](https://realpython.com/python-debugging-pdb/#displaying-expressions).
+I see this as a more intuitive and professional way of adding print statements
+throughout my code!
+
+
 #### Test Suite
 
-<!-- Use the best tool for the job -->
+Writing regression tests fulfill two roles (1) a guard-rail for debugging and
+(2) as documentation for the bug. I'll be discussing the first one here and the
+latter in the next section. Regression tests attempt to recreate the bug in
+code format, and test the fix that was deployed. If you're practicing
+test-driven development (TDD), you'd probably write the regression tests first.
+Personally, it doesn't matter which comes first, as long as you set up a test
+for that bug.
 
-<!-- Build confidence: run the tests first without changing anything -->
-<!-- Use breakpoints and debugger -->
-<!-- Setup guard rails such as regression tests -->
+Writing and passing regression tests give me enough confidence that I've
+already solved the bug, and that I know if it will appear again. As you update
+your system's business logic, things may change and what was fixed before may
+come up again. It is important that you set guard rails to alert you when the
+bugs you encountered before came up again.
+
+On my end, I use [pytest](https://github.com/pytest-dev/pytest)  as my Python
+test suite. I often add a mark (e.g. `pytest.mark.regression`) to indicate that
+a specific test was a regression test. This allows me to run those tests
+specifically before I update my codebase.
 
 
 ### D is for Document
