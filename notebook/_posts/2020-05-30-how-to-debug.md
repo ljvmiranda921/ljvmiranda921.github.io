@@ -56,12 +56,12 @@ with my Space Force pixel art!
 
 
 - R is for Reproduce 
-    - Minimum working environment
+    - Create a minimum working environment
     - Setup sytems that enable easy reproduction
 - E is for Execute
-    - Debuggers to inspect code thoroughly
-    - Loggers to get full context of the bug
-    - Test Suite to set guard rails when fixing the bug
+    - Use a Logger to get more context on the bug
+    - Use a Debugger to inspect variables as you go
+    - Use a Test Suite as a guard rail while debugging
 - D is for Document
     - 
 
@@ -81,7 +81,7 @@ environment. There are two reasons why I usually do this:
    Personally, it's less cognitive load: if the bug is a computation error,
    then I only need the input, output and the code that causes it. 
 
-#### Minimum working environment
+#### Create a minimum working environment
 
 In some of my open-source projects, I specifically ask users to provide a
 minimum working environment (MWE). For example in
@@ -139,7 +139,7 @@ why bugs happen, and it's important to narrow-down what causes this behaviour.
 There are three tools that helped me in this process: loggers, debuggers,  and
 the test suite.
 
-#### Loggers
+#### Use a Logger to get more context on the bug
 
 Whenever I encounter a bug that was reported from a running system, one of my
 first instincts is to check the logs. Setting-up a good logging system is very
@@ -157,7 +157,7 @@ languages have their own logging module. For Python, I prefer
 logging via [logrus](https://github.com/sirupsen/logrus).
 
 
-#### Debuggers
+#### Use a Debugger to inspect variables as you go
 
 Debuggers enable me to inspect the current state of my program while it is
 running. In Python, it already comes built-in using the [pdb
@@ -173,7 +173,7 @@ I see this as a more intuitive and professional way of adding print statements
 throughout my code!
 
 
-#### Test Suite
+#### Use a Test Suite as a guard rail while debugging
 
 Writing regression tests fulfill two roles (1) a guard-rail for debugging and
 (2) as documentation for the bug. I'll be discussing the first one here and the
@@ -199,6 +199,23 @@ specifically before I update my codebase.
 
 
 ![](/assets/png/how-to-debug/Blog-CodeRED-Document.gif)
+
+<!-- most important and most forgotten part -->
+
+<!-- There are three ways to document: regression tests (ack rehash of initial point), commit messages, and project documentation (changelog) -->
+
+
+#### Write regression tests to document bug behaviour
+
+
+#### Ensure commit messages are detailed enough
+
+
+#### Don't forget to update project documentation
+
+<!-- changelog -->
+
+<!-- python docstrings -->
 
 
 ## Conclusion
