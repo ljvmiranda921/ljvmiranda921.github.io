@@ -12,6 +12,11 @@ description: |
     However, there's not much material or structured framework on how to
     do it. In this blog, I share my own debugging "mental framework" through
     some pixel art!
+excerpt: |
+    It seems that any software engineer is expected to know how to debug.
+    However, there's not much material or structured framework on how to
+    do it. In this blog, I share my own debugging "mental framework" through
+    some pixel art!
 ---
 
 
