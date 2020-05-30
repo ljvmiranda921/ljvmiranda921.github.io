@@ -6,7 +6,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 tags: [software development, debugging, python, software engineering, life]
-header-img: /assets/png/how-to-debug/TitleCard.png
+header-img: /assets/png/how-to-debug/Blog-TitleCard.png
 description: |
     It seems that any software engineer is expected to know how to debug.
     However, there's not much material or structured framework on how to
