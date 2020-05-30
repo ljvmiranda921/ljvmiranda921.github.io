@@ -4,7 +4,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 
-This is the source code for my [blog](ljvmiranda921.github.io). It's a static
+This is the source code for my [blog](https://ljvmiranda921.github.io). It's a static
 website powered by [Jekyll](https://jekyllrb.com/). 
 
 ## Dependencies
