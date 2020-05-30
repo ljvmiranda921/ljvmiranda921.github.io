@@ -129,10 +129,17 @@ I try to document bugs (and their fixes) by following these practices:
 
 ## Conclusion
 
-In this blog post, I talked about my short framework on debugging. You might
-notice that these guidelines are still rough, but I think that having a simple
-methodology on how to approach debugging is helpful. I hope that you enjoyed
-the Pixel art, and adopt the Code R.E.D. framework into your own workflows!
+In this blog post, I talked about my Code R.E.D. framework on debugging. It's
+an acronym for a three-step process that I follow whenever I want to squash
+some bugs: *R* for **Reproduce**, *E* for **Execute**, and *D* for
+**Document**. I also explained some practices that I follow as I go through
+each step. You might notice that these guidelines are still rough, but I think
+that having a simple methodology on how to approach debugging is helpful. 
+
+Lastly, I hope that you enjoyed the Pixel art, and adopt the Code R.E.D.
+framework into your own workflows! If you wish to see more of my fledgling
+attempts in pixel art, follow me on my Twitter art account,
+[@pixineries](https://twitter.com/pixineries)!
 
 P.S. Here's the full Pixel Art GIF!
 
@@ -141,5 +148,5 @@ P.S. Here's the full Pixel Art GIF!
 
 ### Footnotes
 
-[^1]: I think of tacit knowledge as know-how that is not explicitly defined or transferrable&mdash; just like riding a bike.
-[^2]: Yes, I've been learning pixel art for the past month! Please follow my alt-Twitter art account, [@pixineries](https://twitter.com/pixineries)!
+[^1]: I think of tacit knowledge as know-how that is not explicitly defined&mdash; like riding a bike.
+[^2]: Yes, I've been learning pixel art for the past month! 
