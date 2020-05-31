@@ -7,3 +7,5 @@ comments: true
 author: "LJ MIRANDA"
 tags: [creativity, ideas, pixel art, sprites, adjacent possible, slow hunch, platform, network effects]
 ---
+
+
