@@ -7,20 +7,6 @@
 This is the source code for my [blog](https://ljvmiranda921.github.io). It's a static
 website powered by [Jekyll](https://jekyllrb.com/). 
 
-## Dependencies
-
-Here are the dependencies for this blog. You can also check the `Gemfile` for more
-information: 
-
-- Ruby==2.3.1
-- gem==2.5.2.1
-- jekyll=3.6.3
-- minima==2.0
-- html-proofer
-- jekyll-sitemap
-- jekyll-feed==0.6
-- jekyll-seo-tag
-
 ## Set-up
 
 Make sure that you have bundler in your system:
@@ -35,7 +21,7 @@ Then, build the dependencies and call `jekyll serve`
 $ git clone https://github.com/ljvmiranda921/ljvmiranda921.github.io.git 
 $ cd ljvmiranda921.github.io/
 $ bundle install
-$ bundle exec jekyll serve
+$ bundle exec jekyll serve --livereload --incremental
 ```
 
 The page, by default, should be running at [localhost:4000](localhost:4000)
