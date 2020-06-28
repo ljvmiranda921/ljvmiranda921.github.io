@@ -54,6 +54,11 @@ free to save the image and share to your friends! [(If `iframe` is not working,
 click this link to redirect you to the Heroku
 app)](https://cellular-sprites.herokuapp.com)
 
+## Update
+
+* I made a small website, [Sprites-as-a-Service](/sprites-as-a-service), that allows you to further customize your Sprite based on your name or any given string. In addition, you can also create sprites by calling the Sprites-as-a-Service REST API!
+
+
 <iframe src="https://cellular-sprites.herokuapp.com" width="700" height="600">
   <p>Your browser does not support iframes.</p>
 </iframe>
