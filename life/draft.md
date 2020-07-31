@@ -169,13 +169,20 @@ the last time we heard her theme was in *First Steps*, the callback on this
 scene evokes newfound determination, but this time, aware of the struggle
 the Mountain possesses.
 
+Character instruments also played a huge role in this scene. As a player, I
+know by now that Madeline is represented by the piano, and Theo by the guitar.
+In *Madeline and Theo*, our protagonist is not alone (and perhaps this is the
+first song where Madeline's piano is played with another instrument). She is
+accompanied by a guitar, and they play her theme in a harmonious fashion.
+
+
 <!-- Madeline and Theo campfire scene --> 
 <!-- Link to sheet music? --> 
 <!-- Link to youtube video --> 
 
 It is also noteworthy that *Starjump* comes after this song. It is a perfect
 interlude that gives a more heightened feeling of overcoming diffifulties along
-our way
+our way.
 
 <!-- Link to youtube video of Starjump --> 
 <!-- Link to sheet music of starjump --> 
@@ -186,6 +193,10 @@ battle." Madeline is determined to reach into Badeline, resulting into a
 the one running away from us (while shooting lasers and deathly orbs along our
 way). In-game, this arc was very long, testing the player's patience and mettle
 all throughout.
+
+We also hear the synth, representing Badeline, throughout the game. It tries to
+overpower Madeline's theme (and her instrument), in a goth-like chiptune
+fashion. Perfectly apt for a boss battle.
 
 <!-- Confronting myself youtube video --> 
 <!-- Confronting myself sheet music --> 
@@ -209,35 +220,27 @@ you can do this."
 <!-- You can do this -->
 
 ...and then it transitions to Madeline's theme. She has found her bearings and
-begins the climb.
+begins the climb. 
 
 <!-- Link to youtube video -->
 
 <!-- Reach for the summit poster? -->
 
-Another motif that helped communicate Madeline's struggles to the player is
-through the use of "character instruments." Madeline is associated with the
-piano, Theo with the guitar, and Badeline with the synth. 
+In the final leg of the Summit, during the 3000-m mark and where the
+checkpoints appear, the *Prologue*'s melody comes up again. Like the last time, it
+doesn't end with a falling tone but a heroic one. But what you hear next is
+powerful:
 
 
+<!-- Link to youtube video: final part of the summit -->
 
-
-
-<!-- Maybe this is Madeline's internal monologue -->
-<!-- segue to character instruments -->
-
-
-
-
-
-
-<!-- Character instruments -->
-<!-- Madeline: Piano, Theo: Guitar, Badeline: Synth -->
-<!-- Madeline and Theo -->
-<!-- Starjump -->
-<!-- Confronting Myself: High bass-synth vs. Piano -->
-<!-- Reach for the Summit near-summit -->
-
+*Madeline's theme* plays, but it is now a combination of the Piano and the
+Synth, singing in a harmonious fashion. During this part, everything
+coincides perfectly: the narrative tells us how Madeline works with her
+anxiety and depression through Badeline, the mechanic grants us the double-dash
+power-up, a product of Madeline and Badeline's fusion, and the music gives us 
+a high-beat, perfect symphony of Madeline and Badeline's instruments&mdash;
+all combined to pack the perfect gameplay experience of a lifetime.
 
 
 ## Conclusion: Heart of the Mountain
