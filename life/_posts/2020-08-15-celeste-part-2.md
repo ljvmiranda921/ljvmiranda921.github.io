@@ -26,7 +26,7 @@ excerpt: |
 > as a vehicle for creative expression. Read more about my journey in scaling
 > Celeste Mountain in this three-part series.
 
-In the [first section](/life/2020/07/31/celeste), we looked into how Celeste's
+In the [first section](/life/2020/07/31/celeste/), we looked into how Celeste's
 storytelling was executed by enabling the player to share with Madeline's
 struggles in a plot-focused perspective. In this section, we'll look into how
 it was achieved by combining both gameplay and musical elements into the
