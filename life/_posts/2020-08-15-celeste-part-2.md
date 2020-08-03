@@ -381,6 +381,39 @@ changed my view on gaming in general.
     reflection on Celeste overall, how it changed my perception on video games,
     and more.
 
+### Resources
+
+Here are some of the resources and materials that I used and watched to learn
+more and appreciate the beauty of Celeste.
+
+#### Primary Sources
+
+* [*GDC Level Design Workshop: Designing Celeste*](https://youtu.be/4RlpMhBKNr0): a GDC session where Celeste's lead developers talked about the game's level design. It's pretty interesting to see how they conceptualized this early on (note that the talk was done in 2017, before Celeste was released and way before it has been recognized as a hit).
+* [*Celeste TGH Speedrun in 1:28:03*](https://youtu.be/-KvjXsJCt1o): this is a
+    Celeste speedrun by TGH, see how a pro-player plays the game!
+
+#### Secondary Sources
+
+
+* [*How Celeste Teaches You Its Mechanics*](https://youtu.be/lZoQ9a7oPvo) and [*Why Does Celeste Feel So Good to Play?*](https://youtu.be/yorTG9at90g): two of my go-to videos if I want to see an in-depth analysis of Celeste's game-design. The first one focuses on level-design, and the latter looks into Madeline's fluid controls.
+* [*The Anxiety of Celeste and its Music:*](https://www.youtube.com/watch?v=jvETIcMXaEo) this video analyzes Celeste's music
+ in the context of anxiety and stress. Its amazing because it also dwells on
+ physiological stress, using low-intensity and high-intensity music to
+ stimuluate eustress or destress. 
+* [*How Celeste's Mirror Temple Creates Fear:*](https://youtu.be/RYlNLVewLe0) a
+    good study on game-level design on how Celeste's Chapter 5 evokes the
+    emotion of Madeline to the player.
+* [*What Makes Celeste's Assist Mode Special:*](https://youtu.be/NInNVEHj_G4)
+    one of Game Maker's Toolkit study on what makes Celeste a very accessible
+    game, emphasizing the importance of developer intention while balancing
+    player preference.
+* [*The Magic of Celeste's Farewell DLC:*](https://youtu.be/Zt7xNr9BDqs) I
+    don't think I'll be able to finish all of Celeste's B and C sides, much
+    more its DLC soon. Thus, I'll hand you over to this video that dives into a
+    good analysis of Celeste's Epilogue, Farewell. I see Farewell as a critique
+    on Madeline's determination (stubborn determination, to a fault), and also
+    underscores the feeling of grief.
+
 
 ### Footnotes
 
