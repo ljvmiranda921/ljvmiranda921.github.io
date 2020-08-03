@@ -33,13 +33,13 @@ it was achieved by combining both gameplay and musical elements into the
 narrative, drawing me closer to Madeline's journey.
 
 I decided to break this post into a three-part series: 
-* [**Part I: Introduction and Storytelling**](/life/2020/07/31/celeste): I'll introduce
+* [**Part I: Introduction and Storytelling**](/life/2020/07/31/celeste/): I'll introduce
     Celeste the game, and talk about how its strong narrative has drawn me into
     completing it. 
 * **Part II: Mechanics is the Message, Story in Sounds** (this page): I'll talk about how
     Celeste's precision-platformer mechanics and masterful soundtrack contributed to the storyline and
     enriched the gameplay and experience even further.
-* [**Part III: Conclusion** (August 22)](/life/2020/08/22/celeste-part-3): in the final part of this series,
+* [**Part III: Conclusion** (August 22)](/life/2020/08/22/celeste-part-3/): in the final part of this series,
     I'll end with a short Conclusion and reflection on Celeste overall, how it
     changed my perception on video games, and more.
 
@@ -373,10 +373,10 @@ changed my view on gaming in general.
 
 ### Other Sections
 
-* [**Part I: Introduction and Storytelling**](/life/2020/07/31/celeste): I'll
+* [**Part I: Introduction and Storytelling**](/life/2020/07/31/celeste/): I'll
     introduce Celeste the game, and talk about how its strong narrative has
     drawn me into completing it. 
-* [**Part III: Conclusion** (August 22)](/life/2020/08/22/celeste-part-3): in
+* [**Part III: Conclusion** (August 22)](/life/2020/08/22/celeste-part-3/): in
     the final part of this series, I'll end with a short Conclusion and
     reflection on Celeste overall, how it changed my perception on video games,
     and more.
