@@ -316,7 +316,7 @@ this song is about failure (because oh boy, I died twice in the Prologue), I
 got intimidated when I heard its initial notes, especially during the summit
 run. As the notes race, I'm starting to doubt if I can actually finish this game...
 
-<p align="center"><iframe width="560" height="200" src="https://www.youtube.com/embed/Ctuo3ws3EKs?start=50&end=62&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p align="center"><iframe width="560" height="200" src="https://www.youtube.com/embed/Ctuo3ws3EKs?start=50&end=62" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 **Frantic Notes:** I started hearing these notes again from the Prologue, teasing  
 me for the difficulty to come.
 {: style="text-align: center;"}
