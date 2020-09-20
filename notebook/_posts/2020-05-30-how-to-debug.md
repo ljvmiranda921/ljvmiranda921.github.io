@@ -1,5 +1,6 @@
 ---
 layout: post
+type: post
 title: "How to debug"
 date: 2020-05-30
 category: notebook

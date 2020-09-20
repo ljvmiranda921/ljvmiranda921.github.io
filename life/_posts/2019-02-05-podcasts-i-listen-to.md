@@ -1,5 +1,6 @@
 ---
 layout: post
+type: post
 title: "Podcasts I listen to"
 date: 2019-02-05
 category: life
