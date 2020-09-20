@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to use Jupyter Notebooks in 2020 (Part 3: Final thoughts)"
+type: post
 date: 2020-03-30
 category: notebook
 comments: true

@@ -1,5 +1,6 @@
 ---
 layout: post
+type: post
 title: "My year in commits: lessons and perspectives"
 date: 2018-09-04
 category: life

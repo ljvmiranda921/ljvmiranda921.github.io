@@ -1,5 +1,6 @@
 ---
 layout: post
+type: post
 title: "Hello world!"
 date: 2017-01-16
 category: life

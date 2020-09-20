@@ -1,5 +1,6 @@
 ---
 layout: post
+type: post
 title: "On craftsmanship"
 date: 2019-10-15
 category: life
