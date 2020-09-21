@@ -30,7 +30,7 @@ as a vehicle for creative expression. Read more about my journey in scaling
 Celeste Mountain in this three-part series.
 
 
-* [**Part I: Introduction and Storytelling (July 31)**](/life/2020/07/31/celeste): I'll introduce
+* [**Part I: Introduction and Storytelling** (July 31)](/life/2020/07/31/celeste): I'll introduce
     Celeste the game, and talk about how its strong narrative has drawn me into
     completing it. 
 * [**Part II: Mechanics is the Message, Story in Sounds** (August 15)](/life/2020/08/15/celeste-part-2): I'll talk about how
@@ -39,3 +39,10 @@ Celeste Mountain in this three-part series.
 * [**Part III: Conclusion** (August 22)](/life/2020/08/22/celeste-part-3): in the final part of this series,
     I'll end with a short Conclusion and reflection on Celeste overall, how it
     changed my perception on video games, and more.
+
+If you haven't played Celeste, I highly-recommend that you try it out and
+finish the main storyline. Don't be discouraged by its supposed
+difficulty&mdash; it's part of the journey and the developers ensured that
+their game caters to both casuals and advanced players alike. For only [10
+USD on Steam](https://store.steampowered.com/app/504230/Celeste/), you get
+access to its rich content and thoughtful narrative.
