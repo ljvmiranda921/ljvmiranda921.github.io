@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "A litmus test to your software skill as a non software engineer"
+title: "A litmus test to your software engineering skill as a data scientist"
 date: 2020-11-15
 category: notebook
 comments: true
