@@ -31,13 +31,14 @@ if we narrow it down to the most common software use-case for machine learning,
 then it becomes easier.
 
 In this blogpost, I'll talk about an indicative test for software engineering
-in ML. It is **project-based**, and demands a combination of relevant SWE skills
-pointing towards a specific goal. Accomplishing the test will **show baseline
-competence, but not necessarily mastery.** 
+in ML. It is **project-based**, and demands a combination of relevant SWE
+skills pointing towards a specific goal. Accomplishing the test will **show
+baseline competence, but not necessarily mastery.** 
 
-
-
-
+If you find the test too easy, then you're on your way. On the other hand, for
+folks who might find this challenging, I've put relevant resources to help you
+towards completion. The reward? New skills, a potential project to showcase in
+your portfolio, and unlocking the brave new world of software engineering!
 
 ## The Test
 
