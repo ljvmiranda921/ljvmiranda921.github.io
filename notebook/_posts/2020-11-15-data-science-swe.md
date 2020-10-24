@@ -21,6 +21,12 @@ excerpt: |
     skill in the data science industry.
 ---
 
+<!-- Might sound self aggrandizing? reword litmus test? -->
+<!-- Might sound airy even if in the grand scheme of things the project is simple -->
+<!-- Talk about improvement or a simple project to introduce yourself in data science SWE -->
+<!-- Disclaimer, very easy. There are some process improvements that should still be done -->
+<!-- Goal, improvement of engineering sense: thinking about latency, DRY principles, security? -->
+
 
 ## Introduction
 
