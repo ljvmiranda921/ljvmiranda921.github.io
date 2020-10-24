@@ -44,9 +44,11 @@ baseline competence, but not necessarily mastery.**
 ## The Test
 
 
-### Why a Machine Learning API?
+### Why this test?
 
-### How to make a Machine Learning API?
+### What does it measure?
+
+### How to accomplish this test?
 
 
 ## Conclusion
