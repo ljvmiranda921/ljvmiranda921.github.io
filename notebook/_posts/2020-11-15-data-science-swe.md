@@ -18,23 +18,31 @@ excerpt: |
 ---
 
 
-Hello, you're probably here because I linked this to you after I rambled on how
-you can improve your software skills as a researcher. Maybe our conversation
+Hello, you're probably here because I linked this after I rambled upon how
+someone can improve their software skills as a researcher. Maybe our conversation
 went this way:
 
-> Learn git! Modularize your code! Then uhm, try to reproduce your
-> experiments along the way, also deploy your stuff to some cloud platforms
-> along the way? Try using notebookes less often, Also, check PEP8! And learn git!
+<!-- illustrate this instead?? -->
 
-You get it already...The field is quite huge and you can get started in so many
-ways&mdash; I too got overwhelmed before. *However*, as an opinionated
+> "Learn git! Modularize your code! Then uhm, try to reproduce your
+> experiments along the way, also deploy your stuff to some cloud platforms
+> along the way? Try using notebookes less often, Also, check PEP8! And learn git!"
+
+You get it already...the field is quite huge and you can get started in so many
+ways&mdash; I got overwhelmed before. *However*, as an opinionated
 advice, I think that there's one activity/exercise that introduces you to all 
 relevant skills and focus them into a tangible output:
 
+> Create a machine learning application that can receive HTTP requests
+> and can optionally be deployed as a containerized app.
 
-> Dockerize a  
-> 
-> 
+
+That's quite a mouthful, let's break it down a bit:
+* **"Create a machine learning application..."**
+* **"...that can receive HTTP requests..."**
+* **"...can optionally be deployed..."**
+* **"...as a containerized app."**
+
 
 <!-- show the final product in illustration form: a fully-fledged machine -->
 
@@ -67,3 +75,4 @@ things will fit in -->
 <!-- if they enjoyed this, they can now do a lot of things: deployment,
 devops,e tc. --> 
 <!-- maybe there's an illustrative component for each? -->
+<!-- more ways to improve the app -->
