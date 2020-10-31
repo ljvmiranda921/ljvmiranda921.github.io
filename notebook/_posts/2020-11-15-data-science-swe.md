@@ -1,54 +1,58 @@
 ---
 layout: post
 type: post
-title: "A litmus test to your software engineering skill as a data scientist"
+title: "For researchers who ask me how to improve their software skills"
 date: 2020-11-15
 category: notebook
 comments: true
 author: "LJ MIRANDA"
 tags: [software development, debugging, python, software engineering, life]
 description: |
-    I meet a lot of data scientists who would like to expand their skillset to
-    include basic software engineering, i.e., to go beyond Notebooks and
-    streamline productization of their models. In this blogpost, I'd like to
-    describe a simple litmus test that once accomplished, is indicative of 
-    basic SWE skill in the data science industry.
+    This blogpost is for researchers or data scientists who ask me how to
+    improve their software engineering knowledge. I'll talk about a particular
+    exercise that you can do to improve your skillset.
 excerpt: |
-    I meet a lot of data scientists who would like to expand their skillset to
-    include basic software engineering, i.e., to go beyond Notebooks and
-    streamline productization of their models. In this blogpost, I'd like to
-    describe a simple litmus test that once accomplished, is indicative of
-    basic SWE skill in the data science industry.
+    This blogpost is for researchers or data scientists who ask me how to
+    improve their software engineering knowledge. I'll talk about a particular
+    exercise that you can do to improve your skillset.
 ---
 
-<!-- Might sound self aggrandizing? reword litmus test? -->
-<!-- Might sound airy even if in the grand scheme of things the project is simple -->
-<!-- Talk about improvement or a simple project to introduce yourself in data science SWE -->
-<!-- Disclaimer, very easy. There are some process improvements that should still be done -->
-<!-- Goal, improvement of engineering sense: thinking about latency, DRY principles, security? -->
+
+Hello, you're probably here because I linked this to you after I rambled on how
+you can improve your software skills as a researcher. Maybe our conversation
+went this way:
+
+> Learn git! Modularize your code! Then uhm, try to reproduce your
+> experiments along the way, also deploy your stuff to some cloud platforms
+> along the way? Try using notebookes less often, Also, check PEP8! And learn git!
+
+You get it already...The field is quite huge and you can get started in so many
+ways&mdash; I too got overwhelmed before. *However*, as an opinionated
+advice, I think that there's one activity/exercise that introduces you to all 
+relevant skills and focus them into a tangible output:
 
 
-## Introduction
+> Dockerize a  
+> 
+> 
 
-Whenever someone asks me how to improve their software engineering (SWE) skills
-as a researcher or data scientist, I find it difficult to give an answer. The
-field of software engineering is broad, and there's a lot of things to learn.
-However, if we narrow it down to the most common software use-case for machine
-learning, then it becomes easier.
+<!-- show the final product in illustration form: a fully-fledged machine -->
 
-In this blogpost, I'll talk about an indicative test for software engineering
-in ML. It is **project-based**, and demands a combination of relevant SWE
-skills pointing towards a specific goal. Accomplishing the test will **show
-baseline competence, but not necessarily mastery.** 
-
-## The Test
+## Wait, why?
 
 
-### Why this test?
+## Ok, so what should I do?
 
-### What does it measure?
+<!-- this is the how, when illustrating these things, build-up the "final
+machine" -->
+<!-- learn git => learn the tools -->
+<!-- learn how to modularize your code => show that the components now look
+better -->
+<!-- learn flask => an interface for the machine -->
+<!-- learn docker => the "frame" or the common interface into which these
+things will fit in -->
 
-### How to accomplish this test?
+
 
 
 
