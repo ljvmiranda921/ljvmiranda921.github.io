@@ -36,17 +36,33 @@ relevant skills and focus them into a tangible output:
 > Create a machine learning application that can receive HTTP requests
 > and can optionally be deployed as a containerized app.
 
+That's quite a mouthful, so let's break it down a bit:
 
-That's quite a mouthful, let's break it down a bit:
-* **"Create a machine learning application..."**
-* **"...that can receive HTTP requests..."**
-* **"...can optionally be deployed..."**
-* **"...as a containerized app."**
-
+1. **"Create a machine learning application..."**: this should be a model that
+    receives an input, applies the necessary transformations, and gives an
+    output. This can be anything, and it depends on what you're comfortable
+    with. It could be a language model that measures sentiment, an OCR model
+    that gives bounding boxes or a standard classifier given an arbitrary set of
+    inputs. You decide! 
+2. **"...that can receive HTTP requests..."**: if this is the first time you've
+    encountered this, then don't fret! In Python, this may be as simple as
+    learning a new library. HTTP is a standard that allows computers to talk to
+    one another. Allowing your ML application to receive HTTP requests means
+    that you're setting-up a "the language" between your app and other
+    users, so that they know how to talk (give/receive data) to your model.
+3. **"...can optionally be deployed..."**: this means that you allow your
+    application to be accessible outside your own computer! If the previous
+    step defines how others can communicate to your app, this step allows
+    others to communicate to it! There are many platforms that does this, and
+    I'll list them down later.
+4. **"...as a containerized app."**: this packages your application, all of its
+   dependencies, and necessary setup in a single container&mdash;currently the
+   most ubiquitous way of putting things into production. Containerization
+   makes your app idempotent, avoiding the "it works on my machine" problem.
 
 <!-- show the final product in illustration form: a fully-fledged machine -->
 
-## Wait, why?
+## Wait, but why?
 
 <!-- industry application: ML is a component of a system -->
 <!-- pedagogical application: will teach you the relevant parts -->
@@ -76,3 +92,7 @@ things will fit in -->
 devops,e tc. --> 
 <!-- maybe there's an illustrative component for each? -->
 <!-- more ways to improve the app -->
+
+### Notes to the engineers
+
+<!-- they're definitely making a containerized web server -->
