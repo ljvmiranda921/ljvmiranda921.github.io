@@ -40,11 +40,19 @@ relevant skills and focus them into a tangible output:
 
 ## Wait, why?
 
+<!-- industry application: ML is a component of a system -->
+<!-- pedagogical application: will teach you the relevant parts -->
+<!-- personal application: you can reuse images not just to coord with other's
+code, but also to make deployable stuff for demos, fun things, etc. -->
 
 ## Ok, so what should I do?
 
 <!-- this is the how, when illustrating these things, build-up the "final
 machine" -->
+<!-- for each point, write down what should they learn or the activities that
+they should do + relevant resources: in learn git {learn
+proper commit messages, learn git flow, etc.} -->
+
 <!-- learn git => learn the tools -->
 <!-- learn how to modularize your code => show that the components now look
 better -->
@@ -54,7 +62,8 @@ things will fit in -->
 
 
 
+## What's next?
 
-
-
-## Conclusion
+<!-- if they enjoyed this, they can now do a lot of things: deployment,
+devops,e tc. --> 
+<!-- maybe there's an illustrative component for each? -->
