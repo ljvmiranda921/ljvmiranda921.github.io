@@ -36,10 +36,10 @@ relevant skills and focus them into a tangible output:
 > Create a machine learning application that can receive HTTP requests
 > and can optionally be deployed as a containerized app.
 
-That's quite a mouthful, so let's break it down a bit:
+Let's break it down a bit:
 
 1. **"Create a machine learning application..."**: this should be a model that
-    receives an input, applies the necessary transformations, and gives an
+    receives an input, applies the necessary transformations, and returns an
     output. This can be anything, and it depends on what you're comfortable
     with. It could be a language model that measures sentiment, an OCR model
     that gives bounding boxes or a standard classifier given an arbitrary set of
@@ -48,7 +48,7 @@ That's quite a mouthful, so let's break it down a bit:
     encountered this, then don't fret! In Python, this may be as simple as
     learning a new library. HTTP is a standard that allows computers to talk to
     one another. Allowing your ML application to receive HTTP requests means
-    that you're setting-up a "the language" between your app and other
+    that you're setting-up the "language" between your app and other
     users, so that they know how to talk (give/receive data) to your model.
 3. **"...can optionally be deployed..."**: this means that you allow your
     application to be accessible outside your own computer! If the previous
