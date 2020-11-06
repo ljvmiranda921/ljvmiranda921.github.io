@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "For researchers who ask me how to improve their software skills"
+title: "How to improve software engineering skills as a researcher"
 date: 2020-11-15
 category: notebook
 comments: true
@@ -72,17 +72,49 @@ researchers and data scientists*.
 
 ## Wait, but why?
 
-There are three reasons why creating an  ML service is a perfect introduction
-to learning software for researchers and data scientists:
+There are three reasons why creating an  ML service is a researcher's perfect
+introduction to software engineering:
 
-* **Improves engineering sensibilities**: 
-* **Increases familiarity with the ML workflow**: 
-* **Another tool under your belt to create more cool stuff**
+* **Improves engineering sensibilities.** In most applications, ML services
+    are treated as software components: each with an expected input and
+    output. Learning how to build ML services gives us a unique perspective on
+    how our ML models are used outside of the train-eval loop. 
 
-<!-- industry application: ML is a component of a system -->
-<!-- pedagogical application: will teach you the relevant parts of the ML workflow-->
-<!-- personal application: you can reuse images not just to coord with other's
-code, but also to make deployable stuff for demos, fun things, etc. -->
+    In addition, the competencies needed to create an ML service covers alot of the
+    essential software skills to collaborate with engineers: (1)
+    version-control, (2) proper software modularity, (3) knowledge of APIs, (4)
+    dependency management, and so on. 
+
+    <!-- Illustration here? -->
+* **Increases familiarity with the ML workflow.** We're familiar with the ML
+    experimentation workflow: label, train, evaluate, tuning, then so on. However,
+    there is also a productization workflow where we deploy our models, perform
+    A/B testing, take care of concept drift, and more. I even imagine it as two
+    cycles syncing together (probably a new blogpost about this in the future).
+
+    <!-- Illustration of a workflow here -->
+    Building an ML Service gives us a glimpse on how ML models are productized. 
+    We'll start to think about artifact versions, model dependencies, and
+    so on. As a researcher, being able to see a model end-to-end, from
+    conception to production, can give us an insight on how to improve the
+    products we work on.
+
+    As an aside, my fearless forecast is that the productization workflow will
+    be democratized by up-and-coming ML Platforms and services. However,
+    learning how they work, "to the metal," while they're still relevant can be
+    a good experience.
+* **Another tool under your belt to create more cool stuff.** Even if you won't
+    be working as a full-fledged ML Engineer or Developer, the technologies
+    you'll learn while building an ML Service enables you to do more things!
+
+    As an academic, learning how to use Docker paves way for reproducibility.
+    In addition, being more organized in writing code, in contrast to writing
+    janky scripts here and there, can aid you in your research in the long-run.
+    There's alot of things we can learn from software engineering to enhance
+    our research workflows. For example, [I used containers, version-control,
+    and LaTeX to write my Masters thesis before](http://localhost:4000/notebook/2018/02/04/continuous-integration-for-latex/)! The opportunities are endless!
+
+    <!-- Illustration of a person with a toolbox here -->
 
 ## Ok, so what should I do?
 
