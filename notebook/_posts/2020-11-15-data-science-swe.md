@@ -62,15 +62,19 @@ Let's break it down a bit:
 
 <!-- show the final product in illustration form: a fully-fledged machine -->
 
-For the remaining parts of this blogpost, I will call this project a **Machine
-Learning (ML) Service.** You will hear this term many times in the industry:
-software-as-a-service, microservice architecture, API services, kubernetes
-service, and more. I assure you that there are some relation between those
-terms. However, before we jump into the specifics, I want to talk about *why
-creating an ML service is a perfect introduction to learning software for
-researchers and data scientists*.
+In short, we're creating a **Machine Learning (ML) Service.** You will hear
+this term many times in the industry: software-as-a-service, microservice
+architecture, API services, kubernetes service, and more. I assure you that
+there is some relation among these terms. However, before we jump into the
+*how*, I want to talk about *why creating an ML service is a perfect
+introduction to learning software for researchers and data scientists*.
 
-## Wait, but why?
+Lastly, note that **this blogpost is not a tutorial.** Instead, I'll touch upon
+a skill roadmap that will enable you to build an ML service&mdash; i.e., "how
+to get there." There are many resources available nowadays, and I'll talk about
+my recommendations here!
+
+## Wait, but why an ML Service?
 
 There are three reasons why creating an  ML service is a researcher's perfect
 introduction to software engineering:
