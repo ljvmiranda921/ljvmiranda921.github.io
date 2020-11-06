@@ -18,8 +18,8 @@ excerpt: |
 ---
 
 
-Hello, you're probably here because I linked this after I rambled upon how
-someone can improve their software skills as a researcher. Maybe our conversation
+Hello! You're probably here because I linked this right after rambling upon how
+you can improve your software skills as a researcher. Maybe our conversation
 went this way:
 
 <!-- illustrate this instead?? -->
@@ -30,11 +30,13 @@ went this way:
 
 You get it already...the field is quite huge and you can get started in so many
 ways&mdash; I got overwhelmed before. *However*, as an opinionated
-advice, I think that there's one activity/exercise that introduces you to all 
-relevant skills and focus them into a tangible output:
+advice, I think that there's one exercise that introduces you to all 
+relevant skills and focuses them into a tangible output:
 
 > Create a machine learning application that can receive HTTP requests
 > and can optionally be deployed as a containerized app.
+
+## Um, what?
 
 Let's break it down a bit:
 
@@ -44,17 +46,20 @@ Let's break it down a bit:
     with. It could be a language model that measures sentiment, an OCR model
     that gives bounding boxes or a standard classifier given an arbitrary set of
     inputs. You decide! 
+
 2. **"...that can receive HTTP requests..."**: if this is the first time you've
     encountered this, then don't fret! In Python, this may be as simple as
     learning a new library. HTTP is a standard that allows computers to talk to
     one another. Allowing your ML application to receive HTTP requests means
     that you're setting-up the "language" between your app and other
     users, so that they know how to talk (give/receive data) to your model.
+
 3. **"...can optionally be deployed..."**: this means that you allow your
     application to be accessible outside your own computer! If the previous
     step defines how others can communicate to your app, this step allows
     others to communicate to it! There are many platforms that does this, and
     I'll list them down later.
+
 4. **"...as a containerized app."**: this packages your application, all of its
    dependencies, and necessary setup in a single container&mdash;currently the
    most ubiquitous way of putting things into production. Containerization
@@ -62,11 +67,11 @@ Let's break it down a bit:
 
 <!-- show the final product in illustration form: a fully-fledged machine -->
 
-In short, we're creating a **Machine Learning (ML) Service.** You will hear
-this term many times in the industry: software-as-a-service, microservice
-architecture, API services, kubernetes service, and more. I assure you that
-there is some relation among these terms. However, before we jump into the
-*how*, I want to talk about *why creating an ML service is a perfect
+In short, I'm asking you to create a **Machine Learning (ML) Service.** You
+will hear this term many times in the industry: software-as-a-*service*,
+micro*service* architecture, API *services*, kubernetes *service*, and more. I assure
+you that there is some relation among these terms. However, before we jump into
+the *how*, I want to talk about *why creating an ML service is a perfect
 introduction to learning software for researchers and data scientists*.
 
 Lastly, note that **this blogpost is not a tutorial.** Instead, I'll touch upon
@@ -105,7 +110,7 @@ introduction to software engineering:
 
     As an aside, my fearless forecast is that the productization workflow will
     be democratized by up-and-coming ML Platforms and services. However,
-    learning how they work, "to the metal," while they're still relevant can be
+    learning how they work, "to the metal," while they are still relevant can be
     a good experience.
 * **Another tool under your belt to create more cool stuff.** Even if you won't
     be working as a full-fledged ML Engineer or Developer, the technologies
@@ -120,7 +125,81 @@ introduction to software engineering:
 
     <!-- Illustration of a person with a toolbox here -->
 
-## Ok, so what should I do?
+## Ok, so how?
+
+Now that we've established **what** we are going to do and **why** we're doing
+it, let's talk about the **how**. In this section, I'll talk about a roadmap on
+how to build an ML Service, and some resource recommendations that once helped
+me along the way
+
+1. **Learn how to use a version-control system like Git**
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
+    nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
+    lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
+    mollis, erat eget iaculis venenatis.
+
+    *Outcome*
+
+    Key Activities:
+
+    - Learn X, Y, Z
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
+        nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
+        lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
+        mollis, erat eget iaculis venenatis.
+
+    - Learn proper commit messages
+        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
+        nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
+        lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
+        mollis, erat eget iaculis venenatis.
+
+2. **Learn how to modularize your Python Code**
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
+    nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
+    lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
+    mollis, erat eget iaculis venenatis.
+
+    *Outcome*
+
+    Key Activities:
+
+3. **Learn how to write an API on top of your model using Flask or FastAPI**
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
+    nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
+    lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
+    mollis, erat eget iaculis venenatis.
+
+    *Outcome*
+
+    Key Activities:
+
+4. **Learn how to write a Docker image**
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
+    nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
+    lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
+    mollis, erat eget iaculis venenatis.
+
+    *Outcome*
+
+    Key Activities:
+
+5. **Learn how to deploy to a Cloud Platform**
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
+    nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
+    lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
+    mollis, erat eget iaculis venenatis.
+
+    *Outcome*
+
+    Key Activities:
 
 <!-- this is the how, when illustrating these things, build-up the "final
 machine" -->
