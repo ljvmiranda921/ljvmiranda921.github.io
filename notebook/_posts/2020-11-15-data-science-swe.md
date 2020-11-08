@@ -204,10 +204,35 @@ me along the way
 
 3. **Learn how to write an API on top of your model using Flask or FastAPI**
 
-
-    *Outcome*
+    For this step, the goal is to learn how to create simple web servers. More
+    often than not, the primary mode of communication between two applications
+    is through HTTP. What we're virtually doing here is exposing an interface
+    for other users (computers or humans), to talk to our machine learning
+    app.
 
     Key Activities:
+
+    - Learn [`requests`](https://requests.readthedocs.io/en/master/), a
+    commonly-used library for interacting with web servers. More particularly,
+    understand when to use GET and POST requests, different [HTTP status
+    codes](https://www.restapitutorial.com/httpstatuscodes.html), and various
+    types (read: [mimetypes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) returned by a web-server.
+
+    - Create a web-server using a [framework](https://wiki.python.org/moin/WebFrameworks) of your choice. Right now I recommend learning
+    [FastAPI](https://github.com/tiangolo/fastapi): it's fully-featured,
+    easy-to-use, and powerful. Create GET and POST endpoints that returns your
+    model's output in accordance to the relevant mimetype. Another good option
+    is [Flask](https://github.com/pallets/flask), it's an "older" framework,
+    thus widely-used.
+
+    Optionally, I'd recommend that you also learn [socket programming](https://realpython.com/python-sockets/), and
+    understand the tradeoffs between web-sockets and HTTP. Here's a good
+    [StackOverflow answer that highlights their
+    differences](https://stackoverflow.com/questions/14703627/websockets-protocol-vs-http)&mdash;
+    there's a latency advantage for web-sockets, but I think for our most
+    common use-case&mdash;and by way of introduction&mdash; learning HTTP is
+    enough. 
+
 
 4. **Learn how to write a Docker image**
 
@@ -259,3 +284,4 @@ devops,e tc. -->
 ### Notes to the engineers
 
 <!-- they're definitely making a containerized web server -->
+<!-- why not django? -->
