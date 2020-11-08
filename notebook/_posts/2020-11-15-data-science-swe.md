@@ -234,16 +234,69 @@ me along the way
     enough. 
 
 
-4. **Learn how to write a Docker image**
+4. **"Containerize" your application using Docker**
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
-    nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
-    lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
-    mollis, erat eget iaculis venenatis.
+    After structuring your Python application in Step #2, and having your server
+    up-and-running in Step #3, the next step is to package your application
+    with all its dependencies using [Docker](https://www.docker.com/resources/what-container). 
 
-    *Outcome*
+    Docker images are built using a [Dockerfile](https://docs.docker.com/engine/reference/builder/#:~:text=A%20Dockerfile%20is%20a%20text,command%2Dline%20instructions%20in%20succession.)&mdash; think of it as a recipe.
+    It contains a series of steps to install all necessary dependencies (gather
+    ingredients) and run specific commands (simmer, fry, mix and match) to
+    faithfully reproduce your application.
+
+    You want to use Docker for two things: (1) reproducibility and (2)
+    isolation. The former ensures that everytime you "cook" (build the Docker
+    Image), it's always the same food all throughout (same Image). The latter
+    provides you with a "sandbox kitchen" where only the ingredients you
+    specified exist: I only need a pot, chicken, vinegar, and soy sauce.
+    There's no chance that an extra ingredient, say sugar, that will
+    inadvertently mess up my cooking. 
 
     Key Activities:
+
+    - Learn the differences between an Image and a Container. There is a good
+        [StackOverflow
+        answer](https://stackoverflow.com/questions/21498832/in-docker-whats-the-difference-between-a-container-and-an-image)
+        that explains their use, and how to reason about them. These two terms
+        are often used in the software engineering world that it is important
+        to get the fundamentals right. Also, before you start, I
+        highly-recommend this [Docker
+        roadmap](https://vsupalov.com/docker-learning-roadmap/) to fill-in your
+        learning needs regarding the technlogy. Vladislav's blogpost is also
+        rich with information about anything Docker.
+    
+    - Learn basic docker commands by playing on the Python Docker image. More
+        specifically, learn the most common ones: `pull/push`, `build`, `tag`,
+        `run/exec`, `ps/log`. I highly-recommend the [Docker Curriculum
+        website](https://docker-curriculum.com/) that puts you up to speed on
+        using Docker in action.
+
+    - Write a Dockerfile for your web application. Now that you know how to
+        play around a Docker image, it is time to make your own! Again, the
+        Docker Curriculum gives you an overview on [how to make your own Docker
+        image through a
+        Dockerfile](https://docker-curriculum.com/#our-first-image).  Learn the
+        basic directives such as `FROM`, `RUN`, `COPY`, and `CMD`, then build
+        your image and play with it similar to the previous step!
+
+    Once you get the hang of using Docker, you might want to expand your
+    knowledge by learning:
+
+    * **Args and environment variables**, to fully parametrize your images. [This
+        blogpost](https://vsupalov.com/docker-arg-env-variable-guide/) (and the
+        blog in general) is my go-to reference for anything that confuses me
+        regarding these directives.
+
+    * **Multi-stage builds**, this mostly solves the problem of keeping the
+        image sizes down. It is a good-to-know, and a cool "trick" to show-off
+        Docker mastery. My go-to reference is always the [official docs](https://docs.docker.com/develop/develop-images/multistage-build/).
+
+    * **Docker Compose**. How about running multiple containers at once?
+        Compose allows you to "orchestrate" containers that relate to one
+        another. For example in a web app, I have an image for the Frontend
+        (made with Vue), and an image for the Backend (Python). In order for
+        me to control them together, I use Compose. The [official docs](https://docs.docker.com/compose/) are already a good resource, but if you wish to see an example, check-out my [Sprites-as-a-Service project](https://github.com/ljvmiranda921/sprites-as-a-service).
 
 5. **Learn how to deploy to a Cloud Platform**
 
@@ -280,6 +333,9 @@ things will fit in -->
 devops,e tc. --> 
 <!-- maybe there's an illustrative component for each? -->
 <!-- more ways to improve the app -->
+<!-- learn OOP or functional programming -->
+<!-- i don't use FP religiously, but there are some principles I try to abide
+to -->
 
 ### Notes to the engineers
 
