@@ -147,27 +147,50 @@ me along the way
       commit*, *git push/pull*. I highly-recommend [Github's Git
       introduction](https://guides.github.com/introduction/git-handbook/) for this.
       In addition, explore git using this [visualization tool](http://git-school.github.io/visualizing-git/).
+
     - Learn the basics of Git branching. Understand the difference between
       [rebase and merge](/notebook/2018/10/25/git-workflow/), and
       learn the merge policies within your team. In addition, try-out this fun
       [branching visualization tool](https://learngitbranching.js.org/) to see various ways to move 
       around your Git history.
+
     - Cap-off your Git proficiency by learning how to write good commit
       messages. Chris Beams wrote a [nice blogpost](https://chris.beams.io/posts/git-commit/)
       on how to structure and word them. It's something I always recommend to
       anyone learning git!
 
-2. **Learn how to modularize your Python Code**
-<!-- rephrase with the outcome already -->
+    Another course that I highly-recommend is [Software Carpentry's Git
+    fundamentals](http://swcarpentry.github.io/git-novice/). It is aimed
+    primarily to researchers and scientists like us, and introduces
+    version-control in the context of [open science and reproducibility](http://swcarpentry.github.io/git-novice/10-open/index.html).
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
-    nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
-    lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
-    mollis, erat eget iaculis venenatis.
+2. **Structure your Python project in a modular fashion**
 
-    *Outcome*
+    For most of us in Machine Learning or Data Science, our introduction to
+    Python programming is often through Jupyter notebooks. That is fine, but
+    for software development, we should learn how to slowly migrate our scripts
+    into a more modular structure. That means pure Python `.py` files, properly
+    directed directories, and well-defined dependencies.
 
     Key Activities:
+
+    - Learn different Python application layouts from this [Real Python
+        tutorial](https://realpython.com/python-application-layouts/). For our
+        Machine Learning Service, we will ascribe to the [Flask
+        layout](https://realpython.com/python-application-layouts/#flask) (also
+        applicable if we're using other web server libraries like FastAPI).
+
+    - Study the more expressive [layout
+        with internal packages](https://realpython.com/python-application-layouts/#application-with-internal-packages). In my opinion, it catches all use-cases if you want to write a library, a web application, or a command-line tool. 
+
+    - Learn from open-source project structures by including a sensible README,
+        changelog, and documentation. I highly-recommend [Hitchhiker's Guide to Python](https://docs.python-guide.org/writing/structure/) as an entrypoint for these practices. Furthermore, I encourage you to checkout best practices from open-source repositories like [fastai](https://github.com/fastai/fastai), [huggingface's transformers](https://github.com/huggingface/transformers), and [streamlit](https://github.com/streamlit/streamlit). Learning how to read and learn from other's code can help improve your "code-sense."
+
+    During this step, I highly-encourage you to write a small utility library
+    for the common functions that you use. You can, for example, extract all
+    repeated functions from your Jupyter notebooks, refactor them, and reuse
+    them anywhere. After accomplishing all the activities at this point, I'm
+    confident that your software engineering skills have grown by a lot!
 
 3. **Learn how to write an API on top of your model using Flask or FastAPI**
 
@@ -215,6 +238,9 @@ better -->
 <!-- learn docker => the "frame" or the common interface into which these
 things will fit in -->
 
+## In conclusion
+
+<!-- obviously this is not a weekend project -->
 
 
 ## What's next?
