@@ -181,10 +181,20 @@ me along the way
         applicable if we're using other web server libraries like FastAPI).
 
     - Study the more expressive [layout
-        with internal packages](https://realpython.com/python-application-layouts/#application-with-internal-packages). In my opinion, it catches all use-cases if you want to write a library, a web application, or a command-line tool. 
+        with internal
+        packages](https://realpython.com/python-application-layouts/#application-with-internal-packages).
+        In my opinion, it catches all use-cases if you want to write a library,
+        a web application, or a command-line tool. 
 
     - Learn from open-source project structures by including a sensible README,
-        changelog, and documentation. I highly-recommend [Hitchhiker's Guide to Python](https://docs.python-guide.org/writing/structure/) as an entrypoint for these practices. Furthermore, I encourage you to checkout best practices from open-source repositories like [fastai](https://github.com/fastai/fastai), [huggingface's transformers](https://github.com/huggingface/transformers), and [streamlit](https://github.com/streamlit/streamlit). Learning how to read and learn from other's code can help improve your "code-sense."
+        changelog, and documentation. I highly-recommend [Hitchhiker's Guide to
+        Python](https://docs.python-guide.org/writing/structure/) as an
+        entrypoint for these practices. Furthermore, I encourage you to
+        checkout best practices from open-source repositories like
+        [fastai](https://github.com/fastai/fastai), [huggingface's
+        transformers](https://github.com/huggingface/transformers), and
+        [streamlit](https://github.com/streamlit/streamlit). Learning how to
+        read and learn from other's code can help improve your "code-sense."
 
     During this step, I highly-encourage you to write a small utility library
     for the common functions that you use. You can, for example, extract all
@@ -194,10 +204,6 @@ me along the way
 
 3. **Learn how to write an API on top of your model using Flask or FastAPI**
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
-    nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
-    lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
-    mollis, erat eget iaculis venenatis.
 
     *Outcome*
 
