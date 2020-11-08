@@ -36,8 +36,6 @@ relevant skills and focuses them into a tangible output:
 > Create a machine learning application that can receive HTTP requests
 > and can optionally be deployed as a containerized app.
 
-#### Table of Contents
-
 - [Um, what?](#um-what)
 - [Wait, but why an ML service?](#wait-but-why-an-ml-service)
 - [Ok, so how?](#ok-so-how)
@@ -346,6 +344,10 @@ me along the way
     run on any machine that has Docker installed&mdash;it could be my laptop, or a
     *server in the Cloud*!
 
+
+    Key Activities:
+
+    - Choose the platform of your choice. 
     Deploying to the cloud often depends on the platform you're bringing your
     application onto. For this step, I recommend looking into container-based
     managed services like [Google Cloud Run](https://cloud.google.com/run),
@@ -353,20 +355,38 @@ me along the way
     Instances](https://azure.microsoft.com/en-us/services/container-instances/)
     Instances. 
 
-    Sometimes deployment is vendor-dependent. There's a [NewStack comparison
-    among the
-    three major cloud platforms](https://thenewstack.io/comparison-aws-fargate-vs-google-cloud-run-vs-azure-container-instances/)
-    so I'll let you choose. Personally, I've been quite happy with Google Cloud
-    Run: it's easy to set-up, has a free tier, and pretty fast startup time!
-    As an example, my [Sprites-as-a-Service
-    application](https://ljvmiranda921.github.io/sprites-as-a-service/) was
-    deployed to Cloud Run!
+        Sometimes deployment is vendor-dependent. There's a [NewStack comparison
+        among the
+        three major cloud platforms](https://thenewstack.io/comparison-aws-fargate-vs-google-cloud-run-vs-azure-container-instances/)
+        so I'll let you choose. Personally, I've been quite happy with Google Cloud
+        Run: it's easy to set-up, has a free tier, and pretty fast startup time!
+        As an example, my [Sprites-as-a-Service
+        application](https://ljvmiranda921.github.io/sprites-as-a-service/) was
+        deployed to Cloud Run!
 
-    Other options include
-    [Heroku](https://devcenter.heroku.com/categories/deploying-with-docker) and
-    [OpenFaaS](https://www.openfaas.com/). Heroku often has its preferred
-    repository structure, while OpenFaaS still needs to be set-up. Anyhow, I
-    can't fully vet on them but I've heard good things about the two.
+        Other options include
+        [Heroku](https://devcenter.heroku.com/categories/deploying-with-docker) and
+        [OpenFaaS](https://www.openfaas.com/). Heroku often has its preferred
+        repository structure, while OpenFaaS still needs to be set-up. Anyhow, I
+        can't fully vet on them but I've heard good things about the two.
+
+    - Deploy to the platform of your choice. Easier said than done. Each
+        platform has its own deployment instructions, and you need to adapt
+        your repo or Dockerfile based on them. For example, in [Cloud Run's
+        deployment instructions](https://cloud.google.com/run/docs/deploying),
+        you need to first `push` your image into Google Container Registry
+        (GCR), then run some `gcloud` instructions in order to deploy.
+
+    - Once deployed, test your web service! Before when you're running locally,
+        you test your server by making HTTP requests in `localhost`. Now that
+        you finished deploying, you should receive a URL that corresponds to
+        your deployed app. Test it by passing inputs via
+        [cURL](https://curl.haxx.se/docs/httpscripting.html) or [Postman' s API
+        Client](https://www.postman.com/product/api-client/)
+
+
+    If you received your expected output, then congratulations! You've deployed
+    your web application successfully! 
 
 
 
@@ -385,25 +405,60 @@ things will fit in -->
 
 ## In conclusion
 
-<!--
-> At this point, I can say that you can already be productive as you
-> collaborate with the software engineers of your team. If you're an academic
-> researcher, you can start seeing how you can improve your research workflow
-> using software best practices. Congrats!
--->
+At this point, I can say that you are already productive and more ready to
+collaborate with software engineers in your team. If you're an academic
+researcher, you can probably see how these software practices can be used to
+improve your research workflow. Congratulations!
 
-<!-- obviously this is not a weekend project -->
+Obviously, this is not a weekend project. Some of these might take time, and
+you might learn one thing before the other. More importantly, some steps can
+overlap: you might still be on Step 2 but already learning Steps 3 and 4&mdash;
+that happens.
 
+I wrote this blogpost to provide a rough roadmap for someone who wants to learn
+software engineering as a researcher or data scientist. Software engineering as
+a field is very exciting&mdash; new technologies pop-up everyday and there's
+always something new to learn! I hope that you, reader, put in the patience and
+drive to go from learning Git to deploying ML web applications into the Cloud!
+If so, then you've achieved a lot and as a random stranger I'm proud of you!
 
-## What's next?
+### What's next?
 
-<!-- if they enjoyed this, they can now do a lot of things: deployment,
-devops,e tc. --> 
-<!-- maybe there's an illustrative component for each? -->
-<!-- more ways to improve the app -->
-<!-- learn OOP or functional programming -->
-<!-- i don't use FP religiously, but there are some principles I try to abide
-to -->
+From here on in, you can keep improving your app by:
+* Minimizing the size of your Docker image using multi-stage builds.
+* Cleaning-up your repository. Model files shouldn't be committed but
+    stored in a storage service (e.g. Google Cloud Storage or AWS S3)
+* Adding a Continuous Integration / Continuous Deployment (CI/CD) pipeline
+    so that any change on Github is automatically reflected on your
+    deployed app. I often use [Github
+    Actions](https://github.com/features/actions) for this (e.g., any
+    change in the `master` branch is deployed automatically). 
+* Improving security! Make use of Docker args or `.env` to secure API
+    tokens, passwords, and whatnot. Ideally you shouldn't be committing any
+    secrets on Git (it can still be recovered if you deleted it!). Be
+    careful! 
+
+Lastly, I highly-recommend the following resources for general guidance:
+* [The Twelve Factor application](https://12factor.net/): this is a set of
+    principles to guide you in building industry-grade applications. As you can
+    see, we haven't covered concurrency, dev/prod parity, and logs in this
+    post. 
+* [Designing Data Intensive Applications by M. Kleppmann](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321):
+ a pretty good textbook for learning various architectures and
+ first-principles in building more complex apps. As it turns out, ML is quite
+ complex in a software standpoint&mdash; you need to worry about [concept
+ drift](https://en.wikipedia.org/wiki/Concept_drift), ML testing, data version
+ control, and more! I think this book gives you the handle to solve such
+ difficult problems.
+* [PEP8 Style Guide for Python
+    Code](https://www.python.org/dev/peps/pep-0008/): most of us write in
+    Python, so it's good to learn idiomatic ways to speak the language. This
+    guide can help ensure that you're writing "good" Python code.
+* [Fluent Python by L. Ramalho](https://www.amazon.com/Fluent-Python-Concise-Effective-Programming/dp/1491946008): a good book for advanced Python users. This is a good book that made me appreciate the standard library more!
+* Object-oriented programming (OOP), Functional Programming (FP)  and [design patterns](https://refactoring.guru/design-patterns): I think that OOP is a good handle for
+    writing most ML applications. Of course, not everything should be a class.
+    Functional Programming (FP) is also a good framework, and some of its
+    principles can help us write cleaner and more testable code.
 
 ### Notes for the engineers
 
