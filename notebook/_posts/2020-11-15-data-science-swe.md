@@ -196,11 +196,33 @@ me along the way
         [streamlit](https://github.com/streamlit/streamlit). Learning how to
         read and learn from other's code can help improve your "code-sense."
 
-    During this step, I highly-encourage you to write a small utility library
-    for the common functions that you use. You can, for example, extract all
-    repeated functions from your Jupyter notebooks, refactor them, and reuse
-    them anywhere. After accomplishing all the activities at this point, I'm
-    confident that your software engineering skills have grown by a lot!
+    - Write your ML application in a modular fashion. Again, follow the
+        guidelines on project structure from the recommendations above, but if
+        you wish to have an opinionated structure, I often opt for this layout:
+
+        ```
+        my_project/
+        ├── api
+        ├── docs
+        ├── experiments
+        ├── README.md
+        ├── requirements.txt
+        ├── src
+        │   ├── entrypoint.py
+        │   └── my_module
+        │       └── module_file.py
+        └── tests
+            ├── my_module
+            │   └── test_my_module.py
+            └── test_entrypoint.py
+        ```
+
+    During this step, I also encourage you to write a small utility library for
+    the common functions that you use in your day-to-day. You can, for example,
+    extract all repeated functions from your Jupyter notebooks, refactor them,
+    and reuse them anywhere. After accomplishing all the activities at this
+    point, I'm confident that your software engineering skills have grown by a
+    lot!
 
 3. **Learn how to write an API on top of your model using Flask or FastAPI**
 
@@ -279,6 +301,11 @@ me along the way
         Dockerfile](https://docker-curriculum.com/#our-first-image).  Learn the
         basic directives such as `FROM`, `RUN`, `COPY`, and `CMD`, then build
         your image and play with it similar to the previous step!
+
+    - Ideally, the output for this step is to run your web-server similar to Step
+    3, but through Docker. In Step 3 you probably ran your server by typing
+    some commands in your terminal (`gunicorn...`). On this step, it should
+    just be as easy as `docker run my-image`.
 
     Once you get the hang of using Docker, you might want to expand your
     knowledge by learning:
