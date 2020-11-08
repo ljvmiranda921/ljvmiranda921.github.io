@@ -121,7 +121,8 @@ introduction to software engineering:
     janky scripts here and there, can aid you in your research in the long-run.
     There's alot of things we can learn from software engineering to enhance
     our research workflows. For example, [I used containers, version-control,
-    and LaTeX to write my Masters thesis before](http://localhost:4000/notebook/2018/02/04/continuous-integration-for-latex/)! The opportunities are endless!
+    and LaTeX to write my Masters thesis before](http://localhost:4000/notebook/2018/02/04/continuous-integration-for-latex/)! 
+    The opportunities are endless!
 
     <!-- Illustration of a person with a toolbox here -->
 
@@ -132,32 +133,32 @@ it, let's talk about the **how**. In this section, I'll talk about a roadmap on
 how to build an ML Service, and some resource recommendations that once helped
 me along the way
 
-1. **Learn how to use a version-control system like Git**
+1. **Be comfortable with a version-control system like Git**
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
-    nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
-    lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
-    mollis, erat eget iaculis venenatis.
-
-    *Outcome*
+    [Git](https://git-scm.com/) is almost fundamental to the software
+    development lifecycle. There's a bit of a learning curve involved, but the
+    benefits are worth it. As a bonus, create a profile on your preferred
+    Git-hosting server&mdash;Github, Gitlab, etc.&mdash; and enjoy the
+    full-suite of version control!
 
     Key Activities:
 
-    - Learn X, Y, Z
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
-        nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
-        lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
-        mollis, erat eget iaculis venenatis.
-
-    - Learn proper commit messages
-        
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
-        nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
-        lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
-        mollis, erat eget iaculis venenatis.
+    - Learn how the standard commands work: *git status*, *git add*, *git
+      commit*, *git push/pull*. I highly-recommend [Github's Git
+      introduction](https://guides.github.com/introduction/git-handbook/) for this.
+      In addition, explore git using this [visualization tool](http://git-school.github.io/visualizing-git/).
+    - Learn the basics of Git branching. Understand the difference between
+      [rebase and merge](/notebook/2018/10/25/git-workflow/), and
+      learn the merge policies within your team. In addition, try-out this fun
+      [branching visualization tool](https://learngitbranching.js.org/) to see various ways to move 
+      around your Git history.
+    - Cap-off your Git proficiency by learning how to write good commit
+      messages. Chris Beams wrote a [nice blogpost](https://chris.beams.io/posts/git-commit/)
+      on how to structure and word them. It's something I always recommend to
+      anyone learning git!
 
 2. **Learn how to modularize your Python Code**
+<!-- rephrase with the outcome already -->
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
     nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
