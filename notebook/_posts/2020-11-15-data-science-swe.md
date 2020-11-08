@@ -41,7 +41,7 @@ relevant skills and focuses them into a tangible output:
 - [Ok, so how?](#ok-so-how)
 - [In conclusion](#in-conclusion)
     - [What's next](#whats-next)
-    - [Notes for the engineers](#notes-for-the-engineers)
+    - [FAQ](#faq)
 
 
 ## Um, what?
@@ -460,7 +460,21 @@ Lastly, I highly-recommend the following resources for general guidance:
     Functional Programming (FP) is also a good framework, and some of its
     principles can help us write cleaner and more testable code.
 
-### Notes for the engineers
+### FAQ 
+
+* **Why didn't you include X? You should include X**: I try to make the roadmap
+    as overarching as possible to allow some wiggle room for technology X. I
+    think that if I write down all possible tech and processes, then this can
+    blow up into a book *(hmm...)*!
+* **Is this for data scientists or ML Engineers?**: To be honest, the roles are
+    quite blurred across the industry. I often see this profile of a good
+    researcher who *can* code and produce good models, but the code cannot
+    easily be deployed to production. I see myself writing for them!
+* **I am an academic, will this be useful?**: I absolutely believe so! Open
+    science runs on the idea of reproducibility&mdash; not only your paper is
+    accessible, but also the ingredients and the process from which your
+    results where generated. I think learning Docker or properly modularizing
+    your code can go a long way.
 
 <!-- they're definitely making a containerized web server -->
 <!-- why not django? -->
