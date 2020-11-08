@@ -36,6 +36,16 @@ relevant skills and focuses them into a tangible output:
 > Create a machine learning application that can receive HTTP requests
 > and can optionally be deployed as a containerized app.
 
+#### Table of Contents
+
+- [Um, what?](#um-what)
+- [Wait, but why an ML service?](#wait-but-why-an-ml-service)
+- [Ok, so how?](#ok-so-how)
+- [In conclusion](#in-conclusion)
+    - [What's next](#whats-next)
+    - [Notes for the engineers](#notes-for-the-engineers)
+
+
 ## Um, what?
 
 Let's break it down a bit:
@@ -300,12 +310,13 @@ me along the way
         image through a
         Dockerfile](https://docker-curriculum.com/#our-first-image).  Learn the
         basic directives such as `FROM`, `RUN`, `COPY`, and `CMD`, then build
-        your image and play with it similar to the previous step!
+        your image and play with it similar to the previous step! Also, check
+        the [Dockerfile best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) from the official docs.
 
     - Ideally, the output for this step is to run your web-server similar to Step
     3, but through Docker. In Step 3 you probably ran your server by typing
     some commands in your terminal (`gunicorn...`). On this step, it should
-    just be as easy as `docker run my-image`.
+    just be as easy as `docker run my-image`. 
 
     Once you get the hang of using Docker, you might want to expand your
     knowledge by learning:
@@ -330,12 +341,34 @@ me along the way
         
 5. **Learn how to deploy to a Cloud Platform**
 
+    At this point, we can hopefully see the benefits of containerization: the
+    build process of our app is *idempotent*. Your application can virtually
+    run on any machine that has Docker installed&mdash;it could be my laptop, or a
+    *server in the Cloud*!
+
+    Deploying to the cloud often depends on the platform you're bringing your
+    application onto. For this step, I recommend looking into container-based
+    managed services like [Google Cloud Run](https://cloud.google.com/run),
+    [AWS Fargate](https://aws.amazon.com/fargate/), or [Azure Container
+    Instances](https://azure.microsoft.com/en-us/services/container-instances/)
+    Instances. 
+
+    Sometimes deployment is vendor-dependent. There's a [NewStack comparison
+    among the
+    three major cloud platforms](https://thenewstack.io/comparison-aws-fargate-vs-google-cloud-run-vs-azure-container-instances/)
+    so I'll let you choose. Personally, I've been quite happy with Google Cloud
+    Run: it's easy to set-up, has a free tier, and pretty fast startup time!
+    As an example, my [Sprites-as-a-Service
+    application](https://ljvmiranda921.github.io/sprites-as-a-service/) was
+    deployed to Cloud Run!
+
+    Other options include
+    [Heroku](https://devcenter.heroku.com/categories/deploying-with-docker) and
+    [OpenFaaS](https://www.openfaas.com/). Heroku often has its preferred
+    repository structure, while OpenFaaS still needs to be set-up. Anyhow, I
+    can't fully vet on them but I've heard good things about the two.
 
 
-
-    *Outcome*
-
-    Key Activities:
 
 <!-- this is the how, when illustrating these things, build-up the "final
 machine" -->
@@ -372,7 +405,7 @@ devops,e tc. -->
 <!-- i don't use FP religiously, but there are some principles I try to abide
 to -->
 
-### Notes to the engineers
+### Notes for the engineers
 
 <!-- they're definitely making a containerized web server -->
 <!-- why not django? -->
