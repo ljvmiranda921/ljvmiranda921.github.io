@@ -323,14 +323,15 @@ me along the way
         Compose allows you to "orchestrate" containers that relate to one
         another. For example in a web app, I have an image for the Frontend
         (made with Vue), and an image for the Backend (Python). In order for
-        me to control them together, I use Compose. The [official docs](https://docs.docker.com/compose/) are already a good resource, but if you wish to see an example, check-out my [Sprites-as-a-Service project](https://github.com/ljvmiranda921/sprites-as-a-service).
-
+        me to control them together, I use Compose. The [official
+        docs](https://docs.docker.com/compose/) are already a good resource,
+        but if you wish to see an example, check-out my [Sprites-as-a-Service
+        project](https://github.com/ljvmiranda921/sprites-as-a-service).
+        
 5. **Learn how to deploy to a Cloud Platform**
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis semper
-    nibh. Vivamus ullamcorper faucibus massa et lacinia. Etiam euismod tortor at
-    lacus sagittis, ut mattis eros lobortis. Nulla non lacinia sapien. Phasellus
-    mollis, erat eget iaculis venenatis.
+
+
 
     *Outcome*
 
@@ -350,6 +351,13 @@ better -->
 things will fit in -->
 
 ## In conclusion
+
+<!--
+> At this point, I can say that you can already be productive as you
+> collaborate with the software engineers of your team. If you're an academic
+> researcher, you can start seeing how you can improve your research workflow
+> using software best practices. Congrats!
+-->
 
 <!-- obviously this is not a weekend project -->
 
