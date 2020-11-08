@@ -6,7 +6,8 @@ date: 2020-11-15
 category: notebook
 comments: true
 author: "LJ MIRANDA"
-tags: [software development, debugging, python, software engineering, life]
+tags: [software development, python, software engineering, data science,
+machine learning, research, academia, deep learning, jupyter notebooks]
 description: |
     This blogpost is for researchers or data scientists who ask me how to
     improve their software engineering knowledge. I'll talk about a particular
