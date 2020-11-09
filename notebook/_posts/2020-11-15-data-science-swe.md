@@ -23,11 +23,8 @@ Hello! You're probably here because I linked this right after rambling upon how
 you can improve your software skills as a researcher. Maybe our conversation
 went this way:
 
-<!-- illustrate this instead?? -->
-
-> "Learn git! Modularize your code! Then uhm, try to reproduce your
-> experiments along the way, also deploy your stuff to some cloud platforms
-> along the way? Try using notebookes less often, Also, check PEP8! And learn git!"
+![](/assets/png/data-science-swe/talking_to_others.png){:width="480px"}  
+{: style="text-align: center;"}
 
 You get it already...the field is quite huge and you can get started in so many
 ways&mdash; I got overwhelmed before. *However*, as an opinionated
