@@ -476,6 +476,3 @@ Lastly, I highly-recommend the following resources for general guidance:
     accessible, but also the ingredients and the process from which your
     results where generated. I think learning Docker or properly modularizing
     your code can go a long way.
-
-<!-- they're definitely making a containerized web server -->
-<!-- why not django? -->
