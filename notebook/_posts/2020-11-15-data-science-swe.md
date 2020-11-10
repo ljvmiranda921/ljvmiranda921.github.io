@@ -109,6 +109,7 @@ introduction to software engineering:
 
 
     ![](/assets/png/data-science-swe/ml_lifecycle.png){:width="600px"}  
+    <br>**Figure**: Machine Learning Lifecycle
     {: style="text-align: center;"}
 
     Building an ML Service gives us a glimpse on how ML models are productized. 
