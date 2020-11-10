@@ -107,7 +107,10 @@ introduction to software engineering:
     A/B testing, take care of concept drift, and more. I even imagine it as two
     cycles syncing together (probably a new blogpost about this in the future).
 
-    <!-- Illustration of a workflow here -->
+
+    ![](/assets/png/data-science-swe/ml_lifecycle.png){:width="600px"}  
+    {: style="text-align: center;"}
+
     Building an ML Service gives us a glimpse on how ML models are productized. 
     We'll start to think about artifact versions, model dependencies, and
     so on. As a researcher, being able to see a model end-to-end, from
