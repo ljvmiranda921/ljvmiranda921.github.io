@@ -23,7 +23,7 @@ Hello! You're probably here because I linked this right after rambling upon how
 you can improve your software skills as a researcher. Maybe our conversation
 went this way:
 
-![](/assets/png/data-science-swe/talking_to_others.png){:width="480px"}  
+![](/assets/png/data-science-swe/talking_to_others.png){:width="380px"}  
 {: style="text-align: center;"}
 
 You get it already...the field is quite huge and you can get started in so many
@@ -100,7 +100,7 @@ introduction to software engineering:
     version-control, (2) proper software modularity, (3) knowledge of APIs, (4)
     dependency management, and so on. 
 
-    <!-- Illustration here? -->
+    <!-- Illustration here? software diagram and where is the ML part -->
 * **Increases familiarity with the ML workflow.** We're familiar with the ML
     experimentation workflow: label, train, evaluate, tuning, then so on. However,
     there is also a productization workflow where we deploy our models, perform
