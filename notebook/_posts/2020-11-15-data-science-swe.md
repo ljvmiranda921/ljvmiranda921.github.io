@@ -100,7 +100,10 @@ introduction to software engineering:
     version-control, (2) proper software modularity, (3) knowledge of APIs, (4)
     dependency management, and so on. 
 
-    <!-- Illustration here? software diagram and where is the ML part -->
+    ![](/assets/png/data-science-swe/ml_architecture.png){:width="400px"}  
+    <br>**Figure**: A very simplistic system architecture 
+    {: style="text-align: center;"}
+
 * **Increases familiarity with the ML workflow.** We're familiar with the ML
     experimentation workflow: label, train, evaluate, tuning, then so on. However,
     there is also a productization workflow where we deploy our models, perform
