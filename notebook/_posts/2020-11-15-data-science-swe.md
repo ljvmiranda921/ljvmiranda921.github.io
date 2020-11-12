@@ -6,6 +6,7 @@ date: 2020-11-15
 category: notebook
 comments: true
 author: "LJ MIRANDA"
+header-img: /assets/png/data-science-swe/2_modularization.png
 tags: [software development, python, software engineering, data science,
 machine learning, research, academia, deep learning, jupyter notebooks]
 description: |
@@ -369,7 +370,7 @@ me along the way
     *server in the Cloud*!
 
 
-    ![](/assets/png/data-science-swe/5_deploy.png){:width="550px"}  
+    ![](/assets/png/data-science-swe/5_deploy.png){:width="300px"}  
     {: style="text-align: center;"}
 
 
