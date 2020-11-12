@@ -129,6 +129,11 @@ introduction to software engineering:
     be working as a full-fledged ML Engineer or Developer, the technologies
     you'll learn while building an ML Service enables you to do more things!
 
+
+    ![](/assets/png/data-science-swe/new_tools.png){:width="400px"}  
+    <br>**Figure**: Three years ago with my first dip in software eng'g 
+    {: style="text-align: center;"}
+
     As an academic, learning how to use Docker paves way for reproducibility.
     In addition, being more organized in writing code, in contrast to writing
     janky scripts here and there, can aid you in your research in the long-run.
@@ -146,13 +151,17 @@ it, let's talk about the **how**. In this section, I'll talk about a roadmap on
 how to build an ML Service, and some resource recommendations that once helped
 me along the way
 
-1. **Be comfortable with a version-control system like Git**
+1. **Be comfortable with a version-control system like Git and basic UNIX commands**
 
     [Git](https://git-scm.com/) is almost fundamental to the software
     development lifecycle. There's a bit of a learning curve involved, but the
     benefits are worth it. As a bonus, create a profile on your preferred
     Git-hosting server&mdash;Github, Gitlab, etc.&mdash; and enjoy the
     full-suite of version control!
+
+    ![](/assets/png/data-science-swe/1_tools.png){:width="450px"}  
+    <br>**Figure**: Little by little we add new tools to your toolbox 
+    {: style="text-align: center;"}
 
     Key Activities:
 
@@ -184,6 +193,9 @@ me along the way
     for software development, we should learn how to slowly migrate our scripts
     into a more modular structure. That means pure Python `.py` files, properly
     directed directories, and well-defined dependencies.
+
+    ![](/assets/png/data-science-swe/2_modularization.png){:width="450px"}  
+    {: style="text-align: center;"}
 
     Key Activities:
 
