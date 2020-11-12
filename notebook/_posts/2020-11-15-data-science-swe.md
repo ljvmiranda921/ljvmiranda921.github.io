@@ -20,20 +20,21 @@ excerpt: |
 ---
 
 
-Hello! You're probably here because I linked this right after rambling upon how
+Hello! You're probably here because I linked this right after rambling on how
 you can improve your software skills as a researcher. Maybe our conversation
 went this way:
 
 ![](/assets/png/data-science-swe/talking_to_others.png){:width="380px"}  
 {: style="text-align: center;"}
 
-You get it already...the field is quite huge and you can get started in so many
-ways&mdash; I got overwhelmed before. *However*, as an opinionated
-advice, I think that there's one exercise that introduces you to all 
-relevant skills and focuses them into a tangible output:
+You get it already...the field is quite huge and there are many ways to get
+started&mdash; I myself got overwhelmed before. However, from my experiences
+doing research both in academia and industry, I think that there's one
+exercise that can introduce you to all relevant skills while focusing them into a
+tangible output:
 
-> Create a machine learning application that can receive HTTP requests
-> and can optionally be deployed as a containerized app.
+> **Create a machine learning application that can receive HTTP requests
+> and can optionally be deployed as a containerized app.**
 
 - [Um, what?](#um-what)
 - [Wait, but why an ML service?](#wait-but-why-an-ml-service)
@@ -59,22 +60,22 @@ Let's break it down a bit:
     learning a new library. HTTP is a standard that allows computers to talk to
     one another. Allowing your ML application to receive HTTP requests means
     that you're setting-up the "language" between your app and other
-    users, so that they know how to talk (give/receive data) to your model.
+    users, so that they know how to talk&mdash;i.e., give and receive
+    data&mdash;to your model.
 
-3. **"...can optionally be deployed..."**: this means that you allow your
+3. **"...can optionally be deployed..."** means that you allow your
     application to be accessible outside your own computer! If the previous
     step defines how others can communicate to your app, this step allows
-    others to communicate to it! There are many platforms that does this, and
+    others to communicate to it! There are many platforms that can do this, and
     I'll list them down later.
 
-4. **"...as a containerized app."**: this packages your application, all of its
-   dependencies, and necessary setup in a single container&mdash;currently the
-   most ubiquitous way of putting things into production. Containerization
-   makes your app idempotent, avoiding the "it works on my machine" problem.
+4. **"...as a containerized app."**: containers are currently the most
+   ubiquitous way of shipping things into production. This wraps your
+   application, all of its dependencies, and necessary setup in a single
+   package. It makes your app idempotent, so that you can reliably run it on
+   machines other than your own!
 
-<!-- show the final product in illustration form: a fully-fledged machine -->
-
-In short, I'm asking you to create a **Machine Learning (ML) Service.** You
+In short, you are building a **Machine Learning (ML) Service.** You
 will hear this term many times in the industry: software-as-a-*service*,
 micro*service* architecture, API *services*, kubernetes *service*, and more. I assure
 you that there is some relation among these terms. However, before we jump into
@@ -82,8 +83,8 @@ the *how*, I want to talk about *why creating an ML service is a perfect
 introduction to learning software for researchers and data scientists*.
 
 Lastly, note that **this blogpost is not a tutorial.** Instead, I'll touch upon
-a skill roadmap that will enable you to build an ML service&mdash; i.e., "how
-to get there." There are many resources available nowadays, and I'll talk about
+a skill roadmap that will enable you to build an ML service&mdash; i.e., how
+to get there. There are many resources available nowadays, so I'll talk about
 my recommendations here!
 
 ## Wait, but why an ML Service?
@@ -182,6 +183,10 @@ me along the way
       on how to structure and word them. It's something I always recommend to
       anyone learning git!
 
+
+    - Learn [basic bash scripting](https://linuxconfig.org/bash-scripting-tutorial-for-beginners) and how to get around a Linux terminal. Most production servers run on
+    Linux, so it's good to be comfortable with it.
+
     Another course that I highly-recommend is [Software Carpentry's Git
     fundamentals](http://swcarpentry.github.io/git-novice/). It is aimed
     primarily to researchers and scientists like us, and introduces
@@ -190,10 +195,11 @@ me along the way
 2. **Structure your Python project in a modular fashion**
 
     For most of us in Machine Learning or Data Science, our introduction to
-    Python programming is often through Jupyter notebooks. That is fine, but
-    for software development, we should learn how to slowly migrate our scripts
-    into a more modular structure. That means pure Python `.py` files, properly
-    directed directories, and well-defined dependencies.
+    Python programming is through Jupyter notebooks. That is fine for ad-hoc
+    analysis and reporting, but for software development, we should learn how
+    to slowly migrate our scripts into a modules. That means
+    pure Python `.py` files, properly directed directories, and well-defined
+    dependencies.
 
     ![](/assets/png/data-science-swe/2_modularization.png){:width="450px"}  
     {: style="text-align: center;"}
@@ -202,7 +208,7 @@ me along the way
 
     - Learn different Python application layouts from this [Real Python
         tutorial](https://realpython.com/python-application-layouts/). For our
-        Machine Learning Service, we will ascribe to the [Flask
+        Machine Learning Service, we will follow the [Flask
         layout](https://realpython.com/python-application-layouts/#flask) (also
         applicable if we're using other web server libraries like FastAPI).
 
@@ -210,7 +216,7 @@ me along the way
         with internal
         packages](https://realpython.com/python-application-layouts/#application-with-internal-packages).
         In my opinion, it catches all use-cases if you want to write a library,
-        a web application, or a command-line tool. 
+        web application, or command-line tool. 
 
     - Learn from open-source project structures by including a sensible README,
         changelog, and documentation. I highly-recommend [Hitchhiker's Guide to
@@ -244,11 +250,11 @@ me along the way
         ```
 
     During this step, I also encourage you to write a small utility library for
-    the common functions that you use in your day-to-day. You can, for example,
-    extract all repeated functions from your Jupyter notebooks, refactor them,
-    and reuse them anywhere. After accomplishing all the activities at this
-    point, I'm confident that your software engineering skills have grown by a
-    lot!
+    the common functions that you use in your day-to-day work. You can, for
+    example, extract all functions that repeat often from your Jupyter
+    notebooks, refactor them, and reuse them anywhere. After accomplishing all
+    these activities, I'm confident that your software engineering skills will
+    have grown by a lot!
 
 3. **Learn how to write an API on top of your model using Flask or FastAPI**
 
@@ -281,8 +287,7 @@ me along the way
     [StackOverflow answer that highlights their
     differences](https://stackoverflow.com/questions/14703627/websockets-protocol-vs-http)&mdash;
     there's a latency advantage for web-sockets, but I think for our most
-    common use-case&mdash;and by way of introduction&mdash; learning HTTP is
-    enough. 
+    common use-case, learning HTTP is enough. 
 
 
 4. **"Containerize" your application using Docker**
@@ -305,7 +310,7 @@ me along the way
     Image), it's always the same food all throughout (same Image). The latter
     provides you with a "sandbox kitchen" where only the ingredients you
     specified exist: I only need a pot, chicken, vinegar, and soy sauce.
-    There's no chance that an extra ingredient, say sugar, that will
+    There's no chance that an extra ingredient, say sugar, will
     inadvertently mess up my cooking. 
 
     Key Activities:
@@ -318,7 +323,7 @@ me along the way
         to get the fundamentals right. Also, before you start, I
         highly-recommend this [Docker
         roadmap](https://vsupalov.com/docker-learning-roadmap/) to fill-in your
-        learning needs regarding the technlogy. Vladislav's blogpost is also
+        learning needs regarding the technology. Vladislav's blogpost is also
         rich with information about anything Docker.
     
     - Learn basic docker commands by playing on the Python Docker image. More
@@ -350,7 +355,7 @@ me along the way
         regarding these directives.
 
     * **Multi-stage builds**, this mostly solves the problem of keeping the
-        image sizes down. It is a good-to-know, and a cool "trick" to show-off
+        image sizes down. It's good-to-know, and a cool "trick" to show-off
         Docker mastery. My go-to reference is always the [official docs](https://docs.docker.com/develop/develop-images/multistage-build/).
 
     * **Docker Compose**. How about running multiple containers at once?
@@ -505,5 +510,5 @@ Lastly, I highly-recommend the following resources for general guidance:
 * **I am an academic, will this be useful?**: I absolutely believe so! Open
     science runs on the idea of reproducibility&mdash; not only your paper is
     accessible, but also the ingredients and the process from which your
-    results where generated. I think learning Docker or properly modularizing
+    results were generated. I think learning Docker or properly modularizing
     your code can go a long way.
