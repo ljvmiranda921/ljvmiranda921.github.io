@@ -257,6 +257,9 @@ me along the way
     for other users (computers or humans), to talk to our machine learning
     app.
 
+    ![](/assets/png/data-science-swe/3_api.png){:width="550px"}  
+    {: style="text-align: center;"}
+
     Key Activities:
 
     - Learn [`requests`](https://requests.readthedocs.io/en/master/), a
@@ -286,6 +289,10 @@ me along the way
     After structuring your Python application in Step #2, and having your server
     up-and-running in Step #3, the next step is to package your application
     with all its dependencies using [Docker](https://www.docker.com/resources/what-container). 
+
+
+    ![](/assets/png/data-science-swe/4_docker.png){:width="550px"}  
+    {: style="text-align: center;"}
 
     Docker images are built using a [Dockerfile](https://docs.docker.com/engine/reference/builder/#:~:text=A%20Dockerfile%20is%20a%20text,command%2Dline%20instructions%20in%20succession.)&mdash; think of it as a recipe.
     It contains a series of steps to install all necessary dependencies (gather
@@ -362,6 +369,10 @@ me along the way
     *server in the Cloud*!
 
 
+    ![](/assets/png/data-science-swe/5_deploy.png){:width="550px"}  
+    {: style="text-align: center;"}
+
+
     Key Activities:
 
     - Choose the platform of your choice. 
@@ -426,6 +437,9 @@ At this point, I can say that you are already productive and more ready to
 collaborate with software engineers in your team. If you're an academic
 researcher, you can probably see how these software practices can be used to
 improve your research workflow. Congratulations!
+
+![](/assets/png/data-science-swe/conclusion.png){:width="550px"}  
+{: style="text-align: center;"}
 
 Obviously, this is not a weekend project. Some of these might take time, and
 you might learn one thing before the other. More importantly, some steps can
