@@ -12,16 +12,16 @@ website powered by [Jekyll](https://jekyllrb.com/).
 Make sure that you have bundler and Ruby in your system:
 
 ```shell
-$ sudo gem install bundler
+gem install bundler
 ```
 
 Then, build the dependencies and call `jekyll serve`
 
 ```shell
-$ git clone https://github.com/ljvmiranda921/ljvmiranda921.github.io.git 
-$ cd ljvmiranda921.github.io/
-$ bundle install
-$ bundle exec jekyll serve --livereload
+git clone https://github.com/ljvmiranda921/ljvmiranda921.github.io.git 
+cd ljvmiranda921.github.io/
+bundle install
+bundle exec jekyll serve --livereload
 ```
 
 The page, by default, should be running at [localhost:4000](localhost:4000)
