@@ -139,7 +139,7 @@ software engineering:
     janky scripts here and there, can aid you in your research in the long-run.
     There's a lot of things we can learn from software engineering to enhance
     our research workflows. For example, [I used containers, version-control,
-    and LaTeX to write my Masters thesis before](http://localhost:4000/notebook/2018/02/04/continuous-integration-for-latex/)! 
+    and LaTeX to write my Masters thesis before](http://ljvmiranda921.github.io/notebook/2018/02/04/continuous-integration-for-latex/)! 
     The opportunities are endless!
 
     <!-- Illustration of a person with a toolbox here -->
