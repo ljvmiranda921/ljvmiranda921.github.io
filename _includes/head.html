@@ -4,16 +4,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="twitter:card" content="summary_large_image" />
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@ljvmiranda921" />
   <meta name="twitter:title" content="{{ page.title }}" />
   <meta name="twitter:site" content="@ljvmiranda921" />
   <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
   {% if page.header-img %}
-    <meta name="twitter:image" content="{{ site.url }}{{ page.header-img }}" />
-    <meta property="og:image" content="{{ site.url }}/{{ page.header-img }}" />
+    <meta property="og:image" content="{{ site.url }}{{ page.header-img }}" />
     <meta property="og:image:height" content="474">
     <meta property="og:image:width" content="905">
   {% else %}
