@@ -11,7 +11,7 @@
   <meta name="twitter:creator" content="@ljvmiranda921">
   <meta name="twitter:title" content="{{ page.title }}">
   <meta name="twitter:site" content="@ljvmiranda921">
-  <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+  <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   {% if page.header-img %}
     <meta property="og:image" content="{{ site.url }}{{ page.header-img }}" />
     <meta property="og:image:height" content="474">
