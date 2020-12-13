@@ -14,7 +14,6 @@
   <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   {% if page.header-img %}
     <meta property="og:image" content="{{ site.url }}/{{ page.header-img }}" />
-    <meta name="twitter:image" content="{{ site.url }}/{{ page.header-img }}" />
   {% else %}
     <meta property="og:image" content="{{ site.url }}/assets/header.png" />
     <meta property="og:image:height" content="474">
