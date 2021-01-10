@@ -53,21 +53,27 @@ The Controller, in my opinion, is Pico-8's  standard library. It accepts
 keyboard or controller input, and transforms them into something understandable
 by the model.
 
-<!-- an illustration might work -->
+<!-- TODO: an illustration of MVC might work -->
+
+
+### Pointers to functions
+<!-- TODO: talk about passing pointers to a function -->
+<!-- One technique I often see in Pico-8 code is the use of function pointers. -->
+
 
 ## Basic sprite movement
 
 First, let's introduce our sprite character, Picollino! The imagery of
 the word evokes a derpy tomato so we'll stick with that:
 
-<!-- insert sprite image with animation -->
+<!-- TODO: insert sprite image with animation -->
 
 Picollino's movement will follow the style of an overworld adventure game
 rather than a platformer. Thus, we don't need to factor in gravity or friction.
 In an overworld grid, our character's position is defined by its
 **tile-coordinates** $$x$$ and $$y$$. 
 
-<!-- aseprite image that differentiates tile and pixel coordinates -->
+<!-- TODO: aseprite image that differentiates tile and pixel coordinates -->
 
 Token optimization aside, let's define a function that initializes a player:
 
@@ -173,11 +179,114 @@ function draw_game()
 end
 ```
 
+<!-- TODO: insert pico8-js of current output -->
+
+## Smoother tile transition
+
+Picollino's movement still looks a bit jarring: he seems to "teleport" from one
+tile to another. This is because we are moving 8 pixels right away, a large
+distance in my opinion. I'll improve animation by doing the following:
+1. Flip the sprite when moving to the opposite direction
+2. Add a "smoother" to ease the transition from one tile to the next.
+3. Sprite animation
+
+### Flip sprite based on direction
+
+The first one is easy. Recall that in our `make_player()` function, we have
+a `flip` attribute. We set that as `true` when our sprite is moving to the left,
+i.e. when `dx < 0`. We'll update the `move_player()` function to account for
+this change.
+
+```lua
+-- move_player updates player coordinates
+-- @param dx change in the x-axis 
+-- @param dy change in the y-axis
+function move_player(dx, dy)
+    local destx, desty = p.x + dx * 8, p.y + dy * 8
+    ------------------NEW CODE---------------------
+    if dx < 0 then
+        p.flip = true
+    elseif dx > 0 then 
+        p.flip = false
+    end
+    -----------------------------------------------
+    p.x, p.y = destx, desty
+end
+```
+
+We use `elseif` instead of `else` so that the sprite won't immediately
+face `right` if our last action was `left` and we decide to move `up` or
+`down`.
+
+### Tile transition
+
+In order to understand LazyDev's technique for smoother tile transition,  let
+me  illustrate an example. Suppose we want to move a sprite to the right from
+tile $$T(3,2)$$ to $$(4,2)$$. In pixel coordinates, we are essentially
+"teleporting" from $$P(24,16)$$ to $$P(32,16)$$, a huge distance that doesn't
+look like walking. Instead, we want to traverse the $$x$$ axis in small
+increments, i.e. $$24, 24.8, 25.6, 26.4, \ldots$$, until it reaches its
+destination.
+
+<!-- TODO: insert gif -->
+
+We accomplish this by defining an offset that will incrementally move the
+sprite from its old coordinate to the new one, i.e. $$P_{x_2,y_2} = P_{x_1,y_1} + o_{x,y}$$. The rate in which the offset updates is controlled by a new
+variable, $$p_t$$, that dictates how fast the transition will be animated.
+
+Because we want to save tokens, we precompute the destination and subtract the
+offset as we go along. So in our earlier example, we will set $$P_{x,y}$$ to
+its new value, $$(32,16)$$, and perform subtraction when calling the `spr()`
+function. Because we started from $$(24,16)$$, we subtract $$8$$ from $$32$$,
+then $$8-o_x$$, and so on and so forth until $$o_x=0$$.
+
+To further clarify, I'll write some equations and draw a table of values. The
+offset $$o_{x,y}$$ starts with a value $$s_{x,y}$$ and grows smaller as it
+reaches $$0$$:
+
+$$
+o_{x,y} = s_{x,y} * (1 - p_t), s_{x,y} = -d_{x,y}
+$$
+
+where $$s_{x,y}$$ is the start value for the offset. The transition speed,
+$$p_t$$ is then defined and updated as:
+
+$$
+p_t \Leftarrow min(p_t+\delta,1), p_0 = 0
+$$
+
+where $$\delta$$ controls how fast it can be. Notice that it is clipped to
+$$1$$. To be honest, I find it a bit convoluted, but I think these are
+optimizations to reduce token count, a very important resource in Pico-8. 
+
+Below is a table of values so you can see the relationship between $$p_t$$, the
+offset $$o_{x,y}$$, and what is actually drawn or sent to the `spr()` function.
+Note that here, we're moving in pixel coordinates from $$(24,16)$$ to
+$$(32,16)$$, with $$\delta=0.1$$ and $$s_x=-dx*8=-1*8=-8$$. I'll only list down
+the values in the $$x$$-axis, because we only move in that direction:
+
+| $$p_t$$ | 0.0    | 0.1      | 0.2      | 0.3      | 0.4      | 0.5    | 0.6      | ... | 1.0    |
+|---------|--------|----------|----------|----------|----------|--------|----------|-----|--------|
+| $$o_x$$ | -8     | -7.2     | -6.4     | -5.6     | -4.8     | -4.0   | -3.2     | ... | 0      |
+| `spr()` | **24** | **24.8** | **25.6** | **26.4** | **27.2** | **28** | **28.8** | ... | **32** |
+
+<!-- implementation in code -->
+
+
+
+
+
+
+
+
+
+<!-- do the transition first before going to the sprite animation -->
+
+
 ### Sprite animation
 
 
 
-## Smoother tile transition
 
 
 ## Input buffering
