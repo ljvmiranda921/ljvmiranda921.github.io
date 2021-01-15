@@ -60,6 +60,36 @@ by the model.
 <!-- TODO: talk about passing pointers to a function -->
 <!-- One technique I often see in Pico-8 code is the use of function pointers. -->
 
+One pattern that I often see in Pico-8 code is the use of *function pointers*.
+You can assign a function name to a variable, and call it in another line. For
+example:
+
+```lua
+function move_entity()
+    -- calls whatever function 
+    -- is referenced into _mov
+    _mov()
+end
+
+function move_player()
+   if path_is_clear then
+        _mov = move_normal
+   elseif path_is_blocked then
+        _mov = move_with_bump
+   end
+end
+```
+
+The `move_entity` function just calls a generic `_mov`, whatever its definition
+will be. How `_mov` behaves is manipulated by the `move_player` function. Based
+on which condition is true, `_mov` can be `move_normal` or `move_with_bump`.
+Because the game-loop always calls `_update` for every tick, then the move
+conditions are always checked.
+
+This technique is often used on the built-in `_update()` and `_draw()`
+functions. My guess is that it makes the game-loop functions much cleaner.
+My worry is that it may be a bit harder to track what's happening, but perhaps
+this technique lessens the tokens we'll write in the end.
 
 ## Basic sprite movement
 
@@ -222,7 +252,7 @@ face `right` if our last action was `left` and we decide to move `up` or
 
 In order to understand LazyDev's technique for smoother tile transition,  let
 me  illustrate an example. Suppose we want to move a sprite to the right from
-tile $$T(3,2)$$ to $$(4,2)$$. In pixel coordinates, we are essentially
+tile $$T(3,2)$$ to $$T(4,2)$$. In pixel coordinates, we are essentially
 "teleporting" from $$P(24,16)$$ to $$P(32,16)$$, a huge distance that doesn't
 look like walking. Instead, we want to traverse the $$x$$ axis in small
 increments, i.e. $$24, 24.8, 25.6, 26.4, \ldots$$, until it reaches its
@@ -236,12 +266,10 @@ variable, $$p_t$$, that dictates how fast the transition will be animated.
 
 Because we want to save tokens, we precompute the destination and subtract the
 offset as we go along. So in our earlier example, we will set $$P_{x,y}$$ to
-its new value, $$(32,16)$$, and perform subtraction when calling the `spr()`
-function. Because we started from $$(24,16)$$, we subtract $$8$$ from $$32$$,
-then $$8-o_x$$, and so on and so forth until $$o_x=0$$.
+its new value, $$P(32,16)$$, and perform subtraction when calling the `spr()`
+function. 
 
-To further clarify, I'll write some equations and draw a table of values. The
-offset $$o_{x,y}$$ starts with a value $$s_{x,y}$$ and grows smaller as it
+The offset $$o_{x,y}$$ starts with a value $$s_{x,y}$$ and grows smaller as it
 reaches $$0$$:
 
 $$
@@ -261,14 +289,14 @@ optimizations to reduce token count, a very important resource in Pico-8.
 
 Below is a table of values so you can see the relationship between $$p_t$$, the
 offset $$o_{x,y}$$, and what is actually drawn or sent to the `spr()` function.
-Note that here, we're moving in pixel coordinates from $$(24,16)$$ to
-$$(32,16)$$, with $$\delta=0.1$$ and $$s_x=-dx*8=-1*8=-8$$. I'll only list down
+Note that here, we're moving in pixel coordinates from $$P(24,16)$$ to
+$$P(32,16)$$, with $$\delta=0.1$$ and $$s_x=-dx*8=-1*8=-8$$. I'll only list down
 the values in the $$x$$-axis, because we only move in that direction:
 
-| $$p_t$$ | 0.0    | 0.1      | 0.2      | 0.3      | 0.4      | 0.5    | 0.6      | ... | 1.0    |
+| $$p_t$$, transition speed | 0.0    | 0.1      | 0.2      | 0.3      | 0.4      | 0.5    | 0.6      | ... | 1.0    |
 |---------|--------|----------|----------|----------|----------|--------|----------|-----|--------|
-| $$o_x$$ | -8     | -7.2     | -6.4     | -5.6     | -4.8     | -4.0   | -3.2     | ... | 0      |
-| `spr()` | **24** | **24.8** | **25.6** | **26.4** | **27.2** | **28** | **28.8** | ... | **32** |
+| $$o_x$$, size of move-offset | -8     | -7.2     | -6.4     | -5.6     | -4.8     | -4.0   | -3.2     | ... | 0      |
+| `spr()`, drawn on-screen | **24** | **24.8** | **25.6** | **26.4** | **27.2** | **28** | **28.8** | ... | **32** |
 
 <!-- implementation in code -->
 
