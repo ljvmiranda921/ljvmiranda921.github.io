@@ -57,8 +57,6 @@ by the model.
 
 
 ### Pointers to functions
-<!-- TODO: talk about passing pointers to a function -->
-<!-- One technique I often see in Pico-8 code is the use of function pointers. -->
 
 One pattern that I often see in Pico-8 code is the use of *function pointers*.
 You can assign a function name to a variable, and call it in another line. For
@@ -89,7 +87,30 @@ conditions are always checked.
 This technique is often used on the built-in `_update()` and `_draw()`
 functions. My guess is that it makes the game-loop functions much cleaner.
 My worry is that it may be a bit harder to track what's happening, but perhaps
-this technique lessens the tokens we'll write in the end.
+this technique lessens the tokens we'll write in the end. In this regard, our
+game-loop will look like this:
+
+```lua
+function _init()
+   -- all init functions 
+   _upd=update_game
+   _drw=draw_game
+end
+
+function _update()
+    _upd()
+end
+
+function _draw()
+    _drw()
+end
+```
+
+The `_update` and `_draw` functions will repeatedly call whatever `_upd` and
+`_drw` references to respectively. Later on, we can tell the program that
+`_upd` must update the game environment (`_update_game`) or update the player
+(`_update_pturn`). All this thanks to Lua's ability to pass functions as
+pointers.
 
 ## Basic sprite movement
 
@@ -298,17 +319,56 @@ the values in the $$x$$-axis, because we only move in that direction:
 | $$o_x$$, size of move-offset | -8     | -7.2     | -6.4     | -5.6     | -4.8     | -4.0   | -3.2     | ... | 0      |
 | `spr()`, drawn on-screen | **24** | **24.8** | **25.6** | **26.4** | **27.2** | **28** | **28.8** | ... | **32** |
 
-<!-- implementation in code -->
+
+To accomplish this, we define a function, `update_pturn`, that signals the
+start of a player turn. We time this turn by $$p_t$$, that increments by
+$$\delta$$ until it reaches $$1$$. Once $$p_t=1$$, we remove control from the
+player and update the game via `update_game`:
+
+```lua
+function update_pturn(delta)
+    p_t = min(p_t+delta, 1) -- increment timer
+    if p_t == 1 then  -- if timer is done...
+        -- ...end player turn and update game
+        _upd=update_game
+    end
+end
+```
+
+Let's initialize `p_t` in our `_init` function:
+
+```lua
+function _init()
+    ------------------NEW CODE---------------------
+    p = make_player()
+    p_t=0
+    -----------------------------------------------
+    _upd=update_game
+    _drw=draw_game
+end
+```
+
+We move during a player's turn, so let's add in a generic function, `p_mov`. 
+For now, it won't care whatever the implementation is, it will just run
+whatever movement function is passed to it:
+
+```lua
+function update_pturn(delta)
+    p_t = min(p_t+delta, 1)
+    ------------------NEW CODE---------------------
+    p_mov()
+    -----------------------------------------------
+    if p_t == 1 then
+        _upd=update_game
+    end
+end
+```
 
 
 
 
 
 
-
-
-
-<!-- do the transition first before going to the sprite animation -->
 
 
 ### Sprite animation
