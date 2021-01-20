@@ -138,10 +138,7 @@ function make_player()
         y=32,
         -- animation attributes
         flip=false,
-        anim={
-            idle={1,2},
-            walk={3,4},
-        }
+        anim={1,2,3,4}
     } 
     return p
 end
@@ -326,7 +323,8 @@ $$\delta$$ until it reaches $$1$$. Once $$p_t=1$$, we remove control from the
 player and update the game via `update_game`:
 
 ```lua
-function update_pturn(delta)
+function update_pturn()
+    delta=0.1
     p_t = min(p_t+delta, 1) -- increment timer
     if p_t == 1 then  -- if timer is done...
         -- ...end player turn and update game
@@ -335,7 +333,8 @@ function update_pturn(delta)
 end
 ```
 
-Let's initialize `p_t` in our `_init` function:
+Let's initialize `p_t` in our `_init` function. It starts from $$0$$ and it's
+capped at $$1$$:
 
 ```lua
 function _init()
@@ -348,12 +347,13 @@ function _init()
 end
 ```
 
-We move during a player's turn, so let's add in a generic function, `p_mov`. 
-For now, it won't care whatever the implementation is, it will just run
-whatever movement function is passed to it:
+We move during a player's turn, so let's add in a generic function, `p_mov`.
+Later on, we'll pass function pointers to `p_mov` so that we can control the
+type of movement it will execute:
 
 ```lua
-function update_pturn(delta)
+function update_pturn()
+    delta=0.1
     p_t = min(p_t+delta, 1)
     ------------------NEW CODE---------------------
     p_mov()
@@ -364,14 +364,97 @@ function update_pturn(delta)
 end
 ```
 
+We just need to update the `move_player` function so that all movement
+initialization steps are defined here. Later on, we'll implement `mov_walk` to
+define the incremental transition discussed in the table of values above:
+
+```lua
+function move_player(dx,dy)
+    -- remove multiplier, move it to draw
+    local destx, desty = p.x + dx, p.y + dy 
+    if dx < 0 then
+        p.flip = true
+    elseif dx > 0 then 
+        p.flip = false
+    end
+
+    ------------------NEW CODE---------------------
+    -- move player by dx, dy [-1, 0, 1]
+    p.x += dx  
+    p.y += dy
+    -- previous location after moving is just inverse
+    p.sox, p.soy = -dx * 8, -dy * 8
+    p.ox, p.oy = p.sox, p.soy
+    p_t = 0
+    -- update function pointers
+    _upd = update_pturn  -- start player turn and...
+    p_mov = mov_walk  -- ... move by walking
+    -----------------------------------------------
+end
+
+```
+
+Now, `mov_walk` performs the computation we had above. As `p_t` increases from
+$$0\Rightarrow 1$$, the offsets `p.ox` and `p.oy` approach zero. We'll also
+update our `draw_game` function to make use of our offsets:
 
 
+```lua
+function mov_walk()
+    p.ox=p.sox * (1-p_t)
+    p.oy=p.soy * (1-p_t)
+end
 
+function draw_game()
+    cls(0)
+    map()
+    spr(1, p.x*8+p.ox, p.y*8+p.oy, 1, 1, p.flip)
+    -- p.x, p.y are already in the new position (destination), but instead,
+    -- we draw its offset
+end
+```
 
+Again, `p.x` and `p.y` are already in their new positions after moving
+(destination). However, we don't want to draw this position immediately. We
+draw the new position plus offset that starts from `-8` (i.e., the previous
+position) until it reaches `0` (i.e., the new/current position). Let's look at
+the sprite movement, observe that it's much smoother now!
 
-
+<!-- TODO: maybe gif of comparison of without offset and with offset -->
 
 ### Sprite animation
+
+Let's just do a simple animation for Picollino:
+
+<!-- TODO: show frame-by-frame difference -->
+
+
+In order for the program to cycle through these frames, we need to define a
+"global" timer `t`. Based on the timer value, the frame number will change. 
+We use a simple trick to cycle across frames in `p.anim`: by mod-dividing the value
+of `t` by the length of our animation array, we can get all animation frames:
+
+```lua
+index = t%#ani + 1
+```
+So, even if we're far ahead of the animation timer (say, `t=2000+`), the index
+of `p.anim` will still be within range. We can control the transition speed by
+dividing `t` by some number. Let's modify the equation above and show a table
+of values for illustration:
+
+```lua
+function get_frame(ani)
+    rate=2 -- controls transition speed
+    return ani[flr(t/rate)%#ani+1]
+end
+```
+
+| t             | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---------------|---|---|---|---|---|---|---|---|---|
+| `t%#ani+1`    | 1 | 2 | 3 | 4 | 1 | 2 | 3 | 4 | 1 |
+| `get_frame()` | 1 | 1 | 2 | 2 | 3 | 3 | 4 | 4 | 1 |
+
+
 
 
 
