@@ -455,11 +455,92 @@ end
 | `get_frame()` | 1 | 1 | 2 | 2 | 3 | 3 | 4 | 4 | 1 |
 
 
-
-
-
-
-
 ## Input buffering
+
+Notice how the sprite only registers your move once its turn is done. This
+means that when you try to input two commands in a row, only one of them will
+be executed. It's not good for *game feel*, thus, we can solve this
+quality-of-life issue by buffering the inputs.
+
+The way input-buffering works is that we have a "buffer" that stores whatever
+key we pressed while the player turn (i.e., `update_pturn`) is still active. 
+The input stored in this buffer is then executed once `update_game` is called.
+Its basic form is:
+
+```lua
+if buffer==-1 then
+        buffer=get_btn()
+end
+exec_btn(buffer) -- only called in update_game
+```
+
+We just need to update our `exec_btn` function to accommodate the case when
+buffer is untouched (`buffer==-1`):
+
+```lua
+-- exec_btn handles button calls
+-- @param b is the button number from pico8.fandom.com/wiki/Btn
+function exec_btn(b)
+    -- preload (L=0,R=1,U=2,D=3)
+    local dirx = {-1,1,0,0}
+    local diry = {0,0,-1,1}
+
+    ------------------NEW CODE---------------------
+    if butt<0 then return end
+    -----------------------------------------------
+    if b>=0 and b<4 then
+        move_player(dirx[b+1], diry[b+1])
+        return
+    end
+end
+```
+
+Lastly, we implement the `get_btn` function:
+
+```lua
+function get_btn()
+    for i=0,5 do
+        if btnp(i) then -- if button is pressed...
+            return i -- return that
+        end
+    end
+    return -1 -- else, return buffer default val
+end
+```
+
+We just put this buffer in both our `update_game` and `update_pturn`
+functions. Again, note that the execution of the input will only happen in
+`update_game`:
+
+```lua
+function update_game()
+    if buffer==-1 then
+        buffer=get_btn()
+    end
+    exec_btn(buffer) -- execution only happens here
+    buffer=-1
+end
+```
+
+For `update_pturn`, we just want to fill the buffer in case the player
+decides to press something while the sprite is still moving:
+
+```lua
+function update_pturn()
+    if buffer==-1 then
+        buffer=get_btn()
+    end
+    --- other movement functions...
+end
+```
+
+*Et voilà!* We now have input buffering! Feel the difference:
+
+<!--- TODO: Show difference -->
+
+
+## Conclusion
+
+
 
 
