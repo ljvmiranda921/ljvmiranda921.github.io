@@ -541,6 +541,13 @@ end
 
 ## Conclusion
 
+In this notebook, I learned alot about the basics of Pico-8 movement. Now I can
+move a sprite in four directions, perform smoother tile transitions, and
+improve game feel by buffering inputs. To be honest I still have a long way to
+go, but I think this is a good start! 
 
-
-
+I write these notes mostly for myself so I apologize in advance if there are
+any haphazard equations or buggy code in the post. If you wish to correct them,
+simply [open-up a Pull
+Request](https://github.com/ljvmiranda921/ljvmiranda921.github.io) so that I
+can update them immediately.
