@@ -30,18 +30,25 @@ improve game feel*. This includes the following:
 * [**Input buffering**](#input-buffering). How to improve game feel so that
   button inputs are rendered properly.
 
-These are my study notes while going through LazyDev's roguelike tutorial, so
-be sure to check that one out! I'll try to post my code on Github and build
+These are my study notes while going through [LazyDev's roguelike
+tutorial](https://youtube.com/playlist?list=PLea8cjCua_P3LL7J1Q9b6PJua0A-96uUS),
+so be sure to check that one out! I'll try to post my code on Github and build
 some minimal examples in the process. Lastly, these posts assume a basic
 knowledge of Pico-8 (e.g., game loop, basic Lua, etc.), so I'll skip over some
 parts.
 
 ## Game loop revisited
 
+
 Pico-8's primary mechanism is defined by the [game
 loop](https://pico-8.fandom.com/wiki/GameLoop). I see this to be akin to the
 [model-view-controller (MVC) pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) in software design (with the addition of
 `_init()`)
+
+![](/assets/png/pico8-move/MVC.gif){:width="320px"}  
+{: style="text-align: center;"}
+
+
 - **`_init()`** is called once. Sets up the data structures and initializes
     all variables.
 - **`_update()`** is the Model. All compute, logic, and rules are defined
@@ -53,7 +60,6 @@ The Controller, in my opinion, is Pico-8's  standard library. It accepts
 keyboard or controller input, and transforms them into something understandable
 by the model.
 
-<!-- TODO: an illustration of MVC might work -->
 
 
 ### Pointers to functions
@@ -117,14 +123,13 @@ pointers.
 First, let's introduce our sprite character, Picollino! The imagery of
 the word evokes a derpy tomato so we'll stick with that:
 
-<!-- TODO: insert sprite image with animation -->
+![](/assets/png/pico8-move/Picollino.gif){:width="200px"}  
+{: style="text-align: center;"}
 
 Picollino's movement will follow the style of an overworld adventure game
 rather than a platformer. Thus, we don't need to factor in gravity or friction.
 In an overworld grid, our character's position is defined by its
 **tile-coordinates** $$x$$ and $$y$$. 
-
-<!-- TODO: aseprite image that differentiates tile and pixel coordinates -->
 
 Token optimization aside, let's define a function that initializes a player:
 
@@ -227,7 +232,9 @@ function draw_game()
 end
 ```
 
-<!-- TODO: insert pico8-js of current output -->
+<p align="center"><iframe src="/assets/png/pico8-move/basic_movement.html" title="description" height="500" width="500" display="block"></iframe></p>
+<p align="center">Basic four-directional movement. Press the arrow keys!</p>
+
 
 ## Smoother tile transition
 
@@ -276,7 +283,8 @@ look like walking. Instead, we want to traverse the $$x$$ axis in small
 increments, i.e. $$24, 24.8, 25.6, 26.4, \ldots$$, until it reaches its
 destination.
 
-<!-- TODO: insert gif -->
+![](/assets/png/pico8-move/OffsetCompare.gif){:width="400px"}  
+{: style="text-align: center;"}
 
 We accomplish this by defining an offset that will incrementally move the
 sprite from its old coordinate to the new one, i.e. $$P_{x_2,y_2} = P_{x_1,y_1} + o_{x,y}$$. The rate in which the offset updates is controlled by a new
@@ -420,13 +428,18 @@ draw the new position plus offset that starts from `-8` (i.e., the previous
 position) until it reaches `0` (i.e., the new/current position). Let's look at
 the sprite movement, observe that it's much smoother now!
 
-<!-- TODO: maybe gif of comparison of without offset and with offset -->
+![](/assets/png/pico8-move/OffsetCompare.gif){:width="400px"}  
+{: style="text-align: center;"}
+
+<p align="center"><iframe src="/assets/png/pico8-move/offset_movement.html" title="description" height="500" width="500" display="block"></iframe></p>
+<p align="center">Basic four-directional movement with offset. Press the arrow keys!</p>
 
 ### Sprite animation
 
 Let's just do a simple animation for Picollino:
 
-<!-- TODO: show frame-by-frame difference -->
+![](/assets/png/pico8-move/AnimationSeq.png){:width="400px"}  
+{: style="text-align: center;"}
 
 
 In order for the program to cycle through these frames, we need to define a
@@ -536,8 +549,8 @@ end
 
 *Et voilà!* We now have input buffering! Feel the difference:
 
-<!--- TODO: Show difference -->
-
+<p align="center"><iframe src="/assets/png/pico8-move/inputbuffer.html" title="description" height="500" width="500" display="block"></iframe></p>
+<p align="center">Basic four-directional movement with offset and input-buffering. Press the arrow keys!</p>
 
 ## Conclusion
 
