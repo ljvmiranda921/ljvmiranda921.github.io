@@ -29,7 +29,7 @@ However, I realized that there's a better way to solve this:
 
 <!-- Insert some fun pixel art on how it works -->
 
-Yup, the oldest trick in the book. It solves our headaches because:
+Yup, the oldest trick in the book. It solved my headaches because:
 
 * **Downtime is reduced from minutes to milliseconds.** Since I never touch nor
     delete *main* in the entire duration of the ingestion process, then data is
@@ -39,6 +39,39 @@ Yup, the oldest trick in the book. It solves our headaches because:
     success-signal in the ingestion process, I can write some logic to avoid
     copying over the *main* graph in case of failure.
 
+
+## Some implementation
+
+As it turns out, each graph is stored under a single Redis key! This means you can
+use most key operations from Redis to Redisgraph graphs. For me, I take
+advantage of the [`RENAME`](https://redis.io/commands/rename) operation[^1]:
+
+
+```python
+from redis import Redis
+from redis.exceptions import ResponseError
+
+def rename_graph(redis_client: Redis, src_key: str, dest_key: str):
+    try:
+        redis_client.rename(src_key, dest_key)
+    except ResponseError as e:
+        print("RENAME operation failed")
+        raise
+    else:
+        print(f"Success! {src_key} -> {dest_key}")
+```
+
+Yeah, it's just one command, but it saved a lot of time! This function is then
+called whenever ingestion was successful. If it fails, then it logs an error
+but does nothing. Lastly, since the *staging* graph is ephemeral, you don't
+really need to set a permanent name for it. It can be as simple as
+`staging-{randomly_generated_uuid}`. 
+
+
+
+#### Footnotes
+
+[^1]: You can also use [`COPY`](https://redis.io/commands/copy) with `REPLACE`, but it doesn't exist yet in my Redisgraph version (2.2.13, Redis v6.0.5)
 
 
 
