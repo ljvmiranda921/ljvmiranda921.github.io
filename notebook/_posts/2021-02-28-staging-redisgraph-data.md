@@ -67,6 +67,12 @@ but does nothing. Lastly, since the *staging* graph is ephemeral, you don't
 really need to set a permanent name for it. It can be as simple as
 `staging-{randomly_generated_uuid}`. 
 
+### Conclusion
+
+Yup, saved a lot of headaches. There may be other ways to solve the same
+problem: do staging on the data-side, use `COPY` with `REPLACE` and have the
+staging graph `EXPIRE`, and more! There may be three or four people who will
+have the same problems as I did, hope this short note helps you out!
 
 
 #### Footnotes
