@@ -12,6 +12,7 @@ tags: [redis, redisgraph]
 > Sometimes blogging means lots of long form essays that take weeks to write and drop lots of wisdom.
 > However, many times blogging is just keeping track of a fix for a nagging problem. There may just be 5 or 6 of us with this issue, but if you're that person, this blog post is for you! Welcome to the solving of the issue you just googled for ([S. Hanselman](https://www.hanselman.com/blog/fix-for-elgato-key-light-not-found-by-control-center)).
 
+## Problem
 
 Here's a quick-fix for a nagging ingestion problem that I had for a few months.
 
@@ -22,6 +23,8 @@ works, but there are two problems:
 * If ingestion fails, the process must be rerun manually.
 
 <!-- Insert some fun pixel art for the two problems -->
+
+## Solution
 
 However, I realized that there's a better way to solve this: 
 
@@ -43,7 +46,7 @@ Yup, the oldest trick in the book. It solved my headaches because:
     copying over the *main* graph in case of failure.
 
 
-## Some implementation
+### Quick implementation
 
 As it turns out, each graph is stored under a single Redis key! This means you can
 use most key operations from Redis to Redisgraph graphs. For me, I take
@@ -70,33 +73,18 @@ but does nothing. Lastly, since the *staging* graph is ephemeral, you don't
 really need to set a permanent name for it. It can be as simple as
 `staging-{randomly_generated_uuid}`. 
 
-### Conclusion
+What's also interesting is that even if my graph contains thousands of nodes,
+the `RENAME` operation takes only a few milliseconds. I may have expected it to
+be a bit longer but, well, what do I know.
 
-Yup, saved a lot of headaches. There may be other ways to solve the same
+## Conclusion
+
+Saved a lot of headaches. There may be other ways to solve the same
 problem: do staging on the data-side, use `COPY` with `REPLACE` and have the
-staging graph `EXPIRE`, and more! There may be three or four people who will
+staging graph `EXPIRE`, and more! There may be five or six people who will
 have the same problems as I did, hope this short note helps you out!
 
 
 #### Footnotes
 
 [^1]: You can also use [`COPY`](https://redis.io/commands/copy) with `REPLACE`, but it doesn't exist yet in my Redisgraph version (2.2.13, Redis v6.0.5)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-> Sometimes blogging means lots of long form essays that take weeks to write and drop lots of wisdom.
-> However, many times blogging is just keeping track of a fix for a nagging problem. There may just be 5 or 6 of us with this issue, but if you're that person, this blog post is for you! Welcome to the solving of the issue you just googled for.
--->
