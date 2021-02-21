@@ -22,7 +22,6 @@ works, but there are two problems:
 * There is downtime during ingestion, and
 * If ingestion fails, the process must be rerun manually.
 
-<!-- Insert some fun pixel art for the two problems -->
 
 ## Solution
 
@@ -33,7 +32,7 @@ However, I realized that there's a better way to solve this:
 > the sink (*staging*). We only ingest on *staging*. Once successful, we simply
 > copy the contents of *staging* to *main*.
 
-<!-- Insert some fun pixel art on how it works -->
+![](/assets/png/redisgraph/redisgraph.gif)
 
 Yup, the oldest trick in the book. It solved my headaches because:
 
