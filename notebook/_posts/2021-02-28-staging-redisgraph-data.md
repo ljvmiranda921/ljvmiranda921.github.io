@@ -7,6 +7,8 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 tags: [redis, redisgraph]
+description: |
+    An obvious solution to a nagging ingestion problem
 ---
 
 > Sometimes blogging means lots of long form essays that take weeks to write and drop lots of wisdom.
