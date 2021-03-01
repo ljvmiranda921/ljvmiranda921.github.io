@@ -50,8 +50,10 @@ these cells are independent, can they still build something greater than the
 sum of their parts?*
 
 Units turn into groups, groups turn into systems, systems turn into complex
-ecosystems. Sprites-as-a-service is a product of this exploration. In
-this blogpost, I'll talk about how it came to be.
+ecosystems. Sprites-as-a-service is a product of this exploration. The creative
+process closely follows the evolution I described: one system built on top of
+the other, creating another system that self-propagates on its own. In this
+blogpost, I'll talk about how Sprites-as-a-service came to be. 
 
 
 ## Sprites-as-a-Service
