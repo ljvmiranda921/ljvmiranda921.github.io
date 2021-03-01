@@ -56,22 +56,41 @@ the other, creating another system that self-propagates on its own.
 
 In this post, I'll talk about how Sprites-as-a-service came to be. 
 
-
 ## Sprites-as-a-Service
 
+Looking back, I believe that there are three major developments in the creation
+of Sprites-as-a-Service. First, I laid the foundation by creating a framework
+for cellular automata called Seagull. Then, I used the said framework to
+explore the creation of sprites in Cellular Sprites. Finally, I refined my
+ideas in Cellular Sprites and improved it in Sprites-as-a-Service.
+
+<!-- show logos and maybe changes in UI -->
 
 
-### Seed(): building foundations through Seagull
+### Building foundations through Seagull
+
 
 <!-- talk about seagull -->
+<!-- THEME: building components -->
+<!-- why create a framework? I want to build a language that makes it easier to
+express how cellular automata is done-->
+<!-- talk about the API design -->
+<!-- thinking in terms of components -->
 
-### Explore(): thematic explorations with Cellular Sprites
+### Thematic explorations with Cellular Sprites
 
 <!-- 
 I know that I want interactivity and variability.
 -->
 
-### Optimize(): further refinement in Sprites-as-a-Service
+<!-- THEME: reusing these components to achieve a goal -->
+<!-- i want to express variability, self-generation -->
+<!-- inspiration from sprator -->
+<!-- discuss the algorithm -->
+<!-- use of gradient for coloring -->
+<!-- using streamlit -->
+
+### Further refinement in Sprites-as-a-Service
 
 <!--
 Sprites as a service as a refinement of cellular sprites
