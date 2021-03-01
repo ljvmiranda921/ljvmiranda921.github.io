@@ -58,6 +58,8 @@ blogpost, I'll talk about how Sprites-as-a-service came to be.
 
 ## Sprites-as-a-Service
 
+
+
 ### Seed(): building foundations through Seagull
 
 <!-- talk about seagull -->
