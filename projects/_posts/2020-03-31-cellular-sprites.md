@@ -18,21 +18,41 @@ excerpt: |
 ---
 
 > *March 2021*&mdash;This blogpost underwent **major revisions**. Instead of just describing what
-> Cellular Sprites is about, I want to talk about my **creative process** and
+> Cellular Sprites is about, I want to talk about my creative process and
 > motivation&mdash; from Seagull to Sprites-as-a-Service&mdash;and explore some
 > underlying themes in between.
 
 ## Introduction
 
-<!-- 
-- i want to explore the idea of multiple discrete entities working together to form
-something greater than the sum of its parts
-- self-organization
+There seems to be something magical about discrete units working together to
+achieve a common goal. It may be particles finding the most optimal solution in
+*Pyswarms*, or strangers collaborating to build open-source projects. Even if
+these elements act independently, the sum total of their actions contribute to
+a recognizable whole.
+
+<!-- TODO: ASSETS maybe GIF of particles from pyswarms, and open-source stuff -->
+
+I'd like to explore this idea further with Conway's Game of Life. It's
+considered as a  cellular automaton: there are well-defined states, discrete
+units or *cells*, and some form of self-propagation. In Game of Life, you have
+four rules:
+* Overpopulation: if a living cell is surrounded by more than three living cells, it dies.
+* Stasis: if a living cell is surrounded by two or three living cells, it survives.
+* Underpopulation: if a living cell is surrounded by fewer than two living cells, it dies.
+* Reproduction: if a dead cell is surrounded by exactly three cells, it becomes alive.
+
+<!-- TODO: CITE cite jakevdp blogpost -->
 
 
-Ender: sprites-as-a-service is a culmination of this exploration. 
+What piqued my interest the most is that given limited resources, the cells act
+independently and compete with one another. This opens up my question: *if
+these cells are independent, can they still build something greater than the
+sum of their parts?*
 
--->
+Units turn into groups, groups turn into systems, systems turn into complex
+ecosystems. Sprites-as-a-service is a product of this exploration. In
+this blogpost, I'll talk about how it came to be.
+
 
 ## Sprites-as-a-Service
 
@@ -61,6 +81,9 @@ Sprites as a service as a refinement of cellular sprites
 I admit that surfacing these themes were done in retrospect. I'm not fully
 conscious of this eventual goal when building sprites-as-a-service. Connecting
 dots in a line, etc.
+
+
+maybe talk a bit about procgen art.
 -->
 
 
