@@ -64,7 +64,7 @@ for cellular automata called Seagull. Then, I used the said framework to
 explore the creation of sprites in Cellular Sprites. Finally, I refined my
 ideas in Cellular Sprites and improved it in Sprites-as-a-Service.
 
-<!-- show logos and maybe changes in UI -->
+<!-- TODO: show logos and maybe changes in UI -->
 
 
 ### Building foundations through Seagull
@@ -88,24 +88,29 @@ from seagull.lifeforms import Pulsar
 board = sg.Board(size=(19,60))
 # "add" an automaton
 board.add(Pulsar(), loc=(1,1))
+board.add(Pulsar(), loc=(1,22))
+board.add(Pulsar(), loc=(1,42))
 # "run" the simulation
 sim = sg.Simulator(board)
 sim.run(sg.rules.conway_classic, iters=1000)
 ```
 
+<!-- TODO: show output of the code here -->
+
 I'm satisfied with the API design for I can see how expressive and extensible
 it can be for future use-cases. For example, even if I have a preset number of
 [Lifeforms](https://pyseagull.readthedocs.io/en/latest/api/seagull.lifeforms.html)
-available, there is still the generic "Custom" lifeform that allows variability
-for users.
+available, there is still the generic "Custom" lifeform that allows some variability.
 
+Building Seagull has taught me to think in terms of *objects* and
+*actions*: there is a Board (obj) that you add (action) Lifeforms (obj) onto,
+you feed (action) the Board (obj) into a Simulation, then you run (action) the
+Simulation. As I worked through the next iterations of my project, Seagull has
+been the fundamental unit of my creative process. Later on, these actions will
+be aggregated into higher-level abstractions. 
 
-<!-- talk about seagull -->
-<!-- THEME: building components -->
-<!-- why create a framework? I want to build a language that makes it easier to
-express how cellular automata is done-->
-<!-- talk about the API design -->
-<!-- thinking in terms of components -->
+<!-- TODO: illustration of adding something on the board, not pixelated! use inkscape
+-->
 
 ### Thematic explorations with Cellular Sprites
 
