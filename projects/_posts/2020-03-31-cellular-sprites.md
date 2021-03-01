@@ -69,6 +69,36 @@ ideas in Cellular Sprites and improved it in Sprites-as-a-Service.
 
 ### Building foundations through Seagull
 
+When I first started programming Game of Life, I noticed that there are none to
+few generic implementations of it in Python&mdash; most are one-off solutions.
+As someone with a penchant for creating tools, I built **Seagull**, a
+framework for defining Game of Life simulations. 
+
+I decided to create a framework because I want to have a language that makes it
+easier to express how cellular automata is done. To achieve this, it's
+important to think of "verbs" that map to the experimentation lifecycle:
+*create* a board, *put* an automaton, *run* the simulation, etc. These action
+words are then manifested through Seagull's API:
+
+```python
+import seagull as sg
+from seagull.lifeforms import Pulsar
+
+# "create" a board
+board = sg.Board(size=(19,60))
+# "add" an automaton
+board.add(Pulsar(), loc=(1,1))
+# "run" the simulation
+sim = sg.Simulator(board)
+sim.run(sg.rules.conway_classic, iters=1000)
+```
+
+I'm satisfied with the API design for I can see how expressive and extensible
+it can be for future use-cases. For example, even if I have a preset number of
+[Lifeforms](https://pyseagull.readthedocs.io/en/latest/api/seagull.lifeforms.html)
+available, there is still the generic "Custom" lifeform that allows variability
+for users.
+
 
 <!-- talk about seagull -->
 <!-- THEME: building components -->
