@@ -25,24 +25,22 @@ excerpt: |
 ## Introduction
 
 There seems to be something magical about discrete units working together to
-achieve a common goal. It may be particles finding the most optimal solution in
-*Pyswarms*, or strangers collaborating to build open-source projects. Even if
-these elements act independently, the sum total of their actions contribute to
-a recognizable whole.
+achieve a common goal. It may be particles finding the best solution in an
+optimization problem, or strangers collaborating to build open-source projects.
+Even if these elements act independently, the sum total of their actions
+contribute to a recognizable whole.
 
 <!-- TODO: ASSETS maybe GIF of particles from pyswarms, and open-source stuff -->
 
-I'd like to explore this idea further with Conway's Game of Life. It's
-considered as a  cellular automaton: there are well-defined states, discrete
-units or *cells*, and some form of self-propagation. In Game of Life, you have
-four rules:
+I'd like to explore this idea further with Conway's Game of Life. It's a type
+of cellular automata: there are well-defined states, discrete units or *cells*,
+and some form of self-propagation. In Game of Life, you have four rules:
 * Overpopulation: if a living cell is surrounded by more than three living cells, it dies.
 * Stasis: if a living cell is surrounded by two or three living cells, it survives.
 * Underpopulation: if a living cell is surrounded by fewer than two living cells, it dies.
 * Reproduction: if a dead cell is surrounded by exactly three cells, it becomes alive.
 
 <!-- TODO: CITE cite jakevdp blogpost -->
-
 
 What piqued my interest the most is that given limited resources, the cells act
 independently and compete with one another. This opens up my question: *if
@@ -52,8 +50,11 @@ sum of their parts?*
 Units turn into groups, groups turn into systems, systems turn into complex
 ecosystems. Sprites-as-a-service is a product of this exploration. The creative
 process closely follows the evolution I described: one system built on top of
-the other, creating another system that self-propagates on its own. In this
-blogpost, I'll talk about how Sprites-as-a-service came to be. 
+the other, creating another system that self-propagates on its own. 
+
+<!-- TODO: hierarchy and abstraction?? -->
+
+In this post, I'll talk about how Sprites-as-a-service came to be. 
 
 
 ## Sprites-as-a-Service
@@ -99,3 +100,6 @@ maybe talk a bit about procgen art.
   <p>Your browser does not support iframes.</p>
 </iframe>
 -->
+
+## References
+
