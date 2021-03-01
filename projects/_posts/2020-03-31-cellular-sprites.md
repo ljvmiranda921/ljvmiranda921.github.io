@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Postscript: Cellular Sprites"
+title: "Postscript: Sprites-as-a-Service"
 date: 2020-03-31
 category: projects
 comments: true
