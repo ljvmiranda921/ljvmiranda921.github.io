@@ -32,9 +32,9 @@ contribute to a recognizable whole.
 
 <!-- TODO: ASSETS maybe GIF of particles from pyswarms, and open-source stuff -->
 
-I'd like to explore this idea further with Conway's Game of Life. It's a type
-of cellular automata: there are well-defined states, discrete units or *cells*,
-and some form of self-propagation. In Game of Life, you have four rules:
+I'd like to explore this idea further with Conway's Game of Life. It's a
+cellular automaton with well-defined states, discrete units called *cells*, and
+some form of self-propagation. In Game of Life, you have four rules:
 * Overpopulation: if a living cell is surrounded by more than three living cells, it dies.
 * Stasis: if a living cell is surrounded by two or three living cells, it survives.
 * Underpopulation: if a living cell is surrounded by fewer than two living cells, it dies.
@@ -114,11 +114,17 @@ be aggregated into higher-level abstractions.
 
 ### Thematic explorations with Cellular Sprites
 
+Now that I've set up the cellular automata framework with Seagull, the next
+step is to apply it by generating higher-level abstractions. During this time,
+I am also exploring some ideas on procedural generation, so I went with creating sprites.
+
 <!-- 
 I know that I want interactivity and variability.
 -->
 
 <!-- THEME: reusing these components to achieve a goal -->
+<!-- show things that didn't work: weird color scheme -->
+<!-- show things that worked -->
 <!-- i want to express variability, self-generation -->
 <!-- inspiration from sprator -->
 <!-- discuss the algorithm -->
