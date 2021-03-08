@@ -45,14 +45,13 @@ some form of self-propagation. In Game of Life, you have four rules:
 What piqued my interest the most is that given limited resources, the cells act
 independently and compete with one another. This opens up my question: *if
 these cells are independent, can they still build something greater than the
-sum of their parts?*
+sum of their parts?* (yeah, cheesy...)
 
 Units turn into groups, groups turn into systems, systems turn into complex
-ecosystems. Sprites-as-a-service is a product of this exploration. The creative
-process closely follows the evolution I described: one system built on top of
-the other, creating another system that self-propagates on its own. 
-
-<!-- TODO: hierarchy and abstraction?? -->
+ecosystems and so on. Sprites-as-a-service is a product of this exploration.
+The creative process closely follows the evolution I described: one system
+built on top of the other, creating another system that self-propagates on its
+own. 
 
 In this post, I'll talk about how Sprites-as-a-service came to be. 
 
@@ -72,7 +71,7 @@ ideas in Cellular Sprites and improved it in Sprites-as-a-Service.
 When I first started programming Game of Life, I noticed that there are none to
 few generic implementations of it in Python&mdash; most are one-off solutions.
 As someone with a penchant for creating tools, I built **Seagull**, a
-framework for defining Game of Life simulations. 
+framework for defining Game of Life simulations[^1]. 
 
 I decided to create a framework because I want to have a language that makes it
 easier to express how cellular automata is done. To achieve this, it's
@@ -107,7 +106,7 @@ Building Seagull has taught me to think in terms of *objects* and
 you feed (action) the Board (obj) into a Simulation, then you run (action) the
 Simulation. As I worked through the next iterations of my project, Seagull has
 been the fundamental unit of my creative process. Later on, these actions will
-be aggregated into higher-level abstractions. 
+be aggregated into higher-level abstractions.[^2] 
 
 <!-- TODO: illustration of adding something on the board, not pixelated! use inkscape
 -->
@@ -167,3 +166,8 @@ maybe talk a bit about procgen art.
 
 ## References
 
+
+## Footnotes
+
+[^1]: The name "seagull" came from the first letters of Conway's Game of Life: C, G, o, and L. Reading them together, "CGoL", sounds like said bird.
+[^2]: I still have a lot to learn about API design, for I usually approach it with "gut feel" + techniques I liked from other libraries (e.g. scikit-learn's fit-predict loop). Sometimes I run the risk of overabstracting, but yeah, it's fun to build worlds upon worlds.
