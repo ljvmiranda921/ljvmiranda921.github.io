@@ -2,7 +2,7 @@
 layout: post
 title: "Gapminder PH"
 date: 2017-02-12
-category: projects
+category: notebook
 comments: true
 author: "LJ MIRANDA"
 summary: "A tribute to Hans Rosling's Gapminder chart, applied in the Philippine context."

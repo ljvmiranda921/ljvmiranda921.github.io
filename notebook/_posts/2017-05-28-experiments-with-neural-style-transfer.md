@@ -2,7 +2,7 @@
 layout: post
 title: "Experiments with neural style transfer"
 date: 2017-05-28
-category: projects
+category: notebook
 comments: true
 author: "LJ MIRANDA"
 summary: "Training a convolutional neural network to perform style transfer on some Filipino paintings."
