@@ -2,7 +2,7 @@
 layout: post
 title: "Gotta Catch em All!"
 date: 2017-02-18
-category: projects
+category: notebook
 comments: true
 author: "LJ MIRANDA"
 summary: "A data visualization exploring spawn rate and catch-flee ratios of Gen 1 Pokemon in Pokemon GO."
