@@ -117,6 +117,18 @@ Now that I've set up the cellular automata framework with Seagull, the next
 step is to apply it by generating higher-level abstractions. During this time,
 I am also exploring some ideas on procedural generation, so I went with creating sprites.
 
+<!--
+
+
+
+
+--->
+
+
+
+
+
+
 <!-- talk about your influences like the rockets generation, sprator, and what
 are your incremental changes -->
 
