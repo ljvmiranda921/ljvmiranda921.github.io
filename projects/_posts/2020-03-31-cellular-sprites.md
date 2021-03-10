@@ -137,9 +137,13 @@ the number of live cells should be around 40-60% of all cells in the 2x4 grid.
 However, I realized that it doesn't really affect the look of the sprite. What
 mattered the most are the extinction and survival parameters.
 
+*Extinction* and *survival* affect how "easy" a cell lives with respect to its
+neighbors. They're just made-up terms that I used to control overpopulation,
+stasis, and reproduction. A high survival rate causes big, blocky sprites,
+whereas a high extinction rate creates mosquito-like thinner sprites. I
+exposed these parameters so as to introduce variability in the application.
 
-<!-- TODO: add paragraph about extinction and survival -->
-
+<!-- show too high extinction, too high survival -->
 
 I also played with colors for a few more iterations. At first, I settled on a
 grayscale version (or one of matplotlib's colormaps), but the image looked flat
