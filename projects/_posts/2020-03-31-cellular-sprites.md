@@ -169,7 +169,15 @@ scheme is comprised of totally different colors!
 
 <!-- show sprites with gradient (totally diff colors!) -->
 
-I used streamlit... deployed to Heroku...
+Lastly, I used this opportunity to learn new tech. The initial version of my
+explorations (known as Cellular Sprites) was made in Streamlit. I arranged the
+generated sprites in a 3x3 matrix, and added a sidebar with some parameters to
+play around. Although Streamlit made things alot easier, its default UI didn't
+convey the look that I want to achieve. However, it was a good run as a
+proof-of-concept, and I'm proud of my output.
+
+<!-- show cellular sprites -->
+
 
 ### Further refinement in Sprites-as-a-Service
 
