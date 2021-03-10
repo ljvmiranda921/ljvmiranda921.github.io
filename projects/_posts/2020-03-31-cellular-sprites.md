@@ -115,36 +115,57 @@ be aggregated into higher-level abstractions.[^2]
 
 Now that I've set up the cellular automata framework with Seagull, the next
 step is to apply it by generating higher-level abstractions. During this time,
-I am also exploring some ideas on procedural generation, so I went with creating sprites.
+I am also exploring some ideas on procedural generation, so I went with
+creating sprites.
 
-<!--
+My inspirations include Github's
+[identicon](https://github.blog/2013-08-14-identicons/), Ebyan Alvarez-Buylla's
+[procedural space
+invaders](http://www.nolithius.com/articles/procedural-art/procedural-space-invaders),
+and CryPixel's [procedural pixel art generator](https://crypixels.com/). They
+have a distinct feel upon them, and the mirroring technique serves like a hack
+to make the generated sprite look more convincing.
+
+Given that, the initial sprite algorithm is simple:
+1. Generate a 4x8 sprite
+2. Add some noise to create "live" cells
+3. Run Conway's Game of Life for some number of iterations
+4. Mirror the 4x8 canvas to create an 8x8 version
+
+There were some parameters that need some tweaking. For example, I ensured that
+the number of live cells should be around 40-60% of all cells in the 2x4 grid.
+However, I realized that it doesn't really affect the look of the sprite. What
+mattered the most are the extinction and survival parameters.
 
 
+<!-- TODO: add paragraph about extinction and survival -->
 
 
---->
+I also played with colors for a few more iterations. At first, I settled on a
+grayscale version (or one of matplotlib's colormaps), but the image looked flat
+and weird. I also tried to manually add colors, but it didn't stick that much:
 
+<!-- show black and white image, show colormap image -->
 
+Later on, I realized that adding a solid black outline makes the sprite stand
+out&mdash;it looks more appealing and "cartoony." Making a solid outline sounds
+easy, but it took me some time figuring out how to make it. So, I just settled
+on a brute-force approach: for each cell in the matrix, I look around its
+neighbors, and paint them black if they are near the edge. The resulting
+sprites look better visually: 
 
+<!-- show sprites with outline -->
 
+Taking a step further, I decided to incorporate some shading in the sprite's
+fill color. It's just another trick: I computed the gradient of the resulting
+sprite, shift the resulting matrix lower, and map the resulting values in a
+custom colormap. This then removes the flat-ness of the sprite's color and add
+a bit of dimension in its look. The effect looks more apparent if the color
+scheme is comprised of totally different colors!
 
+<!-- show sprites with gradient (totally diff colors!) -->
 
-<!-- talk about your influences like the rockets generation, sprator, and what
-are your incremental changes -->
-
-
-<!-- 
-I know that I want interactivity and variability.
--->
-
-<!-- THEME: reusing these components to achieve a goal -->
-<!-- show things that didn't work: weird color scheme -->
-<!-- show things that worked -->
-<!-- i want to express variability, self-generation -->
-<!-- inspiration from sprator -->
-<!-- discuss the algorithm -->
-<!-- use of gradient for coloring -->
-<!-- using streamlit -->
+I used streamlit... deployed to Heroku...
 
 ### Further refinement in Sprites-as-a-Service
 
