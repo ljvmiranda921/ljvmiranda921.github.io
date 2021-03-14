@@ -212,6 +212,8 @@ I got![^5]
 
 ## Conclusion
 
+This post 
+
 <!--
 talk about the dream thing from google that takes weeks to percolate
 
@@ -227,8 +229,6 @@ maybe talk a bit about procgen art.
   <p>Your browser does not support iframes.</p>
 </iframe>
 -->
-
-## References
 
 
 ---
