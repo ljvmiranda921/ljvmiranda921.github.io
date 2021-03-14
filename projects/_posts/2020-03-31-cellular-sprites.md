@@ -8,13 +8,11 @@ author: "LJ MIRANDA"
 header-img: /assets/png/general/cellular-sprites.png
 tags: [jupyter notebooks, streamlit, procedural generation, streamlit, seagull, cellular automata, pixel art, 8-bit, sprites]
 description: |
-    Come and generate your own 8-bit sprites using cellular automata! This
-    project was built using Seagull, my Python library for Conway's Game of
-    Life, and Streamlit.
+    Some reflections on emergence, identity, in chaos as I generate cute
+    sprites using cellular automata.
 excerpt: |
-    Come and generate your own 8-bit sprites using cellular automata! This
-    project was built using Seagull, my Python library for Conway's Game of
-    Life, and Streamlit.
+    Some reflections on emergence, identity, in chaos as I generate cute
+    sprites using cellular automata.
 ---
 
 > *March 2021*&mdash;This blogpost underwent **major revisions**. Instead of just describing what
@@ -107,7 +105,7 @@ be aggregated into higher-level abstractions.[^2]
 <!-- TODO: illustration of adding something on the board, not pixelated! use inkscape
 -->
 
-### Thematic explorations with Cellular Sprites
+### Exploring emergence in Cellular Sprites
 
 Now that I've set up the cellular automata framework with Seagull, the next
 step is to apply it by generating higher-level abstractions. During this time,
@@ -175,18 +173,47 @@ proof-of-concept, and I'm proud of my output.
 <!-- show cellular sprites -->
 
 
-### Further refinement in Sprites-as-a-Service
+### Emergence, determinism, and identity in Sprites-as-a-Service
 
-<!--
-Sprites as a service as a refinement of cellular sprites
-- Not just using streamlit, i'm using a dedicated frontend
-- More attuned to its brand and packaging
--->
+After establishing the main ideas and execution in Cellular Sprites, I decided
+to take it a step further and endow a form of identity in Sprites-as-a-Service.
+The generated sprites were based on emergent behaviour from randomness[^3] shaped
+by a rule&mdash; what if we can control this randomness with a seed? Better
+yet, a seed we can personally identify with?
+
+In Sprites-as-a-Service, the defining feature is the ability to create a unique
+sprite based on a name (or any other string). It's like your own fingerprint,
+borne out of emergence. This, in my opinion, creates a level of conflict: since
+you defined the initial conditions, is the system truly random?
+
+This tug-of-war between randomness and determinism enthralled me. I can specify
+the seed, but at a certain point, I give everything to "chance." Is it truly
+chance, or just a smorgasbord of systems that we haven't comprehended yet?  I
+always remember coin-flipping, the definitive example in Statistics 101, to be
+a highly-deterministic act if we know certain variables and conditions such as
+the momentum of our arm, air resistance, weight of the coin, etc. It seems that
+the same principles[^4] apply in Sprites-as-a-Service: we're aware of what the
+initial conditions are (it's exposed in the UI), yet there is a certain
+moment&mdash;perhaps in the click of the button&mdash;that we leave everything
+to chance.
+
+Perhaps, that experience of leaving everything to chance and getting a result
+out of it led to **surprise**. Some people were delighted (or disappointed)
+with the sprites that emerged from their names. *This is the experience I
+want to capture.* The system, in some way, is deterministic: Conway's Game of
+Life is rules-based, the initial seeds and conditions are provided by the user,
+etc. Yet, this determinism didn't stop me from being surprised with the results
+I got![^5]
+
+
+
+<!-- show some results -->
 
 
 ## Conclusion
 
 <!--
+talk about the dream thing from google that takes weeks to percolate
 
 maybe talk a bit about procgen art.
 -->
@@ -210,3 +237,6 @@ maybe talk a bit about procgen art.
 
 [^1]: The name "seagull" came from the first letters of Conway's Game of Life: C, G, o, and L. Reading them together, "CGoL", sounds like said bird.
 [^2]: I still have a lot to learn about API design, for I usually approach it with "gut feel" + techniques I liked from other libraries (e.g. scikit-learn's fit-predict loop). Sometimes I run the risk of overabstracting, but yeah, it's fun to build worlds upon worlds.
+[^3]: I can be pedantic about it and say that it isn't [pure randomness](https://en.wikipedia.org/wiki/Randomness) for I used a [pseudorandom generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator).
+[^4]: There is a field of study dedicated to this phenomena: [chaos theory](https://en.wikipedia.org/wiki/Chaos_theory). According to wikipedia, chaos is just a dynamic system whose "random states of disorder and irregularities are actually governed by underlying patterns and deterministic laws."
+[^5]: At this point, I'd usually talk about my musings on my obssessive planning, openness, and luck. But I haven't really structured my thoughts upon it. I can only recreate the experience here in Sprites-as-a-Service.
