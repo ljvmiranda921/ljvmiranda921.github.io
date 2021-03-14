@@ -24,28 +24,24 @@ excerpt: |
 
 ## Introduction
 
-There seems to be something magical about discrete units working together to
-achieve a common goal. It may be particles finding the best solution in an
-optimization problem, or strangers collaborating to build open-source projects.
-Even if these elements act independently, the sum total of their actions
-contribute to a recognizable whole.
+There is something magical about discrete things working together to achieve a
+common goal. It may be particles in a swarm algorithm, or contributors in
+open-source projects. Independent as they were, the sum total of their actions
+give way to a recognizable whole. 
+
 
 <!-- TODO: ASSETS maybe GIF of particles from pyswarms, and open-source stuff -->
 
-I'd like to explore this idea further with Conway's Game of Life. It's a
-cellular automaton with well-defined states, discrete units called *cells*, and
-some form of self-propagation. In Game of Life, you have four rules:
+What piqued my interest is this idea of **emergence**, where new properties
+show up when discrete units interact with one another. I'd like to explore this
+idea further with Conway's Game of Life. It's a type of cellular automata with
+well-defined states and self-propagation. It is governed by four rules:
 * Overpopulation: if a living cell is surrounded by more than three living cells, it dies.
 * Stasis: if a living cell is surrounded by two or three living cells, it survives.
 * Underpopulation: if a living cell is surrounded by fewer than two living cells, it dies.
 * Reproduction: if a dead cell is surrounded by exactly three cells, it becomes alive.
 
 <!-- TODO: CITE cite jakevdp blogpost -->
-
-What piqued my interest the most is that given limited resources, the cells act
-independently and compete with one another. This opens up my question: *if
-these cells are independent, can they still build something greater than the
-sum of their parts?* (yeah, cheesy...)
 
 Units turn into groups, groups turn into systems, systems turn into complex
 ecosystems and so on. Sprites-as-a-service is a product of this exploration.
@@ -61,7 +57,7 @@ Looking back, I believe that there are three major developments in the creation
 of Sprites-as-a-Service. First, I laid the foundation by creating a framework
 for cellular automata called Seagull. Then, I used the said framework to
 explore the creation of sprites in Cellular Sprites. Finally, I refined my
-ideas in Cellular Sprites and improved it in Sprites-as-a-Service.
+ideas in Cellular Sprites and improved upon it in Sprites-as-a-Service.
 
 <!-- TODO: show logos and maybe changes in UI -->
 
@@ -123,8 +119,8 @@ My inspirations include Github's
 [procedural space
 invaders](http://www.nolithius.com/articles/procedural-art/procedural-space-invaders),
 and CryPixel's [procedural pixel art generator](https://crypixels.com/). They
-have a distinct feel upon them, and the mirroring technique serves like a hack
-to make the generated sprite look more convincing.
+have a distinct feel upon them, and the mirroring technique allows the
+generated sprites to look more convincing.
 
 Given that, the initial sprite algorithm is simple:
 1. Generate a 4x8 sprite
@@ -133,7 +129,7 @@ Given that, the initial sprite algorithm is simple:
 4. Mirror the 4x8 canvas to create an 8x8 version
 
 There were some parameters that need some tweaking. For example, I ensured that
-the number of live cells should be around 40-60% of all cells in the 2x4 grid.
+the number of live cells should be around 40-60% of all cells in the 4x8 grid.
 However, I realized that it doesn't really affect the look of the sprite. What
 mattered the most are the extinction and survival parameters.
 
@@ -146,13 +142,13 @@ exposed these parameters so as to introduce variability in the application.
 <!-- show too high extinction, too high survival -->
 
 I also played with colors for a few more iterations. At first, I settled on a
-grayscale version (or one of matplotlib's colormaps), but the image looked flat
-and weird. I also tried to manually add colors, but it didn't stick that much:
+grayscale version (or one of matplotlib's colormaps), but the image looked
+flat. I also tried to manually add colors, but it didn't stick that much:
 
 <!-- show black and white image, show colormap image -->
 
 Later on, I realized that adding a solid black outline makes the sprite stand
-out&mdash;it looks more appealing and "cartoony." Making a solid outline sounds
+out&mdash;it looks more appealing and recognizable. Making a solid outline sounds
 easy, but it took me some time figuring out how to make it. So, I just settled
 on a brute-force approach: for each cell in the matrix, I look around its
 neighbors, and paint them black if they are near the edge. The resulting
@@ -160,12 +156,12 @@ sprites look better visually:
 
 <!-- show sprites with outline -->
 
-Taking a step further, I decided to incorporate some shading in the sprite's
-fill color. It's just another trick: I computed the gradient of the resulting
-sprite, shift the resulting matrix lower, and map the resulting values in a
-custom colormap. This then removes the flat-ness of the sprite's color and add
-a bit of dimension in its look. The effect looks more apparent if the color
-scheme is comprised of totally different colors!
+Taking a step further, I decided to incorporate shading in the sprite's fill
+color. I computed the gradient of the resulting sprite, shift the resulting
+matrix 1 pixel vertically, and map the resulting values in a custom colormap.
+This then removes the flat-ness of the sprite's color and add a bit of
+dimension to its look. The effect looks more apparent if the color scheme is
+comprised of different colors:
 
 <!-- show sprites with gradient (totally diff colors!) -->
 
