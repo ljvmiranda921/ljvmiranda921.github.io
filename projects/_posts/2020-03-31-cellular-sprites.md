@@ -187,10 +187,6 @@ Sprites as a service as a refinement of cellular sprites
 ## Conclusion
 
 <!--
-I admit that surfacing these themes were done in retrospect. I'm not fully
-conscious of this eventual goal when building sprites-as-a-service. Connecting
-dots in a line, etc.
-
 
 maybe talk a bit about procgen art.
 -->
