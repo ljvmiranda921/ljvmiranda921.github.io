@@ -60,7 +60,7 @@ ideas in Cellular Sprites and improved upon it in Sprites-as-a-Service.
 <!-- TODO: show logos and maybe changes in UI -->
 
 
-### Building foundations through Seagull
+### Building the language through Seagull
 
 When I first started programming Game of Life, I noticed that there are none to
 few generic implementations of it in Python&mdash; most are one-off solutions.
@@ -71,24 +71,7 @@ I decided to create a framework because I want to have a language that makes it
 easier to express how cellular automata is done. To achieve this, it's
 important to think of "verbs" that map to the experimentation lifecycle:
 *create* a board, *put* an automaton, *run* the simulation, etc. These action
-words are then manifested through Seagull's API:
-
-```python
-import seagull as sg
-from seagull.lifeforms import Pulsar
-
-# "create" a board
-board = sg.Board(size=(19,60))
-# "add" an automaton
-board.add(Pulsar(), loc=(1,1))
-board.add(Pulsar(), loc=(1,22))
-board.add(Pulsar(), loc=(1,42))
-# "run" the simulation
-sim = sg.Simulator(board)
-sim.run(sg.rules.conway_classic, iters=1000)
-```
-
-<!-- TODO: show output of the code here -->
+words are then manifested through Seagull's API.
 
 I'm satisfied with the API design for I can see how expressive and extensible
 it can be for future use-cases. For example, even if I have a preset number of
@@ -105,7 +88,7 @@ be aggregated into higher-level abstractions.[^2]
 <!-- TODO: illustration of adding something on the board, not pixelated! use inkscape
 -->
 
-### Exploring emergence in Cellular Sprites
+### Implementing emergence in Cellular Sprites
 
 Now that I've set up the cellular automata framework with Seagull, the next
 step is to apply it by generating higher-level abstractions. During this time,
@@ -212,7 +195,6 @@ I got![^5]
 
 ## Conclusion
 
-This post 
 
 <!--
 talk about the dream thing from google that takes weeks to percolate
