@@ -5,13 +5,13 @@ date: 2020-03-31
 category: projects
 comments: true
 author: "LJ MIRANDA"
-header-img: /assets/png/general/cellular-sprites.png
+header-img: /assets/png/cellular-sprites/cellular_sprites_header.png
 tags: [jupyter notebooks, streamlit, procedural generation, streamlit, seagull, cellular automata, pixel art, 8-bit, sprites]
 description: |
-    Some reflections on emergence, identity, in chaos as I generate cute
+    Some reflections on emergence and identity as I generate cute
     sprites using cellular automata.
 excerpt: |
-    Some reflections on emergence, identity, in chaos as I generate cute
+    Some reflections on emergence and identity as I generate cute
     sprites using cellular automata.
 ---
 
