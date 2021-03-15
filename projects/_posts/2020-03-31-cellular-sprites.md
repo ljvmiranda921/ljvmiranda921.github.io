@@ -183,28 +183,48 @@ to chance.
 
 Perhaps, that experience of leaving everything to chance and getting a result
 out of it led to **surprise**. Some people were delighted (or disappointed)
-with the sprites that emerged from their names. *This is the experience I
-want to capture.* The system, in some way, is deterministic: Conway's Game of
-Life is rules-based, the initial seeds and conditions are provided by the user,
-etc. Yet, this determinism didn't stop me from being surprised with the results
-I got![^5]
-
+with the sprites that emerged from their names. *This is the experience I want
+to capture.* The system is deterministic for I know the algorithm and initial
+conditions. Yet, this determinism didn't stop me from being surprised with the
+results![^5]
 
 
 <!-- show some results -->
 
+Sprites-as-a-Service is the final step of this exploration. After building the
+fundamental units in Seagull, and creating the algorithm in Cellular Sprites,
+this project packaged them together into a self-organizing whole. Because any
+string can be a seed, there's almost an inifinite number of initial conditions
+to generate the sprites from.
+
 ## Conclusion
 
+In this post, I went through the creative process and motivation for building
+Sprites-as-a-Service. With my interests in emergence and identity, I employed
+techniques in procedural generation and cellular automata to create interesting
+sprites. It was a worthwhile endeavor and I'm quite proud of it.
 
-<!--
-talk about the dream thing from google that takes weeks to percolate
+There's a lot of things that I still want to explore in the realm of these
+topics. One example is *anticipation*, that moment of waiting between clicking
+the "Generate" button and the app showing you the results. I remember the old
+days of [Google Deep Dream](https://goo.gl/photos/fFcivHZ2CDhqCkZdA) (around
+2015, when GANs aren't invented and ConvNets are still in its early days), when
+you still need to wait for days on end before it generates dream versions of
+your image. I like that idea of anticipation and waiting, and maybe something I
+might delve further.
 
-maybe talk a bit about procgen art.
--->
+As for wins, I've seen reimplementations of Sprites-as-a-Service. One of my favorites
+is [Infinite Sprites](https://danielgjackson.github.io/sprite/infinite.html) by
+Daniel Jackson. First, he ported the whole algorithm into Javascript, and have
+a forever-scrolling webpage that generates sprites as you go along! In
+addition, [Ron Gilbert](https://en.wikipedia.org/wiki/Ron_Gilbert), the creator
+of the famous pixel-art indie [Thimbleweed Park](https://thimbleweedpark.com/),
+featured my work in his [blog](https://grumpygamer.com/sprites_as_a_service).
 
-
-
-
+This is mostly it for Sprites-as-a-Service. I think I was able to explore what
+I wanted to explore, and build what I wanted to build. Good thing my Cloud
+subscription doesn't charge that high so I can just keep it running in some
+machine somewhere&mdash; waiting for its next opportunity to emerge.
 
 <!--
 <iframe src="https://cellular-sprites.herokuapp.com" width="700" height="600">
@@ -212,6 +232,18 @@ maybe talk a bit about procgen art.
 </iframe>
 -->
 
+## Technical Notes
+
+* For technical details, I am currently running Sprites-as-a-Service as a web
+    application in Google Cloud Run. The frontend is just another page in
+    Github Pages, but the API it talks to is a Python backend using FastAPI.
+* Sprites-as-a-Service is open-source. You can find the [source
+    code](https://github.com/ljvmiranda921/sprites-as-a-service) on Github. I
+    invite you to check the Github workflows I've done. I'm quite impressed by
+    the whole thing to be honest.
+* This project also gave me the opportunity to learn some frontend web
+    development. Here, I used [Vue](https://vuejs.org/). It's an interesting
+    framework and I learned a lot as I went through the project.
 
 ---
 
