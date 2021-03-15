@@ -27,19 +27,20 @@ common goal. It may be particles in a swarm algorithm, or contributors in
 open-source projects. Independent as they were, the sum total of their actions
 give way to a recognizable whole. 
 
+![](/assets/png/cellular-sprites/pso.gif){:width="300px"}
+<br>**Figure**: Particle swarm finding the optimal solution
+{: style="text-align: center;"}
 
-<!-- TODO: ASSETS maybe GIF of particles from pyswarms, and open-source stuff -->
 
 What piqued my interest is this idea of **emergence**, where new properties
 show up when discrete units interact with one another. I'd like to explore this
-idea further with Conway's Game of Life,  a type of cellular automata with
-well-defined states and self-propagation. It is governed by four rules:
+idea further with [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) (Gardner, [1970](#gardner1970gol)),  a type of cellular automata with
+well-defined states and self-propagation. It is governed by four rules (Van der
+Plas, [2013](#vanderplas2013gol)):
 * Overpopulation: if a living cell is surrounded by more than three living cells, it dies.
 * Stasis: if a living cell is surrounded by two or three living cells, it survives.
 * Underpopulation: if a living cell is surrounded by fewer than two living cells, it dies.
 * Reproduction: if a dead cell is surrounded by exactly three cells, it becomes alive.
-
-<!-- TODO: CITE cite jakevdp blogpost -->
 
 Units turn into groups, groups turn into systems, systems turn into complex
 ecosystems and so on. Sprites-as-a-service is a product of this exploration.
@@ -47,7 +48,7 @@ The creative process closely follows the evolution I described: one system
 built on top of the other, creating another system that self-propagates on its
 own. 
 
-In this post, I'll talk about how Sprites-as-a-service came to be. 
+In this post, I'll talk about how [Sprites-as-a-service](https://ljvmiranda921.github.io/sprites-as-a-service/) came to be. 
 
 ## Sprites-as-a-Service
 
@@ -56,8 +57,6 @@ of Sprites-as-a-Service. First, I laid the foundation by creating a framework
 for cellular automata called Seagull. Then, I used the said framework to
 explore the creation of sprites in Cellular Sprites. Finally, I refined my
 ideas in Cellular Sprites and improved upon it in Sprites-as-a-Service.
-
-<!-- TODO: show logos and maybe changes in UI -->
 
 
 ### Building the language through Seagull
@@ -74,10 +73,32 @@ how cellular automata is done. To achieve this, it's important to think of
 automaton, *run* the simulation, etc. These action words are then manifested
 through Seagull's API.
 
+![](/assets/png/cellular-sprites/seagull.gif){:width="400px"}
+<br>**Figure**: Three Pulsar lifeforms using the python library Seagull
+{: style="text-align: center;"}
+
+
 I'm satisfied with the API design for I can see how expressive and extensible
 it can be for future use-cases. For example, even if I have a preset number of
 [Lifeforms](https://pyseagull.readthedocs.io/en/latest/api/seagull.lifeforms.html)
 available, there is still the generic "Custom" lifeform that allows some variability.
+
+```python
+import seagull as sg
+from seagull.lifeforms import Pulsar
+
+# Initialize board
+board = sg.Board(size=(19,60))  
+
+# Add three Pulsar lifeforms in various locations
+board.add(Pulsar(), loc=(1,1))
+board.add(Pulsar(), loc=(1,22))
+board.add(Pulsar(), loc=(1,42))
+
+# Simulate board
+sim = sg.Simulator(board)      
+sim.run(sg.rules.conway_classic, iters=1000)
+```
 
 Building Seagull has taught me to think in terms of *objects* and
 *actions*: there is a Board (obj) that you add (action) Lifeforms (obj) onto,
@@ -104,11 +125,39 @@ and CryPixel's [procedural pixel art generator](https://crypixels.com/). They
 have a distinct feel upon them, and the mirroring technique allows the
 generated sprites to look more convincing.
 
+
+![](/assets/png/cellular-sprites/identicon.png){:width="200px"}
+![](/assets/png/cellular-sprites/space_invaders_procedural.png){:width="200px"}
+![](/assets/png/cellular-sprites/procedural_pixel_generator.png){:width="200px"}
+<br>**Figure**: Some of my inspirations in Procedural Sprite generation
+{: style="text-align: center;"}
+
 Given that, the initial sprite algorithm is simple:
 1. Generate a 4x8 sprite
 2. Add some noise to create "live" cells
 3. Run Conway's Game of Life for some number of iterations
 4. Mirror the 4x8 canvas to create an 8x8 version
+
+I also played with colors for a few more iterations. At first, I settled on a
+grayscale version (or one of matplotlib's colormaps), but the image looked
+flat. I also tried to manually add colors, but it didn't stick that much:
+
+<!-- show black and white image, show colormap image -->
+![](/assets/png/cellular-sprites/mono.png){:width="500px"}
+<br>**Figure**: Initial iterations of creating monochrome sprites using one
+colormap
+{: style="text-align: center;"}
+
+Later on, I realized that adding a solid black outline makes the sprite stand
+out&mdash;it looks more appealing and recognizable. Making a solid outline sounds
+easy, but it took me some time figuring out how to make it. So, I just settled
+on a brute-force approach: for each cell in the matrix, I look around its
+neighbors, and paint them black if they are near the edge. The resulting
+sprites look better visually: 
+
+![](/assets/png/cellular-sprites/sample_0.png){:width="300px"}
+![](/assets/png/cellular-sprites/sample_1.png){:width="300px"}
+{: style="text-align: center;"}
 
 There were some parameters that need some tweaking. For example, I ensured that
 the number of live cells should be around 40-60% of all cells in the 4x8 grid.
@@ -122,21 +171,12 @@ whereas a high extinction rate creates mosquito-like thinner sprites. I
 exposed these parameters so as to introduce variability in the application.
 
 <!-- show too high extinction, too high survival -->
+![](/assets/png/cellular-sprites/high_stasis.png){:width="300px"}
+![](/assets/png/cellular-sprites/high_extinction.png){:width="300px"}
+<br>**Figure**: Sprites with high survival rate (left), and high extinction
+(right)
+{: style="text-align: center;"}
 
-I also played with colors for a few more iterations. At first, I settled on a
-grayscale version (or one of matplotlib's colormaps), but the image looked
-flat. I also tried to manually add colors, but it didn't stick that much:
-
-<!-- show black and white image, show colormap image -->
-
-Later on, I realized that adding a solid black outline makes the sprite stand
-out&mdash;it looks more appealing and recognizable. Making a solid outline sounds
-easy, but it took me some time figuring out how to make it. So, I just settled
-on a brute-force approach: for each cell in the matrix, I look around its
-neighbors, and paint them black if they are near the edge. The resulting
-sprites look better visually: 
-
-<!-- show sprites with outline -->
 
 Taking a step further, I decided to incorporate shading in the sprite's fill
 color. I computed the gradient of the resulting sprite, shift the resulting
@@ -146,6 +186,12 @@ dimension to its look. The effect looks more apparent if the color scheme is
 comprised of different colors:
 
 <!-- show sprites with gradient (totally diff colors!) -->
+![](/assets/png/cellular-sprites/gradient_0.png){:width="100px"}
+![](/assets/png/cellular-sprites/gradient_1.png){:width="100px"}
+![](/assets/png/cellular-sprites/gradient_2.png){:width="100px"}
+![](/assets/png/cellular-sprites/gradient_3.png){:width="100px"}
+<br>**Figure**: Gradients added depth to the sprites' colors
+{: style="text-align: center;"}
 
 Lastly, I used this opportunity to learn new tech. The initial version of my
 explorations (known as Cellular Sprites) was made in Streamlit. I arranged the
@@ -154,13 +200,17 @@ play around. Although Streamlit made things alot easier, its default UI didn't
 convey the look that I want to achieve. However, it was a good run as a
 proof-of-concept, and I'm proud of my output.
 
-<!-- show cellular sprites -->
+<iframe src="https://cellular-sprites.herokuapp.com" width="700" height="450">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+<br>**Figure**: You can try the Cellular Sprites streamlit app here.
+{: style="text-align: center;"}
 
 
 ### Emergence, determinism, and identity in Sprites-as-a-Service
 
 After establishing the main ideas and execution in Cellular Sprites, I decided
-to take it a step further and endow a form of identity in Sprites-as-a-Service.
+to take it a step further and endow a form of identity in [Sprites-as-a-Service](https://ljvmiranda921.github.io/sprites-as-a-service/).
 The generated sprites were based on emergent behaviour from randomness[^3] shaped
 by a rule&mdash; what if we can control this randomness with a seed? Better
 yet, a seed we can personally identify with?
@@ -169,6 +219,11 @@ In Sprites-as-a-Service, the defining feature is the ability to create a unique
 sprite based on a name (or any other string). It's like your own fingerprint,
 borne out of emergence. This, in my opinion, creates a level of conflict: since
 you defined the initial conditions, is the system truly random?
+
+
+![](/assets/png/cellular-sprites/identity.gif){:width="500px"}
+<br>**Figure**: Each string produces a unique sprite
+{: style="text-align: center;"}
 
 This tug-of-war between randomness and determinism enthralled me. I can specify
 the seed, but at a certain point, I give everything to "chance." Is it truly
@@ -188,8 +243,6 @@ to capture.* The system is deterministic for I know the algorithm and initial
 conditions. Yet, this determinism didn't stop me from being surprised with the
 results![^5]
 
-
-<!-- show some results -->
 
 Sprites-as-a-Service is the final step of this exploration. After building the
 fundamental units in Seagull, and creating the algorithm in Cellular Sprites,
@@ -221,6 +274,10 @@ addition, [Ron Gilbert](https://en.wikipedia.org/wiki/Ron_Gilbert), the creator
 of the famous pixel-art indie [Thimbleweed Park](https://thimbleweedpark.com/),
 featured my work in his [blog](https://grumpygamer.com/sprites_as_a_service).
 
+![](/assets/png/cellular-sprites/infinite_sprites.gif){:width="500px"}
+<br>**Figure**: Daniel Jackson's Infinite Sprites!
+{: style="text-align: center;"}
+
 This is mostly it for Sprites-as-a-Service. I think I was able to explore what
 I wanted to explore, and build what I wanted to build. Good thing my Cloud
 subscription doesn't charge that high so I can just keep it running in some
@@ -231,6 +288,14 @@ machine somewhere&mdash; waiting for its next opportunity to emerge.
   <p>Your browser does not support iframes.</p>
 </iframe>
 -->
+
+## References
+
+* <a id="vanderplas2013gol">Van der Plas, Jake</a> (2013). Conway's Game of
+    Life in Python: http://jakevdp.github.io/blog/2013/08/07/conways-game-of-life/
+* <a id="gardner1970gol">Gardner, Martin</a> (1970). "Mathematical Games - The
+    Fantastic Combinations of John Conway's New Solitaire Game Life"
+    *Scientific American* (223): 120-123.
 
 ## Technical Notes
 
