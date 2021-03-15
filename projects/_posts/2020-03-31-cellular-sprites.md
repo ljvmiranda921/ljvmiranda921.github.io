@@ -32,7 +32,7 @@ give way to a recognizable whole.
 
 What piqued my interest is this idea of **emergence**, where new properties
 show up when discrete units interact with one another. I'd like to explore this
-idea further with Conway's Game of Life. It's a type of cellular automata with
+idea further with Conway's Game of Life,  a type of cellular automata with
 well-defined states and self-propagation. It is governed by four rules:
 * Overpopulation: if a living cell is surrounded by more than three living cells, it dies.
 * Stasis: if a living cell is surrounded by two or three living cells, it survives.
@@ -62,16 +62,17 @@ ideas in Cellular Sprites and improved upon it in Sprites-as-a-Service.
 
 ### Building the language through Seagull
 
-When I first started programming Game of Life, I noticed that there are none to
+As with the idea of emergence, I want to start by building fundamental units
+that I can configure into a more complex system. Unfortunately, there are none to
 few generic implementations of it in Python&mdash; most are one-off solutions.
-As someone with a penchant for creating tools, I built **Seagull**, a
-framework for defining Game of Life simulations[^1]. 
+Looking back, I'd say that it was a good problem: the absence of a framework
+allowed me to create my own.
 
-I decided to create a framework because I want to have a language that makes it
-easier to express how cellular automata is done. To achieve this, it's
-important to think of "verbs" that map to the experimentation lifecycle:
-*create* a board, *put* an automaton, *run* the simulation, etc. These action
-words are then manifested through Seagull's API.
+For this framework, I want to have a language that makes it easier to express
+how cellular automata is done. To achieve this, it's important to think of
+"verbs" that map to the experimentation lifecycle: *create* a board, *put* an
+automaton, *run* the simulation, etc. These action words are then manifested
+through Seagull's API.
 
 I'm satisfied with the API design for I can see how expressive and extensible
 it can be for future use-cases. For example, even if I have a preset number of
@@ -91,9 +92,9 @@ be aggregated into higher-level abstractions.[^2]
 ### Implementing emergence in Cellular Sprites
 
 Now that I've set up the cellular automata framework with Seagull, the next
-step is to apply it by generating higher-level abstractions. During this time,
-I am also exploring some ideas on procedural generation, so I went with
-creating sprites.
+step is to apply it by generating higher-level abstractions. There are a lot of
+artistic procedural generation ideas that cna be done with Conway's Game of
+Life, so I went with creating pixelated sprites.
 
 My inspirations include Github's
 [identicon](https://github.blog/2013-08-14-identicons/), Ebyan Alvarez-Buylla's
@@ -191,7 +192,6 @@ I got![^5]
 
 
 <!-- show some results -->
-
 
 ## Conclusion
 
