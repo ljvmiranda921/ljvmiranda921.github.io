@@ -34,3 +34,6 @@ gem 'jekyll-sitemap'
 
 # Add travis-CI
 gem 'travis'
+
+# Update some dependencies bsaed on depdendabot
+gem "nokogiri", "~> 1.11.0"
