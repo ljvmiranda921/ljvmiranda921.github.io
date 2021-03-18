@@ -136,3 +136,16 @@ pip3 install                                    \
 Note that you need to have gdal installed first in your system before executing
 the command above. This automatically installs the proper binding given the
 GDAL version in your system. 
+
+
+## Updates
+
+Thank you [Ardie Orden](https://github.com/ardieorden) for including additional
+instructions for Debian Buster in the comments:
+
+```sh
+$ sudo apt-get install -y gdal-bin python3-gdal python-gdal libgdal-dev g++
+$ CPLUS_INCLUDE_PATH=/usr/include/gdal
+$ C_INCLUDE_PATH=/usr/include/gdal
+$ pip3 install GDAL=2.4.0
+```
