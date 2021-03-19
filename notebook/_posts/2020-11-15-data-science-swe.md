@@ -278,6 +278,23 @@ leading to an ML Service, with resources that once helped me along the way
     is [Flask](https://github.com/pallets/flask), it's an "older" framework,
     thus widely-used.
 
+    - (Optional) Learn other serving technologies specifically-built for ML such as
+    [Tensorflow Serving](https://www.tensorflow.org/tfx/guide/serving),
+    [Kubeflow Fairing](https://www.kubeflow.org/docs/components/fairing/fairing-overview/), or
+    [Cortex](https://www.cortex.dev/). These may not follow the "traditional"
+    way of serving ML models, but it may be nice to experience how it's done
+    with highly-specialized tools.
+
+    To get started, I highly-recommend looking at the ["First Steps"](https://fastapi.tiangolo.com/tutorial/first-steps/)
+    documentation of FastAPI. It's complete, and gets you up and running in no
+    time. You can then start "wrapping" your model's `predict()` functions with
+    API endpoints, so that it can start serving requests to users.
+
+    In addition, you might also want to take a look at [best practices and
+    conventions](https://restfulapi.net/resource-naming/) in naming your
+    endpoints in a RESTful way. It is a scheme commonly followed by web
+    engineers, and it's nice to speak the same language.
+
     Optionally, I'd recommend that you also learn [socket programming](https://realpython.com/python-sockets/), and
     understand the tradeoffs between web-sockets and HTTP. Here's a good
     [StackOverflow answer that highlights their
@@ -419,20 +436,6 @@ leading to an ML Service, with resources that once helped me along the way
     your web application successfully! 
 
 
-
-<!-- this is the how, when illustrating these things, build-up the "final
-machine" -->
-<!-- for each point, write down what should they learn or the activities that
-they should do + relevant resources: in learn git {learn
-proper commit messages, learn git flow, etc.} -->
-
-<!-- learn git => learn the tools -->
-<!-- learn how to modularize your code => show that the components now look
-better -->
-<!-- learn flask => an interface for the machine -->
-<!-- learn docker => the "frame" or the common interface into which these
-things will fit in -->
-
 ## In conclusion
 
 At this point, I can say that you are already productive and more ready to
@@ -508,3 +511,11 @@ Lastly, I highly-recommend the following resources for general guidance:
     accessible, but also the ingredients and the process from which your
     results were generated. I think learning Docker or properly modularizing
     your code can go a long way.
+    
+
+#### Changelog
+
+- 03-19-2021: Added more resources for Flask and FastAPI based from feedback
+    from Chip Huyen's ML Systems Design Discord Server. 
+
+
