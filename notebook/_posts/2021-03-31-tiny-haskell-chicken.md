@@ -1,14 +1,29 @@
 ---
 layout: post
 type: post
-title: "Seven things I learned after building a tiny Haskell CLI tool"
+title: "Seven things I learned after building a tiny Haskell CLI app"
 date: 2021-03-31
 category: notebook
 comments: true
 author: "LJ MIRANDA"
 tags: [functional programming, haskell]
 description: |
+  Sharing some lessons I learned in my brief journey in Haskell and functional programming. 
 ---
+
+I've been studying Haskell on and off for almost two years now. Truth is,
+I never got past the initial hump to be very productive in it. However, from
+grad school to work life, Haskell's been like that low-maintenance friend
+I say hi to occasionally and still managed to be exciting.
+
+Last May, I had a breakthrough:
+
+
+
+
+
+
+
 
 <!--
 Introduction
@@ -31,7 +46,7 @@ Seven Lessons
 - Life: Ok to make small scoped projects that are useful
 - Tech: In FP, you describe what you want to happen, like writing an equation
 - Tech: It's ok to copy code and learn what it does later
-- Tech: Read other's code, helpful for best practices
+- Tech: Functions should only do one thing and one thing well
 - Life: Build things, even if the only audience is you
 - Tech: It's ok to stop
 -->
