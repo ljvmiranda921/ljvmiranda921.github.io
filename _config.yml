@@ -45,8 +45,8 @@ kramdown:
 highlighter: rouge
 
 # Disqus
-disqus:
-  shortname: ljvmiranda921-github-io-1
+# disqus:
+#  shortname: ljvmiranda921-github-io-1
 
 # Google analytics
 google_analytics: UA-106021948-1
