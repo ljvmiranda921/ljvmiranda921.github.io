@@ -11,6 +11,10 @@ description: |
     Disqus suddenly put ads to my site! Hassle. In this blogpost, I'll outline
     the steps I took when I migrated my Disqus comments into utterances--an
     open-source, ad-free, comments widget.
+excerpt: |
+    Disqus suddenly put ads to my site! Hassle. In this blogpost, I'll outline
+    the steps I took when I migrated my Disqus comments into utterances--an
+    open-source, ad-free, comments widget.
 ---
 
 ## Introduction
