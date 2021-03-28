@@ -1,19 +1,19 @@
 ---
 layout: post
 type: post
-title: "Migrating from Disqus to Utterances for my Jekyll blog"
+title: "How to migrate from Disqus to Utterances in your Jekyll blog"
 date: 2021-03-26
 category: notebook
 comments: true
 author: "LJ MIRANDA"
 tags: [github, blogging, utterances, jekyll, github pages]
 description: |
-    Disqus suddenly put ads to my site! Hassle. In this blogpost, I'll outline
-    the steps I took when I migrated my Disqus comments into utterances--an
+    Disqus suddenly put ads on my site, hassle! In this blogpost, I'll outline
+    the steps I took when I migrated my Disqus comments into utterances&mdash;an
     open-source, ad-free, comments widget.
 excerpt: |
-    Disqus suddenly put ads to my site! Hassle. In this blogpost, I'll outline
-    the steps I took when I migrated my Disqus comments into utterances--an
+    Disqus suddenly put ads on my site, hassle! In this blogpost, I'll outline
+    the steps I took when I migrated my Disqus comments into utterances&mdash;an
     open-source, ad-free, comments widget.
 ---
 
