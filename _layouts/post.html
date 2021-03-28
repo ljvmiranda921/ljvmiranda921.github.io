@@ -19,6 +19,7 @@ layout: default
     {{ content }}
   </div>
 
+  {% if page.comments != false and jekyll.environment == "production" %}
   <script src="https://utteranc.es/client.js"
         repo="ljvmiranda921/comments.ljvmiranda921.github.io"
         issue-term="title"
@@ -26,5 +27,6 @@ layout: default
         crossorigin="anonymous"
         async>
   </script>
+  {% endif %}
 
 </article>
