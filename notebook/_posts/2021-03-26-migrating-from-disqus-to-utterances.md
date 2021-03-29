@@ -47,39 +47,40 @@ comments into Utterances:
 
 ## Setup utterances config and repository
 
-First, you need to decide on a repo to store your blog comments. In my case, I
-created a new **public** repo,
-[comments.ljvmiranda921.github.io](https://github.com/ljvmiranda921/comments.ljvmiranda921.github.io)
-, that will house all Github Issues. It's also possible to use your own Jekyll
-blog repository; I just opted not to because I use mine for project management
-and ideation purposes.
+1. First, you need to decide on a repo to store your blog comments.  In my
+   case, I created a new **public** repo,
+   [comments.ljvmiranda921.github.io](https://github.com/ljvmiranda921/comments.ljvmiranda921.github.io)
+   , that will house all Github Issues. It's also possible to use your own
+   Jekyll blog repository; I just opted not to because I use mine for project
+   management and ideation purposes.
 
-![](/assets/png/utterances/utterances_repo.png){:width="480px"}  
-**Figure:** I created a dedicated repo for my blog comments
-{: style="text-align: center;"}
+    ![](/assets/png/utterances/utterances_repo.png){:width="480px"}  
+    **Figure:** I created a dedicated repo for my blog comments
+    {: style="text-align: center;"}
 
-Next, install the [utterances Github app](https://github.com/apps/utterances)
-in said repo and configure it to your liking. This will allow the utterances
-bot to listen and push Issues into your Github repo. 
+2. Next, install the [utterances Github
+   app](https://github.com/apps/utterances) in said repo and configure it to
+   your liking. This will allow the utterances bot to listen and push Issues
+   into your Github repo. 
 
-Lastly, create a configuration script for [utterances](https://utteranc.es/) and
-add it to your site.  Specify the `repo` name and `theme`. For `issue-term`, I
-suggest using `title` because that's what our migration tool will use. Here's a
-sample of my config:
+3. Lastly, create a configuration script for [utterances](https://utteranc.es/)
+   and add it to your site.  Specify the `repo` name and `theme`. For
+   `issue-term`, I suggest using `title` because that's what our migration tool
+   will use. Here's a sample of my config:
 
-```html
-<script src="https://utteranc.es/client.js"
-        repo="ljvmiranda921/comments.ljvmiranda921.github.io"
-        issue-term="title"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
-```
+    ```html
+    <script src="https://utteranc.es/client.js"
+            repo="ljvmiranda921/comments.ljvmiranda921.github.io"
+            issue-term="title"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    ```
 
-I put this config in the `_layouts/post.html` of my blog (see
-[here](https://github.com/ljvmiranda921/ljvmiranda921.github.io/commit/6ea9748e53e6dca262c9952e873a405d06113621)).
-Ideally, you'd want to put it where you used to put your Disqus link.
+    I put this config in the `_layouts/post.html` of my blog (see
+    [here](https://github.com/ljvmiranda921/ljvmiranda921.github.io/commit/6ea9748e53e6dca262c9952e873a405d06113621)).
+    Ideally, you'd want to put it where you used to put your Disqus link.
 
 Once you're done, you should be able to see the comments widget right away even
 if you run Jekyll locally. If you just want to install Utterances, then we end
@@ -88,15 +89,14 @@ at this step. For those who are doing the migration, we're not done yet!
 
 ## Export Disqus comments into XML
 
-Turns out, you can export comments from Disqus into an XML format. What I just need
-to do is go to the admin page of my Disqus account, open the Moderation tab, and
-click the Export button. It will then send an email to your registered account
-with the XML format of all comments in your site.
+1. Turns out, you can export comments from Disqus into an XML format. What I
+   just need to do is go to the admin page of my Disqus account, open the
+   Moderation tab, and click the Export button. It will then send an email to
+   your registered account with the XML format of all comments in your site.
 
-<!-- show screenshots with labels? -->
 
-![](/assets/png/utterances/community_page.png){:width="720px"}  
-{: style="text-align: center;"}
+    ![](/assets/png/utterances/community_page.png){:width="720px"}  
+    {: style="text-align: center;"}
 
 
 ## Perform migration
@@ -110,51 +110,52 @@ to use.
 It's in .NET, but he provided us a Dockerfile to make things smoother.
 (Thank you! Note: this will require
 [Docker](https://docs.docker.com/get-docker/) if you don't know .NET).
-First, I cloned the repo:
 
-```sh
-git clone git@github.com:JuergenGutsch/disqus-to-github-issues.git
-```
+1. First, I cloned the repo:
 
-Then, I updated lines 112-113 of `DisqusToGithubIssues/Program.cs` with my site
+    ```sh
+    git clone git@github.com:JuergenGutsch/disqus-to-github-issues.git
+    ```
+
+2. Then, I updated lines 112-113 of `DisqusToGithubIssues/Program.cs` with my site
 name:
 
-```sh
-cd disqus-to-github-issues
+    ```sh
+    cd disqus-to-github-issues
 # replace with your sitename
-export SITENAME=ljvmiranda921.github.io
+    export SITENAME=ljvmiranda921.github.io
 # you can also use your favorite text editor
-sed "s/asp.net-hacker.rocks/$SITENAME/" DisqusToGithubIssues/Program.cs
-```
+    sed "s/asp.net-hacker.rocks/$SITENAME/" DisqusToGithubIssues/Program.cs
+    ```
 
-Build the image,
+3. Build the image,
 
-```sh
-docker build -t disqus-to-github-issues .
-```
+    ```sh
+    docker build -t disqus-to-github-issues .
+    ```
 
-Prepare your parameters,
+4. Prepare your parameters,
 
-```sh
-export DISQUS_PATH=path/to/downloaded/disqus.xml
-export GITHUB_USERNAME=ljvmiranda921  # supply yours
-export GITHUB_REPONAME=comments.ljvmiranda921.github.io  # supply yours
-export GITHUB_PERSONAL_ACCESS_TOKEN=  # generate your own
-```
+    ```sh
+    export DISQUS_PATH=path/to/downloaded/disqus.xml
+    export GITHUB_USERNAME=ljvmiranda921  # supply yours
+    export GITHUB_REPONAME=comments.ljvmiranda921.github.io  # supply yours
+    export GITHUB_PERSONAL_ACCESS_TOKEN=  # generate your own
+    ```
 
-Then run the command:
+5. Then run the command:
 
-```sh
-docker run 
-    --rm \
-    -v $DISQUS_PATH:/app/disqus.xml \
-    disqus-to-github-issues:latest \
-    run \
-        /app/disqus.xml \
-        $GITHUB_USERNAME \
-        $GITHUB_REPONAME \
-        $GITHUB_PERSONAL_ACCESS_TOKEN 
-```
+    ```sh
+    docker run 
+        --rm \
+        -v $DISQUS_PATH:/app/disqus.xml \
+        disqus-to-github-issues:latest \
+        run \
+            /app/disqus.xml \
+            $GITHUB_USERNAME \
+            $GITHUB_REPONAME \
+            $GITHUB_PERSONAL_ACCESS_TOKEN 
+    ```
 
 You can follow these
 [instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
@@ -200,3 +201,9 @@ Given these, I still believe that the pros outweigh the cons. I think
 that I'll be using Utterances for a long time. This solution has provided me
 with an ad-free and "clean" experience that I want for my readers. Let me
 know if you have any questions below!
+
+
+#### Changelog
+
+* 03-30-2021: Added numbered steps so that it's easier to follow. 
+* 03-27-2021: Renamed title from "Migrating..." to "How to..."
