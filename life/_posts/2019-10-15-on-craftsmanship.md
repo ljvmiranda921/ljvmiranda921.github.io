@@ -22,11 +22,12 @@ tags: [software, craftsmanship, deep work, life]
 > of the points I'll discuss to provide a more thorough reflection on
 > craftsmanship.*
 
-This is a long post encompassing some of my reflections on craftsmanship,
-software, and life. I'll start off by narrating my first cathartic encounter
-with a craftsman, then move into my journey of finding my craft, and how it
-manifests into my work life. In the end, I'll provide a short meta-reflection
-on how I'm doing today and what these reflections meant for me and my career.
+This blogpost encompasses some of my reflections on craftsmanship,
+software, and life. I'll start off by narrating my first transformative
+encounter with a craftsman, moving on into my journey of finding my craft, and
+reflecting upon how it manifests into my work life. In the end, I'll provide a
+short meta-reflection on how I'm doing today and what these reflections meant
+for me and my career.
 
 Similar to [my previous blogpost](/life/2018/09/04/my-year-in-commits/), this
 is a highly-personal essay on my journey, but I hope that a few nuggets of
@@ -35,30 +36,34 @@ insight will surface as you read through my stories and reflections.
 ## The soba story
 
 The year was 2017, and I'm still fresh into my grad school journey in Japan.
-I'm starting to settle down, moved to a newer apartment, and made friends with
-other foreign students in my cohort. As we're all wide-eyed foreigners in a
-beautiful country, we took part in some Japanese cultural activities provided
+I settled down, moved into a new apartment, and made friends with
+other students in my batch. As we're all wide-eyed foreigners in a
+beautiful country, we took part in Japanese cultural activities provided
 by the school&mdash; one of which is making soba noodles.
 
-I didn't expect much from spending the weekend making soba noodles, *how life
-transforming could it be?* So I entered the function hall and saw around
-six tables laid out with some utensils already set up. In front, of course, are
-the welcoming faces of the Japanese cultural group. With them, I presume, are
-the soba chefs. I could tell because they have these aprons around them and a
-colorful handkerchief tied on their foreheads, similar to those 90's rappers in
-the Philippines. All of them are quite old, probably in their early 70s, still
-healthy and strong as with the standard for most Japanese seniors.
+I didn't expect much from spending the weekend making soba, *how life-transforming can it be?* 
 
-After some greetings and remarks, one of the soba chefs, probably the most
+I entered the function hall and saw six tables laid out with
+utensils set up. At the front are the welcoming faces of the
+Japanese cultural group, with them, I presume, are the soba chefs. I can tell
+because of their aprons and the colorful handkerchief tied around
+their foreheads, similar to those 90's rappers in the Philippines. All of them
+are quite old, probably in their early 70s, still healthy and strong as with
+the standard for most Japanese seniors.
+
+After some greetings and remarks, one of the chefs, perhaps the most
 senior of them by his looks, came to the front and demonstrated how to make
 soba. He stepped on the small makeshift stage, dipped his hands in water, and
-started his handiwork. It was very methodical: he first made small clumps of
-buckwheat flour in a large bowl, then kneaded it, flattened it, and sliced it
-into strips.  While making soba, one of the translators mentioned that
-*he's been making soba noodles all his life.* I was so entranced watching
-him: he seemed to retain the same vigor and enthusiasm of making soba from his
-childhood years. I was also confused as a question stuck on me: "How can you
-do one thing for all your life and not be bored by it?"
+started his handiwork. 
+
+It was very methodical: he first made small clumps of buckwheat flour in a
+large bowl, kneaded and flattened it on a wooden board, and sliced it into
+strips.  While making soba, one of the translators mentioned that *he's been
+making soba noodles all his life.* 
+
+I was so entranced watching him: he seemed to retain the same vigor and
+enthusiasm of making soba from years of experience. I was also confused: "How
+can you do one thing all your life and not be bored by it?"
 
 ![](/assets/png/life/soba.png){:width="700px"}
 {: style="text-align: center;"}
@@ -66,7 +71,7 @@ do one thing for all your life and not be bored by it?"
 > *"How can you do one thing for all your life and not be bored by it?"*
 
 The day went on: we made our own noodles, cooked some zaru soba (ざるそば), ate
-it, and went home. Little did I know that watching an old man making soba[^1]
+it, and went home. Little did I know that watching an old man make soba[^1]
 will become a theme of my Japanese journey. Looking back, Japan seems to have a
 strong tradition of craftsmanship. Be it in pottery, brewing sake (酒), or
 [making fountain pens](https://www.youtube.com/watch?v=1F12qUyIACM), there's
@@ -104,13 +109,13 @@ brought back some memories of my undergraduate years.
 In hindsight, I may have been looking for a semblance of craftsmanship early on
 when I was an undergrad. I joined [Heights](https://heights-ateneo.org/), an
 artistic and literary publication, and practiced writing poems and making art.
-Encountering various works and artists during deliberations and workshops gave
-me an insight on how a medium is used to convey an idea or express one's self.
-The experience of **expressing yourself through a medium** has enamored me, and
-it's something that I want to recreate in my field.
+Participating in workshops gave me an insight on how a medium is used to convey
+an idea or express one's self.  The experience of **expressing yourself through
+a medium** has enamored me, and it's something that I want to recreate in my
+field.
 
 Again, I imagine the recurring image of the soba-maker: using the flour as his
-medium, he trudges the long nights kneading dough and making noodles under some
+medium, he trudges the long nights kneading dough and shaping noodles under some
 faint tungsten light. At the end of it all, he looks to his creation and says
 to himself: "this is how I make soba, this is different from how other's make
 soba because it's mine." Expressing yourself through the medium is a way of
@@ -138,7 +143,7 @@ treated as a craft.
 With software, the dark terminal has become my canvas and the blinking
 cursor my brush. I was able to build things and express myself in a way I want
 to. The best part is that it is integral to my field in
-technology, and has allowed to express myself through my medium. When I
+technology, and has allowed me to express myself through this medium. When I
 was building [PySwarms](https://github.com/ljvmiranda921/pyswarms) back in grad
 school, I imagine myself trudging the long nights typing on my keyboard under
 some faint fluorescent light. I push to PyPI, look at my creation, and tell
