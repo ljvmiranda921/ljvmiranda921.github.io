@@ -193,13 +193,23 @@ counterweight to discuss the challenges involved for each learning:
     the kindest and most talented people in tech. I'm happy to be inspired by
     them!
 
+
+To be honest, I still grapple with the definition of *craftsmanship*.  Perhaps,
+it is my intrinsic desire to do something well by all means. However, I don't
+just build things in an altruistic sense. In a way, I also value achievement,
+i.e, being able to say "I made that!" or "I built this!" In some cases, I see
+these pursuits as rest and therapy&mdash; a break from my day-job of sprint
+planning, urgent issues, and deliverables. **It's
+[*soulcraft*](https://www.thenewatlantis.com/publications/shop-class-as-soulcraft)**,
+maybe, and that's the best way I can put it right now.
+
 ## Conclusion 
 
-I decided to reflect on this because the archetype of a craftsman has
-become an anchor in my professional life. *I build things*, and I find my
-purpose in the act of creation (and creative destruction when refactoring
-code!). I guess the next step for me is to learn how to organize people to
-create *bigger* things, and to learn how to share my craft to a wider audience.
+It was cathartic writing this because the craftsman archetype has become an
+anchor in my professional life. *I build things*, and I find my purpose in the
+act of creation. I guess the next step for me is to learn how to organize
+people to create *bigger* things, and to learn how to share my craft to a wider
+audience.
 
 I've been talking a lot about open-source because it is my
 primary vehicle for craftsmanship, but I think that same concepts can be applied
@@ -216,6 +226,7 @@ correct.
 *(Credits to [Mitya Ivanov](https://unsplash.com/@aka_opex) and [Ian Schneider](https://unsplash.com/@goian?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) from Unsplash for the photos)*
 
 #### Changelog
+* 04-10-2021: Update body conclusion and grammar mistakes
 * 03-01-2020: Add some Splash photos
 * 10-15-2019: Update some grammar mistakes
 
