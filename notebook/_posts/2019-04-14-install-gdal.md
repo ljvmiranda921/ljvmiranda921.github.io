@@ -5,7 +5,7 @@ date: 2019-04-13
 category: notebook
 comments: true
 author: "LJ MIRANDA"
-tags: [gdal, ogr, geospatial, how-to, how to install gdal]
+tags: [gdal, ogr, geospatial, how-to, how to install gdal, ubuntu, conda, python, anaconda, osgeo]
 ---
 
 If you're working on geospatial data, then [GDAL/OGR](https://www.gdal.org/)
