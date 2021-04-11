@@ -198,9 +198,9 @@ explorations (known as Cellular Sprites) was made in Streamlit. I arranged the
 generated sprites in a 3x3 matrix, and added a sidebar with some parameters to
 play around. Although Streamlit made things alot easier, its default UI didn't
 convey the look that I want to achieve. However, it was a good run as a
-proof-of-concept, and I'm proud of my output.
+proof-of-concept, and I'm [proud of my output](https://cellular-sprites.herokuapp.com).
 
-<iframe src="https://cellular-sprites.herokuapp.com" width="700" height="450">
+<iframe src="https://cellular-sprites.herokuapp.com" style="height:450px;width:100%;border:none;overflow:hidden;">
   <p>Your browser does not support iframes.</p>
 </iframe>
 <br>**Figure**: You can try the Cellular Sprites streamlit app here.
