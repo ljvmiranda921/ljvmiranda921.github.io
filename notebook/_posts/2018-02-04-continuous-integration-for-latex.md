@@ -16,7 +16,7 @@ math: true
 **Note:** I shifted to a Docker-based solution. Know more
 [here](https://ljvmiranda921.github.io/notebook/2018/04/23/postmortem-shift-to-docker/).
 
-When working with collaborators in large projects, an efficient continuous 
+<span class="firstcharacter">W</span>hen working with collaborators in large projects, an efficient continuous 
 integration and deployment pipeline will keep your sanity. The same goes 
 with LaTeX documents, even if you're working alone, a good pipeline can 
 increase your document's portability and use.

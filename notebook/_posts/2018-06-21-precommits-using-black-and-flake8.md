@@ -13,7 +13,7 @@ tags: [python, black, precommit, flake8, git, automation, workflow]
 > not, then I the perform necessary edits and `commit` again. Less time is
 > spent on code formatting so I can focus more on code logic.
 
-I enjoy doing code reviews. They enable me to learn from other's code while
+<span class="firstcharacter">C</span>ode reviews are fun! They enable me to learn from other's code while
 providing an opportunity to teach what I know. However, there are still some
 things I wish to improve when facilitating reviews in my open-source
 projects:

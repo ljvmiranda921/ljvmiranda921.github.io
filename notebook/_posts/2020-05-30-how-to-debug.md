@@ -23,7 +23,7 @@ excerpt: |
 
 ## Introduction
 
-There was a time when I was tasked to maintain a system, and fix it iteratively
+<span class="firstcharacter">T</span>here was a time when I was tasked to maintain a system, and fix it iteratively
 whenever users report bugs. I was **not** on building-mode: the priority
 isn't the next killer feature or the next phase in the roadmap&mdash;it's
 simply to ensure that the software is working as expected. During those weeks

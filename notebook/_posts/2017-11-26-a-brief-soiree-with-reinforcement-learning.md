@@ -18,7 +18,7 @@ math: true
 the intern task is about [Adversarial Examples](https://github.com/pfnet/intern-coding-tasks/tree/master/2018/ml). 
 Awesome task, but I'm not sure if I can share my solutions anymore.
 
-Given the recent success of AlphaGo and OpenAI's win in DoTA, I decided to
+<span class="firstcharacter">G</span>iven the recent success of AlphaGo and OpenAI's win in DoTA, I decided to
 dedicate a few weeks studying reinforcement learning (RL). It turns out that
 RL is a different ball game, and in effect, I need to learn a whole new
 schema of concepts and ideas. It was overwhelming at first so to just dip my

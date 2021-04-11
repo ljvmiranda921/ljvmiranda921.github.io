@@ -12,7 +12,7 @@ math: true
 > **Update**: Read my review of the Jupyter Notebook ecosystem in 2020 
 > in [this link](/notebook/2020/03/06/jupyter-notebooks-in-2020)
 
-In my research, I usually work with remote servers to run deep learning
+<span class="firstcharacter">I</span>n my research, I usually work with remote servers to run deep learning
 models inside machines more powerful than my laptop. In some cases, I find
 myself needing to fire up a Jupyter notebook to draw quick-and-easy
 visualizations and short analyses. Here, I'll show you how to run a Jupyter

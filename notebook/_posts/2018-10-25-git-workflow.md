@@ -13,7 +13,7 @@ tags: [git, automation, software development, workflow]
 > verbose one? Readability or traceability? If you wish to know which is which,
 > then read on!
 
-Software engineering is a land full of age-old debates: spaces or tabs? vim or
+<span class="firstcharacter">S</span>oftware engineering is a land full of age-old debates: spaces or tabs? vim or
 emacs (*or worse*, nano)? Today, I'll be talking about one of these: `merge` or
 `rebase`? This is an important topic especially for dev teams who are still
 starting out in their projects.
