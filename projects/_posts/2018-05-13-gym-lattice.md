@@ -15,7 +15,7 @@ tags: [reinforcement learning, bioinformatics, protein structure prediction, res
 ![python 3.4+](https://img.shields.io/badge/python-3.4+-blue.svg)
 [![DOI](https://zenodo.org/badge/127895338.svg)](https://zenodo.org/badge/latestdoi/127895338)
 
-It turns out that my [brief soirée with reinforcement learning
+<span class="firstcharacter">I</span>t turns out that my [brief soirée with reinforcement learning
 (RL)](https://ljvmiranda921.github.io/notebook/2017/11/26/a-brief-soiree-with-reinforcement-learning/)
 became a long dance. I started watching David Silver's
 [lectures](https://www.youtube.com/watch?v=2pWv7GOvuf0), and seriously

@@ -10,7 +10,7 @@ tags: [machine learning, david ha, sketch-rnn, magenta, holiday cards, thinking
 machines data science, deep learning, christmas, glove, style transfer]
 ---
 
-One of my first blog posts in Thinking Machines involves a deep-learning based
+<span class="firstcharacter">O</span>ne of my first blog posts in Thinking Machines involves a deep-learning based
 holiday card generator dubbed as **ChristmAIs**. It was an exciting two-month
 journey of creating artworks using AI: there are things that we tried but
 didn't work, reasons we pivoted, and small wins in publishing the article. This

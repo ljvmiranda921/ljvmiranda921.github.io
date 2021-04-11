@@ -10,7 +10,7 @@ tags: [reinforcement learning, chainer, chainerrl, parallelization, internship, 
 ---
 
 
-This summer, I joined [Preferred
+<span class="firstcharacter">T</span>his summer, I joined [Preferred
 Networks](https://www.preferred-networks.jp/ja/) as an intern and worked on
 [ChainerRL](https://github.com/chainer/chainerrl), their open-source library
 for reinforcement learning. The last six weeks were great! I learned a lot

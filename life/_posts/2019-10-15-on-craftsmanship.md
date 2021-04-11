@@ -22,7 +22,7 @@ tags: [software, craftsmanship, deep work, life]
 > of the points I'll discuss to provide a more thorough reflection on
 > craftsmanship.*
 
-This blogpost encompasses some of my reflections on craftsmanship,
+<span class="firstcharacter">T</span>his blogpost encompasses some of my reflections on craftsmanship,
 software, and life. I'll start off by narrating my first transformative
 encounter with a craftsman, moving on into my journey of finding my craft, and
 reflecting upon how it manifests into my work life. In the end, I'll provide a

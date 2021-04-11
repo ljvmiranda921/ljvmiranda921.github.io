@@ -26,7 +26,7 @@ excerpt: |
 Hi friends! Thanks for accompanying me in the final part of this series. Let's
 jump right into it!
 
-To recap what we know so far, in [Part
+<span class="firstcharacter">T</span>o recap what we know so far, in [Part
 One](/notebook/2020/03/06/jupyter-notebooks-in-2020/), we created a framework
 that identifies two directions of growth&mdash; cloud adoption and production
 systems&mdash; and three forces of change that push the Jupyter ecosystem

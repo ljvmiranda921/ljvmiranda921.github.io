@@ -25,7 +25,7 @@ suffer from the [curse of
 knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge). This time, let's
 step back and do an ELI5[^1] on how these technologies relate to one another.
 
-In this blogpost, I'll explain why we need Flask, Celery, and Redis by sharing
+<span class="firstcharacter">I</span>n this blogpost, I'll explain why we need Flask, Celery, and Redis by sharing
 my adventures in buying McNuggets from Mcdonalds. Using these three (or
 technologies similar to them) is integral to web backend development so that we
 can scale our applications.
