@@ -28,7 +28,7 @@ excerpt: |
 Hello, thanks for joining me in the Second Part of this series! Let's jump
 right into it. 
 
-Recall that in [Part One](/notebook/2020/03/06/jupyter-notebooks-in-2020/), we
+<span class="firstcharacter">R</span>ecall that in [Part One](/notebook/2020/03/06/jupyter-notebooks-in-2020/), we
 identified (1) two directions of ecosystem growth, i.e, cloud adoption and
 software production, and (2) three forces of change driving the evolution of
 our tools, especially in the Jupyter Notebook ecosystem:

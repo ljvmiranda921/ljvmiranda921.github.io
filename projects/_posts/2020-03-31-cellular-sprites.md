@@ -22,7 +22,7 @@ excerpt: |
 
 ## Introduction
 
-There is something magical about discrete things working together to achieve a
+<span class="firstcharacter">T</span>here is something magical about discrete things working together to achieve a
 common goal. It may be particles in a swarm algorithm, or contributors in
 open-source projects. Independent as they were, the sum total of their actions
 give way to a recognizable whole. 

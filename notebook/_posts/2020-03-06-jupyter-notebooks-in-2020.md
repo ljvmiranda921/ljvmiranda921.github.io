@@ -24,7 +24,7 @@ excerpt: |
 > Here, I'll talk about the data science landscape, and the forces that pushes
 > our tools to evolve.
 
-*Ah, Jupyter Notebooks.* Love it or hate it, they're here to stay. The last
+<span class="firstcharacter">A</span>h, Jupyter Notebooks. Love it or hate it, they're here to stay. The last
 time I wrote about them was two years ago (it's about [running a notebook
 from a remote
 server](https://ljvmiranda921.github.io/notebook/2018/01/31/running-a-jupyter-notebook/)),

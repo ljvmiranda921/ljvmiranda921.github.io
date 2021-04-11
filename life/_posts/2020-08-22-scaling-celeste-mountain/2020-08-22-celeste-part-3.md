@@ -38,7 +38,7 @@ This review will contain a lot of spoilers in Celeste the game. If you haven't p
 
 ## Conclusion: Heart of the Mountain
 
-In the first two sections of this series [[1]](/life/2020/07/31/celeste/)
+<span class="firstcharacter">I</span>n the first two sections of this series [[1]](/life/2020/07/31/celeste/)
 [[2]](/life/2020/08/22/celeste-part-2/), we looked into how Celeste was able to
 achieve its brilliance by enabling me, the player, to share with Madeline's
 struggles and catharsis. We examined the game in three levels: first by its
