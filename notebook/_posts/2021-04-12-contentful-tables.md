@@ -68,11 +68,14 @@ use it for your own. There are already [plans of archiving the original
 repo](https://github.com/contentful-labs/ui-editable-table/pull/2#issuecomment-815068867)
 so better to try out the forks.
 
-Another option is to try [AnalogMemory's
+### Other options
+
+* You can also try [AnalogMemory's
 fork](https://github.com/AnalogMemory/contentful-tables/). It does something
 similar but uses the older Contentful CLI version. If you're just going to
 create UI extensions in the default `master` environment, then I recommend
 using this repo.
+* There is also this [cool Table extension](https://pdq.github.io/contentful-table/) from PDQ. You can host it yourself or just add `https://pdq.github.io/contentful-table/` in your extension's `src` field. The UI looks clean with options to add or remove columns and rows. I recommend checking this out.
 
 ## Conclusion
 
