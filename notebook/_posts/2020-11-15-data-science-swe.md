@@ -26,7 +26,7 @@ skills as a researcher. Maybe our conversation went this way:
 ![](/assets/png/data-science-swe/talking_to_others.png){:width="380px"}  
 {: style="text-align: center;"}
 
-You get it already...the field is quite huge and there are many ways to get
+<span class="firstcharacter">Y</span>ou get it already...the field is quite huge and there are many ways to get
 started&mdash; I myself got overwhelmed before! Hence, here's an exercise for
 you to learn relevant software skills with a tangible output in the end. Your
 mileage may vary, it worked for me and it's one of *many* paths.
