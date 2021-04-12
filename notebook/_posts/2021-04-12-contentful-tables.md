@@ -15,7 +15,7 @@ excerpt: |
     options&mdash;so that you won't be bothered scouring the net.
 ---
 
-I want to represent tabular data in [Contentful](https://www.contentful.com/).
+<span class="firstcharacter">I</span> want to represent tabular data in [Contentful](https://www.contentful.com/).
 However, they don't have an appropriate [content
 type](https://www.contentful.com/developers/docs/concepts/data-model/) that
 handles that. For example, I want to express CO<sub>2</sub> emissions (in
@@ -28,12 +28,12 @@ gigaton) per year:
 | 2012 | 35        |
 | 2013 | 35.3      |
 
-* ❌ My initial approach is to create a generic Content Model with Year (`Integer`)
+* My initial approach is to create a generic Content Model with Year (`Integer`)
     and Value (`Number`) as fields, then establish a
     [link](https://www.contentful.com/developers/docs/concepts/links/) between
     my main model and the generic one. However, if you have ten years, then you
     generate 10 + 1 entries&mdash; very inefficient if you have limited entries.
-* ❌ My second approach is to use a JSON Object for representing tables. It fits
+* My second approach is to use a JSON Object for representing tables. It fits
     my use-case properly and it seems to be the appropriate data structure.
     However, I don't want my users to edit JSON objects directly! It's bad (and
     weird) UX!
@@ -50,7 +50,7 @@ is a nice UI extension from Contentful Labs that **enables JSON Objects to be
 represented as a Table.** If your use-case is simple (using only the `master`
 environment, static number of rows and columns, etc.), then the README
 instructions should work as-is. However, I did some *modifications of my own*:
-* ✅ *I updated the command-line utility it uses under the hood*. The current
+* *I updated the command-line utility it uses under the hood*. The current
     repo uses an [older and deprecated
     version](https://github.com/contentful/contentful-extension-cli) of the
     Contentful CLI. This version only uploads to the `master` environment,
@@ -58,8 +58,8 @@ instructions should work as-is. However, I did some *modifications of my own*:
     Contentful
     CLI](https://github.com/contentful/contentful-cli/tree/master/docs/extension/create)
     with more options and parameters.
-* ✅  *I merged [@dmcb](https://github.com/dmcb)'s [Pull Request](https://github.com/contentful-labs/ui-editable-table/pull/2) that adds controls for altering table dimensions.* The original repo has a static number of rows and columns, depending on how you set it up. The said PR fixes this and adds more user-control in the UI.
-* ✅  *I cleaned-up the extension name and title.* It seems that the extension was
+* *I merged [@dmcb](https://github.com/dmcb)'s [Pull Request](https://github.com/contentful-labs/ui-editable-table/pull/2) that adds controls for altering table dimensions.* The original repo has a static number of rows and columns, depending on how you set it up. The said PR fixes this and adds more user-control in the UI.
+* *I cleaned-up the extension name and title.* It seems that the extension was
     an artifact from another project. I removed some unnecessary words and
     ensured that naming is consistent.
 
