@@ -33,6 +33,7 @@ gigaton) per year:
     [link](https://www.contentful.com/developers/docs/concepts/links/) between
     my main model and the generic one. However, if you have ten years, then you
     generate 10 + 1 entries&mdash; very inefficient if you have limited entries.
+
 * My second approach is to use a JSON Object for representing tables. It fits
     my use-case properly and it seems to be the appropriate data structure.
     However, I don't want my users to edit JSON objects directly! It's bad (and
@@ -50,6 +51,7 @@ is a nice UI extension from Contentful Labs that **enables JSON Objects to be
 represented as a Table.** If your use-case is simple (using only the `master`
 environment, static number of rows and columns, etc.), then the README
 instructions should work as-is. However, I did some *modifications of my own*:
+
 * *I updated the command-line utility it uses under the hood*. The current
     repo uses an [older and deprecated
     version](https://github.com/contentful/contentful-extension-cli) of the
@@ -58,7 +60,9 @@ instructions should work as-is. However, I did some *modifications of my own*:
     Contentful
     CLI](https://github.com/contentful/contentful-cli/tree/master/docs/extension/create)
     with more options and parameters.
+
 * *I merged [@dmcb](https://github.com/dmcb)'s [Pull Request](https://github.com/contentful-labs/ui-editable-table/pull/2) that adds controls for altering table dimensions.* The original repo has a static number of rows and columns, depending on how you set it up. The said PR fixes this and adds more user-control in the UI.
+
 * *I cleaned-up the extension name and title.* It seems that the extension was
     an artifact from another project. I removed some unnecessary words and
     ensured that naming is consistent.
@@ -75,6 +79,7 @@ fork](https://github.com/AnalogMemory/contentful-tables/). It does something
 similar but uses the older Contentful CLI version. If you're just going to
 create UI extensions in the default `master` environment, then I recommend
 using this repo.
+
 * There is also this [cool Table extension](https://pdq.github.io/contentful-table/) from PDQ. You can host it yourself or just add `https://pdq.github.io/contentful-table/` in your extension's `src` field. The UI looks clean with options to add or remove columns and rows. I recommend checking this out.
 
 ## Conclusion
