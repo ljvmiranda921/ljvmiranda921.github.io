@@ -23,35 +23,38 @@ P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljv
 
 ## Background
 
-I'm currently a Machine Learning Researcher at [Thinking
-Machines](https://thinkingmachin.es/), a data science consultancy in the
-Philippines.
+I'm currently taking a short break! Taking some time-off to rest, refresh, and
+recharge. Watch this space for the next step of my tech journey.
 
-Prior to that, I obtained my Masters degree from [Waseda
-University](https://www.waseda.jp/top/en), where I did some research on protein
-function prediction using unsupervised learning techniques. Before graduation,
-I spent the summer as an intern at [Preferred
-Networks](https://www.preferred-networks.jp/en/), an AI startup in Japan.
-During that time I worked on a reinforcement learning library called
-[ChainerRL](https://github.com/chainer/chainerrl), where I implemented a
-training parallelization framework.  Further back, I received my undergraduate
-degree in Electronics Engineering (*cum laude*) and a minor in Philosophy from
-[Ateneo de Manila University](https://www.ateneo.edu). 
+Prior to that, I've worked for some machine learning startups such as:
+* [Thinking Machines Data Science](https://thinkingmachin.es), where I built
+    multiple natural language processing (NLP) and computer vision (CV)-based ML products such as a search engine, an industry
+    classifier, and a document OCR system to name a few.
+* [Preferred Networks](https://www.preferred-networks.jp/en/) in Japan as an
+    intern, where I implemented a training parallelization framework for
+    [ChainerRL](https://github.com/chainer/chainerrl), an open-source
+    reinforcement learning library.
 
-I'm interested in problems concerning machine learning and its applications,
-especially those that deal with its deployment, engineering, and use.
-Furthermore, I'm also learning about distributed systems and infrastructure. 
+I obtained my master's degree from [Waseda
+University](https://www.waseda.jp/top/en) and my bachelor's in Electronics
+Engineering, minor in Philosophy from [Ateneo de Manila
+University](https://www.ateneo.edu). My current research interests include
+machine learning systems design, natural-language processing, and artificial
+life. 
 
-Lastly, I'm well-involved in open-source and has authored several projects like
-[pyswarms](https://github.com/ljvmiranda921/pyswarms),
-[seagull](https://github.com/ljvmiranda921/seagull),
-[burnout-barometer](https://github.com/ljvmiranda921/burnout-barometer), and
-[gym-lattice](https://github.com/ljvmiranda921/gym-lattice). PySwarms has been
-quite successful, I've seen it being used in [quantum
+Lastly, I'm well-involved in open-source and have authored [several
+projects](https://github.com/ljvmiranda921) of my own.
+[Pyswarms](https://github.com/ljvmiranda921/pyswarms) has been quite
+successful, I've seen it being used in [quantum
 physics](https://arxiv.org/abs/1801.07686),
 [chemistry](https://pubs.acs.org/doi/abs/10.1021/acscentsci.8b00307), and
-[teaching](http://gousios.org/courses/algo-ds/book/string-distance.html#sop-example-using-pyswarms)
-to name a few.  I code mainly in Python and Go, while learning some Elixir and Vue.
+[teaching](https://www.gousios.gr/courses/algo-ds/optimizations.html) amongst
+[other
+things](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15267041073198929167).
+I love indie games (especially roguelikes and platformers) and I dabble in game
+development using [PICO-8](https://www.lexaloffle.com/pico-8.php) and
+[Godot](https://godotengine.org/).
+
 
 ## Contact
 
