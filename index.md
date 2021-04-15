@@ -12,17 +12,13 @@ layout: home
     <div class="right">
         <p>Hi, I'm Lj Miranda and welcome to my blog!</p>
         <p>
-            I'm currently a Machine Learning Researcher at <a
-            href="https://thinkingmachin.es/">Thinking Machines Data
-            Science</a>, a data science startup in the Philippines.
+            I'm currently taking a short break! Watch this space for the next step of
+            my journey.
         </p>
         <p>
-            Previously, I received my Masters degree from <a
-            href="https://www.waseda.jp/top/en">Waseda University</a>, and did
-            an internship at <a
-            href="https://www.preferred-networks.jp/en/">Preferred
-            Networks</a>. In this blog, I write about my interests in
-            machine learning, software development, and research.
+            In this blog, I write about my interests in machine learning,
+            software development, and research—so grab a cup of coffee and feel
+            free to look around!
         </p>
     </div>
 </div>
