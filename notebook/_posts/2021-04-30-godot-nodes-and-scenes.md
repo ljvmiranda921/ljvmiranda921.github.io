@@ -284,6 +284,12 @@ learn&mdash; exciting!
 
 Let me know your thoughts and questions in the comments below!
 
+## References
+
+* J. Linietsky and A. Manzur, “Godot Docs – 3.2 branch,” Godot Engine documentation. [Online]. Available: [https://docs.godotengine.org/en/stable/index.html](https://docs.godotengine.org/en/stable/index.html). (Accessed: 15-Apr-2021). 
+* ["Overall scene tree organization,"](https://www.reddit.com/r/godot/comments/a4lv8a/overall_scene_tree_organization/.) Reddit. [Online]. (Accessed: 15-Apr-2021). *Reddit user [u/willnationsdev](https://www.reddit.com/user/willnationsdev/) had an [enlightening comment](https://www.reddit.com/r/godot/comments/a4lv8a/overall_scene_tree_organization/ebi0sh9?utm_source=share&utm_medium=web2x&context=3) on how to differentiate between scripts, nodes, and scenes. The discussions here are also good, and helped clear-out some of my remaining confusion.*
+* ["Struggling with the difference between scenes and nodes,"](https://www.reddit.com/r/godot/comments/jhyijc/struggling_with_the_difference_between_scenes_and/ ) Reddit. [Online]. (Accessed: 15-Apr-2021). *Upon learning that their difference is arbitrary, it felt a bit freeing. Turns out there are no hard and fast rules to use Nodes vs. Scenes.*
+
 
 ### Footnotes
 
