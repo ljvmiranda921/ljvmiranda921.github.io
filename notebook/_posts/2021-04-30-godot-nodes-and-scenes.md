@@ -6,7 +6,8 @@ date: 2021-04-30
 category: notebook
 comments: true
 author: "LJ MIRANDA"
-tags: [godot, game development, open source, nodes, scenes]
+header-img: /assets/png/godot-cooking/HeaderImage.png
+tags: [godot, game development, open source, nodes, scenes, tutorial, cooking]
 description: |
     Getting around these concepts was my first barrier in learning Godot. Let
     me try to explain Nodes and Scenes by comparing it to cooking!
@@ -26,11 +27,6 @@ Cooking for me is about **organizing ingredients into a more
 complex form.** Put cooked rice, garlic, and butter in a pan, and you have
 yourself a nice breakfast *sinang&aacute;g* (fried rice). You can compose and reuse ingredients&mdash; much like programming.
 
-<!-- generic cooking photo from unsplash -->
-![](/assets/png/placeholder.jpg){:width="640px"}  
-{: style="text-align: center;"}
-
-
 In this blogpost, I'll attempt to **explain the concept of Nodes and Scenes by
 comparing it to the activity of cooking.** Specifically, I'll focus more on the
 aspects of (1) composability and (2) reusability. Although it has [been touched
@@ -39,27 +35,21 @@ by the official documentation, I think that there's still a lot that can be
 unpacked from it. Because I'm in a pasta craze right now, I'll use *Chicken
 Pesto Pasta*, one of my favorite dishes, as an example!
 
-<!-- picture of a chicken pesto pasta -->
-![](/assets/png/placeholder.jpg){:width="640px"}  
-{: style="text-align: center;"}
-
 ## Cooking employs composability
 
 As a programmer, I relish the fact that cooking is hierarchical in nature.  I
 can make an intricate dish by assembling basic ingredients together. For
-example, to make pesto sauce, I group basil leaves, garlic, salt & pepper, and
-olive oil in a pan:
+example, to make pesto sauce, I group basil leaves, salt & pepper, and
+butter in a pan (non-exhaustive list)[^1]:
 
 <!-- stylized image of these ingredients in a square box -->
 <!-- forms a stylized image of pesto sauce above it -->
-![](/assets/png/placeholder.jpg){:width="640px"}  
+![](/assets/png/godot-cooking/Blog_PestoSauc.png){:width="640px"}  
 {: style="text-align: center;"}
 
-The same goes for chicken-cuts and pasta:
+The same goes for cooked pasta and chicken-cuts:
 
-<!-- stylized image of these ingredients in a square box -->
-<!-- forms a stylized image of chicken cuts above it -->
-![](/assets/png/placeholder.jpg){:width="640px"}  
+![](/assets/png/godot-cooking/Blog_ChxPasta.png){:width="640px"}  
 {: style="text-align: center;"}
 
 So, the process of making chicken pesto can be thought of as **iteratively
@@ -68,7 +58,7 @@ combining one ingredient over the other**. We start with *primary* ingredients
 chicken-cuts, pasta). Then, we arrange the latter for the final dish:
 
 <!-- the picture of the hierarchy -->
-![](/assets/png/placeholder.jpg){:width="640px"}  
+![](/assets/png/godot-cooking/Mockup.png){:width="640px"}  
 {: style="text-align: center;"}
 
 
@@ -100,26 +90,29 @@ text](https://docs.godotengine.org/en/stable/classes/class_label.html), and
 
 > Godot is a fully-stocked and fully-equipped Kitchen at our disposal.
 
-Now, let's cook a 2D-platformer game. 
+Now, let's cook a 2D-platformer level. I'll attempt to reconstruct a particular
+level from one of my favorite games, Celeste, from the Nodes found in Godot.
 
 As usual, we take  our basic ingredients (Nodes) from our kitchen (Godot) and
 organize them into groups (Scenes): 
 * For my Character, I'd mix an
-[AnimatedSprite](https://docs.godotengine.org/en/stable/classes/class_animatedsprite.html)
+[AnimatedSprite](https://docs.godotengine.org/en/stable/classes/class_animatedsprite.html),
+[KinematicBody2D](https://docs.godotengine.org/en/stable/classes/class_kinematicbody2d.html),
 and a
 [Camera2D](https://docs.godotengine.org/en/stable/classes/class_camera2d.html).
-* For my Levels, I'll use a
+* For my Map, I'll use a
 [TileMap](https://docs.godotengine.org/en/3.0/classes/class_tilemap.html).
-* And for my HUD, I'll have a
-[TextureRect](https://docs.godotengine.org/en/stable/classes/class_canvaslayer.html)
-and
-[CanvasLayer](https://docs.godotengine.org/en/stable/classes/class_canvaslayer.html)
+* And for my Collectibles , I'll have a
+[Sprite](https://docs.godotengine.org/en/stable/classes/class_sprite.html)
+and a
+[RigidBody2D](https://docs.godotengine.org/en/latest/classes/class_rigidbody2d.html#class-rigidbody2d)
 together
 
-And by combining these three together, we now have a simple game!
+The list is by no means exhaustive. By combining the three together, we now have a Level![^2]
+We can then make more of these Levels, combine them with one another, and build a game!
 
 <!-- the picture of the hierarchy -->
-![](/assets/png/placeholder.jpg){:width="640px"}  
+![](/assets/png/godot-cooking/Blog_GameMake.png){:width="640px"}  
 {: style="text-align: center;"}
 
 This level of expressiveness makes Godot's Node and Scene system powerful. We
@@ -137,8 +130,8 @@ smaller games, one Scene with multiple Nodes may be enough. Just like in
 cooking, if you're just going to stir-fry vegetables, putting them in a single
 pan is enough.
 
-<!-- the picture of the hierarchy: veggies -->
-![](/assets/png/placeholder.jpg){:width="640px"}  
+<!-- hierarchy stir-fried veggies -->
+![](/assets/png/godot-cooking/Blog_VeggieStirFry.png){:width="640px"}  
 {: style="text-align: center;"}
 
 *If we can also use Nodes for hierarchy, then what is the incentive for using
@@ -155,7 +148,7 @@ for a Grilled Chicken Pesto Sandwich, then I just take them out again and
 combine them with other ingredients (in this case, bread and cheese).
 
 <!-- the picture of the hierarchy: chicken pesto sandwich -->
-![](/assets/png/placeholder.jpg){:width="640px"}  
+![](/assets/png/godot-cooking/Blog_Reusability.png){:width="640px"}  
 {: style="text-align: center;"}
 
 "Storing them in the fridge" and "taking them out again" is a key advantage
@@ -167,12 +160,14 @@ I want to make a chicken sandwich, I don't need to prepare the ingredients
 again; instead, I can just reuse the chicken-cuts that I made earlier.
 
 In the context of game development, we often see this pattern in Enemy mobs or
-collectible Items. First we prepare a *template* of an Enemy, and instantiate
+collectible Items. First we prepare a *template* of an Item, and instantiate
 copies of it [just in the time](https://www.investopedia.com/terms/j/jit.asp)
-we'll need them.
+we'll need them. In *Celeste*, the strawberry collectible appears in multiple
+areas of the game. We can implement this by creating a Strawberry template, and
+placing it on different areas of the map.
 
 <!-- a picture of reusability -->
-![](/assets/png/placeholder.jpg){:width="640px"}  
+![](/assets/png/godot-cooking/Blog_GameReuse.png){:width="640px"}  
 {: style="text-align: center;"}
 
 
@@ -205,10 +200,6 @@ Just like cooking, I approach things from top to bottom. I start by decomposing
 a dish into its main components, e.g. sauce, meat, carbs, then I figure out the
 basic ingredients needed to create them. 
 
-<!-- a picture of  top to bottom approach -->
-![](/assets/png/placeholder.jpg){:width="640px"}  
-{: style="text-align: center;"}
-
 ## Mother's cooking advice: start simple
 
 So far, we've looked into how the concept of Nodes and Scenes resembles that of cooking:
@@ -224,7 +215,7 @@ powerful and fully-featured!
 
 However, from my experience, too many features can be a tad overwhelming&mdash;
 it's difficult to figure out where to start. Sometimes, I find Godot to be too
-flexible to a fault: there's no enforced structure[^1], and it's up to you whether
+flexible to a fault: there's no enforced structure[^3], and it's up to you whether
 to use Nodes or Scenes. It can be a boon for experienced game developers, but a
 bane for amateurs like me.
 
@@ -293,5 +284,7 @@ Let me know your thoughts and questions in the comments below!
 
 ### Footnotes
 
-[^1]: Fortunately, the Godot documentation offers [some best practices when organizing Scenes](https://docs.godotengine.org/en/stable/getting_started/workflow/best_practices/scene_organization.html). I highly-recommend going through them, although I still find it hard to parse these ideas (seems to cater to more intermediate developers).
+[^1]: I'm currently learning iconography and a particular style of coloring in pixel art&mdash; so please be nice! Trying to move away from the standard PICO-8 palette that I'm used to. Thanks a lot to OpenGameArt for providing some useful references, and the [Comfort44s](https://lospec.com/palette-list/comfort44s) palette for the colors!
+[^2]: Of course, it's not as simple as that. We still need to wire-up the parts properly and write the logic on how these things work together. I decided not to talk about it because it may be outside the scope of my topic.
+[^3]: Fortunately, the Godot documentation offers [some best practices when organizing Scenes](https://docs.godotengine.org/en/stable/getting_started/workflow/best_practices/scene_organization.html). I highly-recommend going through them, although I still find it hard to parse these ideas (seems to cater to more intermediate developers).
 
