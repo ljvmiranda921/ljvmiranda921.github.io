@@ -23,10 +23,10 @@ P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljv
 
 ## Background
 
-I'm currently taking a short break! Taking some time-off to rest, refresh, and
+I'm currently on a short break! Taking some time-off to rest, refresh, and
 recharge. Watch this space for the next step of my tech journey.
 
-Prior to that, I've worked for some machine learning startups such as:
+Previously, I've worked for some machine learning startups such as:
 * [Thinking Machines Data Science](https://thinkingmachin.es), where I built
     multiple natural language processing (NLP) and computer vision (CV)-based ML products such as a search engine, an industry
     classifier, and a document OCR system to name a few.
