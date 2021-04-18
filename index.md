@@ -12,7 +12,7 @@ layout: home
     <div class="right">
         <p>Hi, I'm Lj Miranda and welcome to my blog!</p>
         <p>
-            I'm currently taking a short break! Taking some time-off to rest,
+            I'm currently on a short break! Taking some time-off to rest,
             refresh, and recharge. Watch this space for the next step of my
             journey.
         </p>
