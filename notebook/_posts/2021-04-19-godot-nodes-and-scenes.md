@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "What are Nodes and Scenes in Godot? A cooking perspective"
-date: 2021-04-30
+date: 2021-04-19
 category: notebook
 comments: true
 author: "LJ MIRANDA"
