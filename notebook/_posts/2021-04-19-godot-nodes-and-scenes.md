@@ -20,15 +20,15 @@ excerpt: |
 
 <p><span class="firstcharacter">R</span>ecently I've been learning game development in Godot, and one my early
 barriers is understanding the idea behind Nodes and Scenes. What helped me get
-past this initial hump is by comparing it to an activity that I usually do:
+past this initial hump is by comparing it to something I usually do:
 cooking!</p>
 
-Cooking for me is about **organizing ingredients into a more
+For me, cooking is about **organizing ingredients into a more
 complex form.** Put cooked rice, garlic, and butter in a pan, and you have
-yourself a nice breakfast *sinang&aacute;g* (fried rice). You can compose and reuse ingredients&mdash; much like programming.
+yourself a nice breakfast *sinang&aacute;g* (fried rice). You can compose and reuse ingredients&mdash; much like in programming.
 
-In this blogpost, I'll attempt to **explain the concept of Nodes and Scenes by
-comparing it to the activity of cooking.** Specifically, I'll focus more on the
+In this blogpost, I'll attempt to **explain Godot's Node-Scene system by
+comparing it to cooking.** Specifically, I'll focus more on the
 aspects of (1) composability and (2) reusability. Although it has [been touched
 upon](https://docs.godotengine.org/en/stable/getting_started/step_by_step/scenes_and_nodes.html)
 by the official documentation, I think that there's still a lot that can be
@@ -37,10 +37,10 @@ Pesto Pasta*, one of my favorite dishes, as an example!
 
 ## Cooking employs composability
 
-As a programmer, I relish the fact that cooking is hierarchical in nature.  I
+Cooking is hierarchical in nature, i.e, I
 can make an intricate dish by assembling basic ingredients together. For
 example, to make pesto sauce, I group basil leaves, salt & pepper, and
-butter in a pan (non-exhaustive list)[^1]:
+butter in a pan (non-exhaustive)[^1]:
 
 <!-- stylized image of these ingredients in a square box -->
 <!-- forms a stylized image of pesto sauce above it -->
@@ -64,7 +64,7 @@ chicken-cuts, pasta). Then, we arrange the latter for the final dish:
 
 **Composability** is one of the core principles of Nodes and Scenes in Godot. Nodes can
 be thought of as the basic ingredients to build Scenes, a more complex
-ingredient particular to your dish. In our cooking example above, the pesto
+ingredient particular to our dish. In our cooking example above, the pesto
 sauce, boiled pasta, and chicken-cuts&mdash;by nature of them being created
 from basic ingredients (nodes)&mdash;can be considered as our Scenes.
 
@@ -80,7 +80,7 @@ on, Scenes offer alot more than just hierarchy.</p>
 If we extend our analogy further, then **Godot is a fully-stocked and
 fully-equipped Kitchen at our disposal.** Enter the Kitchen and you'll find
 almost any ingredient you can imagine: basil leaves, truffles, tuna, and more!
-Similarly, in a gamedev sense, you'll find Nodes for [animating
+Similarly, you'll find Nodes for [animating
 sprites](https://docs.godotengine.org/en/stable/classes/class_animatedsprite.html),
 [creating
 maps](https://docs.godotengine.org/en/3.0/classes/class_tilemap.html),
@@ -91,7 +91,7 @@ text](https://docs.godotengine.org/en/stable/classes/class_label.html), and
 > Godot is a fully-stocked and fully-equipped Kitchen at our disposal.
 
 Now, let's cook a 2D-platformer level. I'll attempt to reconstruct a particular
-level from one of my favorite games, Celeste, from the Nodes found in Godot.
+level from one of my favorite games, *Celeste*, from the Nodes found in Godot.
 
 As usual, we take  our basic ingredients (Nodes) from our kitchen (Godot) and
 organize them into groups (Scenes): 
@@ -108,27 +108,26 @@ and a
 [RigidBody2D](https://docs.godotengine.org/en/latest/classes/class_rigidbody2d.html#class-rigidbody2d)
 together
 
-The list is by no means exhaustive. By combining the three together, we now have a Level![^2]
-We can then make more of these Levels, combine them with one another, and build a game!
+The list is by no means exhaustive. By combining the three together, we have produced a Level![^2]
+We can then make more of these, assemble them with one another, and build a game!
 
 <!-- the picture of the hierarchy -->
 ![](/assets/png/godot-cooking/Blog_GameMake.png){:width="640px"}  
 {: style="text-align: center;"}
 
 This level of expressiveness makes Godot's Node and Scene system powerful. We
-start from "low-level" primitives (Nodes), and assemble them to create custom
+start from "low-level" primitives (Nodes), and assemble them into custom
 objects for our use (Scenes). 
 
-However, note that we can also express hierarchy by only using Nodes in a single
-Scene. I often find this similar to mixing everything inside a large pot when
-cooking: you can still make it work, but you need to be careful with your
+However, note that we can also express hierarchy by only using Nodes in a
+single Scene. I often find this similar to making stir-fry: you put everything
+into a pan and still make it work, but you need to be careful with your
 process. Same with Godot, putting everything into a single Scene may require
 you to rely upon your scripts and functions to achieve better encapsulation.
 
-Whether to use a single Scene pattern often depends on your use-case: for
-smaller games, one Scene with multiple Nodes may be enough. Just like in
-cooking, if you're just going to stir-fry vegetables, putting them in a single
-pan is enough.
+Whether to use the Single-Scene Pattern depends on your use-case: for smaller
+games, one Scene with multiple Nodes may be enough. Larger games may require
+better scene organization.
 
 <!-- hierarchy stir-fried veggies -->
 ![](/assets/png/godot-cooking/Blog_VeggieStirFry.png){:width="640px"}  
@@ -181,24 +180,25 @@ be instanced as much as I want. I consider this as a limit of our cooking analog
 
 With this insight, we can now think of Godot as a [**Scene Tree
 editor**](https://docs.godotengine.org/en/stable/getting_started/step_by_step/scene_tree.html).
-Even a hierarchy of Nodes still belongs to a scene, in this case, the Main Scene
-(or root node) of our game. Godot is powerful enough that we can customize a
+Even a game made only with Nodes still belongs to a scene, i.e, the Main Scene
+or root node. Godot is powerful enough that we can customize a
 Scene's behaviour during its lifecycle&mdash;when entering, when active, or
 when exiting the tree. 
 
 This mental model has also affected how I think about my projects in Godot.
-Before, I often start by asking myself, "what Nodes should I use for my game?";
-treating Nodes as my frame of reference. Now, it's more about asking "what are
-the main components of my Game?", where *components* can easily be translated
-into Scenes. Since Scenes are reusable, I just need to "think" about these
-components once.
+Before, I often start by asking myself, "what Nodes should I use for my game?",
+treating them as a frame of reference. Now, it's more about asking "what are
+the main components of my Game?", where *components* are just Scenes. Since
+Scenes are reusable, I only need to "think" about these components once.
 
 > Since Scenes are reusable, I just need to "think" about [my game's] component
 > once.
 
-Just like cooking, I approach things from top to bottom. I start by decomposing
-a dish into its main components, e.g. sauce, meat, carbs, then I figure out the
-basic ingredients needed to create them. 
+In cooking, I also approach things from top to bottom. I start by decomposing
+a dish into its main components, e.g. sauce, meat, carbs, then figure out the
+basic ingredients needed to create them. There's definitely alot of complexity
+involved, that's why I always go back to my mother's advice when cooking: start
+simple.
 
 ## Mother's cooking advice: start simple
 
@@ -227,7 +227,7 @@ simple**.
 My first few attempts at cooking were as easy as putting things in a boiling
 pot (like [*sinigang*](https://en.wikipedia.org/wiki/Sinigang) or sour stew) or
 marinating meat (like [*adobo*](https://en.wikipedia.org/wiki/Adobo)). There's
-only one level of hierarchy required, and I don't need to any ingedients:
+only one level of hierarchy required, and I don't need too many ingedients:
 **low complexity with minimal reusability**.
 
 > Start simple: there's
@@ -235,15 +235,15 @@ only one level of hierarchy required, and I don't need to any ingedients:
 > low complexity with minimal reusability
 
 I figure that this principle applies similarly in Godot. It is easier to start
-with a single Scene, and just create Node hierarchies as you go along. By doing
+with one Scene, and just create Node hierarchies as you go along. By doing
 this many times over, I start developing an intuitive sense whether I need to
-convert a node tree into a Scene. Good thing, Godot makes it simple to do so:
+convert a node tree into a Scene. Godot makes it simple to do so:
 just Right-click a Node in your viewer, and "Convert Branch into a Scene"
 
 And indeed, from my three years of software engineering experience, it is
 usually easier to move from simplicity to complexity than the other way around.
-Start with simple concepts, then add layers of abstraction as you go. Just like
-in cooking, just start by putting stuff into a pot, and later on you'll see
+Start with simple concepts, then add layers of abstraction as you go. Like
+cooking, just start by putting stuff into a pot, and later on you'll see
 yourself preparing more complex dishes.
 
 ## Conclusion
@@ -280,6 +280,10 @@ Let me know your thoughts and questions in the comments below!
 * J. Linietsky and A. Manzur, “Godot Docs – 3.2 branch,” Godot Engine documentation. [Online]. Available: [https://docs.godotengine.org/en/stable/index.html](https://docs.godotengine.org/en/stable/index.html). (Accessed: 15-Apr-2021). 
 * ["Overall scene tree organization,"](https://www.reddit.com/r/godot/comments/a4lv8a/overall_scene_tree_organization/.) Reddit. [Online]. (Accessed: 15-Apr-2021). *Reddit user [u/willnationsdev](https://www.reddit.com/user/willnationsdev/) had an [enlightening comment](https://www.reddit.com/r/godot/comments/a4lv8a/overall_scene_tree_organization/ebi0sh9?utm_source=share&utm_medium=web2x&context=3) on how to differentiate between scripts, nodes, and scenes. The discussions here are also good, and helped clear-out some of my remaining confusion.*
 * ["Struggling with the difference between scenes and nodes,"](https://www.reddit.com/r/godot/comments/jhyijc/struggling_with_the_difference_between_scenes_and/ ) Reddit. [Online]. (Accessed: 15-Apr-2021). *Upon learning that their difference is arbitrary, it felt a bit freeing. Turns out there are no hard and fast rules to use Nodes vs. Scenes.*
+
+#### Changelog
+
+* 04-19-2021: Update some grammar and usage issues
 
 
 ### Footnotes
