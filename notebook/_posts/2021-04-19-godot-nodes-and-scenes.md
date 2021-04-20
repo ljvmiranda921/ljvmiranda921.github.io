@@ -18,10 +18,10 @@ excerpt: |
 
 ## Introduction
 
-<p><span class="firstcharacter">R</span>ecently I've been learning game development in Godot, and one my early
-barriers is understanding the idea behind Nodes and Scenes. What helped me get
-past this initial hump is by comparing it to something I usually do:
-cooking!</p>
+<p><span class="firstcharacter">R</span>ecently I've been learning game
+development in Godot, and one of my early barriers is understanding the idea
+behind Nodes and Scenes. What helped me get past this initial hump is by
+comparing it to something I usually do: cooking!</p>
 
 For me, cooking is about **organizing ingredients into a more
 complex form.** Put cooked rice, garlic, and butter in a pan, and you have
