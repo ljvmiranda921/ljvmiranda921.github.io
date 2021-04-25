@@ -285,10 +285,13 @@ leading to an ML Service, with resources that once helped me along the way
     way of serving ML models, but it may be nice to experience how it's done
     with highly-specialized tools.
 
-    To get started, I highly-recommend looking at the ["First Steps"](https://fastapi.tiangolo.com/tutorial/first-steps/)
-    documentation of FastAPI. It's complete, and gets you up and running in no
-    time. You can then start "wrapping" your model's `predict()` functions with
-    API endpoints, so that it can start serving requests to users.
+    To get started, I highly-recommend looking at the ["First
+    Steps"](https://fastapi.tiangolo.com/tutorial/first-steps/) documentation
+    of FastAPI. Moreover, I encourage you to check-out this [huge list of
+    tutorials for FastAPI](https://fastapi.tiangolo.com/external-links/)! It's
+    complete, and gets you up and running in no time. You can then start
+    "wrapping" your model's `predict()` functions with API endpoints, so that
+    it can start serving requests to users.
 
     In addition, you might also want to take a look at [best practices and
     conventions](https://restfulapi.net/resource-naming/) in naming your
@@ -515,6 +518,9 @@ Lastly, I highly-recommend the following resources for general guidance:
 
 #### Changelog
 
+- 04-26-2021: Added more resources for FastAPI. I actually just linked it from
+    [this site](https://fastapi.tiangolo.com/external-links/). If you're
+    looking for more resources, I suggest looking at that link!
 - 03-19-2021: Added more resources for Flask and FastAPI based from feedback
     from Chip Huyen's ML Systems Design Discord Server. 
 
