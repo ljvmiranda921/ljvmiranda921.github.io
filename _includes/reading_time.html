@@ -1,0 +1,30 @@
+{%- comment -%}
+  According to [Wikipedia](http://en.wikipedia.org/wiki/Words_per_minute),
+  an average person can read 180 words per minute in a computer monitor.
+{%- endcomment -%}
+
+{%- assign words_per_minute = site.words_per_minute | default: 180 -%}
+
+{%- assign post_content = include.content -%}
+
+{%- if post_content -%}
+  {%- assign words = post_content | strip_html | number_of_words -%}
+{%- endif -%}
+
+{%- if words %}
+  {%- comment -%}### TOTAL_WORDS ###{%- endcomment -%}
+  {%- if words <= 1 -%}
+    {%- assign total_words = 1 | append: ' word' -%}
+  {%- else -%}
+    {%- assign total_words = words | append: ' words' -%}
+  {%- endif -%}
+
+  {%- comment -%}### READING_TIME ###{%- endcomment -%}
+  {%- assign wpm = words_per_minute | times: 1.0 -%}
+  {%- assign read_time = words | divided_by: wpm | round -%}
+  {%- if read_time <= 1 -%}
+    {%- assign reading_time = 1 | append: ' min read' -%}
+  {%- else -%}
+    {%- assign reading_time = read_time | append: ' min read' -%}
+  {%- endif -%}
+{%- endif -%}
