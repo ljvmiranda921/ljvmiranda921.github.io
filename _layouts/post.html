@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{%- include reading_time.html content=page.content -%}
+
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -12,7 +14,9 @@ layout: default
       </time>
       {% if page.author %}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
-      {% endif %}</p>
+      {% endif %} &verbar; 
+      {{ reading_time }} ({{ total_words }})
+    </p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
