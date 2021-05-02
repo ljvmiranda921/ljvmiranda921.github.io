@@ -23,13 +23,13 @@ P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljv
 
 ## Background
 
-I'm currently on a short break! Taking some time-off to rest, refresh, and
-recharge. Watch this space for the next step of my tech journey.
+I'm currently on a short break! Taking some time-off to rest, refresh, and recharge.
 
 Previously, I've worked for some machine learning startups such as:
-* [Thinking Machines Data Science](https://thinkingmachin.es), where I built
-    multiple natural language processing (NLP) and computer vision (CV)-based ML products such as a search engine, an industry
-    classifier, and a document OCR system to name a few.
+
+* [Thinking Machines Data Science](https://thinkingmachin.es), a consultancy where I built
+    multiple natural language processing (NLP) and computer vision (CV)-based ML products such as 
+    a search engine, an industry classifier, and a document OCR system for banks and telco providers.
 * [Preferred Networks](https://www.preferred-networks.jp/en/) in Japan as an
     intern, where I implemented a training parallelization framework for
     [ChainerRL](https://github.com/chainer/chainerrl), an open-source
