@@ -13,8 +13,8 @@ layout: home
         <p>Hi, I'm Lj Miranda and welcome to my blog!</p>
         <p>
             I'm currently on a short break! Taking some time-off to rest,
-            refresh, and recharge. Watch this space for the next step of my
-            journey.
+            refresh, and recharge. I'll still upload blogposts every now and
+            then.
         </p>
         <p>
             In this blog, I write about my interests in machine learning,
