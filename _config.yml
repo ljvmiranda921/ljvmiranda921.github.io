@@ -52,7 +52,7 @@ highlighter: rouge
 google_analytics: UA-106021948-1
 
 # Publish future
-future: true
+future: false
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 #header_pages:
