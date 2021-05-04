@@ -518,6 +518,7 @@ Lastly, I highly-recommend the following resources for general guidance:
 
 #### Changelog
 
+- 05-08-2021: Thanks a lot for the [Youtube shoutout](https://www.youtube.com/watch?v=cNDA60YLVdQ) [Daniel Bourke](https://www.mrdbourke.com/)! I highly-recommend looking into his [Zero-to-Mastery newsletter](https://zerotomastery.io/blog/machine-learning-monthly-february-2021/), it gave me a good view of newsworthy ML stuff I missed!
 - 04-26-2021: Added more resources for FastAPI. I actually just linked it from
     [this site](https://fastapi.tiangolo.com/external-links/). If you're
     looking for more resources, I suggest looking at that link!
