@@ -9,17 +9,18 @@ author: "LJ MIRANDA"
 published: true
 tags: [machine learning, ml, mlops, software engineering, ml engineering, mle, data science, data engineering, mlops tools]
 description: |
-    The MLOps ecosystem is confusing! New tools pop-up almost every week&mdash;it's hard to keep up!
-    Here, I'll try to navigate the ever-growing MLOps tools landscape. In Part One, I'll setup the problem by talking about who will benefit from MLOps
+    It's hard to keep up with the MLOps landscape! In this three-part series,
+    we will navigate the ecosystem and understand the benefits, types, and
+    adoption stragies for MLOps.
 excerpt: |
-    The MLOps ecosystem is confusing! New tools pop-up almost every week&mdash;it's hard to keep up!
-    Here, I'll try to navigate the ever-growing MLOps tools landscape. In Part One, I'll setup the problem by talking about who will benefit from MLOps
+    It's hard to keep up with the MLOps landscape! In this three-part series,
+    we will navigate the ecosystem and understand the benefits, types, and
+    adoption stragies for MLOps.
 ---
 
 > This is the first of a three-part blog post on the MLOps landscape. Here,
 > I’ll talk about the ML Lifecycle, and the personas or roles that pushes it
 > the way it is.
-
 
 <span class="firstcharacter">A</span> few years ago, I wished that more tools supporting ML in production become
 mainstream. Back then, [models usually get stuck in Jupyter
