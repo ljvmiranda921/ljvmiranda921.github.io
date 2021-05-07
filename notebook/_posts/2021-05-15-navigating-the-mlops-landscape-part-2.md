@@ -9,15 +9,11 @@ author: "LJ MIRANDA"
 published: true
 tags: [machine learning, ml, mlops, software engineering, ml engineering, mle, data science, data engineering, mlops tools]
 description: |
-    The MLOps ecosystem is confusing! New tools pop-up almost every
-    week&mdash;it's hard to keep up!  Here, I'll try to navigate the
-    ever-growing MLOps tools landscape. In Part Two, I'll deep-dive into the
-    tooling ecosystem.
+    In Part Two of "Navigating the MLOps landscape," I'll deep-dive into the
+    ecosystem in order to understand how each tool relate to one another.
 excerpt: |
-    The MLOps ecosystem is confusing! New tools pop-up almost every
-    week&mdash;it's hard to keep up!  Here, I'll try to navigate the
-    ever-growing MLOps tools landscape. In Part Two, I'll deep-dive into the
-    tooling ecosystem.
+    In Part Two of "Navigating the MLOps landscape," I'll deep-dive into the
+    ecosystem in order to understand how each tool relate to one another.
 ---
 
 > This is the second of a three-part blog post on the MLOps landscape. Here,
