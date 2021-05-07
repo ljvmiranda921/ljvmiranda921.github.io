@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Navigating the landscape of MLOps tools (Part 1: The Lifecycle)"
+title: "Navigating the MLOps tooling landscape (Part 1: The Lifecycle)"
 date: 2021-05-10
 category: notebook
 comments: true
