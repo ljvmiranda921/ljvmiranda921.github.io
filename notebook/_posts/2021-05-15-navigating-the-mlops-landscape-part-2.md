@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Navigating the landscape of MLOps tools (Part 2: The Ecosystem)"
+title: "Navigating the MLOps tooling landscape (Part 2: The Ecosystem)"
 date: 2021-05-15
 category: notebook
 comments: true
@@ -9,10 +9,10 @@ author: "LJ MIRANDA"
 published: true
 tags: [machine learning, ml, mlops, software engineering, ml engineering, mle, data science, data engineering, mlops tools]
 description: |
-    In Part Two of "Navigating the MLOps landscape," I'll deep-dive into the
+    In Part Two of "Navigating the MLOps tooling landscape," I'll deep-dive into the
     ecosystem in order to understand how each tool relate to one another.
 excerpt: |
-    In Part Two of "Navigating the MLOps landscape," I'll deep-dive into the
+    In Part Two of "Navigating the MLOps tooling landscape," I'll deep-dive into the
     ecosystem in order to understand how each tool relate to one another.
 ---
 
