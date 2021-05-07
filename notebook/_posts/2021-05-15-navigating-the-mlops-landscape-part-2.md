@@ -28,20 +28,20 @@ excerpt: |
 <span class="firstcharacter">P</span>reviously, we tried to answer the
 question: "who will benefit from MLOps?" This brought us to our two personas,
 the ML researcher and the software engineer. Despite working closely together,
-their dynamic has a tendency to produce friction as seen in their wants, needs,
-and frustrations.
+there are often gaps in their dynamic as seen in their wants, needs, and
+frustrations.
 
 Upon closer inspection, their interaction can be modeled similarly to the machine
-learning lifecycle, which consists of two loops interlocked with one another:
+learning lifecycle, which consists of two loops interlocked together:
 
 <!-- two cycles coming together -->
 ![](/assets/png/mlops-shop/ml-lifecycle.png){:width="680px"}  
 {: style="text-align: center;"}
 
-**The ML lifecycle will serve as a lens as we navigate the MLOps landscape.** As
+**The ML lifecycle will serve as our lens in navigating the MLOps landscape.** As
 we've mentioned in the [previous
 post](/notebook/2021/05/10/navigating-the-mlops-landscape), a good MLOps tool
-should provide the needs, answer the wants, and quell the frustrations of our
+should provide the needs, address the wants, and quell the frustrations of our
 researchers and engineers.
 
 > A good MLOps tool should provide [our researchers' and engineers'] needs,
@@ -69,6 +69,9 @@ startups, and frameworks that I've seen while I answer three key questions:
 ![](/assets/png/mlops-shop/banner_00.png){:width="640px"}  
 {: style="text-align: center;"}
 
+<p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+<b>A word of note</b><br>
+I'm still finishing my draft for Part 3. It will be published at the end of the month. The link above for "What do I recommend" will not work. Thanks for your patience!</p>
 
 ## What do you want?
 
@@ -99,7 +102,7 @@ Interestingly, each quadrant represents a particular category of tools:
 I describe the top quadrants as **platforms**[^1]. They usually provide an
 integrated, all-in-one space that covers most of the developer experience.  On
 the other hand, the bottom quadrants can be thought of as **specialized
-tools**. They consist of software [modular
+tools**. They consist of software that is [modular
 enough](https://en.wikipedia.org/wiki/Unix_philosophy) to be integrated into any
 workflow.
 
@@ -146,7 +149,7 @@ for machine learning applications, such as access to powerful GPUs, TPUs, and th
 ### 2. Machine learning platforms
 
 This set of tools is one of the hardest to cluster because their features
-almost bleed to one another. Note that if the number of use-cases exceeds two
+often overlap. Note that if the number of use-cases exceeds two
 to three, I tend to consider them as all-in-one platforms. 
 
 As you move *right*, the artifacts produced tend to specialize on ML models,
@@ -178,9 +181,8 @@ clear it up, here's the difference between Kubeflow, MLFlow, and Metaflow:
 * MLFlow is *a framework for doing ML experiments*. Notable use-cases
     include [logging and tracking
     ](https://mlflow.org/docs/latest/tracking.html). Lately it's adopting more
-    use-cases such as [organizing
-    projects](https://mlflow.org/docs/latest/projects.html) and
-    [models](https://mlflow.org/docs/latest/model-registry.html). [You can use
+    use-cases such as [project](https://mlflow.org/docs/latest/projects.html) and
+    [model](https://mlflow.org/docs/latest/model-registry.html) organization. [You can use
     MLFlow within
     Kubeflow](https://medium.com/geekculture/enhancing-kubeflow-with-mlflow-8983373d0cac)&mdash;I
     don't see them as competitors.
@@ -242,7 +244,7 @@ included them because they've become an integral part of any ML workflow.[^2]
 Lastly, I'd like to share **two interesting observations from our plot.** They
 may be obvious due to our framework, but I see no reason not to point it out.
 
-1. *From Any-task to ML-task orchestration*: most of the tools found in the
+1. *From Any-task to ML-task orchestration*: most of the tools found in this
    diagonal can be thought of as orchestrators. They stitch multiple tasks
    together into a coherent workflow. **As we go right, the tasks evolve from
    being generic to ML-specific.**
@@ -258,8 +260,8 @@ may be obvious due to our framework, but I see no reason not to point it out.
 ## Conclusion
 
 In this section, we examined the MLOps landscape by categorizing them on two
-factors: (1) if their artifacts software or model focused, and (2) if they
-affect a part of or the whole of the ML lifecycle. Given this framework, we got
+factors: (1) if their artifacts are software or model focused, and (2) if they
+affect a part of or the entire ML lifecycle. Given this framework, we got
 the graph as shown below:
 
 ![](/assets/png/mlops-shop/ml-landscape-all.png){:width="640px"}  
@@ -274,7 +276,7 @@ plot. We established the progression from any-task to ML-task orchestration,
 and from building software to building models.
 
 In the next section, we will take this graph further, and look into some
-adoption strategies that we can apply in each quadrant. I will adapt
+adoption strategies that we can apply for each quadrant. I will adapt
 [Thoughtworks' Technology Radar model](https://www.thoughtworks.com/radar) as
 our main framework for analysis.
 
@@ -295,8 +297,8 @@ If you like this, you'll enjoy:
 
 Of course, this is an opinionated guide, and I'm pretty sure that I've missed
 out on some tools and technologies in the MLOps space. I focused on some of the
-tools that I encountered in my day-to-day as representative samples for each
-group.
+tools that I encountered in my day-to-day to be the representative samples for
+each group.
 
 * If you'd like a tool or framework to be added in the graph, just let me know!
     You can also help me out by telling me where it falls under. 
