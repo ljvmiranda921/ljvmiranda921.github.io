@@ -17,6 +17,7 @@ title: Lj Miranda
 email: ljvmiranda@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Some notes on software, systems, machine learning, and research.
+timezone: Asia/Manila
 
 # Link settings
 baseurl: "" # the subpath of your site, e.g. /blog
