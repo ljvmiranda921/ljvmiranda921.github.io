@@ -56,6 +56,12 @@ startups, and frameworks that I've seen while I answer three key questions:
 * [**What do I recommend?**](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3): I'll list down some
     decision frameworks I recommend based from experience and research. *(Will be published on May 30)*
 
+<p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+<b>A word of note</b><br>
+The links above won't work yet because I haven't published the posts. Please
+come back on May 15 for Part Two, and May 30 for Part Three.
+</p>
+
 ![](/assets/png/mlops-shop/banner_00.png){:width="640px"}  
 {: style="text-align: center;"}
 
@@ -169,6 +175,13 @@ back to the ML lifecycle, and again, to our two personas.
 
 * [Navigating the MLOps Landscape (Part 2: The Ecosystem)](/notebook/2021/05/15/navigating-the-mlops-landscape-part-2)
 * [Navigating the MLOps Landscape (Part 3: The Strategies)](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3)
+
+
+<p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+<b>A word of note</b><br>
+The links above won't work yet because I haven't published the posts. Please
+come back on May 15 for Part Two, and May 30 for Part Three.
+</p>
 
 If you like this, you'll enjoy:
 
