@@ -19,7 +19,7 @@ excerpt: |
 ---
 
 > This is the first of a three-part blog post on the MLOps landscape. Here,
-> I’ll talk about the ML Lifecycle, and the personas or roles that pushes it
+> I’ll talk about the ML Lifecycle, and the personas or roles that pushed it
 > the way it is.
 
 <span class="firstcharacter">A</span> few years ago, I wished that more tools supporting ML in production become
@@ -210,6 +210,5 @@ If you like this, you'll enjoy:
 
 ### Footnotes
 
-[^1]: I admit that there's some level of bias here. I describe myself as an ML Researcher that *knows* software engineering, not necessarily an ML Engineer (lol to be honest I don't know!). From my experience, I gained some validation primarily because I know how to write software, that's why I hugely advocate learning software eng'g.
-[^2]: I'm well aware that I simplified these two personas (hopefully not to the point of caricature), for the roles inside a data science team differs from one company to the other. Thanks for bearing with me! If there's a better way to think about these personas so that my analysis becomes richer, please let me know in the comments below!
-[^3]: I know, "People over process. Individuals and interactions over processes and tools." I want to follow a *reverse progression* of this philosophy to give myself an easier launching pad to discuss the tooling landscape.
+[^1]: I admit that there's some level of survivorship bias here. 
+[^2]: I'm well aware that I simplified these two personas (hopefully not to the point of caricature), for the roles inside a data science team differs from one company to the other.
