@@ -171,20 +171,17 @@ describe tools that (1) are software-focused or model-focused, and (2) provides
 a piecemeal or all-in-one solution. Remember, all of these will always bring us
 back to the ML lifecycle, and again, to our two personas.
 
----
-&nbsp;
-
-## What's Next
-
-* [Navigating the MLOps Landscape (Part 2: The Ecosystem)](/notebook/2021/05/15/navigating-the-mlops-landscape-part-2)
-* [Navigating the MLOps Landscape (Part 3: The Strategies)](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3)
-
-
 <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
 <b>A word of note</b><br>
-The links above won't work yet because I haven't published the posts. Please
-come back on May 15 for Part Two, and May 30 for Part Three.
+For Parts Two and Three, the links won't work yet because I haven't published the posts. Please come back on May 15 for Part Two, and May 30 for Part Three.
 </p>
+
+
+## Next Sections
+
+* [Part II: Navigating the MLOps Landscape&mdash;The Ecosystem](/notebook/2021/05/15/navigating-the-mlops-landscape-part-2)
+* [Part III: Navigating the MLOps Landscape&mdash;The Strategies](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3)
+
 
 If you like this, you'll enjoy:
 

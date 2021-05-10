@@ -295,27 +295,25 @@ I encountered in my day-to-day as representative samples for each group.
 * If you think that a particular tool should belong to a different group, let
     me know as well.
 
----
-&nbsp;
-
-
-## What's Next
-
-* [Navigating the MLOps Landscape (Part 3: The Strategies)](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3)
 
 <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
 <b>A word of note</b><br>
-Part Three will be published on May 30. The link above won't work until that
+Part Three will be published on May 30. The link won't work until that
 date. Thank you for waiting! In the meantime, check-out my other analyses
 below.
 </p>
 
+
+## Next Sections
+
+* [Part III: Navigating the MLOps Landscape&mdash;The Strategies](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3)
+
 If you like this, you'll enjoy:
 
+* [Navigating the MLOps Landscape (Part 1: The Lifecycle)](/notebook/2021/05/10/navigating-the-mlops-landscape)
 * [How to use Jupyter Notebooks in 2020 (Part 2: Ecosystem growth)](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2/)
 * [How to use Jupyter Notebooks in 2020 (Part 1: the data science
     landscape)](/notebook/2020/03/06/jupyter-notebooks-in-2020)
-* [Navigating the MLOps Landscape (Part 1: The Lifecycle)](/notebook/2021/05/10/navigating-the-mlops-landscape)
 
 
 
