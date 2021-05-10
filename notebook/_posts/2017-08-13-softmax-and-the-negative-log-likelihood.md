@@ -182,6 +182,27 @@ $$\begin{eqnarray}
 And thus we have differentatied the negative log likelihood with respect to
 the softmax layer.
 
+
+## Citation
+
+I've noticed that this article's [being cited in different
+publications](https://scholar.google.com/scholar?cites=14589975115885490116&as_sdt=2005&sciodt=0,5&hl=en),
+like [distill.pub *(Visualizing Neural Networks with the Grand
+Tour)*](https://distill.pub/2020/grand-tour/).  Here's the canonical way of
+referencing this: 
+
+```tex
+@misc{miranda2017softmax,
+  title        = {Understanding softmax and the negative log-likelihood"},
+  author       = {Miranda, Lester James},
+  howpublished = {\url{https://ljvmiranda921.github.io/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/}},
+  year         = {2017}
+}
+```
+
+Remember to load a LaTeX package such as [hyperref](https://ctan.org/pkg/hyperref?lang=en) or [url](https://ctan.org/pkg/url?lang=en).
+
+
 ## Sources
 * [Stanford CS231N Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/). _This course inspired this blog post. The derivation of the softmax was left as an exercise and I decided to derive it here._
 * [The Softmax Function and Its Derivative](http://eli.thegreenplace.net/2016/the-softmax-function-and-its-derivative/). _A more thorough treatment of the softmax function's derivative_
@@ -189,6 +210,7 @@ the softmax layer.
 
 #### Changelog
 
+* 05-10-2021: Add canonical way of referencing this article.
 * 09-29-2018: Update figures using TikZ for consistency
 * 09-15-2018: [Micheleen Harris](https://twitter.com/rheartpython) made a [really cool illustration](https://twitter.com/rheartpython/status/1040963091670986752) of negative log-likelihood loss. Check it out below! Thank you Micheleen!
 
