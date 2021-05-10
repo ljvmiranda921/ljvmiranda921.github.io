@@ -171,6 +171,9 @@ describe tools that (1) are software-focused or model-focused, and (2) provides
 a piecemeal or all-in-one solution. Remember, all of these will always bring us
 back to the ML lifecycle, and again, to our two personas.
 
+---
+&nbsp;
+
 ## What's Next
 
 * [Navigating the MLOps Landscape (Part 2: The Ecosystem)](/notebook/2021/05/15/navigating-the-mlops-landscape-part-2)

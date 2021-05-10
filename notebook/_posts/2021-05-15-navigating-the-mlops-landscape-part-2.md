@@ -41,7 +41,7 @@ should provide the needs, address the wants, and quell the frustrations of our
 researchers and engineers.
 
 > A good MLOps tool should provide [our researchers' and engineers'] needs,
-> answer their wants, and quell their frustrations.
+> address their wants, and quell their frustrations.
 
 We will continue our analysis, this time diving deep  into the MLOps landscape,
 while examining the tools and frameworks present in each area.
@@ -75,14 +75,15 @@ I'm still finishing my draft for Part 3. It will be published at the end of the 
 {: style="text-align: center;"}
 
 In this section, we will survey the landscape of MLOps tools, and see how we
-can best navigate through it. We can map the terrain by grouping our tools
-into the following categories:
+can best navigate through it. We can map the terrain by defining some
+landmarks. Based on the ML lifecycle, we can determine if a tool is:
 
 * **Software-focused or model-focused**: describes the type of artifact it
-    helps produce. The former involves typical artifacts an engineer
-    encounters outside ML, whereas the latter is centered around a trained model.
+    helps produce. The former involves typical artifacts an engineer encounters
+    even outside ML, whereas the latter is centered around a trained model most
+    researchers care about.
 * **Piecemeal or all-in-one**: describes the scope of a tool. Piecemeal only
-    affects one or two processes in the lifecycle, whereas all-in-one attempts to
+    affects one or two processes in the ML lifecycle, whereas all-in-one attempts to
     cover it end-to-end.
 
 Together, we can combine them into a graph like this:
@@ -90,7 +91,8 @@ Together, we can combine them into a graph like this:
 ![](/assets/png/mlops-shop/ml-landscape-setup.png){:width="640px"}  
 {: style="text-align: center;"}
 
-Interestingly, each quadrant represents a particular category of tools:
+Notice that we "decomposed" the ML lifecycle into two axes. I'll go ahead and
+name each quadrant based on which axis it falls into:
 
 ![](/assets/png/mlops-shop/ml-landscape-quads.png){:width="640px"}  
 {: style="text-align: center;"}
@@ -253,11 +255,17 @@ may be obvious due to our framework, but I see no reason not to point it out.
     ![](/assets/png/mlops-shop/builders.png){:width="640px"}  
     {: style="text-align: center;"}
 
+We'll go back to this diagonal in the next section, but I can allude to the
+idea that **you can also "plot" your organization's capabilities in a similar
+fashion**: are your engineers and researchers at opposite ends, making integration
+difficult? or do you stay at a particular region, frustrating one group for the
+benefit of another?
+
 ## Conclusion
 
-In this section, we examined the MLOps landscape by categorizing them on two
-factors: (1) if their artifacts are software or model focused, and (2) if they
-affect a part of or the entire ML lifecycle. Given this framework, we got
+In this section, we examined the MLOps landscape by placing them on two
+axes: (1) if their artifacts are software or model focused, and (2) if they
+affect a part or the entire ML lifecycle. Given this framework, we got
 the graph as shown below:
 
 ![](/assets/png/mlops-shop/ml-landscape-all.png){:width="640px"}  
@@ -274,12 +282,33 @@ and from building software to building models.
 In the next section, we will take this graph further, and look into some
 adoption strategies that we can apply for each quadrant. I will adapt
 [Thoughtworks' Technology Radar model](https://www.thoughtworks.com/radar) as
-our main framework for analysis.
+our main framework for analysis. See you!
+
+### Postscript
+
+Of course, this is an opinionated guide, and I'm pretty sure that I've missed
+out on some tools and technologies in the MLOps space. I focused on those that
+I encountered in my day-to-day as representative samples for each group.
+
+* If you'd like a tool or framework to be added in the graph, let me know.
+    I'd also appreciate if you tell me where it falls under our graph.
+* If you think that a particular tool should belong to a different group, let
+    me know as well.
+
+---
+&nbsp;
 
 
 ## What's Next
 
 * [Navigating the MLOps Landscape (Part 3: The Strategies)](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3)
+
+<p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+<b>A word of note</b><br>
+Part Three will be published on May 30. The link above won't work until that
+date. Thank you for waiting! In the meantime, check-out my other analyses
+below.
+</p>
 
 If you like this, you'll enjoy:
 
@@ -289,33 +318,11 @@ If you like this, you'll enjoy:
 * [Navigating the MLOps Landscape (Part 1: The Lifecycle)](/notebook/2021/05/10/navigating-the-mlops-landscape)
 
 
-## Postscript
-
-Of course, this is an opinionated guide, and I'm pretty sure that I've missed
-out on some tools and technologies in the MLOps space. I focused on some of the
-tools that I encountered in my day-to-day to be the representative samples for
-each group.
-
-* If you'd like a tool or framework to be added in the graph, just let me know!
-    You can also help me out by telling me where it falls under. 
-* If you think that a particular tool should belong to a different group.
-    Please let me know in the comments below!
-
 
 ## Resources
 
 * <a id="huyen2020sysdesign">Huyen, Chip</a> (2020). "CS 329S: Machine Learning
     Systems Design". In: *stanford-css329s.github.io*
-* <a id="ratner2019mlsys">Ratner, Alexander, Alistarh, Dan, Alonso, Gustavo et al</a> (2019). "MLSys: The New
-    Frontier of Machine Learning Systems". In: *arXiv:1904.03257 [cs.LG]*
-* <a id="sculley2015debt">Sculley, G. Holt, D. Golovin, E. Davydov, T.
-     Phillips, D. Ebner, V. Chaudhary, M. Young, J. Crespo, and D. Dennison</a>,
-     "Hidden technical debt in machine learning systems", in *Advances in Neural
-     Information Processing Systems* 28: Annual Conference on Neural Information
-     Processing Systems 2015, December 7-12, 2015, Montreal, Quebec, Canada, 2015,
-     pp. 2503–2511. [Online]. Available:
-     [http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems](http://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems
-)
 * <a id="zinkevich2018rules">Zinkevich, Martin</a>. (2017). "Rules of machine learning:
     best practices for ML Engineering". Available: [https://developers.google.com/machine-learning/guides/rules-of-ml](https://developers.google.com/machine-learning/guides/rules-of-ml
 )
@@ -323,5 +330,5 @@ each group.
 
 ### Footnotes
 
-[^1]: Note that I'm using the term Platform loosely here. It's not *platform* as Platform-as-a-Service, rather *platform* as a [group of technologies](https://www.techopedia.com/definition/3411/platform-computing). To avoid confusion, I'll indicate PaaS when I meant PaaS.
-[^2]: Of course, Kubernetes may be sexy, but more of than not, you don't need it. Sometimes, a managed solution works. I included this because I like the idea of orchestration, and it's good to have representative sample from the non-ML software side 
+[^1]: I'm using the term Platform loosely here. It's not *platform* as Platform-as-a-Service, rather *platform* as a [group of technologies](https://www.techopedia.com/definition/3411/platform-computing). To avoid confusion, I'll indicate PaaS when I meant PaaS.
+[^2]: You might not always need k8s, a managed solution is often enough. I included this because it's good to have representative sample from the non-ML software side.
