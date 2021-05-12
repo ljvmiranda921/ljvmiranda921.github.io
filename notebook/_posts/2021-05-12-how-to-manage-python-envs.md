@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "On managing Python environments"
+title: "How to manage Python environments"
 date: 2021-05-12
 category: notebook
 comments: true
