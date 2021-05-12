@@ -155,6 +155,13 @@ models.
 > give a review of the notebook ecosystem for 2020. You can read it in [this
 > link](/notebook/2020/03/06/jupyter-notebooks-in-2020).
 
+If you like this, you'll enjoy:
+* [How to manage Python environments](/notebook/2021/05/12/how-to-manage-python-envs/)
+* [How to improve software engineering skills as a researcher](/notebook/2020/11/15/data-science-swe/)
+* [How to use Jupyter Notebooks in 2020 (Part 1: the data science
+    landscape)](/notebook/2020/03/06/jupyter-notebooks-in-2020)
+
+
 #### Changelog
 * 03-06-2020: Add link for Jupyter Notebooks review
 * 09-29-2018: Update figure using Tikz for consistency
