@@ -516,8 +516,11 @@ Lastly, I highly-recommend the following resources for general guidance:
     your code can go a long way.
     
 
+
 #### Changelog
 
+- 05-10-2021: Quite glad that some Redditors resonated with the post! Thanks for the gold too! You can check out the interesting thread below:
+    <iframe id="reddit-embed" src="https://www.redditmedia.com/r/datascience/comments/n8ezvx/so_you_trained_a_model_now_what/gximkt7/?depth=2&amp;showmore=false&amp;embed=true&amp;showtitle=true&amp;context=1&amp;showedits=false&amp;created=2021-05-13T03%3A35%3A33.423Z" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="516" width="640" scrolling="no"></iframe>
 - 05-08-2021: Thanks a lot for the [Youtube shoutout](https://www.youtube.com/watch?v=cNDA60YLVdQ) [Daniel Bourke](https://www.mrdbourke.com/)! I highly-recommend looking into his [Zero-to-Mastery newsletter](https://zerotomastery.io/blog/machine-learning-monthly-february-2021/), it gave me a good view of newsworthy ML stuff I missed!
 - 04-26-2021: Added more resources for FastAPI. I actually just linked it from
     [this site](https://fastapi.tiangolo.com/external-links/). If you're
