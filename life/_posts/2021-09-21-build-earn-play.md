@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "My personal framework for flourishing"
-date: 2021-08-06
+date: 2021-09-21
 category: life
 comments: true
 author: "LJ MIRANDA"
