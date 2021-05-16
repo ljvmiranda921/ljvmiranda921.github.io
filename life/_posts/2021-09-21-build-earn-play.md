@@ -328,6 +328,28 @@ flourish. Personally, I don't overdo this, it's more of a [napkin-math
 computation](https://en.wikipedia.org/wiki/Back-of-the-envelope_calculation)
 that I keep in my mind.
 
+### A word of note
+
+As always, treat these frameworks as guideposts. The worst is that we get
+obssessed asking ourselves if we're *building*, *playing*, or *earning*, that
+we cease to flourish in the process. **The structure we've built from these
+pillars can also turn into self-imposed prisons.** 
+
+Perhaps, [unhappiness can have its own
+dignity](https://www.brainpickings.org/2013/11/07/albert-camus-notebooks-happiness/)
+and may also shed light to who we are as much as happiness (Popova,
+[2013](#popova2013unhappy)). I truly believe that. There's no better way to put
+this than Camus:
+
+> It is not true that the heart wears out — but the body creates this illusion.
+> 
+> Those who prefer their principles over their happiness, they refuse to be
+> happy outside the conditions they seem to have attached to their happiness.
+> If they are happy by surprise, they find themselves disabled, unhappy to be
+> deprived of their unhappiness. (Camus, "Notebooks 1951-1959",
+[2008](#camus2008notebook))
+
+
 ## Conclusion
 
 In this blogpost, I reflected upon my personal framework to determine if I'm
@@ -349,22 +371,23 @@ I write this during a transition period of my life, as I have [always done
 since ](/life/2018/09/04/my-year-in-commits/). I think it's a perfect time to
 reflect and re-evaluate my views on work, career, and hobbies. **Of course, I'm
 still young, and this is not perfect.** Perhaps, the 30-year old me will cringe
-at reading this, but I hope, that he never stops building, earning, and
-playing. 
+at reading this, but I hope . . . that he never stops building, earning, and playing. 
 
-## Resources
+## References
 
 * <a id="aristotle2002nicho">Aristotle</a>, *Nicomachean Ethics*, translated by Joe Sachs, Focus Philosophical Library, Pullins Press, 2002.
-* <a id="feynman1985joking">Feynman, Richard</a>, *Surely you're joking, Mr. Feynman!*, W.W. Norton & Company, 1985.
+* <a id="camus2008notebook">Camus, Albert</a> *Notebooks 1951-1959*, translated by Ryan Bloom, 2008. Note: if you read the References section then lucky you! Trivia, the "Notebook" section of this blog was inspired by this title!
 * <a id="crawford2006shop">Crawford, Matthew B.</a> "Shop class as soulcraft." The New Atlantis 13 (2006): 7-24.
+* <a id="feynman1985joking">Feynman, Richard</a>, *Surely you're joking, Mr. Feynman!*, W.W. Norton & Company, 1985.
 * <a id="odell2020nothing">Odell, Jenny.</a> *How to do nothing: Resisting the attention economy.* Melville House Publishing, 2020.
+* <a id="popova2013unhappy">Popova, Maria.</a> "Albert Camus on Happiness, Unhappiness, and Our Self-Imposed Prisons", *Brain Pickings*, 2013. Available: [https://www.brainpickings.org/2013/11/07/albert-camus-notebooks-happiness/](https://www.brainpickings.org/2013/11/07/albert-camus-notebooks-happiness/). [Accessed May 17 2021]
 
 
 ### Footnotes
 
 [^1]: I like Shawn Wang's idea of [Learning in Public](https://www.swyx.io/learn-in-public/). I encourage everyone to read that. 
 [^2]: It's already been a year and I can't see the COVID situation in the Philippines getting better.
-[^3]: Sure, writing a particle-swarm optimizer was done as an assignment in school, but creating an open-source package with tests and everything is something that I did to satisfy my whims!
+[^3]: Sure, writing a particle-swarm optimizer was done as an assignment at school, but creating an open-source package with tests and everything is something that I did to satisfy my whims!
 [^4]: Interesting Hacker News discussion [here](https://news.ycombinator.com/item?id=26931359)
 [^5]: Very far...
 [^6]: My common tactic here is to choose a technology that is very far but potentially useful to my work. I usually do machine learning in Python, so my weekends are often filled with side-projects in Elixir, Godot, and Pico-8!
