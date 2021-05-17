@@ -369,9 +369,11 @@ the three-fold structure can help you form your own framework.
 
 I write this during a transition period of my life, as I have [always done
 since ](/life/2018/09/04/my-year-in-commits/). I think it's a perfect time to
-reflect and re-evaluate my views on work, career, and hobbies. **Of course, I'm
+reflect and reevaluate my views on work, career, and hobbies. **Of course, I'm
 still young, and this is not perfect.** Perhaps the 30-year old me will cringe
 at reading this, but I hope . . . that he never stops building, earning, and playing. 
+
+*Many thanks to Avic, Reena, and Jason for reading early drafts of this work.*
 
 ## References
 
