@@ -26,7 +26,7 @@ translated as *happiness* or *welfare*. As Aristotle says :
 
 Flourishing is not permanent&mdash;you may have it now but can lose it later.
 Rather, it is an active condition (ἕξις) you have to maintain. As an engineer,
-I always think of it as a **steady-state**. A state brought by your system of
+I always think of it as a **steady-state**: a state brought about by your system of
 actions, habits, and decisions. It reminds me of this graph from my control
 systems days:
 
@@ -53,7 +53,7 @@ arrived at the following:
 
 In this blogpost, **I'll talk about my personal framework** based on these
 pillars, and how they guide my decisions&mdash; both in career and life. I am
-aware that this may not work for everyone, but I hope that it resonates to you
+aware that this may not work for everyone, but I hope that it resonates with you
 in some way.
 
 * [The three pillars](#the-three-pillars)
@@ -63,16 +63,16 @@ in some way.
 ## The three pillars
 
 First, I want to talk about what each pillar stands for, and why they are
-important to me. My rule of thumb is that: when choosing a career or a long-term
-investment, **it should satisfy atleast two of the three pillars.**
+important to me. My rule of thumb is that when choosing a career or a long-term
+investment, **it should satisfy at least two of the three pillars.**
 
 ### Building
 
 *Building* is a pillar that I've attached myself early on. Heck, even my
-[Twitter bio](https://twitter.com/ljvmiranda921) says: "I build things." [I
+[Twitter bio](https://twitter.com/ljvmiranda921) says "I build things." [I
 appreciate the joys of my craft](/life/2019/10/15/on-craftsmanship/), and I've
 come to see the world through its lens. Building something tangible sometimes
-speak to our primal desire to outlive ourselves.
+speaks to our primal desire to outlive ourselves.
 
 
 ![](/assets/png/flourishing/build.png){:width="640px"}  
@@ -85,7 +85,7 @@ open-source: the presence of a community drives your growth.
 As an aside, **open-source has definitely been a multiplier for me**&mdash;and
 I long to work on it in a more frequent basis. It just started with [a small
 project](https://github.com/ljvmiranda921/pyswarms), then this blog, and it
-resulted to alot of opportunities that I don't think I'll be able to get if I
+resulted to a lot of opportunities that I don't think I'll be able to get if I
 didn't build or [learn in public](https://www.swyx.io/learn-in-public/).[^1]
 
 Lastly, creating caters both to utility and self-expression, especially for
@@ -118,14 +118,14 @@ wealth is a combination of skill and luck.**
     regain it. Wealth is created through leverage and skill.
 * Luck: Chance often plays a huge part in creating wealth. Sometimes, it's just
     being in the right place at the right time. However, [it's possible to
-    create luck](https://www.swyx.io/create-luck/), i.e., to sniff-out where
+    create luck](https://www.swyx.io/create-luck/), i.e., to sniff out where
     the
     [potential](https://www.codusoperandi.com/posts/increasing-your-luck-surface-area)
     right place and right time will be.
 
-Inasmuch as I scoff at the overt-seriousness and cult-like following of most
+Inasmuch as I scoff at the overt seriousness and cult-like following of most
 tech personalities, [their ideas on
-wealth](https://twitter.com/naval/status/1002103360646823936?lang=en) often has
+wealth](https://twitter.com/naval/status/1002103360646823936?lang=en) often have
 a grain of truth. It's useful, and highly-adjacent with respect to my field in
 tech. *And yeah*, I also need to pay the rent.
 
@@ -134,7 +134,7 @@ tech. *And yeah*, I also need to pay the rent.
 *Playing* is a pillar that feeds into what I do. It's the idea of **following
 my whims, [blue-sky
 thinking](https://quickbooks.intuit.com/ca/resources/self-employed/blue-sky-thinking/),
-and doing things just for fun!** We often get caught-up with outcomes, taking
+and doing things just for fun!** We often get caught up with outcomes, taking
 the process for granted. Although I like achievements, too much fixation on
 output without the space for creativity and variety will inevitably burn me
 out.
@@ -169,7 +169,7 @@ innovation.
 ## Pillars in tandem
 
 Earlier, I hinted about my go-to decision framework using these pillars: it
-should satisfy atleast two of the three. In this section, I'd like to explore
+should satisfy at least two of the three. In this section, I'd like to explore
 the dynamics of each pair. What happens if I'm in a position where only two
 exists?
 
@@ -184,8 +184,8 @@ your creative output.
 ![](/assets/png/flourishing/build_earn.png){:width="620px"}  
 {: style="text-align: center;"}
 
-Oftentimes, a day-job is like this: I get to *build* and *earn*. I'm definitely
-one of the lucky few whose obssessions are highly-valued by the society today.
+Oftentimes, a day job is like this: I get to *build* and *earn*. I'm definitely
+one of the lucky few whose obsessions are highly valued by society today.
 But without *play*, the fire of delight, carefree, and joy may burn
 out&mdash;it's something I want to avoid!
 
@@ -207,7 +207,7 @@ topics you can work on.[^8]
 ![](/assets/png/flourishing/build_play.png){:width="640px"}  
 {: style="text-align: center;"}
 
-I'm a bit biased because my best experiences came from these moments. Perhaps,
+I'm a bit biased because my best experiences came from these moments. Perhaps
 it's because I didn't assign much weight on money back then&mdash;it's
 different now. 
 
@@ -231,7 +231,7 @@ energy.
 
 *Earning* and *playing* in tandem is something that I haven't done, so I can only speculate. 
 I always imagine this as working on things that are lucrative, yet doesn't involve creation. 
-Moreover, the prospecting and betting aspects of *play* becomes more apparent.
+Moreover, the prospecting and betting aspects of *play* become more apparent.
 
 ![](/assets/png/flourishing/earn_play.png){:width="620px"}  
 {: style="text-align: center;"}
@@ -302,7 +302,7 @@ it's fine (Odell, [2020](#odelle2020nothing)).
 ### Holistic view 
 
 Finally, it's also possible to look at all your activities in a more holistic
-manner. Each one&mdash; your day-job, side-project, side-gig, community work,
+manner. Each one&mdash; your day job, side-project, side-gig, community work,
 etc.&mdash;contributes to your total **build-earn-play account.** Think of this
 as an adoption of Bentham's [felicific
 calculus](https://plato.stanford.edu/entries/bentham/). 
@@ -323,7 +323,7 @@ prioritize one pillar over the other.
 ![](/assets/png/flourishing/napkin_math.png){:width="640px"}  
 {: style="text-align: center;"}
 
-At the end, it's up to you if the values you've arrived at is enough for you to
+In the end, it's up to you if the values you've arrived at is enough for you to
 flourish. Personally, I don't overdo this, it's more of a [napkin-math
 computation](https://en.wikipedia.org/wiki/Back-of-the-envelope_calculation)
 that I keep in my mind.
@@ -331,11 +331,11 @@ that I keep in my mind.
 ### A word of note
 
 As always, treat these frameworks as guideposts. The worst is that we get
-obssessed asking ourselves if we're *building*, *playing*, or *earning*, that
+obsessed asking ourselves if we're *building*, *playing*, or *earning*, that
 we cease to flourish in the process. **The structure we've built from these
 pillars can also turn into self-imposed prisons.** 
 
-Perhaps, [unhappiness can have its own
+Perhaps [unhappiness can have its own
 dignity](https://www.brainpickings.org/2013/11/07/albert-camus-notebooks-happiness/)
 and may also shed light to who we are as much as happiness (Popova,
 [2013](#popova2013unhappy)). I truly believe that. There's no better way to put
@@ -363,14 +363,14 @@ My second strategy is to perform a back-of-the-envelope computation to see my
 "levels." Note that these are all guesswork and estimation, not an exact
 science.
 
-These things may not apply to you. Perhaps, *building* is not your thing, and
-there's another verb that resonates to you more. No worries, I think even just
+These things may not apply to you. Perhaps *building* is not your thing, and
+there's another verb that resonates with you more. No worries, I think even just
 the three-fold structure can help you form your own framework. 
 
 I write this during a transition period of my life, as I have [always done
 since ](/life/2018/09/04/my-year-in-commits/). I think it's a perfect time to
 reflect and re-evaluate my views on work, career, and hobbies. **Of course, I'm
-still young, and this is not perfect.** Perhaps, the 30-year old me will cringe
+still young, and this is not perfect.** Perhaps the 30-year old me will cringe
 at reading this, but I hope . . . that he never stops building, earning, and playing. 
 
 ## References
