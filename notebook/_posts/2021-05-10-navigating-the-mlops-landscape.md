@@ -74,7 +74,7 @@ strategy for adopting them. I may recommend some based from my experience, but
 ## How is this different?
 
 There are already tons of [resources](#resources) exploring the MLOps
-landscape. The most notable ones are from Chip Huyen, where she [surveyed the
+landscape. The most notable ones are from Chip Huyen, where she [surveyed
 tools](https://huyenchip.com/2020/12/30/mlops-v2.html), [explored
 case-studies](https://huyenchip.com/mlops/), and [analyzed
 trends](https://huyenchip.com/2020/06/22/mlops.html). However, most of these
@@ -84,7 +84,7 @@ I liken this to eating in a new restaurant. You sit at a table, the waiter
 approaches, and he presents you a menu. They're all neatly
 categorized with brief descriptions and price points. If you don't know
 what you want, the menu is going to be overwhelming&mdash;simply an effect of the
-[paradox of choice](https://en.wikipedia.org/wiki/The_Paradox_of_Choice):
+[paradox of choice](https://en.wikipedia.org/wiki/The_Paradox_of_Choice).
 
 ![](/assets/png/mlops-shop/paradox_of_choice.jpg){:width="640px"}  
 Paradox of choice: look at this menu, and look at the MLOps landscape above
@@ -95,20 +95,19 @@ bestseller?," "I want something light and cheap," "what's perfect for this hot
 weather?" Then he narrows down my choices into something palatable. What he
 just did is to:
 
-* Meet me where I am,
-* Identify what I *may* want,
-* Recommend food based on my wants
+* *Meet me where I am:* understand is my current situation
+* *Identify what I may want:* assess my situation and bridge it to the menu
+* *Recommend food based on my wants:* make an opinionated statement based on collected info
 
 The waiter helped me narrow-down my choices into two to three most
 relevant dishes. That's enough for me to choose what I'll eat, and be on my
 merry way. It's just a three-step process of cutting things down, but it
 eliminated my paralysis brought by having too many options.
 
-For the keen-eyed, you'll notice that each step maps onto each post of this
-series. Part One will describe the current state of most ML orgs
-today. Part Two will use that info to arrange the landscape in a more
-opinionated way. Lastly, Part three will recommend strategies for adopting
-these tools.
+For the keen-eyed, you'll notice that each step maps to each post of this
+series. Part One will describe the current state of most ML orgs today. Part
+Two will use that info to bridge us into a more understandable landscape.
+Lastly, Part three will recommend strategies for adopting these tools.
 
 Hopefully, this series can be that waiter for the MLOps ecosystem.
 
@@ -220,6 +219,7 @@ For Parts Two and Three, the links won't work yet because I haven't published th
 
 ### Changelog
 
+* 05-22-2021: Added a section explaining how this differs to other analyses
 * 05-22-2021: Fix some minor grammar and usage issues.
 
 ## Next Sections
