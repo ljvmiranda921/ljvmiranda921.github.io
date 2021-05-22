@@ -17,9 +17,9 @@ excerpt: |
     ecosystem in order to understand how each tool relate to one another.
 ---
 
-> This is the second of a three-part blog post on the MLOps landscape. Here,
+> This is the second of a three-part series on the MLOps landscape. Here,
 > I'll discuss the ecosystem itself, and the frameworks and tools I
-> encountered. You'll find Part One [in this link](/notebook/2021/05/10/navigating-the-mlops-landscape) and Part Three [here](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3).
+> encountered. I recommend reading [Part One](/notebook/2021/05/10/navigating-the-mlops-landscape) first, then [Part Three](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3) last.
 
 
 <span class="firstcharacter">P</span>reviously, we tried to answer the
