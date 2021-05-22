@@ -178,6 +178,10 @@ For Parts Two and Three, the links won't work yet because I haven't published th
 </p>
 
 
+### Changelog
+
+* 05-22-2021: Fix some minor grammar and usage issues.
+
 ## Next Sections
 
 * [Part II: Navigating the MLOps Landscape&mdash;The Ecosystem](/notebook/2021/05/15/navigating-the-mlops-landscape-part-2)

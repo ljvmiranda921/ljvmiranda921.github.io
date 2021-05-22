@@ -297,6 +297,11 @@ I encountered in my day-to-day as representative samples for each group.
     me know as well.
 
 
+### Changelog
+
+* 05-22-2021: Fix some minor grammar and usage issues.
+
+
 <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
 <b>A word of note</b><br>
 Part Three will be published on May 30. The link won't work until that
