@@ -50,7 +50,7 @@ while examining the tools and frameworks present in each area.
 
 ## Contents
 
-To recap, this is a **three-part blogpost where I attempt to navigate the MLOPs
+To recap, this is a **three-part blogpost where I attempt to navigate the MLOps
 landscape**. I'll be focusing on the commercial side, i.e., the tools,
 startups, and frameworks that I've seen while I answer three key questions:
 
