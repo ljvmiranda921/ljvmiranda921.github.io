@@ -66,9 +66,6 @@ startups, and frameworks that I've seen while I answer three key questions:
 ![](/assets/png/mlops-shop/banner_00.png){:width="640px"}  
 {: style="text-align: center;"}
 
-<p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
-<b>A word of note</b><br>
-I'm still finishing my draft for Part 3. It will be published at the end of the month. The link above for "What do I recommend" will not work. Thanks for your patience!</p>
 
 ## What do you want?
 
@@ -300,15 +297,6 @@ I encountered in my day-to-day as representative samples for each group.
 ### Changelog
 
 * 05-22-2021: Fix some minor grammar and usage issues.
-
-
-<p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
-<b>A word of note</b><br>
-Part Three will be published on May 30. The link won't work until that
-date. Thank you for waiting! In the meantime, check-out my other analyses
-below.
-</p>
-
 
 ## Next Sections
 
