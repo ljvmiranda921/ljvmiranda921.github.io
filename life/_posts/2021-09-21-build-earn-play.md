@@ -189,7 +189,7 @@ one of the lucky few whose obsessions are highly valued by society today.
 But without *play*, the fire of delight, carefree, and joy may burn
 out&mdash;it's something I want to avoid!
 
-I've come to realize that I just need to accept it, as this is gonna be the
+I've come to realize that I just need to accept it, as this is going to be the
 case 99% of the time. My go-to strategy is to set boundaries, [find *play*
 outside of work](https://www.swyx.io/part-time-creator-manifesto/), and
 separate the programming I do for my job from the programming I do for
