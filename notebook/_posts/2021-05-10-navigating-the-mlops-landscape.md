@@ -71,6 +71,46 @@ provide a framework for thinking about these groups, and in addition, a
 strategy for adopting them. I may recommend some based from my experience, but
 [your mileage may vary](https://dictionary.cambridge.org/us/dictionary/english/ymmv). 
 
+## How is this different?
+
+There are already tons of [resources](#resources) exploring the MLOps
+landscape. The most notable ones are from Chip Huyen, where she [surveyed the
+tools](https://huyenchip.com/2020/12/30/mlops-v2.html), [explored
+case-studies](https://huyenchip.com/mlops/), and [analyzed
+trends](https://huyenchip.com/2020/06/22/mlops.html). However, most of these
+resources are effective **when you already know what you want**. 
+
+I liken this to eating in a new restaurant. You sit at a table, the waiter
+approaches, and he presents you a menu. They're all neatly
+categorized with brief descriptions and price points. If you don't know
+what you want, the menu is going to be overwhelming&mdash;simply an effect of the
+[paradox of choice](https://en.wikipedia.org/wiki/The_Paradox_of_Choice):
+
+![](/assets/png/mlops-shop/paradox_of_choice.jpg){:width="640px"}  
+Paradox of choice: look at this menu, and look at the MLOps landscape above
+{: style="text-align: center;"}
+
+In that situation, what I'd usually do is ask the waiter: "what's the
+bestseller?," "I want something light and cheap," "what's perfect for this hot
+weather?" Then he narrows down my choices into something palatable. What he
+just did is to:
+
+* Meet me where I am,
+* Identify what I *may* want,
+* Recommend food based on my wants
+
+The waiter helped me narrow-down my choices into two to three most
+relevant dishes. That's enough for me to choose what I'll eat, and be on my
+merry way. It's just a three-step process of cutting things down, but it
+eliminated my paralysis brought by having too many options.
+
+For the keen-eyed, you'll notice that each step maps onto each post of this
+series. Part One will describe the current state of most ML orgs
+today. Part Two will use that info to arrange the landscape in a more
+opinionated way. Lastly, Part three will recommend strategies for adopting
+these tools.
+
+Hopefully, this series can be that waiter for the MLOps ecosystem.
 
 ## Who or what will benefit?
 
