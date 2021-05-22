@@ -28,7 +28,7 @@ mainstream. Back then, [models usually get stuck in Jupyter
 Notebooks](/notebook/2020/03/06/jupyter-notebooks-in-2020/), and they often
 require an engineer to deploy them. A self-service solution is *the* dream.
 
-It seems that my wish was granted, as slew of startups pop-up, promising a
+It seems that my wish was granted, as slew of startups pop up, promising a
 better way to productionize ML. The major cloud platforms are taking a stab on
 it too. Now, I face the opposite problem: **there are too many options, and it's
 difficult to choose!**
@@ -110,7 +110,7 @@ their needs, we have:
    good&mdash;of course, that may or may not always be true for ML.
 
 **Together, they bring about the ML lifecycle**. Improving this process should
-increase the quality-of-life of ML Researchers and software engineers.
+increase the quality of life of ML Researchers and software engineers.
 Investing on MLOps tools should benefit the ML lifecycle.
 
 ### On the machine learning lifecycle
