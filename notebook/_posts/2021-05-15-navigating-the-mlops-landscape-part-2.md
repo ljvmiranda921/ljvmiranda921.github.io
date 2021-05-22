@@ -23,7 +23,7 @@ excerpt: |
 
 
 <span class="firstcharacter">P</span>reviously, we tried to answer the
-question: "who will benefit from MLOps?" This brought us to our two personas,
+question of who will benefit from MLOps. This brought us to our two personas,
 the ML researcher and the software engineer. Despite working closely together,
 there are often gaps in their dynamic as seen in their wants, needs, and
 frustrations.
@@ -195,22 +195,22 @@ This group caters to specific aspects of the ML lifecycle. I decided to just
 group all single-component tools together. For example,
 [Deepnote](https://deepnote.com/) impacts the notebook workflow, while
 [Prodigy](https://prodi.gy/) and [Optuna](https://optuna.org/) affect
-data-annotation and hyperparameter-optimization respectively.
+data annotation and hyperparameter optimization respectively.
 
 ![](/assets/png/mlops-shop/ml-landscape-specialized-ml.png){:width="640px"}  
 {: style="text-align: center;"}
 
 As we move *right*, the tools usually affect models, and as we move *left*,
-they affect data. This is why data-labelling and versioning tools are
-on the left, and notebook & hyperparameter-optimization tools are on the right.
+they affect data. This is why data labelling and versioning tools are
+on the left, and notebook & hyperparameter optimization tools are on the right.
 
 
 
 | Category                  | Examples                        | My Field Notes                                                                                                                                                            |
 |---------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Experimentation Platforms | Comet AI, Weights and Biases    | Provides a platform for experimentation and tracking model lineage. They often lack pipelining or orchestration, but make it up with a powerful experimentation platform. |
-| Data version control   | DVC, Pachyderm                  | Includes tools for data versioning, management, and tracking. They're impact is data-heavy, and are often offered in tandem with a pipelining tool                        |
-| Single-component ML tools | Optuna, Prodigy, Deepnote, etc. | These are highly-specialized ML tools that cover a variety of use-cases such as hyperparameter-optimization, data labelling, or notebook services.                        |
+| Data version control   | DVC, Pachyderm                  | Includes tools for data versioning, management, and tracking. Their impact is data-heavy, and are often offered in tandem with a pipelining tool.                        |
+| Single-component ML tools | Optuna, Prodigy, Deepnote, etc. | These are highly-specialized ML tools that cover a variety of use-cases such as hyperparameter optimization, data labelling, or notebook services.                        |
 
 What I like about this category is that they can usually serve as drop-in
 replacements for a specific workflow. Sure, its scope is smaller than
@@ -234,7 +234,7 @@ included them because they've become an integral part of any ML workflow.[^2]
 | Category           | Examples                         | My Field Notes                                                                                                                       |
 |--------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Data Orchestrators | Dagster, Airflow, Luigi, etc. | Contains a large category of tools for creating data pipelines, managing data lineages, and performing ETL processes                 |
-| CI/CD Pipelines    | Tekton, Argo, Jenkins X          | Group of tools that use cloud-native continuous deployment pipelines. Each "task" often runs in a container and then managed by k8s. |
+| CI/CD Pipelines    | Tekton, Argo, Jenkins X          | Group of tools that use cloud-native continuous deployment pipelines. Each "task" often runs in a container and then managed by Kubernetes. |
 | Common SWE Stack   | Docker, Kubernetes, Git, etc.    | The common software engineering stack, special mention to the three since you often see them in an ML productization workflow.       |
 
 
