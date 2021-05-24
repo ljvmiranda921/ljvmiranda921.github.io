@@ -50,7 +50,7 @@ landscape**. I'll be focusing on the commercial side, i.e., the tools,
 startups, and frameworks that I've seen while I answer three key questions:
 
 * [**Who/what will benefit?**](#who-or-what-will-benefit): we'll set the stage
-    by asking who will benefit from adopting these tools. Here, I'll introduce
+    by asking who will benefit by adopting these tools. Here, I'll introduce
     my version of the  ML lifecycle. *(This page)*
 * [**What do you want?**](/notebook/2021/05/15/navigating-the-mlops-landscape-part-2): I'll describe a framework for 
    categorizing MLOps tools, and outline a specific adoption strategy for each group. *(Will be published on May 15)*
