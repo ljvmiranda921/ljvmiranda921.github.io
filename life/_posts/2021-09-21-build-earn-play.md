@@ -243,11 +243,12 @@ unlike *Build and Play*, you are measuring your moves with an outcome.
 Your financial returns depend on when you hold and sell. 
 
 Perhaps it's the reason why I've never gotten into it yet&mdash; I value
-*building* so much. Nevertheless, it's an interesting concept to entertain.
+*building* so much. To be honest, crypto-trading feels dodgy at the moment.
+With all the memes, laser-eyed profile photos, and cult-like facade, it just
+sets off all my alarms. Nevertheless, it's an interesting concept to entertain.
 From a *build* standpoint, I like its promise: a decentralized financial system
-ran by the public, just like open-source! I'll probably write about this
-again in the future.
-
+ran by the public, just like open-source! I'll probably write about this again
+in the future.
 
 ## Navigating this framework
 
