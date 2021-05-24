@@ -12,13 +12,13 @@ layout: home
     <div class="right">
         <p>Hi, I'm Lj Miranda and welcome to my blog!</p>
         <p>
-            I'm currently on a short break! Taking some time-off to rest,
-            refresh, and recharge. I'll still upload blogposts every now and
-            then.
+            I'm currently on a short break! Taking some time off to rest,
+            refresh, and recharge. I am unreachable, but for the meantime, I'll
+            be publishing posts from my backlog.
         </p>
         <p>
             In this blog, I write about my interests in machine learning,
-            software development, and research—so grab a cup of coffee and feel
+            software development, and research&mdash;so grab a cup of coffee and feel
             free to look around!
         </p>
     </div>
