@@ -56,7 +56,7 @@ startups, and frameworks that I've seen while I answer three key questions:
 
 * [**Who/what will
     benefit?**](/notebook/2021/05/10/navigating-the-mlops-landscape): we'll set the stage
-    by asking who will benefit from adopting these tools. Here, I'll introduce
+    by asking who will benefit by adopting these tools. Here, I'll introduce
     my version of the  ML lifecycle. 
 * [**What do you want?**](#what-do-you-want): I'll describe a framework for 
    categorizing MLOps tools, and outline a specific adoption strategy for each group.
