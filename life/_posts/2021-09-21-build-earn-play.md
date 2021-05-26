@@ -174,7 +174,7 @@ the dynamics of each pair. What happens if I'm in a position where only two
 exists?
 
 
-## Build and Earn
+### Build and Earn
 
 Building and earning sounds like a nice combination. For me, it's a classic
 example of "what if your hobby becomes your job?" However, there's often a risk
@@ -196,7 +196,7 @@ separate the programming I do for my job from the programming I do for
 myself.[^6] During these moments I was able to build a game, write more in my
 blog, while being productive at work.
 
-## Build and Play
+### Build and Play
 
 Another interesting tandem is building with unabashed creativity. It reminded
 me of grad school.[^7] There's *building* in the form of research and
@@ -227,7 +227,7 @@ experience has tamed my *building* frenzy: it directed my
 energy.
 
 
-## Earn and Play
+### Earn and Play
 
 *Earning* and *playing* in tandem is something that I haven't done, so I can only speculate. 
 I always imagine this as working on things that are lucrative, yet doesn't involve creation. 
