@@ -133,7 +133,7 @@ tech. *And yeah*, I also need to pay the rent.
 
 *Playing* is a pillar that feeds into what I do. It's the idea of **following
 my whims, [blue-sky
-thinking](https://quickbooks.intuit.com/ca/resources/self-employed/blue-sky-thinking/),
+thinking](https://en.wiktionary.org/wiki/blue-sky_thinking#English),
 and doing things just for fun!** We often get caught up with outcomes, taking
 the process for granted. Although I like achievements, too much fixation on
 output without the space for creativity and variety will inevitably burn me
