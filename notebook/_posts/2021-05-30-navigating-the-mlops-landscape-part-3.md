@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-header-img: /assets/png/mlops-shop/header_part_01.png
+header-img: /assets/png/mlops-shop/header_part_03.png
 tags: [machine learning, ml, mlops, software engineering, ml engineering, mle, data science, data engineering, mlops tools]
 description: |
     In Part Three of "Navigating the MLOps tooling landscape," I'll talk about
