@@ -36,7 +36,7 @@ Here, I'll talk about strategies for integrating these tools into our
 organization. I'll be using my own interpretation of the [Thoughtworks'
 Technology Radar](https://www.thoughtworks.com/radar) and borrow familiar terms
 such as *Adopt*, *Trial*, *Assess*, and *Hold*. Note that this will be a bit
-opinionated, and your mileage may vary. 
+opinionated, and your mileage may vary!
 
 ## Contents
 
@@ -77,6 +77,9 @@ He breaks the radar down into four rings&mdash; Adopt, Trial, Assess, Hold:
 *As you move towards the center, the need for adoption becomes stronger.*
 {: style="text-align: center;"}
 
+Below is a table that describes the appropriate strategy for each ring, and
+example initiatives that can be done:
+
 
 | Rings  | Strategy                                                        | Example Actions                                       |
 |--------|-----------------------------------------------------------------|-------------------------------------------------------|
@@ -95,10 +98,11 @@ Some observations:
     no harm in using it on existing projects," but think twice when using it
     for new ones.
 
-Personally, I like writing a tech radar because it grounds me from being too
-distracted by the shiny new object. In addition, it makes me aware of the
-technology bubbles I'm in. We'll be using the same framework for the MLOps
-landscape.
+Personally, I like writing a tech radar because it grounds me from [being too
+distracted by the shiny new
+object](https://en.wikipedia.org/wiki/Shiny_object_syndrome). In addition, it
+makes me aware of the technology bubbles I'm in. We'll be using the same
+framework for the MLOps landscape.
 
 ## Technology Radar for MLOps
 
@@ -145,9 +149,10 @@ Lastly, you'll find the top Cloud platforms under this category. Sure, you
 might just need a [Heroku
 instance](https://devcenter.heroku.com/articles/dyno-types) or a [DigitalOcean
 droplet](https://docs.digitalocean.com/products/droplets/),  but as your needs
-grow, investing in a solid cloud platform is a viable strategy for your
-analytics toolkit. AWS, Azure, and GCP are sustainable choices because it opens
-up a wide range of capabilities that you'll probably need.
+grow, investing in a solid cloud platform is a viable strategy for
+future-proofing your analytics toolkit. AWS, Azure, and GCP are sustainable
+choices because it opens up a wide range of capabilities that you'll probably
+need.
 
 ### Trial
 
@@ -251,7 +256,7 @@ cases when you should or should not build.
     useless. You'll be competing with startups that dedicate 100% of their
     resources on improving their MLOps product. It's way easier to just use
     what is available. 
-* **Given that, build integrators.** Although I advise against building your
+* **Given that, build integrators and connectors.** Although I advise against building your
     own tool, I advocate for creating connectors between tools. Don't build
     your own ETL or annotation tool, but write a framework for connecting the
     two. It will be more fit to your business use-case.
