@@ -28,4 +28,14 @@ layout: default
 <iframe src="https://ljvmiranda.substack.com/embed" width="480" height="100" style="border:0px solid #EEE; background:fffff8;" frameborder="0" scrolling="no"></iframe>
 </div>
 
+{% if page.comments != false and jekyll.environment == "production" %}
+  <script src="https://utteranc.es/client.js"
+        repo="ljvmiranda921/comments.ljvmiranda921.github.io"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>
+{% endif %}
+
 </article>
