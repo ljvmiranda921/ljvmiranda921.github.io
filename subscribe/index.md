@@ -5,7 +5,7 @@ description: Get a monthly newsletter straight to your inbox!
 permalink: /subscribe/
 ---
 
-Hi friends, I started a *monthly* newsletter&mdash; **the Purveyor of Curiosities!**
+Hi friends, I started a *monthly* newsletter&mdash; [**the Purveyor of Curiosities!**](https://ljvmiranda.substack.com/)
 
 Here, you will receive:
 
