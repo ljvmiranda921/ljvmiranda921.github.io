@@ -19,6 +19,8 @@ development, systems, machine learning, and research. I hope that
 you'll spend a nice time here, so go grab yourself a cup of coffee and feel
 free to look around! 
 
+P.S. I also have a monthly newsletter, the Purveyor of Curiosities! Know more and subscribe [here](/subscribe). 
+
 ## Background
 
 I'm currently a Machine Learning Researcher at [Thinking
