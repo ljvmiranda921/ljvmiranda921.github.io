@@ -283,6 +283,7 @@ Let me know your thoughts and questions in the comments below!
 
 #### Changelog
 
+* 04-23-2021: This blogpost was featured in [Issue 30 of This Week in Godot!](https://thisweekingodot.com/posts/issue-30)
 * 04-19-2021: Update some grammar and usage issues
 
 
