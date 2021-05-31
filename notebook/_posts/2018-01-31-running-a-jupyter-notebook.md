@@ -144,6 +144,42 @@ For me, this reads as "jupyter tunnel", and the whole command is like an
 action "tunnel 8889 (the port from my remote) to 8888 (port from my local
 machine)".
 
+
+## Using a config file
+
+**Update: May 31, 2021** Thanks to [@a-berg](https://github.com/a-berg), here's
+a more hassle-free way of tunneling notebooks. This one involves updating your
+SSH config file. You can usually find it in `$HOME/.ssh/config`. 
+
+Open your config file, and add the following section
+
+```sh
+Host notebooks
+    HostName host
+    User myuser
+    LocalForward YYYY localhost:XXXX
+```
+
+where:
+- `notebooks`: an arbitrary "label" for the connection you'll make
+- `HostName`: the username of the host that will connect
+- `User`: the identity of the user that will connect
+- `LocalForward`: specifies a connection that will forward the traffic to the
+    remote machine
+
+Given that, it's now possible for us to connect as `myuser@host` in our remote
+server by just typing this command:
+
+```sh
+localuser@localhost: ssh -Nf notebooks
+```
+
+As [@a-berg](https://github.com/a-berg) mentions, you can even [add an
+`IdentityFile` to properly secure your connection!](https://kb.iu.edu/d/aews)
+Awesome!  To learn more about SSH configuration files, I'll direct you to [this
+wonderful tutorial from DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-configure-custom-connection-options-for-your-ssh-client). 
+
+
 And that's basically it! The Jupyter notebook is really a wonderful tool for
 literal programming where you can intersperse text and code in one document.
 In my use-case, I don't have the Tensorflow GPU library in my local machine
@@ -152,8 +188,7 @@ to decrease development time, and helped me perform fast analyses of my
 models.
 
 > Hi there, I've been using notebooks for a long time now and it may be good to
-> give a review of the notebook ecosystem for 2020. You can read it in [this
-> link](/notebook/2020/03/06/jupyter-notebooks-in-2020).
+> give a review of the notebook ecosystem for 2020. You can read it in [this link](/notebook/2020/03/06/jupyter-notebooks-in-2020).
 
 If you like this, you'll enjoy:
 * [How to manage Python environments](/notebook/2021/05/12/how-to-manage-python-envs/)
@@ -163,6 +198,8 @@ If you like this, you'll enjoy:
 
 
 #### Changelog
+
+* 05-31-2021: Add section for using SSH config files (thanks to [@a-berg](https://github.com/a-berg)!)
 * 03-06-2020: Add link for Jupyter Notebooks review
 * 09-29-2018: Update figure using Tikz for consistency
 * 09-11-2018: Add diagram to Jupyter notebook tutorial
