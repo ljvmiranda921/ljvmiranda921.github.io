@@ -209,6 +209,8 @@ back to the ML lifecycle, and again, to our two personas.
 
 ### Changelog
 
+* 06-01-2021: This blog series was featured in [Issue 19 of the MLOps Roundup Newsletter](https://mlopsroundup.substack.com/p/issue-19-mlops-tooling-vertex-ai)!
+* 05-28-2021: This blog series was [featured in Analytics Vidhya!](https://medium.com/analytics-vidhya/10-amazing-mlops-learning-resources-378804c418be)
 * 05-22-2021: Added a section explaining how this differs to other analyses
 * 05-22-2021: Fix some minor grammar and usage issues.
 

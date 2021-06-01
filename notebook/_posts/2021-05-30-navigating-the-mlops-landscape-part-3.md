@@ -295,6 +295,11 @@ honestly it's really hard to keep up. Until next time!
 ![](/assets/png/mlops-shop/finale.png){:width="480px"}  
 {: style="text-align: center;"}
 
+### Changelog
+
+* 06-01-2021: This blog series was featured in [Issue 19 of the MLOps Roundup Newsletter](https://mlopsroundup.substack.com/p/issue-19-mlops-tooling-vertex-ai)!
+* 05-28-2021: This blog series was [featured in Analytics Vidhya!](https://medium.com/analytics-vidhya/10-amazing-mlops-learning-resources-378804c418be)
+
 
 ## Previous Sections
 

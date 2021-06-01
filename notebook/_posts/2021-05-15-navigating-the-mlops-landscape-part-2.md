@@ -296,6 +296,8 @@ I encountered in my day-to-day as representative samples for each group.
 
 ### Changelog
 
+* 06-01-2021: This blog series was featured in [Issue 19 of the MLOps Roundup Newsletter](https://mlopsroundup.substack.com/p/issue-19-mlops-tooling-vertex-ai)!
+* 05-28-2021: This blog series was [featured in Analytics Vidhya!](https://medium.com/analytics-vidhya/10-amazing-mlops-learning-resources-378804c418be)
 * 05-22-2021: Fix some minor grammar and usage issues.
 
 ## Next Sections
