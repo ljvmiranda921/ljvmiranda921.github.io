@@ -41,6 +41,9 @@ time-travel in their day jobs! Let me demonstrate that in this blogpost by
 Really now, you haven't watched Avengers: Infinity War and Avengers: Endgame? </p>
 
 
+<!-- Note to Lj: remember, these five are happening in sequence! -->
+
+
 ## Fast-forward merge
 
 <!-- five years later -->
