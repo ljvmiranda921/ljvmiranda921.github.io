@@ -56,7 +56,6 @@ Really now, you haven't watched Avengers: Infinity War and Avengers: Endgame? </
 <!-- time heist -->
 
 
-
 ## Headless and stray branches 
 
 <!-- whlie checking out the commit, our heroes are in a headless branch -->
