@@ -47,18 +47,60 @@ Really now, you haven't watched Avengers: Infinity War and Avengers: Endgame? </
 ## Fast-forward merge
 
 <!-- five years later -->
+This one is straightforward so let's get it out of the way. After that
+shocking decapitation of Thanos and with no hope in sight, we were then
+transported five years into the future.
+
+This is a classic example of a fast-forward merge. This occurs when 
+there is *a linear path* from where we are now (i.e., death of Thanos) to our
+target branch (i.e., five years later). No time-travel shenanigans, just
+straightforward combination of histories. 
+
+<!-- excalidraw example -->
+
+You can do this by:
+
+```sh
+# Prepare a branch that contains all the events five years later
+git checkout -b five-years-later master
+git add <file>
+git commit -m "Add new events in the history"
+
+# Switch back to master and perform merge
+git checkout master
+git merge five-years-later
+```
 
 
 ## Checkout a point in the past 
 
+With the stones reduced to atoms, our heroes decided to conduct a time heist.
+First, they need to identify when in their shared history the stones are within
+reach. 
 
-<!-- find an object in commit history -->
-<!-- time heist -->
+In Git, you can view an object's full history by typing:
 
+```sh
+# Get full history of a specific file
+git log --all --full-history <path/to/file>
+```
+
+This also allowed them to pinpoint the exact location of the stones.  After
+determining those crucial points, they used the remaining Pym particles to
+traverse the quantum realm. 
+
+Turns out, we can also do the same thing! The `log` command from above will then
+give you a unique hash so that you can reference it as you time-travel:
+
+```sh
+# Supply your unique hash 
+git checkout <SHA> -- <path/to/file>
+```
 
 ## Headless and stray branches 
 
 <!-- whlie checking out the commit, our heroes are in a headless branch -->
+<!-- moving the stones into HEAD -->
 <!-- loki is a stray branch -->
 
 
