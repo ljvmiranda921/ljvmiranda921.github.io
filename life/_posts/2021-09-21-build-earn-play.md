@@ -136,7 +136,7 @@ my whims, [blue-sky
 thinking](https://en.wiktionary.org/wiki/blue-sky_thinking#English),
 and doing things just for fun!** We often get caught up with outcomes, taking
 the process for granted. Although I like achievements, too much fixation on
-output without the space for creativity and variety will inevitably burn me
+output without the space for creativity and variety will inevitably tire me
 out.
 
 ![](/assets/png/flourishing/play.png){:width="640px"}  
@@ -149,7 +149,7 @@ same principle: I write about anything whenever I want. There's some level
 of attention brought forth by *playing*&mdash; directionless, yes, but
 meaningful.
 
-My favorite anecdote is on [how Feynman got his Nobel prize](https://www.asc.ohio-state.edu/kilcup.1/262/feynman.html?repostindays=413):
+One of my favorite anecdotes is on [how Feynman got his Nobel prize](https://www.asc.ohio-state.edu/kilcup.1/262/feynman.html?repostindays=413):
 > "So I got this new attitude. Now that I am burned out and I'll never
 > accomplish anything, I've got this nice position at the university teaching
 > classes which I rather enjoy, and just like I read the Arabian Nights for
@@ -186,15 +186,15 @@ your creative output.
 
 Oftentimes, a day job is like this: I get to *build* and *earn*. I'm definitely
 one of the lucky few whose obsessions are highly valued by society today.
-But without *play*, the fire of delight, carefree, and joy may burn
-out&mdash;it's something I want to avoid!
+But without *play*, the fire of delight, carefree, and joy might extinguish
+&mdash;it's something I want to avoid!
 
 I've come to realize that I just need to accept it, as this is going to be the
 case 99% of the time. My go-to strategy is to set boundaries, [find *play*
 outside of work](https://www.swyx.io/part-time-creator-manifesto/), and
 separate the programming I do for my job from the programming I do for
-myself.[^6] During these moments I was able to build a game, write more in my
-blog, while being productive at work.
+myself.[^6] During these moments, I was able to build a game and write more in my
+blog  while being productive at work!
 
 ### Build and Play
 
@@ -275,9 +275,9 @@ doesn't mean you settle for the first two, getting all three is still the
 aspiration.
 
 But as we've seen from the previous section, there are tradeoffs when a pillar is
-missing. *Building* and *Earning* without *Playing* may lead to burnout.
+missing. *Building* and *Earning* without *Playing* may lead to fatigue.
 *Building* and *Playing* without *Earning* is directionless. *Earning* and
-*Playing* without *Building*, in my experience, is unimpactful.
+*Playing* without *Building* is uninspiring.
 
 Just like in our steady-state graph, we need to course-correct. That's when you
 **till the third**. Like tilling the land, you prepare a space to cultivate the
