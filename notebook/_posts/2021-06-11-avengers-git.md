@@ -99,10 +99,60 @@ git checkout <SHA> -- <path/to/file>
 
 ## Headless and stray branches 
 
-<!-- whlie checking out the commit, our heroes are in a headless branch -->
-<!-- moving the stones into HEAD -->
-<!-- loki is a stray branch -->
+Whenever our heroes travel to the past and tamper with the stones, they get
+into a state outside the context of time. It's a state of limbo where a
+potential new reality may be born. In Git, it's like being in a state where
+`HEAD` is detached&mdash; a *headless branch*:
 
+<!-- put image -->
+
+By procuring the stones from an earlier timeline, they then create an alternate
+reality:
+
+```sh
+git checkout <SHA>
+git checkout -b feat/get-stone  # or git switch -c feat/get-stone
+```
+
+...and procured the stones from earlier timelines. As with the video above, we
+had Hulk successfully obtaining the Time Stone from The Ancient One:
+
+
+<!-- put image -->
+
+```sh
+# Checkout a previous state in time, Avengers I
+git checkout avengers-1
+git checkout -b feat/get-time-stone
+
+# Move time stone from the Ancient One to the Hulk
+mv the_ancient_one/time_stone hulk
+
+# Commit the change and go back to the present
+git add .
+git commit -m "Retrieve time stone from Ancient One"
+git checkout master
+git merge feat/get-time-stone
+```
+
+Iron Man and Captain America weren't so lucky. Their first attempt to get the
+Space Stone failed, with the past Loki escaping with it. By doing so, they've
+inadvertently created a *stray branch*:
+
+```sh
+# Checkout a previous state in time, Avengers I
+git checkout avengers-1
+git checkout -b feat/get-space-stone
+
+# Loki escaped with the Space stone
+mv shield/space_stone loki
+git add .
+git commit -m "Escape using the Space Stone"
+# ... 
+```
+
+This branch didn't merge to `master` and it's currently living its own life.
+We'll probably know of past Loki's fate in his standalone Disney+ series!
 
 ## Merge conflict
 
