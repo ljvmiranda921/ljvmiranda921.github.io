@@ -294,3 +294,8 @@ apply it here. I hope you enjoyed reading this as much as I did.
 Of course, I'm aware that time travel in *Endgame*  doesn't map exactly to the Git
 model. So let me know if there's a better way I should represent some plot
 points! 
+
+### References
+
+* Atlassian, "Getting Git Right", Available: [https://www.atlassian.com/git](https://www.atlassian.com/git). [Accessed June 5 2021]
+* Minute Physics, "Time Travel in Fiction Rundown", Available: [https://www.youtube.com/watch?v=d3zTfXvYZ9s](https://www.youtube.com/watch?v=d3zTfXvYZ9s). [Accessed June 5 2021]
