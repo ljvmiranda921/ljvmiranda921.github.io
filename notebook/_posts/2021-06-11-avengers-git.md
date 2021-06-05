@@ -36,6 +36,12 @@ Git?* As it turns out, software developers are doing their own version of
 time-travel in their day jobs! Let me demonstrate that in this blogpost by
 **explaining the plot of *Avengers: Endgame* in five git concepts!**
 
+* [Fast-forward merge](#fast-forward-merge)
+* [Checkout a point in the past](#checkout-a-point-in-the-past)
+* [Headless and stray branches](#headless-and-stray-branches)
+* [Merge conflict](#merge-conflict)
+* [Rewriting history (?) with rebase](#rewrite)
+
 <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
 <b>Spoilers alert!</b><br>
 Really now, you haven't watched Avengers: Infinity War and Avengers: Endgame? </p>
@@ -114,7 +120,7 @@ git checkout <SHA>
 git checkout -b feat/get-stone  # or git switch -c feat/get-stone
 ```
 
-...and procured the stones from earlier timelines. As with the video above, we
+...and procure the stones from earlier timelines. As with the clip above, we
 had Hulk successfully obtaining the Time Stone from The Ancient One:
 
 
@@ -152,18 +158,109 @@ git commit -m "Escape using the Space Stone"
 ```
 
 This branch didn't merge to `master` and it's currently living its own life.
-We'll probably know of past Loki's fate in his standalone Disney+ series!
+We'll probably know of this Loki's fate in his standalone Disney+ series!
 
 ## Merge conflict
 
-<!-- thanos wants to rebase to master -->
-<!-- i am not sure what iron man did: not accept merge-ours and not accept thanos
-pull request, or actually delete the thanos from another timeline? -->
+After successfully obtaining all the infinity stones, our heroes built their
+own gauntlet to undo the snap. In the `master` branch, we have:
+
+```sh
+./infinity_gauntlet snap --no-dry-run
+```
+
+A few seconds later, we hear birds chirping and see Hawkeye's snapped wife
+calling him. The sun shines and it seems that our heroes have saved the day!
+
+But, a pull request from another reality came in...it's Thanos from the
+`feat/get-power-stone` branch! The changeset he's bringing ensued a merge
+conflict!
+
+```sh
+$ git merge feat/get-power-stone
+Auto-merging plan_for_the_future_of_humanity.txt
+CONFLICT (content): Merge conflict in plan_for_the_future_of_humanity.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+Conflicts happen when two developers updated same lines in a file, or if one
+developer deleted a file while another is modifying it (Atlassian,
+["Understanding Merge
+Conflicts"](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)).
+Because Git cannot easily determine which change is correct, it's the
+responsibility of the developers to resolve it.
+
+**And resolved it they did!** After a climactic battle that set our heroes
+against the bulk of Thanos's army, Iron Man got hold of the stones and ran the
+following command:
+
+```sh
+./infinity_gauntlet snap
+# Resolve merge conflicts in  plan_for_the_future_of_humanity.txt
+git add .
+git commit -m "I am Iron Man"
+```
+
+We see Thanos and his army disappearing, and Tony Stark in his final moments. 
+The question still remains, what is the effect of Iron Man's snap?
+* **Is it a Pull Request rejection?**: Thanos and his army were simply sent
+    back to their original branch. They still exist in that alternate reality.
+* **or an actual file deletion?**: Thanos of that timeline is fully deleted.
+    I'm curious as to how the `feat/get-power-stone` reality will play-out with
+    a Thanos-less universe.
+
+Perhaps we'll never know, but thanks to our Git-model, we were able to surface
+such questions!
+
+## <a id="rewrite"></a> Rewriting history (?) with rebase 
+
+In the epilogue of Endgame, we see Captain America returning the stones in
+their original timelines. However, instead of going back to `HEAD`, he stayed
+in a particular commit to pursue a committed relationship with Peggy Carter. 
+
+```sh
+git checkout <SHA>
+```
+
+<!-- insert graph -->
+
+All is well, but we see him again back in `HEAD` as an older version of
+himself. Initially, I thought that he decided to live in an alternate reality,
+but did he *perhaps* rewritten history by rebasing?
+
+```sh
+git checkout <SHA>
+echo "Decided to stay with Peggy" >> steve_rogers_life_plan.txt
+git add steve_rogers_life_plan.txt
+git commit -m "Try some of that life Tony was telling me to get"
+```
+
+<!-- insert graph with rebase -->
+
+This definitely opens up a lot of questions:
+* **Did two copies of the same object exist at the same time?** Steve Roger's
+    body will still be discovered in the iceberg years later, so are there two
+    Captain Americas, `steve_rogers_prime` and `steve_rogers`, running around
+    in our timeline?
+* **Did Cap rebased with minimal intrusions as possible?** Did our prime Cap
+    hid successfully and try not to tamper with the timeline? It's hard to
+    imagine Cap not trying to stop Bucky in killing Tony's parents, or prevent
+    any major disasters given his capabilities. 
+
+Using our Git model, rebasing with minimal intrusions seems to be the logical
+explanation. We've also seen our Cap grew from being a naive idealist, so
+perhaps he also learned to respect the timeline. *That's really hard* But I
+guess only the *worthy* can pull it off.
 
 
-## Rewriting history with rebase 
+## Final thoughts
 
-<!-- more speculative: captain america going back -->
-<!-- are there two captain americas in the `master` timeline now? -->
-<!-- did the original captain america (the one we followed through the years) just hid himself properly and let history take its natural course without making action? -->
+In this blogpost, I talked about different ways we can explain certain plot
+points in *Avengers: Endgame* using the Git model. I've been reading up a lot
+on various [rules of time travel in
+fiction](https://www.youtube.com/watch?v=d3zTfXvYZ9s), and it's exciting to
+apply it here. I hope you enjoyed reading this as much as I did.
 
+Of course, I'm aware that time travel in *Endgame*  doesn't map exactly to the Git
+model. So let me know if there's a better way I should represent some plot
+points! 
