@@ -8,6 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [git, avengers, marvel, endgame, software engineering]
+header-img: /assets/png/git-avengers/header.png
 description: |
     Avengers and Git? The most ambitious crossover event in history.  In this
     blog post, I will explain crucial plot points in Avengers: Endgame in five
