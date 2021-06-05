@@ -6,6 +6,7 @@ date: 2021-09-21
 category: life
 comments: true
 author: "LJ MIRANDA"
+header-img: /assets/png/flourishing/header.png
 summary: "A perfect time to revisit my values on career, happiness, and growth"
 excerpt: |
     A perfect time to revisit my values on career, happiness, and growth.
