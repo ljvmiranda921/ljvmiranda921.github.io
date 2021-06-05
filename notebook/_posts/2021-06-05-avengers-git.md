@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "What can the Avengers: Endgame teach us about Git?"
-date: 2021-06-11
+date: 2021-06-05
 category: notebook
 comments: true
 author: "LJ MIRANDA"
