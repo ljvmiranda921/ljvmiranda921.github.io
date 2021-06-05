@@ -57,12 +57,17 @@ This one is straightforward so let's get it out of the way. After that
 shocking decapitation of Thanos and with no hope in sight, we were then
 transported five years into the future.
 
+![](/assets/png/git-avengers/five_years_later.png){:width="460px"}
+{: style="text-align: center;"}
+
 This is a classic example of a fast-forward merge. This occurs when 
 there is *a linear path* from where we are now (i.e., death of Thanos) to our
 target branch (i.e., five years later). No time-travel shenanigans, just
 straightforward combination of histories. 
 
 <!-- excalidraw example -->
+![](/assets/png/git-avengers/fast_forward.png){:width="460px"}
+{: style="text-align: center;"}
 
 You can do this by:
 
@@ -95,6 +100,10 @@ This also allowed them to pinpoint the exact location of the stones.  After
 determining those crucial points, they used the remaining Pym particles to
 traverse the quantum realm. 
 
+<!-- excalidraw example -->
+![](/assets/png/git-avengers/checkout_commit.png){:width="460px"}
+{: style="text-align: center;"}
+
 Turns out, we can also do the same thing! The `log` command from above will then
 give you a unique hash so that you can reference it as you time-travel:
 
@@ -110,7 +119,9 @@ into a state outside the context of time. It's a state of limbo where a
 potential new reality may be born. In Git, it's like being in a state where
 `HEAD` is detached&mdash; a *headless branch*:
 
-<!-- put image -->
+<!-- excalidraw example -->
+![](/assets/png/git-avengers/headless_state.png){:width="320px"}
+{: style="text-align: center;"}
 
 By procuring the stones from an earlier timeline, they then create an alternate
 reality:
@@ -124,7 +135,9 @@ git checkout -b feat/get-stone  # or git switch -c feat/get-stone
 had Hulk successfully obtaining the Time Stone from The Ancient One:
 
 
-<!-- put image -->
+<!-- excalidraw example -->
+![](/assets/png/git-avengers/hulk_time_stone.png){:width="520px"}
+{: style="text-align: center;"}
 
 ```sh
 # Checkout a previous state in time, Avengers I
@@ -145,6 +158,10 @@ Iron Man and Captain America weren't so lucky. Their first attempt to get the
 Space Stone failed, with the past Loki escaping with it. By doing so, they've
 inadvertently created a *stray branch*:
 
+
+![](/assets/png/git-avengers/stray_branches.png){:width="640px"}
+{: style="text-align: center;"}
+
 ```sh
 # Checkout a previous state in time, Avengers I
 git checkout avengers-1
@@ -159,6 +176,15 @@ git commit -m "Escape using the Space Stone"
 
 This branch didn't merge to `master` and it's currently living its own life.
 We'll probably know of this Loki's fate in his standalone Disney+ series!
+
+Nevertheless, our two main protagonists managed to obtain the Space Stone by
+going back to 1970&mdash; also leading us to a heartfelt conversation between
+Tony Stark and his father:
+
+![](/assets/png/git-avengers/tony_space_stone.png){:width="640px"}
+{: style="text-align: center;"}
+
+
 
 ## Merge conflict
 
@@ -175,6 +201,10 @@ calling him. The sun shines and it seems that our heroes have saved the day!
 But, a pull request from another reality came in...it's Thanos from the
 `feat/get-power-stone` branch! The changeset he's bringing ensued a merge
 conflict!
+
+
+![](/assets/png/git-avengers/merge_conflict.png){:width="640px"}
+{: style="text-align: center;"}
 
 ```sh
 $ git merge feat/get-power-stone
@@ -222,8 +252,6 @@ in a particular commit to pursue a committed relationship with Peggy Carter.
 git checkout <SHA>
 ```
 
-<!-- insert graph -->
-
 All is well, but we see him again back in `HEAD` as an older version of
 himself. Initially, I thought that he decided to live in an alternate reality,
 but did he *perhaps* rewritten history by rebasing?
@@ -235,7 +263,9 @@ git add steve_rogers_life_plan.txt
 git commit -m "Try some of that life Tony was telling me to get"
 ```
 
-<!-- insert graph with rebase -->
+![](/assets/png/git-avengers/git_rebase.png){:width="640px"}
+{: style="text-align: center;"}
+
 
 This definitely opens up a lot of questions:
 * **Did two copies of the same object exist at the same time?** Steve Roger's
