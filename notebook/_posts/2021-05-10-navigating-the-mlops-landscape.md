@@ -72,8 +72,11 @@ There are already tons of [resources](#resources) exploring the MLOps
 landscape. The most notable ones are from Chip Huyen, where she [surveyed
 tools](https://huyenchip.com/2020/12/30/mlops-v2.html), [explored
 case-studies](https://huyenchip.com/mlops/), and [analyzed
-trends](https://huyenchip.com/2020/06/22/mlops.html). However, most of these
-resources are effective **when you already know what you want**. 
+trends](https://huyenchip.com/2020/06/22/mlops.html). I highly recommend that
+you read them&mdash; they're insightful and informative!
+
+However, like most resources, they are **most effective if you already know
+what you want**. 
 
 I liken this to eating in a new restaurant. You sit at a table, the waiter
 approaches, and he presents you a menu. They're all neatly
