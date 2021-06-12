@@ -296,7 +296,15 @@ Of course, I'm aware that time travel in *Endgame*  doesn't map exactly to the G
 model. So let me know if there's a better way I should represent some plot
 points! 
 
+
+*If you liked this, you might enjoy:*
+* [Git team workflow: merge or rebase?](/notebook/2018/10/25/git-workflow/): highlights the pros and cons for each git merge workflow
+* [Automate Python workflow using pre-commits: black and flake8](/notebook/2018/06/21/precommits-using-black-and-flake8/): automatically format and check your code whenever you commit!
+
+
 ### References
 
 * Atlassian, "Getting Git Right", Available: [https://www.atlassian.com/git](https://www.atlassian.com/git). [Accessed June 5 2021]
 * Minute Physics, "Time Travel in Fiction Rundown", Available: [https://www.youtube.com/watch?v=d3zTfXvYZ9s](https://www.youtube.com/watch?v=d3zTfXvYZ9s). [Accessed June 5 2021]
+
+
