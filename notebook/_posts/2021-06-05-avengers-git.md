@@ -27,7 +27,7 @@ heist*](https://marvelcinematicuniverse.fandom.com/wiki/Time_Heist), our heroes
 travelled through time to recover the stones and undo the effects of the
 snap&mdash; thereby saving all. 
 
-> The Ancient One: "The Infinity Stones create what you experience as the folow
+> The Ancient One: "The Infinity Stones create what you experience as the flow
 > of time. Remove one of the stones, and the flow splits."
 
 <p align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/RNBKKGM1w88?start=57" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
