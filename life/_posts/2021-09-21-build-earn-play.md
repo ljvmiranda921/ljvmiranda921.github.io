@@ -94,7 +94,7 @@ software. I was able to create functional artifacts like [search
 engines](https://www.dropbox.com/s/kmexsi1zxpa4829/LJMiranda_CV-latest.pdf?dl=0) and
 [optimizers](https://github.com/ljvmiranda921/pyswarms) to something more
 artistic like [generative
-art](https://github.com/ljvmiranda921/sprites-as-a-service) and games. Building
+art](https://github.com/ljvmiranda921/sprites-as-a-service) and [games](/projects/2021/08/15/abyss/). Building
 is a verb that I'm betting on, and I think that I'm getting good returns so
 far.
 
