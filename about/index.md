@@ -53,7 +53,7 @@ physics](https://arxiv.org/abs/1801.07686),
 [other
 things](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15267041073198929167).
 I love indie games (especially roguelikes and platformers) and I dabble in game
-development using [PICO-8](https://www.lexaloffle.com/pico-8.php) and
+development using [Pico-8](https://www.lexaloffle.com/pico-8.php) and
 [Godot](https://godotengine.org/).
 
 
