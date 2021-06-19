@@ -55,6 +55,9 @@ I love indie games and dabble in game
 development using [Pico-8](https://www.lexaloffle.com/pico-8.php) and
 [Godot](https://godotengine.org/).
 
+<p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+<b>I am currently unreachable!</b><br>
+You can send me an email via ljvmiranda [at] gmail [dot] com, but don't expect a quick reply!</p>
 
 ## Contact
 
