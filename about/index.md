@@ -21,15 +21,6 @@ free to look around!
 
 P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljvmiranda.substack.com/)! Know more and subscribe [here](/subscribe). 
 
-## Featured
-
-Here are some of my most popular posts:
-
-* [How to improve software engineering skills as a researcher](/notebook/2020/11/15/data-science-swe/): a guide for data scientists and researchers for levelling-up their software engineering skills.
-* [Understanding softmax and the negative log-likelihood](/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/): a concise explanation on one of the most commonly-used functions in machine learning.
-* [Distill: Why do we need Flask, Celery, and Redis? (with Mcdonalds in Between)](/notebook/2019/11/08/flask-redis-celery-mcdo/): a fun and comic explanation on how these key technologies solve a particular problem.
-* [Automate Python workflow using pre-commits: black and flake8](/notebook/2018/06/21/precommits-using-black-and-flake8/): increase your Python dev workflow by incorporating pre-commits, auto-formatters, and checks!
-* [How to use Jupyter Notebooks in 2020](/notebook/2020/03/06/jupyter-notebooks-in-2020/): a three-part series that explores the Jupyter notebook landscape, with some predictions on the future.
 
 ## Background
 
