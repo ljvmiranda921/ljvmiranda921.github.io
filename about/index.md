@@ -24,14 +24,13 @@ P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljv
 
 ## Background
 
-I'm currently on a short break! Taking some time-off to rest, refresh, and recharge.
+I'm currently taking some time-off to rest, refresh, and recharge.
 
-Previously, I've worked for some machine learning startups such as:
-
-* [Thinking Machines Data Science](https://thinkingmachin.es), a consultancy where I built
-    multiple natural language processing (NLP) and computer vision (CV)-based ML products such as 
-    a search engine, an industry classifier, and a document OCR system for banks and telco providers.
-* [Preferred Networks](https://www.preferred-networks.jp/en/) in Japan as an
+Prior to that, I've worked for some machine learning startups such as:
+* [Thinking Machines Data Science](https://thinkingmachin.es) (Manila), where I built
+    multiple natural-language processing and computer-vision ML products such as a search engine, an industry
+    classifier, and a document OCR system to name a few.
+* [Preferred Networks](https://www.preferred-networks.jp/en/) (Tokyo) as an
     intern, where I implemented a training parallelization framework for
     [ChainerRL](https://github.com/chainer/chainerrl), an open-source
     reinforcement learning library.
@@ -52,8 +51,8 @@ physics](https://arxiv.org/abs/1801.07686),
 [teaching](https://www.gousios.gr/courses/algo-ds/optimizations.html) amongst
 [other
 things](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15267041073198929167).
-I love indie games (especially roguelikes and platformers) and I dabble in game
-development using [Pico-8](https://www.lexaloffle.com/pico-8.php) and
+I love indie games and dabble in game
+development using [PICO-8](https://www.lexaloffle.com/pico-8.php) and
 [Godot](https://godotengine.org/).
 
 
