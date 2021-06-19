@@ -12,9 +12,9 @@ layout: home
     <div class="right">
         <p>Hi, I'm Lj Miranda and welcome to my blog!</p>
         <p>
-            I'm currently on a short break! Taking some time off to rest,
-            refresh, and recharge. I am unreachable, but for the meantime, I'll
-            be publishing posts from my backlog.
+            I'm currently taking some time off to rest, refresh, and recharge!
+            I am unreachable, but in the meantime, I'll be publishing blog
+            posts I've scheduled ahead of time.
         </p>
         <p>
             In this blog, I write about my interests in machine learning,
