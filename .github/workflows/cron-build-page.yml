@@ -1,0 +1,13 @@
+name: Build everyday
+
+on:
+  schedule:
+   - cron: '0 8 * * *'  # runs every 8am UTC+8 (12mn in UTC)
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send request to Github API
+      uses: wei/curl@master
+      with:
+        args: "-X POST -H 'Authorization: token ${{ secrets.PAGES_ACCESS_TOKEN }}' -H 'Accept: application/vnd.github.ant-man-preview+json' https://api.github.com/repos/ljvmiranda921/ljvmiranda921.github.io/pages/builds"
