@@ -192,10 +192,11 @@ Tour)*](https://distill.pub/2020/grand-tour/).  Here's the canonical way of
 referencing this: 
 
 ```tex
-@misc{miranda2017softmax,
+@article{miranda2017softmax,
   title        = {Understanding softmax and the negative log-likelihood"},
   author       = {Miranda, Lester James},
-  howpublished = {\url{https://ljvmiranda921.github.io/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/}},
+  journal      = {ljvmiranda921.github.io},
+  url          = {\url{https://ljvmiranda921.github.io/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/}},
   year         = {2017}
 }
 ```
