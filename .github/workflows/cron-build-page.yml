@@ -2,7 +2,7 @@ name: Build everyday
 
 on:
   schedule:
-   - cron: '0 8 * * *'  # runs every 8am UTC+8 (12mn in UTC)
+   - cron: '0 16 * * *'  # runs every 12am UTC+8
 jobs:
   curl:
     runs-on: ubuntu-latest
