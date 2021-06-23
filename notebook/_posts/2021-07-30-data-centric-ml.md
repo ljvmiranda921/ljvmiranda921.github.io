@@ -18,27 +18,22 @@ excerpt: |
     the trends, challenges, and opportunities to achieve this paradigm.
 ---
 
+> Data-centric machine learning shifts the focus from fiddling model
+> hyperparameters, to ensuring quality data across all. In this post, I discuss
+> the trends, challenges, and opportunities to achieve this paradigm.
+
 <span class="firstcharacter">A</span> few months ago, Andrew Ng [launched his
 campaign](https://www.youtube.com/watch?v=06-AZXmwHjo) for a more data-centric
 approach to machine learning. This meant having to move away from fiddling models
 into ensuring quality data across all. In line with this, he also started
 the [Data-Centric AI
 competition](https://https-deeplearning-ai.github.io/data-centric-comp/), where
-the main challenge is to increase accuracy by improving the dataset while
-keeping the model fixed.
+the main challenge is to "increase accuracy by improving the dataset while
+keeping the model fixed."
 
-> Data-centric ML: moving away from fiddling models into ensuring quality data across all
+Going into this direction is promising, as **recent trends in the space point to
+a data-centric approach:**
 
-
-* [Recent trends encourage data-centric approach](#recenttrends)
-* [Optimizing on what you have](#optimizing)
-* [References](#references)
-
-
-## <a id="recenttrends"></a> Recent trends encourage a data-centric approach
-
-Going into this direction is promising, as recent trends in the space point to
-a data-centric approach:
 * **We're discovering pitfalls for being too fixated on models**: achieving
     state-of-the-art (SOTA) via model-centric approaches often incentivize inane
     practices such as fixing random seeds and selective reporting ([Henderson et
