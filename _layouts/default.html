@@ -5,7 +5,21 @@
 
   <body>
 
+
+    {% if jekyll.environment != "production" %}
+    <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
+    <b>You are reading from a staging version of this website</b><br>
+    🎉 Congratulations, you've stumbled upon this not-so-secret page! Here you'll
+    find blogposts I intend to publish in the future. You can probably see me
+    because of three reasons: (1) you're developing locally, (2) you're
+    fiddling with my Netlify CI, or (3) Lj gave you a preview link for a future
+    blog post. Witness how the sausage is made&mdash;all the edits, rough drafts,
+    and early ideas! If you're lost, then just go back to the <a
+    href="https://ljvmiranda921.github.io">production page.</a> Enjoy (?) </p>
+    {% endif %}
+
     {% include header.html %}
+
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
