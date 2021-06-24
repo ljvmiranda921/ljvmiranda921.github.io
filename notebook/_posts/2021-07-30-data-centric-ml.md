@@ -65,20 +65,29 @@ a data-centric approach:**
     data-versioning, "smart" labelling, and tracking.[^2] Data-centric machine
     learning can definitely take advantage of these developments.
 
-As an industry practitioner, I find the data-centric approach appealing. **Data
-tend to have a longer lifespan and a larger impact surface area.** Aside from
-using it as raw material for training models, you can create visualizations or
-dashboards to drive important decisions. With the advent of [open
+In the industy, a data-centric approach is appealing. **Data tend to have a
+longer lifespan and a larger impact surface area.** Aside from using them as
+raw materials for training models, one can create other artifacts like dashboards or
+visualizations to drive important decisions. With the advent of [open
 data](https://en.wikipedia.org/wiki/Open_data), even just the act of storing
-and curating it is valuable enough. Models are often susceptible to concept
-drift, and is only good on what it was built for ([Tsymbal,
-2004](tsymbal2004drift), [Žliobaitė, 2010](zliobaite2010drift), and
+and curating it is valuable enough. On the other hand, models are often
+susceptible to concept drift, and is only good on what it was built for
+([Tsymbal, 2004](tsymbal2004drift), [Žliobaitė, 2010](zliobaite2010drift), and
 [Sambasivan, 2021](sambasivan2021data)).
 
 *So what can be done to improve the quality of our datasets?*
 
 ## <a id="optimizing"></a> Optimizing on what you have
 
+Almost all data work, prior to modelling, revolves around two elements: (1)
+your domain-expert and (2) your data. We can think of their relationship as
+such:
+
+![](/assets/png/data-centric/domain_expert_data.png){:width="460px"}
+{: style="text-align: center;"}
+
+* **Domain expert provides data**
+* **Data inform the domain expert**
 
 
 ## References
