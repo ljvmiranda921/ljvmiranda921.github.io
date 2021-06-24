@@ -44,9 +44,9 @@ a data-centric approach:**
     et al, 2018](#sculley2019winner)).[^1] Inasmuch as we want to correct these,
     perhaps a different problem-solving paradigm can also help.
 
-* **Deep learning models are being democratized**: hyper-optimizing models
-    become less necessary due to SOTA being more accessible. In NLP, the open
-    source community led by [Huggingface](https://huggingface.co/) and
+* **Deep learning models are being democratized**: hyperoptimizing models
+    become less necessary due to the SOTA being more accessible. In NLP, the
+    open-source community led by [Huggingface](https://huggingface.co/) and
     [spaCy](https://spacy.io/) democratized transformer models to the public
     ([Vaswani, 2017](#vaswani2017attention)). In the private space, OpenAI has
     [started offering access](https://openai.com/blog/openai-api/) to their
@@ -62,7 +62,7 @@ a data-centric approach:**
     practices are being set up to support the ML lifecycle&mdash; we're slowly
     paying off our technical debt ([Sculley, et al, 2015](#sculley2015debt)).
     Albeit a nascent field, we've already seen tools geared towards
-    data-versioning, "smart" labelling, and tracking. Data-centric machine
+    data-versioning, "smart" labelling, and tracking.[^2] Data-centric machine
     learning can definitely take advantage of these developments.
 
 As an industry practitioner, I find the data-centric approach appealing. **Data
@@ -97,3 +97,4 @@ drift, and is only good on what it was built for ([Tsymbal,
 ## Footnotes
 
 [^1]: HARK-ing, refers to the research practice of hypothesizing after the results are known. Norbert Kerr defined it as "presenting a post hoc hypothesis in the introduction of a research report as if it were an a priori hypothesis"
+[^2]: Examples of labelling tools: [Prodigy](https://prodi.gy/), [Snorkel](https://snorkel.ai/), [Label Studio](https://labelstud.io/). Examples of data-versioning and tracking (lineage) tools: [MLFlow](https://mlflow.org/), [DVC](https://dvc.org/), [Pachyderm](https://www.pachyderm.com/). 
