@@ -132,7 +132,7 @@ describe tactical procedures for each direction as illustrated below:
 
 In the next section, I will survey approaches that fall under each quadrant.
 This may range from methods that you might see in a typical ML research
-conference, or tools used in an organization. 
+conference, to tools used in an organization. 
 
 
 ## References
