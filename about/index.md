@@ -19,7 +19,7 @@ development, systems, machine learning, and research. I hope that
 you'll spend a nice time here, so go grab yourself a cup of coffee and feel
 free to look around! 
 
-P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljvmiranda.substack.com/)! Know more and subscribe [here](/subscribe). 
+P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljvmiranda.substack.com/)! Subscribe [here](/subscribe). 
 
 
 ## Background
@@ -56,8 +56,8 @@ development using [Pico-8](https://www.lexaloffle.com/pico-8.php) and
 [Godot](https://godotengine.org/).
 
 <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
-<b>I am currently unreachable!</b><br>
-You can send me an email via ljvmiranda [at] gmail [dot] com, but don't expect a quick reply!</p>
+<b>I am currently unreachable</b><br>
+You can still send me an email via ljvmiranda [at] gmail [dot] com, but don't expect a quick reply. I don't foresee anything urgent for the next few months.</p>
 
 ## Contact
 
