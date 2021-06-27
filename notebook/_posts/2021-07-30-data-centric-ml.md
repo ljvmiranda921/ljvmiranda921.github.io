@@ -83,7 +83,7 @@ susceptible to concept drift, and is only good on what it was built for
 ## <a id="optimizing"></a> Optimizing on what you have
 
 Almost all data work, prior to modelling, revolves around two elements: (1) the
-domain-expert and (2) the data. It is possible that one exists without the
+domain-expert and (2) their data[set]. It is possible that one exists without the
 other, that's why it's important to **optimize on what you have.** If both exist,
 then we can think of their relationship as *symbiotic*:
 
@@ -91,15 +91,14 @@ then we can think of their relationship as *symbiotic*:
 {: style="text-align: center;"}
 
 Domain experts collect data, and in turn, data inform the expert ([Gennatas,
-2020](gennatas2020expert)). Both are
-enriched in the process: more data is provided, while the domain expert expands
-their knowledge of the field[^3] (this in turn generates insights, decisions, and
-such). 
+2020](gennatas2020expert)). Both are enriched in the process: more data is
+provided, while the domain expert expands their knowledge of the field[^3].
+This virtuous cycle generates insights and decisions for the organization. 
 
 From a modelling perspective, it is much better if the dataset is curated,
 i.e., it's *labeled.* This means that meaningful information is attached to a
 given set of attributes. It then becomes straightforward to feed it into a
-machine learning model. 
+machine learning model:
 
 For a set of $$N$$ examples $$\{(x_1, y_1), \dots (x_N,
 y_N)\}$$ where $$x_i$$ is a feature vector and $$y_i$$ is its label, we can
@@ -122,8 +121,8 @@ the other:
     progressed enough to understand unsupervised data, so it's still possible
     to extract value on the given dataset.
 
-The (i) presence or (ii) absence of (1) domain experts and (2) labeled data
-creates a **quadrant representing four (4) general directions for a data-centric
+We can plot the presence or absence of domain experts and labeled data
+in a **quadrant representing four (4) general directions for a data-centric
 approach.** Fortunately, the field has matured quite enough that we can
 describe tactical procedures for each direction as illustrated below: 
 
