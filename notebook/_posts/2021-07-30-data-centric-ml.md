@@ -133,6 +133,24 @@ In the next section, I will survey approaches that fall under each quadrant.
 This may range from methods that you might see in a typical ML research
 conference, to tools used in an organization. 
 
+## Methods review
+
+We'll go through each quadrant in the figure above. We'll first start with the
+upper-left corner, then go clockwise. This section will go over representative
+techniques that fall under each zone.[^4] 
+
+### Large unlabeled data, absence of an expert
+
+
+### Large unlabeled data, presence of an expert
+
+
+### Small unlabeled data, presence of an expert
+
+
+### Small unlabeled data, absence of an expert
+
+
 
 ## References
 
@@ -153,3 +171,4 @@ conference, to tools used in an organization.
 [^1]: HARK-ing, refers to the research practice of hypothesizing after the results are known. Norbert Kerr defined it as "presenting a post hoc hypothesis in the introduction of a research report as if it were an a priori hypothesis"
 [^2]: Examples of labelling tools: [Prodigy](https://prodi.gy/), [Snorkel](https://snorkel.ai/), [Label Studio](https://labelstud.io/). Examples of data-versioning and tracking (lineage) tools: [MLFlow](https://mlflow.org/), [DVC](https://dvc.org/), [Pachyderm](https://www.pachyderm.com/). 
 [^3]: That's why I still think that ML practitioners who came from a non-ML field (psychologists, sociologists, economists, etc.) are at an advantage: they have an intimate knowledge of the field, and see ML as a tool.
+[^4]: At first, I was tempted to put an overarching label or tagline on each group. However, I realized that it may be more confusing because some approaches don't have an explicit relationship to one another.
