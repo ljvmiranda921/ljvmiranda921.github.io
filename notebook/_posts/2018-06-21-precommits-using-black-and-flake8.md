@@ -172,8 +172,8 @@ __Figure:__ _Short demo on pre-commit hooks_
 Awesome right? Hope you learned something new today!
 
 #### Changelog
-* 03-04-2020: Add setup for including flake8 from its own repo. Thanks for catching, Alex Plugaru!
-* 07-25-2019: Update github link of black from `ambv` to `psf`. Thanks for catching, Peter Schutt!
-* 09-15-2018: This post was featured in [Episode #95](https://pythonbytes.fm/episodes/show/95/unleash-the-py-spy) of Python Bytes! Thank you [Mike](https://twitter.com/mkennedy?lang=en) and [Brian](https://twitter.com/brianokken?lang=en)! 
+* 03-04-2020: Add setup for including flake8 from its own repo. Thanks, Alex Plugaru!
+* 07-25-2019: Update github link of black from `ambv` to `psf`. Thanks, Peter Schutt!
+* 09-15-2018: Featured in [Episode #95](https://pythonbytes.fm/episodes/show/95/unleash-the-py-spy) of Python Bytes! Thank you [Mike](https://twitter.com/mkennedy?lang=en) and [Brian](https://twitter.com/brianokken?lang=en)! 
 * 06-05-2018: Update pre-commit config filename (by [@asottile](https://github.com/asottile))
 
