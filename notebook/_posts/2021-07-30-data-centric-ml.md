@@ -141,6 +141,26 @@ techniques that fall under each zone.[^4]
 
 ### Large unlabeled data, absence of an expert
 
+This scenario may look hopeless at first, but there already exist a number of
+techniques to get past this barrier. First, we'll look into three model-based
+approaches&mdash; transfer learning, multi-task learning, and semi-supervised
+learning&mdash; that relaxes the dependency on labeled data. Then, we'll
+explore various tools on crowd-sourced labelling to increase our labeled
+dataset.
+
+
+#### Transfer learning
+
+
+#### Multi-task learning
+
+
+#### Semi-supervised learning
+
+
+#### Crowd-sourced labelling tools
+
+
 
 ### Large unlabeled data, presence of an expert
 
