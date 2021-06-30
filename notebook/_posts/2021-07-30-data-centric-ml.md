@@ -25,7 +25,61 @@ excerpt: |
 > literature review on various methods, approaches, and techniques to achieve
 > this paradigm.
 
-<span class="firstcharacter">A</span> few months ago, Andrew Ng [launched his
+
+<div style="border:3px; border-style:solid; border-color:#828282; padding: 1em; margin: 1em;">
+<b>Contents</b><br>
+<ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#methods-review">Methods Review</a></li>
+        <ul>
+            <li>
+                <details>
+                <summary><a href="#q1">Large unlabeled data, absence of an expert</a></summary>
+                <ul>
+                    <li>Transfer learning</li>
+                    <li>Multi-task learning</li>
+                    <li>Semi-supervised learning</li>
+                    <li>Crowdsourced labelling</li>
+                </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                <summary><a href="#q2">Large unlabeled data, presence of an expert</a></summary>
+                <ul>
+                    <li>Data assimilation</li>
+                    <li>Active learning</li>
+                    <li>Weak supervision</li>
+                </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                <summary><a href="#q3">Large labeled data, presence of an expert</a></summary>
+                <ul>
+                    <li>Brute-force labelling</li>
+                    <li>Data augmentation</li>
+                    <li>Expert systems</li>
+                </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                <summary><a href="#q4">Large labeled data, absence of an expert</a></summary>
+                <ul>
+                    <li>Confidence learning</li>
+                    <li>Supervised learning</li>
+                    <li>Generative models</li>
+                </ul>
+                </details>
+            </li>
+        </ul>
+    <li>Synthesis</li>
+    <li>Conclusion</li>
+</ul>
+</div>
+
+<a id="introduction"></a><span class="firstcharacter">A</span> few months ago, Andrew Ng [launched his
 campaign](https://www.youtube.com/watch?v=06-AZXmwHjo) for a more data-centric
 approach to machine learning. This meant having to move away from fiddling models
 into ensuring quality data across all. In line with this, he also started
@@ -80,7 +134,7 @@ susceptible to concept drift, and is only good on what it was built for
 
 *So what is the general strategy for data-centric machine learning?*
 
-## <a id="optimizing"></a> Optimizing on what you have
+### <a id="optimizing"></a> Optimizing on what you have
 
 Almost all data work, prior to modelling, revolves around two elements: (1) the
 domain-expert and (2) their data[set]. It is possible that one exists without the
@@ -139,17 +193,39 @@ We'll go through each quadrant in the figure above. We'll first start with the
 upper-left corner, then go clockwise. This section will go over representative
 techniques that fall under each zone.[^4] 
 
-### Large unlabeled data, absence of an expert
+### <a id="q1"></a> Large unlabeled data, absence of an expert
 
-This scenario may look hopeless at first, but there already exist a number of
+This scenario may look daunting at first, but there already exist a number of
 techniques to get past this barrier. First, we'll look into three model-based
 approaches&mdash; transfer learning, multi-task learning, and semi-supervised
-learning&mdash; that relaxes the dependency on labeled data. Then, we'll
-explore various tools on crowd-sourced labelling to increase our labeled
-dataset.
+learning&mdash; that **relax the dependency on labeled data by taking advantage
+of existing or solved tasks.** Then, we'll explore various tools on
+crowd-sourced labelling to **increase our labeled dataset.**
+
+<!--
+Most approaches listed here take advantage of existing or solved tasks. Transfer
+learning applies the latent knowledge gained from another data distribution to
+another, multi-task learning makes use of signals from a related task, and
+semi-supervised learning combines both supervised and unsupervised approaches to
+solve the problem. 
+-->
 
 
 #### Transfer learning
+
+<!-- main definition of transfer learning -->
+
+<!-- mathematical definition -->
+
+<!-- 
+some subgroups and inconsistencies in terms of naming.  
+turns out, transfer learning can also be thought of as domain adaptation
+-->
+
+<!-- 
+common applications
+-->
+
 
 
 #### Multi-task learning
@@ -162,13 +238,13 @@ dataset.
 
 
 
-### Large unlabeled data, presence of an expert
+### <a id="q2"></a> Large unlabeled data, presence of an expert
 
 
-### Small unlabeled data, presence of an expert
+### <a id="q3"></a> Small unlabeled data, presence of an expert
 
 
-### Small unlabeled data, absence of an expert
+### <a id="q4"></a> Small unlabeled data, absence of an expert
 
 
 
