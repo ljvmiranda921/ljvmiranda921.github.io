@@ -31,22 +31,22 @@ excerpt: |
 <ul>
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#methods-review">Methods Review</a></li>
-        <ul>
+        <ul style="list-style-type: none">
             <li>
                 <details>
                 <summary><a href="#q1">Large unlabeled data, absence of an expert</a></summary>
-                <ul>
-                    <li>Transfer learning</li>
-                    <li>Multi-task learning</li>
-                    <li>Semi-supervised learning</li>
-                    <li>Crowdsourced labelling</li>
+                <ul style="list-style-type: circle">
+                    <li><a href="#transfer-learning">Transfer learning</a></li>
+                    <li><a href="#multi-task-learning">Multi-task learning</a></li>
+                    <li><a href="#semi-supervised-learning">Semi-supervised learning</a></li>
+                    <li><a href="#crowdsourced-labelling">Crowdsourced labelling</a></li>
                 </ul>
                 </details>
             </li>
             <li>
                 <details>
                 <summary><a href="#q2">Large unlabeled data, presence of an expert</a></summary>
-                <ul>
+                <ul style="list-style-type: circle">
                     <li>Data assimilation</li>
                     <li>Active learning</li>
                     <li>Weak supervision</li>
@@ -56,7 +56,7 @@ excerpt: |
             <li>
                 <details>
                 <summary><a href="#q3">Large labeled data, presence of an expert</a></summary>
-                <ul>
+                <ul style="list-style-type: circle">
                     <li>Brute-force labelling</li>
                     <li>Data augmentation</li>
                     <li>Expert systems</li>
@@ -66,7 +66,7 @@ excerpt: |
             <li>
                 <details>
                 <summary><a href="#q4">Large labeled data, absence of an expert</a></summary>
-                <ul>
+                <ul style="list-style-type: circle">
                     <li>Confidence learning</li>
                     <li>Supervised learning</li>
                     <li>Generative models</li>
@@ -234,7 +234,7 @@ common applications
 #### Semi-supervised learning
 
 
-#### Crowd-sourced labelling tools
+#### Crowdsourced labelling
 
 
 
