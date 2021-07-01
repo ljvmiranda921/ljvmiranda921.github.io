@@ -26,54 +26,44 @@ excerpt: |
 > this paradigm.
 
 
-<div style="border:3px; border-style:solid; border-color:#828282; padding: 1em; margin: 1em;">
+<div style="border:3px; border-style:solid; border-color:#828282; padding: 1em; margin: 2em;">
 <b>Contents</b><br>
 <ul>
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#methods-review">Methods Review</a></li>
-        <ul style="list-style-type: none">
-            <li>
-                <details>
-                <summary><a href="#q1">Large unlabeled data, absence of an expert</a></summary>
-                <ul style="list-style-type: circle">
-                    <li><a href="#transfer-learning">Transfer learning</a></li>
-                    <li><a href="#multi-task-learning">Multi-task learning</a></li>
-                    <li><a href="#semi-supervised-learning">Semi-supervised learning</a></li>
-                    <li><a href="#crowdsourced-labelling">Crowdsourced labelling</a></li>
-                </ul>
-                </details>
-            </li>
-            <li>
-                <details>
-                <summary><a href="#q2">Large unlabeled data, presence of an expert</a></summary>
-                <ul style="list-style-type: circle">
-                    <li>Data assimilation</li>
-                    <li>Active learning</li>
-                    <li>Weak supervision</li>
-                </ul>
-                </details>
-            </li>
-            <li>
-                <details>
-                <summary><a href="#q3">Large labeled data, presence of an expert</a></summary>
-                <ul style="list-style-type: circle">
-                    <li>Brute-force labelling</li>
-                    <li>Data augmentation</li>
-                    <li>Expert systems</li>
-                </ul>
-                </details>
-            </li>
-            <li>
-                <details>
-                <summary><a href="#q4">Large labeled data, absence of an expert</a></summary>
-                <ul style="list-style-type: circle">
-                    <li>Confidence learning</li>
-                    <li>Supervised learning</li>
-                    <li>Generative models</li>
-                </ul>
-                </details>
-            </li>
+        <details>
+        <summary><a href="#q1">Large unlabeled data, absence of an expert</a></summary>
+        <ul style="list-style-type: circle">
+            <li><a href="#transfer-learning">Transfer learning</a></li>
+            <li><a href="#multi-task-learning">Multi-task learning</a></li>
+            <li><a href="#semi-supervised-learning">Semi-supervised learning</a></li>
+            <li><a href="#crowdsourced-labelling">Crowdsourced labelling</a></li>
         </ul>
+        </details>
+        <details>
+        <summary><a href="#q2">Large unlabeled data, presence of an expert</a></summary>
+        <ul style="list-style-type: circle">
+            <li>Data assimilation</li>
+            <li>Active learning</li>
+            <li>Weak supervision</li>
+        </ul>
+        </details>
+        <details>
+        <summary><a href="#q3">Large labeled data, presence of an expert</a></summary>
+        <ul style="list-style-type: circle">
+            <li>Brute-force labelling</li>
+            <li>Data augmentation</li>
+            <li>Expert systems</li>
+        </ul>
+        </details>
+        <details>
+        <summary><a href="#q4">Large labeled data, absence of an expert</a></summary>
+        <ul style="list-style-type: circle">
+            <li>Confidence learning</li>
+            <li>Supervised learning</li>
+            <li>Generative models</li>
+        </ul>
+        </details>
     <li>Synthesis</li>
     <li>Conclusion</li>
 </ul>
@@ -154,11 +144,11 @@ i.e., it's *labeled.* This means that meaningful information is attached to a
 given set of attributes. It then becomes straightforward to feed it into a
 machine learning model:
 
-For a set of $$N$$ examples $$\{(x_1, y_1), \dots (x_N,
-y_N)\}$$ where $$x_i$$ is a feature vector and $$y_i$$ is its label, we can
-learn a function $$g: X \rightarrow Y$$ such that $$g$$ returns the $$y$$ value
-giving the highest score $$g(x) = argmax_y f(x,y)$$ (where $$f$$ is a scoring
-function).
+> For a set of $$N$$ examples $$\{(x_1, y_1), \dots (x_N,
+> y_N)\}$$ where $$x_i$$ is a feature vector and $$y_i$$ is its label, we can
+> learn a function $$g: X \rightarrow Y$$ such that $$g$$ returns the $$y$$ value
+> giving the highest score $$g(x) = argmax_y f(x,y)$$ (where $$f$$ is a scoring
+> function).
 
 In an ideal state, you have plenty of domain experts and labeled data. But in
 reality, there are some challenges that organizations face when they lack one or
@@ -191,7 +181,9 @@ conference, to tools used in an organization.
 
 We'll go through each quadrant in the figure above. We'll first start with the
 upper-left corner, then go clockwise. This section will go over representative
-techniques that fall under each zone.[^4] 
+techniques that fall under each zone.[^4] For each technique, I will provide a
+short description, a mathematical definition (if relevant), and sample
+applications.
 
 ### <a id="q1"></a> Large unlabeled data, absence of an expert
 
@@ -214,13 +206,38 @@ solve the problem.
 #### Transfer learning
 
 <!-- main definition of transfer learning -->
+Transfer learning involves the transfer of knowledge across domains or tasks.
+It challenges the common assumption that both training and test data should
+always be drawn from the same feature space and distribution. It is possible to
+transfer ([Pan and Yang, 2010](#pan2009survey)):
+* *Instances*: reuse labeled data from a source domain into the target domain. 
+* *Features as representations*: obtain a feature representation that minimizes
+    the difference between source and target domains and the model error.
+* *Model parameters*: get shared parameters or priors between source and target
+    models. 
+* *Relational knowledge*: create a mapping of relational knowledge between
+    source and target. 
+
+<!-- maybe we can add some excalidraw figures ? -->
+
+Transfer learning is often an umbrella term, encompassing different techniques
+based on the availability of labels in the source and target domains. In this
+review, we specifically mean "transductive transfer learning," where the source
+domain labels are available but the target domain labels are not ([Pan and
+Yang, 2010](#pan2009survey), [Weiss et al, 2016](#weiss2016survey), and [Zhuang
+et al, 2020](#zhuang2020survey)).[^5] We can then define this approach as:
+
+> Given a source domain $$\mathcal{D}_{S}$$ and learning task
+> $$\mathcal{T}_{S}$$, a target domain $$\mathcal{D}_{T}$$ and a learning task
+> $$T_{T}$$, *transfer learning* aims to help improve the learning of the
+> target predictive function $$f_{T}(\cdot)$$ in $$\mathcal{D}_{T}$$ using the
+> knowledge in $$\mathcal{D}_S$$ and $$\mathcal{T}_{S}$$, where
+> $$\mathcal{D}_{S} \neq \mathcal{D}_{T}$$ or $$\mathcal{T}_{S} \neq
+> \mathcal{T}_{T}$$ ([Pan and Yang, 2010](#pan2009survey))
+ 
 
 <!-- mathematical definition -->
 
-<!-- 
-some subgroups and inconsistencies in terms of naming.  
-turns out, transfer learning can also be thought of as domain adaptation
--->
 
 <!-- 
 common applications
@@ -256,10 +273,13 @@ common applications
 * <a id="gennatas2020expert">Gennatas, E.D., Friedman, J.H., Ungar, L.H., Pirracchio, R., Eaton, E., Reichmann, L.G., Interian, Y., Luna, J.M., Simone, C.B., Auerbach, A. and Delgado, E.,</a> 2020. Expert-augmented machine learning. Proceedings of the National Academy of Sciences, 117(9), pp.4571-4577.
 * <a id="henderson2019deeprl">Henderson, P., Islam, R., Bachman, P., Pineau, J., Precup, D. and Meger, D.,</a> 2018, April. Deep reinforcement learning that matters. In *Proceedings of the AAAI Conference on Artificial Intelligence* (Vol. 32, No. 1).
 * <a id="lipton2019trends">Lipton, Z.C. and Steinhardt, J.,</a> 2019. Research for practice: troubling trends in machine-learning scholarship. *Communications of the ACM*, 62(6), pp.45-53.
+* <a id="pan2009survey">Pan, S.J. and Yang, Q.</a>, 2009. A survey on transfer learning. *IEEE Transactions on knowledge and data engineering*, 22(10), pp.1345-1359.
 * <a id="sambasivan2021data">Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P. and Aroyo, L.M.,</a> 2021, May. “Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI. In *proceedings of the 2021 CHI Conference on Human Factors in Computing Systems* (pp. 1-15).
 * <a id="sculley2015debt">Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J.F. and Dennison, D.,</a> 2015. Hidden technical debt in machine learning systems. *Advances in neural information processing systems*, 28, pp.2503-2511.
 * <a id="tsymbal2004drift">Tsymbal, A.,</a> 2004. The problem of concept drift: definitions and related work. *Computer Science Department, Trinity College Dublin*, 106(2), p.58.
 * <a id="vaswani2017attention">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L. and Polosukhin, I.,</a> 2017. Attention is all you need. *arXiv preprint arXiv:1706.03762*.
+* <a id="weiss2016survey">Weiss, K., Khoshgoftaar, T.M. and Wang, D.</a>, 2016. A survey of transfer learning. *Journal of Big data*, 3(1), pp.1-40.
+* <a id="zhuang2020survey">Zhuang, F., Qi, Z., Duan, K., Xi, D., Zhu, Y., Zhu, H., Xiong, H. and He, Q.</a>, 2020. A comprehensive survey on transfer learning. *Proceedings of the IEEE*, 109(1), pp.43-76.
 * <a id="zliobaite2010drift">Žliobaitė, I.,</a> 2010. Learning under concept drift: an overview. *arXiv preprint arXiv:1010.4784*.
 
 ## Footnotes
@@ -268,3 +288,4 @@ common applications
 [^2]: Examples of labelling tools: [Prodigy](https://prodi.gy/), [Snorkel](https://snorkel.ai/), [Label Studio](https://labelstud.io/). Examples of data-versioning and tracking (lineage) tools: [MLFlow](https://mlflow.org/), [DVC](https://dvc.org/), [Pachyderm](https://www.pachyderm.com/). 
 [^3]: That's why I still think that ML practitioners who came from a non-ML field (psychologists, sociologists, economists, etc.) are at an advantage: they have an intimate knowledge of the field, and see ML as a tool.
 [^4]: At first, I was tempted to put an overarching label or tagline on each group. However, I realized that it may be more confusing because some approaches don't have an explicit relationship to one another.
+[^5]: Different authors suggest different scopes for transfer learning. Some even argue that unsupervised learning can be a form of transfer learning. It is confusing across literature. For a more timely categorization, I refer you to [Zhuang et al., 2020](#zhuang2020survey).
