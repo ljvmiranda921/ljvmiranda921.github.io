@@ -67,6 +67,9 @@ excerpt: |
     <li>Synthesis</li>
     <li>Conclusion</li>
 </ul>
+<i>Note: This is going to be a long article that is not intended to be read in one
+sitting. I highly recommend using the table of contents above to aid you in
+navigating the page. Enjoy!</i>
 </div>
 
 <a id="introduction"></a><span class="firstcharacter">A</span> few months ago, Andrew Ng [launched his
@@ -208,8 +211,8 @@ solve the problem.
 <!-- main definition of transfer learning -->
 Transfer learning involves the transfer of knowledge across domains or tasks.
 It challenges the common assumption that both training and test data should
-always be drawn from the same feature space and distribution. It is possible to
-transfer ([Pan and Yang, 2010](#pan2009survey)):
+always be drawn from the same feature space and distribution. According to [Pan
+and Yang (2009)](#pan2009survey), it is possible to transfer:
 * *Instances*: reuse labeled data from a source domain into the target domain. 
 * *Features as representations*: obtain a feature representation that minimizes
     the difference between source and target domains and the model error.
@@ -224,7 +227,8 @@ Transfer learning is often an umbrella term, encompassing different techniques
 based on the availability of labels in the source and target domains. In this
 review, we specifically mean "transductive transfer learning," where the source
 domain labels are available but the target domain labels are not ([Pan and
-Yang, 2010](#pan2009survey), [Weiss et al, 2016](#weiss2016survey), and [Zhuang
+Yang, 2009](#pan2009survey), [Weiss et al, 2016](#weiss2016survey), [Tan and
+San, 2018](#tan2018survey) and [Zhuang
 et al, 2020](#zhuang2020survey)).[^5] We can then define this approach as:
 
 > Given a source domain $$\mathcal{D}_{S}$$ and learning task
@@ -233,15 +237,12 @@ et al, 2020](#zhuang2020survey)).[^5] We can then define this approach as:
 > target predictive function $$f_{T}(\cdot)$$ in $$\mathcal{D}_{T}$$ using the
 > knowledge in $$\mathcal{D}_S$$ and $$\mathcal{T}_{S}$$, where
 > $$\mathcal{D}_{S} \neq \mathcal{D}_{T}$$ or $$\mathcal{T}_{S} \neq
-> \mathcal{T}_{T}$$ ([Pan and Yang, 2010](#pan2009survey))
+> \mathcal{T}_{T}$$ ([Pan and Yang, 2009](#pan2009survey))
  
 
-<!-- mathematical definition -->
-
-
-<!-- 
-common applications
--->
+One of the most common applications of transfer learning is to take a
+pretrained model from a source domain, and finetune it on the instances of a
+target domain. In computer vision, 
 
 
 
@@ -263,6 +264,13 @@ common applications
 
 ### <a id="q4"></a> Small unlabeled data, absence of an expert
 
+## Synthesis
+
+## Conclusion
+
+
+## Postscript
+
 
 
 ## References
@@ -276,6 +284,7 @@ common applications
 * <a id="pan2009survey">Pan, S.J. and Yang, Q.</a>, 2009. A survey on transfer learning. *IEEE Transactions on knowledge and data engineering*, 22(10), pp.1345-1359.
 * <a id="sambasivan2021data">Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P. and Aroyo, L.M.,</a> 2021, May. “Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI. In *proceedings of the 2021 CHI Conference on Human Factors in Computing Systems* (pp. 1-15).
 * <a id="sculley2015debt">Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J.F. and Dennison, D.,</a> 2015. Hidden technical debt in machine learning systems. *Advances in neural information processing systems*, 28, pp.2503-2511.
+* <a id="tan2018survey">Tan, C., Sun, F., Kong, T., Zhang, W., Yang, C. and Liu, C.</a>, 2018, October. A survey on deep transfer learning. In *International conference on artificial neural networks* (pp. 270-279). Springer, Cham.
 * <a id="tsymbal2004drift">Tsymbal, A.,</a> 2004. The problem of concept drift: definitions and related work. *Computer Science Department, Trinity College Dublin*, 106(2), p.58.
 * <a id="vaswani2017attention">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L. and Polosukhin, I.,</a> 2017. Attention is all you need. *arXiv preprint arXiv:1706.03762*.
 * <a id="weiss2016survey">Weiss, K., Khoshgoftaar, T.M. and Wang, D.</a>, 2016. A survey of transfer learning. *Journal of Big data*, 3(1), pp.1-40.
