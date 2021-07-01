@@ -67,7 +67,7 @@ excerpt: |
     <li>Synthesis</li>
     <li>Conclusion</li>
 </ul>
-<i>Note: This is going to be a long article that is not intended to be read in one
+<i>Note: This is a long article unintended to be read in one
 sitting. I highly recommend using the table of contents above to aid you in
 navigating the page. Enjoy!</i>
 </div>
@@ -242,7 +242,30 @@ et al, 2020](#zhuang2020survey)).[^5] We can then define this approach as:
 
 One of the most common applications of transfer learning is to take a
 pretrained model from a source domain, and finetune it on the instances of a
-target domain. In computer vision, 
+target domain. In computer vision, it is common to use an architecture like
+AlexNet, pretrain it on ImageNet, and replace the last fully connected layers
+with new ones from the target domain. The modified architecture is then
+finetuned with target domain labels, and is reported to perform better in
+classification tasks. 
+
+<!-- excalidraw drawing -->
+
+On the other hand, it is also possible to just use latent features from SOTA
+architectures (usually pretrained on ImageNet) and train a new model based on
+them. According to [Ruder (2017)](#ruder2017survey), the ImageNet task has been
+a good proxy for most computer vision problems, as we've witnessed it excel in
+related tasks by just transferring the same knowledge.
+
+We've also seen similar approaches in natural language processing (NLP). 
+For example, domain adaptation techniques have been widespread in the
+transformer family of models, allowing us to reuse them in different kinds of
+task. Furthermore, this approach is being democratized more and more by
+Huggingface, allowing finetuning through a Python API. 
+
+Lastly, it is possible to use the pretrained model *as-is* for the task at
+hand. It then becomes a good baseline model for comparison before finetuning to
+the target domain task.
+
 
 
 
@@ -282,6 +305,7 @@ target domain. In computer vision,
 * <a id="henderson2019deeprl">Henderson, P., Islam, R., Bachman, P., Pineau, J., Precup, D. and Meger, D.,</a> 2018, April. Deep reinforcement learning that matters. In *Proceedings of the AAAI Conference on Artificial Intelligence* (Vol. 32, No. 1).
 * <a id="lipton2019trends">Lipton, Z.C. and Steinhardt, J.,</a> 2019. Research for practice: troubling trends in machine-learning scholarship. *Communications of the ACM*, 62(6), pp.45-53.
 * <a id="pan2009survey">Pan, S.J. and Yang, Q.</a>, 2009. A survey on transfer learning. *IEEE Transactions on knowledge and data engineering*, 22(10), pp.1345-1359.
+* <a id="ruder2017survey">Ruder, S., Aylien</a>. Transfer Learning: Machine Learning’s Next Frontier [online]. 2017 [cit. 2017-07-04]. Available: [https://ruder.io/transfer-learning/index.html](https://ruder.io/transfer-learning/index.html)
 * <a id="sambasivan2021data">Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P. and Aroyo, L.M.,</a> 2021, May. “Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI. In *proceedings of the 2021 CHI Conference on Human Factors in Computing Systems* (pp. 1-15).
 * <a id="sculley2015debt">Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J.F. and Dennison, D.,</a> 2015. Hidden technical debt in machine learning systems. *Advances in neural information processing systems*, 28, pp.2503-2511.
 * <a id="tan2018survey">Tan, C., Sun, F., Kong, T., Zhang, W., Yang, C. and Liu, C.</a>, 2018, October. A survey on deep transfer learning. In *International conference on artificial neural networks* (pp. 270-279). Springer, Cham.
