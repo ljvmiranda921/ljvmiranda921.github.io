@@ -57,7 +57,7 @@ development using [Pico-8](https://www.lexaloffle.com/pico-8.php) and
 
 <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
 <b>I am currently unreachable</b><br>
-You can still send me an email via ljvmiranda [at] gmail [dot] com, but don't expect a quick reply. I don't foresee anything urgent for the next few months.</p>
+You can still send me an email via ljvmiranda [at] gmail [dot] com, but don't expect a quick reply. I don't foresee anything urgent in the coming months.</p>
 
 ## Contact
 
