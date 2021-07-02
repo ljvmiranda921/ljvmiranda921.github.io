@@ -221,15 +221,16 @@ and Yang (2009)](#pan2009survey), it is possible to transfer:
 * *Relational knowledge*: create a mapping of relational knowledge between
     source and target. 
 
-<!-- maybe we can add some excalidraw figures ? -->
-
 Transfer learning is often an umbrella term, encompassing different techniques
 based on the availability of labels in the source and target domains. In this
 review, we specifically mean "transductive transfer learning," where the source
-domain labels are available but the target domain labels are not ([Pan and
-Yang, 2009](#pan2009survey), [Weiss et al, 2016](#weiss2016survey), [Tan and
-San, 2018](#tan2018survey) and [Zhuang
-et al, 2020](#zhuang2020survey)).[^5] We can then define this approach as:
+and target tasks are the same (e.g. image classification), but the source and
+target domains are different (e.g., ImageNet and X-ray dataset has different
+marginal probabilities). This is usually the case when domain labels are
+available but the target domain labels are not ([Pan and Yang,
+2009](#pan2009survey), [Weiss et al, 2016](#weiss2016survey), [Tan and San,
+2018](#tan2018survey) and [Zhuang et al, 2020](#zhuang2020survey)).[^5] We can
+then define this approach as:
 
 > Given a source domain $$\mathcal{D}_{S}$$ and learning task
 > $$\mathcal{T}_{S}$$, a target domain $$\mathcal{D}_{T}$$ and a learning task
@@ -237,17 +238,22 @@ et al, 2020](#zhuang2020survey)).[^5] We can then define this approach as:
 > target predictive function $$f_{T}(\cdot)$$ in $$\mathcal{D}_{T}$$ using the
 > knowledge in $$\mathcal{D}_S$$ and $$\mathcal{T}_{S}$$, where
 > $$\mathcal{D}_{S} \neq \mathcal{D}_{T}$$ or $$\mathcal{T}_{S} \neq
-> \mathcal{T}_{T}$$ ([Pan and Yang, 2009](#pan2009survey))
+> \mathcal{T}_{T}$$ 
+>  
+> *Transductive transfer learning* is a case where $$\mathcal{D}_{S} \neq \mathcal{D}_{T}$$ and $$\mathcal{T}_{S} = \mathcal{T}_{T}$$ ([Pan and Yang, 2009](#pan2009survey)).
+
+![](/assets/png/data-centric/transfer_learning_setup.png){:width="720px"}  
+<br />
+**Figure:** A common transfer learning setup
+{: style="text-align: center;"}
  
 One of the most common applications of transfer learning is to take a
 pretrained model from a source domain, and finetune it on the instances of a
 target domain. In computer vision, it is common to use an architecture like
-AlexNet, pretrain it on ImageNet, and replace the last fully connected layers
+AlexNet ([Krizhevsky et al, 2012](#krizhevsky2012alexnet)), pretrain it on ImageNet ([Deng et al, 2009](#deng2009imagenet)), and replace the last fully connected layers
 with new ones from the target domain. The modified architecture is then
-finetuned with target domain labels, and is reported to perform better in
-classification tasks. 
-
-<!-- excalidraw drawing -->
+finetuned on target domain labels, and is reported to perform better in
+classification tasks ([Masqood et al, 2019](#masqood2019alzheimer), [Shin et al, 2016](#shin2016computer) and [Byra et al, 2019](#byra2019knee) ). 
 
 On the other hand, it is also possible to just use latent features from SOTA
 architectures (usually pretrained on ImageNet) and train a new model based on
@@ -295,15 +301,20 @@ the target domain task.
 ## References
 
 * <a id="bell2021pysch">Bell, S.J. and Kampman, O.P.,</a> 2021. Perspectives on Machine Learning from Psychology's Reproducibility Crisis. *arXiv preprint arXiv:2104.08878*.
-* <a id="sculley2019winner">Sculley, D., Snoek, J., Wiltschko, A. and Rahimi, A.,</a> 2018. Winner's curse? On pace, progress, and empirical rigor.
+* <a id="byra2019knee">Byra, M., Wu, M., Zhang, X., Jang, H., Ma, Y.J., Chang, E.Y., Shah, S. and Du, J.</a>, 2020. Knee menisci segmentation and relaxometry of 3D ultrashort echo time cones MR imaging using attention U‐Net with transfer learning. *Magnetic resonance in medicine*, 83(3), pp.1109-1122.
 * <a id="brown2020gpt3">Brown, T.B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A. and Agarwal, S.,</a> 2020. Language models are few-shot learners. *arXiv preprint arXiv:2005.14165*.
+* <a id="deng2009imagenet">Deng, J., Dong, W., Socher, R., Li, L.J., Li, K. and Fei-Fei, L.</a>, 2009, June. Imagenet: A large-scale hierarchical image database. In 2009 IEEE conference on computer vision and pattern recognition (pp. 248-255). Ieee.
 * <a id="gennatas2020expert">Gennatas, E.D., Friedman, J.H., Ungar, L.H., Pirracchio, R., Eaton, E., Reichmann, L.G., Interian, Y., Luna, J.M., Simone, C.B., Auerbach, A. and Delgado, E.,</a> 2020. Expert-augmented machine learning. Proceedings of the National Academy of Sciences, 117(9), pp.4571-4577.
 * <a id="henderson2019deeprl">Henderson, P., Islam, R., Bachman, P., Pineau, J., Precup, D. and Meger, D.,</a> 2018, April. Deep reinforcement learning that matters. In *Proceedings of the AAAI Conference on Artificial Intelligence* (Vol. 32, No. 1).
+* <a id="krizhevsky2012alexnet">Krizhevsky, A., Sutskever, I. and Hinton, G.E.</a>, 2012. Imagenet classification with deep convolutional neural networks. *Advances in neural information processing systems*, 25, pp.1097-1105.
 * <a id="lipton2019trends">Lipton, Z.C. and Steinhardt, J.,</a> 2019. Research for practice: troubling trends in machine-learning scholarship. *Communications of the ACM*, 62(6), pp.45-53.
+* <a id="masqood2019alzheimer">Maqsood, M., Nazir, F., Khan, U., Aadil, F., Jamal, H., Mehmood, I. and Song, O.Y.</a>, 2019. Transfer learning assisted classification and detection of Alzheimer’s disease stages using 3D MRI scans. *Sensors*, 19(11), p.2645.
 * <a id="pan2009survey">Pan, S.J. and Yang, Q.</a>, 2009. A survey on transfer learning. *IEEE Transactions on knowledge and data engineering*, 22(10), pp.1345-1359.
 * <a id="ruder2017survey">Ruder, S., Aylien</a>. Transfer Learning: Machine Learning’s Next Frontier [online]. 2017 [cit. 2017-07-04]. Available: [https://ruder.io/transfer-learning/index.html](https://ruder.io/transfer-learning/index.html)
 * <a id="sambasivan2021data">Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P. and Aroyo, L.M.,</a> 2021, May. “Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI. In *proceedings of the 2021 CHI Conference on Human Factors in Computing Systems* (pp. 1-15).
 * <a id="sculley2015debt">Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J.F. and Dennison, D.,</a> 2015. Hidden technical debt in machine learning systems. *Advances in neural information processing systems*, 28, pp.2503-2511.
+* <a id="sculley2019winner">Sculley, D., Snoek, J., Wiltschko, A. and Rahimi, A.,</a> 2018. Winner's curse? On pace, progress, and empirical rigor.
+* <a id="shin2016computer">Shin, H.C., Roth, H.R., Gao, M., Lu, L., Xu, Z., Nogues, I., Yao, J., Mollura, D. and Summers, R.M.</a>, 2016. Deep convolutional neural networks for computer-aided detection: CNN architectures, dataset characteristics and transfer learning. *IEEE transactions on medical imaging*, 35(5), pp.1285-1298.
 * <a id="tan2018survey">Tan, C., Sun, F., Kong, T., Zhang, W., Yang, C. and Liu, C.</a>, 2018, October. A survey on deep transfer learning. In *International conference on artificial neural networks* (pp. 270-279). Springer, Cham.
 * <a id="tsymbal2004drift">Tsymbal, A.,</a> 2004. The problem of concept drift: definitions and related work. *Computer Science Department, Trinity College Dublin*, 106(2), p.58.
 * <a id="vaswani2017attention">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L. and Polosukhin, I.,</a> 2017. Attention is all you need. *arXiv preprint arXiv:1706.03762*.
