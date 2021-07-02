@@ -100,7 +100,7 @@ a data-centric approach:**
     [spaCy](https://spacy.io/) democratized transformer models to the public
     ([Vaswani, 2017](#vaswani2017attention)). In the private space, OpenAI has
     [started offering access](https://openai.com/blog/openai-api/) to their
-    GPT-3 APIs ([Brown et al, 2020](brown2020gpt3)), while cloud platforms like
+    GPT-3 APIs ([Brown et al, 2020](#brown2020gpt3)), while cloud platforms like
     Google has made [AutoML available](https://cloud.google.com/automl).
     Model-wise, it has become easier to be successful by just switching models
     or using a paid API.
@@ -122,8 +122,8 @@ visualizations to drive important decisions. With the advent of [open
 data](https://en.wikipedia.org/wiki/Open_data), even just the act of storing
 and curating it is valuable enough. On the other hand, models are often
 susceptible to concept drift, and is only good on what it was built for
-([Tsymbal, 2004](tsymbal2004drift), [Žliobaitė, 2010](zliobaite2010drift), and
-[Sambasivan, 2021](sambasivan2021data)).
+([Tsymbal, 2004](#tsymbal2004drift), [Žliobaitė, 2010](#zliobaite2010drift), and
+[Sambasivan, 2021](#sambasivan2021data)).
 
 *So what is the general strategy for data-centric machine learning?*
 
@@ -138,7 +138,7 @@ then we can think of their relationship as *symbiotic*:
 {: style="text-align: center;"}
 
 Domain experts collect data, and in turn, data inform the expert ([Gennatas,
-2020](gennatas2020expert)). Both are enriched in the process: more data is
+2020](#gennatas2020expert)). Both are enriched in the process: more data is
 provided, while the domain expert expands their knowledge of the field[^3].
 This virtuous cycle generates insights and decisions for the organization. 
 
@@ -242,9 +242,10 @@ then define this approach as:
 >  
 > *Transductive transfer learning* is a case where $$\mathcal{D}_{S} \neq \mathcal{D}_{T}$$ and $$\mathcal{T}_{S} = \mathcal{T}_{T}$$ ([Pan and Yang, 2009](#pan2009survey)).
 
-![](/assets/png/data-centric/transfer_learning_setup.png){:width="720px"}  
+![](/assets/png/data-centric/transfer_learning_setup.png){:width="540px"}  
 <br />
-**Figure:** A common transfer learning setup
+**Figure:** A typical transfer learning setup. "Knowledge" can be in the form
+of learned weights, feature representations, or a feature map.
 {: style="text-align: center;"}
  
 One of the most common applications of transfer learning is to take a
