@@ -239,7 +239,6 @@ et al, 2020](#zhuang2020survey)).[^5] We can then define this approach as:
 > $$\mathcal{D}_{S} \neq \mathcal{D}_{T}$$ or $$\mathcal{T}_{S} \neq
 > \mathcal{T}_{T}$$ ([Pan and Yang, 2009](#pan2009survey))
  
-
 One of the most common applications of transfer learning is to take a
 pretrained model from a source domain, and finetune it on the instances of a
 target domain. In computer vision, it is common to use an architecture like
@@ -264,10 +263,7 @@ Huggingface, allowing finetuning through a Python API.
 
 Lastly, it is possible to use the pretrained model *as-is* for the task at
 hand. It then becomes a good baseline model for comparison before finetuning to
-the target domain task.
-
-
-
+the target domain task. 
 
 #### Multi-task learning
 
