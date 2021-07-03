@@ -268,8 +268,8 @@ the target domain task.
 
 #### Multi-task learning
 
-Multi-task learning involves the learning of two or more related tasks
-simultaneously ([Ruder, 2017c](#ruder2017mtl) and [Zhuang et al,
+**Multi-task learning involves the learning of two or more related tasks
+simultaneously** ([Ruder, 2017c](#ruder2017mtl) and [Zhuang et al,
 2020](#zhuang2020survey)). Its goal is to "improve generalization by leveraging
 domain-specific information found in the training signals of related tasks
 ([Caruana, 1997](#caruana1997mtl))." 
@@ -335,7 +335,8 @@ networks&mdash;*hard* and *soft* parameter sharing of hidden layers:
 ## Conclusion
 
 
-## Postscript
+
+
 
 
 
@@ -372,6 +373,30 @@ networks&mdash;*hard* and *soft* parameter sharing of hidden layers:
 * <a id="zhang2017mtlsurvey">Zhang, Y. and Yang, Q.</a>, 2017. A survey on multi-task learning. *arXiv preprint arXiv:1707.08114*.
 * <a id="zhuang2020survey">Zhuang, F., Qi, Z., Duan, K., Xi, D., Zhu, Y., Zhu, H., Xiong, H. and He, Q.</a>, 2020. A comprehensive survey on transfer learning. *Proceedings of the IEEE*, 109(1), pp.43-76.
 * <a id="zliobaite2010drift">Žliobaitė, I.,</a> 2010. Learning under concept drift: an overview. *arXiv preprint arXiv:1010.4784*.
+
+
+## Postscript
+
+*Phew!* This is probably the longest blogpost I've written (if you can even
+call it that). At first, I was inspired by the blogs of [Lilian
+Weng](https://lilianweng.github.io/lil-log/) and [Sebastian
+Ruder](https://ruder.io/), that I wanted to write a literature review of my
+own. I may have overdone it, as it spans a huge breadth of techniques under a
+large umbrella. Nevertheless, I'm happy with what I've written, and what you
+see here is a big compilation of my study notes in this space.
+
+As for the topic, data-centric machine learning and the techniques involved in
+it piqued my curiosity. Insufficient samples, clerical errors, and unreliable
+sources are just a few among many challenges seen in industrial machine learning.
+Inasmuch as I wanted to approach it with tools and platforms that exist today, I
+am also excited to endow an academic approach to it, hence the tone.
+
+Researching this took me two full months, mostly working on evenings and
+weekends. However, I had some practice writing *very* long-form content, as you
+may have seen in "Navigating the MLOps Landscape" and "How to use Jupyter
+Notebooks." I'd probably do this again in the future, but I'll definitely lower
+my scope.
+
 
 ## Footnotes
 
