@@ -97,13 +97,13 @@ a data-centric approach:**
 * **Deep learning models are being democratized**: hyperoptimizing models
     become less necessary due to the SOTA being more accessible. In NLP, the
     open-source community led by [Huggingface](https://huggingface.co/) and
-    [spaCy](https://spacy.io/) democratized transformer models to the public
-    ([Vaswani, 2017](#vaswani2017attention)). In the private space, OpenAI has
-    [started offering access](https://openai.com/blog/openai-api/) to their
-    GPT-3 APIs ([Brown et al, 2020](#brown2020gpt3)), while cloud platforms like
-    Google has made [AutoML available](https://cloud.google.com/automl).
-    Model-wise, it has become easier to be successful by just switching models
-    or using a paid API.
+    [spaCy](https://spacy.io/) democratized transformer ([Vaswani,
+    2017](#vaswani2017attention)) models to the public. In the private space,
+    OpenAI has [started offering access](https://openai.com/blog/openai-api/)
+    to their GPT-3 ([Brown et al, 2020](#brown2020gpt3)) APIs, while cloud
+    platforms like Google has made [AutoML
+    available](https://cloud.google.com/automl).  Model-wise, it has become
+    easier to be successful by just switching models or using a paid API.
 
 * **ML is catching-up on software engineering practices**: for the past year,
     we've seen the [boom of software
@@ -197,6 +197,9 @@ learning&mdash; that **relax the dependency on labeled data by taking advantage
 of existing or solved tasks.** Then, we'll explore various tools on
 crowd-sourced labelling to **increase our labeled dataset.**
 
+![](/assets/png/data-centric/q1.png){:width="520px"}
+{: style="text-align: center;"}
+
 #### Transfer learning
 
 **Transfer learning involves the transfer of knowledge across domains or
@@ -256,7 +259,7 @@ a good proxy for most computer vision problems, as we've witnessed it excel in
 related tasks by just transferring the same knowledge.
 
 We've also seen similar approaches in natural language processing (NLP)
-([Ruder, 2019b](#ruder2019survey)).  For example, domain adaptation and
+([Ruder, 2019a](#ruder2019survey)).  For example, domain adaptation and
 sequential transfer learning techniques have been widespread in the transformer
 family of models, allowing us to reuse them in different kinds of task.
 Furthermore, this approach is being democratized more and more by Huggingface,
@@ -269,26 +272,27 @@ the target domain task.
 #### Multi-task learning
 
 **Multi-task learning involves the learning of two or more related tasks
-simultaneously** ([Ruder, 2017c](#ruder2017mtl) and [Zhuang et al,
+simultaneously** ([Ruder, 2017b](#ruder2017mtl) and [Zhuang et al,
 2020](#zhuang2020survey)). Its goal is to "improve generalization by leveraging
 domain-specific information found in the training signals of related tasks
 ([Caruana, 1997](#caruana1997mtl))." 
 
-According to [Ruder (2017c)](#ruder2017mtl), multi-task learning comes in many
-guises such as joint learning ([Yamada, et al, 2016](#yamada2016joint)),
+According to [Ruder (2017b)](#ruder2017mtl), multi-task learning comes in many
+forms. This include joint learning ([Yamada, et al, 2016](#yamada2016joint)),
 learning to learn ([Thrun and Pratt, 2012](#thrun2012learning)), and learning
-with auxiliary tasks. Moreover, if one is already optimizing more than one loss
+with auxiliary tasks. Even so, as long as one is already optimizing more than one loss
 function (or using an auxiliary task), then it is already considered multi-task
-learning. The taxonomy differs across literature: some consider multi-task
-learning as a branch of transfer learning ([Ruder, 2019d](#ruder2019thesis)),
+learning. 
+
+In addition, the taxonomy differs across literature: some consider multi-task
+learning as a branch of transfer learning ([Ruder, 2019b](#ruder2019thesis)),
 while others consider it a different but related approach altogether ([Zhuang
 et al, 2020](#zhuang2020survey) and [Zhang and Yang,
 2017](#zhang2017mtlsurvey)).
 
-<!-- excalidraw image: from zhuang and ruder re: taxonomy -->
-
-There are two major multi-task learning setups for deep neural
-networks&mdash;*hard* and *soft* parameter sharing of hidden layers:
+Given these differences, there are two major multi-task learning setups for
+deep neural networks: *hard* and *soft*. Both of which are based on how the
+parameters are shared across hidden layers:
 * *Hard parameter sharing:* the hidden layers are shared across tasks, with
  task-specific layers near the output. This approach reduces overfitting in
  the order of the number of tasks ([Baxter, 1997](#baxter1997mtl)).
@@ -296,7 +300,7 @@ networks&mdash;*hard* and *soft* parameter sharing of hidden layers:
     ![](/assets/png/data-centric/hard_parameter_sharing.png){:width="340px"}  
     <br />
     **Figure:** Hard parameter setup with shared hidden layers and separate
-    task-specific layers (redrawn from [Ruder (2017c)](#ruder2017mtl)).
+    task-specific layers (redrawn from [Ruder (2017b)](#ruder2017mtl)).
     {: style="text-align: center;"}
 
 * *Soft parameter sharing:* here, each task has its own distinct model. The parameters are constrained by a cost function, sometimes the $$l_2$$ distance ([Duong et al](#duong2015soft)) or the trace norm ([Yang and Hosepdales, 2017](#yang2016soft)).
@@ -304,16 +308,32 @@ networks&mdash;*hard* and *soft* parameter sharing of hidden layers:
     ![](/assets/png/data-centric/soft_parameter_sharing.png){:width="510px"}  
     <br />
     **Figure:** Soft parameter setup where parameters are constrained using a
-    cost function (redrawn from [Ruder (2017c)](#ruder2017mtl)).
+    cost function (redrawn from [Ruder (2017b)](#ruder2017mtl)).
     {: style="text-align: center;"}
 
+Multi-task learning works because it forces models to regularize and generalize
+better. According to [Ruder (2017b)](#ruder2017mtl) this is achieved by[^5]:
+* *Implicit data augmentation:* multi-task learning increases the sample size
+    during training. Because we're training on more than two tasks, the model
+    is forced to find a more general representation as compared to just
+    learning a single task.
+* *Attention focusing:* other tasks can provide additional evidence for a
+    feature's relevance especially if the task is noisy or the dataset is limited.
+* *Eavesdropping:* in some cases, a subset of features can be easier to learn
+    by some task more than others. Through multi-task learning, it is possible
+    to allow the sharing of information across tasks to ease difficulty.
+    [Abu-Mostafa (1990)](#abu1990hints) has done this by using *hints*.
+* *Representation bias:* multi-task learning encourages representations that
+    other tasks prefer. If 4 out of 5 tasks prefer a feature $$\mathcal{F}$$,
+    then it will be expressed more in the model. This feedback loop encourages
+    generalization, allowing it to perform well in newer tasks.
 
-<!-- excalidraw image: hard vs soft -->
-
-<!-- applications -->
-
-
-
+Lastly, [Zhang and Yang (2017)](#zhang2017mtlsurvey) compiled a list of
+multi-task learning applications across various domains, including
+bioinformatics, natural-language processing, and computer vision among many
+others.  It's a comprehensive list, where each application is organized not
+only by domain but also the specific approach (e.g., task-related learning,
+feature representation, etc.).
 
 #### Semi-supervised learning
 
@@ -342,6 +362,7 @@ networks&mdash;*hard* and *soft* parameter sharing of hidden layers:
 
 ## References
 
+* <a id="abu1990hints">Abu-Mostafa, Y.S.</a>, 1990. Learning from hints in neural networks. Journal of complexity, 6(2), pp.192-198.
 * <a id="baxter1997mtl">Baxter, J.</a>, 1997. A Bayesian/information theoretic model of learning to learn via multiple task sampling. *Machine learning*, 28(1), pp.7-39.
 * <a id="bell2021pysch">Bell, S.J. and Kampman, O.P.,</a> 2021. Perspectives on Machine Learning from Psychology's Reproducibility Crisis. *arXiv preprint arXiv:2104.08878*.
 * <a id="byra2019knee">Byra, M., Wu, M., Zhang, X., Jang, H., Ma, Y.J., Chang, E.Y., Shah, S. and Du, J.</a>, 2020. Knee menisci segmentation and relaxometry of 3D ultrashort echo time cones MR imaging using attention U‐Net with transfer learning. *Magnetic resonance in medicine*, 83(3), pp.1109-1122.
@@ -405,3 +426,4 @@ my scope.
 [^3]: That's why I still think that ML practitioners who came from a non-ML field (psychologists, sociologists, economists, etc.) are at an advantage: they have an intimate knowledge of the field, and see ML as a tool.
 [^4]: At first, I was tempted to put an overarching label or tagline on each group. However, I realized that it may be more confusing because some approaches don't have an explicit relationship to one another.
 [^5]: Different authors suggest different scopes for transfer learning. Some even argue that unsupervised learning can be a form of transfer learning. It is confusing across literature. For a more timely categorization, I refer you to [Zhuang et al., 2020](#zhuang2020survey).
+[^6]: I decided to drop the fifth reason, *regularization*, because I believe that it is the core of how multi-task learning works. All four reasons lead to regularization, and consequently, better model generalization.
