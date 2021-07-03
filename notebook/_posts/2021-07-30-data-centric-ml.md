@@ -169,7 +169,7 @@ the other:
     to extract value on the given dataset.
 
 We can plot the presence or absence of domain experts and labeled data
-in a **quadrant representing four (4) general directions for a data-centric
+in a quadrant representing **four (4) general directions for a data-centric
 approach.** Fortunately, the field has matured quite enough that we can
 describe tactical procedures for each direction as illustrated below: 
 
@@ -244,8 +244,8 @@ then define this approach as:
 
 ![](/assets/png/data-centric/transfer_learning_setup.png){:width="540px"}  
 <br />
-**Figure:** A typical transfer learning setup. "Knowledge" can be in the form
-of learned weights, feature representations, or a feature map.
+**Figure:** A typical transfer learning setup. *Knowledge* can be in the form
+of learned weights or feature representations among others.
 {: style="text-align: center;"}
  
 One of the most common applications of transfer learning is to take a
@@ -254,7 +254,7 @@ target domain. In computer vision, it is common to use an architecture like
 AlexNet ([Krizhevsky et al, 2012](#krizhevsky2012alexnet)), pretrain it on ImageNet ([Deng et al, 2009](#deng2009imagenet)), and replace the last fully connected layers
 with new ones from the target domain. The modified architecture is then
 finetuned on target domain labels, and is reported to perform better in
-classification tasks ([Masqood et al, 2019](#masqood2019alzheimer), [Shin et al, 2016](#shin2016computer) and [Byra et al, 2019](#byra2019knee) ). 
+classification tasks ([Masqood et al, 2019](#masqood2019alzheimer), [Shin et al, 2016](#shin2016computer) and [Byra et al, 2019](#byra2019knee)). 
 
 On the other hand, it is also possible to just use latent features from SOTA
 architectures (usually pretrained on ImageNet) and train a new model based on
@@ -262,17 +262,20 @@ them. According to [Ruder (2017)](#ruder2017survey), the ImageNet task has been
 a good proxy for most computer vision problems, as we've witnessed it excel in
 related tasks by just transferring the same knowledge.
 
-We've also seen similar approaches in natural language processing (NLP). 
-For example, domain adaptation techniques have been widespread in the
-transformer family of models, allowing us to reuse them in different kinds of
-task. Furthermore, this approach is being democratized more and more by
-Huggingface, allowing finetuning through a Python API. 
+We've also seen similar approaches in natural language processing (NLP)
+([Ruder, 2019](#ruder2019survey)).  For example, domain adaptation and
+sequential transfer learning techniques have been widespread in the transformer
+family of models, allowing us to reuse them in different kinds of task.
+Furthermore, this approach is being democratized more and more by Huggingface,
+allowing finetuning through a Python API. 
 
 Lastly, it is possible to use the pretrained model *as-is* for the task at
 hand. It then becomes a good baseline model for comparison before finetuning to
 the target domain task. 
 
 #### Multi-task learning
+
+Multi-task learning involves the learning of two or more tasks simultaneously. 
 
 
 #### Semi-supervised learning
@@ -311,6 +314,7 @@ the target domain task.
 * <a id="lipton2019trends">Lipton, Z.C. and Steinhardt, J.,</a> 2019. Research for practice: troubling trends in machine-learning scholarship. *Communications of the ACM*, 62(6), pp.45-53.
 * <a id="masqood2019alzheimer">Maqsood, M., Nazir, F., Khan, U., Aadil, F., Jamal, H., Mehmood, I. and Song, O.Y.</a>, 2019. Transfer learning assisted classification and detection of Alzheimer’s disease stages using 3D MRI scans. *Sensors*, 19(11), p.2645.
 * <a id="pan2009survey">Pan, S.J. and Yang, Q.</a>, 2009. A survey on transfer learning. *IEEE Transactions on knowledge and data engineering*, 22(10), pp.1345-1359.
+* <a id="ruder2019survey">Ruder, S., Aylien</a>. The State of Transfer Learning in NLP [online]. 2019 [cit. 2019-08-19]. Available: [https://ruder.io/state-of-transfer-learning-in-nlp/](https://ruder.io/state-of-transfer-learning-in-nlp/)
 * <a id="ruder2017survey">Ruder, S., Aylien</a>. Transfer Learning: Machine Learning’s Next Frontier [online]. 2017 [cit. 2017-07-04]. Available: [https://ruder.io/transfer-learning/index.html](https://ruder.io/transfer-learning/index.html)
 * <a id="sambasivan2021data">Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P. and Aroyo, L.M.,</a> 2021, May. “Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI. In *proceedings of the 2021 CHI Conference on Human Factors in Computing Systems* (pp. 1-15).
 * <a id="sculley2015debt">Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J.F. and Dennison, D.,</a> 2015. Hidden technical debt in machine learning systems. *Advances in neural information processing systems*, 28, pp.2503-2511.
