@@ -34,10 +34,10 @@ excerpt: |
         <details>
         <summary><a href="#q1">Large unlabeled data, absence of an expert</a></summary>
         <ul style="list-style-type: circle">
-            <li><a href="#transfer-learning">Transfer learning</a></li>
-            <li><a href="#multi-task-learning">Multi-task learning</a></li>
-            <li><a href="#semi-supervised-learning">Semi-supervised learning</a></li>
-            <li><a href="#crowdsourced-labelling">Crowdsourced labelling</a></li>
+            <li><a href="#1-transfer-learning">Transfer learning</a></li>
+            <li><a href="#2-multi-task-learning">Multi-task learning</a></li>
+            <li><a href="#3-semi-supervised-learning">Semi-supervised learning</a></li>
+            <li><a href="#4-crowdsourced-labelling">Crowdsourced labelling</a></li>
         </ul>
         </details>
         <details>
@@ -200,7 +200,7 @@ crowd-sourced labelling to **increase our labeled dataset.**
 ![](/assets/png/data-centric/q1.png){:width="520px"}
 {: style="text-align: center;"}
 
-#### Transfer learning
+#### 1. Transfer learning
 
 **Transfer learning involves the transfer of knowledge across domains or
 tasks.** It challenges the common assumption that both training and test data
@@ -269,7 +269,7 @@ Lastly, it is possible to use the pretrained model *as-is* for the task at
 hand. It then becomes a good baseline model for comparison before finetuning to
 the target domain task. 
 
-#### Multi-task learning
+#### 2. Multi-task learning
 
 **Multi-task learning involves the learning of two or more related tasks
 simultaneously** ([Ruder, 2017b](#ruder2017mtl) and [Zhuang et al,
@@ -317,12 +317,15 @@ better. According to [Ruder (2017b)](#ruder2017mtl) this is achieved by[^5]:
     during training. Because we're training on more than two tasks, the model
     is forced to find a more general representation as compared to just
     learning a single task.
+
 * *Attention focusing:* other tasks can provide additional evidence for a
     feature's relevance especially if the task is noisy or the dataset is limited.
+
 * *Eavesdropping:* in some cases, a subset of features can be easier to learn
     by some task more than others. Through multi-task learning, it is possible
     to allow the sharing of information across tasks to ease difficulty.
     [Abu-Mostafa (1990)](#abu1990hints) has done this by using *hints*.
+
 * *Representation bias:* multi-task learning encourages representations that
     other tasks prefer. If 4 out of 5 tasks prefer a feature $$\mathcal{F}$$,
     then it will be expressed more in the model. This feedback loop encourages
@@ -335,10 +338,10 @@ others.  It's a comprehensive list, where each application is organized not
 only by domain but also the specific approach (e.g., task-related learning,
 feature representation, etc.).
 
-#### Semi-supervised learning
+#### 3. Semi-supervised learning
 
 
-#### Crowdsourced labelling
+#### 4. Crowdsourced labelling
 
 
 
