@@ -168,16 +168,16 @@ the other:
     progressed enough to understand unsupervised data, so it's still possible
     to extract value on the given dataset.
 
-We can plot the presence or absence of domain experts and labeled data
-in a quadrant representing **four (4) general directions for a data-centric
-approach.** Fortunately, the field has matured quite enough that we can
-describe tactical procedures for each direction as illustrated below: 
+We can plot the presence or absence of the two in a 2x2 matrix, where each
+quadrant represents strategies for a data-centric approach. Fortunately, the
+field has matured quite enough that we can describe tactical procedures for
+each strategy as illustrated below: 
 
 ![](/assets/png/data-centric/magic_quadrant.png){:width="520px"}
 {: style="text-align: center;"}
 
 In the next section, I will survey approaches that fall under each quadrant.
-This may range from methods that you might see in a typical ML research
+They may range from methods that you might see in a typical ML research
 conference, to tools used in an organization. 
 
 ## Methods review
@@ -218,7 +218,7 @@ Transfer learning is often an umbrella term, encompassing different techniques
 based on the availability of labels in the source and target domains. In this
 review, we specifically mean "transductive transfer learning," where the source
 and target tasks are the same (e.g. image classification), but the source and
-target domains are different (e.g., ImageNet and X-ray dataset has different
+target domains are different (e.g., ImageNet and X-ray dataset have different
 marginal probabilities). This is usually the case when domain labels are
 available but the target domain labels are not ([Pan and Yang,
 2009](#pan2009survey), [Weiss et al, 2016](#weiss2016survey), [Tan and San,
@@ -335,7 +335,7 @@ Lastly, [Zhang and Yang (2017)](#zhang2017mtlsurvey) compiled a list of
 multi-task learning applications across various domains, including
 bioinformatics, natural-language processing, and computer vision among many
 others.  It's a comprehensive list, where each application is organized not
-only by domain but also the specific approach (e.g., task-related learning,
+only by domain but also by specific approach (e.g., task-related learning,
 feature representation, etc.).
 
 #### 3. Semi-supervised learning
