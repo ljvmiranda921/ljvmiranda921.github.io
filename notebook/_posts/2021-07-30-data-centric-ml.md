@@ -291,8 +291,8 @@ et al, 2020](#zhuang2020survey) and [Zhang and Yang,
 2017](#zhang2017mtlsurvey)).
 
 Given these differences, there are two major multi-task learning setups for
-deep neural networks: *hard* and *soft*. Both of which are based on how the
-parameters are shared across hidden layers:
+deep neural networks: *hard* and *soft* parameter sharing. Both of which are
+based on how the parameters are shared across hidden layers:
 * *Hard parameter sharing:* the hidden layers are shared across tasks, with
  task-specific layers near the output. This approach reduces overfitting in
  the order of the number of tasks ([Baxter, 1997](#baxter1997mtl)).
