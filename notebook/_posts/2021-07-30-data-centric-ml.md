@@ -235,7 +235,7 @@ then define this approach as:
 >  
 > *Transductive transfer learning* is a case where $$\mathcal{D}_{S} \neq \mathcal{D}_{T}$$ and $$\mathcal{T}_{S} = \mathcal{T}_{T}$$ ([Pan and Yang, 2009](#pan2009survey)).
 
-![](/assets/png/data-centric/transfer_learning_setup.png){:width="540px"}  
+![](/assets/png/data-centric/transfer_learning_setup.png){:width="460px"}  
 <br />
 **Figure:** A typical transfer learning setup. *Knowledge* can be in the form
 of learned weights or feature representations among others.
@@ -317,15 +317,12 @@ better. According to [Ruder (2017b)](#ruder2017mtl) this is achieved by[^5]:
     during training. Because we're training on more than two tasks, the model
     is forced to find a more general representation as compared to just
     learning a single task.
-
 * *Attention focusing:* other tasks can provide additional evidence for a
     feature's relevance especially if the task is noisy or the dataset is limited.
-
 * *Eavesdropping:* in some cases, a subset of features can be easier to learn
     by some task more than others. Through multi-task learning, it is possible
     to allow the sharing of information across tasks to ease difficulty.
     [Abu-Mostafa (1990)](#abu1990hints) has done this by using *hints*.
-
 * *Representation bias:* multi-task learning encourages representations that
     other tasks prefer. If 4 out of 5 tasks prefer a feature $$\mathcal{F}$$,
     then it will be expressed more in the model. This feedback loop encourages
