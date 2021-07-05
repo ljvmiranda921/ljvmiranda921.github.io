@@ -77,22 +77,22 @@ campaign](https://www.youtube.com/watch?v=06-AZXmwHjo) for a more data-centric
 approach to machine learning. This meant having to move away from fiddling models
 into ensuring quality data across all. In line with this, he also started
 the [Data-Centric AI
-competition](https://https-deeplearning-ai.github.io/data-centric-comp/), where
-the main challenge is to "increase accuracy by improving the dataset while
+competition](https://https-deeplearning-ai.github.io/data-centric-comp/), with
+the main challenge of "increasing accuracy by improving the dataset while
 keeping the model fixed."
 
-Going into this direction is promising, as **recent trends in the space point to
-a data-centric approach:**
+Going into this direction is promising, as **recent trends in the space
+encourage a data-centric approach:**
 
 * **We're discovering pitfalls for being too fixated on models**: achieving
-    state-of-the-art (SOTA) via model-centric approaches often incentivize inane
-    practices such as fixing random seeds and selective reporting ([Henderson et
-    al, 2019](#henderson2019deeprl) and [Lipton et al,
-    2019](#lipton2019trends)). Model results don't often lead to
-    understanding, as researchers treat accuracy as a score to be won, and even
-    admit to practice HARK-ing ([Bell et al, 2021](#bell2021psych) and [Sculley
-    et al, 2018](#sculley2019winner)).[^1] Inasmuch as we want to correct these,
-    perhaps a different problem-solving paradigm can also help.
+    state-of-the-art (SOTA) via model-centric approaches often incentivize
+    inane practices such as fixing random seeds and selective reporting
+    ([Henderson et al, 2019](#henderson2019deeprl) and [Lipton et al,
+    2019](#lipton2019trends)). Model results don't often lead to understanding,
+    as researchers treat accuracy as a score to be won, and even admit to
+    practice HARK-ing ([Bell et al, 2021](#bell2021psych) and [Sculley et al,
+    2018](#sculley2019winner)).[^1] Inasmuch as researchers should correct
+    these, perhaps a different problem-solving paradigm can also help.
 
 * **Deep learning models are being democratized**: hyperoptimizing models
     become less necessary due to the SOTA being more accessible. In NLP, the
@@ -106,14 +106,14 @@ a data-centric approach:**
     easier to be successful by just switching models or using a paid API.
 
 * **ML is catching-up on software engineering practices**: for the past year,
-    we've seen the [boom of software
+    we've seen the [rapid growth of software
     tooling](/notebook/2021/05/10/navigating-the-mlops-landscape/) in the
     machine learning space. Dubbed as MLOps, software engineering and DevOps
     practices are being set up to support the ML lifecycle&mdash; we're slowly
     paying off our technical debt ([Sculley, et al, 2015](#sculley2015debt)).
     Albeit a nascent field, we've already seen tools geared towards
     data-versioning, "smart" labelling, and tracking.[^2] Data-centric machine
-    learning can definitely take advantage of these developments.
+    learning is poised to take advantage of these developments.
 
 In the industry, a data-centric approach is appealing. **Data tend to have a
 longer lifespan and a larger impact surface area.** Aside from using them as
@@ -215,15 +215,10 @@ to [Pan and Yang (2009)](#pan2009survey), it is possible to transfer:
     source and target. 
 
 Transfer learning is often an umbrella term, encompassing different techniques
-based on the availability of labels in the source and target domains. In this
-review, we specifically mean "transductive transfer learning," where the source
-and target tasks are the same (e.g. image classification), but the source and
-target domains are different (e.g., ImageNet and X-ray dataset have different
-marginal probabilities). This is usually the case when domain labels are
-available but the target domain labels are not ([Pan and Yang,
-2009](#pan2009survey), [Weiss et al, 2016](#weiss2016survey), [Tan and San,
-2018](#tan2018survey) and [Zhuang et al, 2020](#zhuang2020survey)).[^5] We can
-then define this approach as:
+based on the availability of labels in the source and target domains. They may
+either be transductive or inductive, and may also involve an unsupervised
+approach ([Zhuang et al, ](#zhuang2020survey)). Nevertheless, we can define 
+transfer learning as:
 
 > Given a source domain $$\mathcal{D}_{S}$$ and learning task
 > $$\mathcal{T}_{S}$$, a target domain $$\mathcal{D}_{T}$$ and a learning task
@@ -231,9 +226,7 @@ then define this approach as:
 > target predictive function $$f_{T}(\cdot)$$ in $$\mathcal{D}_{T}$$ using the
 > knowledge in $$\mathcal{D}_S$$ and $$\mathcal{T}_{S}$$, where
 > $$\mathcal{D}_{S} \neq \mathcal{D}_{T}$$ or $$\mathcal{T}_{S} \neq
-> \mathcal{T}_{T}$$ 
->  
-> *Transductive transfer learning* is a case where $$\mathcal{D}_{S} \neq \mathcal{D}_{T}$$ and $$\mathcal{T}_{S} = \mathcal{T}_{T}$$ ([Pan and Yang, 2009](#pan2009survey)).
+> \mathcal{T}_{T}$$ ([Pan and Yang, 2009](#pan2009survey)).
 
 ![](/assets/png/data-centric/transfer_learning_setup.png){:width="460px"}  
 <br />
@@ -243,8 +236,8 @@ of learned weights or feature representations among others.
  
 One of the most common applications of transfer learning is to take a
 pretrained model from a source domain, and finetune it on the instances of a
-target domain. In computer vision, it is common to use an architecture like
-AlexNet ([Krizhevsky et al, 2012](#krizhevsky2012alexnet)), pretrain it on
+target domain. In computer vision, it is not unusual to use an architecture
+like AlexNet ([Krizhevsky et al, 2012](#krizhevsky2012alexnet)), pretrain it on
 ImageNet ([Deng et al, 2009](#deng2009imagenet)), and replace the last fully
 connected layers with new ones from the target domain. The modified
 architecture is then finetuned on target domain labels, and is reported to
