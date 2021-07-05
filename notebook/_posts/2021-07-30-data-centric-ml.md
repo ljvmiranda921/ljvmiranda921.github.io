@@ -330,6 +330,32 @@ feature representation, etc.).
 
 #### 3. Semi-supervised learning
 
+**Semi-supervised learning is a combination of both supervised and unsupervised
+learning techniques.** It takes advantage of the information found in the
+labels or cluster to improve performance ([Zhu, 2005](#zhu2005semisupervised)).
+For a supervised classification task, we use the implicit cluster information
+found from unlabeled data. For unsupervised classification, we harness the
+existing label-information found in the dataset ([Van Engelen and Hoos,
+2020](#vanengelen2020survey)).
+
+Semi-supervised learning works under the condition that the distribution of the
+input, $$p(x)$$, contains some information about its output, $$p(y|x)$$ ([Van
+Engelen and Hoos, 2020](#vanengelen2020survey)). Although this is often true in
+real-world datasets, we can't explicitly define the interactions between input
+and output data distributions. Hence, the following assumptions are made
+([Chapelle, et al, 2006](#chapelle2006semisupervised)):
+
+* *Smoothness assumption:* points that are closer to one another are more
+    likely to belong to the same class. Its advantage in semi-supervised
+    learning is that it can be applied transitively to unlabelled data.
+* *Low-density assumption:* a classifier's decision boundary should preferably
+    pass through low-density regions in the input space. This works
+    hand-in-hand with the smoothness assumption.
+* *Manifold assumption:* this assumes that the input space is composed of
+    low-dimensional substructures called *manifolds*, and that points lying on
+    the same manifold should have the same label.
+
+
 
 #### 4. Crowdsourced labelling
 
@@ -361,6 +387,7 @@ feature representation, etc.).
 * <a id="byra2019knee">Byra, M., Wu, M., Zhang, X., Jang, H., Ma, Y.J., Chang, E.Y., Shah, S. and Du, J.</a>, 2020. Knee menisci segmentation and relaxometry of 3D ultrashort echo time cones MR imaging using attention U‐Net with transfer learning. *Magnetic resonance in medicine*, 83(3), pp.1109-1122.
 * <a id="brown2020gpt3">Brown, T.B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A. and Agarwal, S.,</a> 2020. Language models are few-shot learners. *arXiv preprint arXiv:2005.14165*.
 * <a id="caruana1997mtl">Caruana, R.</a>, 1997. Multitask learning. *Machine learning*, 28(1), pp.41-75.
+* <a id="chapelle2006semisupervised">Chapelle, O., Scholkopf, B. and Zien, A.</a>, 2006. *Semi-supervised learning*. 2006. Cambridge, Massachusettes: The MIT Press View Article.
 * <a id="deng2009imagenet">Deng, J., Dong, W., Socher, R., Li, L.J., Li, K. and Fei-Fei, L.</a>, 2009, June. Imagenet: A large-scale hierarchical image database. In 2009 IEEE conference on computer vision and pattern recognition (pp. 248-255). Ieee.
 * <a id="duong2015soft">Duong, L., Cohn, T., Bird, S. and Cook, P.</a>, 2015, July. Low resource dependency parsing: Cross-lingual parameter sharing in a neural network parser. In *Proceedings of the 53rd annual meeting of the Association for Computational Linguistics and the 7th international joint conference on natural language processing* (volume 2: short papers) (pp. 845-850).
 * <a id="gennatas2020expert">Gennatas, E.D., Friedman, J.H., Ungar, L.H., Pirracchio, R., Eaton, E., Reichmann, L.G., Interian, Y., Luna, J.M., Simone, C.B., Auerbach, A. and Delgado, E.,</a> 2020. Expert-augmented machine learning. Proceedings of the National Academy of Sciences, 117(9), pp.4571-4577.
@@ -380,11 +407,13 @@ feature representation, etc.).
 * <a id="tan2018survey">Tan, C., Sun, F., Kong, T., Zhang, W., Yang, C. and Liu, C.</a>, 2018, October. A survey on deep transfer learning. In *International conference on artificial neural networks* (pp. 270-279). Springer, Cham.
 * <a id="thrun2012learning">Thrun, S. and Pratt, L</a>. eds., 2012. *Learning to learn*. Springer Science & Business Media.
 * <a id="tsymbal2004drift">Tsymbal, A.,</a> 2004. The problem of concept drift: definitions and related work. *Computer Science Department, Trinity College Dublin*, 106(2), p.58.
+* <a id="vanengelen2020survey">Van Engelen, J.E. and Hoos, H.H.</a>, 2020. A survey on semi-supervised learning. *Machine Learning*, 109(2), pp.373-440.
 * <a id="vaswani2017attention">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L. and Polosukhin, I.,</a> 2017. Attention is all you need. *arXiv preprint arXiv:1706.03762*.
 * <a id="weiss2016survey">Weiss, K., Khoshgoftaar, T.M. and Wang, D.</a>, 2016. A survey of transfer learning. *Journal of Big data*, 3(1), pp.1-40.
 * <a id="yamada2016joint">Yamada, I., Shindo, H., Takeda, H. and Takefuji, Y.</a>, 2016. Joint learning of the embedding of words and entities for named entity disambiguation. *arXiv preprint arXiv:1601.01343*.
 * <a id="yang2016soft">Yang, Y. and Hospedales, T.</a>, 2016. Deep multi-task representation learning: A tensor factorisation approach. *arXiv preprint arXiv:1605.06391*.
 * <a id="zhang2017mtlsurvey">Zhang, Y. and Yang, Q.</a>, 2017. A survey on multi-task learning. *arXiv preprint arXiv:1707.08114*.
+* <a id="zhu2005semisupervised">Zhu, X.J.</a>, 2005. *Semi-supervised learning literature survey*.
 * <a id="zhuang2020survey">Zhuang, F., Qi, Z., Duan, K., Xi, D., Zhu, Y., Zhu, H., Xiong, H. and He, Q.</a>, 2020. A comprehensive survey on transfer learning. *Proceedings of the IEEE*, 109(1), pp.43-76.
 * <a id="zliobaite2010drift">Žliobaitė, I.,</a> 2010. Learning under concept drift: an overview. *arXiv preprint arXiv:1010.4784*.
 
