@@ -349,11 +349,24 @@ and output data distributions. Hence, the following assumptions are made
     likely to belong to the same class. Its advantage in semi-supervised
     learning is that it can be applied transitively to unlabelled data.
 * *Low-density assumption:* a classifier's decision boundary should preferably
-    pass through low-density regions in the input space. This works
+    pass through low-density regions of the input space. This works
     hand-in-hand with the smoothness assumption.
 * *Manifold assumption:* this assumes that the input space is composed of
     low-dimensional substructures called *manifolds*, and that points lying on
     the same manifold should have the same label.
+
+<!-- inductive vs transductive methods 
+* talk about differences
+* talk about representative approaches (self-training, graph-based)
+-->
+There are two distinct approaches for semi-supervised learning, inductive or
+transductive.[^7]
+
+<!-- deep learning based semisupervised learning -->
+
+
+
+<!-- applications -->
 
 
 
@@ -449,3 +462,4 @@ my scope.
 [^4]: At first, I was tempted to put an overarching label or tagline on each group. However, I realized that it may be more confusing because some approaches don't have an explicit relationship to one another.
 [^5]: Different authors suggest different scopes for transfer learning. Some even argue that unsupervised learning can be a form of transfer learning. It is confusing across literature. For a more timely categorization, I refer you to [Zhuang et al., 2020](#zhuang2020survey).
 [^6]: I decided to drop the fifth reason, *regularization*, because I believe that it is the core of how multi-task learning works. All four reasons lead to regularization, and consequently, better model generalization.
+[^7]: These two distinctions aren't unique to semi-supervised learning. Inductive and tranductive machine learning are often used to separate ML methods based on whether  they produce a generalized model or not. 
