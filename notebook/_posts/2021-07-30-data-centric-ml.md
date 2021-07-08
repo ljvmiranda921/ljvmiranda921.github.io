@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Towards data-centric machine learning: a literature review"
+title: "Notes on data-centric machine learning"
 date: 2021-07-30
 category: notebook
 comments: true
@@ -362,10 +362,14 @@ and output data distributions. Hence, the following assumptions are made
 -->
 
 [Van Engelen and Hoos (2020)](#vanengelen2020survey) classified semi-supervised
-learning techniques into two distict approaches: inductive or transductive.[^7]
-These two categories aren't unique to semi-supervised learning, for they have
-been used in other ML fields like transfer learning ([Pan and Yang,
-2009](#pan2009survey)).
+learning techniques into two distict approaches: inductive and
+transductive.[^7] These two categories aren't unique to this technique, for
+they have been used in other ML fields like transfer learning ([Pan and Yang,
+2009](#pan2009survey)). They differ based on how they reason with data:
+* *Inductive learning:* this set of techniques create a general rule from
+    observed training cases, often producing a model as a result. 
+* *Transductive learning:* doesn't yield a model. Instead, it directly provides
+    predictions. In semi-supervised learning, this include graph-based methods
 
 <!-- deep learning based semisupervised learning -->
 
