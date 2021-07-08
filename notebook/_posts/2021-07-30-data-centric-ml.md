@@ -355,12 +355,17 @@ and output data distributions. Hence, the following assumptions are made
     low-dimensional substructures called *manifolds*, and that points lying on
     the same manifold should have the same label.
 
+
 <!-- inductive vs transductive methods 
 * talk about differences
 * talk about representative approaches (self-training, graph-based)
 -->
-There are two distinct approaches for semi-supervised learning, inductive or
-transductive.[^7]
+
+[Van Engelen and Hoos (2020)](#vanengelen2020survey) classified semi-supervised
+learning techniques into two distict approaches: inductive or transductive.[^7]
+These two categories aren't unique to semi-supervised learning, for they have
+been used in other ML fields like transfer learning ([Pan and Yang,
+2009](#pan2009survey)).
 
 <!-- deep learning based semisupervised learning -->
 
@@ -430,6 +435,7 @@ transductive.[^7]
 * <a id="zhuang2020survey">Zhuang, F., Qi, Z., Duan, K., Xi, D., Zhu, Y., Zhu, H., Xiong, H. and He, Q.</a>, 2020. A comprehensive survey on transfer learning. *Proceedings of the IEEE*, 109(1), pp.43-76.
 * <a id="zliobaite2010drift">Žliobaitė, I.,</a> 2010. Learning under concept drift: an overview. *arXiv preprint arXiv:1010.4784*.
 
+<!--
 
 ## Postscript
 
@@ -452,6 +458,8 @@ weekends. However, I had some practice writing *very* long-form content, as you
 may have seen in "Navigating the MLOps Landscape" and "How to use Jupyter
 Notebooks." I'd probably do this again in the future, but I'll definitely lower
 my scope.
+
+-->
 
 
 ## Footnotes
