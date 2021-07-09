@@ -38,9 +38,8 @@ Prior to that, I've worked for some machine learning startups such as:
 I obtained my master's degree from [Waseda
 University](https://www.waseda.jp/top/en) and my bachelor's in Electronics
 Engineering, minor in Philosophy from [Ateneo de Manila
-University](https://www.ateneo.edu). My current research interests include
-machine learning systems design, natural-language processing, and artificial
-life. 
+University](https://www.ateneo.edu). My research interests include machine
+learning systems design, natural-language processing, and artificial life. 
 
 Lastly, I'm well-involved in open-source and have authored [several
 projects](https://github.com/ljvmiranda921) of my own.
