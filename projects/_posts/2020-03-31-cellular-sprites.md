@@ -310,7 +310,6 @@ machine somewhere&mdash; waiting for its next opportunity to emerge.
     development. Here, I used [Vue](https://vuejs.org/). It's an interesting
     framework and I learned a lot as I went through the project.
 
----
 
 ### Footnotes
 
