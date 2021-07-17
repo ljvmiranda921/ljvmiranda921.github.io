@@ -341,10 +341,22 @@ models.
 
 ## Conclusion
 
+In this blogpost, we reviewed different techniques towards data-centric machine
+learning. First, we looked into how recent trends motivate a different problem
+solving paradigm, then we focused our attention to the interplay betweeen a
+domain-expert and the dataset. 
 
+We then presented a simple graph that attempts to put each approach into
+context. We've seen techniques differ based on the presence of a domain-expert,
+and the amount of unlabeled data in the dataset. Moreover, we also defined
+regions based on traditionally known techniques: supervised learning, unsupervised
+learning, and expert systems. 
 
-
-
+Lastly, the middle region in our plot represents the
+data-centric band, and we introduced what each technique does on a high level. 
+We've seen methods that tap on the knowledge of domain experts, and techniques
+that take advantage of solved tasks. All of which improve the data we have at
+hand, leading to better models and high-quality data. 
 
 
 ## References
