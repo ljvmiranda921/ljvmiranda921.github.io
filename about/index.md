@@ -50,8 +50,8 @@ physics](https://arxiv.org/abs/1801.07686),
 [teaching](https://www.gousios.gr/courses/algo-ds/optimizations.html) amongst
 [other
 things](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15267041073198929167).
-I love indie games and dabble in game
-development using [Pico-8](https://www.lexaloffle.com/pico-8.php) and
+I love indie games and [dabble in game
+development](https://ljvmiranda921.itch.io) using [Pico-8](https://www.lexaloffle.com/pico-8.php) and
 [Godot](https://godotengine.org/).
 
 <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
