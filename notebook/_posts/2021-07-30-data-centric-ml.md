@@ -358,6 +358,44 @@ We've seen methods that tap on the knowledge of domain experts, and techniques
 that take advantage of solved tasks. All of which improve the data we have at
 hand, leading to better models and high-quality data. 
 
+All in all, data-centric is a promising field. The techniques and approaches
+aren't new&mdash; some of which have already existed back in the 90s, but it
+pays to know that simply maintaining a quality set of data will already give a
+decent set of returns than just mindlessly fiddling model hyperparameters. 
+
+```latex
+@article{miranda2021datacentric,
+  title        = {Towards data-centric machine learning: a short review},
+  author       = {Miranda, Lester James},
+  journal      = {ljvmiranda921.github.io},
+  url          = {\url{https://ljvmiranda921.github.io/notebook/2021/07/30/data-centric-ml/}},
+  year         = {2021}
+}
+```
+
+### Postscript
+
+*Phew!* Writing this felt longer than usual. At first, I was inspired by the
+blogs of [Lilian Weng](https://lilianweng.github.io/lil-log/) and [Sebastian
+Ruder](https://ruder.io/), that I wanted to write a literature review of my
+own. I may have overdone it, as it spans a huge breadth of techniques under a
+large umbrella. Nevertheless, I'm happy with what I've written, and what you
+see here is a summary of my study notes in this space.
+
+As for the topic, data-centric machine learning and the techniques involved in
+it piqued my curiosity. Insufficient samples, clerical errors, and unreliable
+sources are just a few among many challenges seen in industrial machine learning.
+Inasmuch as I wanted to approach it with tools and platforms that exist today, I
+am also excited to endow an academic approach to it, hence the tone.
+
+Researching this took me a month and a half, mostly working on evenings and
+weekends. However, I had some practice writing *very* long-form content, as you
+may have seen in ["Navigating the MLOps
+Landscape"](notebook/2021/05/10/navigating-the-mlops-landscape/) and ["How to
+use Jupyter Notebooks."](/notebook/2020/03/06/jupyter-notebooks-in-2020/) I'd
+probably do this again in the future, but I'll definitely lower my scope.
+
+
 
 ## References
 
@@ -425,32 +463,6 @@ hand, leading to better models and high-quality data.
 1. <a id="zhu2005semisupervised">Zhu, X.J.</a>, 2005. *Semi-supervised learning literature survey*.
 1. <a id="zhuang2020survey">Zhuang, F., Qi, Z., Duan, K., Xi, D., Zhu, Y., Zhu, H., Xiong, H. and He, Q.</a>, 2020. A comprehensive survey on transfer learning. *Proceedings of the IEEE*, 109(1), pp.43-76.
 1. <a id="zliobaite2010drift">Žliobaitė, I.,</a> 2010. Learning under concept drift: an overview. *arXiv preprint arXiv:1010.4784*.
-
-<!--
-
-## Postscript
-
-*Phew!* This is probably the longest blogpost I've written (if you can even
-call it that). At first, I was inspired by the blogs of [Lilian
-Weng](https://lilianweng.github.io/lil-log/) and [Sebastian
-Ruder](https://ruder.io/), that I wanted to write a literature review of my
-own. I may have overdone it, as it spans a huge breadth of techniques under a
-large umbrella. Nevertheless, I'm happy with what I've written, and what you
-see here is a big compilation of my study notes in this space.
-
-As for the topic, data-centric machine learning and the techniques involved in
-it piqued my curiosity. Insufficient samples, clerical errors, and unreliable
-sources are just a few among many challenges seen in industrial machine learning.
-Inasmuch as I wanted to approach it with tools and platforms that exist today, I
-am also excited to endow an academic approach to it, hence the tone.
-
-Researching this took me two full months, mostly working on evenings and
-weekends. However, I had some practice writing *very* long-form content, as you
-may have seen in "Navigating the MLOps Landscape" and "How to use Jupyter
-Notebooks." I'd probably do this again in the future, but I'll definitely lower
-my scope.
-
--->
 
 
 ## Footnotes
