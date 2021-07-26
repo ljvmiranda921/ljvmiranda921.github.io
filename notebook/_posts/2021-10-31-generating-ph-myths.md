@@ -8,6 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [machine learning, clip, clip vqgan, open ai, trese, halloween, scary,
+header-img: /assets/png/ph-clip/banner.png
 generative art, generative, procgen, procedural generation]
 description: |
     Using the text-to-image CLIP VQGAN neural network to generate surreal
