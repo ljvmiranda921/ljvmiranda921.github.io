@@ -8,6 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [machine learning, andrew ng, data centric, active learning, semi-supervised learning, weak supervision, prodigy, snorkel]
+header-img: /assets/png/data-centric/header.png
 description: |
     Data-centric machine learning shifts the focus from fiddling model
     hyperparameters to ensuring quality data across all. This post is a
