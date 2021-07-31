@@ -238,6 +238,7 @@ on desktop!
 
 ## Postscript
 
+<!--
 Aside from the upcoming Halloween season, this post was inspired by my recent
 trip to my mother's province, [Iloilo](https://en.wikipedia.org/wiki/Iloilo),
 where I spent a few days during my sabbatical. As some of you may already know,
@@ -245,6 +246,7 @@ where I spent a few days during my sabbatical. As some of you may already know,
 teeming with Philippine folklore and myth. I learned a lot about supernatural
 entities and my family history too *(oooh)*. I find it fun to put an AI spin to the
 supernatural!
+-->
 
 As for the output, the surreal imagery added a nice touch&mdash; it gave our
 mythical creatures an unearthly and bizarre vibe. I find the *nunò* and *kapre* 
