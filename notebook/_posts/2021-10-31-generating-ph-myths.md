@@ -35,10 +35,10 @@ machine learning model with words and descriptions of folk creatures, what
 images can it conjure?** 
 
 To do so, I played with a neural network called CLIP-VQGAN ([Esser et al,
-2021](#esser2021clip)) and supplied it with descriptions from Philippine folk
-culture. The resulting images can then be thought of as to what
-the model "imagined" upon reading the descriptions&mdash;I warn you, they are a
-bit surreal and creepy!
+2021](#esser2021clip) and [Radford et al, 2021](#radford2021clip)) and supplied
+it with descriptions from Philippine folk culture. The resulting images can
+then be thought of as to what the model "imagined" upon reading the
+descriptions&mdash;I warn you, they are a bit surreal and creepy!
 
 ## Monsters from the machine
 
@@ -285,4 +285,5 @@ below!*
 ## References
 
 1. <a id="esser2021clip">Esser, P., Rombach, R. and Ommer, B.</a>, 2021. Taming transformers for high-resolution image synthesis. In *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition* (pp. 12873-12883).
+2. <a id="radford2021clip">Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J. and Krueger, G.</a>, 2021. Learning transferable visual models from natural language supervision. *arXiv preprint arXiv:2103.00020*.
 
