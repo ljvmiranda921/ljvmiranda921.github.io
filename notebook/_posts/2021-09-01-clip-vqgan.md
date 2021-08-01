@@ -54,10 +54,10 @@ explainer](https://openai.com/blog/clip/). It's comprehensive and accessible.
     <li>Cost-function tricks</li>
 </ul>
 <b>Appendix</b>
-<ul>
+<ol>
     <li>Literature leading to VQGAN</li>
     <li>Revisiting CLIP</li>
-</ul>
+</ol>
 </div>
 
 <br>
@@ -81,6 +81,12 @@ long-range dependencies, we should take advantage of that -->
 Everything is still in pixels -->
 
 
+## Expressing modalities through a codebook 
+
+
+## Training the codebook using a GAN (w/ VQ)
+
+## Cost-function tricks
 
 
 ## References
