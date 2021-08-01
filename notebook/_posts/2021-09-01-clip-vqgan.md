@@ -32,7 +32,8 @@ combine the generative capabilities of VQGAN ([Esser et al,
 <!-- sample images -->
 
 In essence, the way they work is that VQGAN generates the images, while CLIP
-judges how well the image matches our text prompt:
+judges how well the image matches our text prompt. This interaction guide our
+generator to produce more "accurate" images:
 
 <!-- draw stuff because it's fun -->
 
