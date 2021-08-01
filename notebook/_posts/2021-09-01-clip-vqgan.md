@@ -20,12 +20,12 @@ excerpt: |
 
 <span class="firstcharacter">T</span>**ext-to-image synthesis has taken ML
 Twitter by storm**. Everyday, we see new AI-generated artworks being shared
-across the interwebs. All of these were made possible thanks to the [VQGAN-CLIP
+across our feeds. All of these were made possible thanks to the [VQGAN-CLIP
 Colab
 Notebook](https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W?usp=sharing#scrollTo=g7EDme5RYCrt)[^1]
 of [@advadnoun](https://twitter.com/advadnoun) and
 [@RiversHaveWings](https://twitter.com/RiversHaveWings). They were able to
-combine the generative capabilities of VQGAN ([Esser et al, 
+combine the generative capabilities of VQGAN ([Esser et al,
 2021](#esser2021vqgan)) and discriminative ability of CLIP ([Radford et al,
 2021](#radford2021clip)) to produce the wonderful images we see today:
 
