@@ -18,7 +18,7 @@ excerpt: |
     mythical creatures from Philippine folk culture.
 ---
 
-Most of what we know from Philippine folklore came from stories passed down
+<span class="firstcharacter">M</span>ost of what we know from Philippine folklore came from stories passed down
 from one generation to the next. We know that a *kapre* smokes a cigar, lives
 in a tree, and has a large stature because "the auntie of our mother's friend"
 said so. Words turn into images, bringing these creatures into life. 
