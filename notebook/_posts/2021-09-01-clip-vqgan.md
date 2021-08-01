@@ -65,6 +65,8 @@ explainer](https://openai.com/blog/clip/). It's comprehensive and accessible.
 
 ## How we see images: a theory of perception
 
+If I show you this picture, how would you describe it?
+
 <!-- key takeaway: we don't think in terms of pixels, we think in terms of
 modalities -->
 
