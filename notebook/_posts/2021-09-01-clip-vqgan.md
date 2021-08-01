@@ -22,7 +22,7 @@ excerpt: |
 Twitter by storm**. Everyday, we see new AI-generated artworks being shared
 across the interwebs. All of these were made possible thanks to the [VQGAN-CLIP
 Colab
-Notebook](https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W?usp=sharing#scrollTo=g7EDme5RYCrt)
+Notebook](https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W?usp=sharing#scrollTo=g7EDme5RYCrt)[^1]
 of [@advadnoun](https://twitter.com/advadnoun) and
 [@RiversHaveWings](https://twitter.com/RiversHaveWings). They were able to
 combine the generative capabilities of VQGAN ([Esser et al, 
@@ -113,5 +113,7 @@ Everything is still in pixels -->
 1. <a id="esser2021vqgan">Esser, P., Rombach, R. and Ommer, B.</a>, 2021. Taming transformers for high-resolution image synthesis. In *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition* (pp. 12873-12883).
 2. <a id="radford2021clip">Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J. and Krueger, G.</a>, 2021. Learning transferable visual models from natural language supervision. *arXiv preprint arXiv:2103.00020*.
 
+## Footnotes
 
+[^1]: You might see VQGAN-CLIP being written as CLIP-VQGAN, CLIP+VQGAN, or VQGAN+CLIP. The order doesn't matter and the dash symbol isn't an operation. They're all the same thing.
 
