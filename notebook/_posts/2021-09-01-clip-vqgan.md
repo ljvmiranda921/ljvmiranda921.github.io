@@ -44,7 +44,41 @@ to learn more about CLIP, I suggest reading [OpenAI's
 explainer](https://openai.com/blog/clip/). It's comprehensive and accessible. 
 
 
-## How we see images
+<div style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
+<b>Contents</b><br>
+<ul>
+    <li>How we see images: a theory of perception</li>
+    <li>Using Transformers to model interactions</li>
+    <li>Expressing modalities through a codebook</li>
+    <li>Training the codebook using a GAN</li>
+    <li>Cost-function tricks</li>
+</ul>
+<b>Appendix</b>
+<ul>
+    <li>Literature leading to VQGAN</li>
+    <li>Revisiting CLIP</li>
+</ul>
+</div>
+
+<br>
+
+
+## How we see images: a theory of perception
+
+<!-- key takeaway: we don't think in terms of pixels, we think in terms of
+modalities -->
+
+<!-- there's also long range dependencies -->
+
+<!-- how should we model modalities? -->
+
+## Using Transformers to model interactions
+
+<!-- transformers have been proven to be good at long sequences and capture
+long-range dependencies, we should take advantage of that -->
+
+<!-- However, the problem is that using transformers is not scaleable.
+Everything is still in pixels -->
 
 
 
