@@ -257,9 +257,11 @@ surprising. They both capture what I imagine when I was young.
 I didn't write any code nor train any model to generate these images. Instead,
 I used the [Google Colab
 Notebook](https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W?usp=sharing#scrollTo=g7EDme5RYCrt)
-provided by [Katherine Crowson](https://github.com/crowsonkb)&mdash; all
-credits go to her. I simply provided it with the text prompt, and have the
-model generate the images for me. Open science is cool!
+provided by [@advadnoun](https://twitter.com/advadnoun) and [Katherine
+Crowson](https://github.com/crowsonkb)
+([@RiversHaveWings](https://twitter.com/RiversHaveWings))&mdash; all credits go
+to them. I simply provided it with the text prompt, and have the model generate
+the images for me. Open science is cool!
 
 However, I did a few tweaks in the prompt to influence the results. For
 example, I added tags like `artstation`, `blender` or `hdr` so that it shows
