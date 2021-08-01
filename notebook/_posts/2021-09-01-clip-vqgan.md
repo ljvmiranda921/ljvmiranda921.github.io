@@ -40,10 +40,10 @@ Also includes some works from [@images_ai](https://twitter.com/images_ai).*
 
 First things first: VQGAN stands for Vector Quantized Generative Adversarial
 Network, while CLIP stands for Contrastive Image-Language Pretraining. Whenever
-we say VQGAN-CLIP, we refer to the interaction between the two networks.
+we say VQGAN-CLIP, we refer to the interaction between those two networks.
 
 In essence, the way they work is that VQGAN generates the images, while CLIP
-judges how well the image matches our text prompt. This interaction guide our
+judges how well an image matches our text prompt. This interaction guide our
 generator to produce more *accurate* images:
 
 ![](/assets/png/vqgan/clip_vqgan_with_image.png){:width="540px"}  
