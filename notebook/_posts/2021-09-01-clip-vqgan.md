@@ -154,7 +154,7 @@ different levels
 
 Putting it all together, we now have: 
 1. an interesting view of perception that allows us to **model
-    long-range dependencies** by representing images discretely; and, 
+    long-range dependencies** by representing images discretely; and&mdash;
 2. a pixel-based approach that we shouldn't ignore in order to take advantage of
     learned **local interactions** and **visual parts**.
 
@@ -168,7 +168,7 @@ The table below summarizes their differences:
 **VQGAN was able to combine these two approaches.** It can learn not only the
 (1) visual parts of an image, but also the (2) relationship (read: long-range
 dependencies) between these parts. We knew that the former can be done by a
-convolutional neural network, but we still haven't discussed the latter.
+convolutional neural network, but we still have to discuss the latter.
 
 > VQGAN can learn not only the visual parts of an image, but also their relationships
 
