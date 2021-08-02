@@ -44,7 +44,7 @@ we say VQGAN-CLIP[^1], we refer to the interaction between these two networks.
 They're separate models that work in tandem.
 
 In essence, the way they work is that VQGAN generates the images, while CLIP
-judges how well an image matches our text prompt. This interaction guide our
+judges how well an image matches our text prompt. This interaction guides our
 generator to produce more *accurate* images:
 
 ![](/assets/png/vqgan/clip_vqgan_with_image.png){:width="540px"}  
@@ -95,8 +95,8 @@ __Figure:__ *If I ask you to describe this picture, what would you say?*
 Some of you may describe *"a lady with a feathered hat looking back,"* or *"a
 woman with a hat."* More discerning folks in the field might describe this as
 *"the Lenna standard test image in computer vision."*  Nevertheless, we seem to
-encounter images through discrete representations: `woman`, `feathered
-hat`, `Lenna`, etc. **This theory of perception suggests that our visual reasoning is
+encounter images through discrete representations: `woman`, `feathered hat`, or
+`Lenna`. This theory of perception suggests that **our visual reasoning is
 symbolic, we ascribe meaning through discrete representations and modalities.**
 
 > This theory of perception suggests that our visual reasoning is symbolic, we
@@ -106,8 +106,8 @@ This symbolic approach allows us to understand relationships between different
 words or symbols. In literature, this is commonly known as being able to model
 [long-range dependencies](https://en.wikipedia.org/wiki/Long-range_dependence).
 For example, in the sentence "a lady with a feathered hat looking back," we
-know that `looking back` refers to `lady`'s action while `feathered`
-refers to the `hat`'s description 
+know that `looking back` refers to the `lady`'s action while `feathered`
+refers to the `hat`'s description.
 
 ![](/assets/png/vqgan/lrd.png){:width="480px"}  
 <br>
@@ -116,12 +116,11 @@ relationships,
 i.e., to model long-range dependencies*
 {: style="text-align: center; margin: 1.5em"}
 
-Of course, this idea didn't originate solely from VQGAN. A lot of work has been
-done to explore complex reasoning through discrete representations
-([Salakhutdinov and Hinton, 2009](#salakhutdinov2009boltzmann), [Mnih and
-Gregor, 2014](#mnih2014neural), and [Oord et al, 2017](#oord2017discrete)).
-**However, the bulk of computer vision (CV) techniques don't think in terms of
-modalities, they think in terms of pixels**:
+Even though a lot of work has been done to explore complex reasoning through discrete
+representations ([Salakhutdinov and Hinton, 2009](#salakhutdinov2009boltzmann),
+[Mnih and Gregor, 2014](#mnih2014neural), and [Oord et al,
+2017](#oord2017discrete)), **most computer vision (CV)
+techniques don't think in terms of modalities. Instead, they think in terms of pixels**:
 
 ![](/assets/png/vqgan/lenna_pixels.png){:width="320px"}  
 <br>
@@ -138,10 +137,12 @@ works.[^2]
 
 Despite all of these, we still shouldn't ignore pixel-based approaches.
 Convolutional neural networks (CNN) proved that we can model local interactions
-between pixels, allowing us to compose them together and create visual parts.
-The premier example of this is the feature map below, where a CNN learned how
-to compose pixels at varying layers of abstraction: pixels become edges, edges
-become shapes, and shapes become parts.
+between pixels, simply by restricting interactions within their local
+neighborhood (also known as the [*kernel*](https://en.wikipedia.org/wiki/Kernel_(image_processing))). This allows us to "compose" pixels together and learn visual
+parts ([Gu et al, 2018](#gu2018cnn)).  The premier illustration for this is the
+feature map below, where a CNN learned how to compose pixels at varying layers
+of abstraction: pixels become edges, edges become shapes, and shapes become
+parts.
 
 ![](/assets/png/vqgan/cnn_features.png){:width="520px"}  
 <br>
@@ -150,25 +151,31 @@ different levels
 (photo from [Tejpal Virdi, 2017](https://tvirdi.github.io/2017-10-29/cnn/))*
 {: style="text-align: center; margin: 1.5em"}
 
-To recap, we now have an interesting view of perception that allows us to model
-long-range dependencies by representing images discretely. Yet, we still
-shouldn't ignore pixel-based approaches so we can also learn local interactions
-and compose visual parts. The table below summarizes the difference: 
+By putting it all together, we now have: 
+* an interesting view of perception that allows us to model
+    long-range dependencies by representing images discretely; and, 
+* a pixel-based approach that we shouldn't ignore in order to take advantage of
+    learned local interactions and visual parts.
+
+The table below summarizes their differences: 
 
 | Approach   | Examples                                             | Can model                           | Analogy    |
 |------------|------------------------------------------------------|-------------------------------------|------------|
 | Discrete   | Sequence of symbols, words, phrases, and sentences   | Long-range dependencies             | Perceiving |
 | Continuous | RGB channels in a pixel, convolutional filters, etc. | Local interactions and visual parts | Sensing    |
 
-VQGAN was able to combine these two approaches. It can learn not only the
+**VQGAN was able to combine these two approaches.** It can learn not only the
 (1) visual parts of an image, but also the (2) relationship (read: long-range
-dependencies) between these parts. We know that the former can be done by a
+dependencies) between these parts. We knew that the former can be done by a
 convolutional neural network, but we still haven't discussed the latter.
 
-In the next section, we'll talk about how a Transformer can model long-range
-dependencies between symbols. Transformers have been ubiquitous in
-natural-language processing, and seems to be a nice fit for modelling our
-theory of perception. However, it has one weakness: scale.
+> VQGAN can learn not only the visual parts of an image, but also their relationships
+
+In the next section, we'll talk about how a Transformer ([Vaswani et al,
+2017](#vaswani2017attention)) can model long-range dependencies between
+symbols. Transformers have been ubiquitous in natural-language processing, and
+seems to be a nice fit for modelling our theory of perception. **However, it has
+one weakness: it doesn't scale well to images.**
 
 ## Using Transformers to model interactions
 
@@ -190,10 +197,12 @@ Everything is still in pixels -->
 ## References
 
 1. <a id="esser2021vqgan">Esser, P., Rombach, R. and Ommer, B.</a>, 2021. Taming transformers for high-resolution image synthesis. In *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition* (pp. 12873-12883).
+1. <a id="gu2018cnn">Gu, J., Wang, Z., Kuen, J., Ma, L., Shahroudy, A., Shuai, B., Liu, T., Wang, X., Wang, G., Cai, J. and Chen, T.</a>, 2018. Recent advances in convolutional neural networks. Pattern Recognition, 77, pp.354-377.
 1. <a id="mnih2014neural">Mnih, A. and Gregor, K.</a>, 2014, June. Neural variational inference and learning in belief networks. In International Conference on Machine Learning (pp. 1791-1799). PMLR.
 1. <a id="oord2017discrete">Oord, A.V.D., Vinyals, O. and Kavukcuoglu, K.</a>, 2017. Neural discrete representation learning. arXiv preprint arXiv:1711.00937.
 1. <a id="radford2021clip">Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J. and Krueger, G.</a>, 2021. Learning transferable visual models from natural language supervision. *arXiv preprint arXiv:2103.00020*.
 1. <a id="salakhutdinov2009boltzmann">Salakhutdinov, R. and Hinton, G., 2009</a>, April. Deep boltzmann machines. In Artificial intelligence and statistics (pp. 448-455). PMLR.
+1. <a id="vaswani2017attention">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, Ł. and Polosukhin, I.</a>, 2017. Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
 
 ## Footnotes
 
