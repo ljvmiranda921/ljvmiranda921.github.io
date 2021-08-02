@@ -65,7 +65,7 @@ explainer](https://openai.com/blog/clip/). It's comprehensive and accessible.
 <div style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 <b>Contents</b><br>
 <ul>
-    <li>How we see images: a theory of perception</li>
+    <li><a href="#perception">How we see images: a theory of perception</a></li>
     <li>Using Transformers to model interactions</li>
     <li>Expressing modalities through a codebook</li>
     <li>Training the codebook using a GAN</li>
@@ -81,7 +81,7 @@ explainer](https://openai.com/blog/clip/). It's comprehensive and accessible.
 <br>
 
 
-## How we see images: a theory of perception
+## <a id="perception"></a> How we see images: a theory of perception
 
 One thing that I like about VQGAN is that it prescribes an explanation of how
 we see things&mdash; a *theory of perception*, if you may. As a motivating
@@ -120,10 +120,15 @@ Of course, this idea didn't originate solely from VQGAN. A lot of work has been
 done to explore complex reasoning through discrete representations
 ([Salakhutdinov and Hinton, 2009](#salakhutdinov2009boltzmann), [Mnih and
 Gregor, 2014](#mnih2014neural), and [Oord et al, 2017](#oord2017discrete)).
-However, the bulk of computer vision (CV) techniques don't think in terms of
-modalities, they think in terms of *pixels*:
+**However, the bulk of computer vision (CV) techniques don't think in terms of
+modalities, they think in terms of pixels**:
 
-<!-- draw something here -->
+![](/assets/png/vqgan/lenna_pixels.png){:width="320px"}  
+<br>
+__Figure:__ *A close-up of the Lenna image. Each square represents a pixel with
+three channels: red, green, and blue. Each channel has a continuous value and
+affects the resulting color of the pixel.*
+{: style="text-align: center; margin: 1.5em"}
 
 Instead of thinking in terms of large chunks of information, common CV
 techniques focus on the smallest unit of an image. Each pixel has three
@@ -149,6 +154,11 @@ To recap, we now have an interesting view of perception that allows us to model
 long-range dependencies by representing images discretely. Yet, we still
 shouldn't ignore pixel-based approaches so we can also learn local interactions
 and compose visual parts. 
+
+| Approach   | Examples                                             | Can model                           | Analogy    |
+|------------|------------------------------------------------------|-------------------------------------|------------|
+| Discrete   | Sequence of symbols, words, phrases, and sentences   | Long-range dependencies             | Perceiving |
+| Continuous | RGB channels in a pixel, convolutional filters, etc. | Local interactions and visual parts | Sensing    |
 
 
 
@@ -192,4 +202,4 @@ Everything is still in pixels -->
 ## Footnotes
 
 [^1]: You might see VQGAN-CLIP being written as CLIP-VQGAN, CLIP+VQGAN, or VQGAN+CLIP. The order doesn't matter and the dash symbol isn't an operation. They're all the same thing.
-[^2]: It may not be how we perceive the world around us, but it may be how we *sense* it. Note that our eyes are composed of [*cone cells*](https://en.wikipedia.org/wiki/Cone_cell) that respond differently to different wavelengths.
+[^2]: It may not be how we perceive the world around us, but it may be how we *sense* it. Note that our eyes are composed of [*cone cells*](https://en.wikipedia.org/wiki/Cone_cell) that respond differently to different wavelengths. We can treat these cones analogous to a pixel's RGB channels.
