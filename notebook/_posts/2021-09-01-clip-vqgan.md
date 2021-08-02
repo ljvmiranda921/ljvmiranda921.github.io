@@ -103,8 +103,9 @@ symbolic, we ascribe meaning through discrete representations and modalities.**
 > ascribe meaning through discrete representations and modalities.
 
 This symbolic approach allows us to understand relationships between different
-words or symbols. In literature, this is commonly known as being able to model
-[long-range dependencies](https://en.wikipedia.org/wiki/Long-range_dependence).
+words or symbols. In literature, this is commonly known as being able to **model
+[long-range
+dependencies](https://en.wikipedia.org/wiki/Long-range_dependence)**.
 For example, in the sentence "a lady with a feathered hat looking back," we
 know that `looking back` refers to the `lady`'s action while `feathered`
 refers to the `hat`'s description.
