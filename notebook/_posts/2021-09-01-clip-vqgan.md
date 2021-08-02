@@ -22,7 +22,7 @@ excerpt: |
 Twitter by storm**. Everyday, we see new AI-generated artworks being shared
 across our feeds. All of these were made possible thanks to the [VQGAN-CLIP
 Colab
-Notebook](https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W?usp=sharing#scrollTo=g7EDme5RYCrt)[^1]
+Notebook](https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W?usp=sharing#scrollTo=g7EDme5RYCrt)
 of [@advadnoun](https://twitter.com/advadnoun) and
 [@RiversHaveWings](https://twitter.com/RiversHaveWings). They were able to
 combine the generative capabilities of VQGAN ([Esser et al,
@@ -40,7 +40,8 @@ Also includes some works from [@images_ai](https://twitter.com/images_ai).*
 
 First things first: VQGAN stands for Vector Quantized Generative Adversarial
 Network, while CLIP stands for Contrastive Image-Language Pretraining. Whenever
-we say VQGAN-CLIP, we refer to the interaction between those two networks.
+we say VQGAN-CLIP[^1], we refer to the interaction between these two networks.
+They're separate models that work in tandem.
 
 In essence, the way they work is that VQGAN generates the images, while CLIP
 judges how well an image matches our text prompt. This interaction guide our
@@ -82,7 +83,79 @@ explainer](https://openai.com/blog/clip/). It's comprehensive and accessible.
 
 ## How we see images: a theory of perception
 
-If I show you this picture, how would you describe it?
+One thing that I like about VQGAN is that it prescribes an explanation of how
+we see things&mdash; a *theory of perception*, if you may. As a motivating
+example, if I ask you to describe this picture below, what would you say?
+
+![](/assets/png/vqgan/lenna_test_image.png){:width="360px"}  
+<br>
+__Figure:__ *If I ask you to describe this picture, what would you say?*
+{: style="text-align: center; margin: 1.5em"}
+
+Some of you may describe *"a lady with a feathered hat looking back,"* or *"a
+woman with a hat."* More discerning folks in the field might describe this as
+*"the Lenna standard test image in computer vision."*  Nevertheless, we seem to
+encounter images through discrete representations: `woman`, `feathered
+hat`, `Lenna`, etc. **This theory of perception suggests that our visual reasoning is
+symbolic, we ascribe meaning through discrete representations and modalities.**
+
+> This theory of perception suggests that our visual reasoning is symbolic, we
+> ascribe meaning through discrete representations and modalities.
+
+This symbolic approach allows us to understand relationships between different
+words or symbols. In literature, this is commonly known as being able to model
+[long-range dependencies](https://en.wikipedia.org/wiki/Long-range_dependence).
+For example, in the sentence "a lady with a feathered hat looking back," we
+know that `looking back` refers to `lady`'s action while `feathered`
+refers to the `hat`'s description 
+
+![](/assets/png/vqgan/lrd.png){:width="480px"}  
+<br>
+__Figure:__ *Discrete, symbolic representations allow us to understand
+relationships,   
+i.e., to model long-range dependencies*
+{: style="text-align: center; margin: 1.5em"}
+
+Of course, this idea didn't originate solely from VQGAN. A lot of work has been
+done to explore complex reasoning through discrete representations
+([Salakhutdinov and Hinton, 2009](#salakhutdinov2009boltzmann), [Mnih and
+Gregor, 2014](#mnih2014neural), and [Oord et al, 2017](#oord2017discrete)).
+However, the bulk of computer vision (CV) techniques don't think in terms of
+modalities, they think in terms of *pixels*:
+
+<!-- draw something here -->
+
+Instead of thinking in terms of large chunks of information, common CV
+techniques focus on the smallest unit of an image. Each pixel has three
+channels&mdash;red, green, blue&mdash; that represent its color value in a
+continuous scale. Needless to say, this *may* not be how our perception
+works.[^2]
+
+Despite all of these, we still shouldn't ignore the pixel-based approach.
+Convolutional neural networks (CNN) proved that we can model local interactions
+between pixels, allowing us to compose them together and create visual parts.
+The premier example of this is the feature map below, where a CNN learned how
+to compose pixels at varying layers of abstraction: pixels become edges, edges
+become shapes, and shapes become parts.
+
+![](/assets/png/vqgan/cnn_features.png){:width="520px"}  
+<br>
+__Figure:__ *A convolutional neural network feature map showing features at
+different levels   
+(photo from [Tejpal Virdi, 2017](https://tvirdi.github.io/2017-10-29/cnn/))*
+{: style="text-align: center; margin: 1.5em"}
+
+To recap, we now have an interesting view of perception that allows us to model
+long-range dependencies by representing images discretely. Yet, we still
+shouldn't ignore pixel-based approaches so we can also learn local interactions
+and compose visual parts. 
+
+
+
+
+
+
+
 
 <!-- key takeaway: we don't think in terms of pixels, we think in terms of
 modalities -->
@@ -111,9 +184,12 @@ Everything is still in pixels -->
 ## References
 
 1. <a id="esser2021vqgan">Esser, P., Rombach, R. and Ommer, B.</a>, 2021. Taming transformers for high-resolution image synthesis. In *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition* (pp. 12873-12883).
-2. <a id="radford2021clip">Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J. and Krueger, G.</a>, 2021. Learning transferable visual models from natural language supervision. *arXiv preprint arXiv:2103.00020*.
+1. <a id="mnih2014neural">Mnih, A. and Gregor, K.</a>, 2014, June. Neural variational inference and learning in belief networks. In International Conference on Machine Learning (pp. 1791-1799). PMLR.
+1. <a id="oord2017discrete">Oord, A.V.D., Vinyals, O. and Kavukcuoglu, K.</a>, 2017. Neural discrete representation learning. arXiv preprint arXiv:1711.00937.
+1. <a id="radford2021clip">Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J. and Krueger, G.</a>, 2021. Learning transferable visual models from natural language supervision. *arXiv preprint arXiv:2103.00020*.
+1. <a id="salakhutdinov2009boltzmann">Salakhutdinov, R. and Hinton, G., 2009</a>, April. Deep boltzmann machines. In Artificial intelligence and statistics (pp. 448-455). PMLR.
 
 ## Footnotes
 
 [^1]: You might see VQGAN-CLIP being written as CLIP-VQGAN, CLIP+VQGAN, or VQGAN+CLIP. The order doesn't matter and the dash symbol isn't an operation. They're all the same thing.
-
+[^2]: It may not be how we perceive the world around us, but it may be how we *sense* it. Note that our eyes are composed of [*cone cells*](https://en.wikipedia.org/wiki/Cone_cell) that respond differently to different wavelengths.
