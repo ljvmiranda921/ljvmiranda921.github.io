@@ -112,16 +112,16 @@ refers to the `hat`'s description.
 
 ![](/assets/png/vqgan/lrd.png){:width="480px"}  
 <br>
-__Figure:__ *Discrete, symbolic representations allow us to understand
-relationships,   
-i.e., to model long-range dependencies*
+__Figure:__ *A discrete representation allows us to understand
+relationships across symbols   
+or model long-range dependencies*
 {: style="text-align: center; margin: 1.5em"}
 
 Even though a lot of work has been done to explore complex reasoning through discrete
 representations ([Salakhutdinov and Hinton, 2009](#salakhutdinov2009boltzmann),
 [Mnih and Gregor, 2014](#mnih2014neural), and [Oord et al,
 2017](#oord2017discrete)), **most computer vision (CV)
-techniques don't think in terms of modalities. Instead, they think in terms of pixels**:
+techniques don't think in terms of modalities.** Instead, they think in terms of pixels:
 
 ![](/assets/png/vqgan/lenna_pixels.png){:width="320px"}  
 <br>
@@ -152,18 +152,18 @@ different levels
 (photo from [Tejpal Virdi, 2017](https://tvirdi.github.io/2017-10-29/cnn/))*
 {: style="text-align: center; margin: 1.5em"}
 
-By putting it all together, we now have: 
-* an interesting view of perception that allows us to model
-    long-range dependencies by representing images discretely; and, 
-* a pixel-based approach that we shouldn't ignore in order to take advantage of
-    learned local interactions and visual parts.
+Putting it all together, we now have: 
+1. an interesting view of perception that allows us to **model
+    long-range dependencies** by representing images discretely; and, 
+2. a pixel-based approach that we shouldn't ignore in order to take advantage of
+    learned **local interactions** and **visual parts**.
 
 The table below summarizes their differences: 
 
-| Approach   | Examples                                             | Can model                           | Analogy    |
+| Approach   | Examples                                             | Can model                           | Analogy[^4]    |
 |------------|------------------------------------------------------|-------------------------------------|------------|
 | Discrete   | Sequence of symbols, words, phrases, and sentences   | Long-range dependencies             | Perceiving |
-| Continuous | RGB channels in a pixel, convolutional filters, etc. | Local interactions and visual parts | Sensing    |
+| Continuous[^3] | RGB channels in a pixel, convolutional filters, etc. | Local interactions and visual parts | Sensing    |
 
 **VQGAN was able to combine these two approaches.** It can learn not only the
 (1) visual parts of an image, but also the (2) relationship (read: long-range
@@ -209,3 +209,5 @@ Everything is still in pixels -->
 
 [^1]: You might see VQGAN-CLIP being written as CLIP-VQGAN, CLIP+VQGAN, or VQGAN+CLIP. The order doesn't matter and the dash symbol isn't an operation. They're all the same thing.
 [^2]: It may not be how we perceive the world around us, but it may be how we *sense* it. Note that our eyes are composed of [*cone cells*](https://en.wikipedia.org/wiki/Cone_cell) that respond differently to different wavelengths. We can treat these cones analogous to a pixel's RGB channels.
+[^3]: I labeled the pixel-based approach as continuous to complete the story. When normalized, you can think of pixel values as a number between 0 to 1, each representing the intensity or presence of that color.
+[^4]: I will admit that this analogy may be a stretch. However, I'd like to think that even if we reason in a symbolic manner, the way information travels to us is through a continuous variation of light wavelengths. As they say, analogies work until they don't. I may be stretching it a bit far in this column.
