@@ -136,7 +136,7 @@ channels&mdash;red, green, blue&mdash; that represent its color value in a
 continuous scale. Needless to say, this *may* not be how our perception
 works.[^2]
 
-Despite all of these, we still shouldn't ignore the pixel-based approach.
+Despite all of these, we still shouldn't ignore pixel-based approaches.
 Convolutional neural networks (CNN) proved that we can model local interactions
 between pixels, allowing us to compose them together and create visual parts.
 The premier example of this is the feature map below, where a CNN learned how
@@ -153,26 +153,22 @@ different levels
 To recap, we now have an interesting view of perception that allows us to model
 long-range dependencies by representing images discretely. Yet, we still
 shouldn't ignore pixel-based approaches so we can also learn local interactions
-and compose visual parts. 
+and compose visual parts. The table below summarizes the difference: 
 
 | Approach   | Examples                                             | Can model                           | Analogy    |
 |------------|------------------------------------------------------|-------------------------------------|------------|
 | Discrete   | Sequence of symbols, words, phrases, and sentences   | Long-range dependencies             | Perceiving |
 | Continuous | RGB channels in a pixel, convolutional filters, etc. | Local interactions and visual parts | Sensing    |
 
+VQGAN was able to combine these two approaches. It can learn not only the
+(1) visual parts of an image, but also the (2) relationship (read: long-range
+dependencies) between these parts. We know that the former can be done by a
+convolutional neural network, but we still haven't discussed the latter.
 
-
-
-
-
-
-
-<!-- key takeaway: we don't think in terms of pixels, we think in terms of
-modalities -->
-
-<!-- there's also long range dependencies -->
-
-<!-- how should we model modalities? -->
+In the next section, we'll talk about how a Transformer can model long-range
+dependencies between symbols. Transformers have been ubiquitous in
+natural-language processing, and seems to be a nice fit for modelling our
+theory of perception. However, it has one weakness: scale.
 
 ## Using Transformers to model interactions
 
