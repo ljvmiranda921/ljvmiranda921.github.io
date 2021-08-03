@@ -194,11 +194,11 @@ high-level features that we refer to as visual parts.*
 
 and (2) a discrete approach that learns long-range dependencies across visual parts. We've
 also alluded that the latter is done by a Transformer network. Finally, we
-mentioned that VQGAN was able to combine the two approaches. 
+mentioned that VQGAN was able to take advantage of the two approaches. 
 
 The logical next step is to combine them together. One way is to directly feed
-the feature map into a Transformer. We can flatten the pixels of a feature map
-into a sequence and use that as input: 
+the feature map into a Transformer. We can flatten the pixels of each visual
+part into a sequence and use that as input: 
 
 
 ![](/assets/png/vqgan/flatten_pixels.png){:width="720px"}  
@@ -212,7 +212,8 @@ it into a Transformer network (Note that the 4x4 size in the figure is illustrat
 encountered a limitation in the transformer network: it scales quadratically
 with the length of the input sequence. A 224 x 224 px image will have a length
 of $$224^2 \times 3$$, way above the capacity of a GPU. As a result, they
-reduced the context by downsampling the 224-px image to 32, 48, and 64.
+reduced the context by downsampling the 224-px image to 32-, 48-, and 64 pixel
+dimensions.
 
 The reason Transformers scale quadratically is because they have to compute the
 pairwise interaction between all elements...
