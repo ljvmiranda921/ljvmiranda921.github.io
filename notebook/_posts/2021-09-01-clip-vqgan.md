@@ -208,12 +208,12 @@ it into a Transformer network (Note that the 4x4 size in the figure is illustrat
 {: style="text-align: center; margin: 1.5em"}
 
 
-[Chen et al (2020)](#chen2020pixels) has explored this approach. However, they
-encountered a limitation in the transformer network: it scales quadratically
-with the length of the input sequence. A 224 x 224 px image will have a length
-of $$224^2 \times 3$$, way above the capacity of a GPU. As a result, they
-reduced the context by downsampling the 224-px image to 32-, 48-, and 64 pixel
-dimensions.
+[Chen et al (2020)](#chen2020pixels) explored this approach. However,
+they encountered a limitation in the transformer network: it scales
+quadratically with the length of the input sequence. A 224 x 224 px image will
+have a length of $$224^2 \times 3$$, way above the capacity of a GPU. As a
+result, they reduced the context by downsampling the 224-px image to 32-, 48-,
+and 64 pixel dimensions.
 
 The reason Transformers scale quadratically is because they have to compute the
 pairwise interaction between all elements...
