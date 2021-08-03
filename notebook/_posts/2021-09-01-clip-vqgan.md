@@ -181,6 +181,46 @@ one weakness: it doesn't scale well to images.**
 
 ## Using Transformers to model interactions
 
+In the previous section, we introduced two approaches for handling images: (1)
+a continuous approach that learns visual parts using a convolutional neural
+network&mdash; 
+
+![](/assets/png/vqgan/cnn_diagram.png){:width="520px"}  
+<br>
+__Figure:__ *Given an image dataset, a convolutional neural network can learn
+high-level features that we refer to as visual parts.*
+{: style="text-align: center; margin: 1.5em"}
+
+
+and (2) a discrete approach that learns long-range dependencies across visual parts. We've
+also alluded that the latter is done by a Transformer network. Finally, we
+mentioned that VQGAN was able to combine the two approaches. The next question
+is, *how do we put them together?*
+
+One way is to directly feed the feature map into a Transformer. We can flatten
+the pixels of a feature map into a sequence and use that as input: 
+
+
+[Chen et al (2020)](#chen2020pixels) has explored this approach. However, they
+encountered a limitation in the transformer network: it scales quadratically
+with the length of the input sequence. A 224 x 224 px image will have a length
+of $$224^2 \times 3$$, way above the capacity of a GPU. As a result, they
+reduced the context by downsampling the 224-px image to 32, 48, and 64.
+
+The reason Transformers scale quadratically is because they have to compute the
+pairwise interaction between all elements...
+
+<!-- maybe image of a transformer doing a compute -->
+
+
+There have been many attempts to circumvent the scaling issue, but it paid the
+cost of not being able to synthesize high-resolution imagery.
+
+<!-- image of a broken chain in your diagram -->
+
+<!-- so what did VQGAN do? -->
+
+
 <!-- transformers have been proven to be good at long sequences and capture
 long-range dependencies, we should take advantage of that -->
 
@@ -198,6 +238,7 @@ Everything is still in pixels -->
 
 ## References
 
+1. <a id="chen2020pixels">Chen, M., Radford, A., Child, R., Wu, J., Jun, H., Luan, D. and Sutskever, I.</a>, 2020, November. Generative pretraining from pixels. In International Conference on Machine Learning (pp. 1691-1703). PMLR.
 1. <a id="esser2021vqgan">Esser, P., Rombach, R. and Ommer, B.</a>, 2021. Taming transformers for high-resolution image synthesis. In *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition* (pp. 12873-12883).
 1. <a id="gu2018cnn">Gu, J., Wang, Z., Kuen, J., Ma, L., Shahroudy, A., Shuai, B., Liu, T., Wang, X., Wang, G., Cai, J. and Chen, T.</a>, 2018. Recent advances in convolutional neural networks. Pattern Recognition, 77, pp.354-377.
 1. <a id="mnih2014neural">Mnih, A. and Gregor, K.</a>, 2014, June. Neural variational inference and learning in belief networks. In International Conference on Machine Learning (pp. 1791-1799). PMLR.
