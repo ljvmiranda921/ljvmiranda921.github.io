@@ -194,11 +194,18 @@ high-level features that we refer to as visual parts.*
 
 and (2) a discrete approach that learns long-range dependencies across visual parts. We've
 also alluded that the latter is done by a Transformer network. Finally, we
-mentioned that VQGAN was able to combine the two approaches. The next question
-is, *how do we put them together?*
+mentioned that VQGAN was able to combine the two approaches. 
 
-One way is to directly feed the feature map into a Transformer. We can flatten
-the pixels of a feature map into a sequence and use that as input: 
+The logical next step is to combine them together. One way is to directly feed
+the feature map into a Transformer. We can flatten the pixels of a feature map
+into a sequence and use that as input: 
+
+
+![](/assets/png/vqgan/flatten_pixels.png){:width="720px"}  
+<br>
+__Figure:__ *We can flatten the learned visual parts into a sequence and feed
+it into a Transformer network (Note that the 4x4 size in the figure is illustrative).*
+{: style="text-align: center; margin: 1.5em"}
 
 
 [Chen et al (2020)](#chen2020pixels) has explored this approach. However, they
