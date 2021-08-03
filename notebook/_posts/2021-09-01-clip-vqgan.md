@@ -57,9 +57,9 @@ done throughout many iterations until the generator learns to produce more
 **However, I'm more interested in how VQGAN works.** It seems to prescribe a
 theory of perception that I find interesting. That's why I'll be focusing on
 the paper, ["Taming Transformers for high-resolution images
-synthesis."](https://arxiv.org/abs/2012.09841) On the other hand, if you want
+synthesis."](https://arxiv.org/abs/2012.09841) On the other hand, if you wish
 to learn more about CLIP, I suggest reading [OpenAI's
-explainer](https://openai.com/blog/clip/). It's comprehensive and accessible. 
+explainer](https://openai.com/blog/clip/)&mdash;it's comprehensive and accessible. 
 
 
 <div style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
@@ -92,12 +92,13 @@ example, if I ask you to describe this picture below, what would you say?
 __Figure:__ *If I ask you to describe this picture, what would you say?*
 {: style="text-align: center; margin: 1.5em"}
 
-Some of you may describe *"a lady with a feathered hat looking back,"* or *"a
-woman with a hat."* More discerning folks in the field might describe this as
-*"the Lenna standard test image in computer vision."*  Nevertheless, we seem to
-encounter images through discrete representations: `woman`, `feathered hat`, or
-`Lenna`. This theory of perception suggests that **our visual reasoning is
-symbolic, we ascribe meaning through discrete representations and modalities.**
+Some of you may describe this as *"a lady with a feathered hat looking back,"*
+or *"a woman with a hat."* More discerning folks in the field might describe
+this as *"the Lenna standard test image in computer vision."*  Nevertheless, we
+seem to encounter images through discrete representations: `woman`, `feathered
+hat`, or `Lenna`. This theory of perception suggests that **our visual
+reasoning is symbolic, we ascribe meaning through discrete representations and
+modalities.**
 
 > This theory of perception suggests that our visual reasoning is symbolic, we
 > ascribe meaning through discrete representations and modalities.
@@ -107,7 +108,7 @@ words or symbols. In literature, this is commonly known as being able to **model
 [long-range
 dependencies](https://en.wikipedia.org/wiki/Long-range_dependence)**.
 For example, in the sentence "a lady with a feathered hat looking back," we
-know that `looking back` refers to the `lady`'s action while `feathered`
+knew that `looking back` refers to the `lady`'s action while `feathered`
 refers to the `hat`'s description.
 
 ![](/assets/png/vqgan/lrd.png){:width="480px"}  
@@ -158,17 +159,17 @@ Putting it all together, we now have:
 2. a pixel-based approach that we shouldn't ignore in order to take advantage of
     learned **local interactions** and **visual parts**.
 
-The table below summarizes their differences: 
+**VQGAN was able to combine these two approaches.** It can learn not only the
+(1) visual parts of an image, but also the (2) relationship (read: long-range
+dependencies) between these parts. We knew that the former can be done by a
+convolutional neural network, but we still have to discuss the latter.
+The table below summarizes the two: 
 
 | Approach   | Examples                                             | Can model                           | Analogy[^4]    |
 |------------|------------------------------------------------------|-------------------------------------|------------|
 | Discrete   | Sequence of symbols, words, phrases, and sentences   | Long-range dependencies             | Perceiving |
 | Continuous[^3] | RGB channels in a pixel, convolutional filters, etc. | Local interactions and visual parts | Sensing    |
 
-**VQGAN was able to combine these two approaches.** It can learn not only the
-(1) visual parts of an image, but also the (2) relationship (read: long-range
-dependencies) between these parts. We knew that the former can be done by a
-convolutional neural network, but we still have to discuss the latter.
 
 > VQGAN can learn not only the visual parts of an image, but also their relationships
 
