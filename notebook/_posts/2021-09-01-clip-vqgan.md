@@ -207,34 +207,45 @@ __Figure:__ *We can flatten the learned visual parts into a sequence and feed
 it into a Transformer network (Note that the 4x4 size in the figure is illustrative).*
 {: style="text-align: center; margin: 1.5em"}
 
-
-[Chen et al (2020)](#chen2020pixels) explored this approach. However,
-they encountered a limitation in the transformer network: it scales
+[Chen et al (2020)](#chen2020pixels) explored this approach. However, they
+encountered a limitation in the transformer network: its computation scales
 quadratically with the length of the input sequence. A 224 x 224 px image will
 have a length of $$224^2 \times 3$$, way above the capacity of a GPU. As a
 result, they reduced the context by downsampling the 224-px image to 32-, 48-,
 and 64 pixel dimensions.
 
-The reason Transformers scale quadratically is because they have to compute the
-pairwise interaction between all elements...
+The reason Transformers scale quadratically is because of its attention
+mechanism ([Vaswani et al, 2017](#vaswani2017attention)), where it computes for
+the pairwise inner product between each pair of the tokenized words. Through
+this method, it can learn about the long-range dependencies between tokens.
 
-<!-- maybe image of a transformer doing a compute -->
+![](/assets/png/vqgan/transformer_diagram.png){:width="580px"}  <br>
+__Figure:__ *Transfromer works through its attention mechanism. It's a
+quadratic operation that scales with the length of the input sequence*
+{: style="text-align: center; margin: 1.5em"}
+
+There have been many attempts to circumvent the scaling issue, but at the cost
+of not being able to synthesize high-resolution imagery or making assumptions
+on pixel information. These were done by restricting the receptive fields of
+the attention modules ([Parmar et al, 2018](#parmar2018transformer) and
+[Weiseenborn et al, 2019](weissenborn2019video)), using sparse networks ([Child
+et al, 2019](#child2019sparse)), or training from image patches ([Dosovitskiy
+et al, 2020](#dosovitskiy2020vit)). Nevertheless, we see a two-stage approach
+common across all works. 
+
+![](/assets/png/vqgan/two_stage_v0.png){:width="720px"}  
+<br>
+__Figure:__ *Common to most techniques is a two-stage approach that first learns
+a representation from the image and encodes it to an intermediary form before
+feeding into a transformer (or any autoregressive network).*
+{: style="text-align: center; margin: 1.5em"}
 
 
-There have been many attempts to circumvent the scaling issue, but it paid the
-cost of not being able to synthesize high-resolution imagery.
-
-<!-- image of a broken chain in your diagram -->
-
-<!-- so what did VQGAN do? -->
-
-
-<!-- transformers have been proven to be good at long sequences and capture
-long-range dependencies, we should take advantage of that -->
-
-<!-- However, the problem is that using transformers is not scaleable.
-Everything is still in pixels -->
-
+**VQGAN employes the same two-stage structure, where it learns an intermediary
+representation before feeding it to a transformer.** However, instead of
+downsampling the image, VQGAN uses a **codebook** to represent visual parts.
+This codebook is created by performing vector quantization (VQ), which we'll
+discuss in the next section.
 
 ## Expressing modalities through a codebook 
 
@@ -247,12 +258,16 @@ Everything is still in pixels -->
 ## References
 
 1. <a id="chen2020pixels">Chen, M., Radford, A., Child, R., Wu, J., Jun, H., Luan, D. and Sutskever, I.</a>, 2020, November. Generative pretraining from pixels. In International Conference on Machine Learning (pp. 1691-1703). PMLR.
+1. <a id="child2019sparse">Child, R., Gray, S., Radford, A. and Sutskever, I.</a>, 2019. Generating long sequences with sparse transformers. arXiv preprint arXiv:1904.10509.
+1. <a id="dosovitskiy2020vit">Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S. and Uszkoreit, J.</a>, 2020. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929.
 1. <a id="esser2021vqgan">Esser, P., Rombach, R. and Ommer, B.</a>, 2021. Taming transformers for high-resolution image synthesis. In *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition* (pp. 12873-12883).
 1. <a id="gu2018cnn">Gu, J., Wang, Z., Kuen, J., Ma, L., Shahroudy, A., Shuai, B., Liu, T., Wang, X., Wang, G., Cai, J. and Chen, T.</a>, 2018. Recent advances in convolutional neural networks. Pattern Recognition, 77, pp.354-377.
 1. <a id="mnih2014neural">Mnih, A. and Gregor, K.</a>, 2014, June. Neural variational inference and learning in belief networks. In International Conference on Machine Learning (pp. 1791-1799). PMLR.
 1. <a id="oord2017discrete">Oord, A.V.D., Vinyals, O. and Kavukcuoglu, K.</a>, 2017. Neural discrete representation learning. arXiv preprint arXiv:1711.00937.
+1. <a id="parmar2018transformer">Parmar, N., Vaswani, A., Uszkoreit, J., Kaiser, L., Shazeer, N., Ku, A. and Tran</a>, D., 2018, July. Image transformer. In International Conference on Machine Learning (pp. 4055-4064). PMLR.
 1. <a id="radford2021clip">Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J. and Krueger, G.</a>, 2021. Learning transferable visual models from natural language supervision. *arXiv preprint arXiv:2103.00020*.
 1. <a id="salakhutdinov2009boltzmann">Salakhutdinov, R. and Hinton, G., 2009</a>, April. Deep boltzmann machines. In Artificial intelligence and statistics (pp. 448-455). PMLR.
+1. <a id="weissenborn2019video">Weissenborn, D., Täckström, O. and Uszkoreit, J.</a>, 2019. Scaling autoregressive video models. arXiv preprint arXiv:1906.02634.
 1. <a id="vaswani2017attention">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, Ł. and Polosukhin, I.</a>, 2017. Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
 
 ## Footnotes
