@@ -67,18 +67,17 @@ explainer](https://openai.com/blog/clip/)&mdash;it's comprehensive and accessibl
 <ul>
     <li><a href="#perception">How we see images: a theory of perception</a></li>
     <li><a href="#transformers">Using Transformers to model interactions</a></li>
-    <li>Expressing images through a codebook</li>
-    <li>Training VQGAN</li>
+    <li><a href="#codebook">Expressing images through a codebook</a></li>
+    <li><a href="#training">Training VQGAN</a></li>
     <ul>
-        <li>Training the GAN</li>
-        <li>Training the Transformer</li>
-        <li>Reducing complexity via sliding attention</li>
+        <li><a href="#training-gan">Training the GAN</a></li>
+        <li><a href="#training-transformer">Training the Transformer</a></li>
     </ul>
+    <li><a href="#conclusion">Conclusion</a></li>
 </ul>
 <b>Appendix</b>
 <ol>
     <li>Literature leading to VQGAN</li>
-    <li>Revisiting CLIP</li>
 </ol>
 </div>
 
@@ -257,7 +256,7 @@ from the *codewords* of the learned codebook.
 This codebook is created by performing vector quantization (VQ), and we'll
 discuss it more in the next section.
 
-## Expressing images through a codebook 
+## <a id="codebook"></a> Expressing images through a codebook 
 
 In the previous section, we mentioned that VQGAN was able to solve
 Transformer's scaling problem by using an intermediate representation known as
@@ -295,13 +294,14 @@ finds
 the representative centroids for each cluster.*
 {: style="text-align: center; margin: 1.5em"}
 
+On a conceptual (and admittedly, handwavy) level, we can think of these
+codewords as the discrete symbols that we used in our earlier examples: `lady`,
+`feathered hat`, `night`, `moon`, `city`, or `rain`. By training them with a
+transformer is when we start to uncover their relationships: "there's moon at
+night," "lady wears a hat on her head," or "it's cloudy when it rains."[^5]
 
 
-<!-- here, just talk about how VQ works -->
-
-<!-- talk about VAE structure in VQ-VAE -->
-
-## Training VQGAN
+## <a href="training"></a> Training VQGAN
 
 At this point, we now have all the ingredients needed to discuss how VQGAN is
 trained:
@@ -327,12 +327,12 @@ Training also happens in two stages:
    learn long-range interactions across visual parts. 
 
 
-### Training the GAN
+### <a href="training-gan"></a> Training the GAN
 
-### Training the transformer
+### <a href="training-transformer"></a> Training the transformer
 
 
-## Conclusion
+## <a href="conclusion"></a> Conclusion
 
 
 
@@ -358,3 +358,4 @@ Training also happens in two stages:
 [^2]: It may not be how we perceive the world around us, but it may be how we *sense* it. Note that our eyes are composed of [*cone cells*](https://en.wikipedia.org/wiki/Cone_cell) that respond differently to different wavelengths. We can treat these cones analogous to a pixel's RGB channels.
 [^3]: I labeled the pixel-based approach as continuous to complete the story. When normalized, you can think of pixel values as a number between 0 to 1, each representing the intensity or presence of that color.
 [^4]: I will admit that this analogy may be a stretch. However, I'd like to think that even if we reason in a symbolic manner, the way information travels to us is through a continuous variation of light wavelengths. As they say, analogies work until they don't. I may be stretching it a bit far in this column.
+[^5]: Again, treat this paragraph with a grain of salt. It's difficult to truly interpret (i.e., rigorously and empirically) what each codeword represents, moreso their interactions once fed to a transformer. For explanation's sake, just know that at the end of the vector quantization process, we now have discrete inputs that can easily scale with our transformer network.
