@@ -67,9 +67,13 @@ explainer](https://openai.com/blog/clip/)&mdash;it's comprehensive and accessibl
 <ul>
     <li><a href="#perception">How we see images: a theory of perception</a></li>
     <li><a href="#transformers">Using Transformers to model interactions</a></li>
-    <li>Expressing modalities through a codebook</li>
-    <li>Training the codebook using a GAN</li>
-    <li>Cost-function tricks</li>
+    <li>Expressing images through a codebook</li>
+    <li>Training VQGAN</li>
+    <ul>
+        <li>Training the GAN</li>
+        <li>Training the Transformer</li>
+        <li>Reducing complexity via sliding attention</li>
+    </ul>
 </ul>
 <b>Appendix</b>
 <ol>
@@ -253,7 +257,7 @@ from the *codewords* of the learned codebook.
 This codebook is created by performing vector quantization (VQ), and we'll
 discuss it more in the next section.
 
-## Expressing modalities through a codebook 
+## Expressing images through a codebook 
 
 In the previous section, we mentioned that VQGAN was able to solve
 Transformer's scaling problem by using an intermediate representation known as
@@ -279,13 +283,36 @@ expensive to pass it to a transformer network.
 
 <!-- here, just talk about how VQ works -->
 
-## VQGAN Training
+## Training VQGAN
+
+At this point, we now have all the ingredients needed to discuss how VQGAN is
+trained:
+
+*  A **convolutional neural network to learn an image's visual parts.** Later,
+      we'll talk about generative adversarial networks (GAN), a CNN architecture that
+      allows learning of higher-quality visual features.
+* A **transformer network to learn long-range dependencies.** Given a discrete
+       representation, a transformer allows us to understand relationships across
+       visual parts. 
+* A **codebook obtained via vector quantization.** It consists of discrete
+       codewords that allows us to easily train a transformer on top of it.
+
+Again, these three components make up a **two-stage approach** as seen in the
+figure below:
+
+
+Training also happens in two stages:
+
+1. Training the GAN from a dataset of images to learn not only its visual
+   parts, but also their codeword representation, i.e., the codebok.
+2. Training the Transformer on top of the codebook with sliding attention to
+   learn long-range interactions across visual parts. 
+
 
 ### Training the GAN
 
 ### Training the transformer
 
-### Sliding attention
 
 ## Conclusion
 
