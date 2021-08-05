@@ -301,7 +301,7 @@ transformer is when we start to uncover their relationships: "there's moon at
 night," "lady wears a hat on her head," or "it's cloudy when it rains."[^5]
 
 
-## <a href="training"></a> Training VQGAN
+## <a id="training"></a> Training VQGAN
 
 At this point, we now have all the ingredients needed to discuss how VQGAN is
 trained:
@@ -327,12 +327,12 @@ Training also happens in two stages:
    learn long-range interactions across visual parts. 
 
 
-### <a href="training-gan"></a> Training the GAN
+### <a id="training-gan"></a> Training the GAN
 
-### <a href="training-transformer"></a> Training the transformer
+### <a id="training-transformer"></a> Training the transformer
 
 
-## <a href="conclusion"></a> Conclusion
+## <a id="conclusion"></a> Conclusion
 
 
 
