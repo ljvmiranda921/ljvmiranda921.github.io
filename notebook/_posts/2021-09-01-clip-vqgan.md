@@ -153,13 +153,13 @@ different levels
 (photo from [Tejpal Virdi, 2017](https://tvirdi.github.io/2017-10-29/cnn/))*
 {: style="text-align: center; margin: 1.5em"}
 
-Putting it all together, we now have: 
+Putting it all together, we now have two complementary techniques: 
 1. an interesting view of perception that allows us to **model
     long-range dependencies** by representing images discretely; and&mdash;
 2. a pixel-based approach that we shouldn't ignore in order to take advantage of
     learned **local interactions** and **visual parts**.
 
-**VQGAN was able to combine these two approaches.** It can learn not only the
+**VQGAN was able to combine both of them.** It can learn not only the
 (1) visual parts of an image, but also the (2) relationship (read: long-range
 dependencies) between these parts. We knew that the former can be done by a
 convolutional neural network, but we still have to discuss the latter.
@@ -244,12 +244,18 @@ feeding into a transformer (or any autoregressive network).*
 **VQGAN employs the same two-stage structure, where it learns an intermediary
 representation before feeding it to a transformer.** However, instead of
 downsampling the image, VQGAN uses a **codebook** to represent visual parts.
-This codebook is created by performing vector quantization (VQ), which we'll
-discuss in the next section.
+The authors did not model the image from a pixel-level directly, but instead
+from the *codewords* of the learned codebook.
+
+> VQGAN did not model the image from a pixel-level directly, but instead from
+> the codewords of the learned codebook.
+
+This codebook is created by performing vector quantization (VQ), and we'll
+discuss it more in the next section.
 
 ## Expressing modalities through a codebook 
 
-In the previous section, we mentioned that VQGAN was able to solve the
+In the previous section, we mentioned that VQGAN was able to solve
 Transformer's scaling problem by using an intermediate representation known as
 a *codebook*. This codebook serves as the bridge for the two-stage approach
 found in most image transformer techniques:
@@ -264,18 +270,25 @@ quantization (VQ).*
 
 **The codebook is generated through a process called vector quantization
 (VQ)**, i.e., the "VQ" part of "VQGAN." Vector quantization is a signal
-processing technique for encoding vectors. It consists of two main steps:
-codebook training and codevector matching. We'll talk about these processes in
-this section.
+processing technique for encoding vectors. In VQGAN, this process was used to
+create a quantized representation of various visual parts. 
+Once in discrete form, it is now straightforward and less computationally
+expensive to pass it to a transformer network.
 
 
 
+<!-- here, just talk about how VQ works -->
 
+## VQGAN Training
 
+### Training the GAN
 
-## Training the codebook using a GAN (w/ VQ)
+### Training the transformer
 
-## Cost-function tricks
+### Sliding attention
+
+## Conclusion
+
 
 
 ## References
