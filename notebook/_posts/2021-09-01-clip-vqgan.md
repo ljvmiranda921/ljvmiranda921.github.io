@@ -321,8 +321,16 @@ trained:
 * A **codebook obtained via vector quantization.** It consists of discrete
         codewords that allows us to easily train a transformer on top of it.
 
-Again, these three components make up a **two-stage approach** as seen in the
-figure below:
+However, we'll make a few tiny change: **instead of having a separate process
+for vector quantization, VQGAN learns the codebook right away.** Learning the
+feature map of visual parts happens inside the GAN. It's still the same
+two-stage approach:
+
+
+![](/assets/png/vqgan/two_stage_v2.png){:width="720px"}  
+<br>
+__Figure:__ *It's still the two-stage approach, but with some minor changes: (1) instead of a typical CNN, we use a GAN, (2) instead of having a separate process for VQ, we learn the codebook right away.*
+{: style="text-align: center; margin: 1.5em"}
 
 
 Training also happens in two stages:
