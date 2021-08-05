@@ -83,7 +83,6 @@ explainer](https://openai.com/blog/clip/)&mdash;it's comprehensive and accessibl
 
 <br>
 
-
 ## <a id="perception"></a> How we see images: a theory of perception
 
 One thing that I like about VQGAN is that it prescribes an explanation of how
@@ -210,6 +209,7 @@ __Figure:__ *We can flatten the learned visual parts into a sequence and feed
 it into a Transformer network (Note that the 4x4 size in the figure is illustrative).*
 {: style="text-align: center; margin: 1.5em"}
 
+
 [Chen et al (2020)](#chen2020pixels) explored this approach. However, they
 encountered a limitation in the transformer network: its computation scales
 quadratically with the length of the input sequence. A 224 x 224 px image will
@@ -242,6 +242,12 @@ __Figure:__ *Common to most techniques is a two-stage approach that first learns
 a representation from the image and encodes it to an intermediary form before
 feeding into a transformer (or any autoregressive network).*
 {: style="text-align: center; margin: 1.5em"}
+
+
+<div style="border:3px; border-style:solid; border-color:#a00000; padding: 1em; margin: 1em">
+<b>Note:</b> The figure above is a process diagram, not an architecture
+diagram. This is true for all similar figures you'll see below.
+</div>
 
 
 **VQGAN employs the same two-stage structure, where it learns an intermediary
@@ -306,14 +312,14 @@ night," "lady wears a hat on her head," or "it's cloudy when it rains."[^5]
 At this point, we now have all the ingredients needed to discuss how VQGAN is
 trained:
 
-*  A **convolutional neural network to learn an image's visual parts.** Later,
-      we'll talk about generative adversarial networks (GAN), a CNN architecture that
-      allows learning of higher-quality visual features.
-* A **transformer network to learn long-range dependencies.** Given a discrete
-       representation, a transformer allows us to understand relationships across
-       visual parts. 
+*  A **convolutional neural network that takes a set of images to learn their visual 
+        parts.** Later, we'll talk about generative adversarial networks (GAN), a
+        CNN architecture that allows learning of higher-quality visual features.
+* A **transformer network that takes a sequence to learn their long-range
+        interactions.** Given a discrete representation, a transformer allows us to
+        understand relationships across visual parts. 
 * A **codebook obtained via vector quantization.** It consists of discrete
-       codewords that allows us to easily train a transformer on top of it.
+        codewords that allows us to easily train a transformer on top of it.
 
 Again, these three components make up a **two-stage approach** as seen in the
 figure below:
