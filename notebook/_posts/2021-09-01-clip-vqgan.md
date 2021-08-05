@@ -135,8 +135,8 @@ affects the resulting color of the pixel.*
 {: style="text-align: center; margin: 1.5em"}
 
 Instead of thinking in terms of large chunks of information, common CV
-techniques focus on the smallest unit of an image. Each pixel has three
-channels&mdash;red, green, blue&mdash; that represent its color value in a
+techniques focus on an image's smallest unit. Each pixel
+channel&mdash;red, green, blue&mdash;represents a color value in a
 continuous scale. Needless to say, this *may* not be how our perception
 works.[^2]
 
@@ -244,13 +244,6 @@ a representation from the image and encodes it to an intermediary form before
 feeding into a transformer (or any autoregressive network).*
 {: style="text-align: center; margin: 1.5em"}
 
-
-<div style="border:3px; border-style:solid; border-color:#a00000; padding: 1em; margin: 1em">
-<b>Note:</b> The figure above is a process diagram, not an architecture
-diagram. This is true for all similar figures you'll see below.
-</div>
-
-
 **VQGAN employs the same two-stage structure, where it learns an intermediary
 representation before feeding it to a transformer.** However, instead of
 downsampling the image, VQGAN uses a **codebook** to represent visual parts.
@@ -261,7 +254,7 @@ from the *codewords* of the learned codebook.
 > the codewords of the learned codebook.
 
 This codebook is created by performing vector quantization (VQ), and we'll
-discuss it more in the next section.
+discuss more of it in the next section.
 
 ## <a id="codebook"></a> Expressing images through a codebook 
 
@@ -304,9 +297,13 @@ the representative centroids for each cluster.*
 On a conceptual (and admittedly, handwavy) level, we can think of these
 codewords as the discrete symbols that we used in our earlier examples: `lady`,
 `feathered hat`, `night`, `moon`, `city`, or `rain`. By training them with a
-transformer is when we start to uncover their relationships: "there's moon at
+transformer, we start to uncover their relationships: "there's moon at
 night," "lady wears a hat on her head," or "it's cloudy when it rains."[^5]
 
+To recap, we are now familiar with the two-stage approach, and the codebook
+that acts as a bridge between them. In the next section, we'll put all of them
+together and make a *few adjustments* to accurately describe the system
+architecture of VQGAN.
 
 ## <a id="together"></a> Putting it all together 
 
@@ -326,7 +323,7 @@ trained:
 {: style="text-align: center; margin: 1.5em"}
 
 
-However, we'll make few tiny changes: 
+However, we'll make a few tiny adjustments: 
 
 * **We'll replace the simple convolutional neural network with a generative
     adversarial network.** This allows the creation of more distinct visual parts
@@ -345,16 +342,14 @@ __Figure:__ *It's still the two-stage approach, but with some minor changes: (1)
 {: style="text-align: center; margin: 1.5em"}
 
 
+## <a id="training"></a> Training VQGAN
+
 Training also happens in two stages:
 
 1. Training the GAN from a dataset of images to learn not only its visual
    parts, but also their codeword representation, i.e., the codebook.
 2. Training the Transformer on top of the codebook with sliding attention to
    learn long-range interactions across visual parts. 
-
-
-## <a id="training"></a> Training VQGAN
-
 
 ### <a id="training-gan"></a> Training the GAN
 
