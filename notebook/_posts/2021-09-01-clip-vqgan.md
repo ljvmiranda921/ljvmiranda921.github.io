@@ -66,7 +66,7 @@ explainer](https://openai.com/blog/clip/)&mdash;it's comprehensive and accessibl
 <b>Contents</b><br>
 <ul>
     <li><a href="#perception">How we see images: a theory of perception</a></li>
-    <li>Using Transformers to model interactions</li>
+    <li><a href="#transformers">Using Transformers to model interactions</a></li>
     <li>Expressing modalities through a codebook</li>
     <li>Training the codebook using a GAN</li>
     <li>Cost-function tricks</li>
@@ -104,12 +104,12 @@ modalities.**
 > ascribe meaning through discrete representations and modalities.
 
 This symbolic approach allows us to understand relationships between different
-words or symbols. In literature, this is commonly known as being able to **model
-[long-range
-dependencies](https://en.wikipedia.org/wiki/Long-range_dependence)**.
-For example, in the sentence "a lady with a feathered hat looking back," we
-knew that `looking back` refers to the `lady`'s action while `feathered`
-refers to the `hat`'s description.
+words or symbols. In machine learning, this is commonly known as being able to
+**model [long-range
+dependencies](https://en.wikipedia.org/wiki/Long-range_dependence)**.  For
+example, in the sentence "a lady with a feathered hat looking back," we knew
+that `looking back` refers to the `lady`'s action while `feathered` refers to
+the `hat`'s description.
 
 ![](/assets/png/vqgan/lrd.png){:width="480px"}  
 <br>
@@ -179,7 +179,7 @@ symbols. Transformers have been ubiquitous in natural-language processing, and
 seems to be a nice fit for modelling our theory of perception. **However, it has
 one weakness: it doesn't scale well to images.**
 
-## Using Transformers to model interactions
+## <a id="transformers"></a> Using Transformers to model interactions
 
 In the previous section, we introduced two approaches for handling images: (1)
 a continuous approach that learns visual parts using a convolutional neural
@@ -241,13 +241,36 @@ feeding into a transformer (or any autoregressive network).*
 {: style="text-align: center; margin: 1.5em"}
 
 
-**VQGAN employes the same two-stage structure, where it learns an intermediary
+**VQGAN employs the same two-stage structure, where it learns an intermediary
 representation before feeding it to a transformer.** However, instead of
 downsampling the image, VQGAN uses a **codebook** to represent visual parts.
 This codebook is created by performing vector quantization (VQ), which we'll
 discuss in the next section.
 
 ## Expressing modalities through a codebook 
+
+In the previous section, we mentioned that VQGAN was able to solve the
+Transformer's scaling problem by using an intermediate representation known as
+a *codebook*. This codebook serves as the bridge for the two-stage approach
+found in most image transformer techniques:
+
+
+![](/assets/png/vqgan/two_stage_v1.png){:width="720px"}  
+<br>
+__Figure:__ *VQGAN employs a codebook as an intermediary representation before
+feeding it to a transformer network. The codebook is then learned using vector
+quantization (VQ).*
+{: style="text-align: center; margin: 1.5em"}
+
+**The codebook is generated through a process called vector quantization
+(VQ)**, i.e., the "VQ" part of "VQGAN." Vector quantization is a signal
+processing technique for encoding vectors. It consists of two main steps:
+codebook training and codevector matching. We'll talk about these processes in
+this section.
+
+
+
+
 
 
 ## Training the codebook using a GAN (w/ VQ)
