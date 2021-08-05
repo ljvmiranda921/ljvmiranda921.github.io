@@ -68,6 +68,7 @@ explainer](https://openai.com/blog/clip/)&mdash;it's comprehensive and accessibl
     <li><a href="#perception">How we see images: a theory of perception</a></li>
     <li><a href="#transformers">Using Transformers to model interactions</a></li>
     <li><a href="#codebook">Expressing images through a codebook</a></li>
+    <li><a href="#together">Putting it all together</a></li>
     <li><a href="#training">Training VQGAN</a></li>
     <ul>
         <li><a href="#training-gan">Training the GAN</a></li>
@@ -307,24 +308,35 @@ transformer is when we start to uncover their relationships: "there's moon at
 night," "lady wears a hat on her head," or "it's cloudy when it rains."[^5]
 
 
-## <a id="training"></a> Training VQGAN
+## <a id="together"></a> Putting it all together 
 
 At this point, we now have all the ingredients needed to discuss how VQGAN is
 trained:
 
 *  A **convolutional neural network that takes a set of images to learn their visual 
-        parts.** Later, we'll talk about generative adversarial networks (GAN), a
-        CNN architecture that allows learning of higher-quality visual features.
+        parts.** By taking advantage of a pixel's local interactions, we can
+        learn high-level features to construct new imagery.
 * A **transformer network that takes a sequence to learn their long-range
         interactions.** Given a discrete representation, a transformer allows us to
         understand relationships across visual parts. 
 * A **codebook obtained via vector quantization.** It consists of discrete
         codewords that allows us to easily train a transformer on top of it.
 
-However, we'll make a few tiny change: **instead of having a separate process
-for vector quantization, VQGAN learns the codebook right away.** Learning the
-feature map of visual parts happens inside the GAN. It's still the same
-two-stage approach:
+![](/assets/png/vqgan/two_stage_v1_5.png){:width="720px"}  
+{: style="text-align: center; margin: 1.5em"}
+
+
+However, we'll make few tiny changes: 
+
+* **We'll replace the simple convolutional neural network with a generative
+    adversarial network.** This allows the creation of more distinct visual parts
+    to synthesize better images.
+*  **Instead of having a separate process for vector quantization, VQGAN learns
+      the codebook right away.** Learning the feature map of visual parts happens
+      inside the GAN. It's still the same
+      two-stage approach
+
+Below is the **final process diagram** for VQGAN:
 
 
 ![](/assets/png/vqgan/two_stage_v2.png){:width="720px"}  
@@ -339,6 +351,9 @@ Training also happens in two stages:
    parts, but also their codeword representation, i.e., the codebook.
 2. Training the Transformer on top of the codebook with sliding attention to
    learn long-range interactions across visual parts. 
+
+
+## <a id="training"></a> Training VQGAN
 
 
 ### <a id="training-gan"></a> Training the GAN
