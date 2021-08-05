@@ -279,9 +279,27 @@ create a quantized representation of various visual parts.
 Once in discrete form, it is now straightforward and less computationally
 expensive to pass it to a transformer network.
 
+One can think of vector quantization as a **process of dividing vectors into
+groups that have approximately the same number of points closest to them**
+([Ballard, 1999](#ballard1999vq)). Each group is then represented by a centroid
+(*codeword*), usually obtained via
+[k-means](https://en.wikipedia.org/wiki/K-means_clustering) or any other
+[clustering algorithm](https://en.wikipedia.org/wiki/Cluster_analysis). In the
+end, one learns a dictionary of centroids (*codebook*)  and their corresponding
+members.
+
+![](/assets/png/vqgan/codebook.png){:width="720px"}  
+<br>
+__Figure:__ *Vector quantization is a classic signal processing technique that
+finds   
+the representative centroids for each cluster.*
+{: style="text-align: center; margin: 1.5em"}
+
 
 
 <!-- here, just talk about how VQ works -->
+
+<!-- talk about VAE structure in VQ-VAE -->
 
 ## Training VQGAN
 
@@ -304,7 +322,7 @@ figure below:
 Training also happens in two stages:
 
 1. Training the GAN from a dataset of images to learn not only its visual
-   parts, but also their codeword representation, i.e., the codebok.
+   parts, but also their codeword representation, i.e., the codebook.
 2. Training the Transformer on top of the codebook with sliding attention to
    learn long-range interactions across visual parts. 
 
@@ -320,6 +338,7 @@ Training also happens in two stages:
 
 ## References
 
+1. <a id="ballard1999vq">Ballard, D.H.</a>, 1999. An introduction to natural computation. MIT press.
 1. <a id="chen2020pixels">Chen, M., Radford, A., Child, R., Wu, J., Jun, H., Luan, D. and Sutskever, I.</a>, 2020, November. Generative pretraining from pixels. In International Conference on Machine Learning (pp. 1691-1703). PMLR.
 1. <a id="child2019sparse">Child, R., Gray, S., Radford, A. and Sutskever, I.</a>, 2019. Generating long sequences with sparse transformers. arXiv preprint arXiv:1904.10509.
 1. <a id="dosovitskiy2020vit">Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S. and Uszkoreit, J.</a>, 2020. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929.
