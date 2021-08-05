@@ -9,13 +9,13 @@ author: "LJ MIRANDA"
 published: true
 tags: [vqgan, machine learning, research, deep learning, neural network, clip vqgan]
 description: |
-    The Vector Quantized Generative Adversarial Network (VQGAN) is a network
-    that allows us to create high-resolution images from text. Let me talk
-    about how it works in this post.
+    VQGAN allows us to generate high-resolution images from text, and has now
+    taken art Twitter by storm. Let me talk about how it works on a conceptual
+    level in this blog post.
 excerpt: |
-    The Vector Quantized Generative Adversarial Network (VQGAN) is a network
-    that allows us to create high-resolution images from text. Let me talk
-    about how it works in this post.
+    VQGAN allows us to generate high-resolution images from text, and has now
+    taken art Twitter by storm. Let me talk about how it works on a conceptual
+    level in this blog post.
 ---
 
 <span class="firstcharacter">T</span>**ext-to-image synthesis has taken ML
