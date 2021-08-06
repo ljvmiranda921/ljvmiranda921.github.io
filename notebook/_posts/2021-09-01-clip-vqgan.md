@@ -388,8 +388,8 @@ loss](https://developers.google.com/machine-learning/gan/loss):
 * The second term, $$\log(1-D(\hat{x}))$$, measures the  probability of the
     discriminator $$D$$ to say that a generated instance $$\hat{x}$$ is real.
 
-If we look under the hood of VQGAN's generator $$N$$, we'll see that it follows an
-encoder-decoder architecture. This setup is reminiscent of autoencoders, where
+If we look under the hood of VQGAN's generator $$N$$, we'll see that **it follows an
+encoder-decoder architecture.** This setup is reminiscent of autoencoders, where
 the goal is to have a decoder $$G$$ properly reconstruct the input
 $$x$$. The theory is that if we have perfect reconstruction, then that means
 the encoder $$E$$  has found a suitable representation of the data. 
@@ -408,8 +408,8 @@ z_{q} = \mathbf{q}(\hat{z}) := \text{arg min}_{z_k \in \mathcal{Z}} ||
 \hat{z}_{ij} - z_k ||
 $$
 
-So instead of reconstructing from the encoder output $$\hat{z}$$, we do it from
-its quantized form $$z_q$$. Thus, the reconstructed image $$\hat{x} \approx x$$
+So **instead of reconstructing from the encoder output $$\hat{z}$$, we do it from
+its quantized form $$z_q$$**. Thus, the reconstructed image $$\hat{x} \approx x$$
 looks like this:
 
 $$
@@ -450,12 +450,11 @@ where $$Z$$ is the codebook and $$\lambda$$ is the adaptive weight.
 When put together, we obtain the discrete capabilities of VQ, the rich
 expressivity of GANs, and the encoding capabilities of the autoencoder.  This
 allows us to obtain richer and more distinct visual parts than a standard
-convolutional neural network.
+convolutional neural network. 
 
+Once we have learned the codebook $$Z$$, then it is time to feed it into a
+transformer.
 
-
-
-<!-- how it learns a codebook -->
 
 ### <a id="training-transformer"></a> Training the transformer
 
