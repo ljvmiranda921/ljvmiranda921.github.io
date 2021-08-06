@@ -329,8 +329,8 @@ architecture:
 However, we'll make a few tiny adjustments: 
 
 * **We'll replace the simple convolutional neural network with a generative
-    adversarial network.** This allows the creation of more distinct visual parts
-    to synthesize better images.
+    adversarial network.** The layers still perform a convolution operation,
+    but with a GAN it synthesizes more distinct visual parts. 
 *  **Instead of having a separate process for vector quantization, VQGAN will
     learn the codebook right away.** Learning the feature map of visual parts happens
       inside the GAN. It's still the same
@@ -344,7 +344,7 @@ Below is the **complete architecture diagram** for VQGAN:
 __Figure:__ *It's still the two-stage approach, but with some minor changes: (1) instead of a typical CNN, we use a GAN, (2) instead of having a separate process for VQ, we learn the codebook right away.*
 {: style="text-align: center; margin: 1.5em"}
 
-In the next section, will talk more about GANs and how the authors trained them
+In the next section, we'll talk more about GANs and how the authors trained them
 to learn the codebook right away. In addition, we'll also discuss sliding
 attention and how it affects Transformer training.
 
