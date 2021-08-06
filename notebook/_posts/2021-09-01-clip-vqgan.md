@@ -84,6 +84,11 @@ explainer](https://openai.com/blog/clip/)&mdash;it's comprehensive and accessibl
 
 <br>
 
+Our discussion will follow a **bottom-up approach**, i.e., we'll start with how we
+perceive images, then build the system from the ground up. In the end, our goal
+is to understand how each part of VQGAN's architecture works and why they were
+chosen to perform that task.
+
 ## <a id="perception"></a> How we see images: a theory of perception
 
 One thing that I like about VQGAN is that it prescribes an explanation of how
@@ -142,12 +147,13 @@ works.[^2]
 
 Despite all of these, we still shouldn't ignore pixel-based approaches.
 Convolutional neural networks (CNN) proved that we can model local interactions
-between pixels, simply by restricting interactions within their local
-neighborhood (also known as the [*kernel*](https://en.wikipedia.org/wiki/Kernel_(image_processing))). This allows us to "compose" pixels together and learn visual
-parts ([Gu et al, 2018](#gu2018cnn)).  The premier illustration for this is the
-feature map below, where a CNN learned how to compose pixels at varying layers
-of abstraction: pixels become edges, edges become shapes, and shapes become
-parts.
+between pixels by restricting interactions within their local neighborhood
+(i.e., the
+[*kernel*](https://en.wikipedia.org/wiki/Kernel_(image_processing))). This
+allows us to "compose" pixels together and **learn visual parts** ([Gu et al,
+2018](#gu2018cnn)).  The premier illustration for this is the feature map
+below, where a CNN learned how to compose pixels at varying layers of
+abstraction: pixels become edges, edges become shapes, and shapes become parts.
 
 ![](/assets/png/vqgan/cnn_features.png){:width="520px"}  
 <br>
@@ -159,8 +165,7 @@ different levels
 Putting it all together, we now have two complementary techniques: 
 1. an interesting view of perception that allows us to **model
     long-range dependencies** by representing images discretely; and&mdash;
-2. a pixel-based approach that we shouldn't ignore in order to take advantage of
-    learned **local interactions** and **visual parts**.
+2. a pixel-based approach to learn **local interactions** and **visual parts**.
 
 **VQGAN was able to combine both of them.** It can learn not only the
 (1) visual parts of an image, but also the (2) relationship (read: long-range
@@ -195,13 +200,13 @@ high-level features that we refer to as visual parts.*
 {: style="text-align: center; margin: 1.5em"}
 
 
-and (2) a discrete approach that learns long-range dependencies across visual parts. We've
-also alluded that the latter is done by a Transformer network. Finally, we
-mentioned that VQGAN was able to take advantage of the two approaches. 
+and (2) a discrete approach that learns long-range dependencies across them.
+We've also alluded that the latter is done by a Transformer network. Finally,
+we mentioned that VQGAN was able to take advantage of the two approaches. 
 
 The logical next step is to combine them together. One way is to directly feed
-the feature map into a Transformer. We can flatten the pixels of each visual
-part into a sequence and use that as input: 
+the feature map into a Transformer. We can flatten the pixels of an image into
+a sequence and use that as input: 
 
 
 ![](/assets/png/vqgan/flatten_pixels.png){:width="720px"}  
@@ -219,8 +224,8 @@ result, they reduced the context by downsampling the 224-px image to 32-, 48-,
 and 64 pixel dimensions.
 
 The reason Transformers scale quadratically is because of its attention
-mechanism ([Vaswani et al, 2017](#vaswani2017attention)), where it computes for
-the pairwise inner product between each pair of the tokenized words. Through
+mechanism ([Vaswani et al, 2017](#vaswani2017attention)): it computes for
+the pairwise inner product between each pair of the tokens. Through
 this method, it can learn about the long-range dependencies between tokens.
 
 ![](/assets/png/vqgan/transformer_diagram.png){:width="580px"}  <br>
@@ -244,8 +249,8 @@ a representation from the image and encodes it to an intermediary form before
 feeding into a transformer (or any autoregressive network).*
 {: style="text-align: center; margin: 1.5em"}
 
-**VQGAN employs the same two-stage structure, where it learns an intermediary
-representation before feeding it to a transformer.** However, instead of
+VQGAN employs the same two-stage structure by learning an intermediary
+representation before feeding it to a transformer. However, instead of
 downsampling the image, VQGAN uses a **codebook** to represent visual parts.
 The authors did not model the image from a pixel-level directly, but instead
 from the *codewords* of the learned codebook.
@@ -273,10 +278,9 @@ quantization (VQ).*
 
 **The codebook is generated through a process called vector quantization
 (VQ)**, i.e., the "VQ" part of "VQGAN." Vector quantization is a signal
-processing technique for encoding vectors. In VQGAN, this process was used to
-create a quantized representation of various visual parts. 
-Once in discrete form, it is now straightforward and less computationally
-expensive to pass it to a transformer network.
+processing technique for encoding vectors. It represents all visual parts found
+in the convolutional step in a quantized form, making it less computationally
+expensive once passed to a transformer network.
 
 One can think of vector quantization as a **process of dividing vectors into
 groups that have approximately the same number of points closest to them**
@@ -296,19 +300,18 @@ the representative centroids for each cluster.*
 
 On a conceptual (and admittedly, handwavy) level, we can think of these
 codewords as the discrete symbols that we used in our earlier examples: `lady`,
-`feathered hat`, `night`, `moon`, `city`, or `rain`. By training them with a
-transformer, we start to uncover their relationships: "there's moon at
-night," "lady wears a hat on her head," or "it's cloudy when it rains."[^5]
+`hat`, `night`, `moon`, `city`, or `rain`. By training them with a transformer,
+we start to uncover their relationships: "there's moon at night," "lady wears a
+hat on her head," or "it's cloudy when it rains."[^5]
 
-To recap, we are now familiar with the two-stage approach, and the codebook
-that acts as a bridge between them. In the next section, we'll put all of them
-together and make a *few adjustments* to accurately describe the system
-architecture of VQGAN.
+Now that we are familiar with the two-stage approach and the codebook, it's
+time to put them all together and make a *few adjustments* to describe the
+system architecture of VQGAN.
 
 ## <a id="together"></a> Putting it all together 
 
-At this point, we now have all the ingredients needed to discuss how VQGAN is
-trained:
+At this point, we now have all the ingredients needed to discuss VQGAN's
+architecture:
 
 *  A **convolutional neural network that takes a set of images to learn their visual 
         parts.** By taking advantage of a pixel's local interactions, we can
@@ -328,12 +331,12 @@ However, we'll make a few tiny adjustments:
 * **We'll replace the simple convolutional neural network with a generative
     adversarial network.** This allows the creation of more distinct visual parts
     to synthesize better images.
-*  **Instead of having a separate process for vector quantization, VQGAN learns
-      the codebook right away.** Learning the feature map of visual parts happens
+*  **Instead of having a separate process for vector quantization, VQGAN will
+    learn the codebook right away.** Learning the feature map of visual parts happens
       inside the GAN. It's still the same
       two-stage approach
 
-Below is the **final process diagram** for VQGAN:
+Below is the **complete architecture diagram** for VQGAN:
 
 
 ![](/assets/png/vqgan/two_stage_v2.png){:width="720px"}  
@@ -341,10 +344,13 @@ Below is the **final process diagram** for VQGAN:
 __Figure:__ *It's still the two-stage approach, but with some minor changes: (1) instead of a typical CNN, we use a GAN, (2) instead of having a separate process for VQ, we learn the codebook right away.*
 {: style="text-align: center; margin: 1.5em"}
 
+In the next section, will talk more about GANs and how the authors trained them
+to learn the codebook right away. In addition, we'll also discuss sliding
+attention and how it affects Transformer training.
 
 ## <a id="training"></a> Training VQGAN
 
-Training also happens in two stages:
+Due to its two-stage nature, training also happens in two major steps:
 
 1. Training the GAN from a dataset of images to learn not only its visual
    parts, but also their codeword representation, i.e., the codebook.
@@ -353,7 +359,12 @@ Training also happens in two stages:
 
 ### <a id="training-gan"></a> Training the GAN
 
+<!-- why use a GAN -->
+<!-- how it learns a codebook -->
+
 ### <a id="training-transformer"></a> Training the transformer
+
+<!-- sliding attention -->
 
 
 ## <a id="conclusion"></a> Conclusion
