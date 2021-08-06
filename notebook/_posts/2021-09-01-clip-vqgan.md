@@ -359,7 +359,102 @@ Due to its two-stage nature, training also happens in two major steps:
 
 ### <a id="training-gan"></a> Training the GAN
 
-<!-- why use a GAN -->
+Earlier, we replaced the convolutional neural network with a generative
+adversarial network or a GAN ([Goodfellow et al, 2014](#goodfellow2020gans)).
+Think of a GAN as an architecture composed of two competing neural networks: 
+
+1. a generator $$N$$ for creating new samples, and 
+2. a discriminator $$D$$ that classifies the samples as either real or fake. 
+
+The interaction between the two motivates the generator to fool the
+discriminator, enabling it to synthesize highly-convincing *fake* samples. 
+
+
+![](/assets/png/vqgan/gan_inside.png){:width="580px"}  
+{: style="text-align: center; margin: 1.5em"}
+
+So if we have a real input $$x$$ and a generated sample $$\hat{x}$$, we
+evaluate our discriminator in differentiating between real and reconstructed
+images using the loss $$\mathcal{L}_{GAN}$$:
+
+$$
+\mathcal{L}_{GAN}(N,D) = [\log D(x) + log(1-D(\hat{x}))]
+$$
+
+In classic GAN literature, this is known as the [minimax
+loss](https://developers.google.com/machine-learning/gan/loss):
+* The first term, $$\log D(x)$$, measures the probability of the discriminator
+    $$D$$ to say that a real data instance $$x$$ is actually real.
+* The second term, $$\log(1-D(\hat{x}))$$, measures the  probability of the
+    discriminator $$D$$ to say that a generated instance $$\hat{x}$$ is real.
+
+If we look under the hood of VQGAN's generator $$N$$, we'll see that it follows an
+encoder-decoder architecture. This setup is reminiscent of autoencoders, where
+the goal is to have a decoder $$G$$ properly reconstruct the input
+$$x$$. The theory is that if we have perfect reconstruction, then that means
+the encoder $$E$$  has found a suitable representation of the data. 
+
+
+![](/assets/png/vqgan/autoencoders.png){:width="720px"}  
+{: style="text-align: center; margin: 1.5em"}
+
+Vector quantization also happens between the encoder and decoder networks. After
+encoding the input $$x$$ into $$\hat{z}$$, i.e., $$\hat{z} = E(x)$$, we perform
+an element-wise operation $$\mathbf{q}$$ to obtain a discrete version of the
+input:
+
+$$
+z_{q} = \mathbf{q}(\hat{z}) := \text{arg min}_{z_k \in \mathcal{Z}} ||
+\hat{z}_{ij} - z_k ||
+$$
+
+So instead of reconstructing from the encoder output $$\hat{z}$$, we do it from
+its quantized form $$z_q$$. Thus, the reconstructed image $$\hat{x} \approx x$$
+looks like this:
+
+$$
+\hat{x} = G(z_\mathbf{q}) = G(\mathbf{q}(E(x)))
+$$
+
+The autoencoder model and the codebook were trained together using the
+loss function $$\mathcal{L}_{VQ}$$:
+
+$$
+\mathcal{L}_{VQ}(E, G, Z) = ||x-\hat{x}||^{2} + ||sg[E(x)] - z_\mathbf{q}||_2^2
++ ||sg[z_\mathbf{q}] - E(x) ||_{2}^2
+$$
+
+It's a bit hard to parse, so let's take them one-by-one:
+* The first term, $$||x-\hat{x}||^{2}$$, is the *reconstruction loss*, it checks
+    how well our network was able to approximate (via $$\hat{x}$$) our input
+    $$x$$  when given only its quantized version $$z_\mathbf{q}$$.  
+* The second term, $$||sg[E(x)] - z_\mathbf{q}||_2^2$$, optimizes our
+    embeddings. The operation $$sg$$ stands for
+    "[stop-gradient](https://www.tensorflow.org/api_docs/python/tf/stop_gradient)."
+    It is an identity function during forward pass, and has zero partial
+    derivatives, thus constraining it to be constant.
+* The last term,$$||sg[z_\mathbf{q}] - E(x) ||_{2}^2$$,  is called the
+    *commitment loss*. It ensures that the encoder $$E$$ commits to a
+    particular representation of the image. 
+
+Finally, training VQGAN to obtain the optimal compression model $$Q^{\star}$$ becomes a
+matter of combining the two losses from the autoencoder, $$\mathcal{L}_{VQ}$$,
+and the GAN, $$\mathcal{L}_{GAN}$$:
+
+$$
+Q^{\star} = \text{arg min}_{E,G,Z} \text{max}_D \mathbb{E}_{x~p(x)} [\mathcal{L}_{VQ}(E, G, Z) + \lambda \mathcal{L}_{GAN}(N, D)]
+$$
+
+where $$Z$$ is the codebook and $$\lambda$$ is the adaptive weight.
+
+When put together, we obtain the discrete capabilities of VQ, the rich
+expressivity of GANs, and the encoding capabilities of the autoencoder.  This
+allows us to obtain richer and more distinct visual parts than a standard
+convolutional neural network.
+
+
+
+
 <!-- how it learns a codebook -->
 
 ### <a id="training-transformer"></a> Training the transformer
@@ -378,6 +473,7 @@ Due to its two-stage nature, training also happens in two major steps:
 1. <a id="child2019sparse">Child, R., Gray, S., Radford, A. and Sutskever, I.</a>, 2019. Generating long sequences with sparse transformers. arXiv preprint arXiv:1904.10509.
 1. <a id="dosovitskiy2020vit">Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S. and Uszkoreit, J.</a>, 2020. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929.
 1. <a id="esser2021vqgan">Esser, P., Rombach, R. and Ommer, B.</a>, 2021. Taming transformers for high-resolution image synthesis. In *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition* (pp. 12873-12883).
+1. <a id="goodfellow2020gans">Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A. and Bengio, Y., 2020</a>. Generative adversarial networks. Communications of the ACM, 63(11), pp.139-144.
 1. <a id="gu2018cnn">Gu, J., Wang, Z., Kuen, J., Ma, L., Shahroudy, A., Shuai, B., Liu, T., Wang, X., Wang, G., Cai, J. and Chen, T.</a>, 2018. Recent advances in convolutional neural networks. Pattern Recognition, 77, pp.354-377.
 1. <a id="mnih2014neural">Mnih, A. and Gregor, K.</a>, 2014, June. Neural variational inference and learning in belief networks. In International Conference on Machine Learning (pp. 1791-1799). PMLR.
 1. <a id="oord2017discrete">Oord, A.V.D., Vinyals, O. and Kavukcuoglu, K.</a>, 2017. Neural discrete representation learning. arXiv preprint arXiv:1711.00937.
