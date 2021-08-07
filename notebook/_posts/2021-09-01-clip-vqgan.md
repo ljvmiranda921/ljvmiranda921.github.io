@@ -352,9 +352,9 @@ attention and how it affects Transformer training.
 
 Due to its two-stage nature, training also happens in two major steps:
 
-1. Training the GAN from a dataset of images to learn not only its visual
+1. **Training the GAN** from a dataset of images to learn not only its visual
    parts, but also their codeword representation, i.e., the codebook.
-2. Training the Transformer on top of the codebook with sliding attention to
+2. **Training the Transformer** on top of the codebook with sliding attention to
    learn long-range interactions across visual parts. 
 
 ### <a id="training-gan"></a> Training the GAN
