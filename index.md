@@ -12,9 +12,12 @@ layout: home
     <div class="right">
         <p>Hi, I'm Lj Miranda and welcome to my blog!</p>
         <p>
-            I'm taking some time off to rest, refresh, and recharge.  <b>I am
-            currently unreachable.</b> In the meantime, I'll still be publishing
-            posts that I've written ahead of time.
+            I'm currently a developer at <a
+            href="https://explosion.ai">Explosion</a>. I help build some of
+            your favorite open-source tools such as <a
+            href="https://spacy.io">spaCy</a>, <a
+            href="https://thic.ai">Thinc</a>, and <a
+            href="https://prodi.gy">Prodigy</a>.
         </p>
         <p>
             In this blog, I write about my interests in machine learning,
