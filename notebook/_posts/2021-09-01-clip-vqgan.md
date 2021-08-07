@@ -471,7 +471,8 @@ transformer.
 
 Previously, we discussed how VQGAN trained the generative adversarial network.
 Training the first component of this two-stage system led us to learn the
-encoder $$E$$, decoder $$G$$, and codebook $$Z$$.
+encoder $$E$$, decoder $$G$$, and codebook $$Z$$. In this section, we'll discuss
+how VQGAN trains the transformer.
 
 We're only interested with the codebook $$Z$$ because it provides a discrete
 representation of our visual parts that can readily be fed to a transformer.
@@ -493,9 +494,13 @@ s_{<i})$$:
 
 <!-- some photo -->
 
-By doing so, we get to compute the likelihood as $$p(s) = \Pi_i
-p(s_i|s_{<i})$$ and minimize the transformer loss
-$$\mathcal{L}_{\text{Transformer}} = \mathbb{E}_{x\sim p(x)} [-\log p(s)] $$:
+By doing so, we get to compute the likelihood as $$p(s) = \Pi_i p(s_i|s_{<i})$$
+and minimize the transformer loss $$\mathcal{L}_{\text{Transformer}} =
+\mathbb{E}_{x\sim p(x)} [-\log p(s)] $$&mdash; it's more straightforward
+
+Lastly, when generating high-resolution images, the authors restricted the context via
+a sliding-window. This means that when generating each patch, it obtains
+information only from its neighbors.  
 
 
 <!-- sliding attention -->
