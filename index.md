@@ -12,12 +12,7 @@ layout: home
     <div class="right">
         <p>Hi, I'm Lj Miranda and welcome to my blog!</p>
         <p>
-            I'm currently a developer at <a
-            href="https://explosion.ai">Explosion</a>. I help build some of
-            your favorite open-source tools such as <a
-            href="https://spacy.io">spaCy</a>, <a
-            href="https://thic.ai">Thinc</a>, and <a
-            href="https://prodi.gy">Prodigy</a>.
+            I'm a developer at <a href="https://explosion.ai">Explosion</a>. I help build some of your favorite open-source tools such as <a href="https://spacy.io">spaCy</a>, <a href="https://thic.ai">Thinc</a>, and <a href="https://prodi.gy">Prodigy</a>. I'm currently based in the Philippines.
         </p>
         <p>
             In this blog, I write about my interests in machine learning,
