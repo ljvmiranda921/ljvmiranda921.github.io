@@ -492,11 +492,15 @@ the next index of an encoded sequence.** So if we have indices $$s_{<i}$$, the
 transformer predicts the distribution of possible next indices, $$ p(s_i |
 s_{<i})$$:
 
-<!-- some photo -->
+![](/assets/png/vqgan/transformer_predict.png){:width="400px"}  
+<br>
+__Figure:__ _Training the transformer is done via next-word prediction similar to languages. If we wish to predict $$s_5$$, we need to consider the symbols before that._
+{: style="text-align: center; margin: 1.5em"}
+
 
 By doing so, we get to compute the likelihood as $$p(s) = \Pi_i p(s_i|s_{<i})$$
 and minimize the transformer loss $$\mathcal{L}_{\text{Transformer}} =
-\mathbb{E}_{x\sim p(x)} [-\log p(s)] $$&mdash; it's more straightforward
+\mathbb{E}_{x\sim p(x)} [-\log p(s)] $$&mdash; it's more straightforward.
 
 Lastly, when generating high-resolution images, the authors restricted the context via
 a sliding-window. This means that when generating each patch, it obtains
