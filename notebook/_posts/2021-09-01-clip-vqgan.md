@@ -89,6 +89,8 @@ perceive images, then build the system from the ground up. In the end, our goal
 is to understand how each part of VQGAN's architecture works and why they were
 chosen to perform that task.
 
+Ready? Let's go!
+
 ## <a id="perception"></a> How we see images: a theory of perception
 
 One thing that I like about VQGAN is that it prescribes an explanation of how
@@ -502,13 +504,17 @@ By doing so, we get to compute the likelihood as $$p(s) = \Pi_i p(s_i|s_{<i})$$
 and minimize the transformer loss $$\mathcal{L}_{\text{Transformer}} =
 \mathbb{E}_{x\sim p(x)} [-\log p(s)] $$&mdash; it's more straightforward.
 
-Lastly, when generating high-resolution images, the authors restricted the context via
-a sliding-window. This means that when generating each patch, it obtains
-information only from its neighbors.  
+Lastly, when generating high-resolution images, the authors restricted the
+context via a sliding-window. This means that when generating each patch, it
+obtains information only from its neighbors. It's a nice "trick" to improve
+resource-efficiency when using transformers.
 
 
-<!-- sliding attention -->
-
+![](/assets/png/vqgan/sliding_window.png){:width="720px"}  
+<br>
+__Figure:__ _When sampling images, VQGAN used a sliding attention to different
+patches so that sufficient context is still present._
+{: style="text-align: center; margin: 1.5em"}
 
 ## <a id="conclusion"></a> Conclusion
 
