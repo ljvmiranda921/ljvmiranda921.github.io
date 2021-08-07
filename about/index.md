@@ -57,10 +57,6 @@ I love indie games and [dabble in game
 development](https://ljvmiranda921.itch.io) using [Pico-8](https://www.lexaloffle.com/pico-8.php) and
 [Godot](https://godotengine.org/).
 
-<p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">
-<b>I am currently unreachable</b><br>
-You can still send me an email via ljvmiranda [at] gmail [dot] com, but don't expect a quick reply. I don't foresee anything urgent in the coming months.</p>
-
 ## Contact
 
 **Lester James V. Miranda**  
