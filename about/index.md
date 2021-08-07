@@ -24,7 +24,10 @@ P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljv
 
 ## Background
 
-I'm currently taking some time-off to rest, refresh, and recharge.
+I'm a developer at [Explosion](https://explosion.ai). I help build some of your
+favorite open-source tools such as [spaCy](https://spacy.io),
+[Thinc](https://thinc.ai), and [Prodigy](https://prodi.gy). I'm currently based
+in the Philippines.
 
 Prior to that, I've worked for some machine learning startups such as:
 * [Thinking Machines Data Science](https://thinkingmachin.es) (Manila), where I built
