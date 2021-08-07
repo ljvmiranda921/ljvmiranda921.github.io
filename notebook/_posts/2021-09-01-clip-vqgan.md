@@ -469,10 +469,45 @@ transformer.
 
 ### <a id="training-transformer"></a> Training the transformer
 
+Previously, we discussed how VQGAN trained the generative adversarial network.
+Training the first component of this two-stage system led us to learn the
+encoder $$E$$, decoder $$G$$, and codebook $$Z$$.
+
+We're only interested with the codebook $$Z$$ because it provides a discrete
+representation of our visual parts that can readily be fed to a transformer.
+To do so, **we represent the images in terms of the codebook-indices of their
+embeddings.** This means that the encoding $$z_{\mathbf{q}}$$ of an image $$x$$
+can be represented as a sequence $$s$$ from our codebook $$Z$$, that is, $$s \in
+\{0, \dots, |Z| - 1\}$$.
+
+![](/assets/png/vqgan/sequence.png){:width="720px"}  
+<br>
+__Figure:__ _After training the first stage, we can now represent the images in
+a sequence corresponding to the codebook-indices of their embeddings._
+{: style="text-align: center; margin: 1.5em"}
+
+Now that we have our sequences, **we can just train our transformer to predict
+the next index of an encoded sequence.** So if we have indices $$s_{<i}$$, the
+transformer predicts the distribution of possible next indices, $$ p(s_i |
+s_{<i})$$:
+
+<!-- some photo -->
+
+By doing so, we get to compute the likelihood as $$p(s) = \Pi_i
+p(s_i|s_{<i})$$ and minimize the transformer loss
+$$\mathcal{L}_{\text{Transformer}} = \mathbb{E}_{x\sim p(x)} [-\log p(s)] $$:
+
+
 <!-- sliding attention -->
 
 
 ## <a id="conclusion"></a> Conclusion
+
+
+## Appendix: Opinionated Tree of Knowledge
+
+
+![](/assets/png/vqgan/tree_of_knowledge.png){:width="720px"}  
 
 
 
