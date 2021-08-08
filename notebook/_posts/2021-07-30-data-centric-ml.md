@@ -331,7 +331,7 @@ models.
     As for inaccuracy, labeled samples are available but there's no guarantee
     that they're error-free. Even benchmark datasets like CIFAR-10 suffer from
     label inaccuracies ([Beyer et al, 2020](#beyer2020imagenet) and [Northcutt
-    et al, 2021a](#northcutt2021error)). Due to that, a sub-field caleed
+    et al, 2021a](#northcutt2021error)). Due to that, a sub-field called
     *confident learning* was developed to detect and correct such errors
     ([Northcutt et al, 2021b](#northcutt2021confident)). Its main mechanism
     involves pruning noisy data and ranking examples to train with confidence
