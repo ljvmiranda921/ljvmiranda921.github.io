@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Taming the 'Taming Transformers' (VQGAN) paper"
+title: "The Illustrated VQGAN"
 date: 2021-08-08
 category: notebook
 comments: true
