@@ -76,11 +76,8 @@ explainer](https://openai.com/blog/clip/)&mdash;it's comprehensive and accessibl
         <li><a href="#training-transformer">Training the Transformer</a></li>
     </ul>
     <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#appendix">Appendix</a></li>
 </ul>
-<b>Appendix</b>
-<ol>
-    <li>Literature leading to VQGAN</li>
-</ol>
 </div>
 
 <br>
@@ -571,7 +568,7 @@ have a model guide us to a solution.
 }
 ```
 
-## Appendix: Opinionated Tree of Knowledge
+## <a id="appendix"></a>Appendix: Opinionated Tree of Knowledge
 
 VQGAN takes a lot of inspiration from previous works in the field. Here's my
 attempt to trace how each development led to the other until it coalesce to the
