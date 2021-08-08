@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Taming the 'Taming Transformers' (VQGAN) paper"
-date: 2021-09-01
+date: 2021-08-08
 category: notebook
 comments: true
 author: "LJ MIRANDA"
