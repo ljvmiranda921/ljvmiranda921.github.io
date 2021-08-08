@@ -559,6 +559,17 @@ see today. Moreover, it has spurred this new movement of "prompt engineering,"
 which allows us to define problems or domains into natural language tasks, and
 have a model guide us to a solution.
 
+
+```latex
+@article{miranda2021vqgan,
+  title        = {Taming the 'Taming transformers' paper (VQGAN)},
+  author       = {Miranda, Lester James},
+  journal      = {ljvmiranda921.github.io},
+  url          = {\url{https://ljvmiranda921.github.io/notebook/2021/08/08/clip-vqgan/}},
+  year         = {2021}
+}
+```
+
 ## Appendix: Opinionated Tree of Knowledge
 
 VQGAN takes a lot of inspiration from previous works in the field. Here's my
