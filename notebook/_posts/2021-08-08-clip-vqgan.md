@@ -8,6 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [vqgan, machine learning, research, deep learning, neural network, clip vqgan]
+header-img: /assets/png/vqgan/ai_art_collage.png
 description: |
     VQGAN allows us to generate high-resolution images from text, and has now
     taken art Twitter by storm. Let me talk about how it works on a conceptual
