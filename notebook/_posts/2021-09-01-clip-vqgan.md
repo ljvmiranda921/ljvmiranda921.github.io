@@ -518,12 +518,65 @@ patches so that sufficient context is still present._
 
 ## <a id="conclusion"></a> Conclusion
 
+In this blogpost, we looked into how VQGAN in VQGAN-CLIP works to generate and
+synthesize the high-resolution images we see today. The overall architecture
+looks like this:
+
+![](/assets/png/vqgan/two_stage_v2.png){:width="720px"}  
+
+First, we looked into the data itself, establishing a theory of perception
+where images can be describe through their discrete representations. This
+can be seen in contrast to usual computer vision techniques where pixels are
+the focus: 
+
+![](/assets/png/vqgan/conclusion_00.png){:width="720px"}  
+
+Then, we examined the two-stage approach implemented by VQGAN. It's composed of
+a convolutional neural network in the form of a GAN, and a Transformer:
+
+
+![](/assets/png/vqgan/conclusion_01.png){:width="720px"}  
+
+
+We also highlighted the difficulties in scaling the Transformer model, thus
+requiring the use of a codebook obtained via vector quantization. The codebook
+bridges the gap between the two stages.
+
+![](/assets/png/vqgan/conclusion_02.png){:width="720px"}  
+
+Lastly, we discussed how the codebook was trained together with the two models.
+We started with training the GAN, then followed with training the Transformer.
+We learned that the GAN is composed of an encoder-decoder network as its
+generator, and that the Transformer uses a sliding-attention window when
+sampling images:
+
+![](/assets/png/vqgan/conclusion_03.png){:width="720px"}  
+
+In the end, VQGAN was able to demonstrate how we can synthesize high-resolution
+imagery by taking advantage of both discrete and pixel-based representations of
+an image. This innovation has allowed us to create the wonderful artworks we
+see today. Moreover, it has spurred this new movement of "prompt engineering,"
+which allows us to define problems or domains into natural language tasks, and
+have a model guide us to a solution.
 
 ## Appendix: Opinionated Tree of Knowledge
 
+VQGAN takes a lot of inspiration from previous works in the field. Here's my
+attempt to trace how each development led to the other until it coalesce to the
+VQGAN we know today.
 
 ![](/assets/png/vqgan/tree_of_knowledge.png){:width="720px"}  
 
+This may be helpful for someone who aren't familiar yet with other intermediate
+architectures like autoencoders and what-not. And may also be helpful as a
+study guide or concept map. I decided not to break down some concepts like CLIP
+and Transformers because a lot of resources are already available to understand
+them.
+
+Again, this is opinionated and it reflects how I understood the building blocks
+of VQGAN. Of course, there's a lot of work that preempts each idea, but I only
+wrote the ones that I find important. Let me know if I misrepresented anything
+by commenting below!
 
 
 ## References
