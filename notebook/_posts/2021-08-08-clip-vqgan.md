@@ -607,6 +607,11 @@ by commenting below!
 1. <a id="weissenborn2019video">Weissenborn, D., Täckström, O. and Uszkoreit, J.</a>, 2019. Scaling autoregressive video models. arXiv preprint arXiv:1906.02634.
 1. <a id="vaswani2017attention">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, Ł. and Polosukhin, I.</a>, 2017. Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
 
+
+#### Changelog
+
+* 08-09-2021: Update title from "Taming transformers" to "The Illustrated" as suggested by a friend.
+
 ## Footnotes
 
 [^1]: You might see VQGAN-CLIP being written as CLIP-VQGAN, CLIP+VQGAN, or VQGAN+CLIP. The order doesn't matter and the dash symbol isn't an operation. They're all the same thing.
