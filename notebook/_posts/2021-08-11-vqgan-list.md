@@ -45,6 +45,7 @@ nonetheless:
 |-----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------------------|
 | [The Big Sleep: BigGAN x CLIP](https://colab.research.google.com/drive/1NCceX2mbiKOSlAd_o7IU7nA9UskKN5WR?usp=sharing)                    | [@advadnoun](https://twitter.com/advadnoun)             | Uses a CLIP-guided BigGAN generator. I can't comment on the quality of the outputs, but this is exciting to try as well!  |
 | [Aleph-Image](https://colab.research.google.com/drive/1Q-TbYvASMPRMXCOQjkxxf72CXYjR_8Vp?usp=sharing)                    | [@advadnoun](https://twitter.com/advadnoun)             | Uses a CLIP-guided DALL-E decoder. Try it out for more interesting results!  |
+| [CLIP Guided Diffusion HQ 512x512](https://colab.research.google.com/drive/1V66mUeJbXrTuQITvJunvnWVn96FEbSI3#scrollTo=ivuJjs6p9ttA)                                 | [@RiversHaveWings](https://twitter.com/RiversHaveWings) | Uses OpenAI's 512x512 class-conditional [ImageNet diffusion model](https://github.com/openai/guided-diffusion) with CLIP. It is fixed at 512x512, but it also has a [256x256 version](https://colab.research.google.com/drive/12a_Wrfi2_gwwAuN3VvMTwVMz9TfqctNj). |
 
 The common denominator across these works is that they are guided by [OpenAI's
 CLIP](https://openai.com/blog/clip/) so that the image matches the text
