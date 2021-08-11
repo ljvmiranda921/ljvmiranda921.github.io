@@ -40,6 +40,9 @@ it with descriptions from Philippine folk culture. The resulting images can
 then be thought of as to what the model "imagined" upon reading the
 descriptions&mdash;I warn you, they are a bit surreal and creepy!
 
+> If you're interested to learn how VQGAN works, then head to my [explainer blogpost](/notebook/2021/08/08/clip-vqgan/).   
+> It's not magic, it's math!
+
 ## Monsters from the machine
 
 Below you'll see AI generated creatures from text. The descriptions were lifted
