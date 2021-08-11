@@ -100,11 +100,10 @@ example, if I ask you to describe this picture below, what would you say?
 __Figure:__ *If I ask you to describe this picture, what would you say?*
 {: style="text-align: center; margin: 1.5em"}
 
-Some of you may describe this as *"a lady with a feathered hat looking back,"*
-or *"a woman with a hat."* More discerning folks in the field might describe
-this as *"the Lenna standard test image in computer vision."*  Nevertheless, we
-seem to encounter images through discrete representations: `woman`, `feathered
-hat`, or `Lenna`. This theory of perception suggests that **our visual
+Some of you may describe this as *"a white cat looking up,"*
+or *"a cat."* Nevertheless, we
+seem to encounter images through discrete representations: `cat`, `white
+`, or `looking up`. This theory of perception suggests that **our visual
 reasoning is symbolic, we ascribe meaning through discrete representations and
 modalities.**
 
@@ -115,11 +114,11 @@ This symbolic approach allows us to understand relationships between different
 words or symbols. In machine learning, this is commonly known as being able to
 **model [long-range
 dependencies](https://en.wikipedia.org/wiki/Long-range_dependence)**.  For
-example, in the sentence "a lady with a feathered hat looking back," we knew
-that `looking back` refers to the `lady`'s action while `feathered` refers to
-the `hat`'s description.
+example, in the sentence "a white cat looking up," we knew
+that `looking up` refers to the `cat`'s action while `white` refers to
+the `cat`'s description.
 
-![](/assets/png/vqgan/lrd.png){:width="480px"}  
+![](/assets/png/vqgan/lrd.png){:width="300px"}  
 <br>
 __Figure:__ *A discrete representation allows us to understand
 relationships across symbols   
@@ -134,7 +133,7 @@ techniques don't think in terms of modalities.** Instead, they think in terms of
 
 ![](/assets/png/vqgan/lenna_pixels.png){:width="320px"}  
 <br>
-__Figure:__ *A close-up of the Lenna image. Each square represents a pixel with
+__Figure:__ *A close-up of the cat image. Each square represents a pixel with
 three channels: red, green, and blue. Each channel has a continuous value and
 affects the resulting color of the pixel.*
 {: style="text-align: center; margin: 1.5em"}
@@ -610,6 +609,7 @@ by commenting below!
 
 #### Changelog
 
+* 08-12-2021: Replace the [Lenna](https://en.wikipedia.org/wiki/Lenna#criticism) example with a picture of a cat. 
 * 08-09-2021: Update title from "Taming transformers" to "The Illustrated" as suggested by a friend.
 
 ## Footnotes
