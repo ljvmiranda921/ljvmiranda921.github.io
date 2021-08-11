@@ -16,7 +16,7 @@ excerpt: |
 ---
 
 I've been in a VQGAN+CLIP craze lately, so here's a list of all VQGAN+CLIP
-implementations I found in the internet (The symbol 🔰 means perfect for
+implementations I found on the internet (The symbol 🔰 means perfect for
 non-programmers alike. If you don't know where to start, you can start with
 these):
 
@@ -31,7 +31,7 @@ these):
 | [Zoetrope 5](https://colab.research.google.com/drive/1LpEbICv1mmta7Qqic1IcRTsRsq7UKRHM#scrollTo=iKP0tnHaiTyl)                                 | [@classpectanon](https://twitter.com/classpectanon) | Has advanced parameters for  more controlled AI art generation. I haven't tried this yet, but it may be good to flesh your artwork more.       |
 | [VQGAN+CLIP Python coomand-line interface](https://colab.research.google.com/drive/1LpEbICv1mmta7Qqic1IcRTsRsq7UKRHM#scrollTo=iKP0tnHaiTyl)                                 | [@nerdyrodent](https://github.com/nerdyrodent) | Not a Google Colab notebook, but a Github repo that you can fork and run locally. Provides a command-line interface to generate AI-art on the fly.        |
 | [VQGAN+CLIP (z+quantize method with augmentations)](https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W?usp=sharing)                                 | [@somewheresy](https://twitter.com/somewheresy) | It seems to be the first English-translated notebook of Katherine Crowson ([@RiversHaveWings](https://twitter.com/RiversHaveWings)).        |
-| [Nightcafe Studio)](https://creator.nightcafe.studio/text-to-image-art)                                 | [NightCafe Studio](https://twitter.com/somewheresy) | Not a Colab notebook, but rather a managed service where you need to setup an account. I can't comment how different the outputs are compared to the Colab notebooks.  |
+| [Nightcafe Studio](https://creator.nightcafe.studio/text-to-image-art)                                 | [NightCafe Studio](https://twitter.com/somewheresy) | Not a Colab notebook, but rather a managed service where you need to setup an account. I can't comment how different the outputs are compared to the Colab notebooks.  |
 
 
 ## CLIP-guided art generators
