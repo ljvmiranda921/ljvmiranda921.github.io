@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "List of VQGAN+CLIP Implementations"
-date: 2021-08-08
+date: 2021-08-11
 category: notebook
 comments: true
 author: "LJ MIRANDA"
