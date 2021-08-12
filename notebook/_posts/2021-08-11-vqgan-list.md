@@ -10,9 +10,9 @@ published: true
 tags: [vqgan, machine learning, research, deep learning, neural network, clip vqgan]
 header-img: /assets/png/vqgan/ai_art_collage.png
 description: |
-    Here's a list of all VQGAN implementations I found in the internet.
+    Here's a list of all VQGAN implementations I found on the internet.
 excerpt: |
-    Here's a list of all VQGAN implementations I found in the internet.
+    Here's a list of all VQGAN implementations I found on the internet.
 ---
 
 I've been in a VQGAN+CLIP craze lately, so here's a list of all VQGAN+CLIP
