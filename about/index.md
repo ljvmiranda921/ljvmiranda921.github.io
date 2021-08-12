@@ -19,20 +19,34 @@ development, systems, machine learning, and research. I hope that
 you'll spend a nice time here, so go grab yourself a cup of coffee and feel
 free to look around! 
 
-P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljvmiranda.substack.com/)! Subscribe [here](/subscribe). 
+Some highlights include:
+* [Why do we need Flask, Celery, and Redis?](/notebook/2019/11/08/flask-redis-celery-mcdo/): a fun illustrated guide on how
+    task queues work. [Featured on Hacker News](https://news.ycombinator.com/item?id=22901856).
+* [How to improve software engineering skills as a researcher](/notebook/2020/11/15/data-science-swe/): here I talked
+    about a specific project on how researchers and data scientists can further
+    refine their software engineering skills.
+* [The Illustrated VQGAN](/notebook/2021/08/08/clip-vqgan/): in this blogpost, I explained the VQGAN model that
+    allows us to synthesize images from text prompts.
+* [Navigating the MLOps tooling landscape](/notebook/2021/05/10/navigating-the-mlops-landscape/): here I survey MLOps tools while surfacing key
+    insights about the landscape. 
+* [How to use Jupyter Notebooks](/notebook/2020/03/06/jupyter-notebooks-in-2020/): another three-part series where I surveyed the
+    Jupyter notebook ecosystem.
 
+P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljvmiranda.substack.com/)! Subscribe [here](/subscribe). 
 
 ## Background
 
-I'm a developer at [Explosion](https://explosion.ai). I help build some of your
-favorite open-source tools such as [spaCy](https://spacy.io),
-[Thinc](https://thinc.ai), and [Prodigy](https://prodi.gy). I'm currently based
-in the Philippines.
+
+I'm a Machine Learning Engineer and Core Developer for <a
+href="https://spacy.io">spaCy</a>, a natural language processing
+library, at <a href="https://explosion.ai">Explosion</a>. I'm
+currently based in the Philippines.
 
 Prior to that, I've worked for some machine learning startups such as:
-* [Thinking Machines Data Science](https://thinkingmachin.es) (Manila), where I built
-    multiple natural-language processing and computer-vision ML products such as a search engine, an industry
-    classifier, and a document OCR system to name a few.
+* [Thinking Machines Data Science](https://thinkingmachin.es) (Manila), a data 
+   consultancy where I built multiple natural language processing and
+   computer vision products such as a search engine, an industry classifier,
+   and a document OCR system to name a few.
 * [Preferred Networks](https://www.preferred-networks.jp/en/) (Tokyo) as an
     intern, where I implemented a training parallelization framework for
     [ChainerRL](https://github.com/chainer/chainerrl), an open-source
@@ -42,7 +56,7 @@ I obtained my master's degree from [Waseda
 University](https://www.waseda.jp/top/en) and my bachelor's in Electronics
 Engineering, minor in Philosophy from [Ateneo de Manila
 University](https://www.ateneo.edu). My research interests include machine
-learning systems design, natural-language processing, and artificial life. 
+learning systems design, natural language processing, and artificial life. 
 
 Lastly, I'm well-involved in open-source and have authored [several
 projects](https://github.com/ljvmiranda921) of my own.
