@@ -57,6 +57,9 @@ I love indie games and [dabble in game
 development](https://ljvmiranda921.itch.io) using [Pico-8](https://www.lexaloffle.com/pico-8.php) and
 [Godot](https://godotengine.org/).
 
+![](/about/aws_community_builder.png){:width="100px"}
+[![](/about/google_data_engineer.png){:width="100px"}](https://www.credential.net/d17f92a5-a21e-41d5-acb0-81d76e3f3e68)
+
 ## Contact
 
 **Lester James V. Miranda**  
