@@ -52,9 +52,44 @@ it's almost the reverse now&mdash; I enjoy [making
 games](/projects/2021/08/15/abyss/) and [incorporating
 play](/life/2021/09/21/build-earn-play/) into my craft.
 
+Read on if you wish to see how I tried to resurrect the project, pick apart my
+code, and see all the fun tidbits that I inserted there!
+
 ## Resurrecting an old project
+
+During my sabbatical last year, I managed to find the source code of my first
+project. It was hidden in my closet, stored in a 2-GB USB storage device. I
+booted it up, and all my files are there (even the write-up!):
+
+<!-- show directory screenshot -->
+
+It was written in [Visual Basic 6.0
+(VB6)](https://en.wikipedia.org/wiki/Visual_Basic_(classic)), the predecessor
+for [.NET](https://en.wikipedia.org/wiki/Visual_Basic_.NET). Back then, Visual
+Basic (VB) was still weird for me because in our school's computer lab, I open
+it in its own IDE, but in my home PC, I can open it via Excel. Upon writing
+this is when I learned that the latter is called [Visual Basic for Applications
+(VBA)](https://en.wikipedia.org/wiki/Visual_Basic_for_Applications). They're
+the [same language](http://msdn.microsoft.com/en-us/library/dd361851.aspx), but
+on [different
+environments](https://stackoverflow.com/questions/993300/difference-between-visual-basic-6-0-and-vba).
+
+<!-- screenshot of what VB 6 looks like -->
+
+Now, they say that VB6 is already considered legacy since 2008[^2], so I guess
+there's no chance to run my project unless I have an official copy of old
+Windows.  However, VBA is still alive. Heck, it was even the [most dreaded
+language](https://insights.stackoverflow.com/survey/2021) last year (second
+only to COBOL), so maybe there's still a fighting chance.
+
+Good thing, 
+
+
+
+
 
 
 ### Footnotes
 
 [^1]: Yeah, just a one-year gap. Doing open-source has accelerated my learning. Sure, I knew how to program, but it's different when you're writing production code. I'm happy that I'm doing open-source and research full time now.
+[^2]: Wait, does that mean I'm learning a language already deemed legacy back in '08? That's funny!
