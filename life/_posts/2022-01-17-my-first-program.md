@@ -47,8 +47,8 @@ then?
 
 Perhaps the pre-teen me thinks that "making games is for kids, CRUD apps are
 for the real bois." I guess there was also a desire to be taken seriously,
-especially when you're a kid, so you try your best to make "serious" stuff.
-Funny how it's almost the reverse now&mdash; I enjoy [making
+especially as a kid, so you try your best to make "serious" stuff.  Funny how
+it's almost the reverse now&mdash; I enjoy [making
 games](/projects/2021/08/15/abyss/) and [incorporating
 play](/life/2021/09/21/build-earn-play/) into my craft.
 
