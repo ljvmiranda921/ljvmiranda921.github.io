@@ -29,8 +29,8 @@ that I kept at it for the past few years.
 Blogging has always been part of my programming life, especially that of my
 professional career&mdash; they're like siblings growing up together. I
 published ["Hello World"](/life/2017/01/16/hello-world/) at the same time I
-wrote [Pyswarms](https://github.com/ljvmiranda921/pyswarms) in 2017. A year
-later, I landed my first programming job. 
+wrote [Pyswarms](https://github.com/ljvmiranda921/pyswarms) in 2017.[^1] A year
+later, I landed [my first programming job](https://thinkingmachin.es). 
 
 However, my first *actual* programming project was back in 2008, still in high
 school, when I wrote **a simple [CRUD
@@ -55,3 +55,6 @@ play](/life/2021/09/21/build-earn-play/) into my craft.
 ## Resurrecting an old project
 
 
+### Footnotes
+
+[^1]: Yeah, just a one-year gap. Doing open-source has accelerated my learning. Sure, I knew how to program, but it's different when you're writing production code. I'm happy that I'm doing open-source and research full time now.
