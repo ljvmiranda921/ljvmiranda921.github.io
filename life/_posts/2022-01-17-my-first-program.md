@@ -27,9 +27,13 @@ around **124,389 words** in **79 posts**, all done in **492 commits**!  Happy
 that I kept at it for the past few years.
 
 Blogging has always been part of my programming life, especially that of my
-professional career. I started doing open-source in 2017, and eventually got
-paid to program a year after. However, my first *actual* programming project
-was back in 2008, still in high school, when I wrote **a simple [CRUD
+professional career&mdash; they're like siblings growing up together. I
+published ["Hello World"](/life/2017/01/16/hello-world/) at the same time I
+wrote [Pyswarms](https://github.com/ljvmiranda921/pyswarms) in 2017. A year
+later, I landed my first programming job. 
+
+However, my first *actual* programming project was back in 2008, still in high
+school, when I wrote **a simple [CRUD
 system](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) for
 student records.**
 
