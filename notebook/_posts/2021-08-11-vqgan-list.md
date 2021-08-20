@@ -31,8 +31,9 @@ these):
 | [Zoetrope 5](https://colab.research.google.com/drive/1LpEbICv1mmta7Qqic1IcRTsRsq7UKRHM#scrollTo=iKP0tnHaiTyl)                                 | [@classpectanon](https://twitter.com/classpectanon) | Has advanced parameters for  more controlled AI art generation. I haven't tried this yet, but it may be good to flesh your artwork more.       |
 | [VQGAN+CLIP Python coomand-line interface](https://colab.research.google.com/drive/1LpEbICv1mmta7Qqic1IcRTsRsq7UKRHM#scrollTo=iKP0tnHaiTyl)                                 | [@nerdyrodent](https://github.com/nerdyrodent) | Not a Google Colab notebook, but a Github repo that you can fork and run locally. Provides a command-line interface to generate AI-art on the fly.        |
 | [VQGAN+CLIP (z+quantize method with augmentations)](https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W?usp=sharing)                                 | [@somewheresy](https://twitter.com/somewheresy) | It seems to be the first English-translated notebook of Katherine Crowson ([@RiversHaveWings](https://twitter.com/RiversHaveWings)).        |
+| [CLIPIT PixelDraw](https://www.kapwing.com/ai-video-generator)                                 | [@dribnet](https://www.twitter.com/dribnet) | A very interesting fork of the VQGAN+CLIP notebooks that uses PixelDraw to generate pixel art given a prompt. |
 | [Nightcafe Studio](https://creator.nightcafe.studio/text-to-image-art)                                 | [NightCafe Studio](https://twitter.com/somewheresy) | Not a Colab notebook, but rather a managed service where you need to setup an account. I can't comment how different the outputs are compared to the Colab notebooks.  |
-
+| [Kapwing AI Video Generator](https://www.kapwing.com/ai-video-generator)                                 | [Kapwing](https://www.kapwing.com/workspace/60c6021530e75900fd3e7f23) | A web-hosted version of CLIP VQGAN. Generates videos after processing. It's not as customizable, but the processing time is relatively fast!  |
 
 ## CLIP-guided art generators
 
