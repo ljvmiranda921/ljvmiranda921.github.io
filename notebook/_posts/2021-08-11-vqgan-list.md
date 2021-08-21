@@ -70,3 +70,8 @@ Of course, nothing beats reading the original papers themselves:
 1. <a id="radford2021clip">Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J. and Krueger, G.</a>, 2021. Learning transferable visual models from natural language supervision. *arXiv preprint arXiv:2103.00020*.
 
 > Did I miss anything? Just comment below!
+
+#### Changelog
+
+- 08-22-2021: Added Kapwing and PixelDraw
+- 08-21-2021: This blogpost was featured in [Comet's newsletter](https://www.comet.ml/site/comet-newsletter-issue-14-nvidias-computer-generated-ceo-snap-gpus-for-model-inference/)! 
