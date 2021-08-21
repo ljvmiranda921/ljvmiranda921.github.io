@@ -29,10 +29,11 @@ these):
 | [Create realistic AI-Generated Images with VQGAN+CLIP](https://colab.research.google.com/drive/1wkF67ThUz37T2_oPIuSwuO4e_-0vjaLs?usp=sharing) | [@minimaxir](https://twitter.com/minimaxir)         | 🔰 Has good UI affordances and more descriptive explanation of parameters. Have options for deterministic output by using icon-based input/target images. |
 | [VQGAN+CLIP (with pooling and quantize method)](https://colab.research.google.com/drive/1Foi0mCSE6NrW9oI3Fhni7158Krz4ZXdH)                    | [@ak92501](https://twitter.com/ak92501)             | Has an optional Gradio demo for a more streamlined experience.           |
 | [Zoetrope 5](https://colab.research.google.com/drive/1LpEbICv1mmta7Qqic1IcRTsRsq7UKRHM#scrollTo=iKP0tnHaiTyl)                                 | [@classpectanon](https://twitter.com/classpectanon) | Has advanced parameters for  more controlled AI art generation. I haven't tried this yet, but it may be good to flesh your artwork more.       |
-| [VQGAN+CLIP Python coomand-line interface](https://colab.research.google.com/drive/1LpEbICv1mmta7Qqic1IcRTsRsq7UKRHM#scrollTo=iKP0tnHaiTyl)                                 | [@nerdyrodent](https://github.com/nerdyrodent) | Not a Google Colab notebook, but a Github repo that you can fork and run locally. Provides a command-line interface to generate AI-art on the fly.        |
+| [VQGAN+CLIP Python command-line interface](https://colab.research.google.com/drive/1LpEbICv1mmta7Qqic1IcRTsRsq7UKRHM#scrollTo=iKP0tnHaiTyl)                                 | [@nerdyrodent](https://github.com/nerdyrodent) | Not a Google Colab notebook, but a Github repo that you can fork and run locally. Provides a command-line interface to generate AI-art on the fly.        |
 | [VQGAN+CLIP (z+quantize method with augmentations)](https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W?usp=sharing)                                 | [@somewheresy](https://twitter.com/somewheresy) | It seems to be the first English-translated notebook of Katherine Crowson ([@RiversHaveWings](https://twitter.com/RiversHaveWings)).        |
+| [CLIPIT PixelDraw](https://www.kapwing.com/ai-video-generator)                                 | [@dribnet](https://www.twitter.com/dribnet) | A very interesting fork of the VQGAN+CLIP notebooks that uses PixelDraw to generate pixel art given a prompt. |
 | [Nightcafe Studio](https://creator.nightcafe.studio/text-to-image-art)                                 | [NightCafe Studio](https://twitter.com/somewheresy) | Not a Colab notebook, but rather a managed service where you need to setup an account. I can't comment how different the outputs are compared to the Colab notebooks.  |
-
+| [Kapwing AI Video Generator](https://www.kapwing.com/ai-video-generator)                                 | [Kapwing](https://www.kapwing.com/workspace/60c6021530e75900fd3e7f23) | A web-hosted version of CLIP VQGAN. Generates videos after processing. It's not as customizable, but the processing time is relatively fast!  |
 
 ## CLIP-guided art generators
 
@@ -69,3 +70,8 @@ Of course, nothing beats reading the original papers themselves:
 1. <a id="radford2021clip">Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J. and Krueger, G.</a>, 2021. Learning transferable visual models from natural language supervision. *arXiv preprint arXiv:2103.00020*.
 
 > Did I miss anything? Just comment below!
+
+#### Changelog
+
+- 08-22-2021: Added Kapwing and PixelDraw
+- 08-21-2021: This blogpost was featured in [Comet's newsletter](https://www.comet.ml/site/comet-newsletter-issue-14-nvidias-computer-generated-ceo-snap-gpus-for-model-inference/)! 
