@@ -465,6 +465,10 @@ probably do this again in the future, but I'll definitely lower my scope.
 1. <a id="zhuang2020survey">Zhuang, F., Qi, Z., Duan, K., Xi, D., Zhu, Y., Zhu, H., Xiong, H. and He, Q.</a>, 2020. A comprehensive survey on transfer learning. *Proceedings of the IEEE*, 109(1), pp.43-76.
 1. <a id="zliobaite2010drift">Žliobaitė, I.,</a> 2010. Learning under concept drift: an overview. *arXiv preprint arXiv:1010.4784*.
 
+#### Changelog
+
+- 08-17-2021: This post was featured in [DVC's newsletter!](https://dvc.org/blog/august-21-dvc-heartbeat)
+
 
 ## Footnotes
 
