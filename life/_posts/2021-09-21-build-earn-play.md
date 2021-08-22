@@ -194,8 +194,9 @@ I've come to realize that I just need to accept it, as this is going to be the
 case 99% of the time. My go-to strategy is to set boundaries, [find *play*
 outside of work](https://www.swyx.io/part-time-creator-manifesto/), and
 separate the programming I do for my job from the programming I do for
-myself.[^6] During these moments, I was able to build a game and write more in my
-blog  while being productive at work!
+myself.[^6] During these moments, I was able to [build a
+game](/projects/2021/08/15/abyss/) and write more in my blog  while being
+productive at work!
 
 ### Build and Play
 
