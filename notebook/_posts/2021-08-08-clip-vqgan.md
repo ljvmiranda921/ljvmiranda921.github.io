@@ -5,6 +5,7 @@ title: "The Illustrated VQGAN"
 date: 2021-08-08
 category: notebook
 comments: true
+highlight: true
 author: "LJ MIRANDA"
 published: true
 tags: [vqgan, machine learning, research, deep learning, neural network, clip vqgan]

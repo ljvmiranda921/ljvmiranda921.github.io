@@ -3,6 +3,7 @@ layout: post
 type: post
 title: "Navigating the MLOps tooling landscape (Part 1: The Lifecycle)"
 date: 2021-05-10
+highlight: true
 category: notebook
 comments: true
 author: "LJ MIRANDA"

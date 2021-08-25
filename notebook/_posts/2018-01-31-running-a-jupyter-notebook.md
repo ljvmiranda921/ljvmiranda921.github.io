@@ -4,6 +4,7 @@ title: "Running a Jupyter notebook from a remote server"
 date: 2018-01-31
 category: notebook
 comments: true
+highlight: true
 author: "LJ MIRANDA"
 description: "Running a Jupyter notebook from a remote server"
 math: true

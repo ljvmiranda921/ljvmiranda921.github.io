@@ -5,6 +5,7 @@ title: "How to improve software engineering skills as a researcher"
 date: 2020-11-15
 category: notebook
 comments: true
+highlight: true
 author: "LJ MIRANDA"
 header-img: /assets/png/data-science-swe/2_modularization.png
 tags: [software development, python, software engineering, data science,
