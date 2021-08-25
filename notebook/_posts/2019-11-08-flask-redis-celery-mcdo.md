@@ -4,6 +4,7 @@ title: "Distill: Why do we need Flask, Celery, and Redis? (with McDonalds in Bet
 date: 2019-11-08
 category: notebook
 comments: true
+highlight: true
 author: "LJ MIRANDA"
 tags: [flask, celery, redis, python, backend, web development, mcdonalds]
 description: |

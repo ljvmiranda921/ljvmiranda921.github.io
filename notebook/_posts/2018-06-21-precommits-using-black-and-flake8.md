@@ -4,6 +4,7 @@ title: "Automate Python workflow using pre-commits: black and flake8"
 date: 2018-06-21
 category: notebook
 comments: true
+highlight: true
 author: "LJ MIRANDA"
 tags: [python, black, precommit, flake8, git, automation, workflow]
 ---

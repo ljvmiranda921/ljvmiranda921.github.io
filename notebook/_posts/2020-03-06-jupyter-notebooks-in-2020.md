@@ -3,6 +3,7 @@ layout: post
 title: "How to use Jupyter Notebooks in 2020 (Part 1: The data science
 landscape)"
 date: 2020-03-06
+highlight: true
 category: notebook
 comments: true
 author: "LJ MIRANDA"

@@ -12,7 +12,7 @@ Hopefully, this notebook will interest you as others did.
 <ul>
   {% for post in site.categories.notebook %}
     <li>
-        <span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <span>{{ post.date | date_to_string }}</span> » {% if post.highlight %}&starf; {% endif %}<a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
