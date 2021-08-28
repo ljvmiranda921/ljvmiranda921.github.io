@@ -37,9 +37,6 @@ part is that you get a nice output in the end:
 
 
 
-
-
-
 <!-- allude to the idea of having a stock of moderately-challenging projects
 -->
 
