@@ -50,7 +50,7 @@ for the real bois." I guess there was also a desire to be taken seriously,
 especially as a kid, so you try your best to make "serious" stuff.  Funny how
 it's almost the reverse now&mdash; I enjoy [making
 games](/projects/2021/08/15/abyss/) and [incorporating
-play](/life/2021/09/21/build-earn-play/) into my craft.
+play](/life/2021/09/21/build-earn-play/) into my code.
 
 Read on as I talk about my attempts to resurrect the project, pick apart my
 code, and see all the fun tidbits that I inserted here and there!
@@ -91,6 +91,9 @@ Good thing,
 
 
 ## Epilogue
+
+<!-- i think it's fine to remove this part -->:w
+
 
 
 **So what happened between 2008 to 2017?** Well, a lot of things. During my
