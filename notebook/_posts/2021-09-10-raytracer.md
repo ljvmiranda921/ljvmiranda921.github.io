@@ -26,9 +26,9 @@ build my very own ray tracer from scratch! I've been reading a lot about
 computer graphics recently, and this guide encouraged me to try something on my
 own. 
 
-The guide was easy to follow, and the math itself requires decent understanding
-of geometry (vectors, surface normals, Snell's law, etc.). The code was written
-in C++, but I opted to write it in
+The book was easy to follow, and the math itself isn't complicated&mdash;just a
+decent understanding of geometry (vectors, surface normals, Snell's law, etc.).
+The code was written in C++, but I opted to write it in
 [Typescript](https://www.typescriptlang.org/) as a learning practice. The best
 part is that you get a nice output in the end:
 
