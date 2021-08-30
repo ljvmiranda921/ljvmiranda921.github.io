@@ -1,19 +1,19 @@
 ---
 layout: post
 type: post
-title: "The first program I ever wrote*"
+title: "The first program I ever wrote"
 date: 2022-01-17
 category: life
 comments: true
 author: "LJ MIRANDA"
 summary: |
-    *A five-year anniversary special. I was able to find my first programming
+    A five-year anniversary special. I was able to find my first programming
     project when I was thirteen (back in '08), and I'd like to share it here!
 excerpt: |
-    *A five-year anniversary special. I was able to find my first programming
+    A five-year anniversary special. I was able to find my first programming
     project when I was thirteen (back in '08), and I'd like to share it here!
 description: |
-    *A five-year anniversary special. I was able to find my first programming
+    A five-year anniversary special. I was able to find my first programming
     project when I was thirteen (back in '08), and I'd like to share it here!
 ---
 
