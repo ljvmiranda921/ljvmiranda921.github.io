@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "A Weekend Ray Tracer"
-date: 2021-09-10
+date: 2021-09-25
 category: notebook
 comments: true
 author: "LJ MIRANDA"
