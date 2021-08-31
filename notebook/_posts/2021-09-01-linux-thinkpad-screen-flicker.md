@@ -139,5 +139,5 @@ price to pay to remove that screen flickering.
 
 ## Footnotes
 
-[^1]: The [Arch Linux documentation](https://wiki.archlinux.org/title/intel_graphics#Screen_flickering) is a good resource for troubleshooting the Intel driver and cross-referencing your Google search results. Even though I am using Ubuntu, some of which still applies.
+[^1]: The [Arch Linux documentation](https://wiki.archlinux.org/title/intel_graphics#Screen_flickering) is a good resource for troubleshooting the Intel driver and cross-referencing your Google search results. Even though I am using Ubuntu, some of which still applies. You can also check the [corresponding Linux kernel bug report](http://lkml.iu.edu/hypermail/linux/kernel/2003.3/07303.html) for more info.
 [^2]: If you are using Ubuntu 16.04 or below, you can use `gksudo` like so: `gksu gedit /etc/default/grub`. But since it's already removed in 18.04, you can use `pkexec gedit /etc/default/grub` (long-term method).  I am only using the `admin` route because it doesn't require any new installations. Read more from [this article](https://itsfoss.com/gksu-replacement-ubuntu/).
