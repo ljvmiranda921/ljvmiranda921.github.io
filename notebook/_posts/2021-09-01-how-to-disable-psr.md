@@ -22,7 +22,9 @@ If you own a Lenovo Thinkpad and experience screen flickering&mdash;monitor
 blacks out even if it's turned on, static-like screen movement, or
 tearing&mdash; then it may just be due to a power-saving setting.
 
-<!-- GIF of screen flickering -->
+<div style="text-align:center">
+<blockquote class="imgur-embed-pub" lang="en" data-id="EFuItd0"><a href="https://imgur.com/EFuItd0">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+</div>
 
 Don't fret, because it's [a common problem for Thinkpad
 notebooks](https://www.reddit.com/r/thinkpad/search/?q=screen%20flicker&restrict_sr=1).
@@ -122,21 +124,14 @@ memory leaking from the frame buffer, causing us to see unsynced content.
     GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i915.enable_psr=0 i915.enable_fbc=0 i915.modset=0"
     ```
 
+* Updating your graphics drivers may also be another option. However, this
+    didn't work for me. I switched from the Noveau driver to `nvidia-470
+    (proprietary, tested)` and the flickering still showed up.
+* Lastly, if you're on Windows, you can search for the Intel Graphics Command Center, head to the Power tab, locate the Panel Self Refresh setting and toggle the disable button.
 
-> Did it work? Please let me know in the comments below! If you've solved your
-> problem via different means, please let me know as well!
+> Did it work? Please let me know in the comments below! If you also solved your
+> problem using a different method, please let me know as well!
 
 ## Footnotes
 
 [^1]: If you are using Ubuntu 16.04 or below, you can use `gksudo` like so: `gksu gedit /etc/default/grub`. But since it's already removed in 18.04, you can use `pkexec gedit /etc/default/grub` (long-term method).  I am only using the `admin` route because it doesn't require any new installations.
-
-
-
-
-
-
-
-
-
-
-
