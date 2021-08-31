@@ -26,7 +26,7 @@ tearing&mdash; then it may just be due to a power-saving setting.
 <blockquote class="imgur-embed-pub" lang="en" data-id="EFuItd0"><a href="https://imgur.com/EFuItd0">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 </div>
 
-Don't fret, because it's [a common problem for Thinkpad
+Don't fret, because it's [a common problem with Thinkpad
 notebooks](https://www.reddit.com/r/thinkpad/search/?q=screen%20flicker&restrict_sr=1).
 You're also in luck, because it's solvable with just a few terminal commands.
 
