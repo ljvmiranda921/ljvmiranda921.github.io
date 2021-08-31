@@ -36,7 +36,7 @@ You're also in luck, because it's solvable with just a few terminal commands.
 
 ## The solution
 
-> Note: this was tested on a Thinkpad X1 Extreme Gen 2 notebook running on a Ubuntu
+> Note: this was tested on a Thinkpad X1 Extreme Gen 2 notebook running on an Ubuntu
 > 20.04 distribution. I have an Intel UHD and Nvidia Geforce GTX1650 GPUs
 > (Noveau driver). This solution solved my screen's flickering for the time
 > being.
