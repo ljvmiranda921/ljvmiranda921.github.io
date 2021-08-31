@@ -36,7 +36,8 @@ You're also in luck, because it's solvable with just a few terminal commands.
 
 > Note: This was tested on a Thinkpad X1 Extreme Gen 2 and running on a Ubuntu
 > 20.04 distribution. I have an Intel UHD and Nvidia Geforce GTX1650 GPUs
-> (Noveau driver).
+> (Noveau driver). This solution solved my screen's flickering for the time
+> being.
 
 The solution is to **disable Intel's Panel Self Refresh (PSR) setting.**
 
@@ -60,8 +61,9 @@ The solution is to **disable Intel's Panel Self Refresh (PSR) setting.**
     gedit admin:///etc/default/grub
     ```
 
-    A quick note: **don't type** `sudo gedit /etc/default/grub`! Because it has
-    elevated privileges, it is the least safe option.[^1] 
+    A quick note: **don't type** `sudo gedit /etc/default/grub` even if some
+    tutorials tell you to. Using `sudo` to edit graphical settings is unsafe
+    due to elevated privileges![^1] 
 
 3. Now, look for the line that says `quiet splash` and append
    `i915.enable_psr=0` in front of the last quote. It should look like this:
@@ -100,15 +102,16 @@ The solution is to **disable Intel's Panel Self Refresh (PSR) setting.**
 [Panel Self Refresh
 (PSR)](https://www.anandtech.com/show/7208/understanding-panel-self-refresh) is
 an optimization to reduce the power consumed by your computer, especially the
-chip. Most monitors have a 60 Hz refresh rate, so every second it updates what
+chip. It's directly tied to how a monitor displays contents to us.
+
+Most monitors have a 60 Hz refresh rate, so every second it updates what
 you see on the screen 60 times. It is good if you're viewing dynamic content
 like games, scrolling, or watching movies. But it's not that efficient when
-display is static: reading from a website, idle time, etc. PSR addresses the
-latter by "remembering" a few frames into memory so that refreshing takes less
-work.
+display is static: reading from a website, idle time, etc. 
 
-
-
+PSR addresses the latter by "remembering" a few frames into memory (the frame
+buffer) so that refreshing takes less work. Screen flicker *may* be due to the
+memory leaking from the frame buffer, causing us to see unsynced content.
 
 ## Other solutions
 
@@ -118,6 +121,11 @@ work.
     # /etc/default/grub
     GRUB_CMDLINE_LINUX_DEFAULT="quiet splash i915.enable_psr=0 i915.enable_fbc=0 i915.modset=0"
     ```
+
+
+> Did it work? Please let me know in the comments below! If you've solved your
+> problem via different means, please let me know as well!
+
 ## Footnotes
 
 [^1]: If you are using Ubuntu 16.04 or below, you can use `gksudo` like so: `gksu gedit /etc/default/grub`. But since it's already removed in 18.04, you can use `pkexec gedit /etc/default/grub` (long-term method).  I am only using the `admin` route because it doesn't require any new installations.
