@@ -26,6 +26,9 @@ won't *just work*, each step needs a workaround ([cygwin](https://cygwin.com),
 [MSYS2](https://msys2.org), [Git Bash on Windows](gitforwindows.org) etc.), and
 more. It was unpleasant. However, the ecosystem has changed for the better!
 
+In this blogpost, I'll share some of the steps I took to make my machine
+developer-friendly. 
+
 
 ## Install WSL2 and get the Windows Terminal
 
@@ -43,6 +46,8 @@ more. It was unpleasant. However, the ecosystem has changed for the better!
 
 
 ## FAQs
+
+
 
 
 <!-- add links that you should check when keeping track of windows updates -->
