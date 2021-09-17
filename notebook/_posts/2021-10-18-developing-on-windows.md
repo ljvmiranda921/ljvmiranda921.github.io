@@ -87,7 +87,9 @@ PowerShell.
 
 However, we won't be using the pre-installed "Windows PowerShell" for our
 tasks. Instead, we will download *another PowerShell* (named just "PowerShell")
-from the Microsoft Store.  Confusing? Yeah, here's what I got:
+[from the Microsoft
+Store](https://www.microsoft.com/en-us/p/powershell/9mz1snwt0n5d#activetab=pivot:overviewtab).
+Confusing? Yeah, here's what I got:
 
 * The pre-installed PowerShell, or *Windows PowerShell* (or PowerShell 5.1) is
     a Windows-only program that relies on an older .NET Core runtime. It's no
