@@ -43,8 +43,8 @@ developer-friendly. Hope you find these helpful as much as I did:
 feels like a cheat code because it's like I'm running a native Linux system
 inside Windows. Installation was painless, and [all my
 dotfiles](https://github.com/ljvmiranda921/dotfiles) for vim, tmux, and bash
-worked out of the box. Also, you can choose any distro you want (from the
-Microsoft Store)! I'm pretty basic so I just go with Ubuntu 20.04. 
+worked out of the box. Also, you can choose any distro you want from the
+Microsoft Store! I'm pretty basic so I just go with Ubuntu 20.04. 
 
 <!-- microsoft store choose distro -->
 
