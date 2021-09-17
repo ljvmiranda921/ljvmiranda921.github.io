@@ -22,8 +22,7 @@ excerpt: |
 <span class="firstcharacter">R</span>ecently, I've been developing on a Windows
 machine, and it was surprisingly fun. At first, I was anxious because of my
 previous experience with Windows. Five years ago, installation instructions
-won't *just work*, each step needs a workaround ([cygwin](https://cygwin.com),
-[MSYS2](https://msys2.org), [Git Bash on Windows](gitforwindows.org) etc.), and
+won't *just work*, each step needs a workaround,[^1] and
 things break often. It was unpleasant. Now, I feel like the ecosystem has
 changed for the better.
 
@@ -64,7 +63,7 @@ scheme](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/col
 and the font. Personally, I love using [Gruvbox
 Dark](https://gist.github.com/davialexandre/1179070118b22d830739efee4721972d)
 and [Fira
-code](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode).[^1]
+code](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode).[^2]
 After a few tweaks, my terminal already looks like the one I've been accustomed
 to in my Linux machine.
 
@@ -79,9 +78,10 @@ the actual `home` directory for Linux.
 > beginner here (Windows) as much as the next guy. Let me know in the comments
 > if I missed anything!
 
-Now that I'm looking at Windows with my "more mature developer eyes," I was
-curious on how to get around the Windows OS through a shell. With that, I
-learned that the main entrypoint is through PowerShell. 
+Now that I'm looking at Windows with my "more experienced" developer eyes, I am
+curious as to how I can get around the OS through the shell. Previously, I've
+always used the GUI. With that, I learned that the main entrypoint is through
+PowerShell. 
 
 ### PowerShell
 
@@ -89,7 +89,9 @@ However, we won't be using the pre-installed "Windows PowerShell" for our
 tasks. Instead, we will download *another PowerShell* (named just "PowerShell")
 from the Microsoft Store.  Confusing? Yeah, here's what I got:
 
-* The pre-installed PowerShell, or *Windows PowerShell* (or PowerShell 5.1) is a Windows-only program that relies on an older .NET Core runtime. It's no longer in active development aside from bug-fixes.
+* The pre-installed PowerShell, or *Windows PowerShell* (or PowerShell 5.1) is
+    a Windows-only program that relies on an older .NET Core runtime. It's no
+    longer in active development aside from bug-fixes.
 * The new PowerShell, named *PowerShell* (or PowerShell 7.x) supports
     cross-platform development. So programs developed there can run on
     Windows, macOS, and Linux. 
@@ -144,4 +146,5 @@ okay to keep them both so as to not break anything in your system.
 
 ### Footnotes
 
-[^1]: I use NerdFont's patched version of [Fira Code](https://fonts.google.com/specimen/Fira+Code). With that, you can access almost a thousand icons to prettify your terminal.
+[^1]: I remember back then, I use alternatives like [Cygwin](https://www.cygwin.com), [MSYS2](https://www.msys2.org), and [Git Bash on Windows](https://git-scm.com/downloads).
+[^2]: I use NerdFont's patched version of [Fira Code](https://fonts.google.com/specimen/Fira+Code). With that, you can access almost a thousand icons to prettify your terminal.
