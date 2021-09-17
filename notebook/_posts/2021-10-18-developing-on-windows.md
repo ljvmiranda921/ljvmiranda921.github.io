@@ -146,5 +146,5 @@ okay to keep them both so as to not break anything in your system.
 
 ### Footnotes
 
-[^1]: I remember back then, I use alternatives like [Cygwin](https://www.cygwin.com), [MSYS2](https://www.msys2.org), and [Git Bash on Windows](https://git-scm.com/downloads).
+[^1]: I remember back then, I use alternatives like [Cygwin](https://www.cygwin.com), [MSYS2](https://www.msys2.org), and [Git Bash on Windows](https://git-scm.com/downloads) to emulate a Linux-like experience. It was fun so I decided to jump head-on to a full Linux installation.
 [^2]: I use NerdFont's patched version of [Fira Code](https://fonts.google.com/specimen/Fira+Code). With that, you can access almost a thousand icons to prettify your terminal.
