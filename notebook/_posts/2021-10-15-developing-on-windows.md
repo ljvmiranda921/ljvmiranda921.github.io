@@ -24,8 +24,8 @@ machine, and it was surprisingly fun. At first, I was anxious because of my
 previous experience with Windows. Five years ago, installation instructions
 won't *just work*, each step needs a workaround ([cygwin](https://cygwin.com),
 [MSYS2](https://msys2.org), [Git Bash on Windows](gitforwindows.org) etc.), and
-a whole lot more. It was unpleasant. Now, I feel like the ecosystem has changed
-for the better.
+things break often. It was unpleasant. Now, I feel like the ecosystem has
+changed for the better.
 
 <!-- screenshot of your setup -->
 
@@ -39,11 +39,37 @@ developer-friendly. Hope you find these helpful as much as I did:
 
 ## Install WSL2 and get the Windows Terminal
 
-Installing WSL2 feels like a cheat code because it's like I'm running
-a native Linux system inside Windows.
+[Installing WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+feels like a cheat code because it's like I'm running a native Linux system
+inside Windows. Installation was painless, and [all my
+dotfiles](https://github.com/ljvmiranda921/dotfiles) for vim, tmux, and bash
+worked out of the box. Also, you can choose any distro you want (from the
+Microsoft Store)! I'm pretty basic so I just go with Ubuntu 20.04. 
 
-<!-- install NERD fonts -->
-<!-- update themes in Windows Terminal -->
+<!-- microsoft store choose distro -->
+
+
+However, I wouldn't even stop there. Instead of using the "WSL2 Terminal," I
+went for the Windows Terminal (you can also find it in the Microsoft Store).
+It's an emulator where you can open Powershell, Command Prompt, and Bash in
+multiple tabs! 
+
+<!-- show multiple tabs ? -->
+
+
+It's customizable too. You can [change the color
+scheme](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes)
+and the font. Personally, I love using [Gruvbox
+Dark](https://gist.github.com/davialexandre/1179070118b22d830739efee4721972d)
+and [Fira
+code](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode).[^1]
+After a few tweaks, my terminal already looks like the one I've been accustomed
+to in my Linux machine.
+
+Lastly, another thing I did is to set Bash as my default profile, and update
+the starting directory to `//wsl$/Ubuntu-20.04/home/$USER/`. So whenever I open
+the Windows Terminal, the bash profile is automatically loaded and is set to
+the actual `home` directory for Linux.
 
 
 ## Prettify your Powershell Prompt
@@ -77,3 +103,8 @@ a native Linux system inside Windows.
 3. beautifying your terminal: (1) bash (2) powershell
 4. powertoys for keyboard mapping
 -->
+
+
+### Footnotes
+
+[^1]: I use NerdFont's patched version of [Fira Code](https://fonts.google.com/specimen/Fira+Code). With that, you can access almost a thousand icons to prettify your terminal.
