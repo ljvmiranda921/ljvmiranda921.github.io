@@ -33,17 +33,20 @@ In this blogpost, I'll share some of the steps I took to make my machine
 developer-friendly. Hope you find these helpful as much as I did:
 
 - Install WSL2 and get the Windows Terminal
-- Prettify your Powershell Prompt with Oh-My-Posh
+- Prettify your Powershell Prompt
 - Install Windows Powertoys for more control
 - Keep track of Windows Updates
 
 ## Install WSL2 and get the Windows Terminal
 
+Installing WSL2 feels like a cheat code because it's like I'm running
+a native Linux system inside Windows.
+
 <!-- install NERD fonts -->
 <!-- update themes in Windows Terminal -->
 
 
-## Prettify your Powershell Prompt with Oh-my-Posh
+## Prettify your Powershell Prompt
 
 
 ## Install Windows Powertoys for more control
