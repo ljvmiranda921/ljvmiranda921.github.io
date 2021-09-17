@@ -47,6 +47,7 @@ worked out of the box. Also, you can choose any distro you want from the
 Microsoft Store! I'm pretty basic so I just go with Ubuntu 20.04. 
 
 <!-- microsoft store choose distro -->
+<!-- OR neofetch? -->
 
 
 However, I wouldn't even stop there. Instead of using the "WSL2 Terminal," I
