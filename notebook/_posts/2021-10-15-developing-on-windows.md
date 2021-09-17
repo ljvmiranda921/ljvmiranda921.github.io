@@ -33,15 +33,16 @@ In this blogpost, I'll share some of the steps I took to make my machine
 developer-friendly. Hope you find these helpful as much as I did:
 
 - Install WSL2 and get the Windows Terminal
-- Prettify your Powershell Prompt
+- Prettify your PowerShell Prompt
 - Install Windows Powertoys for more control
 - Keep track of Windows Updates
 
 ## Install WSL2 and get the Windows Terminal
 
-[Installing WSL2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-feels like a cheat code because it's like I'm running a native Linux system
-inside Windows. Installation was painless, and [all my
+[Installing Windows Subsystem for Linux 2
+(WSL2)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) feels like
+a cheat code because it's like I'm running a native Linux system inside
+Windows. Installation was painless, and [all my
 dotfiles](https://github.com/ljvmiranda921/dotfiles) for vim, tmux, and bash
 worked out of the box. Also, you can choose any distro you want from the
 Microsoft Store! I'm pretty basic so I just go with Ubuntu 20.04. 
@@ -52,7 +53,7 @@ Microsoft Store! I'm pretty basic so I just go with Ubuntu 20.04.
 
 However, I wouldn't even stop there. Instead of using the "WSL2 Terminal," I
 went for the Windows Terminal (you can also find it in the Microsoft Store).
-It's an emulator where you can open Powershell, Command Prompt, and Bash in
+It's an emulator where you can open PowerShell, Command Prompt, and Bash in
 multiple tabs! 
 
 <!-- show multiple tabs ? -->
@@ -72,8 +73,40 @@ the starting directory to `//wsl$/Ubuntu-20.04/home/$USER/`. So whenever I open
 the Windows Terminal, the bash profile is automatically loaded and is set to
 the actual `home` directory for Linux.
 
+## Prettify your PowerShell Prompt
 
-## Prettify your Powershell Prompt
+> First off, take whatever I say in this section with a grain of salt. I am a
+> beginner here (Windows) as much as the next guy. Let me know in the comments
+> if I missed anything!
+
+Now that I'm looking at Windows with my "more mature developer eyes," I was
+curious on how to get around the Windows OS through a shell. With that, I
+learned that the main entrypoint is through PowerShell. 
+
+### PowerShell
+
+However, we won't be using the pre-installed "Windows PowerShell" for our
+tasks. Instead, we will download *another PowerShell* (named just "PowerShell")
+from the Microsoft Store.  Confusing? Yeah, here's what I got:
+
+* The pre-installed PowerShell, or *Windows PowerShell* (or PowerShell 5.1) is a Windows-only program that relies on an older .NET Core runtime. It's no longer in active development aside from bug-fixes.
+* The new PowerShell, named *PowerShell* (or PowerShell 7.x) supports
+    cross-platform development. So programs developed there can run on
+    Windows, macOS, and Linux. 
+
+You can check your PowerShell version by typing `$PSVersionTable` and checking
+the value in the `PSVersion` key. On my machine, PowerShell 7.x is installed
+side-by-side with PowerShell 5.1. I am not sure if it's possible to upgrade 5.1
+to 7.X., so I opted to keep them separate.
+
+<!-- show my PSVersionTable -->
+
+Personally, it feels similar to the Python 2 to 3 conundrum. Sometimes it's
+okay to keep them both so as to not break anything in your system.
+
+### Install chocolatey
+
+
 
 
 ## Install Windows Powertoys for more control
@@ -87,7 +120,7 @@ the actual `home` directory for Linux.
 - **Why did you change to Windows?** I've been gaming recently and some
       NVIDIA drivers don't work out-of-the-box on Linux, especially on current-gen
       GPUs. If they do, they cause weird errors like screen stuttering and
-      blackouts. 
+      blackouts.  
 - **What made you took the leap?** Mostly curiosity. Some of my peers
       in my previous job use Windows for development (albeit with some pain-points). I'd like
       to see if I can create a delightful dev experience on a Windows Machine.
