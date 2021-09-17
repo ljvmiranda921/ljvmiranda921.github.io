@@ -112,6 +112,9 @@ okay to keep them both so as to not break anything in your system.
 ## Install Windows Powertoys for more control
 
 
+## Install Visual Studio Code
+
+
 ## Keep track of Windows Updates
 
 
