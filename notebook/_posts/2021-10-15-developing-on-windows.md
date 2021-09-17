@@ -27,6 +27,8 @@ won't *just work*, each step needs a workaround ([cygwin](https://cygwin.com),
 a whole lot more. It was unpleasant. Now, I feel like the ecosystem has changed
 for the better.
 
+<!-- screenshot of your setup -->
+
 In this blogpost, I'll share some of the steps I took to make my machine
 developer-friendly. Hope you find these helpful as much as I did:
 
