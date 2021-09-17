@@ -41,11 +41,11 @@ developer-friendly. Hope you find these helpful as much as I did:
 
 [Installing Windows Subsystem for Linux 2
 (WSL2)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) feels like
-a cheat code because it's like I'm running a native Linux system inside
-Windows. Installation was painless, and [all my
-dotfiles](https://github.com/ljvmiranda921/dotfiles) for vim, tmux, and bash
-worked out of the box. Also, you can choose any distro you want from the
-Microsoft Store! I'm pretty basic so I just go with Ubuntu 20.04. 
+cheating because I'm running a Linux system inside Windows. Installation was
+painless, and [all my dotfiles](https://github.com/ljvmiranda921/dotfiles) for
+[vim](https://www.vim.org/), [tmux](https://github.com/tmux/tmux/wiki), and
+bash worked out of the box. Also, you can choose any distro you want from the
+Microsoft Store! I'm pretty basic so I went with Ubuntu 20.04. 
 
 <!-- microsoft store choose distro -->
 <!-- OR neofetch? -->
