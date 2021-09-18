@@ -119,10 +119,12 @@ PowerShell. You can liken Chocolatey  to `apt` in Linux. Also, note that it's a
 third-party app, as there is an official package manager by the name
 [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/).
 
-I chose Chocolatey over winget because the former seems more mature and
-contains more applications. 
-
-
+I chose Chocolatey over winget because the former seems more mature and is
+feature-complete. To be honest, I am not sure of all the nuances between the
+two. A [quick Reddit search on "winget vs
+chocolatey"](https://www.google.com/search?q=winget+vs+chocolatey+site%3Areddit.com&oq=winget+vs+chocolatey+site%3Areddit.com)
+shows some hesitation from other developers over winget. As for me, I value
+stability, so I just went with Chocolatey.
 
 
 ## Install Windows Powertoys for more control
