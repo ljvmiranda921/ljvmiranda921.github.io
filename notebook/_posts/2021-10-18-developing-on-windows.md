@@ -127,6 +127,9 @@ shows some hesitation from other developers over winget. As for me, I value
 stability, so I just went with Chocolatey.
 
 
+### Install Oh-My-Posh
+
+
 ## Install Windows Powertoys for more control
 
 
