@@ -78,10 +78,13 @@ the actual `home` directory for Linux.
 > beginner here (Windows) as much as the next guy. Let me know in the comments
 > if I missed anything!
 
-Now that I'm looking at Windows with my "more experienced" developer eyes, I am
+Now that I'm looking at Windows with my more experienced developer eyes, I was
 curious as to how I can get around the OS through the shell. Previously, I've
 always used the GUI. With that, I learned that the main entrypoint is through
 PowerShell. 
+
+I don't really see myself writing PowerShell scripts in the future. So in order
+to dip my toes into the environment, my tiny task is to prettify my terminal.
 
 ### PowerShell
 
@@ -109,6 +112,15 @@ Personally, it feels similar to the Python 2 to 3 conundrum. Sometimes it's
 okay to keep them both so as to not break anything in your system.
 
 ### Install chocolatey
+
+The next thing I did is to download the [Chocolatey](https://chocolatey.org/)
+package manager. We will use it to install the prompt theme engine for
+PowerShell. You can liken Chocolatey  to `apt` in Linux. Also, note that it's a
+third-party app, as there is an official package manager by the name
+[winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/).
+
+I chose Chocolatey over winget because the former seems more mature and
+contains more applications. 
 
 
 
