@@ -73,6 +73,11 @@ the starting directory to `//wsl$/Ubuntu-20.04/home/$USER/`. So whenever I open
 the Windows Terminal, the bash profile is automatically loaded and is set to
 the actual `home` directory for Linux.
 
+
+## Install Visual Studio Code
+
+
+
 ## Prettify your PowerShell Prompt
 
 > First off, take whatever I say in this section with a grain of salt. I am a
@@ -133,19 +138,76 @@ stability, so I just went with Chocolatey.
 Oh-My-Posh is a prompt theme engine for customizing PowerShell. I found this
 through [Scott Hanselman's blogpost on making your terminal
 pretty](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal).
-The default prompt already looks good, yet it offers more themes to fit your
-liking:
+To install it via Chocolatey, I ran:
 
-<!-- show my powershell terminal -->
+```powershell
+choco install oh-my-posh
+```
 
-In order for the prompt to display correctly, 
+Then, I have to add the following line to my `$PROFILE`:
 
+```powershell
+oh-my-posh --init --shell pwsh --config ~/jandedobbeleer.omp.json | Invoke-Expression
+```
+
+I spent an hour figuring out where that `$PROFILE` file is located. Turns
+out, you can find it at:
+
+```
+C:\\Users\%USER%\Documents\Powershell\Microsoft.PowerShell_profile.ps1
+```
+
+If you haven't configured your PowerShell profile before, then that file may
+not exist yet. Create one and copy the `oh-my-posh` line above. Instead of
+navigating through your File explorer, you can jump ahead using VSCode by typing:
+
+```powershell
+code $PROFILE
+```
+
+You can also
+[change your
+theme](https://ohmyposh.dev/docs/windows#override-the-theme-settings) by
+updating the `--config` option. There's a [wide selection of
+themes](https://ohmyposh.dev/docs/themes), but I opted to use
+[nu4a](https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/nu4a.omp.json)
+as it fits nicely to Gruvbox.
+
+```powershell
+# Pre-installed themes can be found in ~\AppData\Local\Programs\oh-my-posh\themes\*.omp.json
+oh-my-posh --init --shell pwsh --config ~\AppData\Local\Programs\oh-my-posh\themes\nu4a.omp.json | Invoke-Expression
+```
+
+<!-- show powershell prompt with weird graphics -->
+
+At first, the prompt looks weird because some glyphs didn't render properly. To
+fix that, I used the [patched version of Fira
+Code](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
+so that I have access to all icons and shapes.
+
+<!-- fixed prompt -->
+
+I decided to be more extra and installed Terminal Icons. This adds small and
+cute icons whenever you type `ls` and `dir`. I installed it by typing the
+command below:
+
+```powershell
+Install-Module -Name Terminal-Icons -Repository PSGallery
+```
+
+and by adding the following line in my `$PROFILE`:
+
+```powershell
+Import-Module -Name Terminal-Icons
+```
+
+now it looks awesome!
+
+<!-- final product -->
 
 
 ## Install Windows Powertoys for more control
 
-
-## Install Visual Studio Code
 
 
 ## Keep track of Windows Updates
