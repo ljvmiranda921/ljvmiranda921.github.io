@@ -31,12 +31,13 @@ changed for the better.
 In this blogpost, I'll share some of the steps I took to make my machine
 developer-friendly. Hope you find these helpful as much as I did:
 
-- Install WSL2 and get the Windows Terminal
+- [Install WSL2 and get the Windows Terminal](#wsl2)
 - Prettify your PowerShell Prompt
 - Install Windows Powertoys for more control
+- Install Visual Studio Code
 - Keep track of Windows Updates
 
-## Install WSL2 and get the Windows Terminal
+## <a id="wsl2"></a> Install WSL2 and get the Windows Terminal
 
 [Installing Windows Subsystem for Linux 2
 (WSL2)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) feels like
@@ -84,7 +85,7 @@ always used the GUI. With that, I learned that the main entrypoint is through
 PowerShell. 
 
 I don't really see myself writing PowerShell scripts in the future. So in order
-to dip my toes into the environment, my tiny task is to prettify my terminal.
+to dip my toes into the environment, my tiny task is to *prettify my terminal.*
 
 ### PowerShell
 
