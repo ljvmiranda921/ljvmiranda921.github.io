@@ -130,6 +130,17 @@ stability, so I just went with Chocolatey.
 
 ### Install Oh-My-Posh
 
+Oh-My-Posh is a prompt theme engine for customizing PowerShell. I found this
+through [Scott Hanselman's blogpost on making your terminal
+pretty](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal).
+The default prompt already looks good, yet it offers more themes to fit your
+liking:
+
+<!-- show my powershell terminal -->
+
+In order for the prompt to display correctly, 
+
+
 
 ## Install Windows Powertoys for more control
 
