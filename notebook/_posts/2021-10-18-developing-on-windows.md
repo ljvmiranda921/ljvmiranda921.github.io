@@ -219,7 +219,7 @@ now it looks awesome!
       NVIDIA drivers don't work out-of-the-box on Linux, especially on current-gen
       GPUs. If they do, they cause weird errors like screen stuttering and
       blackouts.  
-- **What made you took the leap?** Mostly curiosity. Some of my peers
+- **What made you take the leap?** Mostly curiosity. Some of my peers
       in my previous job use Windows for development (albeit with some pain-points). I'd like
       to see if I can create a delightful dev experience on a Windows Machine.
 
