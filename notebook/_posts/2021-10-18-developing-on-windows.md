@@ -156,7 +156,7 @@ C:\\Users\%USER%\Documents\Powershell\Microsoft.PowerShell_profile.ps1
 
 If you haven't configured your PowerShell profile before, then that file may
 not exist yet. Create one and copy the `oh-my-posh` line above. Instead of
-navigating through your File explorer, you can jump ahead using VSCode by typing:
+navigating through your File Explorer, you can jump ahead using VSCode by typing:
 
 ```powershell
 code $PROFILE
