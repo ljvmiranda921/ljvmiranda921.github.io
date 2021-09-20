@@ -37,10 +37,10 @@ developer-friendly. Hope you find these helpful as much as I did:
 - Install Visual Studio Code
 - Keep track of Windows Updates
 
-## <a id="wsl2"></a> Install WSL2 and get the Windows Terminal
+## <a id="wsl2"></a> Install WSL2, Windows Terminal, and VSCode
 
-[Installing Windows Subsystem for Linux 2
-(WSL2)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) feels like
+[Installing **Windows Subsystem for Linux 2
+(WSL2)**](https://docs.microsoft.com/en-us/windows/wsl/install-win10) feels like
 cheating because I'm literally just running Linux. Installation was painless,
 and [all my dotfiles](https://github.com/ljvmiranda921/dotfiles) for
 [vim](https://www.vim.org/), [tmux](https://github.com/tmux/tmux/wiki), and
@@ -51,8 +51,13 @@ Microsoft Store! I'm pretty basic so I went with Ubuntu 20.04.
 <!-- OR neofetch? -->
 
 
+I also installed **Visual Studio Code (VSCode)** since it can seamlessly open
+files in both my Windows and Linux filesystems. Back then, I was bitten by the
+[CRLF problem](https://owasp.org/www-community/vulnerabilities/CRLF_Injection)
+when opening files between the two. This has been solved in VSCode.
+
 However, I wouldn't even stop there. Instead of using the "WSL2 Terminal," I
-went for the Windows Terminal (you can also find it in the Microsoft Store).
+went for the **Windows Terminal** (you can also find it in the Microsoft Store).
 It's an emulator where you can open PowerShell, Command Prompt, and Bash in
 multiple tabs! 
 
@@ -74,20 +79,12 @@ the Windows Terminal, the bash profile is automatically loaded and is set to
 the actual `home` directory for Linux.
 
 
-## Install Visual Studio Code
-
-
-
 ## Prettify your PowerShell Prompt
-
-> First off, take whatever I say in this section with a grain of salt. I am a
-> beginner here (Windows) as much as the next guy. Let me know in the comments
-> if I missed anything!
 
 Now that I'm looking at Windows with my more experienced developer eyes, I was
 curious as to how I can get around the OS through the shell. Previously, I've
 always used the GUI. With that, I learned that the main entrypoint is through
-PowerShell. 
+**PowerShell**. 
 
 I don't really see myself writing PowerShell scripts in the future. So in order
 to dip my toes into the environment, my tiny task is to *prettify my terminal.*
@@ -119,8 +116,8 @@ okay to keep them both so as to not break anything in your system.
 
 ### Install chocolatey
 
-The next thing I did is to download the [Chocolatey](https://chocolatey.org/)
-package manager. We will use it to install the prompt theme engine for
+The next thing I did is to download the **[Chocolatey](https://chocolatey.org/)
+package manager**. We will use it to install the prompt theme engine for
 PowerShell. You can liken Chocolatey  to `apt` in Linux. Also, note that it's a
 third-party app, as there is an official package manager by the name
 [winget](https://docs.microsoft.com/en-us/windows/package-manager/winget/).
@@ -135,7 +132,7 @@ stability, so I just went with Chocolatey.
 
 ### Install Oh-My-Posh
 
-Oh-My-Posh is a prompt theme engine for customizing PowerShell. I found this
+[**Oh-My-Posh**](https://ohmyposh.dev/) is a prompt theme engine for customizing PowerShell. I found this
 through [Scott Hanselman's blogpost on making your terminal
 pretty](https://www.hanselman.com/blog/my-ultimate-powershell-prompt-with-oh-my-posh-and-the-windows-terminal).
 To install it via Chocolatey, I ran:
