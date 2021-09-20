@@ -18,7 +18,6 @@ excerpt: |
     developer-friendly.
 ---
 
-
 <span class="firstcharacter">R</span>ecently, I've been developing on a Windows
 machine, and it was surprisingly fun. At first, I was anxious because of my
 previous experience with Windows. Five years ago, installation instructions
@@ -31,11 +30,9 @@ changed for the better.
 In this blogpost, I'll share some of the steps I took to make my machine
 developer-friendly. Hope you find these helpful as much as I did:
 
-- [Install WSL2 and get the Windows Terminal](#wsl2)
-- Prettify your PowerShell Prompt
-- Install Windows Powertoys for more control
-- Install Visual Studio Code
-- Keep track of Windows Updates
+- [Install WSL2, Windows Terminal, and VSCode](#wsl2)
+- [Prettify your PowerShell Prompt](#powershell)
+- [Install Microsoft Powertoys for more control](#powertoys)
 
 ## <a id="wsl2"></a> Install WSL2, Windows Terminal, and VSCode
 
@@ -47,8 +44,9 @@ and [all my dotfiles](https://github.com/ljvmiranda921/dotfiles) for
 bash worked out of the box. Also, you can choose any distro you want from the
 Microsoft Store! I'm pretty basic so I went with Ubuntu 20.04. 
 
-<!-- microsoft store choose distro -->
-<!-- OR neofetch? -->
+![](/assets/png/windows-dev/neofetch.png){:width="540px"}  
+__Figure__: *Windows Subsystem for Linux!*
+{: style="text-align: center;"}
 
 
 I also installed **Visual Studio Code (VSCode)** since it can seamlessly open
@@ -61,7 +59,9 @@ went for the **Windows Terminal** (you can also find it in the Microsoft Store).
 It's an emulator where you can open PowerShell, Command Prompt, and Bash in
 multiple tabs! 
 
-<!-- show multiple tabs ? -->
+![](/assets/png/windows-dev/multiple_tabs.png){:width="540px"}  
+__Figure__: *If you look at the top, then you can see that I can open Bash, PowerShell, and the Windows Command Prompt in just one place using Windows Terminal*
+{: style="text-align: center;"}
 
 
 It's customizable too. You can [change the color
@@ -70,8 +70,17 @@ and the font. Personally, I love using [Gruvbox
 Dark](https://gist.github.com/davialexandre/1179070118b22d830739efee4721972d)
 and [Fira
 code](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode).[^2]
+
+![](/assets/png/windows-dev/settings.png){:width="540px"}  
+__Figure__: *You can update the font and color scheme in the Settings tab*
+{: style="text-align: center;"}
+
 After a few tweaks, my terminal already looks like the one I've been accustomed
 to in my Linux machine.
+
+![](/assets/png/windows-dev/linux_setup.png){:width="540px"}  
+__Figure__: *With WSL2 and Windows Terminal, I was able to replicate my Linux setup*
+{: style="text-align: center;"}
 
 Lastly, another thing I did is to set Bash as my default profile, and update
 the starting directory to `//wsl$/Ubuntu-20.04/home/$USER/`. So whenever I open
@@ -79,7 +88,7 @@ the Windows Terminal, the bash profile is automatically loaded and is set to
 the actual `home` directory for Linux.
 
 
-## Prettify your PowerShell Prompt
+## <a id="powershell"></a>Prettify your PowerShell Prompt
 
 Now that I'm looking at Windows with my more experienced developer eyes, I was
 curious as to how I can get around the OS through the shell. Previously, I've
@@ -109,7 +118,9 @@ the value in the `PSVersion` key. On my machine, PowerShell 7.x is installed
 side-by-side with PowerShell 5.1. I am not sure if it's possible to upgrade 5.1
 to 7.X., so I opted to keep them separate.
 
-<!-- show my PSVersionTable -->
+![](/assets/png/windows-dev/psversiontable.png){:width="540px"}  
+__Figure__: *After installing Powershell, calling `PSVersionTable` shows the 7.x version*
+{: style="text-align: center;"}
 
 Personally, it feels similar to the Python 2 to 3 conundrum. Sometimes it's
 okay to keep them both so as to not break anything in your system.
@@ -175,14 +186,19 @@ as it fits nicely to Gruvbox.
 oh-my-posh --init --shell pwsh --config ~\AppData\Local\Programs\oh-my-posh\themes\nu4a.omp.json | Invoke-Expression
 ```
 
-<!-- show powershell prompt with weird graphics -->
+![](/assets/png/windows-dev/unpatched.png){:width="540px"}  
+__Figure__: *At first, some glyphs won't render properly. We'll fix that by installing a NerdFont-compatible typeface
+Most fonts were already patched, so you'll most likely find a patched version of your favorite font.*
+{: style="text-align: center;"}
 
 At first, the prompt looks weird because some glyphs didn't render properly. To
 fix that, I used the [patched version of Fira
 Code](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
 so that I have access to all icons and shapes.
 
-<!-- fixed prompt -->
+![](/assets/png/windows-dev/patched.png){:width="540px"}  
+__Figure__: *After installing the patched font, the powerline should now render properly.*
+{: style="text-align: center;"}
 
 I decided to be more extra and installed Terminal Icons. This adds small and
 cute icons whenever you type `ls` and `dir`. I installed it by typing the
@@ -200,14 +216,33 @@ Import-Module -Name Terminal-Icons
 
 now it looks awesome!
 
-<!-- final product -->
+![](/assets/png/windows-dev/a_bit_extra.png){:width="540px"}  
+__Figure__: *I installed `Terminal-Icons` because I want to be more extra*
+{: style="text-align: center;"}
 
+## <a id="powertoys"></a>Install Microsoft Powertoys for more control
 
-## Install Windows Powertoys for more control
+Lastly, I installed [Microsoft
+Powertoys](https://docs.microsoft.com/en-us/windows/powertoys/) to help improve
+my developer experience. You can think of it as a collection of tools bundled
+into one package. One of my favorites are:
 
+- [**Powertoys
+    Awake**](https://docs.microsoft.com/en-us/windows/powertoys/awake): it
+    functions similarly to Linux's [Caffeine
+    Indicator](https://manpages.ubuntu.com/manpages/bionic/man1/caffeine-indicator.1.html),
+    where you can toggle your display to remain on for an indefinite amount of
+    time. I find it perfect for long-running tasks, or when I just want my
+    screen to be on while I'm away from my desk.
+- [**Keyboard
+    Manager**](https://docs.microsoft.com/en-us/windows/powertoys/keyboard-manager)
+    allows me to remap keys however I want. I used this to rebind my <kbd>Caps
+    Lock</kbd> key to  <kbd>Esc</kbd>, so that I have less "travel time" when
+    using Vim. I think that using Keyboard Manager is safer than editing
+    registry files directly, so I went for this option.
 
-
-## Keep track of Windows Updates
+Aside from these two, there are still a lot of utilities included in Powertoys,
+but I still have to check them out yet.
 
 
 ## FAQs
@@ -219,20 +254,12 @@ now it looks awesome!
 - **What made you take the leap?** Mostly curiosity. Some of my peers
       in my previous job use Windows for development (albeit with some pain-points). I'd like
       to see if I can create a delightful dev experience on a Windows Machine.
-
-
-
-
-<!-- add links that you should check when keeping track of windows updates -->
-
-<!--
-
-1. install wsl
-2. install windows terminal
-3. beautifying your terminal: (1) bash (2) powershell
-4. powertoys for keyboard mapping
--->
-
+- **You're overselling it a bit, now tell me about the quirks** Sure, yanking to/from clipboard is not straightforward in Vim, 
+    [network assignment is buggy (I need to restart to get
+    connection)](https://github.com/microsoft/WSL/issues/5336), and nested
+    virtualization (running Docker) is not yet solid. However, I still find
+    these issues a bit minor (the first two can easily be solved by some
+    tweaks), so I'm sticking on WLS2 for now.
 
 ### Footnotes
 
