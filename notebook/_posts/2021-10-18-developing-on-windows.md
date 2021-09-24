@@ -25,8 +25,6 @@ won't *just work*, each step needs a workaround,[^1] and
 things break often. It was unpleasant. Now, I feel like the ecosystem has
 changed for the better.
 
-<!-- screenshot of your setup -->
-
 In this blogpost, I'll share some of the steps I took to make my machine
 developer-friendly. Hope you find these helpful as much as I did:
 
@@ -60,7 +58,9 @@ It's an emulator where you can open PowerShell, Command Prompt, and Bash in
 multiple tabs! 
 
 ![](/assets/png/windows-dev/multiple_tabs.png){:width="540px"}  
-__Figure__: *If you look at the top, then you can see that I can open Bash, PowerShell, and the Windows Command Prompt in just one place using Windows Terminal*
+__Figure__: *If you look at the top, then you can see that I can open Bash,
+PowerShell, and the Windows Command Prompt in just one place using Windows
+Terminal*
 {: style="text-align: center;"}
 
 
@@ -242,7 +242,7 @@ into one package. One of my favorites are:
     registry files directly, so I went for this option.
 
 Aside from these two, there are still a lot of utilities included in Powertoys,
-but I still have to check them out yet.
+but I still have to check them out.
 
 
 ## FAQs
@@ -251,15 +251,13 @@ but I still have to check them out yet.
       NVIDIA drivers don't work out-of-the-box on Linux, especially on current-gen
       GPUs. If they do, they cause weird errors like screen stuttering and
       blackouts.  
-- **What made you take the leap?** Mostly curiosity. Some of my peers
-      in my previous job use Windows for development (albeit with some pain-points). I'd like
-      to see if I can create a delightful dev experience on a Windows Machine.
+- **What made you take the leap?** Mostly curiosity. I've seen a lot of developers be productive on Windows, and I'd like to try it out myself.
 - **You're overselling it a bit, now tell me about the quirks** Sure, yanking to/from clipboard is not straightforward in Vim, 
     [network assignment is buggy (I need to restart to get
     connection)](https://github.com/microsoft/WSL/issues/5336), and nested
     virtualization (running Docker) is not yet solid. However, I still find
     these issues a bit minor (the first two can easily be solved by some
-    tweaks), so I'm sticking on WLS2 for now.
+    tweaks), so I'm sticking to WLS2 for now.
 
 ### Footnotes
 
