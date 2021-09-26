@@ -75,7 +75,7 @@ their active duration. You can hover above them to see more info.
 
 [Valheim](https://store.steampowered.com/app/892970/Valheim/) is an exploration and survival game that takes you to the heights of
 Viking culture. It's like the love child of Minecraft, Terraria, and Dark
-Souls. Yes, you read that right. 
+Souls&mdash;yes, you read that right. 
 
 Food is an essential component in Valheim as it drastically affects one's
 gameplay. Eat a high-meat diet and you get loads of health to tank hits, to the
@@ -88,7 +88,14 @@ intake&mdash;until now.
 
 ## Methodology
 
-* 
+* I scraped the food data from the [Valheim Fandom page](https://valheim.fandom.com/wiki/Food). To get the "DroppedBy" and "Crafting Material" columns, I traversed each food page and parsed the infobox. You can see more of my process in [this notebook](https://github.com/ljvmiranda921/valheim-viz/blob/master/Valheim_Food_EDA.ipynb).
+* I manually annotated the "Progression" column. I checked the following variables to determine the age / progression a food item can be found in a normal playthrough: (1) ore dependencies, (2) food recipe and its dependencies,
+(3) enemy and biome difficulty.
+
+If you see any discrepancies in the collection process, feel free to create a
+Pull Request in the [valheim-viz Github
+repo](https://github.com/ljvmiranda921/valheim-viz). You can also find [the
+dataset in Kaggle](https://www.kaggle.com/ljvmiranda/valheim-food-dataset). 
 
 <!-- show github repo and kaggle dataset -->
 
