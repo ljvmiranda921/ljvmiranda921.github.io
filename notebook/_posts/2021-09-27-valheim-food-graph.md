@@ -74,8 +74,8 @@ their active duration. You can hover above them to see more info.
 ## Introduction
 
 [Valheim](https://store.steampowered.com/app/892970/Valheim/) is an exploration and survival game that takes you to the heights of
-Viking culture. It's like the love child of Minecraft, Terraria, and Dark
-Souls&mdash;yes, you read that right. 
+Viking culture. It's like the love child of [Minecraft](https://www.minecraft.net/en-us), [Terraria](https://store.steampowered.com/app/105600/Terraria/), and [Dark
+Souls](https://store.steampowered.com/app/570940/DARK_SOULS_REMASTERED/)&mdash;yes, you read that right. 
 
 Food is an essential component in Valheim as it drastically affects one's
 gameplay. Eat a high-meat diet and you get loads of health to tank hits, to the
