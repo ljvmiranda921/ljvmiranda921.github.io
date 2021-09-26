@@ -65,14 +65,15 @@ excerpt: "Yes, I'm officially addicted to Valheim. So here's a quick visualizati
 </script>
 
 
-Yes, I'm officially addicted to Valheim, and I also get frustrated when I run
-out of stamina while drawing my bow. I never really cared about my food intake,
-until now. So here's a simple visualization to see the range of options I have
-in game.
+**Instruction**: What you see above is a scatterplot of all food choices in-game, and where they
+land based on the health and stamina they offer. The colors represent the stage
+of the game where you can obtain them, while the size of the circle represents
+their active duration. You can hover above them to see more info.
 
-### Introduction
 
-[Valheim](https://store.steampowered.com/app/892970/Valheim/ is an exploration and survival game that takes you to the heights of
+## Introduction
+
+[Valheim](https://store.steampowered.com/app/892970/Valheim/) is an exploration and survival game that takes you to the heights of
 Viking culture. It's like the love child of Minecraft, Terraria, and Dark
 Souls. Yes, you read that right. 
 
@@ -81,13 +82,16 @@ gameplay. Eat a high-meat diet and you get loads of health to tank hits, to the
 detriment of your stamina. Fill yourself with fruits so you can do more, but be
 careful being one-shotted by an enemy. 
 
-What you see above is a scatterplot of all food choices in-game, and where they
-land based on the health and stamina they offer.
+Yes, I'm officially addicted to Valheim, and I also get frustrated when I run
+out of stamina while drawing my bow. I never really cared about my food
+intake&mdash;until now. 
+
+## Methodology
+
+* 
+
+<!-- show github repo and kaggle dataset -->
 
 
-
-### Methodology
-
-
-### Acknowledgments
+## Acknowledgments
 
