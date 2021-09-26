@@ -71,8 +71,10 @@ df.head(5)
     .dataframe thead th {
         text-align: right;
     }
+
 </style>
-<table border="1" class="dataframe">
+
+<table border="1" class="dataframe" style="font-size:14px; overflow-x: auto; display: block">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -187,7 +189,7 @@ df.head()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe" style="font-size:14px; overflow-x: auto; display: block">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -338,7 +340,7 @@ infobox.head(10)
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe" style="font-size:14px; overflow-x: auto; display: block">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -437,7 +439,7 @@ master_df.head()
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe" style="font-size:14px; overflow-x: auto; display: block">
   <thead>
     <tr style="text-align: right;">
       <th></th>
