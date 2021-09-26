@@ -97,8 +97,8 @@ Pull Request in the [valheim-viz Github
 repo](https://github.com/ljvmiranda921/valheim-viz). You can also find [the
 dataset in Kaggle](https://www.kaggle.com/ljvmiranda/valheim-food-dataset). 
 
-<!-- show github repo and kaggle dataset -->
-
-
 ## Acknowledgments
+
+Many thanks to the maintainers of the Valheim Wiki, and
+[u/174nana](https://www.reddit.com/user/174nana/) for the banner photo from [their Reddit post](https://www.reddit.com/r/valheim/comments/mini5s/showing_my_love_to_the_devs_for_making_the_food/). Of course, huge thanks to [Iron Gate](https://irongatestudio.se/) for making this awesome game!
 
