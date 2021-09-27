@@ -560,7 +560,7 @@ have a model guide us to a solution.
 
 ```latex
 @article{miranda2021vqgan,
-  title        = {Taming the 'Taming transformers' paper (VQGAN)},
+  title        = {The Illustrated VQGAN},
   author       = {Miranda, Lester James},
   journal      = {ljvmiranda921.github.io},
   url          = {\url{https://ljvmiranda921.github.io/notebook/2021/08/08/clip-vqgan/}},
