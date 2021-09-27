@@ -8,6 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [valheim, game, data science]
+header-img: /assets/png/valheim/header.png
 description: "Yes, I'm officially addicted to Valheim. So here's a quick visualization of all the food choices in Valheim: Hearth and Home. "
 excerpt: "Yes, I'm officially addicted to Valheim. So here's a quick visualization of all the food choices in Valheim: Hearth and Home."
 ---
