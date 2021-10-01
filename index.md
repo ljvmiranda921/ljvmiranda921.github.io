@@ -14,8 +14,7 @@ layout: home
         <p>
             I'm a Machine Learning Engineer and Core Developer for <a
             href="https://spacy.io">spaCy</a>, a natural language processing
-            library, at <a href="https://explosion.ai">Explosion</a>. I'm
-            currently based in the Philippines.
+            library, at <a href="https://explosion.ai">Explosion</a>. I'm currently based in Manila. 
         </p>
         <p>
             In this blog, I write about my interests in machine learning,
