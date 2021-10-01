@@ -36,13 +36,9 @@ P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljv
 
 ## Background
 
-
-I'm a Machine Learning Engineer and Core Developer for <a
-href="https://spacy.io">spaCy</a>, a natural language processing
-library, at <a href="https://explosion.ai">Explosion</a>. I'm
-currently based in the Philippines.
-
-Prior to that, I've worked for some machine learning startups such as:
+I currently work on the [spaCy](https://spacy.io) library as a Machine Learning
+Engineer at [Explosion](https://explosion.ai). Previously, I've worked for some
+machine learning startups such as:
 * [Thinking Machines Data Science](https://thinkingmachin.es) (Manila), a data 
    consultancy where I built multiple natural language processing and
    computer vision products such as a search engine, an industry classifier,
