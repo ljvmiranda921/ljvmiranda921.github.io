@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Developing on a Windows machine"
-date: 2021-10-18
+date: 2021-10-08
 category: notebook
 comments: true
 author: "LJ MIRANDA"
