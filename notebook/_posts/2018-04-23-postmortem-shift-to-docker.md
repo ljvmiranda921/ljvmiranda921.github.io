@@ -7,6 +7,12 @@ comments: true
 author: "LJ MIRANDA"
 ---
 
+> Update (2021-10-11): I changed my CI/CD system from Travis CI to Github
+> Actions, and storage from Dropbox to Google Cloud Storage. It's still the
+> same process, and I'm still using the blang/latex image. You can find the old
+> code in the [v2.0 tag](https://github.com/ljvmiranda921/cv/releases/tag/v2.0).
+
+
 I practice continuous integration (CI) and deployment even in my LaTeX
 projects. Everytime I perform a `git commit`, Travis-CI uploads the
 compiled document into Dropbox to make it accessible across all my devices
@@ -212,4 +218,5 @@ set-up my `.travis.yml`, and focus on my writing.
 
 #### Changelog
 
+- 10-11-2021: I changed my CI/CD system from Travis CI to Github Actions, and storage from Dropbox to Google Cloud Storage. It's still the same process, and I'm still using the blang/latex image. You can find the old code in the [v2.0 tag](https://github.com/ljvmiranda921/cv/releases/tag/v2.0).
 - 06-16-2019: Change the word "container" to "images" when appropriate
