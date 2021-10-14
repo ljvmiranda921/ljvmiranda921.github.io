@@ -467,12 +467,13 @@ probably do this again in the future, but I'll definitely lower my scope.
 
 #### Changelog
 
+- 10-14-2021: Include [Neptune.ai](https://neptune.ai) on the list of data-versioning tools.
 - 08-17-2021: This post was featured in [DVC's newsletter!](https://dvc.org/blog/august-21-dvc-heartbeat)
 
 
 ## Footnotes
 
 [^1]: HARK-ing, refers to the research practice of hypothesizing after the results are known. Norbert Kerr defined it as "presenting a post hoc hypothesis in the introduction of a research report as if it were an a priori hypothesis"
-[^2]: Examples of labelling tools: [Prodigy](https://prodi.gy/), [Snorkel](https://snorkel.ai/), [Label Studio](https://labelstud.io/). Examples of data-versioning and tracking (lineage) tools: [MLFlow](https://mlflow.org/), [DVC](https://dvc.org/), [Pachyderm](https://www.pachyderm.com/). 
+[^2]: Examples of labelling tools: [Prodigy](https://prodi.gy/), [Snorkel](https://snorkel.ai/), [Label Studio](https://labelstud.io/). Examples of data-versioning and tracking (lineage) tools: [MLFlow](https://mlflow.org/), [DVC](https://dvc.org/), [Pachyderm](https://www.pachyderm.com/), and [Neptune.ai](https://neptune.ai). 
 [^3]: That's why I still think that ML practitioners who came from a non-ML field (psychologists, sociologists, economists, etc.) are at an advantage: they have an intimate knowledge of the field, and see ML as a tool.
 [^4]: At first, I was tempted to think of the data-centric problem purely as a *weak supervision problem.* There are big overlaps between the two, and I'm not opposed to simply considering one as the other. To be honest, I still find the taxonomy confusing: [Zhou (2018)](#zhou2018weak) sees *active learning* and *semi-supervised learning* as sub-categories of *weak supervision*, whereas [Ratner et al (2019)](#ratner2019weak) sees them as separate. There are merits on both views, but I decided to separate them since there are other use-cases that *weak-supervision* doesn't cater to.
