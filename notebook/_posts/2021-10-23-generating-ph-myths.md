@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Reimagining Philippine mythical creatures using AI (VQGAN+CLIP)"
-date: 2021-10-30
+date: 2021-10-23
 category: notebook
 comments: true
 author: "LJ MIRANDA"
