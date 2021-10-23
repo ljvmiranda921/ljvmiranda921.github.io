@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Reimagining Philippine mythical creatures using AI"
+title: "Reimagining Philippine mythical creatures using AI (VQGAN+CLIP)"
 date: 2021-10-30
 category: notebook
 comments: true
@@ -11,10 +11,10 @@ header-img: /assets/png/ph-clip/header.png
 tags: [machine learning, clip, clip vqgan, open ai, trese, halloween, scary,
 generative art, generative, procgen, procedural generation]
 description: |
-    Using the text-to-image CLIP VQGAN neural network to generate surreal
+    Using the text-to-image VQGAN+CLIP neural network to generate surreal
     mythical creatures from Philippine folk culture.
 excerpt: |
-    Using the text-to-image CLIP VQGAN neural network to generate surreal
+    Using the text-to-image VQGAN+CLIP neural network to generate surreal
     mythical creatures from Philippine folk culture.
 ---
 
@@ -34,7 +34,7 @@ I wonder what will happen if we let AI do the same. **If we provide a
 machine learning model with words and descriptions of folk creatures, what
 images can it conjure?** 
 
-To do so, I played with a neural network called CLIP-VQGAN ([Esser et al,
+To do so, I played with a neural network called VQGAN+CLIP ([Esser et al,
 2021](#esser2021clip) and [Radford et al, 2021](#radford2021clip)) and supplied
 it with descriptions from Philippine folk culture. The resulting images can
 then be thought of as to what the model "imagined" upon reading the
@@ -279,12 +279,10 @@ provides all the resources you need. You might also want to read the
 [instructions](https://docs.google.com/document/d/1Lu7XPRKlNhBQjcKr8k8qRzUzbBW7kzxb5Vu72GMRn2E/edit?usp=sharing)
 first before diving right in! For more inspiration, check out the
 [@images_ai](https://twitter.com/images_ai) handle, this [Youtube
-channel](https://www.youtube.com/user/glenniszen), or just search for "clip
-vqgan" on Twitter!
+channel](https://www.youtube.com/user/glenniszen), or just search for "vqgan clip" on Twitter!
 
 *Did you uncover scarier monsters from the machine? Share them in the comments
 below!*  
-*Also, look behind you.*
 
 
 ## References
