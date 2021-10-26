@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Reimagining Philippine mythical creatures using AI (VQGAN+CLIP)"
+title: "Reimagining Philippine mythical creatures using VQGAN+CLIP"
 date: 2021-10-23
 category: notebook
 comments: true
@@ -18,10 +18,11 @@ excerpt: |
     mythical creatures from Philippine folk culture.
 ---
 
-<span class="firstcharacter">M</span>ost of what we know from Philippine folklore came from stories passed down
-from one generation to the next. We knew that a *kapre* smokes a cigar, lives
-in a tree, and has a large stature because "the auntie of our mother's friend"
-said so. Words turn into images, bringing these creatures into life. 
+<span class="firstcharacter">M</span>ost of what I know from Philippine
+folklore came from stories that were passed down from one generation to the
+next. I knew that a *kapre* is a large creature smoking a cigar because the
+"auntie of my mother's friend" said so. Words turn into images, bringing these
+creatures into life. 
 
 > Words turn into images, bringing these creatures into life.
 
@@ -30,26 +31,26 @@ __Figure:__ Comics like *Trese* also captured our imagination on Philippine folk
 *(image from Trese / Visual Print Enterprises)*
 {: style="text-align: center;"}
 
-I wonder what will happen if we let AI do the same. **If we provide a
-machine learning model with words and descriptions of folk creatures, what
-images can it conjure?** 
+I wonder what will happen if we let a computer do the same. **If we provide a
+machine learning model with text descriptions of folk creatures, what images
+can it conjure?** 
 
-To do so, I played with a neural network called VQGAN+CLIP ([Esser et al,
+To do so, I used a neural network called VQGAN+CLIP ([Esser et al,
 2021](#esser2021clip) and [Radford et al, 2021](#radford2021clip)) and supplied
-it with descriptions from Philippine folk culture. The resulting images can
-then be thought of as to what the model "imagined" upon reading the
-descriptions&mdash;I warn you, they are a bit surreal and creepy!
+it with descriptions of Philippine folk creatures. The resulting images can
+then be thought of as to what the model "imagined" upon reading them &mdash;and
+they're a bit surreal and creepy!
 
 > If you're interested to learn how VQGAN works, then head to my [explainer blogpost](/notebook/2021/08/08/clip-vqgan/).   
 > It's not magic, it's math!
 
 ## Monsters from the machine
 
-Below you'll see AI generated creatures from text. The descriptions were lifted
+Below you'll see model-generated creatures from text. The descriptions were lifted
 from [*The Aswang Project*](https://www.aswangproject.com/) and Wikipedia. On
-the left you'll see a clip of the model generating the image, and on the right
-you'll see the final output. Also I kinda suck at CSS so this layout works best
-on desktop!
+the left you'll see a clip of the model while it's generating the image, and on
+the right you'll see the final output. Also I kinda suck at CSS so this layout
+works best on desktop!
 
 ### 1. Nunò sa punso
 
@@ -264,7 +265,7 @@ provided by [@advadnoun](https://twitter.com/advadnoun) and [Katherine
 Crowson](https://github.com/crowsonkb)
 ([@RiversHaveWings](https://twitter.com/RiversHaveWings))&mdash; all credits go
 to them. I simply provided it with the text prompt, and have the model generate
-the images for me. Open science is cool!
+the images for me. Cool!
 
 However, I did a few tweaks in the prompt to influence the results. For
 example, I added tags like `artstation`, `blender` or `hdr` so that it shows
@@ -275,11 +276,11 @@ image.
 
 **You can definitely create scary monsters by your own**, the [Colab
 Notebook](https://colab.research.google.com/drive/1_4Jl0a7WIJeqy5LTjPJfZOwMZopG5C-W?usp=sharing#scrollTo=g7EDme5RYCrt)
-provides all the resources you need. You might also want to read the
-[instructions](https://docs.google.com/document/d/1Lu7XPRKlNhBQjcKr8k8qRzUzbBW7kzxb5Vu72GMRn2E/edit?usp=sharing)
-first before diving right in! For more inspiration, check out the
-[@images_ai](https://twitter.com/images_ai) handle, this [Youtube
-channel](https://www.youtube.com/user/glenniszen), or just search for "vqgan clip" on Twitter!
+provides all the resources you need. I also compiled [a list of VQGAN+CLIP
+implementations](/notebook/2021/08/11/vqgan-list/), so be sure to check it out!
+For more inspiration, check out the [@images_ai](https://twitter.com/images_ai)
+handle, this [Youtube channel](https://www.youtube.com/user/glenniszen), or
+just search for "vqgan clip" on Twitter!
 
 *Did you uncover scarier monsters from the machine? Share them in the comments
 below!*  
