@@ -24,7 +24,7 @@ computer to understand them. Of course, you can't just arbitrarily assign
 numbers into words!
 
 <!-- fun figure of cats and dogs with numbered indices -->
-![](/assets/png/word-vectors/some_arbitrary_numbers.png){:width="620px"}
+![](/assets/png/word-vectors/some_arbitrary_numbers.png){:width="520px"}
 {:style="text-align: center;"}
 
 We need to satisfy two conditions: first, is that these numbers should have
@@ -32,11 +32,14 @@ some meaning, or **semantics**. Second, that meaning must be **encoded** into
 a numerical representation. If we're in the realm of numbers, a common way to
 show meaning is to see how far one number is from another:
 
-<!-- a number line -->
-<!-- distance between two points -->
+![](/assets/png/word-vectors/dope.png){:width="500px"}
+{:style="text-align: center;"}
 
 The hope is, words can also be represented as such. In the case of animals, 
 one trait, or **feature**, that we can encode is its *leggedness:*
+
+![](/assets/png/word-vectors/leggedness.png){:width="520px"}
+{:style="text-align: center;"}
 
 
 <!-- animal number line: wolf, cat, dog, bird, gecko -->
