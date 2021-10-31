@@ -1,29 +1,30 @@
 ---
 layout: post
 type: post
-title: "A review on word vectors"
-date: 2021-12-05
+title: "Word vectors from scratch"
+date: 2021-12-20
 category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [nlp, word vectors, spacy, machine learning]
 description: |
-    Ever wondered how those numbers in Word2Vec, Fasttext, and spaCy's en_core_web_lg
-    are produced? In this blogpost, we'll try to create our own crude set of word vectors!  
-    A good learning exercise to understand their nuances.
+    Ever wondered how those numbers in Word2Vec and Fasttext were produced? In
+    this blogpost, we'll try to create our own crude set of word vectors!  A
+    good learning exercise to understand their nuances.
 excerpt: |
-    Ever wondered how those numbers in Word2Vec, Fasttext, and spaCy's en_core_web_lg
-    are produced? In this blogpost, we'll try to create our own crude set of word vectors!  
-    A good learning exercise to understand their nuances.
+    Ever wondered how those numbers in Word2Vec and Fasttext were produced? In
+    this blogpost, we'll try to create our own crude set of word vectors!  A
+    good learning exercise to understand their nuances.
 ---
 
-Word vectors are representations of words into numbers. Once words are in this
-form, it becomes straightforward for a computer to understand them. Of course,
-you can't just arbitrarily assign numbers into words!
+<span class="firstcharacter">W</span>ord vectors are representations of words
+into numbers. Once words are in this form, it becomes straightforward for a
+computer to understand them. Of course, you can't just arbitrarily assign
+numbers into words!
 
 <!-- fun figure of cats and dogs with numbered indices -->
-![](/assets/png/word-vectors/some-arbitrary-numbers.png){:width="540px"}
+![](/assets/png/word-vectors/some_arbitrary_numbers.png){:width="620px"}
 {:style="text-align: center;"}
 
 We need to satisfy two conditions: first, is that these numbers should have
