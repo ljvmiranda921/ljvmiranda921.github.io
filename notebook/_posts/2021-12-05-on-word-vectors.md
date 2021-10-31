@@ -23,10 +23,12 @@ form, it becomes straightforward for a computer to understand them. Of course,
 you can't just arbitrarily assign numbers into words!
 
 <!-- fun figure of cats and dogs with numbered indices -->
+![](/assets/png/word-vectors/some-arbitrary-numbers.png){:width="540px"}
+{:style="text-align: center;"}
 
 We need to satisfy two conditions: first, is that these numbers should have
 some meaning, or **semantics**. Second, that meaning must be **encoded** into
-its numbered representation. If we're in the realm of numbers, a common way to
+a numerical representation. If we're in the realm of numbers, a common way to
 show meaning is to see how far one number is from another:
 
 <!-- a number line -->
