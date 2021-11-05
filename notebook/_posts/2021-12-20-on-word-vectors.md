@@ -53,7 +53,7 @@ features that we can find**.  Instead, we want to use existing knowledge to do
 that for us. **We also don't want to encode them manually**, as that would be very
 time consuming. 
 
-From here, we now see two (2) ingredients to create word vectors:
+From here, we now see have two (2) ingredients to create word vectors:
 1. An existing **corpus of knowledge** to get the features automatically. Here, we
    can use newspaper clippings, scrape all the text in the web, scientific
    journals, and so on.
@@ -73,6 +73,14 @@ production, it's recommended to use common pretrained models like
 [Word2Vec](https://arxiv.org/abs/1301.3781),
 [GloVe](https://nlp.stanford.edu/projects/glove/), or
 [FastText](https://fasttext.cc/). 
+
+Our process will be like this:
+
+<!-- insert image of the process -->
+
+<!-- each process gets its own subsection -->
+
+
 
 
 
