@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Word vectors from scratch"
+title: "How to make word vectors from scratch"
 date: 2021-12-20
 category: notebook
 comments: true
@@ -10,12 +10,10 @@ published: true
 tags: [nlp, word vectors, spacy, machine learning]
 description: |
     Ever wondered how those numbers in Word2Vec and Fasttext were produced? In
-    this blogpost, we'll try to create our own crude set of word vectors!  A
-    good learning exercise to understand their nuances.
+    this blogpost, we'll try to create our own crude set of word vectors! 
 excerpt: |
     Ever wondered how those numbers in Word2Vec and Fasttext were produced? In
-    this blogpost, we'll try to create our own crude set of word vectors!  A
-    good learning exercise to understand their nuances.
+    this blogpost, we'll try to create our own crude set of word vectors!
 ---
 
 <span class="firstcharacter">W</span>ord vectors are representations of words
@@ -38,29 +36,22 @@ show meaning is to see how far one number is from another:
 The hope is, words can also be represented as such. In the case of animals, 
 one trait, or **feature**, that we can encode is its *leggedness:*
 
-![](/assets/png/word-vectors/leggedness.png){:width="520px"}
+![](/assets/png/word-vectors/leggedness.png){:width="560px"}
 {:style="text-align: center;"}
 
-
-<!-- animal number line: wolf, cat, dog, bird, gecko -->
 
 That's not yet informative. Perhaps we can add another feature, how about
 *tameness*?
 
-<!-- animal number line: two dimensions -->
-
-We can even talk about its taxonomy: canines belong to the same group,
-felines..., and so on:
-
-<!-- 3d number line -->
+![](/assets/png/word-vectors/tameness.png){:width="500px"}
+{:style="text-align: center;"}
 
 As you can see, we came up with features and encoded them into our vectors.
-Because of that, we can say that a dog is (1) similar to a cat, (2) quite
-related to a wolf, and (3) entirely different from a gecko. 
-
-However, we don't want to think of all the possible features that we can find.
-Instead, we want to use existing knowledge to do that for us. We also don't
-want to encode them manually, as that would be very time consuming. 
+Because of that, we can say that a dog is similar to a cat, entirely different
+from a gecko, and so on.  However, **we don't want to think of all the possible
+features that we can find**.  Instead, we want to use existing knowledge to do
+that for us. **We also don't want to encode them manually**, as that would be very
+time consuming. 
 
 From here, we now see two (2) ingredients to create word vectors:
 1. An existing **corpus of knowledge** to get the features automatically. Here, we
