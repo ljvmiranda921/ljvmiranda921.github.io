@@ -19,12 +19,12 @@ TL;DR&mdash;here's [what I'll do](#what-i-do).
 
 Whenever I work on open-source projects, I usually maintain my own copy, a
 [*fork*](https://docs.github.com/en/get-started/quickstart/fork-a-repo), of the
-original codebase. Then, when I want to propose changes, I open up a [Pull
+original codebase. Then, when I propose changes, I open up a [Pull
 Request
 (PR)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
 When my PR receives a maintainer's approval, the commits from my fork will
-happily live inside the original repository. All is good. However, there are
+happily live inside the original repository; all is good. However, there are
 cases when a maintainer merges not via a merge commit, but by squashing or
 rebasing my changes.[^1]
 
@@ -33,7 +33,7 @@ During a rebase, commits are "rewritten" even with the same
 cannot put two and two together, so it will treat my commits as unique.
 
 Now, when I make a new Pull Request for a different issue, those commits
-will still show up! In Github, this messes the Pull Request interface (i.e.,
+will persist! In Github, this messes the Pull Request interface (i.e.,
 "why do I have commits for fixing Issue 1 when this PR is about Issue 2?").
 
 To add, Github's "Fetch upstream" button performs a
