@@ -9,9 +9,9 @@ author: "LJ MIRANDA"
 published: true
 tags: [software development, git, github]
 description: |
-    Fetching upstream is fun, but it doesn't do what I wanted to do. So here's how I do it.
+    Github's Fetch Upstream button is fun, but it doesn't do what I actually wanted to do&mdash;so here's how I do it.
 excerpt: |
-    Fetching upstream is fun, but it doesn't do what I wanted to do. So here's how I do it.
+    Github's Fetch Upstream button is fun, but it doesn't do what I actually wanted to do&mdash;so here's how I do it.
 ---
 
 TL;DR&mdash;here's [what I'll do](#what-i-do).
