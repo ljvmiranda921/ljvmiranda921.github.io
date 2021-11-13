@@ -46,12 +46,12 @@ That's not yet informative. Perhaps we can add another feature, how about
 ![](/assets/png/word-vectors/tameness.png){:width="500px"}
 {:style="text-align: center;"}
 
-As you can see, we came up with features and encoded them into our vectors.
-Because of that, we can say that a dog is similar to a cat, entirely different
-from a gecko, and so on.  However, **we don't want to think of all the possible
-features that we can find**.  Instead, we want to use existing knowledge to do
-that for us. **We also don't want to encode them manually**, as that would be very
-time consuming. 
+What we just did is that  we came up with features and encoded them into our
+vectors.  As a result, we can now say that a dog is similar to a cat, entirely
+different from a gecko, and so on.  However, **we don't want to think of all
+the possible features that we can find**.  Instead, we want to use existing
+knowledge to do that for us. **We also don't want to encode them manually**, as
+that would be very time consuming. 
 
 From here, we can see that we need two (2) ingredients to create word vectors:
 1. An existing **corpus of knowledge** to get the features automatically. Here, we
