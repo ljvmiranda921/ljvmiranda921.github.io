@@ -50,6 +50,9 @@ What we just did is that  we came up with features and encoded them into our
 vectors.  As a result, we can now say that a dog is similar to a cat, entirely
 different from a gecko, and so on.  
 
+> [To create word vectors] we don't want to think of all the possible features
+> we can find... we want to use existing knowledge to [encode] for us.
+
 However, **we don't want to think of all the possible features that we can
 find**.  Instead, we want to use existing knowledge to do that for us. **We
 also don't want to encode them manually**, as that would be very time
@@ -86,7 +89,10 @@ into the graph. This method is great if you only deal with one or two features.
 But when you want to capture the nuance and meaning ascribed to those words,
 it's not enough.
 
-Instead, **we'll extract knowledge from other sources**: books, the Internet,
+> In practice, we extract knowledge from other sources: books, the Internet, Reddit
+> comments, Wikipedia, and more.
+
+In practice, **we extract knowledge from other sources**: books, the Internet,
 Reddit comments, Wikipedia, and more. In NLP, we call this collection of texts
 as the *corpus*.[^1] We won't be scraping any text for now. Instead, we'll come up
 with our own:
@@ -115,11 +121,17 @@ text, and the Internet ([CommonCrawl](https://commoncrawl.org/)) as its source.
 
 ### 1. Clean the text
 
+<!-- tokenization comes in -->
+
+
+<!-- get the vocabulary -->
+
 
 ### 2. Create word pairs
 
 
-<!-- tokenization comes in? -->
+<!-- talk about context -->
+<!-- there's a quote about context in CS224N. find it -->
 
 
 ### 3. Encode to one-hot vectors
