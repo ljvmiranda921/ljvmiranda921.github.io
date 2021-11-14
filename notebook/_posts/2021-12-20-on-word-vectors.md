@@ -34,14 +34,15 @@ show meaning is to see how far one number is from another:
 {:style="text-align: center;"}
 
 The hope is, words can also be represented as such. In the case of animals, 
-one trait, or **feature**, that we can encode is its *leggedness:*
+one trait, or **feature**, that we can encode is its *leggedness.* Let's plot
+our animals on a number line depending on the number of their legs:
 
 ![](/assets/png/word-vectors/leggedness.png){:width="560px"}
 {:style="text-align: center;"}
 
-
 That's not yet informative, all the animals were stacked on top of each other.
-Perhaps we can add another feature, how about *tameness*?
+Perhaps we can add another feature, how about *tameness*? Let's create another
+axis, *tameness*, and place our animals across our two features:
 
 ![](/assets/png/word-vectors/tameness.png){:width="500px"}
 {:style="text-align: center;"}
@@ -78,10 +79,10 @@ process is as follows:
 
 <!-- insert image of the process -->
 
-![](/assets/png/word-vectors/process.png){:width="800px"}
+![](/assets/png/word-vectors/process.png){:width="720px"}
 {:style="text-align: center;"}
 
-### Preliminary: the text corpus
+### 0. Preliminary: the text corpus
 
 Earlier, we manually encoded our knowledge into some mathematical format. When
 we spoke of *tameness*, we assigned values to each of our animals and plotted them
@@ -121,6 +122,43 @@ text, and the Internet ([CommonCrawl](https://commoncrawl.org/)) as its source.
 
 ### 1. Clean the text
 
+We clean the texts by removing stopwords and punctuations.  In NLP, stopwords
+are low-signal words that are uninformative and frequent.[^2]   A few examples
+include articles (*a*, *an*, *the*), some adverbs (*actually*, *really*), and a
+few pronouns (*he*, *me*, *it*).
+
+Most libraries like [spaCy](https://spacy.io), [nltk](https://www.nltk.org/),
+and [gensim](https://radimrehurek.com/gensim/) provide their own list of
+stopwords. For us however, we'll stick to writing our own:
+
+```python
+STOP_WORDS = [
+    "the",
+    "a",
+    "an",
+    "and",
+    "is",
+    "are",
+    "in",
+    "be",
+    "can",
+    "I",
+    "have",
+    "of",
+    "example",
+    "so",
+    "both",
+]
+```
+
+We also write our own blacklist of punctuations:
+
+```python
+PUNCTUATIONS = r"""!()-[]{};:'"\,<>./?@#$%^&*_~"""
+```
+
+
+
 <!-- tokenization comes in -->
 
 
@@ -141,7 +179,7 @@ text, and the Internet ([CommonCrawl](https://commoncrawl.org/)) as its source.
 
 
 
-### Post: model weights as vectors
+### 5. Post: model weights as vectors
 
 <!-- do jay alammar-esque viz of our word vectors -->
 <!-- then maybe compare it with GloVE? -->
@@ -162,4 +200,11 @@ production, it's recommended to use common pretrained models like
 
 ### Footnotes
 
-[^1]: *Corpus* literally means body, as in "a body of text." Also, its plural form is *corpora*, not "corpi." Fun!
+[^1]: 
+
+    *Corpus* literally means body, as in "a body of text." Also, its plural form is *corpora*, not "corpi." Fun!
+
+[^2]: 
+
+    Writing tip: I use stopwords to gauge how clear my writing is. Sometimes,
+    when I use a lot of stopwords my writing becomes full of fluff.
