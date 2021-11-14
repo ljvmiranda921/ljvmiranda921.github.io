@@ -66,7 +66,7 @@ From here, we can see that we need two (2) ingredients to create word vectors:
 
 ## Word vectors from scratch
 
-In this section, we'll use these two ingredients&mdash; the corpus and encoding
+We'll use these two ingredients&mdash; the corpus and encoding
 algorithm&mdash; to create **word vectors from scratch.** Some of these were
 adapted from  [this
 blogpost](https://towardsdatascience.com/creating-word-embeddings-coding-the-word2vec-algorithm-in-python-using-deep-learning-b337d0ba17a8).
@@ -88,7 +88,7 @@ it's not enough.
 
 Instead, **we'll extract knowledge from other sources**: books, the Internet,
 Reddit comments, Wikipedia, and more. In NLP, we call this collection of texts
-as the *corpus*. We won't be scraping any text for now. Instead, we'll come up
+as the *corpus*.[^1] We won't be scraping any text for now. Instead, we'll come up
 with our own:
 
 ```python
@@ -106,19 +106,28 @@ sentences = [
 ]
 ```
 
-What you see above are factual statements about animals. You can think of them
-as a small sample of sentences you can find in a text corpus. In reality, ten
+What you see above are factual statements about animals. Think of them as a
+sample of sentences you'll typically find in any corpus. In reality, ten
 sentences aren't enough to generate a good model, you'd want a larger corpus
 for that. For example, the [GloVe word
 embeddings](https://nlp.stanford.edu/projects/glove/) used Wikipedia, news
-text, and the Internet ([CommonCrawl](https://commoncrawl.org/)) as its corpus.
+text, and the Internet ([CommonCrawl](https://commoncrawl.org/)) as its source.
 
 ### 1. Clean the text
 
 
 ### 2. Create word pairs
+
+
+<!-- tokenization comes in? -->
+
+
 ### 3. Encode to one-hot vectors
+
+
 ### 4. Train a model
+
+
 
 ### Post: model weights as vectors
 
@@ -139,3 +148,6 @@ production, it's recommended to use common pretrained models like
 
 -->
 
+### Footnotes
+
+[^1]: *Corpus* literally means body, as in "a body of text." Also, its plural form is *corpora*, not "corpi." Fun!
