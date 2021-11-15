@@ -199,7 +199,7 @@ we did.
 
 ```python
 text = "A cat is a mammal."
-print(clean_text(text))  # 
+print(clean_text(text))  # ["A", "cat", "is", "a", "mammal"] 
 ```
 
 Note that **whitespace tokenization is not foolproof.** This method won't work
@@ -214,16 +214,32 @@ jp_text = "私の専門がコンピュタア工学 です"
 kr_text = "비빔밥먹었어?"
 ```
 
-In practice, you'd want to use more robust tokenizers 
-
-
-
-
-<!-- tokenization comes in -->
+In practice, you'd want to use more robust tokenizers for your language. For
+example, spaCy offers a [Tokenizer API](https://spacy.io/api/tokenizer) that
+can be customized to any language, special-case, and use-case. spaCy uses its
+[own tokenization
+algorithm](https://spacy.io/usage/linguistic-features#how-tokenizer-works) that
+performs way better than a naive whitespace splitter. 
 
 
 <!-- get the vocabulary -->
+If we run our `clean_text` function to all our sentences and obtain all unique
+words, we'll come up with a **vocabulary**:
 
+```python
+# Clean each sentences first. We'll get a list of lists inside the 
+# all_text variable.
+all_text = [clean_text(sentence) for sentence in sentences]
+
+# We "flatten" our list and use the built-in set() function to get
+# all unique elements of the list.
+unique_words = set([word for text in all_text for word in text])
+print(unique_words)  # ['canine', 'cat', 'coldblooded', ...]
+```
+
+From our small corpus, we obtained a measly vocabulary size of 10.  On the
+other hand, the CommonCrawl dataset has 42 billion tokens of web data. Well,
+beggars can't be choosers, so let's continue on!
 
 ### 2. Create word pairs
 
