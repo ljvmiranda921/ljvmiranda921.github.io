@@ -157,6 +157,66 @@ We also write our own blacklist of punctuations:
 PUNCTUATIONS = r"""!()-[]{};:'"\,<>./?@#$%^&*_~"""
 ```
 
+We can now write our text cleaning function, `clean_text`. This function first
+removes the punctuation by scanning each character and checking if it belongs
+to our list. Then, it removes a stop word by scanning each word in the text.
+A sample implementation is seen below:
+
+```python
+from typing import List
+
+def clean_text(
+    text: str, 
+    punctuations: str = PUNCTUATIONS, 
+    stop_words: List = STOP_WORDS,
+) -> List[str]:
+
+    # Simple whitespace tokenization
+    tokens = text.split()
+    
+    # Remove punctuations for each token
+    tokens_no_puncts = []
+    for token in tokens:
+        for char in token.lower():
+            if char in punctuations:
+                token = token.replace(char, "")
+        tokens_no_puncts.append(token)
+
+    # Remove stopwords
+    final_tokens = []
+    for token in token_no_puncts:
+        if token not in stop_words:
+            final_tokens.append(token)
+
+    return final_tokens
+```
+
+There's one step that we haven't talked about&mdash; **tokenization**. You can
+see it subtly happening when we invoked `text.split()`. The goal of
+tokenization is to segment our text into known boundaries. The easiest way to
+achieve that is to split our sentence based on the whitespace, just like what
+we did. 
+
+```python
+text = "A cat is a mammal."
+print(clean_text(text))  # 
+```
+
+Note that **whitespace tokenization is not foolproof.** This method won't work
+on languages that aren't dependent on whitespace (e.g., Chinese, Japanese,
+Korean) or languages with different morphological rules (e.g., Arabic,
+Indonesian). In fact, informal English also has a lot of special cases that
+whitespace tokenization cannot solve (e.g. "Gimme" -> "Give me"). 
+
+```python
+# Cases where whitespace tokenization won't work
+jp_text = "私の専門がコンピュタア工学 です"
+kr_text = "비빔밥먹었어?"
+```
+
+In practice, you'd want to use more robust tokenizers 
+
+
 
 
 <!-- tokenization comes in -->
