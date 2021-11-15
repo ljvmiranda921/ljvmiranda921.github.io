@@ -26,9 +26,9 @@ numbers into words!
 {:style="text-align: center;"}
 
 We need to satisfy two conditions: first, is that these numbers should have
-some meaning, or **semantics**. Second, that meaning must be **encoded** into
-a numerical representation. If we're in the realm of numbers, a common way to
-show meaning is to see how far one number is from another:
+some meaning, or **semantics**. Second, is that we should **encode** meaning
+into a numerical representation. If we're in the realm of numbers, a common way
+to show meaning is to see how far one number is from another:
 
 ![](/assets/png/word-vectors/dope.png){:width="500px"}
 {:style="text-align: center;"}
@@ -59,7 +59,7 @@ find**.  Instead, we want to use existing knowledge to do that for us. **We
 also don't want to encode them manually**, as that would be very time
 consuming. 
 
-From here, we can see that we need two (2) ingredients to create word vectors:
+This leads us to two (2) necessary ingredients to create word vectors:
 1. An existing **corpus of knowledge** to get the features automatically. Here, we
    can use newspaper clippings, scrape all the text in the web, scientific
    journals, and so on.
