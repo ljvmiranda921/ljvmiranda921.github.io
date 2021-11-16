@@ -5,7 +5,7 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-Below is a list of my research publications. You might also want to take a look at my [Google Scholar](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en) and [ORCID]((https://orcid.org/000-0002-7872-6464/print)) profiles in the links provided:
+Below is a list of my research publications. You can also view them at [Google Scholar](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en): 
 
 - [Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction](https://www.dropbox.com/s/wfgklrndflpqstv/smc2018feature.pdf?dl=0) <br> L. J. V. Miranda and J. Hu, "Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction," _IEEE International Conference on System, Man, and Cybernetics_, IEEE, October 2018.
 - [A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction](https://www.dropbox.com/s/qlj0vxb3ieijmg4/compsac2018deep.pdf?dl=0) <br> L. J. V. Miranda and J. Hu, "A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction," _42nd IEEE Computer Society Signature Conference on Computers, Software, and Applications_, IEEE, July 2018. 
