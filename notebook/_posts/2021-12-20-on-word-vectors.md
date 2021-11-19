@@ -255,7 +255,7 @@ as the **center word** and the latter as the **context word**.
 
 Context is important to understand meaning. Take the word *bat* for 
 example. We don't know what it means in isolation, but in a sentence, its
-meaning becomes clear:
+meaning becomes crystal clear:
 
 <!-- a few image illustrate of bat as animal and bat as baseball bat -->
 
