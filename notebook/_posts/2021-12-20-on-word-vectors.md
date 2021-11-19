@@ -243,9 +243,54 @@ beggars can't be choosers, so let's continue on!
 
 ### 2. Create word pairs
 
+As John Rupert Firth, a famous linguist, once said: *"You shall know a word by
+the company it keeps."* In this step, we create pairs consisting of each word
+in our vocabulary and its context ("the company it keeps"). We call the former
+as the **center word** and the latter as the **context word**. 
 
-<!-- talk about context -->
-<!-- there's a quote about context in CS224N. find it -->
+
+<!-- a few image illustration of a sentence and center + context -->
+
+> You shall know a word by the company it keeps - John Rupert Firth
+
+Context is important to understand meaning. Take the word *bat* for 
+example. We don't know what it means in isolation, but in a sentence, its
+meaning becomes clear:
+
+<!-- a few image illustrate of bat as animal and bat as baseball bat -->
+
+We can stretch this further: do you know what the words *frumious*,
+*Jabberwock*, and *Jubjub* mean? Well, we can only guess. But in the context of
+other words (in this case a poem), we can infer their meaning:
+
+> Beware the Jabberwock, my son!  
+> The jaws that bite, the claws that catch!  
+> Beware the Jubjub bird, and shun  
+> The frumious Bandersnatch!  
+
+By looking at the context of each word, we now know that *Jabberwock* is a noun
+and can be something dangerous because of the word 'beware.' It also has 'jaws'
+and 'claws' that bite and catch.  *Frumious*, on the hand, is an adjective that
+describes a *Bandersnatch*. Lastly, *Jubjub* could be a type of bird that one
+should be beware of.
+
+Truth is, these words were just made up! I lifted it from Lewis Carroll's
+poem, ["Jabberwocky"](https://www.poetryfoundation.org/poems/42916/jabberwocky)
+in the novel [*Through the
+Looking-Glass*](https://en.wikipedia.org/wiki/Through_the_Looking-Glass). Even
+so, because of context, we were able to uncover their meaning.
+
+<!-- talk about window size -->
+
+
+
+
+
+
+
+
+
+
 
 
 ### 3. Encode to one-hot vectors
