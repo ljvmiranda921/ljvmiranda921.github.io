@@ -280,6 +280,9 @@ in the novel [*Through the
 Looking-Glass*](https://en.wikipedia.org/wiki/Through_the_Looking-Glass). Even
 so, because of context, we were able to uncover their meaning.
 
+![](/assets/png/word-vectors/jabberwocky.jpg){:width="700px"}
+{:style="text-align: center;"}
+
 <!-- talk about window size -->
 
 
@@ -309,6 +312,7 @@ so, because of context, we were able to uncover their meaning.
 ## Conclusion
 
 
+
 <!--
 
 Note that the techniques demonstrated here only serve as an illustration. In
@@ -316,6 +320,16 @@ production, it's recommended to use common pretrained models like
 [Word2Vec](https://arxiv.org/abs/1301.3781),
 [GloVe](https://nlp.stanford.edu/projects/glove/), or
 [FastText](https://fasttext.cc/). 
+
+-->
+
+
+## Postscript
+
+<!--
+
+Relearning the fundamentals
+Refining fundamentals
 
 -->
 
