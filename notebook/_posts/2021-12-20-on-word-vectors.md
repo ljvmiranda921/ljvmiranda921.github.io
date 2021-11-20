@@ -67,6 +67,22 @@ This leads us to two (2) necessary ingredients to create word vectors:
    used a crude method, but now we want to do this programmatically, perhaps
    with the help of some algorithm.
 
+<div style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
+<b>Contents</b>
+<ul>
+    <li><a href="#">Introduction</a></li>
+    <li><a href="#word-vectors-from-scratch">Word vectors from scratch</a></li>
+    <ol>
+        <li><a href="#corpus">Preliminary: the text corpus</a></li>
+        <li><a href="#clean">Clean the text</a></li>
+        <li><a href="#pairs">Create word pairs</a></li>
+        <li><a href="#vectors"> Encode to one-hot vectors</a></li>
+        <li><a href="#train">Train the model</a></li>
+        <li><a href="#weights">Post: model weights as vectors</a></li>
+    </ol>
+    <li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</div>
 
 ## Word vectors from scratch
 
@@ -82,7 +98,7 @@ process is as follows:
 ![](/assets/png/word-vectors/process.png){:width="720px"}
 {:style="text-align: center;"}
 
-### 0. Preliminary: the text corpus
+### <a id="corpus"></a> 0. Preliminary: the text corpus
 
 Earlier, we manually encoded our knowledge into some mathematical format. When
 we spoke of *tameness*, we assigned values to each of our animals and plotted them
@@ -120,7 +136,7 @@ for that. For example, the [GloVe word
 embeddings](https://nlp.stanford.edu/projects/glove/) used Wikipedia, news
 text, and the Internet ([CommonCrawl](https://commoncrawl.org/)) as its source.
 
-### 1. Clean the text
+### <a id="clean"></a> 1. Clean the text
 
 We clean the texts by removing stopwords and punctuations.  In NLP, stopwords
 are low-signal words that are uninformative and frequent.[^2]   A few examples
@@ -241,7 +257,7 @@ From our small corpus, we obtained a measly vocabulary size of 10.  On the
 other hand, the CommonCrawl dataset has 42 billion tokens of web data. Well,
 beggars can't be choosers, so let's continue on!
 
-### 2. Create word pairs
+### <a id="pairs"></a> 2. Create word pairs
 
 As John Rupert Firth, a famous linguist, once said: *"You shall know a word by
 the company it keeps."* In this step, we create pairs consisting of each word
@@ -298,6 +314,46 @@ you fail to capture all of its nuance.
 
 Now, we write a function to get word pairs from a sentence:
 
+```python
+def create_word_pairs(
+    text: List[str],
+    window: int = 2
+) -> List[Tuple[str, str]]:
+    word_pairs = []
+    for idx, word in enumerate(text):
+        for w in range(window):
+            if idx + 1 + w < len(text):
+                pair = tuple([word] + [text[idx + 1 + w]])
+                word_pairs.append(pair)
+            if idx - w - 1 >= 0:
+                pair = tuple([word] + [text[idx - w - 1]])
+                word_pairs.append(pair)
+    return word_pairs
+```
+
+Note that at this stage, we've already cleaned and tokenized our sentences.
+We now pass a string of tokens and obtain a list of pairs.
+
+```python
+text = "A cat is a warm-blooded feline."
+cleaned_tokens = clean_text(text)  # ["cat", "warm-blooded", "feline"]
+
+# Get word pairs
+create_word_pairs(cleaned_tokens)
+```
+
+From here we obtain six pairs:
+
+```python
+[('cat', 'warmblooded'),
+ ('cat', 'feline'),
+ ('warmblooded', 'feline'),
+ ('warmblooded', 'cat'),
+ ('feline', 'warmblooded'),
+ ('feline', 'cat')]
+```
+
+We do this step for each text in our corpus. 
 
 
 
@@ -306,18 +362,14 @@ Now, we write a function to get word pairs from a sentence:
 
 
 
+### <a id="vectors"></a> 3. Encode to one-hot vectors
+
+
+### <a id="train"></a> 4. Train a model
 
 
 
-
-### 3. Encode to one-hot vectors
-
-
-### 4. Train a model
-
-
-
-### 5. Post: model weights as vectors
+### <a id="weights"></a> 5. Post: model weights as vectors
 
 <!-- do jay alammar-esque viz of our word vectors -->
 <!-- then maybe compare it with GloVE? -->
