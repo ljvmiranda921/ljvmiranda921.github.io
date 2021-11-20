@@ -251,7 +251,10 @@ as the **center word** and the latter as the **context word**.
 
 <!-- a few image illustration of a sentence and center + context -->
 
-![](/assets/png/word-vectors/context.png){:width="420px"}
+![](/assets/png/word-vectors/context.png){:width="520px"}  
+__Figure__: Demonstration of center and context words. Note that we skip
+"a" and "is" because they're stopwords. The `clean_text` function should've
+removed them at this point.
 {:style="text-align: center;"}
 
 > You shall know a word by the company it keeps - John Rupert Firth
@@ -289,6 +292,12 @@ We can also control the neighbors of a word through the **window size**
 parameter. A window size of 1 means that a word only sees adjacent words as its
 neighbor. Too high a window and your context becomes less informative, too low and 
 you fail to capture all of its nuance.
+
+> Too high a window and your context becomes less informative, too low and you
+> fail to capture all of its nuance.
+
+Now, we write a function to get word pairs from a sentence:
+
 
 
 
