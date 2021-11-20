@@ -70,7 +70,7 @@ This leads us to two (2) necessary ingredients to create word vectors:
 <div style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 <b>Contents</b>
 <ul>
-    <li><a href="#">Introduction</a></li>
+    <li><a href="#">On assigning numbers to words</a></li>
     <li><a href="#word-vectors-from-scratch">Word vectors from scratch</a></li>
     <ol>
         <li><a href="#corpus">Preliminary: the text corpus</a></li>
@@ -80,7 +80,7 @@ This leads us to two (2) necessary ingredients to create word vectors:
         <li><a href="#train">Train the model</a></li>
         <li><a href="#weights">Post: model weights as vectors</a></li>
     </ol>
-    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#conclusion">Looking back to what we can do now</a></li>
 </ul>
 </div>
 
@@ -260,7 +260,7 @@ beggars can't be choosers, so let's continue on!
 ### <a id="pairs"></a> 2. Create word pairs
 
 As John Rupert Firth, a famous linguist, once said: *"You shall know a word by
-the company it keeps."* In this step, we create pairs consisting of each word
+the company it keeps."*[^3] In this step, we create pairs consisting of each word
 in our vocabulary and its context ("the company it keeps"). We call the former
 as the **center word** and the latter as the **context word**. 
 
@@ -353,8 +353,11 @@ From here we obtain six pairs:
  ('feline', 'cat')]
 ```
 
-We do this step for each text in our corpus. 
+We do this step for each text in our corpus. In the end, we obtain a large list
+of pairs containing every word in our vocabulary and their corresponding
+neighbor. The larger the corpus, the larger the expressivity of our word pairs. 
 
+In the next section, we'll 
 
 
 
@@ -409,3 +412,9 @@ Refining fundamentals
 
     Writing tip: I use stopwords to gauge how clear my writing is. Sometimes,
     when I use a lot of stopwords my writing becomes full of fluff.
+
+
+[^3]:
+
+    This quote by Firth in the 1950s is one of the foundational ideas of [distributional semantics](https://en.wikipedia.org/wiki/Distributional_semantics)
+    and modern statistical NLP as a whole!
