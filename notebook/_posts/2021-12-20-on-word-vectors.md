@@ -357,15 +357,15 @@ We do this step for each text in our corpus. In the end, we obtain a large list
 of pairs containing every word in our vocabulary and their corresponding
 neighbor. The larger the corpus, the larger the expressivity of our word pairs. 
 
-In the next section, we'll 
-
-
-
-
-
+In a way, **having these pairs allows us to see which words tend to stick
+together.**  Later on, we will train a model that can understand this affinity:
+given a word $$X$$, how probable will the word $$Y$$ show up around it? To
+jumpstart our modelling, let's first prepare our dataset.
 
 
 ### <a id="vectors"></a> 3. Encode to one-hot vectors
+
+
 
 
 ### <a id="train"></a> 4. Train a model
