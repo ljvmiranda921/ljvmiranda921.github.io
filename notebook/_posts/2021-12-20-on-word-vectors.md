@@ -93,10 +93,10 @@ it's not enough.
 > In practice, we extract knowledge from other sources: books, the Internet, Reddit
 > comments, Wikipedia, and more.
 
-In practice, **we extract knowledge from other sources**: books, the Internet,
-Reddit comments, Wikipedia, and more. In NLP, we call this collection of texts
-as the *corpus*.[^1] We won't be scraping any text for now. Instead, we'll come up
-with our own:
+In practice, **we'd want to extract knowledge from other sources**&mdash;books,
+the Internet, Reddit comments, Wikipedia&mdash; rather than providing it
+ourselves. In NLP, we call this collection of texts as the *corpus*.[^1] We
+won't be scraping any text for now. Instead, we'll come up with our own:
 
 ```python
 sentences = [
@@ -251,6 +251,9 @@ as the **center word** and the latter as the **context word**.
 
 <!-- a few image illustration of a sentence and center + context -->
 
+![](/assets/png/word-vectors/context.png){:width="420px"}
+{:style="text-align: center;"}
+
 > You shall know a word by the company it keeps - John Rupert Firth
 
 Context is important to understand meaning. Take the word *bat* for 
@@ -258,6 +261,8 @@ example. We don't know what it means in isolation, but in a sentence, its
 meaning becomes crystal clear:
 
 <!-- a few image illustrate of bat as animal and bat as baseball bat -->
+![](/assets/png/word-vectors/bat.png){:width="720px"}
+{:style="text-align: center;"}
 
 We can stretch this further: do you know what the words *frumious*,
 *Jabberwock*, and *Jubjub* mean? Well, we can only guess. But in the context of
@@ -280,10 +285,10 @@ in the novel [*Through the
 Looking-Glass*](https://en.wikipedia.org/wiki/Through_the_Looking-Glass). Even
 so, because of context, we were able to uncover their meaning.
 
-![](/assets/png/word-vectors/jabberwocky.jpg){:width="700px"}
-{:style="text-align: center;"}
-
-<!-- talk about window size -->
+We can also control the neighbors of a word through the **window size**
+parameter. A window size of 1 means that a word only sees adjacent words as its
+neighbor. Too high a window and your context becomes less informative, too low and 
+you fail to capture all of its nuance.
 
 
 
