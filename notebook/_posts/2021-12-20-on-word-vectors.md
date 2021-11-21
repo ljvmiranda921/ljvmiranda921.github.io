@@ -275,7 +275,7 @@ removed them at this point.
 
 > You shall know a word by the company it keeps - John Rupert Firth
 
-Context is important to understand meaning. Take the word *bat* for 
+**Context is important to understand meaning.** Take the word *bat* for 
 example. We don't know what it means in isolation, but in a sentence, its
 meaning becomes crystal clear:
 
@@ -285,7 +285,7 @@ meaning becomes crystal clear:
 
 We can stretch this further: do you know what the words *frumious*,
 *Jabberwock*, and *Jubjub* mean? Well, we can only guess. But in the context of
-other words (in this case a poem), we can infer their meaning:
+other words (in this case a poem), we can infer what they mean:
 
 > Beware the Jabberwock, my son!  
 > The jaws that bite, the claws that catch!  
@@ -296,18 +296,17 @@ By looking at the context of each word, we now know that *Jabberwock* is a noun
 and can be something dangerous because of the word 'beware.' It also has 'jaws'
 and 'claws' that bite and catch.  *Frumious*, on the hand, is an adjective that
 describes a *Bandersnatch*. Lastly, *Jubjub* could be a type of bird that one
-should be beware of.
+should be beware of. Well...truth is, these words were just made up! I lifted
+them from Lewis Carroll's poem,
+["Jabberwocky"](https://www.poetryfoundation.org/poems/42916/jabberwocky), in
+the novel [*Through the
+Looking-Glass*](https://en.wikipedia.org/wiki/Through_the_Looking-Glass).
+Awesome, huh?
 
-Truth is, these words were just made up! I lifted it from Lewis Carroll's
-poem, ["Jabberwocky"](https://www.poetryfoundation.org/poems/42916/jabberwocky)
-in the novel [*Through the
-Looking-Glass*](https://en.wikipedia.org/wiki/Through_the_Looking-Glass). Even
-so, because of context, we were able to uncover their meaning.
-
-We can also control the neighbors of a word through the **window size**
-parameter. A window size of 1 means that a word only sees adjacent words as its
-neighbor. Too high a window and your context becomes less informative, too low and 
-you fail to capture all of its nuance.
+We can also control the neighbors of a word through its **window size**. A size
+of 1 means that a word only sees adjacent words as its neighbor. Too high a
+window and your context becomes less informative, too low and you fail to
+capture all of its nuance.
 
 > Too high a window and your context becomes less informative, too low and you
 > fail to capture all of its nuance.
