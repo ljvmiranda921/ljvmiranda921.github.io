@@ -45,6 +45,25 @@ sphere:
 ![](/assets/png/raytracer/ch05_red_sphere.ppm.png){:width="250px"}
 {: style="text-align: center;"}
 
+Then little by little
+
+
+![](/assets/png/raytracer/ch06_front_back_forces.ppm.png){:width="225px"}
+![](/assets/png/raytracer/ch06_surface_normal.ppm.png){:width="225px"}
+![](/assets/png/raytracer/ch07_antialiasing.ppm.png){:width="225px"}
+{: style="text-align: center;"}
+
+And experimented on different materials
+
+
+![](/assets/png/raytracer/ch08_matte_with_correction.ppm.png){:width="225px"}
+![](/assets/png/raytracer/ch09_metal_fuzz.ppm.png){:width="225px"}
+![](/assets/png/raytracer/ch09_metal_material.ppm.png){:width="225px"}
+![](/assets/png/raytracer/ch10_a_hollow_glass_sphere.ppm.png){:width="225px"}
+![](/assets/png/raytracer/ch10_glass_always_refracts.ppm.png){:width="225px"}
+![](/assets/png/raytracer/ch10_glass_sometimes_refracts.ppm.png){:width="225px"}
+{: style="text-align: center;"}
+
 
 <!-- allude to the idea of having a stock of moderately-challenging projects
 -->
