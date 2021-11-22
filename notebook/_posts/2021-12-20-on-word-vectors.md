@@ -42,7 +42,7 @@ our animals on a number line depending on the number of their legs:
 
 That's not yet informative, all the animals were stacked on top of each other.
 Perhaps we can add another feature, how about *tameness*? Let's create another
-axis, *tameness*, and place our animals across our two features:
+axis and place our animals across them:
 
 ![](/assets/png/word-vectors/tameness.png){:width="500px"}
 {:style="text-align: center;"}
@@ -51,21 +51,17 @@ What we just did is that  we came up with features and encoded them into our
 vectors.  As a result, we can now say that a dog is similar to a cat, entirely
 different from a gecko, and so on.  
 
-> [To create word vectors] we don't want to think of all the possible features
-> we can find... we want to use existing knowledge to [encode] for us.
 
-However, **we don't want to think of all the possible features that we can
-find**.  Instead, we want to use existing knowledge to do that for us. **We
-also don't want to encode them manually**, as that would be very time
-consuming. 
+But we don't want to write all possible features one-by-one, we want to **exploit
+existing knowledge** just for that. We also don't want to encode them manually, we'd
+rather **write an algorithm to automate** that for us.
 
-This leads us to two (2) necessary ingredients to create word vectors:
-1. An existing **corpus of knowledge** to get the features automatically. Here, we
-   can use newspaper clippings, scrape all the text in the web, scientific
-   journals, and so on.
-2. An **encoding mechanism** to transfom that corpus into numbers. Earlier, we
-   used a crude method, but now we want to do this programmatically, perhaps
-   with the help of some algorithm.
+This gives us to two ingredients in creating word vectors:
+1. An existing **corpus of knowledge** to get features automatically. Here, we
+   can use newspaper clippings, scraped data from the web, scientific
+   journals, and more!
+2. An **encoding mechanism** to transfom that text into numbers. Instead of
+   writing them manually, we encode it algorithmically.
 
 <div style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 <b>Contents</b>
@@ -110,9 +106,9 @@ it's not enough.
 > comments, Wikipedia, and more.
 
 In practice, **we'd want to extract knowledge from other sources**&mdash;books,
-the Internet, Reddit comments, Wikipedia&mdash; rather than providing it
-ourselves. In NLP, we call this collection of texts as the *corpus*.[^1] We
-won't be scraping any text for now. Instead, we'll come up with our own:
+the Internet, Reddit comments, Wikipedia...you name it! In NLP, we call
+this collection of texts as the *corpus*.[^1] We won't be scraping any text for
+now. Instead, we'll come up with our own:
 
 ```python
 sentences = [
@@ -135,6 +131,8 @@ sentences aren't enough to generate a good model, you'd want a larger corpus
 for that. For example, the [GloVe word
 embeddings](https://nlp.stanford.edu/projects/glove/) used Wikipedia, news
 text, and the Internet ([CommonCrawl](https://commoncrawl.org/)) as its source.
+It has hundreds of gigabytes of data, a million times more than the ten
+sentences we have.
 
 ### <a id="clean"></a> 1. Clean the text
 
@@ -219,7 +217,7 @@ print(clean_text(text))  # ["A", "cat", "is", "a", "mammal"]
 ```
 
 Note that **whitespace tokenization is not foolproof.** This method won't work
-on languages that aren't dependent on whitespace (e.g., Chinese, Japanese,
+on languages that aren't dependent on  spaces (e.g., Chinese, Japanese,
 Korean) or languages with different morphological rules (e.g., Arabic,
 Indonesian). In fact, informal English also has a lot of special cases that
 whitespace tokenization cannot solve (e.g. "Gimme" -> "Give me"). 
@@ -232,10 +230,9 @@ kr_text = "비빔밥먹었어?"
 
 In practice, you'd want to use more robust tokenizers for your language. For
 example, spaCy offers a [Tokenizer API](https://spacy.io/api/tokenizer) that
-can be customized to any language, special-case, and use-case. spaCy uses its
-[own tokenization
+can be customized to any language. spaCy uses its [own tokenization
 algorithm](https://spacy.io/usage/linguistic-features#how-tokenizer-works) that
-performs way better than a naive whitespace splitter. 
+performs way better than our naive whitespace splitter. 
 
 
 <!-- get the vocabulary -->
@@ -253,9 +250,9 @@ unique_words = set([word for text in all_text for word in text])
 print(unique_words)  # ['canine', 'cat', 'coldblooded', ...]
 ```
 
-From our small corpus, we obtained a measly vocabulary size of 10.  On the
-other hand, the CommonCrawl dataset has 42 billion tokens of web data. Well,
-beggars can't be choosers, so let's continue on!
+From our small corpus, we obtained a measly vocabulary of size 10.  On the
+other hand, the CommonCrawl dataset has 42 billion tokens of web data...well,
+we can't be choosers, so let's move on!
 
 ### <a id="pairs"></a> 2. Create word pairs
 
@@ -285,7 +282,7 @@ meaning becomes crystal clear:
 
 We can stretch this further: do you know what the words *frumious*,
 *Jabberwock*, and *Jubjub* mean? Well, we can only guess. But in the context of
-other words (in this case a poem), we can infer what they mean:
+other words (in this case a poem), we can infer their meaning:
 
 > Beware the Jabberwock, my son!  
 > The jaws that bite, the claws that catch!  
@@ -304,9 +301,9 @@ Looking-Glass*](https://en.wikipedia.org/wiki/Through_the_Looking-Glass).
 Awesome, huh?
 
 We can also control the neighbors of a word through its **window size**. A size
-of 1 means that a word only sees adjacent words as its neighbor. Too high a
-window and your context becomes less informative, too low and you fail to
-capture all of its nuance.
+of 1 means that a center word only sees adjacent words as its neighbor. Too
+high a window and your context becomes less informative, too low and you fail
+to capture all of its nuance.
 
 > Too high a window and your context becomes less informative, too low and you
 > fail to capture all of its nuance.
@@ -358,15 +355,19 @@ neighbor. The larger the corpus, the larger the expressivity of our word pairs.
 
 In a way, **having these pairs allows us to see which words tend to stick
 together.**  Later on, we will train a model that can understand this affinity,
-i.e., given a word $$X$$, what's the probability that a word $$Y$$ will show up
-around it? In the next section, we'll jumpstart the modelling stage by preparing
-our dataset.
+i.e., given a word $$X$$, what's the probability that a word $$Y$$ will show
+up? In the next section, we'll jumpstart this stage by preparing our dataset.
 
 
 ### <a id="vectors"></a> 3. Encode to one-hot vectors
 
+<!-- localization -->
 
+<!-- why we need one-hot encoding -->
 
+<!-- show code -->
+
+<!-- show illustratoin of how it will look like -->
 
 ### <a id="train"></a> 4. Train a model
 
