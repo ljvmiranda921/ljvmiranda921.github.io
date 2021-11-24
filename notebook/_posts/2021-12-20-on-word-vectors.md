@@ -361,15 +361,54 @@ up? In the next section, we'll jumpstart this stage by preparing our dataset.
 
 ### <a id="vectors"></a> 3. Encode to one-hot vectors
 
-<!-- localization -->
+After obtaining word pairs, the next step is to convert them into some numerical
+format. We won't be overthinking this too much, so we'll treat those numbers
+similar to how we treat words&mdash; as discrete symbols. We accomplish this
+with **one-hot encoding**.
+
+In one-hot encoding, we prepare a table where each word in our vocabulary is
+represented by a column. Our word columns don't have to be in a specific order,
+although I prefer sorting them alphabetically. To encode a word, we simply write
+`1` in the column where it is located and write `0` elsewhere:
+
+<!-- illustration of one-hot encoding -->
+
+So for our corpus with a vocabulary size of 10, we create a table with ten columns. 
+To encode the word `cat`, we write `1` in the second column (where `cat` is located) and `0`
+elsewhere. This gives us the encoding:
+
+```python
+>>> one_hot_encode("cat")  # I will show its implementation later!
+[0 1 0 0 0 0 0 0 0 0]
+```
+
+As we will see later on (once we construct our model), the good thing about
+one-hot encoding is that it allows us to interpret the encoded vector as a
+probability distribution over our vocabulary. For example, if I have a center word
+`cat`, the likelihood that ... 
+
+> The good thing about one-hot encoding is that it allows us to interpret the
+encoded vector > as a probability distribution over our vocabulary.
+
 
 <!-- why we need one-hot encoding -->
+<!-- interpret it as a softmax probability distrib-->
 
 <!-- show code -->
 
 <!-- show illustratoin of how it will look like -->
 
 ### <a id="train"></a> 4. Train a model
+
+Because we now have a collection of center words and their corresponding context
+words, it's now possible to build a model that asks: "**what is the likelihood
+that a context word $$y$$ appears given a word $$X$$?**" or simply, $$P(y\vert x ; \theta)$$.
+
+If the words *warm-blooded*, *canine*, and *animal* often appear alongside the word *dog*, then
+we can infer something about *dogs*. 
+
+
+
 
 
 
