@@ -379,16 +379,48 @@ elsewhere. This gives us the encoding:
 
 ```python
 >>> one_hot_encode("cat")  # I will show its implementation later!
-[0 1 0 0 0 0 0 0 0 0]
+[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
-As we will see later on (once we construct our model), the good thing about
-one-hot encoding is that it allows us to interpret the encoded vector as a
-probability distribution over our vocabulary. For example, if I have a center word
-`cat`, the likelihood that ... 
+One advantage of one-hot encoding is that it allows us to interpret the encoded
+vector as a probability distribution over our vocabulary. For example, if I have
+a center word `cat`, we can then check how likely other words in our vocab will
+appear as a context word:
 
-> The good thing about one-hot encoding is that it allows us to interpret the
-encoded vector > as a probability distribution over our vocabulary.
+```python
+>>> {v: l for v, l in vocab, get_likelihood("cat"))}
+{
+ "canine": 0.01,
+ "cat": 0.27, 
+ "coldblooded": 0.01,
+ "dog": 0.06,
+ "feline": 0.22,
+ "gecko": 0.04, 
+ "mammal": 0.11,
+ "pet": 0.07,
+ "reptile": 0.02,
+ "warmblooded": 0.19,
+}
+```
+
+This also means that if we have the following word pair `("cat", "feline")`,
+their encoding can be interpreted as: "the word *feline* is likely to appear
+given that the word *cat* is present." It is consistent as long as we think of
+0s and 1s as probabilities:
+
+```python
+>>> one_hot_encode("cat")
+[0, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+>>> one_hot_encode("feline")
+[0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+```
+
+        
+
+<!-- add illustration -->
+
+> One advantage of one-hot encoding is that it allows us to interpret the
+> encoded vector as a probability distribution over our vocabulary.
 
 
 <!-- why we need one-hot encoding -->
