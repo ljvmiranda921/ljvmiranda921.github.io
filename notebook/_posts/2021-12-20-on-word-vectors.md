@@ -406,7 +406,7 @@ appear as a context word:
 This also means that if we have the following word pair `("cat", "feline")`,
 their encoding can be interpreted as: "the word *feline* is likely to appear
 given that the word *cat* is present." It is consistent as long as we think of
-0s and 1s as probabilities:
+zeroes and ones as probabilities:
 
 ```python
 >>> one_hot_encode("cat")
