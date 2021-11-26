@@ -483,18 +483,17 @@ print(ctx_vectors)
 # for "feline" and "warm-blooded", our context words
 ```
 
+In the next section, we will be using these two sets of vectors to train a
+neural network model. The center vectors will act as our inputs, whereas the
+context vectors will act as our labels.
 
-
-<!-- why we need one-hot encoding -->
-<!-- interpret it as a softmax probability distrib-->
-
-<!-- show code -->
 
 ### <a id="train"></a> 4. Train a model
 
 Because we now have a collection of center words and their corresponding context
 words, it's now possible to build a model that asks: "**what is the likelihood
-that a context word $$y$$ appears given a word $$X$$?**" or simply, $$P(y\vert x ; \theta)$$.
+that a context word $$y$$ appears given a center word $$X$$?**" or simply,
+$$P(y\vert x ; \theta)$$.
 
 If the words *warm-blooded*, *canine*, and *animal* often appear alongside the word *dog*, then
 we can infer something about *dogs*. 
