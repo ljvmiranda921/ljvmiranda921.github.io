@@ -94,7 +94,7 @@ process is as follows:
 ![](/assets/png/word-vectors/process.png){:width="720px"}
 {:style="text-align: center;"}
 
-### <a id="corpus"></a> 0. Preliminary: the text corpus
+### 📚 <a id="corpus"></a> 0. Preliminary: the text corpus
 
 Earlier, we manually encoded our knowledge into some mathematical format. When
 we spoke of *tameness*, we assigned values to each of our animals and plotted them
@@ -134,7 +134,7 @@ text, and the Internet ([CommonCrawl](https://commoncrawl.org/)) as its source.
 It has hundreds of gigabytes of data, a million times more than the ten
 sentences we have.
 
-### <a id="clean"></a> 1. Clean the text
+###  <a id="clean"></a> 1. Clean the text 🧹
 
 We clean the texts by removing stopwords and punctuations.  In NLP, stopwords
 are low-signal words that are uninformative and frequent.[^2]   A few examples
@@ -254,7 +254,7 @@ From our small corpus, we obtained a measly vocabulary of size 10.  On the
 other hand, the CommonCrawl dataset has 42 billion tokens of web data...well,
 we can't be choosers, so let's move on!
 
-### <a id="pairs"></a> 2. Create word pairs
+### <a id="pairs"></a> 2. Create word pairs 🐾
 
 As John Rupert Firth, a famous linguist, once said: *"You shall know a word by
 the company it keeps."*[^3] In this step, we create pairs consisting of each word
@@ -359,7 +359,7 @@ i.e., given a word $$X$$, what's the probability that a word $$Y$$ will show
 up? In the next section, we'll jumpstart this stage by preparing our dataset.
 
 
-### <a id="vectors"></a> 3. Encode to one-hot vectors
+###  <a id="vectors"></a> 3. Encode to one-hot vectors 🖥️
 
 After obtaining word pairs, the next step is to convert them into some numerical
 format. We won't be overthinking this too much, so we'll treat those numbers
@@ -498,7 +498,7 @@ neural network model. The center vectors will act as our inputs, whereas the
 context vectors will act as our labels.
 
 
-### <a id="train"></a> 4. Train a model
+### <a id="train"></a> 4. Train a model 🤖 
 
 Because we now have a collection of center words and their corresponding context
 words, it's now possible to build a model that asks: "**what is the likelihood
@@ -565,7 +565,7 @@ for t in range(int(1e3)):
     optimizer.step()
 ```
 
-### <a id="weights"></a> 5. Post: model weights as vectors
+### <a id="weights"></a> 5. Post: model weights as vectors 🧮 
 
 <!-- do jay alammar-esque viz of our word vectors -->
 <!-- then maybe compare it with GloVE? -->
