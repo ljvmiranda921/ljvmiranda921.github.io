@@ -480,13 +480,13 @@ one-hot encoded center and context vectors:
 sample_word_pairs = [("cat", "feline"), ("dog", "warm-blooded")]
 vocab = ["canine", "cat", "cold-blooded", ...]
 
-ctr_vectors, ctx_vectors = one_hot_encoded(sample_word_pairs, vocab)
-print(ctr_vectors) 
+center_vectors, context_vectors = one_hot_encoded(sample_word_pairs, vocab)
+print(center_vectors) 
 # gives: 
 # [[0, 1, 0, 0, 0, 0, 0, 0, 0, 0], 
 #  [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]]
 # for "cat" and "dog", our center words
-print(ctx_vectors) 
+print(context_vectors) 
 # gives: 
 # [[0, 0, 0, 0, 1, 0, 0, 0, 0, 0], 
 #  [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
@@ -551,29 +551,37 @@ model = nn.Sequential(
     nn.Linear(input_dim, hidden_dim),
     nn.Linear(hidden_dim, output_dim),
 )
-
 ```
+
+Next we prepare our loss function and optimizer. We will use the cross-entropy
+loss to compute the difference between the model's output and the context
+vector. In Pytorch, softmax is already included when using the
+`torch.nn.CrossEntropyLoss` class, so there's no need to add it in our model
+definition:
 
 ```python
-
+# In Pytorch, Softmax is already added when using CrossEntropyLoss
 loss_fn = torch.nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=1e-4)
-
-# Convert our inputs and outputs into tensors
-X_t = torch.FloatTensor(center_vectors)
-y_t = torch.FloatTensor(context_vector)
 ```
 
+We also convert our vectors into Pytorch's `FloatTensor` class. At this stage,
+I'll just call the center and context vectors as  `X` and `y` respectively, to be
+consistent with common ML naming schemes:
+
+```python
+X = torch.FloatTensor(center_vectors)
+y = torch.FloatTensor(context_vector)
+```
+Lastly, we write our training loop. Because we're using a deep learning framework,
+we don't have to write the backpropagation step by hand. Instead, we simply call
+the `backward()` method from the loss function: 
 
 ```python
 for t in range(int(1e3)):
     # Compute forward pass and print loss
-    y_pred = model(X_t)
-    loss = loss_fn(y_pred, torch.argmax(y_t, dim=1))
-    
-    if t % 1000 == 99:
-        print(t, loss.item())
-    
+    y_pred = model(X)
+    loss = loss_fn(y_pred, torch.argmax(y, dim=1))
     # Zero the gradients before running the backward pass
     optimizer.zero_grad()
     # Backpropagation
