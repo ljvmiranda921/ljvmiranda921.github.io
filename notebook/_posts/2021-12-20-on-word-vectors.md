@@ -403,6 +403,9 @@ appear as a context word:
 }
 ```
 
+> One-hot encoding allows us to interpret the encoded vector as a
+> probability distribution over our vocabulary.
+
 This also means that if we have the following word pair `("cat", "feline")`,
 their encoding can be interpreted as: "the word *feline* is likely to appear
 given that the word *cat* is present." It is consistent as long as we think of
@@ -415,20 +418,77 @@ zeroes and ones as probabilities:
 [0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
 ```
 
-        
-
 <!-- add illustration -->
 
 > One advantage of one-hot encoding is that it allows us to interpret the
 > encoded vector as a probability distribution over our vocabulary.
+
+Now, let's write a function to create one-hot encoded vectors from all our word
+pairs and vocabulary. The vocabulary will guide us on the placement and length
+of the one-hot vector. Lastly, instead of taking a single word, we'll take a list
+of word pairs to make things easier later on:
+
+```python
+from typing import List, Tuple
+
+def one_hot_encode(
+    pairs: List[Tuple[str, str]], 
+    vocab: List[str]
+) -> Tuple[List, List]:
+
+    # We'll sort the vocabulary first. 
+    # It's not required, but it makes bookkeeping easier
+    n_words = len(sorted(vocab))
+
+    ctr_vectors = []  # center word placeholder
+    ctx_vectors = []  # context word placeholder
+
+    for pair in pairs:
+
+        # Get center and context words
+        ctr, ctx= pair
+        ctr_idx = vocab.index(ctr)
+        ctx_idx = vocab.index(ctx)
+
+        # One-hot encode center words
+        ctr_vector = [0] * n_words
+        ctr_vector[ctr_idx] = 1
+        ctr_vectors.append(ctr_vector)
+
+        # One-hot encode context words
+        ctx_vector = [0] * n_words
+        ctx_vector[ctx_idx] = 1
+        ctx_vectors.append(ctx_vector)
+
+    return ctr_vectors, ctx_vectors
+```
+
+Now if we pass all our word pairs and vocabulary, we'll get their corresponding
+one-hot encoded center and context vectors:
+
+```python
+sample_word_pairs = [("cat", "feline"), ("dog", "warm-blooded")]
+vocab = ["canine", "cat", "cold-blooded", ...]
+
+ctr_vectors, ctx_vectors = one_hot_encoded(sample_word_pairs, vocab)
+print(ctr_vectors) 
+# gives: 
+# [[0, 1, 0, 0, 0, 0, 0, 0, 0, 0], 
+#  [0, 0, 0, 1, 0, 0, 0, 0, 0, 0]]
+# for "cat" and "dog", our center words
+print(ctx_vectors) 
+# gives: 
+# [[0, 0, 0, 0, 1, 0, 0, 0, 0, 0], 
+#  [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]]
+# for "feline" and "warm-blooded", our context words
+```
+
 
 
 <!-- why we need one-hot encoding -->
 <!-- interpret it as a softmax probability distrib-->
 
 <!-- show code -->
-
-<!-- show illustratoin of how it will look like -->
 
 ### <a id="train"></a> 4. Train a model
 
