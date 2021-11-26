@@ -94,7 +94,7 @@ process is as follows:
 ![](/assets/png/word-vectors/process.png){:width="720px"}
 {:style="text-align: center;"}
 
-### 📚 <a id="corpus"></a> 0. Preliminary: the text corpus
+### <a id="corpus"></a> 0. Preliminary: the text corpus 📚
 
 Earlier, we manually encoded our knowledge into some mathematical format. When
 we spoke of *tameness*, we assigned values to each of our animals and plotted them
@@ -514,7 +514,8 @@ To train a model, we will **use the center words as our input, and the context
 words as our labels**. We will build a neural network of size 10-2-10 with a
 softmax layer in its output:
 
-<!-- illustration of neural network -->
+![](/assets/png/word-vectors/nn.png){:width="720px"}
+{:style="text-align: center;"}
 
 - **Input layer (size 10)**: we set our input layer to the size of our vocabulary.
     We don't need to add an activation layer, so we just leave it as it is.
