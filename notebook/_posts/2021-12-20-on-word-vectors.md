@@ -280,8 +280,8 @@ meaning becomes crystal clear:
 ![](/assets/png/word-vectors/bat.png){:width="720px"}
 {:style="text-align: center;"}
 
-We can stretch this further: do you know what the words *frumious*,
-*Jabberwock*, and *Jubjub* mean? Well, we can only guess. But in the context of
+We can stretch this further: do you know the meaning of the words *frumious*,
+*Jabberwock*, and *Jubjub*? Well, we can only guess. But in the context of
 other words (in this case a poem), we can infer their meaning:
 
 > Beware the Jabberwock, my son!  
