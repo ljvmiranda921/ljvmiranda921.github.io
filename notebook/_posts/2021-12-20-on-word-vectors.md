@@ -505,13 +505,65 @@ words, it's now possible to build a model that asks: "**what is the likelihood
 that a context word $$y$$ appears given a center word $$X$$?**" or simply,
 $$P(y\vert x ; \theta)$$.
 
-If the words *warm-blooded*, *canine*, and *animal* often appear alongside the word *dog*, then
-we can infer something about *dogs*. 
+To illustrate this idea: if the words *warm-blooded*, *canine*, and *animal* often appear
+alongside the word *dog*, then that means we can infer something informative
+about dogs. We just need to know how likely these words will come up, and that
+will be the role of our model.
+
+To train a model, we will **use the center words as our input, and the context
+words as our labels**. We will build a neural network of size 10-2-10 with a
+softmax layer in its output:
+
+<!-- illustration of neural network -->
+
+- **Input layer (size 10)**: we set our input layer to the size of our vocabulary.
+    We don't need to add an activation layer, so we just leave it as it is.
+- **Hidden layer (size 2)**: this can be any arbitrary size, but I set it to 2 so that
+    I can plot the weights in a graph. It's also possible to set a higher number, and perform
+    Principal Component Analysis (PCA) later on.
+- **Output layer (size 10 with softmax)**: we set the number of nodes to 10 so
+    that we can compare it with the context vectors. The softmax activation is
+    important so that we can treat the output as probabilities and use cross-entropy
+    loss. To learn more about softmax, check my post on the [negative
+    log-likelihood](/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/). 
 
 
+```python
+import torch
+import torch.optim as optim
+from torch import nn
+
+input_dim, hidden_dim, output_dim = len(X[0]), 2, len(y[0])
+model = nn.Sequential(
+    nn.Linear(input_dim, hidden_dim),
+    nn.Linear(hidden_dim, output_dim),
+)
+
+loss_fn = torch.nn.CrossEntropyLoss()
+optimizer = optim.Adam(model.parameters(), lr=1e-4)
+
+# Convert our inputs and outputs into tensors
+X_t = torch.FloatTensor(X)
+y_t = torch.FloatTensor(y)
+```
 
 
-
+```python
+for t in range(int(1e3)):
+    # Compute forward pass and print loss
+    y_pred = model(X_t)
+    loss = loss_fn(y_pred, torch.argmax(y_t, dim=1))
+    
+    if t % 1000 == 99:
+        print(t, loss.item())
+    
+    # Zero the gradients before running the backward pass
+    optimizer.zero_grad()
+    # Backpropagation
+    loss.backward()
+    # Update weights using gradient descent
+    optimizer.step()
+```
 
 ### <a id="weights"></a> 5. Post: model weights as vectors
 
