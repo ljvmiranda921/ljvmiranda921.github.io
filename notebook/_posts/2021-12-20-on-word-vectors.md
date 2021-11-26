@@ -372,6 +372,8 @@ although I prefer sorting them alphabetically. To encode a word, we simply write
 `1` in the column where it is located and write `0` elsewhere:
 
 <!-- illustration of one-hot encoding -->
+![](/assets/png/word-vectors/one_hot.png){:width="720px"}
+{:style="text-align: center;"}
 
 So for our corpus with a vocabulary size of 10, we create a table with ten columns. 
 To encode the word `cat`, we write `1` in the second column (where `cat` is located) and `0`
@@ -388,6 +390,8 @@ a center word `cat`, we can then check how likely other words in our vocab will
 appear as a context word:
 
 ```python
+# Note: not actual values. A highly-contrived example
+# Numbers are just provided for illustration
 >>> {v: l for v, l in vocab, get_likelihood("cat"))}
 {
  "canine": 0.01,
@@ -419,6 +423,12 @@ zeroes and ones as probabilities:
 ```
 
 <!-- add illustration -->
+![](/assets/png/word-vectors/one_hot_probs.png){:width="720px"}  
+__Figure__: Vectors can also be interpreted as a probability distribution
+over the vocabulary. This means that in one-hot encoding, a value of 1 may also
+mean a highly-probable event.  
+_(Note: this is a highly-contrived example)_
+{:style="text-align: center;"}
 
 > One advantage of one-hot encoding is that it allows us to interpret the
 > encoded vector as a probability distribution over our vocabulary.
