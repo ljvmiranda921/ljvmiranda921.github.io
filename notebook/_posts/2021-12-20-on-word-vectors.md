@@ -528,24 +528,40 @@ softmax layer in its output:
     loss. To learn more about softmax, check my post on the [negative
     log-likelihood](/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/). 
 
+Now, let's construct our neural network using Pytorch. Here are the third-party
+modules that I'm going to import:
 
 ```python
 import torch
 import torch.optim as optim
 from torch import nn
+```
 
-input_dim, hidden_dim, output_dim = len(X[0]), 2, len(y[0])
+We build our network based on the size of our center and context vectors.
+For the hidden layer, we set an arbitrary size of 2.
+
+```python
+# Prepare layer sizes
+input_dim = len(center_vectors[0])
+hidden_dim = 2
+output_dim = len(context_vectors[0])
+
+# Build the model
 model = nn.Sequential(
     nn.Linear(input_dim, hidden_dim),
     nn.Linear(hidden_dim, output_dim),
 )
 
+```
+
+```python
+
 loss_fn = torch.nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=1e-4)
 
 # Convert our inputs and outputs into tensors
-X_t = torch.FloatTensor(X)
-y_t = torch.FloatTensor(y)
+X_t = torch.FloatTensor(center_vectors)
+y_t = torch.FloatTensor(context_vector)
 ```
 
 
