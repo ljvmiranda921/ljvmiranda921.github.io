@@ -593,9 +593,26 @@ for t in range(int(1e3)):
     optimizer.step()
 ```
 
+After training the model, we can now access its weights. We'll
+obtain, in particular, the weights between the input and hidden layers.
+It's a matrix with 10 rows and 2 columns:
 
+```python
+name, weights = list(model.named_parameters())[0]
+w = weights.data.tolist()
+```
+
+**These weights, are in fact, our word vectors&mdash; congratulations!** They
+*are of the same size
+as our hidden layer. I've set them into 2 so that we can plot them right away
+into a graph. In the next show, we'll show what this graph looks like, and get a
+deeper look into the behaviour of our word vectors.
 
 ### <a id="weights"></a> 5. Post: model weights as vectors 🧮 
+
+<!-- why the weights between input and hidden layer? -->
+<!-- show the graph, more beautifully -->
+<!-- some analysis on the graph itself -->
 
 <!-- do jay alammar-esque viz of our word vectors -->
 <!-- then maybe compare it with GloVE? -->
