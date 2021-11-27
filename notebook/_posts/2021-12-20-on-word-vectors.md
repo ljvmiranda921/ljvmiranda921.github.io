@@ -528,8 +528,8 @@ softmax layer in its output:
     loss. To learn more about softmax, check my post on the [negative
     log-likelihood](/notebook/2017/08/13/softmax-and-the-negative-log-likelihood/). 
 
-Now, let's construct our neural network using Pytorch. Here are the third-party
-modules that I'm going to import:
+Now, let's construct our neural network. We'll use the following third-party
+modules:
 
 ```python
 import torch
@@ -538,7 +538,7 @@ from torch import nn
 ```
 
 We build our network based on the size of our center and context vectors.
-For the hidden layer, we set an arbitrary size of 2.
+For the hidden layer, we set an arbitrary size of 2. 
 
 ```python
 # Prepare layer sizes
@@ -553,11 +553,11 @@ model = nn.Sequential(
 )
 ```
 
-Next we prepare our loss function and optimizer. We will use the cross-entropy
-loss to compute the difference between the model's output and the context
-vector. In Pytorch, softmax is already included when using the
-`torch.nn.CrossEntropyLoss` class, so there's no need to add it in our model
-definition:
+Next we prepare our loss function and optimizer. We will use cross-entropy loss
+to compute the difference between the model's output and the context vector. In
+Pytorch, softmax is already included when using the
+[`torch.nn.CrossEntropyLoss`](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html)
+class, so there's no need to add it in our model definition:
 
 ```python
 # In Pytorch, Softmax is already added when using CrossEntropyLoss
@@ -565,17 +565,20 @@ loss_fn = torch.nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=1e-4)
 ```
 
-We also convert our vectors into Pytorch's `FloatTensor` class. At this stage,
-I'll just call the center and context vectors as  `X` and `y` respectively, to be
-consistent with common ML naming schemes:
+We also convert our vectors into Pytorch's
+[`FloatTensor`](https://pytorch.org/docs/stable/tensors.html) data type. At this
+stage, I'll also call the center and context vectors as  `X` and `y`
+respectively, just to be consistent with common machine learning naming schemes:
 
 ```python
 X = torch.FloatTensor(center_vectors)
 y = torch.FloatTensor(context_vector)
 ```
-Lastly, we write our training loop. Because we're using a deep learning framework,
-we don't have to write the backpropagation step by hand. Instead, we simply call
-the `backward()` method from the loss function: 
+Lastly, we write our training loop. Because we're using a deep learning
+framework, we don't have to write the backpropagation step by hand. Instead, we
+simply [call the `backward()`
+method](https://discuss.pytorch.org/t/what-does-the-backward-function-do/9944)
+from the loss function: 
 
 ```python
 for t in range(int(1e3)):
