@@ -593,6 +593,8 @@ for t in range(int(1e3)):
     optimizer.step()
 ```
 
+
+
 ### <a id="weights"></a> 5. Post: model weights as vectors 🧮 
 
 <!-- do jay alammar-esque viz of our word vectors -->
