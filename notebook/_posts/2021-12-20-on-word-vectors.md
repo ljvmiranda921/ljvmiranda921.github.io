@@ -630,11 +630,25 @@ and `[1 0 ... 0 0]`. Instead, we want a dense vector where we can draw
 meaningful semantic relations from. Our weight matrix performs this
 transformation for us. 
 
-Since we can now have dense and continuous relationships, it may even be possible to plot
-these weights into a graph! 
+By having these dense and continuous relationships, we can even represent them into
+a graph!
 
+<!-- illustration of your plot -->
+
+Notice how semantically related words are nearer to each other. For example, the
+words *gecko*, *reptile*, and *cold-blooded* were clustered together. The same
+goes for *cat*, *dog*, and *warm-blooded*. Even more so, these clusters of
+"lizards" and "mammals" are further far apart!
+
+We didn't encode these relationships, it was all due to how the model
+interpreted the words from our corpus. Sure, we wrote these sentences ourselves,
+but in practice we just have to scrape them from somewhere. 
 
 ## Conclusion
+
+<!-- reiterate the idea of a (1) corpus and (2) encoding mechanism -->
+
+<!-- this is just skip gram -->
 
 
 
