@@ -594,28 +594,44 @@ for t in range(int(1e3)):
 ```
 
 After training the model, we can now access its weights. We'll
-obtain, in particular, the weights between the input and hidden layers.
-It's a matrix with 10 rows and 2 columns:
+obtain, in particular, the weights between the input and hidden layers:
 
 ```python
 name, weights = list(model.named_parameters())[0]
 w = weights.data.tolist()
 ```
 
-**These weights, are in fact, our word vectors&mdash; congratulations!** They
-*are of the same size
-as our hidden layer. I've set them into 2 so that we can plot them right away
-into a graph. In the next show, we'll show what this graph looks like, and get a
-deeper look into the behaviour of our word vectors.
+**These weights are, in fact, our word vectors&mdash; congratulations!**
+They are of the same size as our hidden layer. I've set their dimension to 2 so
+that we can plot the vectors right away into a graph. In the next section,
+we'll show what this graph looks like to get a deeper look into the behaviour of
+our word vectors.
 
-### <a id="weights"></a> 5. Post: model weights as vectors 🧮 
+### <a id="weights"></a> 5. Post: on word vectors 🧮 
 
-<!-- why the weights between input and hidden layer? -->
-<!-- show the graph, more beautifully -->
-<!-- some analysis on the graph itself -->
+After training our model, we took the weights between the input and hidden layers
+in order to obtain our word embeddings. We specifically chose these weights because
+they act as **a lookup table that translates our one-hot encoded vectors into a 
+more suitable dimension.** 
 
-<!-- do jay alammar-esque viz of our word vectors -->
-<!-- then maybe compare it with GloVE? -->
+> The intermediary weight matrix (weights between the input and hidden layers)
+> acts as a lookup table that translates one-hot encoded vectors into a different
+> dimension.
+
+
+![](/assets/png/word-vectors/lookup_table.png){:width="720px"}
+__Figure__: Our weight matrix, coupled with the one-hot encoded input, acts as a lookup table.
+{:style="text-align: center;"}
+
+
+And this is definitely what we want. One-hot encoded vectors are sparse and
+orthogonal: there's really nothing *that* informative between `[0 0 ... 1 0]`
+and `[1 0 ... 0 0]`. Instead, we want a dense vector where we can draw
+meaningful semantic relations from. Our weight matrix performs this
+transformation for us. 
+
+Since we can now have dense and continuous relationships, it may even be possible to plot
+these weights into a graph! 
 
 
 ## Conclusion
