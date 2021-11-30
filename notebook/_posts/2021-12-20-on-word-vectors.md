@@ -612,7 +612,7 @@ our word vectors.
 After training our model, we took the weights between the input and hidden
 layers to obtain our word embeddings. We specifically chose these weights
 because they act as **a lookup table for translating our one-hot encoded vectors
-into a more suitable dimension.** 
+into a more suitable dimension.**  
 
 > The intermediary weight matrix (weights between the input and hidden layers)
 > acts as a lookup table that translates one-hot encoded vectors into a different
