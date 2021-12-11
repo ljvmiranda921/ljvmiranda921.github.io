@@ -10,10 +10,10 @@ published: true
 tags: [nlp, word vectors, spacy, machine learning]
 description: |
     Ever wondered how those numbers in Word2Vec and Fasttext were produced? In
-    this blogpost, we'll try to create our own crude set of word vectors! 
+    this blogpost, we'll create our own set of word vectors! 
 excerpt: |
     Ever wondered how those numbers in Word2Vec and Fasttext were produced? In
-    this blogpost, we'll try to create our own crude set of word vectors!
+    this blogpost, we'll create our own set of word vectors!
 ---
 
 <span class="firstcharacter">W</span>ord vectors are representations of words
