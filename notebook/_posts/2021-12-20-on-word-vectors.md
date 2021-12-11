@@ -500,7 +500,7 @@ context vectors will act as our labels.
 
 ### <a id="train"></a> 4. Train a model 🤖 
 
-Because we now have a collection of center words and their corresponding context
+Because we now have a collection of center words with their corresponding context
 words, it's now possible to build a model that asks: "**what is the likelihood
 that a context word $$y$$ appears given a center word $$X$$?**" or simply,
 $$P(y\vert x ; \theta)$$.
@@ -646,34 +646,26 @@ but in practice we just have to scrape them from somewhere.
 
 ## Conclusion
 
-<!-- reiterate the idea of a (1) corpus and (2) encoding mechanism -->
+In this blogpost, we looked into the idea of generating our own word vectors
+from scratch. We achieved this by combining (1) a text corpus and (2) an
+encoding mechanism. The word vectors we generated are crude, but we learned a
+few things on how they came about. Truth is, what we just did is similar to the
+[original skip-gram implementation of Word2Vec](https://arxiv.org/abs/1301.3781)
+(Mikolov, et al, 2013): given a text corpus, we generate word pairs and train a
+neural network across them.
 
-<!-- this is just skip gram -->
+In production, it is more ideal to use ready-made word embeddings&mdash;they are
+more robust and generalizable. Of course, [real-world NLP still requires
+finetuning](https://explosion.ai/blog/applied-nlp-thinking), but using these
+vectors should already give you a headstart.
 
-
-<!-- what happens in the real world? -->
-
-
-
-<!--
-
-Note that the techniques demonstrated here only serve as an illustration. In
-production, it's recommended to use common pretrained models like
-[Word2Vec](https://arxiv.org/abs/1301.3781),
-[GloVe](https://nlp.stanford.edu/projects/glove/), or
-[FastText](https://fasttext.cc/). 
-
--->
-
-
-## Postscript
-
-<!--
-
-Relearning the fundamentals
-Refining fundamentals
-
--->
+Lastly, I hope that this exercise made us more aware of how a text corpus can be
+a source of bias: a corpus made up of Reddit comments will produce an entirely
+different model compared to a corpus lifted from an encyclopedia. We can use
+this for better or for worse: we can train "domain-specific" language models to
+[min/max](https://www.urbandictionary.com/define.php?term=min%2Fmax) our task,
+or release models in the wild that are inherently biased. Real-world NLP isn't
+as easy as figuring out cats and dogs.
 
 ### Footnotes
 
