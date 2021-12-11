@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "How to make word vectors from scratch"
-date: 2021-12-20
+date: 2021-12-11
 category: notebook
 comments: true
 author: "LJ MIRANDA"
