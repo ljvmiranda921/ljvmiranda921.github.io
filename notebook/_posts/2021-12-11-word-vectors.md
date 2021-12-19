@@ -8,6 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [nlp, word vectors, spacy, machine learning]
+header-img: /assets/png/word-vectors/header.png
 description: |
     Ever wondered how those numbers in Word2Vec and Fasttext were produced? In
     this blogpost, we'll create our own set of word vectors! 
