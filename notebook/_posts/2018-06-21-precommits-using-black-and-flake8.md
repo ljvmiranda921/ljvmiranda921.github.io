@@ -68,7 +68,7 @@ use in my project:
 
 ```yaml
 repos:
--   repo: https://github.com/ambv/black
+-   repo: https://github.com/psf/black
     rev: stable
     hooks:
     - id: black
@@ -83,7 +83,7 @@ repos:
 
 ```yaml
 repos:
--   repo: https://github.com/ambv/black
+-   repo: https://github.com/psf/black
     rev: stable
     hooks:
     - id: black
