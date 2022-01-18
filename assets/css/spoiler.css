@@ -1,0 +1,12 @@
+.spoiler, .spoiler2{ 
+    color: black; 
+    background-color:black;
+}
+  
+.spoiler:hover{
+    color: white;
+}
+
+.spoiler2:hover { 
+    background-color:white; 
+}
