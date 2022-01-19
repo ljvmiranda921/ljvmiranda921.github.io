@@ -136,7 +136,7 @@ end of the bargain and it's not a "good fuse."
 
 Needless to say, fusing two diamond (&#9830;) chips will always result to
 another diamond chip of the next level. For example, if we fuse two "Weapon Attack Up +3 [7]" 
-chips, we'll get a "Weapon Attack Up +4" with a cost of:
+chips, we'll get a "Weapon Attack Up +4" with a cost of 9 (&#9830;):
 
 $$
 \begin{align*}
@@ -148,10 +148,10 @@ Cost_{new} &= ROUNDUP(\frac{7 + 7 + 3}{2}) \\
 $$
 
 The odd-even scheme works when you're trying to fuse a diamond chip to a non-diamond chip.
-It goes like this: if your chip level is 0 or odd, then you can fuse a diamond chip with a non-diamond
+It goes like this: if your chip level is zero or odd, then you can fuse a diamond chip with a non-diamond
 chip as long as their cost difference is 1. 
 
-> If your chip level is 0 or odd, then you can fuse a diamond chip with a non-diamond chip
+> If your chip level is zero or odd, then you can fuse a diamond chip with a non-diamond chip
 > as long as their cost difference is 1.
 
 This is not a special rule but a shorthand for the equation above. Let's say we
@@ -167,9 +167,11 @@ Cost_{new} &= ROUNDUP(\frac{7 + 8 + 3}{2}) \\
 \end{align*}
 $$
 
-Which produces the lowest cost for a +4 chip (check the table).  It doesn't work
-on even numbers because *math*. Let's say we have a diamond chip "Weapon Attack
-Up +2 [6]" and a non-diamond chip "Weapon Attack Up +2 [7]":
+Notice that even if we fused a diamond chip to a non-diamond one, they
+still produced the lowest cost for a +4 chip (check the table).  It doesn't
+work on even numbers because *math*. For example, say we have a diamond chip "Weapon
+Attack Up +2 [6]" and a non-diamond chip "Weapon Attack Up +2 [7]." Their cost
+is computed as:
 
 $$
 \begin{align*}
@@ -181,6 +183,18 @@ Cost_{new} &= ROUNDUP(\frac{7 + 6 + 2}{2}) \\
 $$
 
 Even numbers add a factor such that the minimum value is always $$0.5$$ greater
-when rounded up. That's really it. When you're in doubt, always plug them in the
+when rounded up. *That's really it.* When you're in doubt, always plug them in the
 equation above and double-check on the table if it is the lowest-possible
 storage cost.
+
+## Postscript
+
+Fusing chips in *NieR: Automata* feels like a minigame on its own. To be
+honest, if you're playing in Normal difficulty, there's no need to min-max your
+chips&mdash; just play what you feel is fun! If you have any questions, feel
+free to comment below.
+
+If you haven't played *NieR: Automata*, I highly-recommend that you do. It's a
+great game that touches on some deep and philosophical topics. The play-by-play
+combat is awesome too (think Bayonetta and Devil May Cry). An awesome game to
+start my 2022!
