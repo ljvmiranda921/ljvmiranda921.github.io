@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "On the Unreasonable Effectiveness of Spans in NLP"
+title: "Not all NER datasets are created equal"
 date: 2022-02-28
 category: notebook
 comments: true
