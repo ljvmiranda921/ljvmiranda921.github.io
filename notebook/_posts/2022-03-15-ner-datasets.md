@@ -21,6 +21,10 @@ excerpt: |
 ---
 
 
+<span class="firstcharacter">N</span>amed-entity recognition is one of the most
+common tasks in Natural Language Processing (NLP). It invovles the
+classification of word tokens into distinct categories. 
+
 
 <!--
 
