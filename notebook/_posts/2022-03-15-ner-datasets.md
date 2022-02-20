@@ -21,9 +21,26 @@ excerpt: |
 ---
 
 
-<span class="firstcharacter">N</span>amed-entity recognition is one of the most
-common tasks in Natural Language Processing (NLP). It invovles the
-classification of word tokens into distinct categories. 
+<span class="firstcharacter">N</span>amed-entity recognition (NER) is one of
+the most common tasks in Natural Language Processing (NLP). It involves the
+classification of word tokens into distinct categories. Usually, NER datasets
+follow the classic IOB format for tagging, but as time passes, their labels have
+enjoyed much more freedom.
+
+Nowadays, we see NER datasets in all shapes and sizes: some involve long
+contiguous spans of tokens, some have entities within entities, and some are
+fragmented and vague. We don't work with clearly-bounded tokens anymore,
+instead, we work with **spans**.
+
+<!-- show example, maybe use displacy? -->
+
+<!--
+
+Back then it's IOB, quite simple. 
+Now, there's a lot of freedom on how these token groups (or Spans) are defined.
+Some involve contiguous sets of tokens, some have entities within entities, and
+some are implicit and vague.
+-->
 
 
 <!--
