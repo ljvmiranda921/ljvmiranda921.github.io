@@ -22,14 +22,13 @@ excerpt: |
 
 <!--
 
-Spans are common in the following tasks:
-- coref
-- NER (nested NER), more common than you think!
-
-Look at Spans as:
-- a training objective
-- a pretraining objective
-- an optimization objective
-
+- What is NER
+    - NER datasets in the wild
+- Introduce Papay et al's work: introduce 4 span characteristics
+- Introduce the datasets we'll use
+    - Standard NER: OntoNotes, ConLL
+    - Quotation detection: RIQUA
+    - Nested NER: ACE2004, ACE2005, GENIA
+    - A few domain-specific datasets: EBM-NLP
 -->
 
