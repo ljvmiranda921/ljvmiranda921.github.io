@@ -24,8 +24,11 @@ excerpt: |
 <span class="firstcharacter">N</span>amed-entity recognition (NER) is one of
 the most common tasks in Natural Language Processing (NLP). It involves the
 classification of word tokens into distinct categories. Usually, NER datasets
-follow the classic IOB format for tagging, but as time passes, their labels have
-enjoyed much more freedom.
+follow the classic [IOB
+format](https://en.wikipedia.org/wiki/Inside%E2%80%93outside%E2%80%93beginning_(tagging))
+for tagging, but as time passes, their labels have enjoyed much more freedom.
+
+<!-- maybe an example / visual of the IOB format? -->
 
 Nowadays, we see NER datasets in all shapes and sizes: some involve long
 contiguous spans of tokens, some have entities within entities, and some are
@@ -33,6 +36,17 @@ fragmented and vague. We don't work with clearly-bounded tokens anymore,
 instead, we work with **spans**.
 
 <!-- show example, maybe use displacy? -->
+
+In the paper *Dissecting Span Identification Tasks with Performance Prediction*
+(Papay et al., 2020), various NER datasets were profiled using the following
+characteristics:
+
+- **Span Length**
+- **Span Frequency**
+- **Span Distinctiveness**
+- **Boundary Distinctiveness**
+
+<!-- profile, characterize -->
 
 <!--
 
