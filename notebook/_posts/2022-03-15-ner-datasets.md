@@ -46,13 +46,13 @@ characteristics:
 - **Span Distinctiveness**
 - **Boundary Distinctiveness**
 
-In this blogpost, we'll characterize NER datasets using these metrics.
-We will also perform NER using standard techniques such as CRFs, LSTMs, and
-spaCy's SpanCat and observe how well their performance is affected by these
-characteristics. My goal is similar (or in some way, a reproduction) to Papay
-et al's work: **create a general decision framework to identify which technique
-works best given a particular dataset.**
-
+In this blogpost, we'll characterize NER datasets using these metrics.  We will
+also perform NER using standard techniques such as CRFs, LSTMs, and [spaCy's
+span categorizer (SpanCat)](https://spacy.io/api/spancategorizer)[^1] and
+observe how well their performance is affected by these characteristics. My
+goal is similar (or in some way, a reproduction) to Papay et al's work:
+**create a general decision framework to identify which technique works best
+given a particular dataset.**
 
 
 
@@ -68,3 +68,11 @@ works best given a particular dataset.**
     - A few domain-specific datasets: EBM-NLP
 -->
 
+
+### Footnotes
+
+[^1]:
+    
+    We will be using spaCy's SpanCat instead of its built-in NER because our
+    datasets contain overlapping entities, which the latter isn't made for. For
+    the sake of consistency, I'll be using SpanCat all throughout.
