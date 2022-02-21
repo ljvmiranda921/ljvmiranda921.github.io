@@ -30,7 +30,7 @@ for tagging, but as time passes, their labels have enjoyed much more freedom.
 
 <!-- maybe an example / visual of the IOB format? -->
 
-Nowadays, we see NER datasets in all shapes and sizes: some involve long
+Nowadays, NER datasets come in all shapes and sizes: some involve long
 contiguous spans of tokens, some have entities within entities, and some are
 fragmented and vague. We don't work with clearly-bounded tokens anymore,
 instead, we work with **spans**.
@@ -46,15 +46,14 @@ characteristics:
 - **Span Distinctiveness**
 - **Boundary Distinctiveness**
 
-<!-- profile, characterize -->
+In this blogpost, we'll characterize NER datasets using these metrics.
+We will also perform NER using standard techniques such as CRFs, LSTMs, and
+spaCy's SpanCat and observe how well their performance is affected by these
+characteristics. My goal is similar (or in some way, a reproduction) to Papay
+et al's work: **create a general decision framework to identify which technique
+works best given a particular dataset.**
 
-<!--
 
-Back then it's IOB, quite simple. 
-Now, there's a lot of freedom on how these token groups (or Spans) are defined.
-Some involve contiguous sets of tokens, some have entities within entities, and
-some are implicit and vague.
--->
 
 
 <!--
