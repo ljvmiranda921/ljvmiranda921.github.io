@@ -117,16 +117,15 @@ left: -1px; width: calc(100% + 2px); position: absolute;"> </span> </span> .
 
 In the paper *Dissecting Span Identification Tasks with Performance
 Prediction*, Papay et al., profiled various NER datasets using the following
-characteristics: span length, span frequency, span distinctiveness, and
-boundary distinctiveness.
+characteristics: 
 
-- **Span Length**: describes how long on average a span is in tokens.
-- **Span Frequency**: describes how often a particular span entity occurs in
+1. **Span Length**: describes how long on average a span is in tokens.
+2. **Span Frequency**: describes how often a particular span entity occurs in
     the dataset.
-- **Span Distinctiveness**: describes how distinct the words are inside the
+3. **Span Distinctiveness**: describes how distinct the words are inside the
     spans compared to the corpus. Computed as the KL-divergence of their
     unigram distributions.
-- **Boundary Distinctiveness**: describes how distinct the span boundaries are
+4. **Boundary Distinctiveness**: describes how distinct the span boundaries are
     compared to the rest of the corpus. Computed as the KL-divergence of their
     unigram distributions.
 
@@ -145,7 +144,11 @@ given a particular dataset.**
 
 ## Quick view of our datasets
 
-First off, let's 
+First off, let's look into some common NER datasets and plot their
+characteristics. This should give us some insight on various task profiles
+that exist within NER.
+
+<!-- introduce task profiles -->
 
 
 ## Effect of span length on model performance
