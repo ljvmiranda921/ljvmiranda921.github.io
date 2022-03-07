@@ -23,28 +23,117 @@ excerpt: |
 
 <span class="firstcharacter">N</span>amed-entity recognition (NER) is one of
 the most common tasks in Natural Language Processing (NLP). It involves the
-classification of word tokens into distinct categories. Usually, NER datasets
-follow the classic [IOB
-format](https://en.wikipedia.org/wiki/Inside%E2%80%93outside%E2%80%93beginning_(tagging))
-for tagging, but as time passes, their labels have enjoyed much more freedom.
-
-<!-- maybe an example / visual of the IOB format? -->
+classification of word tokens into distinct categories. Usually, named-entities
+are defined over clear and exact token boundaries, but over time, these
+entities have enjoyed much more flexibility.
 
 Nowadays, NER datasets come in all shapes and sizes: some involve long
 contiguous spans of tokens, some have entities within entities, and some are
 fragmented and vague. We don't work with clearly-bounded tokens anymore,
 instead, we work with **spans**.
 
-<!-- show example, maybe use displacy? -->
+<div class="spans" style="line-height: 2.5; direction: ltr; text-align:
+center">Welcome to the <span style="font-weight: bold; display: inline-block;
+position: relative;"> Bank<span style="background: #7aecec; top: 40px; height:
+4px; left: -1px; width: calc(100% + 2px); position: absolute;"> </span> <span
+style="background: #7aecec; top: 40px; height: 4px; border-top-left-radius:
+3px; border-bottom-left-radius: 3px; left: -1px; width: calc(100% + 2px);
+position: absolute;"> <span style="background: #7aecec; color: #000; top:
+-0.5em; padding: 2px 3px; position: absolute; font-size: 0.6em; font-weight:
+bold; line-height: 1; border-radius: 3px"> ORG </span> </span> </span> <span
+style="font-weight: bold; display: inline-block; position: relative;">of <span
+style="background: #7aecec; top: 40px; height: 4px; left: -1px; width:
+calc(100% + 2px); position: absolute;"></span></span> <span style="font-weight:
+bold; display: inline-block; position:relative;"> China<span style="background:
+#7aecec; top: 40px; height: 4px;left: -1px; width: calc(100% + 2px); position:
+absolute;"> </span><span style="background: #feca74; top: 57px; height: 4px;
+left: -1px; width: calc(100% + 2px); position: absolute;"> </span><span
+style="background: #feca74; top: 57px; height: 4px; border-top-left-radius:
+3px; border-bottom-left-radius: 3px; left: -1px; width: calc(100% + 2px);
+position: absolute;"> <span style="background: #feca74; color: #000; top:
+-0.5em; padding: 2px 3px; position: absolute; font-size: 0.6em; font-weight:
+bold; line-height: 1; border-radius: 3px"> GPE </span> </span></span> . </div>
 
-In the paper *Dissecting Span Identification Tasks with Performance Prediction*
-(Papay et al., 2020), various NER datasets were profiled using the following
-characteristics:
+&nbsp;
 
-- **Span Length**
-- **Span Frequency**
-- **Span Distinctiveness**
-- **Boundary Distinctiveness**
+<div class="spans" style="width: 60%; line-height: 2.5; direction: ltr;
+text-align: center; margin: auto;"> <span style="font-weight: bold; display:
+inline-block; position: relative;"> Multivariate <span style="background: #ddd;
+top: 40px; height: 4px; left: -1px; width: calc(100% + 2px); position:
+absolute;"> </span><span style="background: #7aecec; top: 40px; height: 4px;
+border-top-left-radius: 3px; border-bottom-left-radius: 3px; left: -1px; width:
+calc(100% + 2px); position: absolute;"> <span style="background: #7aecec; z-index:
+10; color: #000; top: -0.5em; padding: 2px 3px; position: absolute; font-size:
+0.6em; font-weight: bold; line-height: 1; border-radius: 3px">
+METHOD</span></span> </span> <span style="font-weight: bold; display:
+inline-block; position: relative;"> analysis <span style="background: #7aecec;
+top: 40px; height: 4px; left: -1px; width: calc(100% + 2px); position:
+absolute;"> </span> </span> revealed that <span style="font-weight: bold;
+display: inline-block; position: relative;"> septic <span style="background:
+#feca74; top: 40px; height: 4px; left: -1px; width: calc(100% + 2px); position:
+absolute;"> </span> <span style="background: #feca74; top: 40px; height: 4px;
+border-top-left-radius: 3px; border-bottom-left-radius: 3px; left: -1px; width:
+calc(100% + 2px); position: absolute;"> <span style="background: #feca74; z-index:
+10; color: #000; top: -0.5em; padding: 2px 3px; position: absolute; font-size:
+0.6em; font-weight: bold; line-height: 1; border-radius: 3px"> FACTOR </span>
+</span> </span> <span style="font-weight: bold; display: inline-block;
+position: relative;"> shock <span style="background: #feca74; top: 40px; height:
+4px; left: -1px; width: calc(100% + 2px); position: absolute;"> </span> </span>
+is an independent <span style="font-weight: bold; display: inline-block;
+position: relative;"> risk <span style="background: #feca74; top: 40px; height:
+4px; left: -1px; width: calc(100% + 2px); position: absolute;"> </span> <span
+style="background: #feca74; top: 40px; height: 4px; border-top-left-radius: 3px;
+border-bottom-left-radius: 3px; left: -1px; width: calc(100% + 2px); position:
+absolute;"> <span style="background: #feca74; z-index: 10; color: #000; top:
+-0.5em; padding: 2px 3px; position: absolute; font-size: 0.6em; font-weight:
+bold; line-height: 1; border-radius: 3px"> FACTOR </span> </span> </span> <span
+style="font-weight: bold; display: inline-block; position: relative;"> factor
+<span style="background: #feca74; top: 40px; height: 4px; left: -1px; width:
+calc(100% + 2px); position: absolute;"> </span> </span> <span
+style="font-weight: bold; display: inline-block; position: relative;"> for
+<span style="background: #feca74; top: 40px; height: 4px; left: -1px; width:
+calc(100% + 2px); position: absolute;"> </span> </span> <span
+style="font-weight: bold; display: inline-block; position: relative;"> 30 <span
+style="background: #feca74; top: 40px; height: 4px; left: -1px; width: calc(100% +
+2px); position: absolute;"> </span> <span style="background: #feca74; top: 57px;
+height: 4px; left: -1px; width: calc(100% + 2px); position: absolute;"> </span>
+<span style="background: #ddd; top: 57px; height: 4px; border-top-left-radius:
+3px; border-bottom-left-radius: 3px; left: -1px; width: calc(100% + 2px);
+position: absolute;"> <span style="background: #ddd; z-index: 10; color: #000;
+top: -0.5em; padding: 2px 3px; position: absolute; font-size: 0.6em;
+font-weight: bold; line-height: 1; border-radius: 3px"> EFFECT </span>
+</span></span> <span style="font-weight: bold; display: inline-block; position:
+relative;"> day <span style="background: #feca74; top: 40px; height: 4px; left:
+-1px; width: calc(100% + 2px); position: absolute;"> </span> <span
+style="background: #ddd; top: 57px; height: 4px; left: -1px; width: calc(100% +
+2px); position: absolute;"> </span> </span> <span style="font-weight: bold;
+display: inline-block; position: relative;"> mortality <span style="background:
+#feca74; top: 40px; height: 4px; left: -1px; width: calc(100% + 2px); position:
+absolute;"> </span> <span style="background: #ddd; top: 57px; height: 4px;
+left: -1px; width: calc(100% + 2px); position: absolute;"> </span> </span> .
+</div>
+
+&nbsp;
+
+In the paper *Dissecting Span Identification Tasks with Performance
+Prediction*, Papay et al., profiled various NER datasets using the following
+characteristics: span length, span frequency, span distinctiveness, and
+boundary distinctiveness.
+
+- **Span Length**: describes how long on average a span is in tokens.
+- **Span Frequency**: describes how often a particular span entity occurs in
+    the dataset.
+- **Span Distinctiveness**: describes how distinct the words are inside the
+    spans compared to the corpus. Computed as the KL-divergence of their
+    unigram distributions.
+- **Boundary Distinctiveness**: describes how distinct the span boundaries are
+    compared to the rest of the corpus. Computed as the KL-divergence of their
+    unigram distributions.
+
+Personally, I like this approach because it gives [a data-centric
+view](/notebook/2021/07/30/data-centric-ml/) of your problem: investigate the
+characteristics of your data first before jumping head-on to building models.
+It's much more realistic and grounded.
 
 In this blogpost, we'll characterize NER datasets using these metrics.  We will
 also perform NER using standard techniques such as CRFs, LSTMs, and [spaCy's
@@ -53,6 +142,19 @@ observe how well their performance is affected by these characteristics. My
 goal is similar (or in some way, a reproduction) to Papay et al's work:
 **create a general decision framework to identify which technique works best
 given a particular dataset.**
+
+## Quick view of our datasets
+
+First off, let's 
+
+
+## Effect of span length on model performance
+
+
+## Effect of span and boundary distintiveness on model performance
+
+
+
 
 
 
