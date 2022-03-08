@@ -122,17 +122,17 @@ characteristics:
 1. **Span Length**: describes how long on average a span is in tokens.
 2. **Span Frequency**: describes how often a particular span entity occurs in
     the dataset.
-3. **Span Distinctiveness**: describes how distinct the words are inside the
+3. **Span Distinctiveness (SD)**: describes how distinct the words are inside the
     spans compared to the corpus. Computed as the KL-divergence of their
     unigram distributions.
-4. **Boundary Distinctiveness**: describes how distinct the span boundaries are
+4. **Boundary Distinctiveness (BD)**: describes how distinct the span boundaries are
     compared to the rest of the corpus. Computed as the KL-divergence of their
     unigram distributions.
 
 Personally, I like this approach because it gives [a data-centric
 view](/notebook/2021/07/30/data-centric-ml/) of your problem: investigate the
-characteristics of your data first before jumping head-on to building models.
-It's much more realistic and grounded.
+characteristics of your data first before jumping head-on to build
+models&mdash;it's much more realistic and grounded.
 
 In this blogpost, we'll characterize NER datasets using these metrics.  We will
 also perform NER using standard techniques such as CRFs, LSTMs, and [spaCy's
@@ -147,6 +147,17 @@ given a particular dataset.**
 First off, let's look into some common NER datasets and plot their
 characteristics. This should give us some insight on various task profiles
 that exist within NER.
+
+| Dataset   |   Length |   Frequency |   SD |   BD |
+|:----------|---------:|------------:|-----:|-----:|
+| RiQUA (<a href="#papay2020riqua">Papay and Pado</a>, 2020)|     7.03 |        4026 | 1.65 | 1.16 |
+| PARC 3.0 (<a href="#pareti2016parc">Pareti</a>, 2016) |     7.89 |       16840 | 1.34 | 1.43 |
+| ConLL'00 (<a href="#sang2000conll00">Tjong Kim Sang and Bucholz</a>, 2000)  |     1.55 |       37168 | 1.27 | 0.44 |
+| ConLL'03 (<a href="#sang2003conll03">Tjong Kim Sang and Meulder</a>, 2003)  |     1.34 |        5874 | 2.79 | 1.06 |
+| OntoNotes (<a href="#pradhan2013ontonotes">Pradhan, Moschitti, et al</a>, 2013) |     1.62 |       16861 | 3.35 | 1    |
+| EBM-NLP (<a href="#nye2018ebm">Nye, Li, et al</a>, 2018)  |     3.65 |       21788 | 0.71 | 0.59 |
+
+
 
 <!-- introduce task profiles -->
 
@@ -172,6 +183,17 @@ that exist within NER.
     - Nested NER: ACE2004, ACE2005, GENIA
     - A few domain-specific datasets: EBM-NLP
 -->
+
+### References
+
+
+* <a id="sang2000conll00">Erik F. Tjong Kim Sang and Sabine Buchholz</a>. 2000. Introduction to the CoNLL-2000 Shared Task Chunking. In *Fourth Conference on Computational Natural Language Learning and the Second Learning Language in Logic Workshop.*
+* <a id="sang2003conll03">Erik F. Tjong Kim Sang and Fien De Meulder</a>. 2003. Introduction to the CoNLL-2003 Shared Task: Language-Independent Named Entity Recognition. In *Proceedings of the Seventh Conference on Natural Language Learning at HLT-NAACL* 2003, pages 142–147.
+* <a id="papay2020riqua">Sean Papay and Sebastian Padó</a>. 2020. RiQuA: A Corpus of Rich Quotation Annotation for English Literary Text. In *Proceedings of the 12th Language Resources and Evaluation Conference*, pages 835–841, Marseille, France. European Language Resources Association.
+* <a id="pareti2016parc">Silvia Pareti</a>. 2016. PARC 3.0: A Corpus of Attribution Relations. In *Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC'16)*, pages 3914–3920, Portorož, Slovenia. European Language Resources Association (ELRA).
+* <a id="pradhan2013ontonotes">Sameer Pradhan, Alessandro Moschitti, Nianwen Xue, Hwee Tou Ng, Anders Björkelund, Olga Uryupina, Yuchen Zhang, and Zhi Zhong</a>. 2013. Towards Robust Linguistic Analysis using OntoNotes. In *Proceedings of the Seventeenth Conference on Computational Natural Language Learning*, pages 143–152, Sofia, Bulgaria. Association for Computational Linguistics.
+* <a id="nye2018ebm">Benjamin Nye, Junyi Jessy Li, Roma Patel, Yinfei Yang, Iain Marshall, Ani Nenkova, and Byron Wallace</a>. 2018. A Corpus with Multi-Level Annotations of Patients, Interventions and Outcomes to Support Language Processing for Medical Literature. In *Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 197–207, Melbourne, Australia. Association for Computational Linguistics.
+
 
 
 ### Footnotes
