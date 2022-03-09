@@ -154,12 +154,29 @@ that exist within NER.
 | PARC 3.0 (<a href="#pareti2016parc">Pareti</a>, 2016) |     7.89 |       16840 | 1.34 | 1.43 |
 | ConLL'00 (<a href="#sang2000conll00">Tjong Kim Sang and Bucholz</a>, 2000)  |     1.55 |       37168 | 1.27 | 0.44 |
 | ConLL'03 (<a href="#sang2003conll03">Tjong Kim Sang and Meulder</a>, 2003)  |     1.34 |        5874 | 2.79 | 1.06 |
-| OntoNotes (<a href="#pradhan2013ontonotes">Pradhan, Moschitti, et al</a>, 2013) |     1.62 |       16861 | 3.35 | 1    |
+| OntoNotes (<a href="#pradhan2013ontonotes">Pradhan, Moschitti, et al</a>, 2013) |     1.62 |       16861 | 3.35 | 1.00    |
 | EBM-NLP (<a href="#nye2018ebm">Nye, Li, et al</a>, 2018)  |     3.65 |       21788 | 0.71 | 0.59 |
 
+One of the more straightforward things we can do is plot a dataset's span
+length versus its span frequency. The former measures the average length (in
+tokens) of the span entities, while the latter describes how often a span
+entity is present in a dataset. 
 
 
-<!-- introduce task profiles -->
+<!-- show graph of length vs. frequency -->
+
+From here, we can see the some datasets tend to have longer spans, while others
+make up for it with frequency. This makes sense because PARC and RiQUA are
+about quotations whereas ConLL and OntoNotes are about noun chunks.
+
+
+However, I'm particularly interested with the span and boundary
+distrinctiveness metrics. They provide a perspective on how "unique" the tokens
+are within and around the spans. My hypothesis is that **the more distinct the
+span and boundary tokens are, the easier they are to be classified**. Let's now
+look into how these characteristics relate to one another:
+
+<!-- show graph of span and boundary distinctiveness -->
 
 
 ## Effect of span length on model performance
@@ -167,6 +184,15 @@ that exist within NER.
 
 ## Effect of span and boundary distintiveness on model performance
 
+
+## Improving our metrics
+
+### Adding a boundary window
+
+
+### Using character n-grams
+
+### Model-specific distances
 
 
 
