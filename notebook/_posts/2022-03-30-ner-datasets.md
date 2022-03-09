@@ -218,7 +218,13 @@ look into how these characteristics relate to one another:
 
 Sure, it's not *that* scientific to infer from a small number of datapoints, but
 indulge me for a second&mdash; perhaps...we can draw clusters out of these
-graphs to represent various NER task profiles? 
+graphs to represent various NER task profiles? Take the SD vs. BD graph for
+example: 
+
+![](/assets/png/spans/annotated.png){:width="640px"}  
+**Figure:** *Indulge me for a bit*&mdash;What if we can group our datasets into
+separate task profiles, and write up a viable strategy to solve each?
+{: style="text-align: center;"}
 
 
 ...And **if we can understand how each task profile behaves when exposed to
