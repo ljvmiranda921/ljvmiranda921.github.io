@@ -20,6 +20,9 @@ excerpt: |
     datasets, and examine how its form affects its difficulty.
 ---
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
 
 <span class="firstcharacter">N</span>amed-entity recognition (NER) is one of
 the most common tasks in Natural Language Processing (NLP). It involves the
@@ -165,10 +168,9 @@ entity is present in a dataset.
 
 <!-- show graph of length vs. frequency -->
 
-From here, we can see the some datasets tend to have longer spans, while others
+From here, we can see that some datasets tend to have longer spans, while others
 make up for it with frequency. This makes sense because PARC and RiQUA are
 about quotations whereas ConLL and OntoNotes are about noun chunks.
-
 
 However, I'm particularly interested with the span and boundary
 distrinctiveness metrics. They provide a perspective on how "unique" the tokens
@@ -176,7 +178,25 @@ are within and around the spans. My hypothesis is that **the more distinct the
 span and boundary tokens are, the easier they are to be classified**. Let's now
 look into how these characteristics relate to one another:
 
-<!-- show graph of span and boundary distinctiveness -->
+<div id="vis" style="justify-content: center; display: flex;"></div>
+<script>
+(function(vegaEmbed) {
+    var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}, "background": "#FFFFF8", "mark": {"color": "#A00000"}}, "data": {"name": "data-7a767b52ab927aa8f448c7d669f2b3c2"}, "mark": {"type": "circle", "size": 180}, "encoding": {"tooltip": [{"field": "dataset", "type": "nominal"}, {"field": "length", "type": "quantitative"}, {"field": "frequency", "type": "quantitative"}, {"field": "sd", "type": "quantitative"}, {"field": "bd", "type": "quantitative"}], "x": {"axis": {"title": "Span Distinctiveness (SD)", "titleFontSize": 12}, "field": "sd", "type": "quantitative"}, "y": {"axis": {"title": "Boundary Distinctiveness (BD)", "titleFontSize": 12}, "field": "bd", "type": "quantitative"}}, "selection": {"selector020": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-7a767b52ab927aa8f448c7d669f2b3c2": [{"dataset": "riqua", "length": 7.03, "frequency": 4026, "sd": 1.65, "bd": 1.16}, {"dataset": "parc", "length": 7.89, "frequency": 16840, "sd": 1.34, "bd": 1.43}, {"dataset": "conll00", "length": 1.55, "frequency": 37168, "sd": 1.27, "bd": 0.44}, {"dataset": "conll03", "length": 1.34, "frequency": 5874, "sd": 2.79, "bd": 1.06}, {"dataset": "ontonotes", "length": 1.62, "frequency": 16861, "sd": 3.35, "bd": 1.0}, {"dataset": "ebmnlp", "length": 3.65, "frequency": 21788, "sd": 0.71, "bd": 0.59}]}};
+    var embedOpt = {"mode": "vega-lite"};
+
+    function showError(el, error){
+        el.innerHTML = ('<div class="error" style="color:red;">'
+                        + '<p>JavaScript Error: ' + error.message + '</p>'
+                        + "<p>This usually means there's a typo in your chart specification. "
+                        + "See the javascript console for the full traceback.</p>"
+                        + '</div>');
+        throw error;
+    }
+    const el = document.getElementById('vis');
+    vegaEmbed("#vis", spec, embedOpt)
+    .catch(error => showError(el, error));
+})(vegaEmbed);
+</script>
 
 
 ## Effect of span length on model performance
