@@ -218,14 +218,14 @@ look into how these characteristics relate to one another:
 
 Sure, it's not *that* scientific to infer from a small number of datapoints, but
 indulge me for a second&mdash; perhaps...we can draw clusters out of these
-graphs to represent various NER task profiles? And **if we can understand how each
-task profile behave when exposed to different models, then we can construct a guide 
-on which model to use on which dataset.**
+graphs to represent various NER task profiles? 
 
 
-In practice, this would be useful to know beforehand which model works best on a
-given dataset: if I know that my dataset is similar to task profile X, then I
-should use models A or B.
+...And **if we can understand how each task profile behaves when exposed to
+different models, then we can construct a guide on which model to use on which
+dataset.** In practice, this would be useful to know beforehand which model
+works best on a given dataset: if I know that my dataset is similar to task
+profile X, then I should use models A or B.
 
 
 ## Effect of span length on model performance
