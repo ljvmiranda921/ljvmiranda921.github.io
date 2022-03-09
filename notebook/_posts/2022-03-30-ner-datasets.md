@@ -230,14 +230,16 @@ separate task profiles, and write up a viable strategy to solve each?
 ...And **if we can understand how each task profile behaves when exposed to
 different models, then we can construct a guide on which model to use on which
 dataset.** In practice, this would be useful to know beforehand which model
-works best on a given dataset: if I know that my dataset is similar to task
-profile X, then I should use models A or B.
+works best on a given dataset: "if I know that my dataset is similar to task
+profile X, then I should use models A or B."
 
 
-## Effect of span length on model performance
+## Effect of various span characteristics on model performance
+
+### Effect of span length on model performance
 
 
-## Effect of span and boundary distintiveness on model performance
+### Effect of span and boundary distintiveness on model performance
 
 
 ## Improving our metrics
