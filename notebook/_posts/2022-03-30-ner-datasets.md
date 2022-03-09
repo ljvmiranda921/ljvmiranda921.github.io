@@ -165,23 +165,10 @@ length versus its span frequency. The former measures the average length (in
 tokens) of the span entities, while the latter describes how often a span
 entity is present in a dataset. 
 
-
-<!-- show graph of length vs. frequency -->
-
-From here, we can see that some datasets tend to have longer spans, while others
-make up for it with frequency. This makes sense because PARC and RiQUA are
-about quotations whereas ConLL and OntoNotes are about noun chunks.
-
-However, I'm particularly interested with the span and boundary
-distrinctiveness metrics. They provide a perspective on how "unique" the tokens
-are within and around the spans. My hypothesis is that **the more distinct the
-span and boundary tokens are, the easier they are to be classified**. Let's now
-look into how these characteristics relate to one another:
-
 <div id="vis" style="justify-content: center; display: flex;"></div>
 <script>
 (function(vegaEmbed) {
-    var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}, "background": "#FFFFF8", "mark": {"color": "#A00000"}}, "data": {"name": "data-7a767b52ab927aa8f448c7d669f2b3c2"}, "mark": {"type": "circle", "size": 180}, "encoding": {"tooltip": [{"field": "dataset", "type": "nominal"}, {"field": "length", "type": "quantitative"}, {"field": "frequency", "type": "quantitative"}, {"field": "sd", "type": "quantitative"}, {"field": "bd", "type": "quantitative"}], "x": {"axis": {"title": "Span Distinctiveness (SD)", "titleFontSize": 12}, "field": "sd", "type": "quantitative"}, "y": {"axis": {"title": "Boundary Distinctiveness (BD)", "titleFontSize": 12}, "field": "bd", "type": "quantitative"}}, "selection": {"selector020": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-7a767b52ab927aa8f448c7d669f2b3c2": [{"dataset": "riqua", "length": 7.03, "frequency": 4026, "sd": 1.65, "bd": 1.16}, {"dataset": "parc", "length": 7.89, "frequency": 16840, "sd": 1.34, "bd": 1.43}, {"dataset": "conll00", "length": 1.55, "frequency": 37168, "sd": 1.27, "bd": 0.44}, {"dataset": "conll03", "length": 1.34, "frequency": 5874, "sd": 2.79, "bd": 1.06}, {"dataset": "ontonotes", "length": 1.62, "frequency": 16861, "sd": 3.35, "bd": 1.0}, {"dataset": "ebmnlp", "length": 3.65, "frequency": 21788, "sd": 0.71, "bd": 0.59}]}};
+    var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}, "background": "#FFFFF8", "mark": {"color": "#A00000"}}, "data": {"name": "data-7a767b52ab927aa8f448c7d669f2b3c2"}, "mark": {"type": "circle", "size": 180}, "encoding": {"tooltip": [{"field": "dataset", "type": "nominal"}, {"field": "length", "type": "quantitative"}, {"field": "frequency", "type": "quantitative"}, {"field": "sd", "type": "quantitative"}, {"field": "bd", "type": "quantitative"}], "x": {"axis": {"title": "Span Length", "titleFontSize": 12}, "field": "length", "type": "quantitative"}, "y": {"axis": {"title": "Span Frequency", "titleFontSize": 12}, "field": "frequency", "type": "quantitative"}}, "selection": {"selector022": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-7a767b52ab927aa8f448c7d669f2b3c2": [{"dataset": "riqua", "length": 7.03, "frequency": 4026, "sd": 1.65, "bd": 1.16}, {"dataset": "parc", "length": 7.89, "frequency": 16840, "sd": 1.34, "bd": 1.43}, {"dataset": "conll00", "length": 1.55, "frequency": 37168, "sd": 1.27, "bd": 0.44}, {"dataset": "conll03", "length": 1.34, "frequency": 5874, "sd": 2.79, "bd": 1.06}, {"dataset": "ontonotes", "length": 1.62, "frequency": 16861, "sd": 3.35, "bd": 1.0}, {"dataset": "ebmnlp", "length": 3.65, "frequency": 21788, "sd": 0.71, "bd": 0.59}]}};
     var embedOpt = {"mode": "vega-lite"};
 
     function showError(el, error){
@@ -197,6 +184,40 @@ look into how these characteristics relate to one another:
     .catch(error => showError(el, error));
 })(vegaEmbed);
 </script>
+
+
+From here, we can see that some datasets tend to have longer spans, while others
+make up for it with frequency. This makes sense because PARC and RiQUA are
+about quotations whereas ConLL and OntoNotes are about noun chunks.
+
+However, I'm particularly interested with the span and boundary
+distrinctiveness metrics. They provide a perspective on how "unique" the tokens
+are within and around the spans. My hypothesis is that **the more distinct the
+span and boundary tokens are, the easier they are to be classified**. Let's now
+look into how these characteristics relate to one another:
+
+<div id="vis2" style="justify-content: center; display: flex;"></div>
+<script>
+(function(vegaEmbed) {
+    var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}, "background": "#FFFFF8", "mark": {"color": "#A00000"}}, "data": {"name": "data-7a767b52ab927aa8f448c7d669f2b3c2"}, "mark": {"type": "circle", "size": 180}, "encoding": {"tooltip": [{"field": "dataset", "type": "nominal"}, {"field": "length", "type": "quantitative"}, {"field": "frequency", "type": "quantitative"}, {"field": "sd", "type": "quantitative"}, {"field": "bd", "type": "quantitative"}], "x": {"axis": {"title": "Span Distinctiveness (SD)", "titleFontSize": 12}, "field": "sd", "type": "quantitative"}, "y": {"axis": {"title": "Boundary Distinctiveness (BD)", "titleFontSize": 12}, "field": "bd", "type": "quantitative"}}, "selection": {"selector020": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-7a767b52ab927aa8f448c7d669f2b3c2": [{"dataset": "riqua", "length": 7.03, "frequency": 4026, "sd": 1.65, "bd": 1.16}, {"dataset": "parc", "length": 7.89, "frequency": 16840, "sd": 1.34, "bd": 1.43}, {"dataset": "conll00", "length": 1.55, "frequency": 37168, "sd": 1.27, "bd": 0.44}, {"dataset": "conll03", "length": 1.34, "frequency": 5874, "sd": 2.79, "bd": 1.06}, {"dataset": "ontonotes", "length": 1.62, "frequency": 16861, "sd": 3.35, "bd": 1.0}, {"dataset": "ebmnlp", "length": 3.65, "frequency": 21788, "sd": 0.71, "bd": 0.59}]}};
+    var embedOpt = {"mode": "vega-lite"};
+
+    function showError(el, error){
+        el.innerHTML = ('<div class="error" style="color:red;">'
+                        + '<p>JavaScript Error: ' + error.message + '</p>'
+                        + "<p>This usually means there's a typo in your chart specification. "
+                        + "See the javascript console for the full traceback.</p>"
+                        + '</div>');
+        throw error;
+    }
+    const el = document.getElementById('vis2');
+    vegaEmbed("#vis2", spec, embedOpt)
+    .catch(error => showError(el, error));
+})(vegaEmbed);
+</script>
+
+Sure, it's not *that* scientific to infer from a small number of datapoints, but indulge me for a second&mdash; perhaps...we can draw
+clusters out of these graphs to represent various NER task profiles?
 
 
 ## Effect of span length on model performance
