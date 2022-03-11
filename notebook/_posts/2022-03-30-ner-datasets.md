@@ -236,6 +236,17 @@ profile X, then I should use models A or B."
 
 ## Effect of various span characteristics on model performance
 
+In this section, we'll test different NLP approaches for named-entity recognition. 
+I'll be following Papay et al's work a bit and use the following models:
+- A **baseline** token-level classifier. Each token is labeled using a softmax
+  classifier without access to any sequence information.
+- A linear-chain **conditional random field (CRF)** to predict token-level sequences.
+- A **long short-term memory network (LSTM)**, also coupled with a CRF layer, to
+  combine sequential and label information.
+- A span categorizer from spaCy, which performs **multi-label classification**
+  per span given a set of candidates.
+
+
 ### Effect of span length on model performance
 
 
