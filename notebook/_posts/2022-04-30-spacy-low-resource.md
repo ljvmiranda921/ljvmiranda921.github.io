@@ -20,21 +20,18 @@ excerpt: |
     How do we solve this? Read on to find out more.
 ---
 
-<span class="firstcharacter">R</span>emember your high school's grammar lesson
-on subject-verb agreement? Wait 'til you see him now! **Dependency parsing** is
-one of the most crucial tasks in natural language processing. It allows us to
-formally understand the structure and meaning of a sentence based on the
-relationship of its words. 
-
-In this blogpost, I'll talk about how we can train and evaluate a parser for a
-low-resource language like Tagalog, my native language. 
+<span class="firstcharacter">D</span>ependency parsing is one of the most
+crucial tasks in natural language processing. It allows us to formally
+understand the structure and meaning of a sentence based on the relationship of
+its words. In this blogpost, I'll talk about how we can train and evaluate a
+parser for a low-resource language like Tagalog, my native language. 
 
 Parsing a sentence requires us to identify its **head** and **dependents**. The
 head is usually the most important word, while the dependents exist just to
 modify it. Take this for example:
 
 <!-- example sentence: displaCy -->
-<!-- expound further -->
+<!-- expound further: in bullet points -->
 
 
 You can do a lot of things with this information. For example, you can use the
@@ -54,6 +51,34 @@ largest inventories is the [Universal Dependencies
 have the same amount of labeled information.** Low-resource languages (LRL)
 often get the shorter end of the stick in terms of data availability and
 volume.
+
+For Tagalog, you only have two choices for treebanks:
+[TRG](https://universaldependencies.org/treebanks/tl_trg/index.html)[^1] and
+[Ugnayan](https://universaldependencies.org/treebanks/tl_ugnayan/index.html).
+The former contains 128 sentences and 734 tokens, while the latter has 94
+sentences and 1011 tokens. It's not much especially when you compare them to
+some English treebanks like
+[Atis](https://github.com/UniversalDependencies/UD_English-Atis/blob/master/README.md)
+or [ESL](https://universaldependencies.org/treebanks/en_esl/index.html), with
+almost 50x the amount of tokens than us.[^2]
+
+<!-- table for ugnayan and trg: tokens, label types?, source -->
+
+
+<!-- chart for the number of tokens? some data viz stuff? -->
+
+
+This then begs the question: **how can we reliably train and evaluate a model
+from a low-resource language?** 
+
+
+<!-- training is straightforward, and as it turns out, you can do a lot with
+small data -->
+
+
+<!-- evaluation, we do a (1) mono lingual and (2) cross lingual approach-->
+
+
 
 
 
@@ -80,3 +105,16 @@ volume.
 
 
 
+[^1]:
+
+    This treebank got its name from *Tagalog Reference Grammar* (TRG) by
+    Schachter and Otanes. Most of the texts in the TRG treebank were lifted
+    from this source.
+
+[^2]:
+
+
+    And we're just talking about Universal Dependencies treebanks for English.
+    In the Linguistic Data Consortium inventory, you have the [Penn
+    treebank](https://catalog.ldc.upenn.edu/LDC99T42) and  OntoNotes with
+    almost more than a million words each!
