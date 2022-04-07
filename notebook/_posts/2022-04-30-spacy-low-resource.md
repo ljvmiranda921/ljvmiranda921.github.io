@@ -20,7 +20,7 @@ excerpt: |
     How do we solve this? Read on to find out more.
 ---
 
-<span class="firstcharacter">D</span>ependency parsing is one of the most
+<span class="firstcharacter">D</span>**ependency parsing** is one of the most
 crucial tasks in natural language processing. It allows us to formally
 understand the structure and meaning of a sentence based on the relationship of
 its words. In this blogpost, I'll talk about how we can train and evaluate a
