@@ -68,10 +68,23 @@ almost 50x the amount of tokens than us.[^2]
 <!-- chart for the number of tokens? some data viz stuff? -->
 
 
-This then begs the question: **how can we reliably train and evaluate a model
-from a low-resource language?**
-- For training, 
-- For evaluation,
+This then begs the question: *how can we reliably train and evaluate a model
+from a low-resource language?*
+- For **training**, it seems that it's possible to train a parser and get decent
+accuracy with just about 100 sentences, so we'll stick with the treebanks that
+we have. We will use spaCy's default training configuration which you can find
+in [this
+repository](https://github.com/ljvmiranda921/ud-tagalog-spacy/blob/master/configs/default.cfg).
+- For **evaluation**, we'll perform both monolingual and cross-lingual checks for
+our data. The first entails a simple 10-fold cross-validation
+for our model (as recommended by the UD guide), while the latter involves a
+pseudo-transfer learning approach where we train a parser from a larger
+language model with the Tagalog treebank as our test set.
+
+My overall goal is to demonstrate that it's possible to create a decent Tagalog
+dependency parser with the amount of data that we had, and highlight the gaps
+that keep us from achieving the same level of information density as other
+languages.
 
 
 ### Training a dependency parser using spaCy
