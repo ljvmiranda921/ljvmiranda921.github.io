@@ -69,14 +69,28 @@ almost 50x the amount of tokens than us.[^2]
 
 
 This then begs the question: **how can we reliably train and evaluate a model
-from a low-resource language?** 
+from a low-resource language?**
+- For training, 
+- For evaluation,
+
+
+### Training a dependency parser using spaCy
 
 
 <!-- training is straightforward, and as it turns out, you can do a lot with
 small data -->
+<!-- show a few dependency parser results? where does it perform well?
+does it do well on tweets? How about tagalog speeches? -->
 
+
+### Performing mono-lingual and cross-lingual evaluation
 
 <!-- evaluation, we do a (1) mono lingual and (2) cross lingual approach-->
+
+
+## What can be done next?
+
+
 
 
 
