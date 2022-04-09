@@ -63,9 +63,7 @@ or [ESL](https://universaldependencies.org/treebanks/en_esl/index.html), with
 almost 50x the amount of tokens than us.[^2]
 
 <!-- table for ugnayan and trg: tokens, label types?, source -->
-
-
-<!-- chart for the number of tokens? some data viz stuff? -->
+<!-- chart for the number of tokens per language? some data viz stuff? -->
 
 
 This then begs the question: *how can we reliably train and evaluate a model
