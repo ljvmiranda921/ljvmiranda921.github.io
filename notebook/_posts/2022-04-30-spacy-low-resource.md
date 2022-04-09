@@ -104,6 +104,7 @@ does it do well on tweets? How about tagalog speeches? -->
 ### Performing mono-lingual and cross-lingual evaluation
 
 <!-- evaluation, we do a (1) mono lingual and (2) cross lingual approach-->
+<!-- a few examples: where it works well and where it doesn't work well -->
 
 
 ## What can be done next?
@@ -118,21 +119,6 @@ does it do well on tweets? How about tagalog speeches? -->
 
 
 
-
-
-<!-- what is dependency parsing and why is it important? -->
-
-<!-- the challenge with low-resource languages. segue: you need data to do it-->
-
-<!-- a quick RRL -->
-
-<!-- how to train one in spaCy -->
-
-<!-- how to evaluate one in spaCy -->
-
-<!-- demo stuff? -->
-
-<!-- what can we do to improve the situation? -->
 
 
 
