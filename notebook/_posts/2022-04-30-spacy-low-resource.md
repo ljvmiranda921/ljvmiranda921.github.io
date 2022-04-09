@@ -98,7 +98,35 @@ languages.
 
 ### Training a dependency parser using spaCy
 
-Treebanks follow a specific format:
+A Universal Dependencies (UD) treebank follows a specific format. For each sentence,
+you'd usually find something like this:
+
+```
+# sent_id = schachter-otanes-60-0
+# text = Gumising ang bata.
+# text_en = The child awoke.
+1	Gumising	gising	VERB	_	Aspect=Perf|Mood=Ind|Voice=Act	0	root	_	Gloss=awakened
+2	ang	ang	ADP	_	Case=Nom	3	case	_	Gloss=the
+3	bata	bata	NOUN	_	_	1	nsubj	_	Gloss=child|SpaceAfter=No
+4	.	.	PUNCT	_	_	1	punct	_	_
+```
+
+- In the first few lines, you'll get some metadata such as the unique sentence ID,
+    the full text, and its english translation.
+- In the next few lines, you'll see linguistic annotations per [token](https://universaldependencies.org/u/overview/tokenization.html) (e.g.,
+    "Gumising", "ang", etc.). For each token, you'd usually be provided by its
+    [lemmatization](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html)
+    (base form), [part-of-speech (POS)
+    tag](https://universaldependencies.org/u/pos/index.html), [lexical
+    features](https://universaldependencies.org/u/overview/morphology.html#lexical-features),
+    and other [morphological
+    information](https://universaldependencies.org/u/overview/morphology.html).
+    
+
+
+With spaCy, we can easily parse this format into something that can be
+programmatically manipulated.
+
 
 
 <!-- training is straightforward, and as it turns out, you can do a lot with
