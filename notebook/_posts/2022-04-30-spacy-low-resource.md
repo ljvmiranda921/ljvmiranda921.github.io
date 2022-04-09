@@ -111,9 +111,9 @@ you'd usually find something like this:
 4	.	.	PUNCT	_	_	1	punct	_	_
 ```
 
-- In the first few lines, you'll get some metadata such as the unique sentence ID,
-    the full text, and its english translation.
-- In the next few lines, you'll see linguistic annotations per [token](https://universaldependencies.org/u/overview/tokenization.html) (e.g.,
+- In the first few lines, you'll get some metadata such as a unique sentence ID,
+    the full text, and its English translation.
+- For the numbered lines, you'll see linguistic annotations per [token](https://universaldependencies.org/u/overview/tokenization.html) (e.g.,
     "Gumising", "ang", etc.). For each token, you'd usually be provided by its
     [lemmatization](https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html)
     (base form), [part-of-speech (POS)
@@ -121,11 +121,29 @@ you'd usually find something like this:
     features](https://universaldependencies.org/u/overview/morphology.html#lexical-features),
     and other [morphological
     information](https://universaldependencies.org/u/overview/morphology.html).
-    
 
+These annotations are packaged in a [`.conllu` file
+format](https://universaldependencies.org/format.html) which you can open using
+any text editor. With [spaCy](https://spacy.io/), we can easily parse this into
+a Python object that can be programmatically manipulated:
 
-With spaCy, we can easily parse this format into something that can be
-programmatically manipulated.
+```sh
+python -m spacy convert path/to/annotations.conllu path/to/save/ \
+    --converter conllu
+    --n-sents 1
+    --merge-subtokens
+```
+
+You might notice that for the Tagalog annotations, we only have a test set,
+i.e., the files were named as `tl_trg-ud-test` and `tl_ugnayan-ud-test`. This
+is the [recommended
+split](https://universaldependencies.org/release_checklist.html#data-split) by
+the Universal Dependencies project, and is a common scenario for low-resource
+languages.
+
+There are many frameworks for training a dependency parser,[^3] but we'll use
+spaCy (not because I'm biased) to do that job.[^4]
+
 
 
 
@@ -170,8 +188,25 @@ does it do well on tweets? How about tagalog speeches? -->
 
 [^2]:
 
-
     And we're just talking about Universal Dependencies treebanks for English.
     In the Linguistic Data Consortium inventory, you have the [Penn
     treebank](https://catalog.ldc.upenn.edu/LDC99T42) and  OntoNotes with
     almost more than a million words each!
+
+[^3]:
+
+    Other toolkits for dependency parsing include
+    [UDPipe](https://cran.r-project.org/web/packages/udpipe/index.html) (which
+    in my research is only available to R), and Stanford
+    [Stanza](https://stanfordnlp.github.io/stanza/)'s [`depparse`
+    pipeline](https://stanfordnlp.github.io/stanza/depparse.html). 
+
+[^4]:
+
+    Okay, aside from the fact that I'm working on spaCy, I can objectively say
+    that it's really good (I already love it even before working at
+    [Explosion](https://explosion.ai)).  The [default
+    hyperparameters](https://spacy.io/usage/training) are often good enough
+    with little to no hyperparameter optimization needed. The [project
+    framework](/notebook/2021/11/20/spacy-v3/), on the other hand, is a very
+    convenient way of running NLP projects. Check it out and see for yourself! 
