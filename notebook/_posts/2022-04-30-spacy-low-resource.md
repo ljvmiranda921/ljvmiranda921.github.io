@@ -142,7 +142,10 @@ the Universal Dependencies project, and is a common scenario for low-resource
 languages.
 
 There are many frameworks for training a dependency parser,[^3] but we'll use
-spaCy (not because I'm biased) to do that job.[^4]
+spaCy (not because I'm biased) to do that job. We will be using its [config and
+project system](notebook/2021/11/20/spacy-v3/) to streamline our training.  You
+can find the full project in this [Github
+repository](https://github.com/ljvmiranda921/ud-tagalog-spacy). 
 
 
 
@@ -200,13 +203,3 @@ does it do well on tweets? How about tagalog speeches? -->
     in my research is only available to R), and Stanford
     [Stanza](https://stanfordnlp.github.io/stanza/)'s [`depparse`
     pipeline](https://stanfordnlp.github.io/stanza/depparse.html). 
-
-[^4]:
-
-    Okay, aside from the fact that I'm working on spaCy, I can objectively say
-    that it's really good (I already love it even before working at
-    [Explosion](https://explosion.ai)).  The [default
-    hyperparameters](https://spacy.io/usage/training) are often good enough
-    with little to no hyperparameter optimization needed. The [project
-    framework](/notebook/2021/11/20/spacy-v3/), on the other hand, is a very
-    convenient way of running NLP projects. Check it out and see for yourself! 
