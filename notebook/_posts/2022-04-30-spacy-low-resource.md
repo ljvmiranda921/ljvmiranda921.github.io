@@ -60,22 +60,21 @@ often get the shorter end of the stick in terms of data availability and
 volume.
 
 For Tagalog, you only have two choices for treebanks:
-[TRG](https://universaldependencies.org/treebanks/tl_trg/index.html)[^1] and
-[Ugnayan](https://universaldependencies.org/treebanks/tl_ugnayan/index.html).
-The former contains 128 sentences and 734 tokens, while the latter has 94
-sentences and 1011 tokens. It's not much especially when you compare them to
-some English treebanks like
+[TRG](https://universaldependencies.org/treebanks/tl_trg/index.html)[^1]
+([Schachtner and Otanes, 1983](#schachtner1983trg) and Samson, S., 2020) and
+[Ugnayan](https://universaldependencies.org/treebanks/tl_ugnayan/index.html)
+([Aquino and de Leon, 2020](#aquino2020parsing)).  The former contains 128
+sentences and 734 tokens, while the latter has 94 sentences and 1011 tokens.
+It's not much especially when you compare them to some English treebanks like
 [Atis](https://github.com/UniversalDependencies/UD_English-Atis/blob/master/README.md)
 or [ESL](https://universaldependencies.org/treebanks/en_esl/index.html), with
 almost 50x the amount of tokens than us.[^2]
 
-<!-- table for ugnayan and trg: tokens, label types?, source -->
-<!-- chart for the number of tokens per language? some data viz stuff? -->
 
 | Treebank | Sentences | Tokens | Source                         | Label Information                 |
 |----------|-------------|----------|--------------------------------|-----------------------------------|
-| TRG      | 128         | 734      | Tagalog Reference Grammar      | Lemmas, UPOS, Features, Relations |
-| Ugnayan  | 94          | 1011     | DepEd Learning Resource Portal | Lemmas, UPOS, Relations           |
+| [TRG](https://universaldependencies.org/treebanks/tl_trg/index.html)      | 128         | 734      | Tagalog Reference Grammar      | Lemmas, UPOS, Features, Relations |
+| [Ugnayan](https://universaldependencies.org/treebanks/tl_ugnayan/index.html)  | 94          | 1011     | DepEd Learning Resource Portal | Lemmas, UPOS, Relations           |
 
 
 This then begs the question: *how can we reliably train and evaluate a model
@@ -99,6 +98,8 @@ languages.
 
 ### Training a dependency parser using spaCy
 
+Treebanks follow a specific format:
+
 
 <!-- training is straightforward, and as it turns out, you can do a lot with
 small data -->
@@ -121,7 +122,12 @@ does it do well on tweets? How about tagalog speeches? -->
 
 ### References
 
-
+* <a id="aquino2020parsing">Aquino, A. and de Leon, F.</a> Parsing in the
+    absence of related languages: Evaluating low-resource dependency parsers on
+    Tagalog. In *Proceedings of the Fourth Workshoup on Universal Dependencies
+    (UDW 2020)*, pages 8-15, ACL.
+* <a id="schachtner1983trg">Schachter, P. and Otanes, F.</a>Tagalog Reference
+    Grammar. *University of California Press*, 1983.
 
 
 ### Footnotes
