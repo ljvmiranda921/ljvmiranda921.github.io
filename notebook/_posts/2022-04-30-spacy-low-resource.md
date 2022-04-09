@@ -28,11 +28,19 @@ parser for a low-resource language like Tagalog, my native language.
 
 Parsing a sentence requires us to identify its **head** and **dependents**. The
 head is usually the most important word, while the dependents exist just to
-modify it. Take this for example:
+modify it. Take this sentence, *"That girl is my sister,"* for example:
 
 <!-- example sentence: displaCy -->
-<!-- expound further: in bullet points -->
+![](/assets/png/dep-parsing/dep_example.svg){:width="800px"}
+{:style="text-align: center;"}
 
+- Each arrow represents the dependencies between words and how they're related,
+i.e., X is $RELATION of Y (e.g., `det` for determiner, `poss` for possessive,
+`nsubj` for nominal topic).
+- The most important word in this sentence is `girl`. All other words are
+    optional; they only exist to modify this essential word. I can leave the
+    other bits out and just say "That girl," and it will still refer to the
+    same subject.
 
 You can do a lot of things with this information. For example, you can use the
 dependency tree to hint a named-entity recognition (NER) model where the noun
@@ -40,7 +48,6 @@ phrases are. In sentiment analysis, you can use the head and its modifiers to
 get a good idea of a text's overall polarity. In search, you can use the parsed
 tree to improve the ranking of results. You can always see a dependency parser
 as part of an NLP pipeline or as a main component of an NLP application.
-
 
 ## On treebanks and low-resource languages
 
