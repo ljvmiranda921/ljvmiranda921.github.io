@@ -72,6 +72,11 @@ almost 50x the amount of tokens than us.[^2]
 <!-- table for ugnayan and trg: tokens, label types?, source -->
 <!-- chart for the number of tokens per language? some data viz stuff? -->
 
+| Treebank | Sentences | Tokens | Source                         | Label Information                 |
+|----------|-------------|----------|--------------------------------|-----------------------------------|
+| TRG      | 128         | 734      | Tagalog Reference Grammar      | Lemmas, UPOS, Features, Relations |
+| Ugnayan  | 94          | 1011     | DepEd Learning Resource Portal | Lemmas, UPOS, Relations           |
+
 
 This then begs the question: *how can we reliably train and evaluate a model
 from a low-resource language?*
@@ -114,12 +119,12 @@ does it do well on tweets? How about tagalog speeches? -->
 
 
 
+### References
 
 
 
 
-
-
+### Footnotes
 
 
 
