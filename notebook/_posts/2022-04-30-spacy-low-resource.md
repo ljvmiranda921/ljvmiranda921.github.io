@@ -150,6 +150,7 @@ repository](https://github.com/ljvmiranda921/ud-tagalog-spacy).
 spaCy has an opinionated pipeline for training a dependency parser, and much of
 it hinges from a token-to-vector model composed of an embedding and CNN network. 
 
+
 <!-- show this image: https://spacy.io/models#design-cnn -->
 
 
