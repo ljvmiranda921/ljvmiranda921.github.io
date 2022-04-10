@@ -142,12 +142,15 @@ the Universal Dependencies project, and is a common scenario for low-resource
 languages.
 
 There are many frameworks for training a dependency parser,[^3] but we'll use
-spaCy (not because I'm biased) to do that job. We will be using its [config and
-project system](notebook/2021/11/20/spacy-v3/) to streamline our training.  You
-can find the full project in this [Github
+spaCy to do that job. We will be using its [config and project
+system](notebook/2021/11/20/spacy-v3/) to streamline our training.  You can find
+the full project in this [Github
 repository](https://github.com/ljvmiranda921/ud-tagalog-spacy). 
 
+spaCy has an opinionated pipeline for training a dependency parser, and much of
+it hinges from a token-to-vector model composed of an embedding and CNN network. 
 
+<!-- show this image: https://spacy.io/models#design-cnn -->
 
 
 <!-- training is straightforward, and as it turns out, you can do a lot with
