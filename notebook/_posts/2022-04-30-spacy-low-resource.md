@@ -195,13 +195,13 @@ displacy.render(doc, style="dep")  # https://localhost:5000
 ```
 
 ![](/assets/png/dep-parsing/trg_example_00.svg){:width="800px"}
-*TN*: Have you eaten?
+*(transl.)* Have you eaten?
 {:style="text-align: center;"}
 
 Let's try it out to other sentences outside the training set):
 
 ![](/assets/png/dep-parsing/trg_example_01.svg){:width="800px"}
-*TN*: You don't have to ask me anymore.
+*(transl.)*: You don't have to ask me anymore.
 {:style="text-align: center;"}
 
 It checks out! And note that we're just using a small number of sentences
@@ -210,18 +210,18 @@ and there are a few sentences where our parser doesn't perform well:
 
 ![](/assets/png/dep-parsing/trg_example_02a.svg){:width="800px"}
 ![](/assets/png/dep-parsing/trg_example_02b.svg){:width="800px"}
-*TN*: Look into my eyes, can't you see?
+*(transl.)*: Look into my eyes, can't you see?
 {:style="text-align: center;"}
 
+In this example, words like *mata* (eye/eyes) and *aking* (my) were incorrectly
+tagged. The former is supposed to be a noun while the latter should be a pronoun.
+But it's quite interesting that aside from those two words, our parser is
+already decent enough.
 
-
-<!-- TODO: show a few examples in some sentences -->
-
-Now that we have our models trained for each treebank, let's start evaluating
-them in a (1) mono-lingual and (2) cross-lingual approach. I won't be doing any
-hyperparameter search for now[^4] to show that the defaults are already
-effective enough. 
-
+Of course, we want a better way to evaluate this model instead of trying out
+random sentences.[^4] In the next section, we'll be doing both monolingual and
+cross-lingual evaluation for our two models. This should give us an insight not
+only of our models, but of our treebanks as well.
 
 ### Performing mono-lingual and cross-lingual evaluation
 
@@ -276,9 +276,8 @@ effective enough.
 
 [^4]:
 
-    I might do one in the future (after publishing this blogpost), but the
-    changes will show up in the [Github repository
-    itself](https://github.com/ljvmiranda921/ud-tagalog-spacy). You are welcome
-    to try though, here's a good [spaCy project that integrates Weights and
-    Biases](https://github.com/explosion/projects/tree/v3/integrations/wandb)
-    with spaCy's training workflow.
+    Aside from the first sentence, the last two were song lyrics from a band
+    called [*Eraserheads*](https://en.wikipedia.org/wiki/Eraserheads). The
+    first one came from the song *Huwag mo nang Itanong* (), while the second
+    came from *Alapaap*. I definitely botched the translations so I'm sorry for
+    that!
