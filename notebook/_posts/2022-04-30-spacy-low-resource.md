@@ -143,12 +143,14 @@ languages.
 
 There are many frameworks for training a dependency parser,[^3] but we'll use
 spaCy to do that job. We will be using its [config and project
-system](notebook/2021/11/20/spacy-v3/) to streamline our training.  You can find
-the full project in this [Github
+system](https://spacy.io/usage/training) to streamline our training.  I [personally
+find the config system to be convenient and easy](/notebook/2021/11/20/spacy-v3/), especially for quick projects
+like this.  You can find the full project in [this Github
 repository](https://github.com/ljvmiranda921/ud-tagalog-spacy). 
 
 spaCy has an opinionated pipeline for training a dependency parser, and much of
-it hinges from a token-to-vector model composed of an embedding and CNN network. 
+it hinges from a [token-to-vector model](https://spacy.io/api/tok2vec) composed
+of an embedding and CNN network. 
 
 
 <!-- show this image: https://spacy.io/models#design-cnn -->
