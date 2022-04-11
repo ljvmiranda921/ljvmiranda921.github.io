@@ -178,10 +178,44 @@ Lastly, you should be able to see the trained models in the `/training/${treeban
 directory. You can access this similar to how you access other spaCy models:
 
 ```python
-nlp = spacy.load("/path/to/training/treebank/model-best")
-text = "Kamusta? Kumain ka na ba?"  # How are you? Have you eaten?
+import spacy
+
+nlp = spacy.load("training/UD_Tagalog-TRG/model-best")
+text = "Nakakain ka na ba?"  # TN: Have you eaten?
 doc = nlp(text)
 ```
+
+From this, we can use [displaCy](https://spacy.io/usage/visualizers) to
+visualize the dependencies for a given text:
+
+```python
+from spacy import displacy
+
+displacy.render(doc, style="dep")  # https://localhost:5000
+```
+
+![](/assets/png/dep-parsing/trg_example_00.svg){:width="800px"}
+*TN*: Have you eaten?
+{:style="text-align: center;"}
+
+Let's try it out to other sentences outside the training set):
+
+![](/assets/png/dep-parsing/trg_example_01.svg){:width="800px"}
+*TN*: You don't have to ask me anymore.
+{:style="text-align: center;"}
+
+It checks out! And note that we're just using a small number of sentences
+(almost a hundred) to train this parser. Of course, we're not in candy land,
+and there are a few sentences where our parser doesn't perform well:
+
+![](/assets/png/dep-parsing/trg_example_02a.svg){:width="800px"}
+![](/assets/png/dep-parsing/trg_example_02b.svg){:width="800px"}
+*TN*: Look into my eyes, can't you see?
+{:style="text-align: center;"}
+
+
+
+<!-- TODO: show a few examples in some sentences -->
 
 Now that we have our models trained for each treebank, let's start evaluating
 them in a (1) mono-lingual and (2) cross-lingual approach. I won't be doing any
