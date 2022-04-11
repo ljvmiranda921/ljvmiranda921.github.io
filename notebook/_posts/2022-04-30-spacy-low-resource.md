@@ -80,7 +80,7 @@ almost 50x the amount of tokens than us.[^2]
 This then begs the question: *how can we reliably train and evaluate a model
 from a low-resource language?*
 - For **training**, it seems that it's possible to train a parser and get decent
-accuracy with just about 100 sentences, so we'll stick with the treebanks that
+accuracy with just about 100 sentences ([Nivre, et al, 2017](#nivre2017tutorial)), so we'll stick with the treebanks that
 we have. We will use spaCy's default training configuration which you can find
 in [this
 repository](https://github.com/ljvmiranda921/ud-tagalog-spacy/blob/master/configs/default.cfg).
@@ -141,25 +141,52 @@ split](https://universaldependencies.org/release_checklist.html#data-split) by
 the Universal Dependencies project, and is a common scenario for low-resource
 languages.
 
-There are many frameworks for training a dependency parser,[^3] but we'll use
-spaCy to do that job. We will be using its [config and project
-system](https://spacy.io/usage/training) to streamline our training.  I [personally
-find the config system to be convenient and easy](/notebook/2021/11/20/spacy-v3/), especially for quick projects
-like this.  You can find the full project in [this Github
+> "If you have less than 20k words. Option A: Keep everything as test data.
+Users will > have to do 10-fold cross-validation if they want to train on it."
+([UD: Data Release
+Checklist](https://universaldependencies.org/release_checklist.html#data-split))
+
+There are many frameworks available for training,[^3] but we'll use spaCy to do
+the job. We will be using the [config and project
+system](https://spacy.io/usage/training) because I [personally find it to be
+convenient and easy](/notebook/2021/11/20/spacy-v3/). You can find the full
+project in [this Github
 repository](https://github.com/ljvmiranda921/ud-tagalog-spacy). 
 
 spaCy has an opinionated pipeline for training a dependency parser, and much of
-it hinges from a [token-to-vector model](https://spacy.io/api/tok2vec) composed
-of an embedding and CNN network. 
-
+it hinges from a [token-to-vector model (Tok2Vec)](https://spacy.io/api/tok2vec)
+composed of an embedding and CNN network. The tagger, morphologizer, and parser
+all listen to this Tok2Vec model. It's possible to replace this Tok2Vec model
+with a Transformer-based one, but for the purposes of this blogpost, we'll use
+the default option. If you want to learn more about this listener-pattern, I
+highly recommend looking at the [developer
+docs](https://github.com/explosion/spaCy/blob/master/extra/DEVELOPER_DOCS/Listeners.md).
 
 <!-- show this image: https://spacy.io/models#design-cnn -->
+![](/assets/png/dep-parsing/spacy_pipeline.svg){:width="800px"}
+**Figure**: spaCy pipeline design (Source: spaCy website)
+{:style="text-align: center;"}
 
+If you are using [this spaCy
+project](https://github.com/ljvmiranda921/ud-tagalog-spacy), then you can train
+the parser by running `spacy project run [name]` until the `train` command.
+This trains two dependency parsers for each treebank. You can even see the full
+training configuration [in this
+file](https://github.com/ljvmiranda921/ud-tagalog-spacy/blob/master/configs/default.cfg).
 
-<!-- training is straightforward, and as it turns out, you can do a lot with
-small data -->
-<!-- show a few dependency parser results? where does it perform well?
-does it do well on tweets? How about tagalog speeches? -->
+Lastly, you should be able to see the trained models in the `/training/${treebank}/model-best`
+directory. You can access this similar to how you access other spaCy models:
+
+```python
+nlp = spacy.load("/path/to/training/treebank/model-best")
+text = "Kamusta? Kumain ka na ba?"  # How are you? Have you eaten?
+doc = nlp(text)
+```
+
+Now that we have our models trained for each treebank, let's start evaluating
+them in a (1) mono-lingual and (2) cross-lingual approach. I won't be doing any
+hyperparameter search for now[^4] to show that the defaults are already
+effective enough. 
 
 
 ### Performing mono-lingual and cross-lingual evaluation
@@ -181,6 +208,9 @@ does it do well on tweets? How about tagalog speeches? -->
     absence of related languages: Evaluating low-resource dependency parsers on
     Tagalog. In *Proceedings of the Fourth Workshoup on Universal Dependencies
     (UDW 2020)*, pages 8-15, ACL.
+* <a id="nivre2017tutorial">Nivre, J., Zeman, D., Ginter F., Tyers, F.</a> Tutorial
+    on Universal Dependencies: Adding a new language to UD. Presented at the *15th Conference
+    of the European Chapter of the Association for Computational Linguistics*, 2017.
 * <a id="schachtner1983trg">Schachter, P. and Otanes, F.</a>Tagalog Reference
     Grammar. *University of California Press*, 1983.
 
@@ -209,3 +239,12 @@ does it do well on tweets? How about tagalog speeches? -->
     in my research is only available to R), and Stanford
     [Stanza](https://stanfordnlp.github.io/stanza/)'s [`depparse`
     pipeline](https://stanfordnlp.github.io/stanza/depparse.html). 
+
+[^4]:
+
+    I might do one in the future (after publishing this blogpost), but the
+    changes will show up in the [Github repository
+    itself](https://github.com/ljvmiranda921/ud-tagalog-spacy). You are welcome
+    to try though, here's a good [spaCy project that integrates Weights and
+    Biases](https://github.com/explosion/projects/tree/v3/integrations/wandb)
+    with spaCy's training workflow.
