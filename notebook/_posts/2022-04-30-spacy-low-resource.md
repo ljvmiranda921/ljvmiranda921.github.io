@@ -96,7 +96,7 @@ that keep us from achieving the same level of information density as other
 languages.
 
 
-### Training a dependency parser using spaCy
+## Training a dependency parser using spaCy
 
 A Universal Dependencies (UD) treebank follows a specific format. For each sentence,
 you'd usually find something like this:
@@ -223,7 +223,16 @@ random sentences.[^4] In the next section, we'll be doing both monolingual and
 cross-lingual evaluation for our two models. This should give us an insight not
 only of our models, but of our treebanks as well.
 
-### Performing mono-lingual and cross-lingual evaluation
+## Monolingual and cross-lingual evaluation
+
+To assess our treebanks, we will perform both monolingual and cross-lingual evaluation:
+- **Monolingual evaluation**: we will do 10-fold cross validation for our model
+    then report the average across all metrics. For fun, I'm also going to check how well
+    a model trained from another treebank performs on another (and vice-versa).
+- **Cross-lingual evaluation**: using a certain metric, we will identify five (5) languages
+    that are typologically similar to *Tagalog* and have bigger treebanks. We will train a model
+    for each foreign treebank, and use TRG and Ugnayan as test sets.
+
 
 <!-- evaluation, we do a (1) mono lingual and (2) cross lingual approach-->
 <!-- a few examples: where it works well and where it doesn't work well -->
