@@ -234,6 +234,12 @@ To assess our treebanks, we will perform both monolingual and cross-lingual eval
     for each foreign treebank, and use TRG and Ugnayan as test sets.
 
 
+### Monolingual evaluation
+
+
+### Cross-lingual evaluation
+
+
 <!-- evaluation, we do a (1) mono lingual and (2) cross lingual approach-->
 <!-- a few examples: where it works well and where it doesn't work well -->
 
