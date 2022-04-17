@@ -252,6 +252,16 @@ Ugnayan datasets. In addition, I was also curious as to how each model will
 perform on the other dataset, so I trained a model for one and used the other
 as a test set.
 
+|         | TOKEN_ACC | POS_ACC  | MORPH_ACC | TAG_ACC  | DEP_UAS  | DEP_LAS  |
+|---------|-----------|----------|-----------|----------|----------|----------|
+| Ugnayan | 0.998     | 0.819    | **0.995** | 0.810    | 0.667    | 0.409    |
+| TRG     | **1.000** | **0.843**| 0.749     | **0.833**| **0.846**| **0.554**|
+
+
+|                    | TOKEN_ACC     | POS_ACC     | MORPH_ACC     | TAG_ACC     | DEP_UAS     | DEP_LAS     |
+|--------------------|---------------|-------------|---------------|-------------|-------------|-------------|
+| TRG on Ugnayan     | 0.997         | 0.563       | 0.364         | 0.538       | 0.472       | 0.240       |
+| Ugnayan on TRG     | **1.000**     | **0.789**   | **0.424**     | **0.779**   | **0.793**   | **0.572**   |
 
 <!-- a few discussions and observations? -->
 
