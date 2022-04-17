@@ -233,8 +233,29 @@ To assess our treebanks, we will perform both monolingual and cross-lingual eval
     that are typologically similar to *Tagalog* and have bigger treebanks. We will train a model
     for each foreign treebank, and use TRG and Ugnayan as test sets.
 
+As for our metrics, we'll measure the following:
+- `TOKEN_ACC`: the accuracy of the tokenizer, i.e., how well it can determine the correct tokens of a given text.
+- `POS_ACC`: the accuracy of the token attributes. 
+- **`MORPH_ACC`**: the overall accuracy of our morphologizer based on the [Universal Dependencies FEATS format](https://universaldependencies.org/format.html#morphological-annotation). 
+- **`DEP_UAS / DEP_LAS`**: the accuracy of the dependency parser. The former is the
+    unlabeled attachment score while the latter is called the labeled attachment
+    score ([Nivre and Fang, 2017](#nivre2017universal)).
+
+It pays to measure other attributes of our model even if we're only concerned
+with dependency parsing. I didn't bother that much with NER because I have a
+hunch that it won't perform well given the size of our data. 
 
 ### Monolingual evaluation
+
+In this section, I performed 10-fold cross validation for both the TRG and
+Ugnayan datasets. In addition, I was also curious as to how each model will
+perform on the other dataset, so I trained a model for one and used the other
+as a test set.
+
+
+<!-- a few discussions and observations? -->
+
+
 
 
 ### Cross-lingual evaluation
@@ -262,6 +283,10 @@ To assess our treebanks, we will perform both monolingual and cross-lingual eval
     of the European Chapter of the Association for Computational Linguistics*, 2017.
 * <a id="schachtner1983trg">Schachter, P. and Otanes, F.</a>Tagalog Reference
     Grammar. *University of California Press*, 1983.
+* <a id="nivre2017universal">Nivre, J. and Fang C-T.</a> Universal Dependency
+    Evaluation. In: *Proceedings of the NoDaLiDa 2017 Workshop on Universal
+    Dependencies*, pages 86-95, Gothenburg, Sweden. Association for Computational
+    Linguistics
 
 
 ### Footnotes
