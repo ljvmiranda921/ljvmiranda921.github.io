@@ -257,9 +257,21 @@ as a test set.
 
 
 
-
 ### Cross-lingual evaluation
 
+For cross-lingual evaluation, we need to train a model from a different
+language, and use our *Tagalog* treebanks as its test set. These languages
+should be (1) closer to *Tagalog*, and (2) must have a decent amount of data
+(not low-resource). 
+
+For the former, we'll use a distance metric that identifies languages that are
+typologically similar to *Tagalog* ([Agić, 2017](#agic2017parser)). It's based
+on the Language Identification (LangID) tool of Lui and Baldwin
+([2012](#lui2012langid)), combined with some of the features in the World Atlas
+of Language Structures (WALS) ([Dryer and Haspelmath, 2013](dryer2013wals)).
+Once we have the top 5 typologically similar languages to *Tagalog*, then we'll
+cross-check the Universal Dependencies website to see if it has treebanks with
+both train and dev datasets.
 
 <!-- evaluation, we do a (1) mono lingual and (2) cross lingual approach-->
 <!-- a few examples: where it works well and where it doesn't work well -->
@@ -274,19 +286,30 @@ as a test set.
 
 ### References
 
+* <a id="agic2017parser">Željko, A.</a>Cross-lingual Parser Selection for
+    Low-Resource Languages. In: *Proceedings of the NoDaLiDa 2017 Workshop on
+    Universal Dependencies*, pages 1-10, Gothenburg, Sweden, Association for
+    Computational Lingustics.
 * <a id="aquino2020parsing">Aquino, A. and de Leon, F.</a> Parsing in the
     absence of related languages: Evaluating low-resource dependency parsers on
     Tagalog. In *Proceedings of the Fourth Workshoup on Universal Dependencies
     (UDW 2020)*, pages 8-15, ACL.
+* <a id="dryer2013wals">Dryer, M. and Haspelmath, M.</a>*The World Atlas of
+    Language Structures Online*. Max Planck Institute for Evolutionary Anthropology, Leipzig.   
+* <a id="lui2017langid">Lui, M. and Baldwin, T.</a>langid.py: An Off-theShelf
+    Language Identification Tool. In: *Proceedings of the ACL 2012 System
+    Demonstrations*, pages 25-30, Jeju Island, Korea. Association for
+    Computational Linguistics.
 * <a id="nivre2017tutorial">Nivre, J., Zeman, D., Ginter F., Tyers, F.</a> Tutorial
     on Universal Dependencies: Adding a new language to UD. Presented at the *15th Conference
     of the European Chapter of the Association for Computational Linguistics*, 2017.
-* <a id="schachtner1983trg">Schachter, P. and Otanes, F.</a>Tagalog Reference
-    Grammar. *University of California Press*, 1983.
+
 * <a id="nivre2017universal">Nivre, J. and Fang C-T.</a> Universal Dependency
     Evaluation. In: *Proceedings of the NoDaLiDa 2017 Workshop on Universal
     Dependencies*, pages 86-95, Gothenburg, Sweden. Association for Computational
     Linguistics
+* <a id="schachtner1983trg">Schachter, P. and Otanes, F.</a>Tagalog Reference
+    Grammar. *University of California Press*, 1983.
 
 
 ### Footnotes
