@@ -341,6 +341,6 @@ both train and dev datasets.
 
     Aside from the first sentence, the last two were song lyrics from a band
     called [*Eraserheads*](https://en.wikipedia.org/wiki/Eraserheads). The
-    first one came from the song *Huwag mo nang Itanong* (), while the second
+    first one came from the song *Huwag mo nang Itanong*, while the second
     came from *Alapaap*. I definitely botched the translations so I'm sorry for
     that!
