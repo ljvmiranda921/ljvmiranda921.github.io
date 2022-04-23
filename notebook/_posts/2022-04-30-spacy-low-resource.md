@@ -230,7 +230,7 @@ To assess our treebanks, we will perform both monolingual and cross-lingual eval
     then report the average across all metrics. For fun, I'm also going to check how well
     a model trained from another treebank performs on another (and vice-versa).
 - **Cross-lingual evaluation**: using a certain metric, we will identify five (5) languages
-    that are typologically similar to *Tagalog* and have bigger treebanks. We will train a model
+    that are typologically similar to Tagalog and have bigger treebanks. We will train a model
     for each foreign treebank, and use TRG and Ugnayan as test sets.
 
 As for our metrics, we'll measure the following:
@@ -271,12 +271,12 @@ trained a model for one and used the other as a test set.
 ### Cross-lingual evaluation
 
 For cross-lingual evaluation, I trained a model from a different language, and
-used our *Tagalog* treebanks as their test set. My criteria for choosing these
-languages are the following: they should be (1) closer to *Tagalog*, and (2)
+used our Tagalog treebanks as their test set. My criteria for choosing these
+languages are the following: they should be (1) closer to Tagalog, and (2)
 must have a decent amount of data (not low-resource). 
 
 For the former, I used a distance metric to identify languages that are
-typologically similar to *Tagalog* ([Agić, 2017](#agic2017parser)).[^5] In this
+typologically similar to Tagalog ([Agić, 2017](#agic2017parser)).[^5] In this
 case, these are Indonesian (id), Vietnamese (vi), Romanian (ro), Ukranian (uk),
 and Catalan (ca).
 
@@ -284,7 +284,7 @@ and Catalan (ca).
 
 Next, I went to their UD repositories, and checked if they have existing
 training and evaluation datasets. Fortunately, all of them do, so I went
-ahead and trained a model to parse our *Tagalog* treebanks.
+ahead and trained a model to parse our Tagalog treebanks.
 
 The results are interesting: token accuracy is good, but the tagger and parser
 accuracy leaves a lot to be desired. 
@@ -310,8 +310,9 @@ accuracy leaves a lot to be desired.
 | ca-ancora | 0.994     | 0.267   | 0.301     | 0.025   | 0.242   | 0.041   |
 
 
-What's surprising though is how the Indonesian
-and Vietnamese morphologizers performed well in Ugnayan. 
+What's surprising though is how the Indonesian and Vietnamese morphologizers
+performed well in Ugnayan. Perhaps, it may be due to them belonging to the same
+Austronesian language family as Tagalog
 
 
 
