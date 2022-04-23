@@ -234,8 +234,8 @@ To assess our treebanks, we will perform both monolingual and cross-lingual eval
     for each foreign treebank, and use TRG and Ugnayan as test sets.
 
 As for our metrics, we'll measure the following:
-- `TOKEN_ACC`: the accuracy of the tokenizer, i.e., how well it can determine the correct tokens of a given text.
-- `POS_ACC`: the accuracy of the token attributes. 
+- **`TOKEN_ACC`**: the accuracy of the tokenizer, i.e., how well it can determine the correct tokens of a given text.
+- **`POS_ACC`**: the accuracy of the token attributes. 
 - **`MORPH_ACC`**: the overall accuracy of our morphologizer based on the [Universal Dependencies FEATS format](https://universaldependencies.org/format.html#morphological-annotation). 
 - **`DEP_UAS / DEP_LAS`**: the accuracy of the dependency parser. The former is the
     unlabeled attachment score while the latter is called the labeled attachment
@@ -247,10 +247,9 @@ hunch that it won't perform well given the size of our data.
 
 ### Monolingual evaluation
 
-In this section, I performed 10-fold cross validation for both the TRG and
-Ugnayan datasets. In addition, I was also curious as to how each model will
-perform on the other dataset, so I trained a model for one and used the other
-as a test set.
+I performed 10-fold cross validation for both the TRG and Ugnayan datasets. I
+was also curious as to how each model will perform on the other dataset, so I
+trained a model for one and used the other as a test set.
 
 |         | TOKEN_ACC | POS_ACC  | MORPH_ACC | TAG_ACC  | DEP_UAS  | DEP_LAS  |
 |---------|-----------|----------|-----------|----------|----------|----------|
@@ -271,22 +270,49 @@ as a test set.
 
 ### Cross-lingual evaluation
 
-For cross-lingual evaluation, we need to train a model from a different
-language, and use our *Tagalog* treebanks as its test set. These languages
-should be (1) closer to *Tagalog*, and (2) must have a decent amount of data
-(not low-resource). 
+For cross-lingual evaluation, I trained a model from a different language, and
+used our *Tagalog* treebanks as their test set. My criteria for choosing these
+languages are the following: they should be (1) closer to *Tagalog*, and (2)
+must have a decent amount of data (not low-resource). 
 
-For the former, we'll use a distance metric that identifies languages that are
-typologically similar to *Tagalog* ([Agić, 2017](#agic2017parser)). It's based
-on the Language Identification (LangID) tool of Lui and Baldwin
-([2012](#lui2012langid)), combined with some of the features in the World Atlas
-of Language Structures (WALS) ([Dryer and Haspelmath, 2013](dryer2013wals)).
-Once we have the top 5 typologically similar languages to *Tagalog*, then we'll
-cross-check the Universal Dependencies website to see if it has treebanks with
-both train and dev datasets.
+For the former, I used a distance metric to identify languages that are
+typologically similar to *Tagalog* ([Agić, 2017](#agic2017parser)).[^5] In this
+case, these are Indonesian (id), Vietnamese (vi), Romanian (ro), Ukranian (uk),
+and Catalan (ca).
 
-<!-- evaluation, we do a (1) mono lingual and (2) cross lingual approach-->
-<!-- a few examples: where it works well and where it doesn't work well -->
+<!-- if you can put a table here then that would be much better -->
+
+Next, I went to their UD repositories, and checked if they have existing
+training and evaluation datasets. Fortunately, all of them do, so I went
+ahead and trained a model to parse our *Tagalog* treebanks.
+
+The results are interesting: token accuracy is good, but the tagger and parser
+accuracy leaves a lot to be desired. 
+
+**TRG Treebank**
+
+|           | TOKEN_ACC | POS_ACC | MORPH_ACC | TAG_ACC | DEP_UAS | DEP_LAS |
+|-----------|-----------|---------|-----------|---------|---------|---------|
+| id-gsd    | 1.000     | 0.374   | 0.320     | 0.000   | 0.342   | 0.151   |
+| vi-vtb    | 1.000     | 0.306   | 0.423     | 0.000   | 0.309   | 0.143   |
+| ro-rrt    | 0.999     | 0.392   | 0.198     | 0.000   | 0.304   | 0.098   |
+| uk-iu     | 1.000     | 0.185   | 0.177     | 0.000   | 0.539   | 0.188   |
+| ca-ancora | 0.999     | 0.284   | 0.057     | 0.015   | 0.261   | 0.081   |
+
+**Ugnayan Treebank**
+
+|           | TOKEN_ACC | POS_ACC | MORPH_ACC | TAG_ACC | DEP_UAS | DEP_LAS |
+|-----------|-----------|---------|-----------|---------|---------|---------|
+| id-gsd    | 0.997     | 0.310   | 0.803     | 0.000   | 0.251   | 0.058   |
+| vi-vtb    | 0.997     | 0.256   | 0.986     | 0.000   | 0.199   | 0.049   |
+| ro-rrt    | 0.992     | 0.332   | 0.275     | 0.000   | 0.279   | 0.085   |
+| uk-iu     | 0.998     | 0.151   | 0.123     | 0.000   | 0.300   | 0.084   |
+| ca-ancora | 0.994     | 0.267   | 0.301     | 0.025   | 0.242   | 0.041   |
+
+
+What's surprising though is how the Indonesian
+and Vietnamese morphologizers performed well in Ugnayan. 
+
 
 
 ## What can be done next?
@@ -355,3 +381,9 @@ both train and dev datasets.
     first one came from the song *Huwag mo nang Itanong*, while the second
     came from *Alapaap*. I definitely botched the translations so I'm sorry for
     that!
+
+[^5]:
+
+    It's based on the Language Identification (LangID) tool of Lui and Baldwin
+    ([2012](#lui2017langid)), combined with some of the features in the World Atlas
+    of Language Structures (WALS) ([Dryer and Haspelmath, 2013](#dryer2013wals)).
