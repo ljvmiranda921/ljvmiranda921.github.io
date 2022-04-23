@@ -283,11 +283,10 @@ and Catalan (ca).
 <!-- if you can put a table here then that would be much better -->
 
 Next, I went to their UD repositories, and checked if they have existing
-training and evaluation datasets. Fortunately, all of them do, so I went
-ahead and trained a model to parse our Tagalog treebanks.
-
-The results are interesting: token accuracy is good, but the tagger and parser
-accuracy leaves a lot to be desired. 
+training and evaluation datasets. Fortunately, all of them do, so I went ahead
+and trained a model to parse our Tagalog treebanks. The results are
+interesting: token accuracy is good, but the tagger and parser accuracy leaves
+a lot to be desired. 
 
 **TRG Treebank**
 
@@ -312,7 +311,7 @@ accuracy leaves a lot to be desired.
 
 What's surprising though is how the Indonesian and Vietnamese morphologizers
 performed well in Ugnayan. Perhaps, it may be due to them belonging to the same
-Austronesian language family as Tagalog
+Austronesian language family as Tagalog.
 
 
 
