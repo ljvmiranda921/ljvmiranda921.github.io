@@ -262,10 +262,12 @@ trained a model for one and used the other as a test set.
 | TRG on Ugnayan     | 0.997         | 0.563       | 0.364         | 0.538       | 0.472       | 0.240       |
 | Ugnayan on TRG     | **1.000**     | **0.789**   | **0.424**     | **0.779**   | **0.793**   | **0.572**   |
 
-<!-- a few discussions and observations? -->
 
-<!-- streamlit app? -->
+TRG, as a treebank, performs well in most metrics compared to Ugnayan. However,
+it's interesting that you can train a pretty decent model with the latter. You
+can explore these models using the demo below:
 
+<!-- add streamlit demo -->
 
 
 ### Cross-lingual evaluation
@@ -288,30 +290,35 @@ and trained a model to parse our Tagalog treebanks. The results are
 interesting: token accuracy is good, but the tagger and parser accuracy leaves
 a lot to be desired. 
 
-**TRG Treebank**
+
+#### TRG Treebank
+
 
 |           | TOKEN_ACC | POS_ACC | MORPH_ACC | TAG_ACC | DEP_UAS | DEP_LAS |
 |-----------|-----------|---------|-----------|---------|---------|---------|
-| id-gsd    | 1.000     | 0.374   | 0.320     | 0.000   | 0.342   | 0.151   |
-| vi-vtb    | 1.000     | 0.306   | 0.423     | 0.000   | 0.309   | 0.143   |
-| ro-rrt    | 0.999     | 0.392   | 0.198     | 0.000   | 0.304   | 0.098   |
-| uk-iu     | 1.000     | 0.185   | 0.177     | 0.000   | 0.539   | 0.188   |
-| ca-ancora | 0.999     | 0.284   | 0.057     | 0.015   | 0.261   | 0.081   |
+| id-gsd    | **1.000**     | 0.374   | 0.320     | 0.000   | 0.342   | 0.151   |
+| vi-vtb    | 1.000     | 0.306   | **0.423**     | 0.000   | 0.309   | 0.143   |
+| ro-rrt    | 0.999     | **0.392**   | 0.198     | 0.000   | 0.304   | 0.098   |
+| uk-iu     | 1.000     | 0.185   | 0.177     | 0.000   | **0.539**   | **0.188**   |
+| ca-ancora | 0.999     | 0.284   | 0.057     | **0.015**   | 0.261   | 0.081   |
 
-**Ugnayan Treebank**
+#### Ugnayan Treebank
 
 |           | TOKEN_ACC | POS_ACC | MORPH_ACC | TAG_ACC | DEP_UAS | DEP_LAS |
 |-----------|-----------|---------|-----------|---------|---------|---------|
-| id-gsd    | 0.997     | 0.310   | 0.803     | 0.000   | 0.251   | 0.058   |
-| vi-vtb    | 0.997     | 0.256   | 0.986     | 0.000   | 0.199   | 0.049   |
-| ro-rrt    | 0.992     | 0.332   | 0.275     | 0.000   | 0.279   | 0.085   |
-| uk-iu     | 0.998     | 0.151   | 0.123     | 0.000   | 0.300   | 0.084   |
-| ca-ancora | 0.994     | 0.267   | 0.301     | 0.025   | 0.242   | 0.041   |
+| id-gsd    | **0.997**     | 0.310   | 0.803     | 0.000   | 0.251   | 0.058   |
+| vi-vtb    | 0.997     | 0.256   | **0.986**     | 0.000   | 0.199   | 0.049   |
+| ro-rrt    | 0.992     | **0.332**   | 0.275     | 0.000   | 0.279   | **0.085**   |
+| uk-iu     | 0.998     | 0.151   | 0.123     | 0.000   | **0.300**   | 0.084   |
+| ca-ancora | 0.994     | 0.267   | 0.301     | **0.025**   | 0.242   | 0.041   |
 
 
 What's surprising though is how the Indonesian and Vietnamese morphologizers
 performed well in Ugnayan. Perhaps, it may be due to them belonging to the same
-Austronesian language family as Tagalog.
+Austronesian language family as Tagalog? You can explore these models using the
+demo below:
+
+<!-- insert streamlit demo -->
 
 
 
