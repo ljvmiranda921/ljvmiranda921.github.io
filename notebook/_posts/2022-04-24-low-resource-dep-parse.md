@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Dependency parsing for a low-resource language (Tagalog)"
-date: 2022-04-30
+date: 2022-04-24
 category: notebook
 comments: true
 author: "LJ MIRANDA"
@@ -265,9 +265,7 @@ trained a model for one and used the other as a test set.
 
 TRG, as a treebank, performs well in most metrics compared to Ugnayan. However,
 it's interesting that you can train a pretty decent model with the latter. You
-can explore these models using the demo below:
-
-<!-- add streamlit demo -->
+can explore these models using the demo below.
 
 
 ### Cross-lingual evaluation
@@ -316,18 +314,48 @@ a lot to be desired.
 What's surprising though is how the Indonesian and Vietnamese morphologizers
 performed well in Ugnayan. Perhaps, it may be due to them belonging to the same
 Austronesian language family as Tagalog? You can explore these models using the
-demo below:
+demo below.
 
-<!-- insert streamlit demo -->
+#### Streamlit demo
+
+Here is a web demo of the dependency parser and POS tagger for all the Tagalog
+and foreign models. You can type in any Tagalog sentence, and it will give you
+the parsed information in a handy viz. 
+
+<iframe src="https://share.streamlit.io/ljvmiranda921/ud-tagalog-spacy/demo/app.py" width="700" height="600"> 
+    <p>Your browser does not support iframes.</p>
+</iframe>
+
+Note that sometimes, the "Collapse phrases" option errors out when
+there is no noun chunker implementation in the language. This is expected so
+ignore that for now. Of course, you can also improve spaCy's language support
+[by implementing noun chunkers in those
+languages](https://github.com/explosion/spaCy/discussions/3056).
 
 
+## Conclusion
 
-## What can be done next?
+In this blogpost, we explored how to train and evaluate a dependency parser
+for a low-resource language like Tagalog. We also learned that:
 
+- Dependency parsers allow us to understand the structure and meaning of
+    sentences via the connection of their words. These relationships can then 
+    be used for several downstream tasks in natural language processing.
+- One can use a treebank to train a dependency parser. Universal Dependencies
+    (UD) serves as a good repository for such.With
+    [spaCy](https://github.com/explosion/spaCy), it is easier and convenient
+    to parse and train from these datasets.
+- Low-resource languages are too small that in UD, they're only delegated as
+    a "test set." Nevertheless, we can still evaluate parsers from these
+    treebanks via k-fold cross validation, or by comparing it to larger foreign
+    models.
 
-
-
-
+While doing this project, I realized how much work is left to improve
+linguistic analysis of Tagalog. Of course, the easiest thing to say is that "we
+need more data," but annotating and labelling treebanks requires
+domain-expertise.[^6] If you've been using spaCy, then you might also want to
+write a noun chunker that extracts base noun phrases from the parser. True
+enough, a large part of this endeavor involves gritty work.
 
 ### References
 
@@ -357,7 +385,6 @@ demo below:
 
 
 ### Footnotes
-
 
 
 [^1]:
@@ -394,3 +421,8 @@ demo below:
     It's based on the Language Identification (LangID) tool of Lui and Baldwin
     ([2012](#lui2017langid)), combined with some of the features in the World Atlas
     of Language Structures (WALS) ([Dryer and Haspelmath, 2013](#dryer2013wals)).
+
+[^6]:
+
+    Not to mention that these data sources should have commercially-friendly
+    licenses: you'd want to avoid texts with copyright, etc.
