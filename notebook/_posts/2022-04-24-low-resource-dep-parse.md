@@ -357,6 +357,10 @@ domain-expertise.[^6] If you've been using spaCy, then you might also want to
 write a noun chunker that extracts base noun phrases from the parser. True
 enough, a large part of this endeavor involves gritty work.
 
+If you're interested to see the code and datasets used in this project, then
+feel free to head over [the Github
+repository](https://github.com/ljvmiranda921/ud-tagalog-spacy).
+
 ### References
 
 * <a id="agic2017parser">Željko, A.</a>Cross-lingual Parser Selection for
