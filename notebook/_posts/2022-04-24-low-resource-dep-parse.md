@@ -8,6 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [natural language processing, dependency parsing, nlp, low-resource, machine learning]
+header-img: /assets/png/dep-parsing/header.png
 description: |
     Let me tell you about the amazing world of dependency parsing, especially
     for a low-resource language like Tagalog. Unlike English, Tagalog has a
