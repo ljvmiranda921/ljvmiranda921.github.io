@@ -358,6 +358,15 @@ domain-expertise.[^6] If you've been using spaCy, then you might also want to
 write a noun chunker that extracts base noun phrases from the parser. True
 enough, a large part of this endeavor involves gritty work.
 
+Lastly, you can treat this blogpost as a reproduction of the paper, *"Parsing in
+the absence of related languages: evaluating low-resource dependency parsers on
+Tagalog"* ([Aquino and de Leon, 2020](#aquino2020parsing)). Here, they used
+[stanza](https://stanfordnlp.github.io/stanza/) and
+[UDPipe](https://cran.r-project.org/web/packages/udpipe/index.html), but I want
+to check how it fares with spaCy. This [Connected Papers](https://www.connectedpapers.com/main/ae807124961fd4a9eb02f288b4fc70bc8840a58e/Parsing-in-the-absence-of-related-languages%3A-Evaluating-low%20resource-dependency-parsers-on-Tagalog/graph)
+graph has also been useful as a jump-off point for further reading.
+
+
 If you're interested to see the code and datasets used in this project, then
 feel free to head over [the Github
 repository](https://github.com/ljvmiranda921/ud-tagalog-spacy).
