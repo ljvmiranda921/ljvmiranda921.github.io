@@ -33,4 +33,4 @@ gem "html-proofer"
 gem "jekyll-sitemap"
 
 # Update some dependencies bsaed on depdendabot
-gem "nokogiri", ">= 1.12.5"
+gem "nokogiri", ">= 1.13.4"
