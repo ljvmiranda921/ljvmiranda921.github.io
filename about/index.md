@@ -5,29 +5,28 @@ description: About page of Lj Miranda - Blog
 permalink: /about/
 ---
 
-Hi friends, my name is Lj Miranda and welcome to my blog! 
+Hi friends! My name is Lj Miranda, and welcome to my blog! 
 
 I [build things](https://github.com/ljvmiranda921).
 
 I started this site to tell the story of my tech journey. I believe in
 **technology that is open, enabling, and life-giving**. I aspire to usher that
-potential&mdash;even for just a tiny bit.  There is still a long way to go, and
-this site records my progress. 
+potential&mdash;even for just a tiny bit. But, there is still a long way to go,
+and this site records my progress. 
 
 Here, you'll find some of my **thoughts, works, and notes** on software
-development, systems, machine learning, and research. I hope that
-you'll spend a nice time here, so go grab yourself a cup of coffee and feel
-free to look around! 
+development, machine learning, and research. I hope you'll spend a nice time
+here, so go grab yourself a coffee and feel free to look around! 
 
 Some highlights include:
 * [Why do we need Flask, Celery, and Redis?](/notebook/2019/11/08/flask-redis-celery-mcdo/): a fun illustrated guide on how
-    task queues work. Reached front page on [Hacker News](https://news.ycombinator.com/item?id=22901856).
-* [How to improve software engineering skills as a researcher](/notebook/2020/11/15/data-science-swe/): here I talked
+    task queues work. Reached the front page on [Hacker News](https://news.ycombinator.com/item?id=22901856).
+* [How to improve software engineering skills as a researcher](/notebook/2020/11/15/data-science-swe/): here, I talked
     about a specific project on how researchers and data scientists can further
     refine their software engineering skills.
 * [The Illustrated VQGAN](/notebook/2021/08/08/clip-vqgan/): a technical
     deep-dive on VQGAN, a model that allows us to synthesize images from text prompts.
-* [Navigating the MLOps tooling landscape](/notebook/2021/05/10/navigating-the-mlops-landscape/): here I survey MLOps tools while surfacing key
+* [Navigating the MLOps tooling landscape](/notebook/2021/05/10/navigating-the-mlops-landscape/): here, I survey MLOps tools while surfacing key
     insights about the landscape. 
 * [How to use Jupyter Notebooks](/notebook/2020/03/06/jupyter-notebooks-in-2020/): another three-part series where I surveyed the
     Jupyter notebook ecosystem.
@@ -39,11 +38,11 @@ P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljv
 I'm a Machine Learning Engineer at [Explosion](https://explosion.ai). I help
 develop [spaCy](https://spacy.io) and related open-source projects. Previously,
 I've worked for some machine learning startups such as:
-* [Thinking Machines Data Science](https://thinkingmachin.es) (Manila), a data 
+* [Thinking Machines Data Science](https://thinkingmachin.es) (Manila): a data 
    science consultancy where I built multiple natural language processing and
-   computer vision products such as a search engine, an industry classifier,
+   computer vision products, including a a search engine, an industry classifier,
    and a document processing system to name a few.
-* [Preferred Networks](https://www.preferred-networks.jp/en/) (Tokyo) as an
+* [Preferred Networks](https://www.preferred-networks.jp/en/) (Tokyo): as an
     intern, where I implemented a training parallelization framework for
     [ChainerRL](https://github.com/chainer/chainerrl), an open-source
     reinforcement learning library.
@@ -57,10 +56,10 @@ learning systems design and natural language processing.
 Lastly, I'm well-involved in open-source and have authored [several
 projects](https://github.com/ljvmiranda921) of my own.
 [Pyswarms](https://github.com/ljvmiranda921/pyswarms) has been quite
-successful, I've seen it being used in [quantum
+successful; I've seen it being used in [quantum
 physics](https://arxiv.org/abs/1801.07686),
 [chemistry](https://pubs.acs.org/doi/abs/10.1021/acscentsci.8b00307), and
-[teaching](https://www.gousios.gr/courses/algo-ds/optimizations.html) amongst
+[teaching](https://www.gousios.gr/courses/algo-ds/optimizations.html), amongst
 [other
 things](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15267041073198929167).
 I love indie games and [dabble in game
