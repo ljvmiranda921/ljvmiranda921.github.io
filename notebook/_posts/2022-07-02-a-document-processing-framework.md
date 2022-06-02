@@ -37,7 +37,7 @@ also urgent.
 This blog post describes **a framework for designing document processing
 solutions**. This framework has three principles:
 
-- **Annotation is king**
+- **Annotation is king**:
 
 - **Make multimodal models**: whenever we understand a document, we don't just
 rely on the text itself. Instead, we take all information (position, text size,
@@ -46,8 +46,7 @@ because it's a number, and it's located in the bottom-right portion of the page
 (and perhaps because there's a word "Total:" beside it). Being able to use all
 channels of information is vital for document processing.
 
-
-- **Always be correcting**
+- **Always be correcting**:
 
 In the next section, we'll see this framework in action as we go through my
 sample implementation using [Prodigy](prodi.gy) and [Hugging
