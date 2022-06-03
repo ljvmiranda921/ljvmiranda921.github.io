@@ -24,13 +24,13 @@ challenge&mdash;a problem statement so simple yet tough to solve.
 > Document processing, the task of converting analog data into a digital
 > format&mdash;a problem statement so simple yet tough to solve.
 
-I came to realize that document processing is ubiquitous&mdash;from
-corporations to NGOs, small organizations to large conglomerates&mdash; there's
-always a PDF that needs to be digitized!  **Solving this problem even has
-significant ramifications**: [archival climate
+After working with different organizations, I realized that document processing
+is ubiquitous&mdash;from corporations to NGOs, small organizations to large
+conglomerates&mdash; there's always a PDF that needs to be digitized!  **Solving
+this problem even has significant ramifications**: [archival climate
 data](https://public.wmo.int/en/our-mandate/what-we-do/observations/data-rescue-and-archives)
 that can help scientists understand the growing global crisis is locked in paper
-documents. Document processing is not just hard, it may as well be urgent. 
+documents. So document processing is not just hard; it may also be urgent. 
 
 <!-- add image of document processing stuff -->
 
@@ -57,8 +57,12 @@ Face](huggingface.co) in the next section.
 
 ## Framework in action
 
+If I were to put these three principles in a diagram, it would look like this:
+
 
 <!-- solution diagram using framework words -->
+
+
 <!-- solution diagram using Prodigy recipes -->
 
 ### Annotation is king
