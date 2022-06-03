@@ -32,7 +32,9 @@ data](https://public.wmo.int/en/our-mandate/what-we-do/observations/data-rescue-
 that can help scientists understand the growing global crisis is locked in paper
 documents. So document processing is not just hard; it may also be urgent. 
 
-<!-- add image of document processing stuff -->
+<center>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Anyone with experience in OCR or AI/ML looking for a challenge to solve which would help climate science?<br><br>We have thousands of pages of historical weather observations which need numerical values extracting efficiently &amp; accurately so we can better understand extreme weather. <a href="https://t.co/QKcCwPCxWm">pic.twitter.com/QKcCwPCxWm</a></p>&mdash; Ed Hawkins (@ed_hawkins) <a href="https://twitter.com/ed_hawkins/status/1167769410238595072?ref_src=twsrc%5Etfw">August 31, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
 
 This blog post describes **a framework for designing document processing
 solutions**. It has three principles:
@@ -57,7 +59,20 @@ Face](huggingface.co) in the next section.
 
 ## Framework in action
 
-If I were to put these three principles in a diagram, it would look like this:
+We'll focus on the subtask of **form layout analysis.** Unlike tables, forms vary in
+their template, confusing even the most complex business rules.  We will be
+using the [**FUNSD dataset**](https://guillaumejaume.github.io/FUNSD/) for this
+task. It consists of noisy scanned documents where the challenge is to determine
+the header, question, answer, and other relevant information.
+
+> FUNSD: Form Understanding in Nosy Scanned Documents is a dataset for text
+> detection, optical character recognition, spatial layout analysis, and form
+> understanding.
+
+<!-- FUNSD sample -->
+
+If I were to design a solution using the principles I mentioned above, it would
+look like this:
 
 
 <!-- solution diagram using framework words -->
