@@ -15,42 +15,45 @@ excerpt: |
 <span class="firstcharacter">E</span>xtracting information from PDFs and
 scanned documents may not be the sexiest problem of the century. You don't
 [generate paintings](/notebook/2021/08/08/clip-vqgan/) nor [control robots to
-play games](/projects/2018/09/14/pfn-internship/). It's pure **busywork**,
+play games](/projects/2018/09/14/pfn-internship/). It's pure *busywork*,
 something that "AI" has promised to automate but failed to achieve.[^1] That's
-why I developed a keen interest in **document processing, the task of
-converting analog data into digital format**, as it evokes a subtle
-challege&mdash;a problem statement so simple yet tough to solve.
+why I'm interested in document processing, the task of
+**converting analog data into digital format**, as it evokes a subtle
+challenge&mdash;a problem statement so simple yet tough to solve.
 
 > Document processing, the task of converting analog data into a digital
 > format&mdash;a problem statement so simple yet tough to solve.
 
-As I have worked with different organizations throughout my career, I came to
-realize that **document processing is ubiquitous**&mdash;from corporations to
-NGOs, small organizations to large conglomerates&mdash; there's always a PDF
-that needs to be digitized! Solving this problem even has significant
-ramifications: for example, [archival climate
+I came to realize that document processing is ubiquitous&mdash;from
+corporations to NGOs, small organizations to large conglomerates&mdash; there's
+always a PDF that needs to be digitized!  **Solving this problem even has
+significant ramifications**: [archival climate
 data](https://public.wmo.int/en/our-mandate/what-we-do/observations/data-rescue-and-archives)
-that can help scientists understand the growing global crisis is locked in
-paper documents. It turns out that document processing is not just hard but
-also urgent. 
+that can help scientists understand the growing global crisis is locked in paper
+documents. Document processing is not just hard, it may as well be urgent. 
+
+<!-- add image of document processing stuff -->
 
 This blog post describes **a framework for designing document processing
-solutions**. This framework has three principles:
+solutions**. It has three principles:
 
-- **Annotation is king**:
+- **Annotation is king**: there is no silver bullet. Even in the presence of a
+good model, you still need to finetune it with your data. Ideally, you'd want an
+annotation tool with this feature built-in or flexible enough to incorporate
+this mechanism.
 
 - **Make multimodal models**: whenever we understand a document, we don't just
 rely on the text itself. Instead, we take all information (position, text size,
-etc.) as context. In a receipt, we know that a text is the "Total Price"
-because it's a number, and it's located in the bottom-right portion of the page
-(and perhaps because there's a word "Total:" beside it). Being able to use all
-channels of information is vital for document processing.
+etc.) as context. Being able to use all these features is vital.
 
-- **Always be correcting**:
+- **Always be correcting**: OCR and document layout models aren't always
+perfect, so it's essential to keep the human-in-the-loop to correct your
+system's outputs. You can use correction to retrain your model or as the
+penultimate step before saving the results in a database.
 
-In the next section, we'll see this framework in action as we go through my
+We'll see this framework in action as we go through my
 sample implementation using [Prodigy](prodi.gy) and [Hugging
-Face](huggingface.co).
+Face](huggingface.co) in the next section.
 
 ## Framework in action
 
@@ -93,4 +96,6 @@ free to drop a comment below to share your thoughts!
     I resonate with [Tom MacWright's
     tweet](https://twitter.com/tmcw/status/1511804741747154944) on how much of
     the progress in ML right now focuses on automating the creative facets of
-    the human condition, such as writing and art.
+    the human condition, such as writing and art. This [Tweet thread by Freya
+    Holmér](https://twitter.com/FreyaHolmer/status/1532261886078631940?s=20&t=d0vBdUKklmHq-8G2mWYecw)
+    also gives an interesting view of how AI generated art can affect the craft.
