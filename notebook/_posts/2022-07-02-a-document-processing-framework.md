@@ -70,15 +70,36 @@ the header, question, answer, and other relevant information.
 > understanding.
 
 <!-- FUNSD sample -->
+![](/assets/png/dpt/funsd.png){:width="600px"}
+{:style="text-align: center;"}
 
-If I were to design a solution using the principles I mentioned above, it would
-look like this:
+If I were to design a solution using the principles I mentioned above, then it
+would look like the figure below. It's a diagram of how I envision a typical
+document processing solution:
 
 
 <!-- solution diagram using framework words -->
+![](/assets/png/dpt/dp_design_principles.png){:width="600px"}
+{:style="text-align: center;"}
+
+Notice how each step corresponds to a particular design principle. To implement
+this solution, **I will be using [Prodigy](prodi.gy) and the LayoutLMv3 model from
+Hugging Face**. [Prodigy](prodi.gy) is an annotation tool from
+[Explosion](explosion.ai), the creators of [spaCy](spacy.io),[^2] and it allows us
+to [write custom scripts](https://prodi.gy/docs/custom-recipes) (in addition to
+their [built-in ones](https://prodi.gy/docs/recipes)) tailor-fit to my problem. By translating the principles
+above into Prodigy recipes, I can come up with the following figure:
 
 
 <!-- solution diagram using Prodigy recipes -->
+![](/assets/png/dpt/dp_design_prodigy.png){:width="600px"}
+{:style="text-align: center;"}
+
+Here are the Prodigy recipes we will use:
+
+- `image.manual`: is a built-in recipe...
+- `image.train-pdf`: is a custom recipe...
+- `image.qa`: is a custom recipe ...
 
 ### Annotation is king
 
@@ -118,3 +139,7 @@ free to drop a comment below to share your thoughts!
     the human condition, such as writing and art. This [Tweet thread by Freya
     Holmér](https://twitter.com/FreyaHolmer/status/1532261886078631940?s=20&t=d0vBdUKklmHq-8G2mWYecw)
     also gives an interesting view of how AI generated art can affect the craft.
+
+[^2]:
+
+    For full disclosure, I currently work at Explosion.
