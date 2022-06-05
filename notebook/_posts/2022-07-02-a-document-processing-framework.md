@@ -9,7 +9,17 @@ author: "LJ MIRANDA"
 published: true
 tags: [spacy, machine learning, prodigy, huggingface, rpa, document processing]
 description: |
+    Document processing, the task of extracting information from PDFs and
+    scanned documents, may not be the sexiest problem of the century, but it
+    may as well be one of the important ones. In this blog post, I'll discuss a
+    framework for designing document processing solutions, with a sample
+    implementation using Prodigy and Hugging Face. 
 excerpt: |
+    Document processing, the task of extracting information from PDFs and
+    scanned documents, may not be the sexiest problem of the century, but it
+    may as well be one of the important ones. In this blog post, I'll discuss a
+    framework for designing document processing solutions, with a sample
+    implementation using Prodigy and Hugging Face. 
 ---
 
 <span class="firstcharacter">E</span>xtracting information from PDFs and
