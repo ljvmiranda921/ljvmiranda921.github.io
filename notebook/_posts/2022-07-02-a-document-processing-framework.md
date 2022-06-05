@@ -51,12 +51,13 @@ solutions**. It has three principles:
 
 - **Annotation is king**: there is no silver bullet. Even in the presence of a
 good model, you still need to finetune it with your data. Ideally, you'd want an
-annotation tool with this feature built-in or flexible enough to incorporate
+annotation tool with finetuning built-in or flexible enough to incorporate
 this mechanism.
 
 - **Make multimodal models**: whenever we understand a document, we don't just
 rely on the text itself. Instead, we take all information (position, text size,
-etc.) as context. Being able to use all these features is vital.
+etc.) as context. Being able to use all these features is vital. A pure OCR or
+a pure text-based approach is suboptimal to solve this task.
 
 - **Always be correcting**: OCR and document layout models aren't always
 perfect, so it's essential to keep the human-in-the-loop to correct your
@@ -83,9 +84,9 @@ the header, question, answer, and other relevant information.
 ![](/assets/png/dpt/funsd.png){:width="600px"}
 {:style="text-align: center;"}
 
-If I were to design a solution using the principles I mentioned above, then it
-would look like the figure below. It's a diagram of how I envision a typical
-document processing solution:
+If I were to design a solution that incorporates all the principles I mentioned
+above, then it would look like the figure below. It's a diagram of how I
+envision a typical document processing workflow:
 
 
 <!-- solution diagram using framework words -->
