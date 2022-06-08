@@ -108,9 +108,9 @@ above into Prodigy recipes, I can come up with the following figure:
 
 Here are the Prodigy recipes we will use:
 
-- `image.manual`: is a built-in recipe
-- `image.train-pdf`: is a custom recipe...
-- `image.qa`: is a custom recipe ...
+- `image.manual`: is a built-in recipe that allows us to load images from a directory and add bounding box annotations.
+- `image.train-pdf`: is a custom recipe that finetunes a [LayoutLMv3 model](https://arxiv.org/abs/2204.08387) given an annotated dataset. 
+- `image.qa`: is a custom recipe that takes in a finetuned LayoutLMv3 model and a directory of test images for correction and quality assurance.
 
 ### Annotation is king
 
