@@ -9,14 +9,12 @@ author: "LJ MIRANDA"
 published: true
 tags: [spacy, machine learning, prodigy, huggingface, rpa, document processing]
 description: |
-    Document processing, the task of extracting information from PDFs and
-    scanned documents, may not be the sexiest problem of the century, but it
+    Document processing may not be the sexiest problem of the century, but it
     may as well be one of the important ones. In this blog post, I'll discuss a
     framework for designing document processing solutions, with a sample
     implementation using Prodigy and Hugging Face. 
 excerpt: |
-    Document processing, the task of extracting information from PDFs and
-    scanned documents, may not be the sexiest problem of the century, but it
+    Document processing may not be the sexiest problem of the century, but it
     may as well be one of the important ones. In this blog post, I'll discuss a
     framework for designing document processing solutions, with a sample
     implementation using Prodigy and Hugging Face. 
@@ -112,13 +110,43 @@ Here are the Prodigy recipes we will use:
 - `image.train-pdf`: is a custom recipe that finetunes a [LayoutLMv3 model](https://arxiv.org/abs/2204.08387) given an annotated dataset. 
 - `image.qa`: is a custom recipe that takes in a finetuned LayoutLMv3 model and a directory of test images for correction and quality assurance.
 
+You can find a sample implementation of these recipes in the
+[`ljvmiranda921/prodigy-pdf-custom-recipe` Github
+repository](https://github.com/ljvmiranda921/prodigy-pdf-custom-recipe):
+
 ### Annotation is king
+
+Annotation is always a given in any document processing solution. Documents tend
+to vary wildly in appearance, even if they have distinguishable patterns.  So
+you'd want an annotation tool that allows you to label documents reliably.
+
+In Prodigy, this functionality is already built-in using the `image.manual`
+recipe. Given a directory of images, we can draw bounding boxes or freeform
+polygons to label specific regions. For FUNSD, it looks like this:
+
+<!-- insert FUNSD sample in Prodigy -->
+
+Because FUNSD already has annotations, I will recreate a scenario that mimics
+that. In Prodigy, this is equivalent to hydraing a **dataset** (a database,
+SQLite by default) with annotated values.
+
+
+
+
+<!-- ending--->
+One limitation of this approach is that we didn't do OCR because the text data
+is already available. The `image.manual` recipe only stores the bounding boxes
+and the labels. However, we can solve this by creating a custom recipe that
+performs OCR to give us bounding boxes and an interface that allows us to label
+each bounding box with a corresponding value.[^3]
+
 
 
 ### Make multimodal models
 
 
 ### Always be correcting
+
 
 
 
@@ -154,3 +182,7 @@ free to drop a comment below to share your thoughts!
 [^2]:
 
     For full disclosure, I currently work at Explosion.
+
+[^3]:
+
+    I will be creating a sample project in the future demonstrating this.
