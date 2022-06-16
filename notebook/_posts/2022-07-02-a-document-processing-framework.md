@@ -127,7 +127,7 @@ polygons to label specific regions. For FUNSD, it looks like this:
 <!-- insert FUNSD sample in Prodigy -->
 
 Because FUNSD already has annotations, I will recreate a scenario that mimics
-that. In Prodigy, this is equivalent to hydraing a **dataset** (a database,
+that. In Prodigy, this is equivalent to hydrating a **dataset** (a database,
 SQLite by default) with annotated values.
 
 
