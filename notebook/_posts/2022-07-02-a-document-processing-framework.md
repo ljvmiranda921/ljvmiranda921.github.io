@@ -152,14 +152,20 @@ is inherently multimodal&mdash;textual and visual information is readily
 available for us to use. But unfortunately, crude document processing solutions tend to take
 advantage of only one type:
 
-- Pure visual approaches involve a lot of complex business rules around bounding
+- Image-centric approaches involve a lot of complex business rules around bounding
 boxes and text placement to get the required info. They often end up relying on
 templates that may not be scaleable.
-- Pure textual approaches run on NLP pipelines on OCR'd text. However, blobs of
+- Text-centric approaches run on NLP pipelines on OCR'd text. However, blobs of
 text are incompatible with the domain these models were initially trained from,
 causing suboptimal performance.
 
-<!-- being able to use both information is crucial, and that is what LayoutLM does -->
+Fortunately, multimodal models like LayoutLMv3 ([Huang, et al., 2022](https://arxiv.org/pdf/2204.08387.pdf)) can learn from textual and visual
+information. For a given document, it embeds not only the word and image
+themselves, but also their positions. Then, it learns the interactions across
+them using multiple pre-training objectives. 
+<!-- insert layoutlm architecture, in your own drawing tldraw here -->
+<!-- maybe make it left to right instead of bottom to top? -->
+
 
 <!-- Describe a bit what LayoutLM is about, and then maybe an image of its architecture? Draw it yourself? -->
 
