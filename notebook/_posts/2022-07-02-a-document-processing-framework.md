@@ -149,7 +149,7 @@ each bounding box with a corresponding value.[^2]
 
 Another reason why document processing is such an appealing problem is that it
 is inherently multimodal&mdash;textual and visual information is readily
-available for us to use. But unfortunately, crude document processin gsolutions tend to take
+available for us to use. But unfortunately, crude document processing solutions tend to take
 advantage of only one type:
 
 - Pure visual approaches involve a lot of complex business rules around bounding
@@ -163,7 +163,7 @@ causing suboptimal performance.
 
 <!-- Describe a bit what LayoutLM is about, and then maybe an image of its architecture? Draw it yourself? -->
 
-<!-- How it's implemented in Prodigy and HuggingFace + screenshot of the training process in Colab if it's still there -->
+<!-- How it's implemented in Prodigy and HuggingFace -->
 
 
 ### Always be correcting
