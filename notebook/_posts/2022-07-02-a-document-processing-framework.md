@@ -148,7 +148,7 @@ each bounding box with a corresponding value.[^2]
 ### Make multimodal models
 
 Another reason why document processing is such an appealing problem is that it
-is inherently multimodal&mdash;textual and visual information is readily
+is inherently **multimodal**&mdash;textual and visual information is readily
 available for us to use. But unfortunately, crude document processing solutions tend to take
 advantage of only one type:
 
@@ -163,11 +163,15 @@ Fortunately, multimodal models like LayoutLMv3 ([Huang, et al., 2022](https://ar
 information. For a given document, it embeds not only the word and image
 themselves, but also their positions. Then, it learns the interactions across
 them using multiple pre-training objectives. 
-<!-- insert layoutlm architecture, in your own drawing tldraw here -->
+
+<!-- IMAGE: insert layoutlm architecture, in your own drawing tldraw here -->
 <!-- maybe make it left to right instead of bottom to top? -->
 
+<!--
+In Prodigy, most NLP pipelines have their own training function
 
-<!-- Describe a bit what LayoutLM is about, and then maybe an image of its architecture? Draw it yourself? -->
+-->
+
 
 <!-- How it's implemented in Prodigy and HuggingFace -->
 
