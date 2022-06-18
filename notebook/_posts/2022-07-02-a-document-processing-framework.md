@@ -48,14 +48,14 @@ This blog post describes **a framework for designing document processing
 solutions**. It has three principles:
 
 - **Annotation is king**: there is no silver bullet. Even in the presence of a
-good model, you still need to finetune it with your data. Ideally, you'd want an
+good model, you still need to finetune with your data. Ideally, you'd want an
 annotation tool with finetuning built-in or flexible enough to incorporate
 this mechanism.
 
-- **Make multimodal models**: whenever we understand a document, we don't just
-rely on the text itself. Instead, we take all information (position, text size,
-etc.) as context. Being able to use all these features is vital. A pure OCR or
-a pure text-based approach is suboptimal to solve this task.
+- **Make multimodal models**: we don't just rely on text whenever we analyze
+a document. Instead, we take all information (position, text size, etc.) as
+context. Being able to use all these features is vital. A pure OCR or a pure
+text-based approach is suboptimal to solve this task.
 
 - **Always be correcting**: OCR and document layout models aren't always
 perfect, so it's essential to keep the human-in-the-loop to correct your
@@ -66,9 +66,9 @@ We'll see this framework in action as we go through my
 sample implementation using [Prodigy](prodi.gy) and [Hugging
 Face](huggingface.co) in the next section.
 
-## Framework in action
+## Framework in action: form understanding
 
-We'll focus on the subtask of **form layout analysis.** Unlike tables, forms vary in
+We'll focus on the task of **form layout analysis.** Unlike tables, forms vary in
 their template, confusing even the most complex business rules.  We will be
 using the [**FUNSD dataset**](https://guillaumejaume.github.io/FUNSD/) for this
 task. It consists of noisy scanned documents where the challenge is to determine
@@ -79,29 +79,31 @@ the header, question, answer, and other relevant information.
 > understanding.
 
 <!-- FUNSD sample -->
-![](/assets/png/dpt/funsd.png){:width="600px"}
+![](/assets/png/dpt/funsd.png){:width="600px", style="padding:10px"}  
+__Figure__: An example of the FUNSD dataset by Guillaume et al.
 {:style="text-align: center;"}
 
-If I were to design a solution that incorporates all the principles I mentioned
-above, then it would look like the figure below. It's a diagram of how I
-envision a typical document processing workflow:
+If I were to design a solution that incorporates all the principles above, then
+it would look like the figure below. It's a diagram of how I envision a typical
+document processing workflow:
 
 
 <!-- solution diagram using framework words -->
-![](/assets/png/dpt/dp_design_principles.png){:width="600px"}
+![](/assets/png/dpt/dp_design_principles.png){:width="600px", style="padding:10px"}  
+__Figure__: Document processing solution design principles
 {:style="text-align: center;"}
 
 Notice how each step corresponds to a particular design principle. To implement
-this solution, **I will be using [Prodigy](prodi.gy) and the LayoutLMv3 model from
-Hugging Face**. [Prodigy](prodi.gy) is an annotation tool from
-[Explosion](explosion.ai), the creators of [spaCy](spacy.io),[^2] and it allows us
-to [write custom scripts](https://prodi.gy/docs/custom-recipes) (in addition to
-their [built-in ones](https://prodi.gy/docs/recipes)) tailor-fit to my problem. By translating the principles
-above into Prodigy recipes, I can come up with the following figure:
+this solution, **I will be using [Prodigy](prodi.gy) and the LayoutLMv3 model
+from Hugging Face**. [Prodigy](prodi.gy) is an annotation tool that allows
+us to [write custom scripts](https://prodi.gy/docs/custom-recipes) tailor-fit to my
+problem (for full disclosure, I currently work at [Explosion](https://explosion.ai)). By translating the
+principles above into Prodigy recipes, I can come up with the following figure:
 
 
 <!-- solution diagram using Prodigy recipes -->
-![](/assets/png/dpt/dp_design_prodigy.png){:width="600px"}
+![](/assets/png/dpt/dp_design_prodigy.png){:width="600px", style="padding:10px"}  
+__Figure__: Document processing solution design principles as Prodigy recipes
 {:style="text-align: center;"}
 
 Here are the Prodigy recipes we will use:
@@ -110,8 +112,7 @@ Here are the Prodigy recipes we will use:
 - `image.train-pdf`: is a custom recipe that finetunes a [LayoutLMv3 model](https://arxiv.org/abs/2204.08387) given an annotated dataset. 
 - `image.qa`: is a custom recipe that takes in a finetuned LayoutLMv3 model and a directory of test images for correction and quality assurance.
 
-You can find a sample implementation of these recipes in the
-[`ljvmiranda921/prodigy-pdf-custom-recipe` Github
+You can find a sample implementation of these recipes in this [Github
 repository](https://github.com/ljvmiranda921/prodigy-pdf-custom-recipe):
 
 ### Annotation is king
@@ -125,20 +126,24 @@ recipe. Given a directory of images, we can draw bounding boxes or freeform
 polygons to label specific regions. For FUNSD, it looks like this:
 
 <!-- insert FUNSD sample in Prodigy -->
+![](/assets/png/dpt/prodigy_funsd.png){:width="500px" style="padding:10px"}  
+__Figure:__ The `image.manual` annotation interface in Prodigy.
+{:style="text-align: center;"}
 
-Because FUNSD already has annotations, I will recreate a scenario that mimics
-that. In Prodigy, this is equivalent to hydrating a **dataset** (a database,
-SQLite by default) with annotated values.
+Whenever we label, Prodigy stores the annotations in a
+[database](https://prodi.gy/docs/api-database). Because FUNSD already has
+annotations, we don't need to label anymore. So instead, I will hydrate the
+database with the annotated values to recreate the scenario. The [`hydrate-db`
+command](https://github.com/ljvmiranda921/prodigy-pdf-custom-recipe/blob/master/project.yml#L32)
+from the [project
+repo](https://github.com/ljvmiranda921/prodigy-pdf-custom-recipe) illustrates
+this process.
 
-
-
-
-<!-- ending--->
 One limitation of this approach is that we didn't do OCR because the text data
 is already available. The `image.manual` recipe only stores the bounding boxes
 and the labels. However, we can solve this by creating a custom recipe that
 performs OCR to give us bounding boxes and an interface that allows us to label
-each bounding box with a corresponding value.[^3]
+each bounding box with a corresponding value.[^2]
 
 
 
@@ -154,7 +159,7 @@ each bounding box with a corresponding value.[^3]
 
 This blog post describes what I think are the most critical aspects of a
 document processing solution: an annotation mechanism, a multimodal model, and
-an evaluation/correction step. I also demonstrated them in action using Prodigy
+an evaluation step. I also demonstrated them in action using Prodigy
 and LayoutLM. 
 
 Machine learning was promised to automate manual labor. But it seems that we
@@ -180,9 +185,5 @@ free to drop a comment below to share your thoughts!
     also gives an interesting view of how AI generated art can affect the craft.
 
 [^2]:
-
-    For full disclosure, I currently work at Explosion.
-
-[^3]:
 
     I will be creating a sample project in the future demonstrating this.
