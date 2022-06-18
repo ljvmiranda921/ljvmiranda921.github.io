@@ -159,7 +159,11 @@ templates that may not be scaleable.
 text are incompatible with the domain these models were initially trained from,
 causing suboptimal performance.
 
+<!-- being able to use both information is crucial, and that is what LayoutLM does -->
 
+<!-- Describe a bit what LayoutLM is about, and then maybe an image of its architecture? Draw it yourself? -->
+
+<!-- How it's implemented in Prodigy and HuggingFace -->
 
 
 ### Always be correcting
