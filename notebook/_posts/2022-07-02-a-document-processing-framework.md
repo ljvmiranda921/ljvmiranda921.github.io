@@ -145,9 +145,21 @@ and the labels. However, we can solve this by creating a custom recipe that
 performs OCR to give us bounding boxes and an interface that allows us to label
 each bounding box with a corresponding value.[^2]
 
-
-
 ### Make multimodal models
+
+Another reason why document processing is such an appealing problem is that it
+is inherently multimodal&mdash;textual and visual information is readily
+available for us to use. But unfortunately, crude document processin gsolutions tend to take
+advantage of only one type:
+
+- Pure visual approaches involve a lot of complex business rules around bounding
+boxes and text placement to get the required info. They often end up relying on
+templates that may not be scaleable.
+- Pure textual approaches run on NLP pipelines on OCR'd text. However, blobs of
+text are incompatible with the domain these models were initially trained from,
+causing suboptimal performance.
+
+
 
 
 ### Always be correcting
