@@ -163,7 +163,7 @@ causing suboptimal performance.
 
 <!-- Describe a bit what LayoutLM is about, and then maybe an image of its architecture? Draw it yourself? -->
 
-<!-- How it's implemented in Prodigy and HuggingFace -->
+<!-- How it's implemented in Prodigy and HuggingFace + screenshot of the training process in Colab if it's still there -->
 
 
 ### Always be correcting
