@@ -109,8 +109,8 @@ __Figure__: Document processing solution design principles as Prodigy recipes
 Here are the Prodigy recipes we will use:
 
 - `image.manual`: is a built-in recipe that allows us to load images from a directory and add bounding box annotations.
-- `image.train-pdf`: is a custom recipe that finetunes a [LayoutLMv3 model](https://arxiv.org/abs/2204.08387) given an annotated dataset. 
-- `image.qa`: is a custom recipe that takes in a finetuned LayoutLMv3 model and a directory of test images for correction and quality assurance.
+- `image.train`: is a custom recipe that finetunes a [LayoutLMv3 model](https://arxiv.org/abs/2204.08387) given an annotated dataset. 
+- `image.correct`: is a custom recipe that takes in a finetuned LayoutLMv3 model and a directory of test images for correction and quality assurance.
 
 You can find a sample implementation of these recipes in this [Github
 repository](https://github.com/ljvmiranda921/prodigy-pdf-custom-recipe):
@@ -172,7 +172,7 @@ The [Hugging Face transformers
 library](https://huggingface.co/docs/transformers/index) allows us to finetune a
 LayoutLMv3 model without fuss. In the Github project, I included the training
 script as a [Prodigy recipe
-(`image.train-pdf`)](https://github.com/ljvmiranda921/prodigy-pdf-custom-recipe/blob/master/scripts/recipes/train.py).
+(`image.train`)](https://github.com/ljvmiranda921/prodigy-pdf-custom-recipe/blob/master/scripts/recipes/train.py).
 The only challenging part was to convert the data from the Prodigy format into
 Hugging Face's
 [Dataset](https://github.com/ljvmiranda921/prodigy-pdf-custom-recipe/blob/master/scripts/recipes/train.py)
@@ -189,8 +189,20 @@ the general flow.
 
 ### Always be correcting
 
+I still believe that even with the best-performing document processing system,
+you still need to **integrate human knowledge and experience** for correction and
+evaluation. [Human-in-the-loop](https://arxiv.org/abs/2108.00941) can serve as
+the final check for a model's output. We can reuse the corrected annotations to
+finetune the model further, thus closing the loop. 
+
+Prodigy implements this approach in most NLP-based recipes. For example, the
+[`ner.correct` recipe](https://prodi.gy/docs/recipes#ner-correct) for named
+entity recognition allows us to create gold-standard data by correcting a
+model's suggestions.  We will be implementing a similar recipe for images,
+namely, with the `image.correct` recipe.
 
 
+## Putting it all together
 
 ## Final thoughts
 
