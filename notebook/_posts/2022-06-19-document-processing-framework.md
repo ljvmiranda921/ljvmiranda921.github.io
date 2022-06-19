@@ -10,19 +10,19 @@ published: true
 header-img: /assets/png/dpt/header.png
 tags: [spacy, machine learning, prodigy, huggingface, rpa, document processing, transformers]
 description: |
-    Document processing may not be the sexiest problem of the century, but it
+    Document processing may not be the hottest problem of the century, but it
     may as well be one of the important ones. In this blog post, I'll discuss a
     framework for designing document processing solutions, with a sample
     implementation using Prodigy and Hugging Face. 
 excerpt: |
-    Document processing may not be the sexiest problem of the century, but it
+    Document processing may not be the hottest problem of the century, but it
     may as well be one of the important ones. In this blog post, I'll discuss a
     framework for designing document processing solutions, with a sample
     implementation using Prodigy and Hugging Face. 
 ---
 
 <span class="firstcharacter">E</span>xtracting information from PDFs and
-scanned documents may not be the sexiest problem of the century. You don't
+scanned documents may not be the hottest problem of the century. You don't
 [generate paintings](/notebook/2021/08/08/clip-vqgan/) nor [control robots to
 play games](/projects/2018/09/14/pfn-internship/). It's pure *busywork*,
 something that "AI" has promised to automate but failed to achieve. That's
