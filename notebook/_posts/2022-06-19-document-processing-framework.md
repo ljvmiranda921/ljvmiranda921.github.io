@@ -7,7 +7,8 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-tags: [spacy, machine learning, prodigy, huggingface, rpa, document processing]
+header-img: /assets/png/dpt/header.png
+tags: [spacy, machine learning, prodigy, huggingface, rpa, document processing, transformers]
 description: |
     Document processing may not be the sexiest problem of the century, but it
     may as well be one of the important ones. In this blog post, I'll discuss a
