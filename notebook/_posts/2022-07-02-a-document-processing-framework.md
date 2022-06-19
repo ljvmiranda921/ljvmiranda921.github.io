@@ -164,16 +164,27 @@ information. For a given document, it embeds not only the word and image
 themselves, but also their positions. Then, it learns the interactions across
 them using multiple pre-training objectives. 
 
-<!-- IMAGE: insert layoutlm architecture, in your own drawing tldraw here -->
-<!-- maybe make it left to right instead of bottom to top? -->
+![](/assets/png/dpt/layoutlmv3.png){:width="700px" style="padding:10px"}  
+__Figure:__ The LayoutLMv3 model learns from both textual and visual information and learns the interactions between them 
+{:style="text-align: center;"}
 
-<!--
-In Prodigy, most NLP pipelines have their own training function
+The [Hugging Face transformers
+library](https://huggingface.co/docs/transformers/index) allows us to finetune a
+LayoutLMv3 model without fuss. In the Github project, I included the training
+script as a [Prodigy recipe
+(`image.train-pdf`)](https://github.com/ljvmiranda921/prodigy-pdf-custom-recipe/blob/master/scripts/recipes/train.py).
+The only challenging part was to convert the data from the Prodigy format into
+Hugging Face's
+[Dataset](https://github.com/ljvmiranda921/prodigy-pdf-custom-recipe/blob/master/scripts/recipes/train.py)
+class. Once done, training is quite a breeze.
 
--->
-
-
-<!-- How it's implemented in Prodigy and HuggingFace -->
+Before wrapping up this section, note that LayoutLMv3 is just one of the many
+models that can parse document layout.  For example, you have DocFormer
+([Appalaraju, et al., 2021](https://arxiv.org/abs/2106.11539)), SelfDoc ([Li et
+al., 2021](https://arxiv.org/abs/2106.03331)), and [many
+others](https://github.com/tstanislawek/awesome-document-understanding/blob/main/topics/dla/README.md#papers).
+This means that you can switch out any architecture you want without affecting
+the general flow. 
 
 
 ### Always be correcting
