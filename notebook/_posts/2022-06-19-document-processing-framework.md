@@ -25,7 +25,7 @@ excerpt: |
 scanned documents may not be the sexiest problem of the century. You don't
 [generate paintings](/notebook/2021/08/08/clip-vqgan/) nor [control robots to
 play games](/projects/2018/09/14/pfn-internship/). It's pure *busywork*,
-something that "AI" has promised to automate but failed to achieve.[^1] That's
+something that "AI" has promised to automate but failed to achieve. That's
 why I'm interested in document processing, the task of
 **converting analog data into digital format**, as it evokes a subtle
 challenge&mdash;a problem statement so simple yet tough to solve.
@@ -144,7 +144,8 @@ One limitation of this approach is that we didn't do OCR because the text data
 is already available. The `image.manual` recipe only stores the bounding boxes
 and the labels. However, we can solve this by creating a custom recipe that
 performs OCR to give us bounding boxes and an interface that allows us to label
-each bounding box with a corresponding value.[^2]
+each bounding box with a corresponding value. I'll be creating a sample project
+that demonstrates this in the future.
 
 ### Make multimodal models
 
@@ -240,18 +241,3 @@ correct your model's output&mdash;and one big model won't cut it.
 
 I hope that this framework can help you in your automation challenges. Feel
 free to drop a comment below to share your thoughts!
-
-### Footnotes
-
-[^1]:
-
-    I resonate with [Tom MacWright's
-    tweet](https://twitter.com/tmcw/status/1511804741747154944) on how much of
-    the progress in ML right now focuses on automating the creative facets of
-    the human condition, such as writing and art. This [Tweet thread by Freya
-    Holmér](https://twitter.com/FreyaHolmer/status/1532261886078631940?s=20&t=d0vBdUKklmHq-8G2mWYecw)
-    also gives an interesting view of how AI generated art can affect the craft.
-
-[^2]:
-
-    I will be creating a sample project in the future demonstrating this.
