@@ -152,7 +152,7 @@ is inherently **multimodal**&mdash;textual and visual information is readily
 available for us to use. But unfortunately, crude document processing solutions tend to take
 advantage of only one type:
 
-- Image-centric approaches involve a lot of complex business rules around bounding
+- Image-centric approaches involve a lot of complex business rules surrounding bounding
 boxes and text placement to get the required info. They often end up relying on
 templates that may not be scaleable.
 - Text-centric approaches run on NLP pipelines on OCR'd text. However, blobs of
