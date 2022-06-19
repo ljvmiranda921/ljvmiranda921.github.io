@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "A framework for designing document processing solutions"
-date: 2022-07-02
+date: 2022-06-19
 category: notebook
 comments: true
 author: "LJ MIRANDA"
@@ -201,8 +201,26 @@ entity recognition allows us to create gold-standard data by correcting a
 model's suggestions.  We will be implementing a similar recipe for images,
 namely, with the `image.correct` recipe.
 
+![](/assets/png/dpt/prodigy_correct.gif){:width="500px" style="padding:10px"}  
+__Figure:__ Using the `image.correct` custom recipe, we can correct the model annotations before saving it to the database
+{:style="text-align: center;"}
 
-## Putting it all together
+Note that the example above follows a streaming pattern: the model performs
+inference for every image it comes across.  This pattern is helpful if you're
+correcting in real-time or getting the images from an external API. On the other
+hand, you can also correct by batch. Here, you can let the model perform batch
+inference on a finite set of data, convert it to [Prodigy's data
+format](https://prodi.gy/docs/api-interfaces#image_manual), and use the built-in
+`image.manual` recipe for correction. 
+
+![](/assets/png/dpt/image_correct_stream.png){:width="700px" style="padding:10px"}  
+__Figure:__ Streaming approach for correction. Model performs inference for every single image in the stream
+{:style="text-align: center;"}
+
+![](/assets/png/dpt/image_correct_batch.png){:width="700px" style="padding:10px"}  
+__Figure:__ Batch approach for correction. Model performs batch inference, then we convert the annotations into
+the Prodigy format then pass it on to the `image.manual` recipe.
+{:style="text-align: center;"}
 
 ## Final thoughts
 
