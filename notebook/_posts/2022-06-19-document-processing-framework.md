@@ -55,8 +55,9 @@ this mechanism.
 
 - **Make multimodal models**: we don't just rely on text whenever we analyze
 a document. Instead, we take all information (position, text size, etc.) as
-context. Being able to use all these features is vital. A pure OCR or a pure
-text-based approach is suboptimal to solve this task.
+context. Being able to use all these features is vital. A pure OCR (optical
+character recognition) or a pure text-based approach is suboptimal to solve
+this task.
 
 - **Always be correcting**: OCR and document layout models aren't always
 perfect, so it's essential to keep the human-in-the-loop to correct your
@@ -69,11 +70,12 @@ Face](huggingface.co) in the next section.
 
 ## Framework in action: form understanding
 
-We'll focus on the task of **form layout analysis.** Unlike tables, forms vary in
-their template, confusing even the most complex business rules.  We will be
-using the [**FUNSD dataset**](https://guillaumejaume.github.io/FUNSD/) for this
-task. It consists of noisy scanned documents where the challenge is to determine
-the header, question, answer, and other relevant information.
+We'll focus on the task of **form layout analysis.** Unlike tables, forms vary
+in their template, confusing even the most complex business rules.  We will be
+using the [**FUNSD**](https://guillaumejaume.github.io/FUNSD/) (Form
+Understanding in Noisy Scanned Documents) dataset for this task. It consists of
+noisy scanned documents where the challenge is to determine the header,
+question, answer, and other relevant information.
 
 > FUNSD: Form Understanding in Nosy Scanned Documents is a dataset for text
 > detection, optical character recognition, spatial layout analysis, and form
