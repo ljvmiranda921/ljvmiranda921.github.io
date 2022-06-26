@@ -5,6 +5,7 @@ title: "A framework for designing document processing solutions"
 date: 2022-06-19
 category: notebook
 comments: true
+highlight: true
 author: "LJ MIRANDA"
 published: true
 header-img: /assets/png/dpt/header.png
