@@ -10,7 +10,9 @@ cookie-free and open source).
 
 ## Set-up
 
-Make sure that you have bundler and Ruby in your system:
+Make sure that you have [bundler](https://bundler.io/) and
+[Ruby](https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/) in
+your system:
 
 ```shell
 gem install bundler
