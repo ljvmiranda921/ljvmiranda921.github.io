@@ -5,7 +5,6 @@ title: "Your train-test split may be doing you a disservice"
 date: 2022-08-30
 category: notebook
 comments: true
-highlight: true
 author: "LJ MIRANDA"
 published: true
 tags: [machine learning, adversarial splitting]
