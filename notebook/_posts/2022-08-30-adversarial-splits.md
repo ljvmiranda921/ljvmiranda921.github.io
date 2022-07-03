@@ -11,15 +11,15 @@ tags: [machine learning, adversarial splitting]
 description: |
     Have you ever encountered a problem where your model works well in your test
     set but doesn't perform well in the wild? It's likely because your test set
-    does not reflect the reality of your domain, causing us to overestimate our
-    model's performance. In this blog post, I'll discuss alternative ways to
-    split data and examine their effect on common ML and NLP benchmarks. 
+    does not reflect the reality of your domain, overestimating our model's
+    performance. In this blog post, I'll discuss alternative ways to split data
+    and examine their effect on machine learning benchmarks. 
 excerpt: |
     Have you ever encountered a problem where your model works well in your test
     set but doesn't perform well in the wild? It's likely because your test set
-    does not reflect the reality of your domain, causing us to overestimate our
-    model's performance. In this blog post, I'll discuss alternative ways to
-    split data and examine their effect on common ML and NLP benchmarks. 
+    does not reflect the reality of your domain, overestimating our model's
+    performance. In this blog post, I'll discuss alternative ways to split data
+    and examine their effect on machine learning benchmarks. 
 ---
 
 <span class="firstcharacter">F</span>irst, let's recap a typical data science
