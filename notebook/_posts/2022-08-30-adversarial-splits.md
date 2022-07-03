@@ -47,11 +47,8 @@ translate into production.
 
 In this blog post, I want to discuss **alternative ways to split our datasets to
 provide more realistic performance.** I will call all methods under this
-umbrella as **adversarial splits**.[^1] I also want to use this opportunity to
-introduce my **Python library for adversarial splits called**
-[**vs-split**](https://github.com/ljvmiranda921/vs-split) (vs. as in "versus").
-I will be using this for the code snippets and demo. Lastly, note that some
-examples are geared towards NLP, as I'm familiar with this domain.
+umbrella as **adversarial splits**.[^1] Lastly, note that some examples are
+geared towards NLP, as I'm familiar with this domain.
 
 ## Splitting by maximizing divergence
 
