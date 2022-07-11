@@ -48,7 +48,7 @@ translate into production.
 In this blog post, I want to discuss **alternative ways to split our datasets to
 provide more realistic performance.** I will call all methods under this
 umbrella as **adversarial splits**.[^1] Lastly, note that some examples are
-geared towards NLP, as I'm familiar with this domain.
+geared towards NLP, as I'm more familiar with this domain.
 
 ## Splitting by maximizing divergence
 
