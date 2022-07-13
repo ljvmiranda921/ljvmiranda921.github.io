@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-header-img: /assets/png/dpt/header.png
+header-img: /assets/png/registry/header.png
 tags: [spacy, internals, spancat, architecture, software design]
 description: |
     This blog post illustrates how spaCy's registry system works by walking through
