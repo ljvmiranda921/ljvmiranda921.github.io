@@ -178,7 +178,7 @@ then head over to [this blogpost](https://explosion.ai/blog/spancat) for a brief
 overview.[^2]  In summary, `spancat` is
 **a highly-configurable component that performs span labelling &agrave; la
 NER.** It does more than NER though because it can handle overlapping, long, and
-fragmented spans. It's architecture looks like this:
+fragmented spans. Its architecture looks like this:
 
 [^2]: 
 
@@ -429,7 +429,7 @@ being able to access the components through the registry allows me to:
 
 - Debug components by piecemeal: if I'm writing a suggester function, I don't
 need to spawn a spaCy project just to see how it works. I will just call
-`reg.get("miscs", "spacy.my_custom_suggester.v1")` for testing.
+`reg.get("misc", "my_custom_suggester.v1")` for testing.
 - Understand that I can substitute any component in the spancat pipeline for
 another. For example, I can change the scorer function to `Softmax` instead of
 `LinearLogistic`.
