@@ -52,6 +52,14 @@ geared towards NLP, as I'm more familiar with this domain.
 
 ## Splitting by maximizing divergence
 
+<!--
+
+split by checking the worst split
+contrary to iid
+but sometimes, iid doesn't hold
+
+-->
+
 ## Splitting by heuristic
 
 ## Splitting by perturbation
