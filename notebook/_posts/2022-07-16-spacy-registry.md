@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "spaCy Internals: Spancat architecture walkthrough"
-date: 2022-07-18
+date: 2022-07-16
 category: notebook
 comments: true
 author: "LJ MIRANDA"
