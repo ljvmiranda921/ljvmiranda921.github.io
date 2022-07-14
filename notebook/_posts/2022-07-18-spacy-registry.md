@@ -231,9 +231,10 @@ suggester_factory = reg.get("misc", "spacy.ngram_suggester.v1")
 suggester: Callable = suggester_factory(sizes=[1, 2, 3])
 ```
 
-The factory approach is similar to our earlier example in `load_data`. However,
-this time, we now have access to the `suggester` function, and we can pass any
-`Doc` objects (`Iterable[Doc]`) to see their candidate spans. Let's do that now:
+The factory approach is similar to our earlier example in `build_pdf_handler`.
+However, this time, we now have access to the `suggester` function, and we can
+pass any `Doc` objects (`Iterable[Doc]`) to see their candidate spans. Let's do
+that now:
 
 ```python
 candidates = suggester(docs)
