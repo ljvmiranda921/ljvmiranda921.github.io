@@ -39,11 +39,11 @@ that are not wholly representative of the actual domain** ([Gorman and Bedrick,
 It's also possible that the training and test sets look very similar,
 encouraging the model to **memorize the training set without actually learning
 anything**. This behavior results in overestimated performances that don't
-translate into production.
+translate well into production.
 
 > It turns out that random and standard splits can lead to test sets that are
 > not wholly representative of the actual domain...resulting into overestimated
-> performance that don't translate into production.
+> performance that don't translate well into production.
 
 In this blog post, I want to discuss **alternative ways to split our datasets to
 provide more realistic performance.** I will call all methods under this
@@ -52,13 +52,7 @@ geared towards NLP, as I'm more familiar with this domain.
 
 ## Splitting by maximizing divergence
 
-<!--
 
-split by checking the worst split
-contrary to iid
-but sometimes, iid doesn't hold
-
--->
 
 ## Splitting by heuristic
 
