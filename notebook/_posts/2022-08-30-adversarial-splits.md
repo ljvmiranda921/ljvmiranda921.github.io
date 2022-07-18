@@ -38,7 +38,7 @@ that are not wholly representative of the actual domain** ([Gorman and Bedrick,
 2019](#gorman2019standard), and [Søgaard et. al., 2021](#sogaard2021random)).
 It's also possible that the training and test sets look very similar,
 encouraging the model to **memorize the training set without actually learning
-anything**. This behavior results in overestimated performances that don't
+anything** ([Goldman et al., 2022](#goldman2022morph)). This behavior results in overestimated performances that don't
 translate well into production.
 
 > It turns out that random and standard splits can lead to test sets that are
@@ -118,6 +118,7 @@ IDEALISTIC <-> PRACTICAL
 
 - <a id="sogaard2021random">Anders Søgaard, Sebastian Ebert, Jasmijn Bastings, and Katja Filippova.</a> 2021. We Need To Talk About Random Splits. In *Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume*, pages 1823–1832, Online. Association for Computational Linguistics.
 - <a id="gorman2019standard">Kyle Gorman and Steven Bedrick.</a> 2019. We Need to Talk about Standard Splits. In *Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics*, pages 2786–2791, Florence, Italy. Association for Computational Linguistics.
+- <a id="goldman2022morph">Omer Goldman, David Guriel, and Reut Tsarfaty.</a> 2022. (Un)solving Morphological Inflection: Lemma Overlap Artificially Inflates Models’ Performance. In Proceedings of the *60th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)*, pages 864–870, Dublin, Ireland. Association for Computational Linguistics.
 - <a id="gilmer2020robustness">Justin Gilmer.</a> The Robustness Problem. Presentation slides at [http://isl.stanford.edu/talks/talks/2020q1/justin-gilmer/slides.pdf](http://isl.stanford.edu/talks/talks/2020q1/justin-gilmer/slides.pdf)
 
 
