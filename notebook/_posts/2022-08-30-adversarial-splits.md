@@ -70,6 +70,20 @@ with the "worst" possible test set?**
 
 <!-- talk about data augmentation, this is an offshoot of that -->
 
+## Final thoughts
+
+<!-- recap -->
+<!-- i find three possible avenues to solve this problem (from hardest to easiest)
+
+
+IDEALISTIC <-> PRACTICAL
+
+
+- rebuild the whole ML ecosystem
+- create better benchmarks
+- add systems for check and balances
+-->
+
 
 ## References
 
