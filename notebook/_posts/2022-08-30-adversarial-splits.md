@@ -73,15 +73,20 @@ the right combination of train and test examples that maximizes this metric is
 an NP-hard problem, so [Sogaaard et al.  (2021)](#sogaard2021random) used an
 approximate approach involving k-nearest neighbors with a ball-tree algorithm.
 
-If we run this method through MNIST, then we can see how different the training and test examples are:
 
-<!-- add MNIST example -->
+<!---
+
+If we run this method through MNIST, then we can see how different the training and test examples are:
 
 It might not look obvious in text datasets, but here are some examples from the [English Wikineural dataset](https://paperswithcode.com/dataset/wikineural).
 
-<!-- displaCy NER for English wikineural-->
-
 When testing
+
+-->
+
+
+
+
 
 
 
