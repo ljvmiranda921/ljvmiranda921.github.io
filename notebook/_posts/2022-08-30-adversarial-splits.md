@@ -52,11 +52,23 @@ geared towards NLP, as I'm more familiar with this domain.
 
 ## Splitting by maximizing divergence
 
+One of the major assumptions in machine learning is that the **training and test
+sets are from the same distribution**, i.e., they are [independent and
+identically distributed
+(i.i.d.)](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables).
+But let's drop that for a moment. We know that the i.i.d. assumption can lead to
+grossly overestimated model performances, but **what if we evaluate the model
+with the "worst" possible test set?**
+
 
 
 ## Splitting by heuristic
 
+<!-- talk about domain expertise -->
+
 ## Splitting by perturbation
+
+<!-- talk about data augmentation, this is an offshoot of that -->
 
 
 ## References
