@@ -58,20 +58,6 @@ geared towards NLP, as I'm more familiar with this domain.
 
 ## Splitting by perturbation
 
-<!--
-Intro
-- data science projects usually...
-- introduce standard splits from common benchmarks
-- introduce random splits what you'd usually do
--->
-
-
-<!--
-
-
-
-
--->
 
 ## References
 
