@@ -30,7 +30,7 @@ and compute the score using a held-out test set.
 Most of the time, we shuffle our data before splitting, creating **random
 splits**. For some benchmark datasets like
 [MNIST](http://yann.lecun.com/exdb/mnist/) or
-[ConLL-2003](https://huggingface.co/datasets/conll2003), these partitions are
+[OntoNote 5.0](https://catalog.ldc.upenn.edu/LDC2013T19), these partitions are
 already included in the task, providing us with **standard splits**. 
 
 However, it turns out that random and standard splits can lead to **test sets
@@ -45,20 +45,44 @@ translate well into production.
 > not wholly representative of the actual domain...resulting into overestimated
 > performance that don't translate well into production.
 
-In this blog post, I want to discuss **alternative ways to split our datasets to
-provide more realistic performance.** I will call all methods under this
-umbrella as **adversarial splits**.[^1] Lastly, note that some examples are
-geared towards NLP, as I'm more familiar with this domain.
+This blog post discusses **alternative ways to split our datasets to provide
+more realistic performance.** I will call all methods under this umbrella as
+**adversarial splits**.[^1] I'll also investigate **how adversarial splits
+affect model performance on the named-entity recognition (NER) task** using
+[spaCy's transition-based NER](https://spacy.io/api/entityrecognizer) and the
+WikiNeural, WNUT17, and OntoNotes 5.0 datasets.
+
+> I want to take this opportunity to introduce a Python package that
+> I'm currently working on, ⚔[️ **`vs-split`**](https://github.com/ljvmiranda921/vs-split). It's still a work-in-progress, but it implements some techniques I'll mention throughout the post.
 
 ## Splitting by maximizing divergence
 
-One of the major assumptions in machine learning is that the **training and test
-sets are from the same distribution**, i.e., they are [independent and
-identically distributed
-(i.i.d.)](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables).
+A central assumption in machine learning is that the **training and test sets
+are from the same distribution**, i.e., they are [independent and identically
+distributed
+(i.i.d.)](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables) ([Gilmer, 2020](#gilmer2020robustness)).
 But let's drop that for a moment. We know that the i.i.d. assumption can lead to
 grossly overestimated model performances, but **what if we evaluate the model
 with the "worst" possible test set?**
+
+We can obtain the "worst" test set by **ensuring that the train and test sets
+have different distributions**, i.e., they're wholly divergent. We can measure
+this value using a metric called the [Wasserstein
+distance](https://en.wikipedia.org/wiki/Wasserstein_metric). However, finding
+the right combination of train and test examples that maximizes this metric is
+an NP-hard problem, so [Sogaaard et al.  (2021)](#sogaard2021random) used an
+approximate approach involving k-nearest neighbors with a ball-tree algorithm.
+
+If we run this method through MNIST, then we can see how different the training and test examples are:
+
+<!-- add MNIST example -->
+
+It might not look obvious in text datasets, but here are some examples from the [English Wikineural dataset](https://paperswithcode.com/dataset/wikineural).
+
+<!-- displaCy NER for English wikineural-->
+
+When testing
+
 
 
 
@@ -89,6 +113,7 @@ IDEALISTIC <-> PRACTICAL
 
 - <a id="sogaard2021random">Anders Søgaard, Sebastian Ebert, Jasmijn Bastings, and Katja Filippova.</a> 2021. We Need To Talk About Random Splits. In *Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume*, pages 1823–1832, Online. Association for Computational Linguistics.
 - <a id="gorman2019standard">Kyle Gorman and Steven Bedrick.</a> 2019. We Need to Talk about Standard Splits. In *Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics*, pages 2786–2791, Florence, Italy. Association for Computational Linguistics.
+- <a id="gilmer2020robustness">Justin Gilmer.</a> The Robustness Problem. Presentation slides at [http://isl.stanford.edu/talks/talks/2020q1/justin-gilmer/slides.pdf](http://isl.stanford.edu/talks/talks/2020q1/justin-gilmer/slides.pdf)
 
 
 
