@@ -50,7 +50,13 @@ more realistic performance.** I will call all methods under this umbrella as
 **adversarial splits**.[^1] I'll also investigate **how adversarial splits
 affect model performance on the named-entity recognition (NER) task** using
 [spaCy's transition-based NER](https://spacy.io/api/entityrecognizer) and the
-WikiNeural, WNUT17, and OntoNotes 5.0 datasets.
+WikiNeural, WNUT17, and ConLL-2003 datasets.
+
+| Dataset              | Source                                                                                                             | Description                                                                                                                                          |
+|----------------------|--------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| WikiNeural (English) | WikiNEuRal: Combined Neural and Knowledge-based Silver Data Creation for Multilingual NER (Tedeschi, et al., 2021) | Datset based from Wikipedia that takes advantage of knowledge-based approaches and neural models to create a silver dataset.                         |
+| WNUT17               | Results of the WNUT2017 Shared Task on Novel and Emerging Entity Recognition (Derczynski, et al., 2017)            | Dataset consisting of unusual, previously-unseen entities in the context of emerging discussions.                                                    |
+| CoNLL 2003           | Introduction to the CoNLL-2003: Shared Task: Language-Independent Named Entity Recognition (Sang et al., 2003)     | Standard NER Benchmark dataset where the English data was taken from the Reuters Corpus. It consists of stories between August 1996 and August 1997. |
 
 > I want to take this opportunity to introduce a Python package that
 > I'm currently working on, ⚔[️ **`vs-split`**](https://github.com/ljvmiranda921/vs-split). It's still a work-in-progress, but it implements some techniques I'll mention throughout the post.
@@ -73,20 +79,15 @@ the right combination of train and test examples that maximizes this metric is
 an NP-hard problem, so [Sogaaard et al.  (2021)](#sogaard2021random) used an
 approximate approach involving k-nearest neighbors with a ball-tree algorithm.
 
-
-<!---
-
-If we run this method through MNIST, then we can see how different the training and test examples are:
-
-It might not look obvious in text datasets, but here are some examples from the [English Wikineural dataset](https://paperswithcode.com/dataset/wikineural).
-
-When testing
-
--->
+If we run this method through the three datasets above, we can observe a short
+drop in test performance (measured by the Precision / Recall / F-score):
 
 
-
-
+| Dataset              | Standard Split (P/R/F) | Wasserstein Split (P/R/F) |
+|----------------------|------------------------|---------------------------|
+| WikiNeural (English) | 0.86 / 0.85 / 0.85     | **0.85 / 0.82 / 0.84**    |
+| WNUT17               | 0.47 / 0.45 / 0.46     | **0.41 / 0.25 / 0.31**    |
+| CoNLL 2003 (English) | 0.86 / 0.86 / 0.86     | **0.87 / 0.84 / 0.85**    |
 
 
 
