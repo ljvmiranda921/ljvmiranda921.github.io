@@ -120,6 +120,7 @@ IDEALISTIC <-> PRACTICAL
 - <a id="gorman2019standard">Kyle Gorman and Steven Bedrick.</a> 2019. We Need to Talk about Standard Splits. In *Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics*, pages 2786–2791, Florence, Italy. Association for Computational Linguistics.
 - <a id="goldman2022morph">Omer Goldman, David Guriel, and Reut Tsarfaty.</a> 2022. (Un)solving Morphological Inflection: Lemma Overlap Artificially Inflates Models’ Performance. In Proceedings of the *60th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers)*, pages 864–870, Dublin, Ireland. Association for Computational Linguistics.
 - <a id="gilmer2020robustness">Justin Gilmer.</a> The Robustness Problem. Presentation slides at [http://isl.stanford.edu/talks/talks/2020q1/justin-gilmer/slides.pdf](http://isl.stanford.edu/talks/talks/2020q1/justin-gilmer/slides.pdf)
+- <a id="goot2021splits">Rob van der Goot. 2021</a>. We Need to Talk About train-dev-test Splits. In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, pages 4485–4494, Online and Punta Cana, Dominican Republic. Association for Computational Linguistics.
 
 
 
