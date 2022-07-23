@@ -215,27 +215,35 @@
  /**
   * Tables
   */
- table {
-   margin-bottom: $spacing-unit;
-   width: 100%;
-   text-align: $table-text-align;
-   color: lighten($text-color, 18%);
-   border-collapse: collapse;
-   border: 1px solid $grey-color-light;
-   tr {
-     &:nth-child(even) {
-       background-color: lighten($grey-color-light, 6%);
-     }
-   }
-   th, td {
-     padding: ($spacing-unit / 6) ($spacing-unit / 10);
-   }
-   th {
-     background-color: lighten($grey-color-light, 3%);
-     border: 1px solid darken($grey-color-light, 4%);
-     border-bottom-color: darken($grey-color-light, 12%);
-   }
-   td {
-     border: 1px solid $grey-color-light;
-   }
- }
+table {
+  margin-bottom: $spacing-unit;
+  width: 100%;
+  text-align: $table-text-align;
+  color: lighten($text-color, 18%);
+  border-collapse: collapse;
+  // border: 1px solid $grey-color-light;
+
+  tbody tr {
+    &:last-child {
+      border-bottom: 3px solid darken($grey-color-light, 4%);
+      border-bottom-color: darken($grey-color-light, 12%);
+    }
+  }
+
+  th,
+  td {
+    padding: ($spacing-unit / 6) ($spacing-unit / 10);
+  }
+
+  th {
+    //    background-color: lighten($grey-color-light, 3%);
+    border-top: 3px solid darken($grey-color-light, 4%);
+    border-top-color: darken($grey-color-light, 12%);
+    border-bottom: 1px solid darken($grey-color-light, 4%);
+    border-bottom-color: darken($grey-color-light, 12%);
+  }
+
+  // td {
+  //   // border: 1px solid $grey-color-light;
+  // }
+}
