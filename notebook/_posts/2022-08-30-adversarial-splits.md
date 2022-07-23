@@ -89,15 +89,24 @@ drop in test performance (measured by the Precision / Recall / F-score):
 | WNUT17               | 0.47 / 0.45 / 0.46     | **0.41 / 0.25 / 0.31**    |
 | CoNLL 2003 (English) | 0.86 / 0.86 / 0.86     | **0.87 / 0.84 / 0.85**    |
 
+Below you'll find the [displaCy output](https://spacy.io/usage/visualizers) from
+WikiNEuRal's adversarial test split. I admit that I cherry-picked some of these
+examples, but one apparent pattern I saw is the presence of numbers (currencies,
+dates, scores) in the adversarial test. 
 
-If we compare the test examples obtained from the Wasserstein split from those
-in the standard split, we notice some subtle differences (below are examples from the WikiNEuRal dataset):
+<!--
+One possible explanation is that the knn search uses the countvectorizer (token counts)
+as its features. 
+-->
+
 
 <!--
 # Template
 style="padding: 20px; line-height: 2.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 18px">
 -->
 
+
+<!-- mention countvectorizer as a way to maximize divergence -->
 
 <div style="position:relative; overflow: hidden; width;100%; padding-top: 56.25%">
 <iframe src="/assets/png/splits/wasserstein-sample-00.html" height="300" width="720" style="border:1px solid #ddd;border-radius:10px;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%"></iframe>
