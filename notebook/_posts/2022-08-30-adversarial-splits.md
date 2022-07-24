@@ -46,7 +46,7 @@ translate well into production.
 > performance that don't translate well into production.
 
 This blog post discusses **alternative ways to split our datasets to provide
-more realistic performance.** I will call all methods under this umbrella as
+more realistic performance.** I will call all methods under this umbrella
 **adversarial splits**.[^1] I'll also investigate **how adversarial splits
 affect model performance on the named-entity recognition (NER) task** using
 [spaCy's transition-based NER](https://spacy.io/api/entityrecognizer) and the
@@ -138,10 +138,20 @@ text.
 </div>
 <br/>
 
-
 ## Splitting by heuristic
 
-<!-- talk about domain expertise -->
+In the previous section, we talked about how we can split the training and test
+data by maximizing their divergence. We framed it as an optimization problem
+where we attempted to maximize the Wasserstein distance using the k-nearest
+neighbor approach. This section will discuss how we can split datasets using
+heuristics from domain expertise. Specifically, we'll look into splitting by
+document length and by morphological attributes.
+
+<!-- document length:theory -->
+
+
+<!-- morphs: talk about inflections for quite a bit -->
+
 
 ## Splitting by perturbation
 
