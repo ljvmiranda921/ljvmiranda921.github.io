@@ -90,9 +90,12 @@ drop in test performance (measured by the Precision / Recall / F-score):
 | CoNLL 2003 (English) | 0.86 / 0.86 / 0.86     | **0.87 / 0.84 / 0.85**    |
 
 Below you'll find the [displaCy output](https://spacy.io/usage/visualizers) from
-WikiNEuRal's adversarial test split. I admit that I cherry-picked some of these
-examples, but one apparent pattern I saw is the presence of numbers (currencies,
-dates, scores) in the adversarial test. 
+WikiNEuRal's adversarial test split. I admit that I *cherry-picked* some of
+these examples, but one apparent pattern I saw is the presence of numbers
+(currencies, dates, scores) in the adversarial test set. One possible explanation is
+that the k-nearest neighbors search [uses token counts as its
+feature](https://github.com/google-research/google-research/blob/master/talk_about_random_splits/probing/probing_utils.py#L152),
+dividing the dataset based on token frequency.
 
 <!--
 One possible explanation is that the knn search uses the countvectorizer (token counts)
@@ -105,12 +108,35 @@ as its features.
 style="padding: 20px; line-height: 2.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 18px">
 -->
 
+**Example 1** 
 
-<!-- mention countvectorizer as a way to maximize divergence -->
+A text with unusual formatting. The way the text laid out the scores in this
+sports news article made it a bit incomprehensible.
 
 <div style="position:relative; overflow: hidden; width;100%; padding-top: 56.25%">
 <iframe src="/assets/png/splits/wasserstein-sample-00.html" height="300" width="720" style="border:1px solid #ddd;border-radius:10px;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%"></iframe>
 </div>
+<br/>
+
+**Example 2**
+
+Financial text with a lot of currencies and dates. The WikiNEuRal dataset only
+has `PER`, `ORG`, `LOC`, and `MISC` as its entity types.
+
+<div style="position:relative; overflow: hidden; width;100%; padding-top: 56.25%">
+<iframe src="/assets/png/splits/wasserstein-sample-01.html" height="300" width="720" style="border:1px solid #ddd;border-radius:10px;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%"></iframe>
+</div>
+<br/>
+
+**Example 3**
+
+Similar to the previous example, with dates, currencies, and other numerical
+text.
+
+<div style="position:relative; overflow: hidden; width;100%; padding-top: 56.25%">
+<iframe src="/assets/png/splits/wasserstein-sample-02.html" height="300" width="720" style="border:1px solid #ddd;border-radius:10px;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%"></iframe>
+</div>
+<br/>
 
 
 ## Splitting by heuristic
