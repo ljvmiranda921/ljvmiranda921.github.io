@@ -42,7 +42,7 @@ The table below illustrates this concept.
 |         | Tools                                    | Systems                                                    |
 |---------|------------------------------------------|------------------------------------------------------------|
 | Analog Interface  | Notebooks, pen, paper, sticky notes      | Bullet journaling, focus planners, *Zettelkasten* (slip-box) |
-| Digital Interface | Obsidian, RoamResearch, Notion, Emacs org-mode, Notepad | *Zettelkasten* (slip-box), productivity integrations, etc.   |
+| Digital Interface | Obsidian, RoamResearch, Notion, Emacs org-mode, Notepad, Evernote | *Zettelkasten* (slip-box), productivity integrations, etc.   |
 
 
 You can use the same system even if the tool is digital or analog.
