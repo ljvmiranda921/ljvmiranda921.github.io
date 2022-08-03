@@ -86,6 +86,34 @@ later&mdash; a blog post, documentation, etc.
 
 ## Sparks intentionality
 
+I find writing a **conscious effort**. There's physical exertion in each stroke:
+my muscles tense, my fingers guide the pen, and I feel the friction as it
+interacts with the paper. One thing that I appreciate when writing on paper is
+that I feel more present. It signals my brain that this activity is not just
+typing or writing, but thinking.
+
+Sure, there are tradeoffs; sometimes, I think faster than I write, but I see
+this as a feature: it forces me to **write down the salient aspects of my
+thinking**, not verbatim. On the other hand, it's pretty easy to fall into
+mindless writing when using a keyboard. It's even easier to fall into the
+temptation of copy-pasting from the source material. The influx of information,
+coupled with the convenience of note-taking apps, makes it easier to collect
+rather than synthesize.
+
+Perhaps this is why *Zettelkasten* worked well during the time of physical
+slip-boxes. Information was not cheap. You have to physically go to a library,
+borrow some books, highlight important passages, and return them afterward.
+Sure, you can copy paragraphs word per word, but the physical exertion of
+writing can tire you down. So instead, you'll paraphrase or synthesize that
+information. It becomes a necessity than a guideline. When thinking with pen and
+paper, I feel intentional.
+
+Analog tools also allow me to **express my intention freely.** For example, when
+using a blank notebook, I can write anywhere: begin from the bottom, on the
+margins, or intersperse it with quick diagrams or illustrations. On the other
+hand, note-taking apps usually force me to think line by line. It's not bad, but
+it misses out on several affordances that pen and paper provides. 
+
 ## Provides history
 
 
