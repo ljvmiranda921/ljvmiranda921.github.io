@@ -61,7 +61,7 @@ feeling of productivity in the absence of output**, [like
 quicksand](https://twitter.com/kevinbaker/status/1433167944243159045?s=20&t=oNGbYy5v2Sr4KdQehebfew).
 It hampers me from doing actual work.
 
-<!-- picture of blank midori -->
+<!-- picture of midori -->
 
 The simplicity of pen and paper allows me to shape my system as I go along.
 Mine's quite plain: an A5 notebook for work, a smaller notebook for
@@ -70,7 +70,7 @@ information**, so I don't need to tag and categorize them as we do with batched
 data. Instead, using time as an index and sticky notes to mark slices of info
 solves most of my use cases.
 
-<!-- picture of midori with different numbers -->
+<!-- picture of midori notebok with sticky notes in between -->
 
 Graph notebooks like [Obsidian](https://obsidian.md/) think of information as
 **batched data**. So you have a set of notes (samples) that you try to
@@ -79,9 +79,6 @@ imagine a company wiki presented as streaming info!  But I don't think it aids
 me in how I usually think. When thinking with pen and paper, I prefer managing
 streamed information first, then converting it into batched information
 later&mdash; a blog post, documentation, etc.
-
-<!-- my obsidian graph? -->
-<!-- more pictures of notebooks? maybe your web notebooks -->
 
 
 ## Sparks intentionality
@@ -100,6 +97,8 @@ temptation of copy-pasting from the source material. The influx of information,
 coupled with the convenience of note-taking apps, makes it easier to collect
 rather than synthesize.
 
+<!-- picture of your webbie notebooks  -->
+
 Perhaps this is why *Zettelkasten* worked well during the time of physical
 slip-boxes. Information was not cheap. You have to physically go to a library,
 borrow some books, highlight important passages, and return them afterward.
@@ -114,6 +113,8 @@ margins, or intersperse it with quick diagrams or illustrations. On the other
 hand, note-taking apps usually force me to think line by line. It's not bad, but
 it misses out on several affordances that pen and paper provides. 
 
+<!-- picture of midori with blank page -->
+
 ## Provides history
 
 **Writing with ink captures more than words.** It captures my mood and my mistakes.
@@ -122,6 +123,8 @@ or hide any error we made in our lab notebooks. Instead, we should mark it with
 a strikethrough. I brought this practice up to this day, and it's nice to see
 the small corrections, marginalia, and scribbles representing the unrefined
 parts of my thought process.
+
+<!-- picture of your actual notes -->
 
 It's fun to go back to my old notes and say: *"Oh, I was a little bit stressed
 when I wrote this down."* There's an archival element in it that digital formats
@@ -139,6 +142,8 @@ using a fountain pen with archival ink. This type of ink is waterproof and
 ensures that my writing won't fade over time. Sometimes, I just don't let this
 stress me out, and I opt for the inks I love and enjoy. My notes contain
 streaming information, after all.
+
+<!-- picture of your fountain pen collection -->
 
 
 [^1]:
