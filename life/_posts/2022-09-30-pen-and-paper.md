@@ -28,10 +28,9 @@ these *analog* tools, and it's a delightful complement to my software job.
 In this blog post, I'll discuss why I enjoy working with my **"analog tools for
 thought."**[^1] I'll talk about it in three dimensions&mdash;*simplicity*,
 *intentionality*, and *historicity*. Note that this post isn't a slight to
-digital apps and systems; I do use them, and they also embody the same qualities
-(just executed differently). I hope this entices you to start putting more
-intention when thinking with pen and paper.
-
+digital apps and systems; I do use them, and they also embody the same
+qualities, just executed differently. I hope this entices you to start putting
+more intention when thinking with pen and paper.
 
 ## Simpler interface
 
@@ -55,13 +54,34 @@ this complexity**.
 Pen and paper is, *well*, pen and paper! There's just a one-to-one
 correspondence between me and the tool. Sometimes, I find digital apps urging me
 to integrate with another application or extension: connect to calendar, install
-*this*, install *that*. They force me to get into a "system" rather than focus
-on what the tool provides. It's overwhelming. In a way, it hampers me from
-achieving my goal, i.e., to perform knowledge work.
+*this*, install *that* (and sure, it may also be my own *damn* fault). They
+**force me to get into a "system"** rather than focus on what the tool provides.
+It's overwhelming. Over-optimization leads to *empty work*, giving me **a
+feeling of productivity in the absence of output**, [like
+quicksand](https://twitter.com/kevinbaker/status/1433167944243159045?s=20&t=oNGbYy5v2Sr4KdQehebfew).
+It hampers me from doing actual work.
 
 <!-- picture of blank midori -->
 
-<!-- empty work -->
+Focusing on pen and paper allows me to shape my system as I go along.  Mine's
+quite simple: an A5 notebook for work, a smaller notebook for journalling, and a
+pen. I like to think of thoughts as **streaming information**, so I don't need to tag
+and categorize them as we do with batched data. Instead, using time as an index
+and sticky notes to mark slices of info solves most mof my use cases.
+
+<!-- picture of midori with different numbers -->
+
+Graph notebooks like [Obsidian](https://obsidian.md/) think of information as
+**batched data**. So you have a set of notes (samples) that you try to
+aggregate, categorize, and connect.  Sure there's a use case for that: I can't
+imagine a company wiki presented as streaming info!  But I don't think it aids
+me in how I usually think. When thinking with pen and paper, I prefer managing
+streamed information first, then converting it into batched information later
+(in the form of a blog post, documentation, etc.)
+
+<!-- my obsidian graph? -->
+<!-- more pictures of notebooks? maybe your web notebooks -->
+
 
 ## Sparks intentionality
 
