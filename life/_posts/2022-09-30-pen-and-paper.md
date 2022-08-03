@@ -132,6 +132,14 @@ encapsulate "what really happened"** during the time I thought about a particula
 idea. In a text editor, everything is reduced to the same font, sterilizing
 those details away.
 
+I'll gladly pay for an application or service with the affordances of writing in
+pen and paper while allowing me to back my notes up in the cloud. However, I
+agree that **lifetime archival is a tradeoff I have to pay**. Lately, I've been
+using a fountain pen with archival ink. This type of ink is waterproof and
+ensures that my writing won't fade over time. Sometimes, I just don't let this
+stress me out, and I opt for the inks I love and enjoy. My notes contain
+streaming information, after all.
+
 
 [^1]:
 
