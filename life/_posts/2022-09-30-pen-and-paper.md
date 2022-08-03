@@ -116,6 +116,21 @@ it misses out on several affordances that pen and paper provides.
 
 ## Provides history
 
+**Writing with ink captures more than words.** It captures my mood and my mistakes.
+I remember in my college chemistry classes, we were instructed never to tear off
+or hide any error we made in our lab notebooks. Instead, we should mark it with
+a strikethrough. I brought this practice up to this day, and it's nice to see
+the small corrections, marginalia, and scribbles representing the unrefined
+parts of my thought process.
+
+It's nice to go back to my old notes and say: *"Oh, I was a little bit stressed
+when I wrote this down."* There's an archival element in it that digital formats
+cannot capture. Sure, it's a bit of a reach to say that my written notes are
+better for preserving my thoughts&mdash;if they got lost or burned down, then it's
+all gone. What I'm talking about here is **the written note's capacity to
+encapsulate "what really happened"** during the time I thought about a particular
+idea. In a text editor, everything is reduced to the same font, sterilizing
+those details away.
 
 
 [^1]:
