@@ -123,7 +123,7 @@ a strikethrough. I brought this practice up to this day, and it's nice to see
 the small corrections, marginalia, and scribbles representing the unrefined
 parts of my thought process.
 
-It's nice to go back to my old notes and say: *"Oh, I was a little bit stressed
+It's fun to go back to my old notes and say: *"Oh, I was a little bit stressed
 when I wrote this down."* There's an archival element in it that digital formats
 cannot capture. Sure, it's a bit of a reach to say that my written notes are
 better for preserving my thoughts&mdash;if they got lost or burned down, then it's
