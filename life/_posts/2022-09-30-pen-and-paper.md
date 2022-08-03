@@ -63,11 +63,12 @@ It hampers me from doing actual work.
 
 <!-- picture of blank midori -->
 
-Focusing on pen and paper allows me to shape my system as I go along.  Mine's
-quite simple: an A5 notebook for work, a smaller notebook for journalling, and a
-pen. I like to think of thoughts as **streaming information**, so I don't need to tag
-and categorize them as we do with batched data. Instead, using time as an index
-and sticky notes to mark slices of info solves most mof my use cases.
+The simplicity of pen and paper allows me to shape my system as I go along.
+Mine's quite plain: an A5 notebook for work, a smaller notebook for
+journalling, and a pen. I like to think of thoughts as **streaming
+information**, so I don't need to tag and categorize them as we do with batched
+data. Instead, using time as an index and sticky notes to mark slices of info
+solves most of my use cases.
 
 <!-- picture of midori with different numbers -->
 
@@ -76,8 +77,8 @@ Graph notebooks like [Obsidian](https://obsidian.md/) think of information as
 aggregate, categorize, and connect.  Sure there's a use case for that: I can't
 imagine a company wiki presented as streaming info!  But I don't think it aids
 me in how I usually think. When thinking with pen and paper, I prefer managing
-streamed information first, then converting it into batched information later
-(in the form of a blog post, documentation, etc.)
+streamed information first, then converting it into batched information
+later&mdash; a blog post, documentation, etc.
 
 <!-- my obsidian graph? -->
 <!-- more pictures of notebooks? maybe your web notebooks -->
