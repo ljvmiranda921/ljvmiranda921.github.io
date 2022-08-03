@@ -41,8 +41,8 @@ The table below illustrates this concept.
 
 |         | Tools                                    | Systems                                                    |
 |---------|------------------------------------------|------------------------------------------------------------|
-| Analog Interface  | Notebooks, pen, paper, sticky notes      | Bullet journaling, focus planners, *Zettelkasten* (slip-box) |
-| Digital Interface | Obsidian, RoamResearch, Notion, Emacs org-mode, Notepad, Evernote | *Zettelkasten* (slip-box), productivity integrations, etc.   |
+| **Analog Interface**  | Notebooks, pen, paper, sticky notes      | Bullet journaling, focus planners, *Zettelkasten* (slip-box) |
+| **Digital Interface** | Obsidian, RoamResearch, Notion, Emacs org-mode, Notepad, Evernote | *Zettelkasten* (slip-box), productivity integrations, etc.   |
 
 
 You can use the same system even if the tool is digital or analog.
@@ -52,7 +52,16 @@ personal knowledge management (PKM) frameworks today. Systems can be
 intrinsically complicated, and I argue that **using digital tools can compound
 this complexity**.
 
+Pen and paper is, *well*, pen and paper! There's just a one-to-one
+correspondence between me and the tool. Sometimes, I find digital apps urging me
+to integrate with another application or extension: connect to calendar, install
+*this*, install *that*. They force me to get into a "system" rather than focus
+on what the tool provides. It's overwhelming. In a way, it hampers me from
+achieving my goal, i.e., to perform knowledge work.
 
+<!-- picture of blank midori -->
+
+<!-- empty work -->
 
 ## Sparks intentionality
 
