@@ -93,7 +93,7 @@ typing or writing, but thinking.
 
 Sure, there are tradeoffs; sometimes, I think faster than I write, but I see
 this as a feature: it forces me to **write down the salient aspects of my
-thinking**, not verbatim. On the other hand, it's pretty easy to fall into
+thinking**. On the other hand, it's pretty easy to fall into
 mindless writing when using a keyboard. It's even easier to fall into the
 temptation of copy-pasting from the source material. The influx of information,
 coupled with the convenience of note-taking apps, makes it easier to collect
@@ -106,7 +106,7 @@ rather than synthesize.
 
 Perhaps this is why *Zettelkasten* worked well during the time of physical
 slip-boxes. Information was not cheap. You have to physically go to a library,
-borrow some books, highlight important passages, and return them afterward.
+borrow some books, highlight important passages, and return them at the end of the day.
 Sure, you can copy paragraphs word per word, but the physical exertion of
 writing can tire you down. So instead, you'll paraphrase or synthesize that
 information. It becomes a necessity than a guideline. When thinking with pen and
@@ -161,12 +161,33 @@ streaming information, after all.
 
 ## Final thoughts
 
-I wrote this blog post as a love letter to my analog writing instruments.
+I wrote this blog post as **a love letter to my analog writing instruments.**
 They're almost invisible; they're just there, helping me in my knowledge work.
 Because of that, I may have spoken strongly against other digital systems--don't
-raise your pitchforks; I use them too! But, in the end, the best thinking system
-is the one that works for you. For me, I find the most delight when I'm thinking
-with pen and paper.
+raise your pitchforks; I use them too! Nowadays I use
+[Obsidian](https://obsidian.md/) and [Zotero](https://zotero.org/); the latter a
+by-product of my grad school days. However, I try to go against the common PKM
+practices and I use them to bookmark information.
+
+But in the end, the best thinking system is the one that works for you. I can't
+really say if I've been more productive with pen and paper, I just find it more
+frictionless and delightful, and *that's enough*. I also mentioned
+*Zettelkasten* many times in this post, but I don't do that anymore&mdash;I just
+did a 1-month dry run and it felt tiring. **Pen and paper just gives me the bare
+essentials.** I can get straight to work and [not worry if something is a
+literature note or a permanent
+note](https://zettelkasten.de/posts/literature-notes-vs-permanent-notes/).
+
+As an engineer, I love making things complicated (*winks*). You'll notice that
+I'm using fountain pens with *this* ink, and a notebook with *that* paper-grade.
+But the good thing about pen and paper is that these instruments are not
+necessary. I do it because it's fun! And you don't have to (although trust me,
+fountain pens changed my writing experience).
+
+In the world of productivity porn, it sounds edgy to say "I use pen and paper."
+I mean, it's just pen and paper! But if we're **optimizing for feelings**[^3],
+I'll say that I find the most delight when thinking with pen and paper. I hope
+you do too!
 
 
 
@@ -183,6 +204,15 @@ with pen and paper.
     And it's not that bad anymore! Whenever I take photos of my notes with my
     phone, it reliably detects the text (even with my penmanship) and saves them
     to the cloud. 
+
+[^3]:
+    
+    I stole the title from [this Substack
+    post](https://browsercompany.substack.com/p/optimizing-for-feelings). I
+    cannot put this much better than them: "we've chosen to optimize for
+    feelings&mdash; to bring the quirks and edges of life back into software. To
+    create something with soul." [Enjoyment is an important component of my day
+    to day.](/life/2021/09/21/build-earn-play/#playing)
 
 
 
