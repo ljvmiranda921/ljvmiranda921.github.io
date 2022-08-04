@@ -7,6 +7,7 @@ category: life
 comments: true
 author: "LJ MIRANDA"
 summary: "My analog tools for thought"
+header-img: /assets/png/pen-and-paper/notes_revealed.jpg
 excerpt: |
     With the world inundated with productivity apps, it feels nice to return to
     the tried and tested pen-and-paper methods.  In this blog post, I'll share
