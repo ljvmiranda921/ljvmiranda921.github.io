@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Thinking with pen and paper"
-date: 2022-09-30
+date: 2022-08-04
 category: life
 comments: true
 author: "LJ MIRANDA"
@@ -62,6 +62,9 @@ quicksand](https://twitter.com/kevinbaker/status/1433167944243159045?s=20&t=oNGb
 It hampers me from doing actual work.
 
 <!-- picture of midori -->
+![](/assets/png/pen-and-paper/blank_ntbk.jpg){:width="800px", style="padding:10px"}  
+*My work notebook (Midori Notebook A5).*
+{:style="text-align: center;"}
 
 The simplicity of pen and paper allows me to shape my system as I go along.
 Mine's quite plain: an A5 notebook for work, a smaller notebook for
@@ -69,8 +72,6 @@ journalling, and a pen. I like to think of thoughts as **streaming
 information**, so I don't need to tag and categorize them as we do with batched
 data. Instead, using time as an index and sticky notes to mark slices of info
 solves most of my use cases.
-
-<!-- picture of midori notebok with sticky notes in between -->
 
 Graph notebooks like [Obsidian](https://obsidian.md/) think of information as
 **batched data**. So you have a set of notes (samples) that you try to
@@ -98,6 +99,9 @@ coupled with the convenience of note-taking apps, makes it easier to collect
 rather than synthesize.
 
 <!-- picture of your webbie notebooks  -->
+![](/assets/png/pen-and-paper/webbies.jpg){:width="800px", style="padding:10px"}  
+*My notebooks for journalling since 2018 (Rhodia Webnotebooks).*
+{:style="text-align: center;"}
 
 Perhaps this is why *Zettelkasten* worked well during the time of physical
 slip-boxes. Information was not cheap. You have to physically go to a library,
@@ -114,6 +118,9 @@ hand, note-taking apps usually force me to think line by line. It's not bad, but
 it misses out on several affordances that pen and paper provides. 
 
 <!-- picture of midori with blank page -->
+![](/assets/png/pen-and-paper/blank.jpg){:width="800px", style="padding:10px"}  
+*I like writing on blank paper (pen and ink: Lamy 2000 and Aurora Black).*
+{:style="text-align: center;"}
 
 ## Provides history
 
@@ -125,6 +132,9 @@ the small corrections, marginalia, and scribbles representing the unrefined
 parts of my thought process.
 
 <!-- picture of your actual notes -->
+![](/assets/png/pen-and-paper/notes_revealed.jpg){:width="800px", style="padding:10px"}  
+*I'm the only one who can read my penmanship.*
+{:style="text-align: center;"}
 
 It's fun to go back to my old notes and say: *"Oh, I was a little bit stressed
 when I wrote this down."* There's an archival element in it that digital formats
@@ -137,13 +147,26 @@ those details away.
 
 I'll gladly pay for an application or service with the affordances of writing in
 pen and paper while allowing me to back my notes up in the cloud. However, I
-agree that **lifetime archival is a tradeoff I have to pay**. Lately, I've been
+agree that **lifetime archival is a tradeoff I have to pay**.[^2] Lately, I've been
 using a fountain pen with archival ink. This type of ink is waterproof and
 ensures that my writing won't fade over time. Sometimes, I just don't let this
 stress me out, and I opt for the inks I love and enjoy. My notes contain
 streaming information, after all.
 
 <!-- picture of your fountain pen collection -->
+![](/assets/png/pen-and-paper/pens.jpg){:width="800px", style="padding:10px"}  
+*My pens through the years (from left to right: Lamy 2000, TWSBI ECO, Pilot Metropolitan).*
+{:style="text-align: center;"}
+
+## Final thoughts
+
+I wrote this blog post as a love letter to my analog writing instruments.
+They're almost invisible; they're just there, helping me in my knowledge work.
+Because of that, I may have spoken strongly against other digital systems--don't
+raise your pitchforks; I use them too! But, in the end, the best thinking system
+is the one that works for you. For me, I find the most delight when I'm thinking
+with pen and paper.
+
 
 
 [^1]:
@@ -153,6 +176,12 @@ streaming information, after all.
     augment how we think and process information. However, I noticed that in recent
     years, we've been over-optimizing this process where tools became increasingly
     overwhelming to even facilitate knowledge work.
+
+[^2]:
+
+    And it's not that bad anymore! Whenever I take photos of my notes with my
+    phone, it reliably detects the text (even with my penmanship) and saves them
+    to the cloud. 
 
 
 
