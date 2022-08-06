@@ -190,6 +190,11 @@ I'll say that I find the most delight when thinking with pen and paper. I hope
 you do too!
 
 
+#### Changelog
+
+* 08-06-2022: See the discussion on [Hacker News](https://news.ycombinator.com/item?id=32341607)
+
+
 
 [^1]:
 
