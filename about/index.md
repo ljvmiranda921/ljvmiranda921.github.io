@@ -31,7 +31,7 @@ Some highlights include:
 * [How to use Jupyter Notebooks](/notebook/2020/03/06/jupyter-notebooks-in-2020/): another three-part series where I surveyed the
     Jupyter notebook ecosystem.
 
-P.S. I also have a monthly newsletter, the [Purveyor of Curiosities](https://ljvmiranda.substack.com/)! Subscribe [here](/subscribe). 
+P.S. I love taking photos. Check out my [Game Boy Camera gallery](https://ljvmiranda921.github.io/gallery/)!
 
 ## Background
 
