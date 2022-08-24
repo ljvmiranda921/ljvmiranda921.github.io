@@ -1,0 +1,137 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "jekyll",
+  "frontMatter.content.publicFolder": "assets",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "projects",
+      "path": "[[workspace]]/projects/_posts"
+    },
+    {
+      "title": "notebook",
+      "path": "[[workspace]]/notebook/_posts"
+    }
+  ],
+  "frontMatter.taxonomy.tags": [
+    "8-bit",
+    "bastion",
+    "bioinformatics",
+    "celeste",
+    "cellular automata",
+    "chainer",
+    "chainerrl",
+    "christmas",
+    "commits",
+    "contributions",
+    "covid",
+    "craftsmanship",
+    "databeers",
+    "databeers manila",
+    "david ha",
+    "dead cells",
+    "deep learning",
+    "deep work",
+    "game",
+    "game awards",
+    "game dev",
+    "games",
+    "geomancer",
+    "github",
+    "github pages",
+    "glove",
+    "godot",
+    "godot engine",
+    "hades",
+    "holiday cards",
+    "hollow knight",
+    "indie game dev",
+    "indie games",
+    "internship",
+    "jekyll",
+    "jupyter notebooks",
+    "life",
+    "machine learning",
+    "magenta",
+    "mental health",
+    "open source",
+    "opensource",
+    "pandemic",
+    "parallelization",
+    "particle swarm optimization",
+    "pixel art",
+    "platformers",
+    "podcasts",
+    "post",
+    "preferred networks",
+    "procedural generation",
+    "programming",
+    "protein structure prediction",
+    "pyre",
+    "python",
+    "reinforcement learning",
+    "research",
+    "roguelike",
+    "ruby",
+    "seagull",
+    "sketch-rnn",
+    "software",
+    "software development",
+    "sprites",
+    "steam",
+    "streamlit",
+    "style transfer",
+    "supergiant",
+    "thinking machines",
+    "thinking machines data science",
+    "transistor",
+    "wordpress",
+    "wordpress to github pages"
+  ],
+  "frontMatter.taxonomy.categories": []
+}
