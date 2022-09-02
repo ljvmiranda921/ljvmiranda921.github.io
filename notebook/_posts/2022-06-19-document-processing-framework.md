@@ -66,8 +66,8 @@ system's outputs. You can use correction to retrain your model or as the
 penultimate step before saving the results in a database.
 
 We'll see this framework in action as we go through my
-sample implementation using [Prodigy](prodi.gy) and [Hugging
-Face](huggingface.co) in the next section.
+sample implementation using [Prodigy](https://prodi.gy) and [Hugging
+Face](https://huggingface.co) in the next section.
 
 ## Framework in action: form understanding
 
