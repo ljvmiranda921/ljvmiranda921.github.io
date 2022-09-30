@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "How to make word vectors from scratch"
+title: "A review of word vectors (with code)"
 date: 2021-12-11
 category: notebook
 comments: true
