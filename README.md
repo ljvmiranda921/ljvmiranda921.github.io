@@ -5,7 +5,7 @@
 
 This is the source code for my [blog](https://ljvmiranda921.github.io). It's a
 static website powered by [Jekyll](https://jekyllrb.com/) with site analytics
-done via [plausible.io](plausible.io/ljvmiranda921.github.io) (private,
+done via [plausible.io](https://plausible.io/ljvmiranda921.github.io) (private,
 cookie-free and open source).
 
 ## Set-up
