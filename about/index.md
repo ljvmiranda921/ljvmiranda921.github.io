@@ -18,7 +18,7 @@ Here, you'll find some of my **thoughts, works, and notes** on software
 development, machine learning, and research. I hope you'll spend a nice time
 here, so go grab yourself a coffee and feel free to look around! 
 
-If you don't know where to start, then check out [this curated list](/curated)!
+If you don't know where to start, then check out [this curated list](/highlights/)!
 
 ## Background
 
