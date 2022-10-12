@@ -18,20 +18,7 @@ Here, you'll find some of my **thoughts, works, and notes** on software
 development, machine learning, and research. I hope you'll spend a nice time
 here, so go grab yourself a coffee and feel free to look around! 
 
-Some highlights include:
-* [Why do we need Flask, Celery, and Redis?](/notebook/2019/11/08/flask-redis-celery-mcdo/): a fun illustrated guide on how
-    task queues work. Reached the front page on [Hacker News](https://news.ycombinator.com/item?id=22901856).
-* [How to improve software engineering skills as a researcher](/notebook/2020/11/15/data-science-swe/): here, I talked
-    about a specific project on how researchers and data scientists can further
-    refine their software engineering skills.
-* [The Illustrated VQGAN](/notebook/2021/08/08/clip-vqgan/): a technical
-    deep-dive on VQGAN, a model that allows us to synthesize images from text prompts.
-* [Navigating the MLOps tooling landscape](/notebook/2021/05/10/navigating-the-mlops-landscape/): here, I survey MLOps tools while surfacing key
-    insights about the landscape. 
-* [How to use Jupyter Notebooks](/notebook/2020/03/06/jupyter-notebooks-in-2020/): another three-part series where I surveyed the
-    Jupyter notebook ecosystem.
-
-P.S. I love taking photos. Check out my [Game Boy Camera gallery](https://ljvmiranda921.github.io/gallery/)!
+If you don't know where to start, then check out [this curated list](/curated)!
 
 ## Background
 
