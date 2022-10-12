@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Picollino: rough Pico-8 study notes on movement"
+title: "Study notes on Pico-8 movement"
 date: 2021-01-31
 category: notebook
 comments: true
@@ -16,10 +16,6 @@ excerpt: |
     wrote about the basics of movement: walk direction, smoother transitions,
     and button buffering.
 ---
-
-> Picollino is a series of short notes that walks through a specific aspect of
-> game development in Pico-8. I wrote Picollino for myself but maybe someone
-> out there will find this useful!
 
 Today, I'm learning about *movement* in Pico-8 and other *optimizations to
 improve game feel*. This includes the following:
