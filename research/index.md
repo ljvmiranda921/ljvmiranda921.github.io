@@ -5,7 +5,15 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-Below is a list of my research publications. You can also check my [Google Scholar](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en) page: 
+
+> **What am I working on:** my current research interests revolve around the creative and resourceful
+> applications of NLP under *severe* constraints, either from lack of data (e.g.,
+> low-resource languages) or lack of compute (e.g., efficient NLP, structured
+> prediction). If you're interested to collaborate, then feel free to [hit me
+> up](mailto:ljvmiranda@gmail.com)! 
+
+Below is a list of my research publications. You can also check my [Google
+Scholar](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en) page:  
 
 - [Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction](https://www.dropbox.com/s/wfgklrndflpqstv/smc2018feature.pdf?dl=0) <br> L. J. V. Miranda and J. Hu, "Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction," _IEEE International Conference on System, Man, and Cybernetics_, IEEE, October 2018.
 - [A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction](https://www.dropbox.com/s/qlj0vxb3ieijmg4/compsac2018deep.pdf?dl=0) <br> L. J. V. Miranda and J. Hu, "A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction," _42nd IEEE Computer Society Signature Conference on Computers, Software, and Applications_, IEEE, July 2018. 
