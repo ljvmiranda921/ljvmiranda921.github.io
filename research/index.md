@@ -7,7 +7,7 @@ permalink: /research/
 
 
 > **What am I working on:** my current research interests revolve around the creative and resourceful
-> applications of NLP under *severe* constraints, either from lack of data (e.g.,
+> application of NLP under *severe* constraints, either from lack of data (e.g.,
 > low-resource languages) or lack of compute (e.g., efficient NLP, structured
 > prediction). If you're interested to collaborate, then feel free to [hit me
 > up](mailto:ljvmiranda@gmail.com)! 
