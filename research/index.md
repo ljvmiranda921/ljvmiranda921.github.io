@@ -6,12 +6,6 @@ permalink: /research/
 ---
 
 
-> **What am I working on:** my current research interests revolve around the creative and resourceful
-> application of NLP under *severe* constraints, either from lack of data (e.g.,
-> low-resource languages) or lack of compute (e.g., efficient NLP, structured
-> prediction). If you're interested to collaborate, then feel free to [hit me
-> up](mailto:ljvmiranda@gmail.com)! 
-
 Below is a list of my research publications. You can also check my [Google
 Scholar](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en) page:  
 
@@ -20,6 +14,14 @@ Scholar](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en) page:
 - [PySwarms, a research-toolkit for Particle Swarm Optimization in Python](https://www.dropbox.com/s/8nrtfwpssdv1hn3/joss2018pyswarms.pdf?dl=0) <br> L. J. V. Miranda, “PySwarms, a research-toolkit for Particle Swarm Optimization in Python," _Journal of Open Source Software_, vol. 3, no. 433, 2018. [doi: 10.21105/joss.00433](http://joss.theoj.org/papers/235299884212b9223bce909631e3938b).
 - [Appliance Recognition using Hall-Effect Sensors and k-Nearest Neighbors for Power Management Systems](https://www.dropbox.com/s/iawdrt9rm73siw2/tencon2016power.pdf?dl=0) <br> L. J. V. Miranda, M. J. Gutierrez, S. M. Dumlao, and R. Reyes, “Appliance Recognition using Hall-Effect Sensors and k-Nearest Neighbors for Power Management Systems,” in _Proceedings of the 2016 IEEE Region 10 Conference 2016_, IEEE, November 2016.
 - [Expulsion from Eden: the saga of the Calauit Safari Island Park](https://www.dropbox.com/s/j36m11rvhbl963e/apeiron2016expulsion.pdf?dl=0) <br> L. J. V. Miranda, “Expulsion from Eden: the saga of the Calauit Safari Island Park,” _APEIRON Student Journal of Philosophy_, no. 8, pp. 201–219, 2016. ISBN: 1533659788.
+
+**What am I working on:** In recent years, I've been interested in problems that
+involve the *creative and resourceful application of NLP under severe
+constraints*, either from lack of data (e.g., low-resource languages) or lack of
+compute (e.g., efficient NLP, structured prediction). If you're interested in
+these topics and want to collaborate, then feel free to [hit me
+up](mailto:ljvmiranda@gmail.com)! 
+
 
 ### Masters Thesis
 
