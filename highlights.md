@@ -33,11 +33,11 @@ them beginner-friendly, so just read on!
 I'm also interested in the practical application of machine learning to non-trivial problems. I find the
 intersection of software engineering and ML to be an exciting space, so I made a lot of notes about it!
 
-- [Navigating the MLOps landscape (three-part series)](/notebook/2021/05/10/navigating-the-mlops-landscape/)
+- [Navigating the MLOps landscape (three-part series)](/notebook/2021/05/10/navigating-the-mlops-landscape/): [#2](/notebook/2021/05/15/navigating-the-mlops-landscape-part-2/) [#3](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3/)
 - [How to improve software engineering skills as a researcher](/notebook/2020/11/15/data-science-swe/)
 - [Towards data-centric machine learning: a short review](/notebook/2021/07/30/data-centric-ml/)
 - [How to use Jupyter Notebooks in 2020](/notebook/2020/03/06/jupyter-notebooks-in-2020/) *(a bit deprecated)*
-- [Why do we need Flask, Celery, and Redis?](/notebook/2019/11/08/flask-redis-celery-mcdo/)
+- [Why do we need Flask, Celery, and Redis?](/notebook/2019/11/08/flask-redis-celery-mcdo/) ([Hacker News](https://news.ycombinator.com/item?id=22901856))
 
 ## Game Development
 I'm a hobbyist game dev and I love creating pixel art games. I am also a fan of
