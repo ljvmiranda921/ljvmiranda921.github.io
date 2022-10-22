@@ -20,7 +20,7 @@ excerpt: |
     long way to go, but I'm excited to share my progress! 
 ---
 
-
+<!-- 
 ## A quick survey of NLP resources for Tagalog
 
 
@@ -36,4 +36,6 @@ excerpt: |
 ## Future directions
 
 
-## Wanna help out?
+## Wanna help out? 
+
+-->
