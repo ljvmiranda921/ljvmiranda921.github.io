@@ -9,7 +9,7 @@ permalink: /research/
 
 The works listed below were instrumental to my growth as a researcher. However,
 they're not aligned to my [current research interests](#interests) anymore. Alternatively, you 
-can check out my [Google Scholar](https://ljvmiranda921.github.io/research/) page:
+can check out my [Google Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) page:
 
 - [Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction](https://www.dropbox.com/s/wfgklrndflpqstv/smc2018feature.pdf?dl=0) <br> L. J. V. Miranda and J. Hu, "Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction," _IEEE International Conference on System, Man, and Cybernetics_, IEEE, October 2018.
 - [A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction](https://www.dropbox.com/s/qlj0vxb3ieijmg4/compsac2018deep.pdf?dl=0) <br> L. J. V. Miranda and J. Hu, "A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction," _42nd IEEE Computer Society Signature Conference on Computers, Software, and Applications_, IEEE, July 2018. 
