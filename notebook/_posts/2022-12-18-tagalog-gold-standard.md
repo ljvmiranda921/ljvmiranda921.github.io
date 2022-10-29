@@ -10,32 +10,68 @@ published: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
 description: |
     The lack of Tagalog gold-standard NER data inhibits us from training decent
-    structured prediction pipelines for our language. In this blog post, I talk
+    structured prediction pipelines for our language. In this blog post, I'll talk
     about the state of Tagalog-based corpora, my progress on building a
-    gold-standard dataset, and my hopes for the future of Tagalog NLP.
+    gold-standard dataset (and its limitations), and my hopes for the future of Tagalog NLP.
 excerpt: |
     The lack of Tagalog gold-standard NER data inhibits us from training decent
-    structured prediction pipelines for our language. In this blog post, I talk
+    structured prediction pipelines for our language. In this blog post, I'll talk
     about the state of Tagalog-based corpora, my progress on building a
-    gold-standard dataset, and my hopes for the future of Tagalog NLP.
+    gold-standard dataset (and its limitations), and my hopes for the future of Tagalog NLP.
 ---
 
+
+<span class="firstcharacter">T</span>agalog is my native language. It's spoken
+by 76 million Filipinos and has been our official language since the 30s. 
+Stories and songs have been written in Tagalog. It's a **text-rich** language,
+but unfortunately, a **low-resource** one. In this blog post, I'll talk about
+the state of Tagalog-based corpora, my experience on creating a gold-standard
+dataset (including its limitations), and my hopes for the future of Tagalog NLP.
+
+## Tagalog corpora is low-resource, full of silver-standard annotations
+
+<!--
+When we talk about low-resource languages ... <definition>
+
+In 
+
+
+
+-->
+
+
+
+
+
+
+## FAQs
+
+- **Is this supposed to be a new Tagalog benchmark?**
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- 
-## A quick survey of NLP resources for Tagalog
 
+## Creating gold-standard annotations
 
-## My workflow
+### Silver-standard baseline
 
+### Annotation guidelines
 
-## Initial results
+### Challenges and biases
 
+### Error analysis
 
-## Next steps
-
-
-## Future directions
-
-
-## Wanna help out? 
+## Future
 
 -->
