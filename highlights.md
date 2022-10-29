@@ -8,8 +8,8 @@ permalink: /highlights/
 Here is a curated list of content, organized by topic.
 
 
-## NLP and Computational Linguistics
-NLP and computational linguistics are my primary research interests. I'm particularly into
+## Natural Language Processing 
+Natural language processing (NLP) and computational linguistics are my primary research interests. I'm particularly into
 multilingual NLP, information retrieval and extraction, and low-resource languages.
 
 - [Dependency parsing for a low-resource language (Tagalog)](/notebook/2022/04/24/low-resource-dep-parse/)
@@ -29,7 +29,7 @@ them beginner-friendly, so just read on!
 - [Study notes on making word vectors from scratch](/notebook/2021/12/11/word-vectors/)
 
 
-## Machine Learning Engineering and MLOps
+## Machine Learning Systems 
 I'm also interested in the practical application of machine learning to non-trivial problems. I find the
 intersection of software engineering and ML to be an exciting space, so I made a lot of notes about it!
 
