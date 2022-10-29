@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Study notes on regular expressions and finite state automata (with code)"
+title: "Study notes on regular expressions and finite state automata"
 date: 2022-10-07
 category: notebook
 comments: true
