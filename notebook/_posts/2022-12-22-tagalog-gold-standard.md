@@ -91,15 +91,28 @@ and correct obvious annotation errors.  In practice, you'd usually want more
 than three annotators (preferably linguists) and normalize their annotations
 based on some inter-annotator agreement. Gold-standard data is not a cure-all. 
 
+## Creating gold-standard data
+
+
+
+
+### Training
 
 <!--
-Given that, I do **not** advise using my annotated dataset for production. It
-is biased towards my annotations, and may have label errors sprinkled in
-between. Even if I labeled the dataset to the best of my ability, it's not good
-scientific practice to use it at its current state. However, I encourage you to
--->
+I trained three types of model:
 
-## Creating gold-standard data
+- (Zero-shot learning) A model based from silver-standard WikiANN data. Hope it generalizes here. 
+- (Few-shot learning, monolingual) A model based from the pretrained Tagalog-BERT dataset, finetuned with my gold-standard training data
+- (Few-shot learning, multilingual1) A model based from the mBERT dataset, finetuned with my gold-standard training data
+- (Few-shot learning, multilingual2) A model based from the XLM-R dataset, finetuned with my gold-standard training data
+- (Supervised learning) A model based from my gold-standard training data, trained using spaCy
+- (Supervised learning) A model based from my gold-standard training data with fastText vectors from TLUnified, trained using spaCy
+- (Supervised learning) A model based from my gold-standard training data with fastText vectors from TLUnified? trained with BiLSTM CRF
+
+
+
+
+-->
 
 
 ## FAQs
@@ -109,6 +122,7 @@ scientific practice to use it at its current state. However, I encourage you to
 
 - **Can I use this dataset to train models in production?**
 
+- **Do you know of any other Tagalog datasets?**
 
 
 
