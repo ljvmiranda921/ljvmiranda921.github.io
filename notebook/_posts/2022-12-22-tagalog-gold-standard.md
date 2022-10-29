@@ -23,7 +23,7 @@ excerpt: |
 
 <span class="firstcharacter">T</span>agalog is my native language. It's spoken
 by 76 million Filipinos and has been our official language since the 30s. 
-Stories and songs have been written in Tagalog. It's a **text-rich** language,
+Stories and songs have been written in Tagalog, and it has a long cultural and historical significance. It's a **text-rich** language,
 but unfortunately, a **low-resource** one. In this blog post, I'll talk about
 the state of Tagalog-based corpora, my experience in creating a gold-standard
 dataset (including its limitations), and my hopes for the future of Tagalog NLP.
@@ -34,24 +34,41 @@ We label a language as **low-resource** when there are no annotated corpora
 available. Even if Tagalog is text-rich (i.e., a million speakers, thousands of
 written content, etc.), the amount of annotated texts are scarce. This problem
 isn't unique to Tagalog. Out of the approximately 7000 languages in the world,
-only 10 have adequate NLP resources. 
-
-<!-- show long-tail graph -->
-
-There are many clever ways to build NLP systems on low-resource data that allow
-researchers to circumvent the data scarcity problem. These methods usually
-produce what we call **silver-standard data**. Their annotations are automatically
-generated, usually done by statistical models trained from a different but
-closely-related language or a knowledge base like Wikipedia. Silver-standard
-data may not be accurate or trustworthy, but they are faster and cheaper to
-create.
+only 10 have adequate NLP resources ([Mortensen](#mortensen), [Tsvetkov, 2017](#tsvetkov2017opportunities)). 
 
 
-<!-- RRL -->
+There are many clever ways to build technologies on low-resource languages that
+allow researchers to circumvent the data scarcity problem. They usually involve
+taking advantage of a high-resource language (or domain), and transferring its
+capacity to a low-resource one. The table below outlines different approaches for
+low-resource NLP:
 
 
-As you'll see later, I went with the traditional route: *I labeled and produced
-gold-standard data myself.* However, labeling thousands of samples is not the
+| Approach                        | Gold-standard Needed | Prerequisites                                                                                                | Description                                                                               |
+|---------------------------------|----------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Supervised learning             | High                 | Large amount of labeled data.                                                                                 | Train a model as usual using feature-label pairs.                                                   |
+| Cross-lingual transfer learning | None to a few        | Understanding of the similarities between source and target languages.                                       | Transfer resources and models from resource-rich source to resource-poor target language. |
+| Zero-shot learning              | None                 | High similarity between source and target domains. It often helps if the latter is a "subset" of the former. | Train a model in a domain and assume it generalizes out-of-the-box in another domain.     |
+| Few-shot learning               | A few to high        | Similarity between source and target domains and a task-specific finetuning dataset.                         | Use a pretrained model from a large corpus, and then finetune on a specific task.         |
+| Polyglot learning               | A few to high        | A mixed corpus or a dataset with languages converted to a shared representation.                             | Combine resource-rich and resource-poor languages and train them together.                |
+
+
+Some of these methods produce what we usually call  **silver-standard data**.
+Their annotations are automatically generated, usually done by statistical
+models trained from a different but closely-related language or a knowledge base
+like Wikipedia. Silver-standard data may not be accurate or trustworthy, but
+they are faster and cheaper to create.
+
+<!-- RRL 
+
+WikiANN
+
+
+-->
+
+
+As you'll see later, I went with the traditional route: I labeled and produced
+gold-standard data myself. However, labeling thousands of samples is not the
 hardest part. As the sole annotator, it's easy for me to influence a dataset of
 my biases and errors in judgment. You'd want to normalize a dataset from bias
 and correct obvious annotation errors.  In practice, you'd usually want more
@@ -65,6 +82,8 @@ is biased towards my annotations, and may have label errors sprinkled in
 between. Even if I labeled the dataset to the best of my ability, it's not good
 scientific practice to use it at its current state. However, I encourage you to
 -->
+
+## Creating gold-standard data
 
 
 ## FAQs
@@ -84,5 +103,6 @@ scientific practice to use it at its current state. However, I encourage you to
 
 ## References
 
--  
+-  <a id="mortensen">Mortensen, David.</a>, *Undated*. Low-Resource NLP. Algorithms for Natural Language Processing [[Slides]](http://demo.clab.cs.cmu.edu/algo4nlp20/slides/low-resource-nlp.pdf)
+- <a id="tsvetkov2017opportunities">Tsvetkov, Yulia</a>, 2017. Opportunities and Challenges in Working with Low-Resource Languages. Language Technologies Institute, Carnegie Mellon University. [[Slides]](https://www.cs.cmu.edu/~ytsvetko/jsalt-part1.pdf). 
 
