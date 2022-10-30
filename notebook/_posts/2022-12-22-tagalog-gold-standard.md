@@ -91,12 +91,80 @@ and correct obvious annotation errors.  In practice, you'd usually want more
 than three annotators (preferably linguists) and normalize their annotations
 based on some inter-annotator agreement. Gold-standard data is not a cure-all. 
 
-## Creating gold-standard data
+## Creating and evaluating gold-standard data
+
+
+### Bootstrapping WikiANN for annotation
 
 
 
 
-### Training
+### Experimental Setup
+
+I want to see how standard NER approaches fare with `tl_tlunified_gold`. I made
+two sets of experiment, one involving word vectors and the other using language
+models or transformers. In addition, I also want to see the effects of
+[pretraining](https://spacy.io/usage/embeddings-transformers#pretraining) for
+some of these vectors:
+
+| Word Vectors                 | Description                                                                          |
+|------------------------------|--------------------------------------------------------------------------------------|
+| None                         | Train a NER model from scratch. No tricks, just the annotated data.                  |
+| None + spaCy pretraining     | [Pretrain characters](https://spacy.io/api/architectures#pretrain_chars) using a subset of TLUnified to obtain word vectors. |
+| fastText                     | Train a set of [fastText](https://fasttext.cc/) vectors from TLUnified and use them as [static vectors](https://spacy.io/usage/embeddings-transformers#static-vectors) for the downstream NER task. |
+| fastText + spaCy pretraining | [Pretrain vectors](https://spacy.io/api/architectures#pretrain_vectors) using the fastText vectors.                          |
+| floret*                       | Use [spaCy's extension of floret](https://github.com/explosion/floret) to create more compact vectors from TLUnified. Then, perform supervised learning as usual. | 
+
+<p>* floret: I won't be doing the pretraining setup for floret because I just want to compare its size against fastText.</p>
+{:style="text-align: left; font-size: 14px;"}
+
+**Table:** Experimental setup for word vectors
+{:style="text-align: center;"}
+
+Then, I will also measure the performance of a monolingual and multilingual
+language model. I'm using transormer models as a [drop-in replacement](https://spacy.io/usage/embeddings-transformers#transformers) for
+the representation layer, to achieve higher accuracy:
+
+| Language Models       | Description                                                              |
+|-----------------------|--------------------------------------------------------------------------|
+| [roberta-tagalog](https://huggingface.co/jcblaise/roberta-tagalog-large) | Monolingual experiment with a large RoBERTa model trained from TLUnified. I will be testing both `base` and `large` variants. |
+| [xlm-roberta](https://huggingface.co/xlm-roberta-large)      | Multilingual experiment with a large XLM-RoBERTa. Trained on 100 different languages. I will be testing both `base` and `large` variants. |
+
+**Table:** Experimental setup for language models
+{:style="text-align: center;"}
+
+For all the experiments above, I will be using a [transition-based
+parser (TBP)](https://spacy.io/api/entityrecognizer) for sequence labeling.  However,
+I'll also do a brief comparison against a [conditional random field
+(CRF)](https://github.com/talmago/spacy_crfsuite) for the fastText and
+roberta-tagalog-base settings.
+
+### Results
+
+|                              | Precision | Recall | F1-score |
+|------------------------------|-----------|--------|----------|
+| None                         |           |        |          |
+| None + spaCy pretraining     |           |        |          |
+| fastText (XXX vectors)       |           |        |          |
+| fastText + spaCy pretraining |           |        |          |
+| floret (XXX vectors)         |           |        |          |
+
+
+|                       | Precision | Recall | F1-score |
+|-----------------------|-----------|--------|----------|
+| roberta-tagalog-base  |           |        |          |
+| xlm-roberta-base      |           |        |          |
+| roberta-tagalog-large |           |        |          |
+| roberta-tagalog-base  |           |        |          |
+
+|                      |           | TBP |          |           | CRF |          |
+|----------------------|-----------|-------------------------|----------|-----------|--------------------------------|----------|
+|                      | Precision | Recall                  | F1-score | Precision | Recall                         | F1-score |
+| fastText             |           |                         |          |           |                                |          |
+| roberta-tagalog-base |           |                         |          |           |                                |          |
+
+
+### Error analysis
 
 <!--
 I trained three types of model:
