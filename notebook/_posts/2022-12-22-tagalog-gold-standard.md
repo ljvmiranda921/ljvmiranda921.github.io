@@ -166,22 +166,6 @@ roberta-tagalog-base settings.
 
 ### Error analysis
 
-<!--
-I trained three types of model:
-
-- (Zero-shot learning) A model based from silver-standard WikiANN data. Hope it generalizes here. 
-- (Few-shot learning, monolingual) A model based from the pretrained Tagalog-BERT dataset, finetuned with my gold-standard training data
-- (Few-shot learning, multilingual1) A model based from the mBERT dataset, finetuned with my gold-standard training data
-- (Few-shot learning, multilingual2) A model based from the XLM-R dataset, finetuned with my gold-standard training data
-- (Supervised learning) A model based from my gold-standard training data, trained using spaCy
-- (Supervised learning) A model based from my gold-standard training data with fastText vectors from TLUnified, trained using spaCy
-- (Supervised learning) A model based from my gold-standard training data with fastText vectors from TLUnified? trained with BiLSTM CRF
-
-
-
-
--->
-
 
 ## FAQs
 
