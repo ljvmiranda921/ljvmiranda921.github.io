@@ -31,6 +31,10 @@ Tagalog-based corpora, my experience in creating a gold-standard dataset
 (including its limitations) for named-entity recognition (NER), and my hopes for
 the future of Tagalog NLP.
 
+I am focusing on structured prediction tasks like named-entity recognition (NER)
+because it has a lot of practical applications and little work has been done on
+Tagalog NER yet.
+
 #### Contents
 
 - [Background: Tagalog NER corpora is low-resource and silver-standard](#corpora)
@@ -149,6 +153,14 @@ based on some inter-annotator agreement. Gold-standard data is not a cure-all.
 ### Bootstrapping WikiANN for annotation
 
 
+
+### Annotation proper
+
+| Tagalog Data    | Sentences | Tokens | PER | ORG | LOC |
+|-----------------|-----------|--------|-----|-----|-----|
+| Training Set    |           |        |     |     |     |
+| Development Set |           |        |     |     |     |
+| Test Set        |           |        |     |     |     |
 
 
 ### Experimental Setup
