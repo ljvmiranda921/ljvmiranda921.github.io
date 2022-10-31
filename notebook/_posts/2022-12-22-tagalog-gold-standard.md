@@ -46,6 +46,8 @@ written content, etc.), the amount of annotated texts are scarce. This problem
 isn't unique to Tagalog. Out of the approximately 7000 languages in the world,
 only 10 have adequate NLP resources ([Mortensen](#mortensen), [Tsvetkov, 2017](#tsvetkov2017opportunities)). 
 
+### Working on low-resource corpora
+
 There are many clever ways to build technologies on low-resource languages that
 allow researchers to circumvent the data scarcity problem. They usually involve
 taking advantage of a high-resource language (or domain), and transferring its
@@ -73,6 +75,17 @@ Their annotations are automatically generated, usually done by statistical
 models trained from a different but closely-related language or a knowledge base
 like Wikipedia. Silver-standard data may not be accurate or trustworthy, but
 they are faster and cheaper to create.
+
+### Working with silver-standard annotations
+
+I find that the best way to work with silver-standard data is to use them for
+bootstrapping the annotations of a much larger and diverse dataset. By bootstrapping
+the annotations, we reduce the cognitive load of labeling and focus more on correcting
+the model's outputs rather than labeling from scratch.
+
+![](/assets/png/tagalog-gold-standard/silver_standard_framework.png){:width="800px"}  
+{:style="text-align: center;"}
+
 
 The only major NER dataset for Tagalog is **WikiANN** ([Pan, Zhang, et al.,
 2017](#pan2017wikiann)). It is a silver-standard dataset based from an English
@@ -102,18 +115,26 @@ set](https://huggingface.co/datasets/wikiann/viewer/tl/validation) have glaring 
 Also, notice that the texts themselves aren't full sentences. This might not
 translate well to longer documents as the *context* of an entity is lost. For
 example, the use of articles (*ang*, *si*, *ang mga*) can point to a noun phrase
-and give clues if it's a person (*Si Ninoy...*) or organization (*Ang DOH...*).
+and give clues if it's a person or organization.
 However, I still think WikiANN can be useful. We can use it to train a model for
 bootstrapping our annotations.
 
+![](/assets/png/tagalog-gold-standard/wikiann.png){:width="800px"}  
+{:style="text-align: center;"}
+
 Fortunately, we have **a lot of unannotated datasets that represent the
-diversity of Filipino language**. For example, there is the
+diversity of the Filipino language**. For example, there is the
 [CommonCrawl](https://commoncrawl.org/) repository that contains web-crawled
 data for any language. We also have TLUnified ([Cruz and Cheng,
 2022](#cruz2022tlunified)) and WikiText TL-39 ([Cruz and Cheng,
 2019](#cruz2019wikitext)). For my experiments, I will be using the TLUnified
 dataset as it's more recent, and one of its subdomain (news) resembles that of
 standard NER benchmarks like ConLL.
+
+
+![](/assets/png/tagalog-gold-standard/tlunified.png){:width="800px"}  
+{:style="text-align: center;"}
+
 
 As you'll see later, I went with the traditional route: I labeled and produced
 gold-standard data myself. However, labeling thousands of samples is not the
