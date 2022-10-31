@@ -156,6 +156,10 @@ based on some inter-annotator agreement. Gold-standard data is not a cure-all.
 
 ### Annotation proper
 
+<!-- annotation guidelines -->
+
+
+
 | Tagalog Data    | Sentences | Tokens | PER | ORG | LOC |
 |-----------------|-----------|--------|-----|-----|-----|
 | Training Set    |           |        |     |     |     |
