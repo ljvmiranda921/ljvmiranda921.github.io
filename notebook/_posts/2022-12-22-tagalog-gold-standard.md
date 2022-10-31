@@ -78,19 +78,19 @@ they are faster and cheaper to create.
 
 ### Working with silver-standard annotations
 
-I find that the best way to work with silver-standard data is to use them for
-bootstrapping the annotations of a much larger and diverse dataset. By bootstrapping
-the annotations, we reduce the cognitive load of labeling and focus more on correcting
-the model's outputs rather than labeling from scratch.
+The best way to work with silver-standard data is to use them for bootstrapping
+the annotations of a much larger and diverse dataset. By bootstrapping the
+annotations, we reduce the cognitive load of labeling and focus more on
+correcting the model's outputs rather than labeling from scratch.
 
-![](/assets/png/tagalog-gold-standard/silver_standard_framework.png){:width="800px"}  
+![](/assets/png/tagalog-gold-standard/silver_standard_framework.png){:width="650px"}  
 {:style="text-align: center;"}
 
 
 The only major NER dataset for Tagalog is **WikiANN** ([Pan, Zhang, et al.,
-2017](#pan2017wikiann)). It is a silver-standard dataset based from an English
+2017](#pan2017wikiann)). It is a silver-standard dataset based on an English
 Knowledge Base (KB). The researchers were able to create a framework for tagging
-entities based from Wikipedia alone, and extend it to 282 other languages,
+entities based on Wikipedia alone and extend it to 282 other languages,
 including Tagalog. It is not perfect. For example, the [first few entries of the validation
 set](https://huggingface.co/datasets/wikiann/viewer/tl/validation) have glaring errors:
 
@@ -112,14 +112,13 @@ set](https://huggingface.co/datasets/wikiann/viewer/tl/validation) have glaring 
 **Example:** *Ninoy Aquino* should be tagged as `PER`, while *Sultan Kudarat* as `LOC`.
 {:style="text-align: center;"}
 
-Also, notice that the texts themselves aren't full sentences. This might not
-translate well to longer documents as the *context* of an entity is lost. For
-example, the use of articles (*ang*, *si*, *ang mga*) can point to a noun phrase
-and give clues if it's a person or organization.
-However, I still think WikiANN can be useful. We can use it to train a model for
-bootstrapping our annotations.
+Also, the texts themselves aren't complete sentences. A model trained on this
+data might translate poorly to longer documents as the *context* of an entity is
+lost. For example, articles (*ang*, *si*, *ang mga*) can point to a noun phrase
+and give clues if it's a person or organization.  However, WikiANN can still be
+useful. We can use it to train a model for bootstrapping our annotations.
 
-![](/assets/png/tagalog-gold-standard/wikiann.png){:width="800px"}  
+![](/assets/png/tagalog-gold-standard/wikiann.png){:width="650px"}  
 {:style="text-align: center;"}
 
 Fortunately, we have **a lot of unannotated datasets that represent the
@@ -132,7 +131,7 @@ dataset as it's more recent, and one of its subdomain (news) resembles that of
 standard NER benchmarks like ConLL.
 
 
-![](/assets/png/tagalog-gold-standard/tlunified.png){:width="800px"}  
+![](/assets/png/tagalog-gold-standard/tlunified.png){:width="650px"}  
 {:style="text-align: center;"}
 
 
@@ -155,7 +154,7 @@ based on some inter-annotator agreement. Gold-standard data is not a cure-all.
 ### Experimental Setup
 
 I want to see how standard NER approaches fare with `tl_tlunified_gold`. I made
-two sets of experiment, one involving word vectors and the other using language
+two sets of experiments, one involving word vectors and the other using language
 models or transformers. In addition, I also want to see the effects of
 [pretraining](https://spacy.io/usage/embeddings-transformers#pretraining) for
 some of these vectors:
@@ -175,8 +174,8 @@ some of these vectors:
 {:style="text-align: center;"}
 
 Then, I will also measure the performance of a monolingual and multilingual
-language model. I'm using transormer models as a [drop-in replacement](https://spacy.io/usage/embeddings-transformers#transformers) for
-the representation layer, to achieve higher accuracy:
+language model. I'm using transformer models as a [drop-in replacement](https://spacy.io/usage/embeddings-transformers#transformers) for
+the representation layer to achieve higher accuracy:
 
 | Approach| Language Models       | Description                                                              |
 |---------|-----------------------|--------------------------------------------------------------------------|
@@ -186,9 +185,9 @@ the representation layer, to achieve higher accuracy:
 **Table:** Experimental setup for language models
 {:style="text-align: center;"}
 
-For all the experiments above, I will be using a [transition-based
-parser (TBP)](https://spacy.io/api/entityrecognizer) for sequence labeling.  However,
-I'll also do a brief comparison against a [conditional random field
+For all the experiments above, I will be using a [transition-based parser
+(TBP)](https://spacy.io/api/entityrecognizer) for sequence labeling.  However,
+I'll also make a brief comparison against a [conditional random field
 (CRF)](https://github.com/talmago/spacy_crfsuite) for the fastText and
 roberta-tagalog-base settings.
 
