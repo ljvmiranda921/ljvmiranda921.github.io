@@ -28,19 +28,21 @@ Stories and songs have been written in Tagalog, and it has a long cultural and
 historical significance. It's a **text-rich** language, but unfortunately, a
 **low-resource** one. In this blog post, I'll talk about the state of
 Tagalog-based corpora, my experience in creating a gold-standard dataset
-(including its limitations) for named-entity recognition (NER), and my hopes for
+for named-entity recognition, and my hopes for
 the future of Tagalog NLP.
+
+
+#### Contents
 
 I am focusing on structured prediction tasks like named-entity recognition (NER)
 because it has a lot of practical applications and little work has been done on
 Tagalog NER yet.
 
-#### Contents
-
 - [Background: Tagalog NER corpora is low-resource and silver-standard](#corpora)
 - [Methods: Creating and evaluating gold-standard data](#gold)
 - [Experimental Results](#experimental-results)
 - [Conclusion](#conclusion)
+
 
 ## <a id="corpora"></a>Tagalog NER corpora is low-resource and silver-standard
 
@@ -74,18 +76,18 @@ low-resource NLP:
 {:style="text-align: center;"}
 
 
-Some of the methods above produce what we usually call  **silver-standard data**.
-Their annotations are automatically generated, usually done by statistical
-models trained from a different but closely-related language or a knowledge base
-like Wikipedia. Silver-standard data may not be accurate or trustworthy, but
-they are faster and cheaper to create.
+Some of these methods produce what we usually call  **silver-standard data**.
+Their annotations are automatically generated, either by a statistical model
+trained from a similar language or a knowledge base. Silver-standard data may
+not be accurate or trustworthy, but they are faster and cheaper to create.
 
 ### Working with silver-standard annotations
 
 The best way to work with silver-standard data is to use them for bootstrapping
 the annotations of a much larger and diverse dataset. By bootstrapping the
 annotations, we reduce the cognitive load of labeling and focus more on
-correcting the model's outputs rather than labeling from scratch.
+correcting the model's outputs rather than labeling from scratch. The figure below
+illustrates the workflow I'm following:
 
 ![](/assets/png/tagalog-gold-standard/silver_standard_framework.png){:width="650px"}  
 {:style="text-align: center;"}
@@ -94,7 +96,7 @@ correcting the model's outputs rather than labeling from scratch.
 The only major NER dataset for Tagalog is **WikiANN** ([Pan, Zhang, et al.,
 2017](#pan2017wikiann)). It is a silver-standard dataset based on an English
 Knowledge Base (KB). The researchers were able to create a framework for tagging
-entities based on Wikipedia alone and extend it to 282 other languages,
+entities based on Wikipedia and extended it to 282 other languages,
 including Tagalog. It is not perfect. For example, the [first few entries of the validation
 set](https://huggingface.co/datasets/wikiann/viewer/tl/validation) have glaring errors:
 
@@ -120,7 +122,7 @@ Also, the texts themselves aren't complete sentences. A model trained on this
 data might translate poorly to longer documents as the *context* of an entity is
 lost. For example, articles (*ang*, *si*, *ang mga*) can point to a noun phrase
 and give clues if it's a person or organization.  However, WikiANN can still be
-useful. We can use it to train a model for bootstrapping our annotations.
+useful. We can use it to train a model for bootstrapping our annotations:
 
 ![](/assets/png/tagalog-gold-standard/wikiann.png){:width="650px"}  
 {:style="text-align: center;"}
@@ -181,7 +183,7 @@ some of these vectors:
 | Supervised learning | None + spaCy pretraining     | [Pretrain characters](https://spacy.io/api/architectures#pretrain_chars) using a subset of TLUnified to obtain word vectors. |
 | Supervised learning | fastText                     | Train a set of [fastText](https://fasttext.cc/) vectors from TLUnified and use them as [static vectors](https://spacy.io/usage/embeddings-transformers#static-vectors) for the downstream NER task. |
 | Supervised learning | fastText + spaCy pretraining | [Pretrain vectors](https://spacy.io/api/architectures#pretrain_vectors) using the fastText vectors.                          |
-| Supervised learning | floret*                       | Use [spaCy's extension of floret](https://github.com/explosion/floret) to create more compact vectors from TLUnified. Then, perform supervised learning as usual. | 
+| Supervised learning | floret*                       | Use [spaCy's extension of fastText](https://github.com/explosion/floret) to create more compact vectors from TLUnified. Then, perform supervised learning as usual. | 
 
 <p>* floret: I won't be doing the pretraining setup for floret because I just want to compare its size against fastText.</p>
 {:style="text-align: left; font-size: 14px;"}
