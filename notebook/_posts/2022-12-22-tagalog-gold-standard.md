@@ -72,7 +72,7 @@ low-resource NLP:
 <p>* Data: amount of gold-labeled annotations required.</p>
 {:style="text-align: left; font-size: 14px;"}
 
-**Table:** List of techniques for low-resource NLP
+**Table:** List of techniques for low-resource NLP ([Mortensen](#mortensen), [Tsvetkov, 2017](#tsvetkov2017opportunities)).
 {:style="text-align: center;"}
 
 
@@ -172,17 +172,17 @@ based on some inter-annotator agreement. Gold-standard data is not a cure-all.
 ### Experimental Setup
 
 I want to see how standard NER approaches fare with `tl_tlunified_gold`. I made
-two sets of experiments, one involving word vectors and the other using language
+two sets of experiments, one involving static vectors and the other using language
 models or transformers. In addition, I also want to see the effects of
 [pretraining](https://spacy.io/usage/embeddings-transformers#pretraining) for
 some of these vectors:
 
-| Approach| Word Vectors                 | Description                                                                          |
+| Approach| Static Vectors                 | Description                                                                          |
 |---------|------------------------------|--------------------------------------------------------------------------------------|
 | Supervised learning | None                         | Train a NER model from scratch. No tricks, just the annotated data.                  |
-| Supervised learning | None + spaCy pretraining     | [Pretrain characters](https://spacy.io/api/architectures#pretrain_chars) using a subset of TLUnified to obtain word vectors. |
+| Supervised learning | None + pretraining     | [Pretrain characters](https://spacy.io/api/architectures#pretrain_chars) using a subset of TLUnified to a finetuned "token to vector" layer. |
 | Supervised learning | fastText                     | Train a set of [fastText](https://fasttext.cc/) vectors from TLUnified and use them as [static vectors](https://spacy.io/usage/embeddings-transformers#static-vectors) for the downstream NER task. |
-| Supervised learning | fastText + spaCy pretraining | [Pretrain vectors](https://spacy.io/api/architectures#pretrain_vectors) using the fastText vectors.                          |
+| Supervised learning | fastText + pretraining | [Pretrain](https://spacy.io/api/architectures#pretrain_vectors) using the fastText vectors as pretraining objective.                          |
 | Supervised learning | floret*                       | Use [spaCy's extension of fastText](https://github.com/explosion/floret) to create more compact vectors from TLUnified. Then, perform supervised learning as usual. | 
 
 <p>* floret: I won't be doing the pretraining setup for floret because I just want to compare its size against fastText.</p>
@@ -211,16 +211,16 @@ roberta-tagalog-base settings.
 
 ## Experimental Results
 
-|                              | Precision | Recall | F1-score |
+| Static Vectors                             | Precision | Recall | F1-score |
 |------------------------------|-----------|--------|----------|
-| None                         |           |        |          |
-| None + spaCy pretraining     |           |        |          |
+| None            |           |        |          |
+| None + pretraining     |           |        |          |
 | fastText (XXX vectors)       |           |        |          |
-| fastText + spaCy pretraining |           |        |          |
+| fastText + pretraining |           |        |          |
 | floret (XXX vectors)         |           |        |          |
 
 
-|                       | Precision | Recall | F1-score |
+| Language Models                      | Precision | Recall | F1-score |
 |-----------------------|-----------|--------|----------|
 | roberta-tagalog-base  |           |        |          |
 | xlm-roberta-base      |           |        |          |
