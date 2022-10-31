@@ -33,7 +33,10 @@ the future of Tagalog NLP.
 
 #### Contents
 
-- [Tagalog NER corpora is low-resource and full of silver-standard annotations](#corpora)
+- [Background: Tagalog NER corpora is low-resource and full of silver-standard annotations](#corpora)
+- [Methods: Creating and evaluating gold-standard data](#gold)
+- [Experimental Results](#experimental-results)
+- [Conclusion](#conclusion)
 
 ## <a id="corpora"></a>Tagalog NER corpora is low-resource and full of silver-standard annotations
 
@@ -42,7 +45,6 @@ available. Even if Tagalog is text-rich (i.e., a million speakers, thousands of
 written content, etc.), the amount of annotated texts are scarce. This problem
 isn't unique to Tagalog. Out of the approximately 7000 languages in the world,
 only 10 have adequate NLP resources ([Mortensen](#mortensen), [Tsvetkov, 2017](#tsvetkov2017opportunities)). 
-
 
 There are many clever ways to build technologies on low-resource languages that
 allow researchers to circumvent the data scarcity problem. They usually involve
@@ -71,6 +73,32 @@ models trained from a different but closely-related language or a knowledge base
 like Wikipedia. Silver-standard data may not be accurate or trustworthy, but
 they are faster and cheaper to create.
 
+The only major NER dataset for Tagalog is **WikiANN** ([Pan, Zhang, et al.,
+2017](#pan2017wikiann)). It is a silver-standard dataset based from an English
+Knowledge Base (KB). The researchers were able to create a framework for tagging
+entities based from Wikipedia alone, and extend it to 282 other languages,
+including Tagalog. It is not perfect. For example, the [first few entries of the validation
+set](https://huggingface.co/datasets/wikiann/viewer/tl/validation) have glaring errors:
+
+<div style="position:relative; overflow: hidden; width;100%; padding-top: 10.25%">
+<iframe src="/assets/png/tagalog-gold-standard/wikiann_error.html" height="100" width="720" style="border:1px solid #ddd;border-radius:10px;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%"></iframe>
+</div>
+<br/>
+
+
+**Example:** *Hinlalato ng paa* is the middle toe finger
+{:style="text-align: center;"}
+
+
+<div style="position:relative; overflow: hidden; width;100%; padding-top: 10.25%">
+<iframe src="/assets/png/tagalog-gold-standard/wikiann_error2.html" height="100" width="720" style="border:1px solid #ddd;border-radius:10px;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%"></iframe>
+</div>
+<br/>
+
+**Example:** *Ninoy Aquino* should be tagged as `PER`, while *Sultan Kudarat* as `LOC` 
+{:style="text-align: center;"}
+
+
 
 
 <!-- RRL 
@@ -91,7 +119,7 @@ and correct obvious annotation errors.  In practice, you'd usually want more
 than three annotators (preferably linguists) and normalize their annotations
 based on some inter-annotator agreement. Gold-standard data is not a cure-all. 
 
-## Creating and evaluating gold-standard data
+## <a id="gold"></a>Creating and evaluating gold-standard data
 
 
 ### Bootstrapping WikiANN for annotation
@@ -107,13 +135,13 @@ models or transformers. In addition, I also want to see the effects of
 [pretraining](https://spacy.io/usage/embeddings-transformers#pretraining) for
 some of these vectors:
 
-| Word Vectors                 | Description                                                                          |
-|------------------------------|--------------------------------------------------------------------------------------|
-| None                         | Train a NER model from scratch. No tricks, just the annotated data.                  |
-| None + spaCy pretraining     | [Pretrain characters](https://spacy.io/api/architectures#pretrain_chars) using a subset of TLUnified to obtain word vectors. |
-| fastText                     | Train a set of [fastText](https://fasttext.cc/) vectors from TLUnified and use them as [static vectors](https://spacy.io/usage/embeddings-transformers#static-vectors) for the downstream NER task. |
-| fastText + spaCy pretraining | [Pretrain vectors](https://spacy.io/api/architectures#pretrain_vectors) using the fastText vectors.                          |
-| floret*                       | Use [spaCy's extension of floret](https://github.com/explosion/floret) to create more compact vectors from TLUnified. Then, perform supervised learning as usual. | 
+| Approach| Word Vectors                 | Description                                                                          |
+|---------|------------------------------|--------------------------------------------------------------------------------------|
+| Supervised learning | None                         | Train a NER model from scratch. No tricks, just the annotated data.                  |
+| Supervised learning | None + spaCy pretraining     | [Pretrain characters](https://spacy.io/api/architectures#pretrain_chars) using a subset of TLUnified to obtain word vectors. |
+| Supervised learning | fastText                     | Train a set of [fastText](https://fasttext.cc/) vectors from TLUnified and use them as [static vectors](https://spacy.io/usage/embeddings-transformers#static-vectors) for the downstream NER task. |
+| Supervised learning | fastText + spaCy pretraining | [Pretrain vectors](https://spacy.io/api/architectures#pretrain_vectors) using the fastText vectors.                          |
+| Supervised learning | floret*                       | Use [spaCy's extension of floret](https://github.com/explosion/floret) to create more compact vectors from TLUnified. Then, perform supervised learning as usual. | 
 
 <p>* floret: I won't be doing the pretraining setup for floret because I just want to compare its size against fastText.</p>
 {:style="text-align: left; font-size: 14px;"}
@@ -125,10 +153,10 @@ Then, I will also measure the performance of a monolingual and multilingual
 language model. I'm using transormer models as a [drop-in replacement](https://spacy.io/usage/embeddings-transformers#transformers) for
 the representation layer, to achieve higher accuracy:
 
-| Language Models       | Description                                                              |
-|-----------------------|--------------------------------------------------------------------------|
-| [roberta-tagalog](https://huggingface.co/jcblaise/roberta-tagalog-large) | Monolingual experiment with a large RoBERTa model trained from TLUnified. I will be testing both `base` and `large` variants. |
-| [xlm-roberta](https://huggingface.co/xlm-roberta-large)      | Multilingual experiment with a large XLM-RoBERTa. Trained on 100 different languages. I will be testing both `base` and `large` variants. |
+| Approach| Language Models       | Description                                                              |
+|---------|-----------------------|--------------------------------------------------------------------------|
+| Few-shot learning | [roberta-tagalog](https://huggingface.co/jcblaise/roberta-tagalog-large) | Monolingual experiment with a large RoBERTa model trained from TLUnified. I will be testing both `base` and `large` variants. |
+| Few-shot learning | [xlm-roberta](https://huggingface.co/xlm-roberta-large)      | Multilingual experiment with a large XLM-RoBERTa. Trained on 100 different languages. I will be testing both `base` and `large` variants. |
 
 **Table:** Experimental setup for language models
 {:style="text-align: center;"}
@@ -139,7 +167,7 @@ I'll also do a brief comparison against a [conditional random field
 (CRF)](https://github.com/talmago/spacy_crfsuite) for the fastText and
 roberta-tagalog-base settings.
 
-### Results
+## Experimental Results
 
 |                              | Precision | Recall | F1-score |
 |------------------------------|-----------|--------|----------|
@@ -187,4 +215,5 @@ roberta-tagalog-base settings.
 
 -  <a id="mortensen">Mortensen, David.</a>, *Undated*. Low-Resource NLP. Algorithms for Natural Language Processing [[Slides]](http://demo.clab.cs.cmu.edu/algo4nlp20/slides/low-resource-nlp.pdf)
 - <a id="tsvetkov2017opportunities">Tsvetkov, Yulia</a>, 2017. Opportunities and Challenges in Working with Low-Resource Languages. Language Technologies Institute, Carnegie Mellon University. [[Slides]](https://www.cs.cmu.edu/~ytsvetko/jsalt-part1.pdf). 
+- <a id="pan2017wikiann">Xiaoman Pan, Boliang Zhang, Jonathan May, Joel Nothman, Kevin Knight, and Heng Ji.</a> 2017. [Cross-lingual Name Tagging and Linking for 282 Languages](https://aclanthology.org/P17-1178). In *Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 1946–1958, Vancouver, Canada. Association for Computational Linguistics.
 
