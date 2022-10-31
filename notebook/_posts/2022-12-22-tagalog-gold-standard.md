@@ -22,7 +22,7 @@ excerpt: |
 ---
 
 
-<span class="firstcharacter">T</span>agalog is my native language. It's spoken
+<span class="firstcharacter">T</span>agalog (tl) is my native language. It's spoken
 by 76 million Filipinos and has been our official language since the 30s. 
 Stories and songs have been written in Tagalog, and it has a long cultural and
 historical significance. It's a **text-rich** language, but unfortunately, a
@@ -33,12 +33,12 @@ the future of Tagalog NLP.
 
 #### Contents
 
-- [Background: Tagalog NER corpora is low-resource and full of silver-standard annotations](#corpora)
+- [Background: Tagalog NER corpora is low-resource and silver-standard](#corpora)
 - [Methods: Creating and evaluating gold-standard data](#gold)
 - [Experimental Results](#experimental-results)
 - [Conclusion](#conclusion)
 
-## <a id="corpora"></a>Tagalog NER corpora is low-resource and full of silver-standard annotations
+## <a id="corpora"></a>Tagalog NER corpora is low-resource and silver-standard
 
 We label a language as **low-resource** when there are no annotated corpora
 available. Even if Tagalog is text-rich (i.e., a million speakers, thousands of
@@ -67,7 +67,8 @@ low-resource NLP:
 **Table:** List of techniques for low-resource NLP
 {:style="text-align: center;"}
 
-Some of these methods produce what we usually call  **silver-standard data**.
+
+Some of the methods above produce what we usually call  **silver-standard data**.
 Their annotations are automatically generated, usually done by statistical
 models trained from a different but closely-related language or a knowledge base
 like Wikipedia. Silver-standard data may not be accurate or trustworthy, but
@@ -86,7 +87,7 @@ set](https://huggingface.co/datasets/wikiann/viewer/tl/validation) have glaring 
 <br/>
 
 
-**Example:** *Hinlalato ng paa* is the middle toe finger
+**Example:** *Hinlalato ng paa* is the middle toe finger, not an `ORG`.
 {:style="text-align: center;"}
 
 
@@ -95,21 +96,24 @@ set](https://huggingface.co/datasets/wikiann/viewer/tl/validation) have glaring 
 </div>
 <br/>
 
-**Example:** *Ninoy Aquino* should be tagged as `PER`, while *Sultan Kudarat* as `LOC` 
+**Example:** *Ninoy Aquino* should be tagged as `PER`, while *Sultan Kudarat* as `LOC`.
 {:style="text-align: center;"}
 
+Also, notice that the texts themselves aren't full sentences. This might not
+translate well to longer documents as the *context* of an entity is lost. For
+example, the use of articles (*ang*, *si*, *ang mga*) can point to a noun phrase
+and give clues if it's a person (*Si Ninoy...*) or organization (*Ang DOH...*).
+However, I still think WikiANN can be useful. We can use it to train a model for
+bootstrapping our annotations.
 
-
-
-<!-- RRL 
-
-WikiANN
-
-maybe a table?
-
-
--->
-
+Fortunately, we have **a lot of unannotated datasets that represent the
+diversity of Filipino language**. For example, there is the
+[CommonCrawl](https://commoncrawl.org/) repository that contains web-crawled
+data for any language. We also have TLUnified ([Cruz and Cheng,
+2022](#cruz2022tlunified)) and WikiText TL-39 ([Cruz and Cheng,
+2019](#cruz2019wikitext)). For my experiments, I will be using the TLUnified
+dataset as it's more recent, and one of its subdomain (news) resembles that of
+standard NER benchmarks like ConLL.
 
 As you'll see later, I went with the traditional route: I labeled and produced
 gold-standard data myself. However, labeling thousands of samples is not the
@@ -216,4 +220,5 @@ roberta-tagalog-base settings.
 -  <a id="mortensen">Mortensen, David.</a>, *Undated*. Low-Resource NLP. Algorithms for Natural Language Processing [[Slides]](http://demo.clab.cs.cmu.edu/algo4nlp20/slides/low-resource-nlp.pdf)
 - <a id="tsvetkov2017opportunities">Tsvetkov, Yulia</a>, 2017. Opportunities and Challenges in Working with Low-Resource Languages. Language Technologies Institute, Carnegie Mellon University. [[Slides]](https://www.cs.cmu.edu/~ytsvetko/jsalt-part1.pdf). 
 - <a id="pan2017wikiann">Xiaoman Pan, Boliang Zhang, Jonathan May, Joel Nothman, Kevin Knight, and Heng Ji.</a> 2017. [Cross-lingual Name Tagging and Linking for 282 Languages](https://aclanthology.org/P17-1178). In *Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 1946–1958, Vancouver, Canada. Association for Computational Linguistics.
-
+- <a id="cruz2022tlunified">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2022. [Improving Large-scale Language Models and Resources for Filipino](https://aclanthology.org/2022.lrec-1.703/). In *Proceedings of the Thirteenth Language Resources and Evaluation Conference*, pages 6548–6555, Marseille, France. European Language Resources Association.
+- <a id="cruz2019wikitext">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2019. [Evaluating Language Model Finetuning Techniques for Low-resource Languages](https://arxiv.org/abs/1907.00409) *arXiv:1907.00409*.
