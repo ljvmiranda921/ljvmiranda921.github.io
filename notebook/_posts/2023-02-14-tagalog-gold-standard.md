@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Towards building a gold-standard NER corpus for Tagalog"
-date: 2022-12-22
+date: 2023-02-14
 category: notebook
 comments: true
 author: "LJ MIRANDA"
