@@ -157,7 +157,9 @@ case is to have multiple annotators though, so [**let me know if you want to hel
 
 In this section, I'll talk about how I annotated TLUnified to produce
 gold-standard data. I'll also introduce the experiments I did to see how
-baseline models perform on this dataset. 
+baseline models perform on this dataset. For clarity, I'll be calling the
+annotated TLUnified as `tl_tlunified_gold` (`tl` - language code, `tlunified` -
+data source, `gold` - dataset type).
 
 
 ### Turning silver to gold
