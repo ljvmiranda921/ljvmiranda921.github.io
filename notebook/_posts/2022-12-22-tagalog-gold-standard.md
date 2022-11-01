@@ -140,19 +140,24 @@ standard NER benchmarks like ConLL.
 ![](/assets/png/tagalog-gold-standard/tlunified.png){:width="650px"}  
 {:style="text-align: center;"}
 
+My process then goes like this: I will train a model from WikiANN and have it 
+predict entities for TLUnified. Then, I will correct the predictions using 
+[Prodigy](https://prodi.gy), an annotation software, to produce gold-standard
+annotations. Piece of cake, right?
 
-As you'll see later, I went with the traditional route: I labeled and produced
-gold-standard data myself. However, labeling thousands of samples is not the
-hardest part. As the sole annotator, it's easy for me to influence a dataset of
-my biases and errors in judgment. You'd want to normalize a dataset from bias
-and correct obvious annotation errors.  In practice, you'd usually want more
-than three annotators (preferably linguists) and normalize their annotations
-based on some inter-annotator agreement. Gold-standard data is not a cure-all. 
+However, *labeling thousands of samples is not the hardest part.* As the sole
+annotator, it's easy for me to influence a dataset of my biases and errors. In
+practice, you'd want  three or more annotators (preferably linguists), then
+normalize their annotations based on some inter-annotator agreement.
+Unfortunately, this is the **limitation** of this work. In the next section,
+I'll outline some of my attempts to be more objective when annotating. The ideal
+case is to have multiple annotators though, so [**let me know if you want to help out!**]()
 
 ## <a id="gold"></a>Creating and evaluating gold-standard data
 
 
 ### Bootstrapping WikiANN for annotation
+
 
 
 
