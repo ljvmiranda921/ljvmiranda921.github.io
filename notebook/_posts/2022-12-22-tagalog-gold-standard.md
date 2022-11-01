@@ -151,7 +151,7 @@ practice, you'd want  three or more annotators (preferably linguists), then
 normalize their annotations based on some inter-annotator agreement.
 Unfortunately, this is the **limitation** of this work. In the next section,
 I'll outline some of my attempts to be more objective when annotating. The ideal
-case is to have multiple annotators though, so [**let me know if you want to help out!**]()
+case is to have multiple annotators though, so [**let me know if you want to help out!**](#helping-out)
 
 ## <a id="gold"></a>Creating and evaluating gold-standard data
 
@@ -241,6 +241,10 @@ roberta-tagalog-base settings.
 
 ### Error analysis
 
+## Conclusion
+
+
+### Helping out
 
 ## FAQs
 
