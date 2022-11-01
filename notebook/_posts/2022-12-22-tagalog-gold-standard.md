@@ -147,7 +147,7 @@ annotations. Piece of cake, right?
 
 However, *labeling thousands of samples is not the hardest part.* As the sole
 annotator, it's easy for me to influence a dataset of my biases and errors. In
-practice, you'd want  three or more annotators (preferably linguists), then
+practice, you'd want three or more annotators (preferably linguists), then
 normalize their annotations based on some inter-annotator agreement.
 Unfortunately, this is the **limitation** of this work. In the next section,
 I'll outline some of my attempts to be more objective when annotating. The ideal
@@ -155,13 +155,21 @@ case is to have multiple annotators though, so [**let me know if you want to hel
 
 ## <a id="gold"></a>Creating and evaluating gold-standard data
 
+In this section, I'll talk about how I annotated TLUnified to produce
+gold-standard data. I'll also introduce the experiments I did to see how
+baseline models perform on this dataset. 
 
-### Bootstrapping WikiANN for annotation
+
+### Turning silver to gold
+
+
+<!-- bootstrapping wikiann -->
+<!-- advantage over labeling from scratch: reduced cognitive load -->
+<!-- experimented over ner.teach -->
 
 
 
-
-### Annotation proper
+### Annotation guidelines
 
 <!-- annotation guidelines -->
 
@@ -245,6 +253,8 @@ roberta-tagalog-base settings.
 
 
 ### Helping out
+
+
 
 ## FAQs
 
