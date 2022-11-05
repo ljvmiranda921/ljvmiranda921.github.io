@@ -198,10 +198,6 @@ some of these vectors:
 | Supervised learning | None + pretraining     | [Pretrain characters](https://spacy.io/api/architectures#pretrain_chars) using a subset of TLUnified to a finetuned "token to vector" layer. |
 | Supervised learning | fastText                     | Train a set of [fastText](https://fasttext.cc/) vectors from TLUnified and use them as [static vectors](https://spacy.io/usage/embeddings-transformers#static-vectors) for the downstream NER task. |
 | Supervised learning | fastText + pretraining | [Pretrain](https://spacy.io/api/architectures#pretrain_vectors) using the fastText vectors as pretraining objective.                          |
-| Supervised learning | floret*                       | Use [spaCy's extension of fastText](https://github.com/explosion/floret) to create more compact vectors from TLUnified. Then, perform supervised learning as usual. | 
-
-<p>* floret: I won't be doing the pretraining setup for floret because I just want to compare its size against fastText.</p>
-{:style="text-align: left; font-size: 14px;"}
 
 **Table:** Experimental setup for word vectors
 {:style="text-align: center;"}
@@ -218,11 +214,8 @@ the representation layer to achieve higher accuracy:
 **Table:** Experimental setup for language models
 {:style="text-align: center;"}
 
-For all the experiments above, I will be using a [transition-based parser
-(TBP)](https://spacy.io/api/entityrecognizer) for sequence labeling.  However,
-I'll also make a brief comparison against a [conditional random field
-(CRF)](https://github.com/talmago/spacy_crfsuite) for the fastText and
-roberta-tagalog-base settings.
+For all the experiments above, I will be using a [spaCy's transition-based
+parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
 
 ## Experimental Results
 
@@ -232,7 +225,6 @@ roberta-tagalog-base settings.
 | None + pretraining     |           |        |          |
 | fastText (XXX vectors)       |           |        |          |
 | fastText + pretraining |           |        |          |
-| floret (XXX vectors)         |           |        |          |
 
 
 | Language Models                      | Precision | Recall | F1-score |
@@ -242,12 +234,15 @@ roberta-tagalog-base settings.
 | roberta-tagalog-large |           |        |          |
 | roberta-tagalog-base  |           |        |          |
 
+<!--
+
 |                      |           | TBP |          |           | CRF |          |
 |----------------------|-----------|-------------------------|----------|-----------|--------------------------------|----------|
 |                      | Precision | Recall                  | F1-score | Precision | Recall                         | F1-score |
 | fastText             |           |                         |          |           |                                |          |
 | roberta-tagalog-base |           |                         |          |           |                                |          |
 
+-->
 
 ### Error analysis
 
