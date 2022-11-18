@@ -18,7 +18,6 @@ email: ljvmiranda@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Some notes on software systems, machine learning, and research.
 timezone: Asia/Manila
-
 # Link settings
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ljvmiranda921.github.io" # the base hostname & protocol for your site, e.g. http://example.com
@@ -26,8 +25,11 @@ permalink: pretty
 
 # Social settings
 social_sites:
-  github:  ljvmiranda921
+  github: ljvmiranda921
   twitter: ljvmiranda921
+  mastodon:
+    server: social.linux.pizza
+    username: ljvmiranda
 
 rss: rss
 
@@ -58,13 +60,12 @@ future: false
 # this and add the path to the pages in order as they should show up
 #header_pages:
 #  - about.html
-  #- /cv/index.md
-  #- /notebook/index.md
-  #- /projects/index.md
+#- /cv/index.md
+#- /notebook/index.md
+#- /projects/index.md
 
 # Include this line so that travis will not explode
 exclude: [vendor]
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
