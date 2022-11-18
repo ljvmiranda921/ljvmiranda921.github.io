@@ -1,11 +1,5 @@
 {% include base_path %}
 
-<a href="https://github.com/{{ site.social_sites.github }}"><svg class="svg-icon">
-        <use xlink:href="/assets/icons.svg#github"></use>
-    </svg></a>
-<a href="https://social.linux.pizza/@ljvmiranda"><svg class="svg-icon">
-        <use xlink:href="/assets/icons.svg#mastodon"></use>
-    </svg></a>
-<a href="https://twitter.com/{{ site.social_sites.twitter}}"><svg class="svg-icon">
-        <use xlink:href="/assets/icons.svg#twitter"></use>
-    </svg></a>
+<a href="https://github.com/{{ site.social_sites.github }}"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg></a>
+<a href="https://{{ site.social_sites.mastodon.server }}/@{{ site.social_sites.mastodon.username }}"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#mastodon"></use></svg></a>
+<a href="https://twitter.com/{{ site.social_sites.twitter}}"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#twitter"></use></svg></a>
