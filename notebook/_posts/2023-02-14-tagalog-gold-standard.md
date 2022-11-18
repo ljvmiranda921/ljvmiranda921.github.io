@@ -10,13 +10,13 @@ published: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
 description: |
     The lack of Tagalog gold-standard named-entity recognition (NER) data
-    inhibits us from training decent structured prediction pipelines for our
+    inhibits us from training decent structured prediction pipelines for the
     language. In this blog post, I'll talk about the state of Tagalog-based
     corpora, my progress on building a gold-standard dataset (and its
     limitations), and my hopes for the future of Tagalog NLP.
 excerpt: |
     The lack of Tagalog gold-standard NER data inhibits us from training decent
-    structured prediction pipelines for our language. In this blog post, I'll talk
+    structured prediction pipelines for the language. In this blog post, I'll talk
     about the state of Tagalog-based corpora, my progress on building a
     gold-standard dataset (and its limitations), and my hopes for the future of Tagalog NLP.
 ---
