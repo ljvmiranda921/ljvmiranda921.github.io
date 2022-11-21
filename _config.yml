@@ -28,7 +28,7 @@ social_sites:
   github: ljvmiranda921
   # twitter: ljvmiranda921
   mastodon:
-    server: social.linux.pizza
+    server: fosstodon.org 
     username: ljvmiranda
 
 rss: rss
