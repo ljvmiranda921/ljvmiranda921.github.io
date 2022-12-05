@@ -11,15 +11,17 @@ tags: [nlp, linguistics, semantics, pragmatics]
 description: |
     Nakapaloob sa sanaysay na ito ang aking mga pagmumuni patungkol sa relasyon
     ng wika at kahulugan. Bunga na rin ito ng paglaganap ng mga large language
-    models (LLM) sa kasulukuyan. May konsepto ba ng pag-unawa ang mga LLMs?
+    models (LLM) ngayon. May konsepto ba ng pag-unawa ang mga LLMs?  Susubukan
+    kong gumawa ng balangkas upang siyasatin ang tanong na ito.
 excerpt: |
     Nakapaloob sa sanaysay na ito ang aking mga pagmumuni patungkol sa relasyon
     ng wika at kahulugan. Bunga na rin ito ng paglaganap ng mga large language
-    models (LLM) sa kasulukuyan. May konsepto ba ng pag-unawa ang mga LLMs?
+    models (LLM) ngayon. May konsepto ba ng pag-unawa ang mga LLMs?  Susubukan
+    kong gumawa ng balangkas upang siyasatin ang tanong na ito.
 ---
 
 <span class="firstcharacter">H</span>abang nagbabasa ako ng librong *The Way of
-Kings* ni Brandon Sanderson, napansin ko na may isang tauhan doon, si Shallan
+Kings* ni Brandon Sanderson, napansin ko na may isang tauhan, si Shallan
 Davar, na mahilig gumamit ng **panunuya** sa kanyang wika. Madalas sasabihin
 niya yung salungat sa kanyang pakay. May mga pagkakataon na hindi siya
 naiintindihan ng kanyang kausap lalo na kung ang panunuyang ito ay nakasulat
@@ -137,7 +139,7 @@ pang pakinisin at bigyang hugis. Ngunit masaya na ko sa aking progreso.  Sa
 susunod na seksyon, susuriin ko ang iba't ibang diskurso patungkol sa mga
 *large language models* (LLMs) gamit ang ating balangkas.
 
-## Ang tatlong asal sa diskurso ng LLMs
+## Ang dalawang kalabisan sa diskurso ng LLMs
 
 Malaking bahagi sa paglikha ng mga *large language models* (LLMs) ang pagpapakita ng
 maraming teksto upang makabuo ito ng iba't ibang ugnayan sa pagitan ng mga
@@ -161,9 +163,21 @@ maipagkakaila ang husay ng modelong ito. Aaminin ko: parang tao nga ang kausap
 ko. Nasasagot niya ang aking mga tanong at nakakapagdagdag pa ng konteksto. 
 Dito lumilitaw muli ang tanong: may konsepto ba ng pag-unawa ang mga LLMs? 
 
+Sa palagay ko, may dalawang kalabisang lumalabas sa diskurso ng mga LLMs: labis
+na pagkamangha at labis na katigasan. 
 
-Sa palagay ko, may tatlong asal na lumalabas patungkol sa diskurso ng mga
-LLMs.
+### Pagkabulag ang labis na pagkamangha
+
+### Pagkapilay ang labis na katigasan
+
+
+<!--
+1. too much wonder. Ang labis na pagkamangha ay pagkabulag
+2. too much rigor. Ang labis na kahigpitan ay skeptisismo
+    - think of a better word than skepticism. 
+    - pagkapilay kasi isinasantabi mo na yung isang paa without considering it
+
+-->
 
 <!-- Sisiyasatin natin
 ang mga tanong na ito sa susunod na seksiyon. -->
