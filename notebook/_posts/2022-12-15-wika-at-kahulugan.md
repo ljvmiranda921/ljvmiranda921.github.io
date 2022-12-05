@@ -133,7 +133,9 @@ Sa susunod na seksiyon, susuriin ko ang iba't ibang diskurso patungkol sa mga
 
 
 
-
+> *Why are you writing in Filipino?* I realized that there are some nuances
+> and examples that only the richness of Filipino can capture. I might write a translation in the 
+> future, but for now I think Google Translate should give you a decent one.
 
 
 <!--
