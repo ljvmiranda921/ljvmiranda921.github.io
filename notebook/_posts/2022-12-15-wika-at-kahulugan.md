@@ -15,7 +15,7 @@ excerpt: |
 <span class="firstcharacter">H</span>abang nagbabasa ako ng librong *The Way of
 Kings* ni Brandon Sanderson, napansin ko na may isang tauhan doon, si Shallan
 Davar, na mahilig gumamit ng **panunuya** sa kanyang wika. Madalas sasabihin
-yung salungat sa kanyang pakay. May mga pagkakataon na hindi siya
+niya yung salungat sa kanyang pakay. May mga pagkakataon na hindi siya
 naiintindihan ng kanyang kausap lalo na kung ang panunuyang ito ay nakasulat
 lamang sa papel. Siguro kasi wala na yung konteksto&mdash; tono, postura,
 ekspresyon&mdash; kung binabasa lang yung nais niya.
@@ -121,7 +121,7 @@ ang pagbuo ng mga ugnayang ito. Sa kabilang banda, may kahulugan na kumakatawan
 sa mga bagay na may konteksto, karanasan, at kasaysayan. Dito, ginagamit lamang
 ang salita (o simbolo) para tukuyin ang mga bagay na ito. 
 
-Aaminin ko na nilililok ko pa ang balangkas na ito. May mga parte pa na gusto ko
+Aaminin ko na nilililok ko pa ang balangkas na ito. May mga parte na gusto ko
 pang pakinisin at bigyang ganap na hugis. Ngunit masaya na ko sa progresong ito.
 Sa susunod na seksiyon, susuriin ko ang iba't ibang diskurso patungkol sa mga
 *(large language models)* LLMs gamit ang ating balangkas.
