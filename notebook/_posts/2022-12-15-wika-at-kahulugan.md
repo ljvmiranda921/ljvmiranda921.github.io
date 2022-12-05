@@ -15,7 +15,7 @@ excerpt: |
 <span class="firstcharacter">H</span>abang nagbabasa ako ng librong *The Way of
 Kings* ni Brandon Sanderson, napansin ko na may isang tauhan doon, si Shallan
 Davar, na mahilig gumamit ng **panunuya** sa kanyang wika. Madalas sasabihin
-niya ang salungat ng kanyang pakay. May mga pagkakataon na hindi siya
+yung salungat sa kanyang pakay. May mga pagkakataon na hindi siya
 naiintindihan ng kanyang kausap lalo na kung ang panunuyang ito ay nakasulat
 lamang sa papel. Siguro kasi wala na yung konteksto&mdash; tono, postura,
 ekspresyon&mdash; kung binabasa lang yung nais niya.
@@ -38,7 +38,7 @@ tsansa.
 
 Uunahan ko na: wala pa akong sagot. Ngunit gusto kong bumuo ng isang balangkas
 para makipag-buno sa mga tanong na ito. Sa unang parte, susubukan kong bigyang hugis ang
-isang modelo ng komunikasyon na inaangkop ang dalawang uri ng kahulugang ito.
+isang modelo ng komunikasyon na inaangkop itong dalawang uri ng kahulugan.
 Sa ikalawa, gagamitin ko ang balangkas na ito upang siyasatin ang iba't ibang diskurso
 ukol sa LLMs.
 
@@ -68,7 +68,9 @@ __Fig:__ Modelo ng komunikasyon.
 
 Kung hihimayin natin ang interaksyong ito, ganito ang nangyayari *(A - Aktor,  K - Kausap)*:
 1. **(A) Intensyon:** may intensyon akong nagsasalita&mdash;malaman kung nasa loob ka ng bahay.
-2. **(A) Ekspresyon:** gamit ang kaalaman ko sa wika, pipili ako ng ekspresyon na tumpak sa aking intensyon. Dahil dito, ang sasabihin ko ay: "tao po!"
+2. **(A) Ekspresyon:** gamit ang kaalaman ko sa wika, pipili ako ng ekspresyon
+    na tumpak sa aking intensyon. Hahanguin ko ang mga simbolong alam ko upang
+    gumawa ng pangungusap. Dahil dito, ang sasabihin ko ay: "tao po!"
 3. **(K) Pag-unawa:** gagamitin mo ang iyong karanasan at modelo ng mundo upang unawain ang aking intensyon. Nasasa-iyo kung ikaw ay tutugon.
 4. **(A) Pag-pasya:** depende sa iyong tugon, maaari kong isipin kung naunawaan mo ba o hindi ang aking pagtawag.
 
@@ -80,13 +82,82 @@ naman nanggagaling ang tekstuwal na kahulugan.
 
 <!-- talk about how most NLP models were trained on textual meaning -->
 Sa kasulukuyan, karamihan ng mga istatistikang modelo sa wika ay base sa
-tekstuwal na kahulugan. Binubuo sila sa pamamagitan ng paglikha ng ugnayan sa
+tekstuwal na kahulugan. Binubuo sila sa pamamagitan ng paglikha ng mga ugnayan sa
 pagitan ng mga salita o simbolo (c.f., [*Study notes on making word vectors from
 scratch*](/notebook/2021/12/11/word-vectors/)). Mas maraming ugnayan ang mabubuo
-kung maraming teksto ang ipapakita sa modelo. Kadalasan ang mga tekstong ito ay
+kung mas maraming teksto ang ipapakita sa modelo. Kadalasan ang mga tekstong ito ay
 nanggagaling sa *internet*, libro, diyaryo, *Wikipedia*, at iba pa.  Mula rito,
 nakabubuo ang modelo ng isang semantikong kahulugan na maihahalintulad natin sa
 pansariling kaalaman sa wika.
+
+Para sa mga dalubwika, ang kontekstong natututunan ng isang modelo ay base
+lamang sa mga salitang nakapaligid dito&mdash;isang semantikang bunga ng
+probabilidad at distribusyon. Kapag pinakita natin sa modelo ang pangungusap na,
+*"Binaba ako ng jeepney sa Espa&ntilde;a,"* alam nito na ang simbolong
+`España` ay isang lugar sa Pilipinas dahil sa pang-ukol na `sa` (na
+kadalasa'y ginagamit sa lugar) at sa kalapit na salitang `jeepney` na konektado
+sa `Pilipinas`. Marahil sabay na lumalabas ang mga salitang ito sa teksto na
+ginamit upang sanayin ang mga modelo. Probabilidad at distribusyon. Isang sayaw
+ng matematika. Maaari mong palitan ang simbolong `España` ng
+kung ano man, `PeePeePooPoo`, at magkakaroon pa rin ito ng tekstuwal na kahulugan. 
+
+Taliwas ito sa isang teorya kung saan ginagamit ang wika bilang pantukoy sa mga
+bagay na nagmemeron. Dito, ang simbolong `España` ay tumutukoy sa Espa&ntilde;a,
+isang lugar na mahahanap mo, mapupuntahan mo, at mararanasan mo. Para sa akin,
+hindi yung pang-ukol na `sa` at salitang `jeepney` ang nagbibigay kahulugan sa
+`España`.  Ito yung mga karanasan ko nung binisita ang mga kaibigan sa UST, 
+muntik nang ma-*stranded* sa baha, at nagpatila sa loob ng isang *fastfood
+joint*. Kapag sinabi mo sa akin na binaba ka ng *jeepney* sa PeePeePooPoo, hindi
+kita maiintindihan. Muli, ang kahulugan ng isang salita ay kumakatawan sa mga
+parte ng meron. 
+
+![](/assets/png/wika/espana.jpg){:width="500px" style="padding:10px"}  
+{:style="text-align: center;"}
+
+Sana kahit papaano, nabigyan ko ng linaw ang dalawang uri ng kahulugan. Ang
+tekstuwal na kahulugan ay nakabase sa mga interaksyon at relasyon ng mga
+simbolo. Bilang isang dalubwika, gumagamit tayo ng mga modelo upang mapa-igting
+ang pagbuo ng mga ugnayang ito. Sa kabilang banda, may kahulugan na kumakatawan
+sa mga bagay na may konteksto, karanasan, at kasaysayan. Dito, ginagamit lamang
+ang salita (o simbolo) para tukuyin ang mga bagay na ito. 
+
+Aaminin ko na nilililok ko pa ang balangkas na ito. May mga parte pa na gusto ko
+pang pakinisin at bigyang ganap na hugis. Ngunit masaya na ko sa progresong ito.
+Sa susunod na seksiyon, susuriin ko ang iba't ibang diskurso patungkol sa mga
+*(large language models)* LLMs gamit ang ating balangkas.
+
+## Mga diskurso sa LLMs
+
+<!-- talk about LLMs, the scale of the data, give enough examples -->
+
+
+
+
+
+
+
+<!--
+Wala pa ring makapagsasabi kung magkatumbas ang pag-unawa ng isang *NLP model* at
+ng tao. May pansariling konteksto, karanasan, at kasaysayan rin ba ang mga *NLP models*?
+Tingnan ang susunod na pangungusap: "Binaba ako ng jeepney malapit sa Espa&ntilde;a"
+
+![](/assets/png/wika/espana.jpg){:width="600px" style="padding:10px"}  
+{:style="text-align: center;"}
+
+Kung ipapakita mo ito sa isang modelo at tinanong mo kung anong klaseng salita
+ang Espa&ntilde;a, marahil sasabihin nito na ang salitang Espa&ntilde;a ay isang
+lugar. Alam natin na tama ang kanyang sagot ngunit naunawaan ba niya talaga ang 
+pangungusap? Tinawag ba niya itong lugar dahil alam niya na ito'y kalsada sa
+Maynila (at hindi ang bansang Espa&ntilde;a)? O tinawag niya itong lugar dahil
+sa natutunan niyang balarila at estruktura ng pangungusap? 
+
+
+Kapag sinuri natin ang mga teksto na ginagamit upang gumawa ng mga *NLP models*
+ngayon, mapapansin na malaki ang agwat sa pagitan ng tekstuwal at kumakatawang
+kahulugan.
+-->
+
+<!-- Ngunit hanggang sa ngayon, hindi pa rin natin alam kung ang  -->
 
 <!--
 Masasabi ba natin na itong semantikong kahulugan ay katumbas ng konteksto,
@@ -104,3 +175,4 @@ niyang balarila at estruktura ng pangungusap?
 ## Sanggunian
 
 - <a id="pickering2012alignment">Menenti L, Pickering MJ, Garrod SC.</a> Toward a neural basis of interactive alignment in conversation. Front Hum Neurosci. 2012 Jun 27;6:185. doi: 10.3389/fnhum.2012.00185. PMID: 22754517; PMCID: PMC3384290.
+- <a id="firth1957distrib">Firth, J.R.</a> (1957). "A synopsis of linguistic theory 1930-1955". Studies in Linguistic Analysis: 1–32. Reprinted in F.R. Palmer, ed. (1968). Selected Papers of J.R. Firth 1952-1959. London: Longman.
