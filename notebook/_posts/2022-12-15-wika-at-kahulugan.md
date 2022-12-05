@@ -2,14 +2,20 @@
 layout: post
 type: post
 title: "Pagmumuni ukol sa wika at kahulugan"
-date: 2022-12-02
+date: 2022-12-15
 category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [nlp, linguistics, semantics, pragmatics]
 description: |
+    Nakapaloob sa sanaysay na ito ang aking mga pagmumuni patungkol sa relasyon
+    ng wika at kahulugan. Bunga na rin ito ng paglaganap ng mga large language
+    models (LLM) sa kasulukuyan. May konsepto ba ng pag-unawa ang mga LLMs?
 excerpt: |
+    Nakapaloob sa sanaysay na ito ang aking mga pagmumuni patungkol sa relasyon
+    ng wika at kahulugan. Bunga na rin ito ng paglaganap ng mga large language
+    models (LLM) sa kasulukuyan. May konsepto ba ng pag-unawa ang mga LLMs?
 ---
 
 <span class="firstcharacter">H</span>abang nagbabasa ako ng librong *The Way of
@@ -122,16 +128,42 @@ sa mga bagay na may konteksto, karanasan, at kasaysayan. Dito, ginagamit lamang
 ang salita (o simbolo) para tukuyin ang mga bagay na ito. 
 
 Aaminin ko na nilililok ko pa ang balangkas na ito. May mga parte na gusto ko
-pang pakinisin at bigyang ganap na hugis. Ngunit masaya na ko sa progresong ito.
-Sa susunod na seksiyon, susuriin ko ang iba't ibang diskurso patungkol sa mga
+pang pakinisin at bigyang hugis. Ngunit masaya na ko sa aking progreso.  Sa
+susunod na seksiyon, susuriin ko ang iba't ibang diskurso patungkol sa mga
 *(large language models)* LLMs gamit ang ating balangkas.
 
 ## Mga diskurso sa LLMs
 
 <!-- talk about LLMs, the scale of the data, give enough examples -->
+Nabanggit ko sa unang parte na kinakailangang magpakita ng mga teksto upang
+bumuo ng isang modelo ng wika. Pagdating sa *large language models*, ang lawak
+at dami ng *corpora* ay tumataigting. Halimbawa, ang GPT-3 ay sinanay mula sa
+mga teksto sa Internet (*CommonCrawl*), mga kumento sa *Reddit*, mga libro, at
+mga pahina sa *Wikipedia*. Kung susumahin, halos 45 TB ng teksto ang ginamit
+upang likhain ito. Isipin mo, nilikom natin ang kolektibong kaalaman ng mundo
+[?] at gumawa ng mga ugnayang higit pa sa isang indibidwal. 
+
+Ngunit katumbas ba nitong 45 TB na "kolektibong kaalaman" mula sa *Internet* ang
+karanasan, konteksto, at kasaysayan ng tao? Dumadaloy ba sa parehong nibel ng
+pag-unawa ang dalawa? Marahil mas maraming *facts* ang maibibigay ng GPT-3 kaysa
+sa akin patungkol sa Espa&ntilde;a ngunit, nauunawaan ba niya talaga ang lugar
+na ito?
+
+
+### "May konsepto ng pag-unawa ang LLMs. Tingnan mo ang ChatGPT!"
+
+Hindi maipagkakaila
+<!-- GPT is actually strong -->
+
+### "Walang konsepto ng pag-unawa ang LLMs. Ito ay bunga ng tsansa."
+
+<!-- Things we still don't know about: how does scale help? implicit notions? -->
+<!-- what's happening now is that we're making math work for us -->
 
 
 
+
+## Konklusyon: may posibilidad ba ng pag-unawa ang mga LLMs?
 
 > *Why are you writing in Filipino?* I realized that there are some nuances
 > and examples that only the richness of Filipino can capture. I might write a translation in the 
@@ -174,7 +206,8 @@ Maynila (at hindi isang bansa)? O tinawag niya itong lugar dahil sa natutunan
 niyang balarila at estruktura ng pangungusap?
 -->
 
-## Sanggunian
+## References
 
-- <a id="pickering2012alignment">Menenti L, Pickering MJ, Garrod SC.</a> Toward a neural basis of interactive alignment in conversation. Front Hum Neurosci. 2012 Jun 27;6:185. doi: 10.3389/fnhum.2012.00185. PMID: 22754517; PMCID: PMC3384290.
 - <a id="firth1957distrib">Firth, J.R.</a> (1957). "A synopsis of linguistic theory 1930-1955". Studies in Linguistic Analysis: 1–32. Reprinted in F.R. Palmer, ed. (1968). Selected Papers of J.R. Firth 1952-1959. London: Longman.
+- <a id="bender2020nlu">Emily M. Bender and Alexander Koller.</a> 2020. Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data. In *Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics*, pages 5185–5198, Online. Association for Computational Linguistics.
+- <a id="manning2022human">Manning, Christopher D.</a>2022. Human Language Understanding & Reasoning. In *Daedalus, the Journal of the American Academy of Arts & Sciences*
