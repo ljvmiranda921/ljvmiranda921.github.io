@@ -45,9 +45,9 @@ konteksto at karanasan ng bawat salitang sinambit ko.
 Dito naisip ko na baka may dalawang uri ng kahulugan: (1) **kahulugang
 tekstuwal** na base lamang sa kung ano ang literal na nakasulat, at (2)
 **kahulugang kumakatawan** na may pagtatangi sa konteksto at intensyon.
-Interesado ako dito dahil sa kasulukuyan, may mga diskusyon kung may konsepto ba ng 
-pag-unawa ang mga *large language models* (LLMs) at hindi lamang ito bunga ng numero at
-tsansa.
+Interesado ako dito dahil sa kasulukuyan, may mga diskusyon kung may konsepto
+nga ba ng pag-unawa ang mga *large language models* (LLMs) at hindi lamang ito
+bunga ng numero at tsansa. 
 
 Uunahan ko na: wala pa akong sagot. Ngunit gusto kong bumuo ng isang balangkas
 para makipag-buno sa mga tanong na ito. Sa unang parte, susubukan kong bigyang hugis ang
@@ -57,7 +57,7 @@ ukol sa LLMs.
 
 ## Part I: Tao po! 
 
-Kung pupunta ako ngayon sa bahay mo at hindi ko alam kung nandiyan ka, ang
+Kung pupunta ako ngayon sa bahay mo pero hindi ko alam kung nasa loob ka, ang
 gagawin ko siguro ay kakatok sa iyong pinto at sisigaw ng: "tao po!" Kakatok
 ulit. Sisigaw: tao po! 
 
@@ -76,9 +76,10 @@ natin. Intensyon ang mahalagang sangkap ng kahulugang kumakatawan. Madalas ang
 intensyong ito ay lagpas pa sa wika.
 
 ![](/assets/png/wika/actor_interlocutor_model.png){:width="600px" style="padding:10px"}  
-__Fig:__ Modelo ng komunikasyon.
+__Fig:__ Proseso ng komunikasyon.
 {:style="text-align: center;"}
 
+<!--
 Kung hihimayin natin ang interaksyong ito, ganito ang nangyayari *(A - Aktor,  K - Kausap)*:
 1. **(A) Intensyon:** may intensyon akong nagsasalita&mdash;malaman kung nasa loob ka ng bahay.
 2. **(A) Ekspresyon:** gamit ang kaalaman ko sa wika, pipili ako ng ekspresyon
@@ -87,35 +88,36 @@ Kung hihimayin natin ang interaksyong ito, ganito ang nangyayari *(A - Aktor,  K
 3. **(K) Pag-unawa:** gagamitin mo ang iyong karanasan at modelo ng mundo upang unawain ang aking intensyon. Nasasa-iyo kung ikaw ay tutugon.
 4. **(A) Pag-pasya:** depende sa iyong tugon, maaari kong isipin kung naunawaan mo ba o hindi ang aking pagtawag.
 
-Sa itaas, gumuhit ako ng modelo ng komunikasyon. Bawat aktor ay may
-sariling modelo ng mundo na dumadaloy sa kanilang indibidwal na konteksto,
-karanasan at kasaysayan.  Dito nanggagaling ang kumakatawang kahulugan. Gamit
-ang salita at wika, nagagawa nating ihayag ang ating pananaw at intensyon. Dito
-naman nanggagaling ang tekstuwal na kahulugan.
+-->
 
-Sa kasulukuyan, karamihan ng mga istatistikang modelo sa wika ay base sa
-tekstuwal na kahulugan. Binubuo sila sa pamamagitan ng paglikha ng mga ugnayan sa
-pagitan ng mga salita o simbolo (c.f., [*Study notes on making word vectors from
-scratch*](/notebook/2021/12/11/word-vectors/)). Mas maraming ugnayan ang mabubuo
-kung mas maraming teksto ang ipapakita sa modelo. Kadalasan ang mga tekstong ito ay
-nanggagaling sa *internet*, libro, diyaryo, *Wikipedia*, at iba pa.  Mula rito,
-nakabubuo ang modelo ng semantikong kahulugan na maihahalintulad natin sa
-pansariling kaalaman sa wika.
+<!-- Bawat aktor ay may sariling pagtingin sa mundo na dumadaloy sa kanilang
+indibidwal na konteksto, karanasan, at kasaysayan. Nagsisilbi itong sisidlan ng
+kumakatawang kahulugan. Gamit ang salita at wika, nagagawa nating ihayag ang
+ating pananaw at intensyon.  Nagiging batayan ng tekstuwal na kahulugan ang
+literal na pagsambit nito. -->
 
-Para sa mga dalubwika, ang kontekstong natututunan ng isang istatistikang modelo
-ay base lamang sa mga salitang nakapaligid dito&mdash;semantikang bunga ng
-probabilidad at distribusyon. Kapag pinakita natin sa modelo ang pangungusap na,
-*"Binaba ako ng jeepney sa Espa&ntilde;a,"* alam nito na ang simbolong
-`España` ay lugar sa Pilipinas dahil sa pang-ukol na `sa` (na kadalasa'y
-ginagamit sa lugar) at sa kalapit na salitang `jeepney` na konektado sa
-`Pilipinas`. Marahil sabay na lumalabas ang mga salitang ito sa tekstong
-ginamit para likhain ang modelo. Probabilidad at distribusyon. Isang sayaw
-ng matematika. Maaari mong palitan ang simbolong `España` ng kung ano man,
-`PeePeePooPoo`, at magkakaroon pa rin ito ng tekstuwal na kahulugan. 
+Sa kasulukuyan, base sa tekstuwal na kahulugan ang karamihan sa mga
+istatistikang modelo ng wika.  [Lumilikha sila ng mga ugnayan sa pagitan ng mga
+salita o simbolo](/notebook/2021/12/11/word-vectors/). Mas maraming ugnayan ang
+mabubuo kung mas marami ang uri at bilang ng tekstong ipinakita sa modelo.
+Kadalasan ang mga tekstong ito ay inungkat mula sa *internet*, libro, diyaryo,
+o *Wikipedia*.  Mula rito, natututunan ng modelo ang semantiko at gramatikong
+estruktura ng wika.
+
+Halimbawa, kung madalas magkasama ang mga salitang `jeepney` at `Pilipinas` sa
+mga tekstong ginamit para likhain ang ating modelo, magkakaroon ng malakas na
+ugnayan ang mga simbolong ito. Para sa mga dalubwika, ang "pag-unawa" ng isang
+istatistikang modelo ay bunga lamang ng semantikang probabilidad at
+distribusyon. Kapag pinakita natin sa modelo ang pangungusap na, *"Binaba ako ng
+jeepney sa Espa&ntilde;a,"* alam nito na ang simbolong `España` ay lugar sa
+Pilipinas dahil sa pang-ukol na `sa` at sa kalapit na salitang `jeepney` na may
+kaugnayan sa `Pilipinas`. Isang sayaw ng matematika. Maaari mong palitan ang
+simbolong `España` ng kung ano man, `PeePeePooPoo`, at magkakaroon pa rin ito ng
+tekstuwal na kahulugan. 
 
 Taliwas ito sa teorya kung saan ginagamit ang wika bilang pantukoy sa mga
 bagay na nagmemeron. Dito, ang simbolong `España` ay tumutukoy sa Espa&ntilde;a,
-isang lugar na mahahanap mo, mapupuntahan mo, at mararanasan mo. Para sa akin,
+isang lugar na mahahanap mo, mapupuntahan mo, at mararanasan mo. Ayon sa teoryang ito,
 hindi yung pang-ukol na `sa` at salitang `jeepney` ang nagbibigay kahulugan sa
 `España`.  Ito yung mga karanasan ko nung binisita ang mga kaibigan sa UST, 
 muntik nang ma-*stranded* sa baha, at nagpatila sa loob ng isang *fastfood
@@ -126,14 +128,15 @@ parte ng meron.
 ![](/assets/png/wika/espana.jpg){:width="500px" style="padding:10px"}  
 {:style="text-align: center;"}
 
-Isang teoryang semantika na base sa mga ugnayan ng simbolo at isang teoryang
-pantukoy base sa mga salitang tumuturo sa meron. Bawat isa ay nagbibigay-hugis
-sa kahulugang tekstuwal at kumakatawan. Walang nakalalamang sa dalawa. Ginagamit
-natin pareho kapag natututo tayo ng wika. Marahil hinango natin mula sa ating
-karanasan ang mga salitang `España`, `jeepney` at `tao`, ngunit ginamit natin
-ang mga ugnayan nila para intindihin ang iba pang salita tulad ng `at`, `sa`,
-`ng` at `ang`. Nagkataon lang na ang mga *machine learning models* ngayon ay
-nakadepende sa mga semantikang ugnayan para bigyang kahulugan ang mga salita.
+Muli, mayroon tayong (1) kahulugang tekstuwal na galing sa semantikang ugnayan
+ng mga salita o simbolo at (2) kahulugang kumakatawan kung saan ginagamit ang 
+salita bilang panturo sa meron. Walang
+nakalalamang sa dalawa. Ginagamit natin pareho kapag natututo tayo ng wika.
+Marahil hinango natin mula sa ating karanasan ang mga salitang `España`,
+`jeepney` at `tao`, ngunit ginamit natin ang mga ugnayan nila para intindihin
+ang iba pang salita tulad ng `at`, `sa`, `ng` at `ang`. Nagkataon lang na 
+depende sa tekstuwal na kahulugan ang karamihan sa mga naglaganap na istatistikang
+modelo ngayon.
 
 ![](/assets/png/wika/theory.png){:width="500px" style="padding:10px"}  
 {:style="text-align: center;"}
@@ -174,7 +177,7 @@ isang LLM na [maaari mong makausap](https://chat.openai.com/auth/login).  Hindi
 maipagkakaila ang husay ng modelong ito. Aaminin ko: parang tao nga ang kausap
 ko. Nasasagot niya ang aking mga tanong at nakakapagdagdag pa ng konteksto. Parang *magic*!
 
-Nalala ko noong bata pa ako, dumalo ako sa *birthday party* ng kaibigan.
+Nalala ko noong bata pa 'ko, may pinuntahan akong *birthday party* ng kaibigan.
 May payaso na gumagawa ng *magic tricks*. Yung baton nagiging bulaklak, tapos
 yung apoy nagiging baraha! Ang galing! Nakamamangha! Ngunit klarong-klaro rin sa'king
 alalaala yung kuya ng kaibigan ko. Sa bawat *magic trick*, pilit niyang pinapaliwanag
@@ -205,8 +208,8 @@ pag-unawa:
 {:style="text-align: center;"}
 
 Dahil mahusay ang komunikasyon sa pagitan natin at ng mga LLMs, tinatantiya na
-natin na may ganap na pag-unawa sa kahulugan (parehong kumakatawan at tekstuwal)
-ang mga modelong ito. Ngunit may panganib ng **pagkabulag** dito:
+natin na may ganap na pag-unawa ang mga modelong ito. Ngunit may panganib ng
+**pagkabulag** dito:
 
 - Nakalilimutan natin na ang kakayahan ng mga LLMs ay limitado sa uri at klase ng teksto
     na ginamit para likhain ito. Ang mga ugnayang nakapaloob sa modelo ay base lamang
@@ -226,9 +229,9 @@ ang mga modelong ito. Ngunit may panganib ng **pagkabulag** dito:
 
 Sa larangang ito, gusto ko ang paraan ng pagtatanong nina [Yejin
 Choi](https://homes.cs.washington.edu/~yejin/): papaano natin mabibigyan ng
-sentido komun (*common sense*) ang mga LLMs? Maaaring maihalintulad ang mga
-modelo gaya ng GPT-3 sa batang pinalaki sa loob ng silid-aklatan.  Mababasa niya
-lahat ng libro doon, ngunit, handa ba siyang lumabas at makihalubilo sa mundo? 
+sentido komun (*common sense*) ang mga LLMs? Ihinahalintulad niya ang mga modelo
+gaya ng GPT-3 sa batang pinalaki sa loob ng silid-aklatan. Mababasa niya lahat
+ng libro doon, ngunit, handa ba siyang lumabas at makihalubilo sa mundo? 
 
 <!-- conclusion -->
 May lugar ang pagkamangha. Tinutulak tayo nito upang palawigin pa ang pag-unawa
