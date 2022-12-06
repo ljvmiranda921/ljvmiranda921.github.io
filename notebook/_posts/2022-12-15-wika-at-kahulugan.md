@@ -55,7 +55,7 @@ isang modelo ng komunikasyon na inaangkop itong dalawang uri ng kahulugan.
 Sa ikalawa, gagamitin ko ang balangkas na ito upang siyasatin ang iba't ibang diskurso
 ukol sa LLMs.
 
-## Tao po! 
+## Part I: Tao po! 
 
 Kung pupunta ako ngayon sa bahay mo at hindi ko alam kung nandiyan ka, ang
 gagawin ko siguro ay kakatok sa iyong pinto at sisigaw ng: "tao po!" Kakatok
@@ -126,6 +126,18 @@ parte ng meron.
 ![](/assets/png/wika/espana.jpg){:width="500px" style="padding:10px"}  
 {:style="text-align: center;"}
 
+Isang teoryang semantika na base sa mga ugnayan ng simbolo at isang teoryang
+pantukoy base sa mga salitang tumuturo sa meron. Bawat isa ay nagbibigay-hugis
+sa kahulugang tekstuwal at kumakatawan. Walang nakalalamang sa dalawa. Ginagamit
+natin pareho kapag natututo tayo ng wika. Marahil hinango natin mula sa ating
+karanasan ang mga salitang `España`, `jeepney` at `tao`, ngunit ginamit natin
+ang mga ugnayan nila para intindihin ang iba pang salita tulad ng `at`, `sa`,
+`ng` at `ang`. Nagkataon lang na ang mga *machine learning models* ngayon ay
+nakadepende sa mga semantikang ugnayan para bigyang kahulugan ang mga salita.
+
+![](/assets/png/wika/theory.png){:width="500px" style="padding:10px"}  
+{:style="text-align: center;"}
+
 Sana kahit papaano, nabigyan ko ng linaw ang dalawang uri ng kahulugan. Ang
 tekstuwal na kahulugan ay nakabase sa mga interaksyon at relasyon ng mga
 simbolo. Bilang dalubwika, gumagamit tayo ng mga istatistikang modelo
@@ -139,7 +151,7 @@ pang pakinisin at bigyang hugis. Ngunit masaya na ko sa aking progreso.  Sa
 susunod na seksyon, susuriin ko ang iba't ibang diskurso patungkol sa mga
 *large language models* (LLMs) gamit ang ating balangkas.
 
-## May dalawang ugali sa diskurso ng LLMs
+## Part II: May dalawang ugali sa diskurso ng Large Language Models
 
 Malaking bahagi sa paglikha ng mga *large language models* (LLMs) ang pagpapakita ng
 maraming teksto upang makabuo ng iba't ibang ugnayan sa pagitan ng mga
