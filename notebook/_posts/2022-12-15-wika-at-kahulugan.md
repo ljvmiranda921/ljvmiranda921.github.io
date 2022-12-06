@@ -42,8 +42,8 @@ siyasatin kung naiintindihan mo ba yung **kahulugan** ng sinasabi ko. Hindi lang
 basta yung literal na pagkakaayos ng mga salita o simbolo, ngunit pati yung
 konteksto at karanasan ng bawat salitang sinambit ko. 
 
-Dito naisip ko na baka may dalawang uri ng kahulugan: isang (1) **kahulugang
-tekstuwal** na base lamang sa kung ano ang literal na nakasulat, at isang (2)
+Dito naisip ko na baka may dalawang uri ng kahulugan: (1) **kahulugang
+tekstuwal** na base lamang sa kung ano ang literal na nakasulat, at (2)
 **kahulugang kumakatawan** na may pagtatangi sa konteksto at intensyon.
 Interesado ako dito dahil sa kasulukuyan, may mga diskusyon kung may konsepto ba ng 
 pag-unawa ang mga *large language models* (LLMs) at hindi lamang ito bunga ng numero at
@@ -64,11 +64,11 @@ ulit. Sisigaw: tao po!
 Kapag sinuri lang natin ang tekstuwal na kahulugan ng ekspresyong ito, hindi
 ba kakaiba na dinedeklara natin ang ating pagkatao sa bawat katok? (O hindi
 kaya tinatanong natin ang pagkatao ng nasa loob?) Hindi mo ito basta maisasalin
-sa ibang wika. Kung nasa Amerika tayo ngayon, hindi tayo kakatok sa isang pinto at
+sa ibang wika. Kung nasa Amerika tayo ngayon, hindi tayo kakatok sa pinto at
 sisigaw ng: *"I'm human!"* 
 
 Ngunit tulad ng nabanggit ko, may isa pang nibel ng kahulugan. Dahil nasa
-Pilipinas tayo, at alam mo ang **intensyon** ko, nakalugar ang "tao po!" sa isang
+Pilipinas tayo, at alam mo ang **intensyon** ko, nakalugar ang "tao po!" sa
 gawi na naiintidihan nating dalawa. Hindi na iba sa'yo kung may sumisigaw ng
 kanyang pagkatao habang kumakatok dahil alam mo na isa itong paraan ng pagtawag.
 Karaniwan lamang ito dahil umiiral sa lugar, panahon, at tradisyon ang wika
@@ -87,7 +87,7 @@ Kung hihimayin natin ang interaksyong ito, ganito ang nangyayari *(A - Aktor,  K
 3. **(K) Pag-unawa:** gagamitin mo ang iyong karanasan at modelo ng mundo upang unawain ang aking intensyon. Nasasa-iyo kung ikaw ay tutugon.
 4. **(A) Pag-pasya:** depende sa iyong tugon, maaari kong isipin kung naunawaan mo ba o hindi ang aking pagtawag.
 
-Sa itaas, gumuhit ako ng isang modelo ng komunikasyon. Bawat aktor ay may
+Sa itaas, gumuhit ako ng modelo ng komunikasyon. Bawat aktor ay may
 sariling modelo ng mundo na dumadaloy sa kanilang indibidwal na konteksto,
 karanasan at kasaysayan.  Dito nanggagaling ang kumakatawang kahulugan. Gamit
 ang salita at wika, nagagawa nating ihayag ang ating pananaw at intensyon. Dito
@@ -99,21 +99,21 @@ pagitan ng mga salita o simbolo (c.f., [*Study notes on making word vectors from
 scratch*](/notebook/2021/12/11/word-vectors/)). Mas maraming ugnayan ang mabubuo
 kung mas maraming teksto ang ipapakita sa modelo. Kadalasan ang mga tekstong ito ay
 nanggagaling sa *internet*, libro, diyaryo, *Wikipedia*, at iba pa.  Mula rito,
-nakabubuo ang modelo ng isang semantikong kahulugan na maihahalintulad natin sa
+nakabubuo ang modelo ng semantikong kahulugan na maihahalintulad natin sa
 pansariling kaalaman sa wika.
 
 Para sa mga dalubwika, ang kontekstong natututunan ng isang istatistikang modelo
-ay base lamang sa mga salitang nakapaligid dito&mdash;isang semantikang bunga ng
+ay base lamang sa mga salitang nakapaligid dito&mdash;semantikang bunga ng
 probabilidad at distribusyon. Kapag pinakita natin sa modelo ang pangungusap na,
 *"Binaba ako ng jeepney sa Espa&ntilde;a,"* alam nito na ang simbolong
-`España` ay isang lugar sa Pilipinas dahil sa pang-ukol na `sa` (na kadalasa'y
+`España` ay lugar sa Pilipinas dahil sa pang-ukol na `sa` (na kadalasa'y
 ginagamit sa lugar) at sa kalapit na salitang `jeepney` na konektado sa
 `Pilipinas`. Marahil sabay na lumalabas ang mga salitang ito sa tekstong
 ginamit para likhain ang modelo. Probabilidad at distribusyon. Isang sayaw
 ng matematika. Maaari mong palitan ang simbolong `España` ng kung ano man,
 `PeePeePooPoo`, at magkakaroon pa rin ito ng tekstuwal na kahulugan. 
 
-Taliwas ito sa isang teorya kung saan ginagamit ang wika bilang pantukoy sa mga
+Taliwas ito sa teorya kung saan ginagamit ang wika bilang pantukoy sa mga
 bagay na nagmemeron. Dito, ang simbolong `España` ay tumutukoy sa Espa&ntilde;a,
 isang lugar na mahahanap mo, mapupuntahan mo, at mararanasan mo. Para sa akin,
 hindi yung pang-ukol na `sa` at salitang `jeepney` ang nagbibigay kahulugan sa
@@ -128,7 +128,7 @@ parte ng meron.
 
 Sana kahit papaano, nabigyan ko ng linaw ang dalawang uri ng kahulugan. Ang
 tekstuwal na kahulugan ay nakabase sa mga interaksyon at relasyon ng mga
-simbolo. Bilang isang dalubwika, gumagamit tayo ng mga istatistikang modelo
+simbolo. Bilang dalubwika, gumagamit tayo ng mga istatistikang modelo
 upang mapa-igting ang pagbuo ng mga ugnayang ito. Sa kabilang banda, may
 kahulugan na kumakatawan sa mga bagay na may konteksto, karanasan, at
 kasaysayan. Dito, ginagamit ang mga salita at simbolo para tukuyin ang mga
@@ -147,8 +147,8 @@ simbolo. Sa kasulukuyan, palaki ng palaki ang sukat ng *data* na ginagamit
 sa paglikha ng mga LLMs. Halimbawa, binuo ang GPT-3 gamit ang 45 TB na teksto mula sa
 *internet* ([*CommonCrawl*](https://commoncrawl.org/)), mga kumento sa *Reddit*, mga libro,
 at mga pahina ng *Wikipedia*. Isipin mo, nilikom natin
-ang isang piraso ng kolektibong kaalaman ng mundo at gumawa ng mga ugnayang
-higit pa sa isang tao. 
+ang piraso ng kolektibong kaalaman ng mundo at gumawa ng mga ugnayang
+higit pa sa tao. 
 
 <!-- Ngunit katumbas ba nitong 45 TB na "kolektibong kaalaman" mula sa *Internet* ang
 karanasan, konteksto, at kasaysayan ng tao? Dumadaloy ba sa parehong nibel ng
@@ -185,7 +185,7 @@ may labis na pagkamangha at labis na katigasan pagdating sa LLMs.
 May grupo ng mga dalubhasang nagsasabi na may konsepto *na* ng pag-unawa ang mga
 LLMs: "Tingnan mo! Para siyang tao, nauunawaan niya ang sinasabi ko!" Ganito ang
 nangyayari: tinuturing nating ebidensiya ng pag-unawa ang mahusay na paglikha ng
-kahulugang tekstuwal. Dahil kaya ng isang LLM na bumuo ng mga pangungusap,
+kahulugang tekstuwal. Dahil kaya ng LLM na bumuo ng mga pangungusap,
 iniisip na natin na may konteksto at karanasan ito at bagkus, may konsepto na ng
 pag-unawa: 
 
@@ -197,13 +197,13 @@ natin na may ganap na pag-unawa sa kahulugan (parehong kumakatawan at tekstuwal)
 ang mga modelong ito. Ngunit may panganib ng **pagkabulag** dito:
 
 - Nakalilimutan natin na ang kakayahan ng mga LLMs ay limitado sa uri at klase ng teksto
-    na ginamit para likhain ito. Ang mga ugnayang nakapaloob sa isang modelo ay base lamang
+    na ginamit para likhain ito. Ang mga ugnayang nakapaloob sa modelo ay base lamang
     sa mga simbolo at salita na mayroon sa bawat teksto.
 - Minsan tinutumbas natin ang kabuuan ng impormasyon sa *Internet* bilang
     kabuuang kaalaman ng mundo. Bale kung may kakulangan sa kakayahan ng mga LLMs,
     ang soluyson ay dagdagan ang uri ng *data*. Ika nga, *scale is all you need*. Sa
     palagay ko may katamaran rin dito.  Mas madaling maglikom ng *data* upang ibato sa
-    isang modelo kaysa saliksikin kung ano nga ba ang pag-unawa. 
+    modelo kaysa saliksikin kung ano nga ba ang pag-unawa. 
 - Ano kayang modelo ng mundo ang nabubuo kung nalipon natin ang lahat ng teksto
     sa *Internet* ngayon? Patas ba ito sa bawat grupo, wika, at nasyon? Bagaman
     parang tao, may malamig at kalkuladong mekanismo pa rin ang mga LLMs batay
@@ -213,12 +213,11 @@ ang mga modelong ito. Ngunit may panganib ng **pagkabulag** dito:
     wikang Filipino o Indonesian.
 
 
-Sa larangang ito, gusto ko ang paraan nina [Yejin
-Choi](https://homes.cs.washington.edu/~yejin/) sa pananaliksik: papaano natin
-mabibigyan ng sentido komun (*common sense*) ang mga LLMs? Maaaring
-maihalintulad ang mga modelo gaya ng GPT-3 bilang isang bata na pinalaki sa loob
-ng isang silid-aklatan.  Mababasa niya lahat ng libro doon, ngunit, handa ba
-siyang lumabas at makihalubilo sa mundo? 
+Sa larangang ito, gusto ko ang paraan ng pagtatanong nina [Yejin
+Choi](https://homes.cs.washington.edu/~yejin/): papaano natin mabibigyan ng
+sentido komun (*common sense*) ang mga LLMs? Maaaring maihalintulad ang mga
+modelo gaya ng GPT-3 sa batang pinalaki sa loob ng silid-aklatan.  Mababasa niya
+lahat ng libro doon, ngunit, handa ba siyang lumabas at makihalubilo sa mundo? 
 
 <!-- conclusion -->
 
