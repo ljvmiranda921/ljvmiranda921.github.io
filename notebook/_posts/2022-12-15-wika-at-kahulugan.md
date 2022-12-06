@@ -164,8 +164,8 @@ ko. Nasasagot niya ang aking mga tanong at nakakapagdagdag pa ng konteksto. Para
 
 Nalala ko noong bata pa ako, dumalo ako sa *birthday party* ng kaibigan.
 May payaso na gumagawa ng *magic tricks*. Yung baton nagiging bulaklak, tapos
-yung apoy nagiging baraha! Ang galing! Nakamamangha! Ngunit klarong-klaro rin sa
-akin yung kuya ng kaibigan ko. Sa bawat *magic trick*, pilit niyang pinapaliwanag
+yung apoy nagiging baraha! Ang galing! Nakamamangha! Ngunit klarong-klaro rin sa'king
+alalaala yung kuya ng kaibigan ko. Sa bawat *magic trick*, pilit niyang pinapaliwanag
 ang mekanismo nito:
 
 "Ah, kasi yung bulaklak nasa loob talaga yan ng *stick*..."  
@@ -212,7 +212,6 @@ ang mga modelong ito. Ngunit may panganib ng **pagkabulag** dito:
     wikang maraming *data* tulad ng Ingles at Aleman. Hindi ito gumagana kapag hinarap mo sa
     wikang Filipino o Indonesian.
 
-
 Sa larangang ito, gusto ko ang paraan ng pagtatanong nina [Yejin
 Choi](https://homes.cs.washington.edu/~yejin/): papaano natin mabibigyan ng
 sentido komun (*common sense*) ang mga LLMs? Maaaring maihalintulad ang mga
@@ -220,6 +219,11 @@ modelo gaya ng GPT-3 sa batang pinalaki sa loob ng silid-aklatan.  Mababasa niya
 lahat ng libro doon, ngunit, handa ba siyang lumabas at makihalubilo sa mundo? 
 
 <!-- conclusion -->
+May lugar ang pagkamangha. Tinutulak tayo nito upang palawigin pa ang pag-unawa
+sa bagay na hinahangaan. Ngunit kung aasa lamang tayo sa pagkamangha, sa ibang
+direksyon tayo tatahakin ng ating mga paa. Para tayong mga bulag na naglalakad
+patungo sa liwanag, ngunit di natin alam na apoy pala iyon.
+
 
 ### Labis na pagkatakot
 
