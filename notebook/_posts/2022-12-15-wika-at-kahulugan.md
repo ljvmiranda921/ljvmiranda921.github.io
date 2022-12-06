@@ -39,8 +39,8 @@ mag-*text* para malinaw ang usapan.
 
 **"Nauunawan mo ba ako?"** Kung tinanong kita ng ganyan, marahil ang pakay ko ay
 siyasatin kung naiintindihan mo ba yung **kahulugan** ng sinasabi ko. Hindi lang
-yung literal na pagkakaayos ng mga salita o simbolo, ngunit pati yung konteksto
-at karanasan ng bawat salitang sinambit ko. 
+basta yung literal na pagkakaayos ng mga salita o simbolo, ngunit pati yung
+konteksto at karanasan ng bawat salitang sinambit ko. 
 
 Dito naisip ko na baka may dalawang uri ng kahulugan: isang (1) **kahulugang
 tekstuwal** na base lamang sa kung ano ang literal na nakasulat, at isang (2)
@@ -139,16 +139,16 @@ pang pakinisin at bigyang hugis. Ngunit masaya na ko sa aking progreso.  Sa
 susunod na seksyon, susuriin ko ang iba't ibang diskurso patungkol sa mga
 *large language models* (LLMs) gamit ang ating balangkas.
 
-## Ang dalawang kalabisan sa diskurso ng LLMs
+## May dalawang ugali sa diskurso ng LLMs
 
 Malaking bahagi sa paglikha ng mga *large language models* (LLMs) ang pagpapakita ng
-maraming teksto upang makabuo ito ng iba't ibang ugnayan sa pagitan ng mga
+maraming teksto upang makabuo ng iba't ibang ugnayan sa pagitan ng mga
 simbolo. Sa kasulukuyan, palaki ng palaki ang sukat ng *data* na ginagamit 
 sa paglikha ng mga LLMs. Halimbawa, binuo ang GPT-3 gamit ang 45 TB na teksto mula sa
 *internet* ([*CommonCrawl*](https://commoncrawl.org/)), mga kumento sa *Reddit*, mga libro,
 at mga pahina ng *Wikipedia*. Isipin mo, nilikom natin
 ang isang piraso ng kolektibong kaalaman ng mundo at gumawa ng mga ugnayang
-higit pa sa isang indibidwal. 
+higit pa sa isang tao. 
 
 <!-- Ngunit katumbas ba nitong 45 TB na "kolektibong kaalaman" mula sa *Internet* ang
 karanasan, konteksto, at kasaysayan ng tao? Dumadaloy ba sa parehong nibel ng
@@ -160,15 +160,89 @@ ang kakayahan ng mga LLMs ngayon. Kamakailan lang, nilabas ng
 [OpenAI](https://openai.com) ang [ChatGPT](https://openai.com/blog/chatgpt),
 isang LLM na [maaari mong makausap](https://chat.openai.com/auth/login).  Hindi
 maipagkakaila ang husay ng modelong ito. Aaminin ko: parang tao nga ang kausap
-ko. Nasasagot niya ang aking mga tanong at nakakapagdagdag pa ng konteksto. 
-Dito lumilitaw muli ang tanong: may konsepto ba ng pag-unawa ang mga LLMs? 
+ko. Nasasagot niya ang aking mga tanong at nakakapagdagdag pa ng konteksto. Parang *magic*!
 
-Sa palagay ko, may dalawang kalabisang lumalabas sa diskurso ng mga LLMs: labis
-na pagkamangha at labis na katigasan. 
+Nalala ko noong bata pa ako, dumalo ako sa *birthday party* ng kaibigan.
+May payaso na gumagawa ng *magic tricks*. Yung baton nagiging bulaklak, tapos
+yung apoy nagiging baraha! Ang galing! Nakamamangha! Ngunit klarong-klaro rin sa
+akin yung kuya ng kaibigan ko. Sa bawat *magic trick*, pilit niyang pinapaliwanag
+ang mekanismo nito:
 
-### Pagkabulag ang labis na pagkamangha
+"Ah, kasi yung bulaklak nasa loob talaga yan ng *stick*..."  
+"Ah, yung baraha nasa manggas niya nakatago..."
 
-### Pagkapilay ang labis na katigasan
+Patalo. Bagaman may kabulagan ang paniniwala na naging bulaklak nga ang baton at
+naging baraha ang apoy, mayroon ring kapilayan sa pilit na pagtanggi sa
+kakayahang gawin ito. May dalawang ugali sa panonood ng *magic show*, at sa
+palagay ko katumbas nito ang mga ugali sa diskurso ng LLMs: **pagkamangha** at
+**katigasan**. Gusto ko silang pag-usapan sa konteksto ng *kalabisan*. Ngayon,
+may labis na pagkamangha at labis na katigasan pagdating sa LLMs.
+
+
+
+### Labis na pagkamangha
+
+May grupo ng mga dalubhasang nagsasabi na may konsepto *na* ng pag-unawa ang mga
+LLMs: "Tingnan mo! Para siyang tao, nauunawaan niya ang sinasabi ko!" Ganito ang
+nangyayari: tinuturing nating ebidensiya ng pag-unawa ang mahusay na paglikha ng
+kahulugang tekstuwal. Dahil kaya ng isang LLM na bumuo ng mga pangungusap,
+iniisip na natin na may konteksto at karanasan ito at bagkus, may konsepto na ng
+pag-unawa: 
+
+![](/assets/png/wika/labis_na_pagkamangha.png){:width="600px" style="padding:10px"}  
+{:style="text-align: center;"}
+
+Dahil mahusay ang komunikasyon sa pagitan natin at ng mga LLMs, tinatantiya na
+natin na may ganap na pag-unawa sa kahulugan (parehong kumakatawan at tekstuwal)
+ang mga modelong ito. Ngunit may panganib ng **pagkabulag** dito:
+
+- Nakalilimutan natin na ang kakayahan ng mga LLMs ay limitado sa uri at klase ng teksto
+    na ginamit para likhain ito. Ang mga ugnayang nakapaloob sa isang modelo ay base lamang
+    sa mga simbolo at salita na mayroon sa bawat teksto.
+- Minsan tinutumbas natin ang kabuuan ng impormasyon sa *Internet* bilang
+    kabuuang kaalaman ng mundo. Bale kung may kakulangan sa kakayahan ng mga LLMs,
+    ang soluyson ay dagdagan ang uri ng *data*. Ika nga, *scale is all you need*. Sa
+    palagay ko may katamaran rin dito.  Mas madaling maglikom ng *data* upang ibato sa
+    isang modelo kaysa saliksikin kung ano nga ba ang pag-unawa. 
+- Ano kayang modelo ng mundo ang nabubuo kung nalipon natin ang lahat ng teksto
+    sa *Internet* ngayon? Patas ba ito sa bawat grupo, wika, at nasyon? Bagaman
+    parang tao, may malamig at kalkuladong mekanismo pa rin ang mga LLMs batay
+    sa numero. Ngayon, may pananaliksik tungkol sa *low-resource languages*, o
+    mga wika na kulang sa *data*. Karamihan ng mga LLMs ay may pagkiling sa mga
+    wikang maraming *data* tulad ng Ingles at Aleman. Hindi ito gumagana kapag hinarap mo sa
+    wikang Filipino o Indonesian.
+
+
+Sa larangang ito, gusto ko ang paraan nina [Yejin
+Choi](https://homes.cs.washington.edu/~yejin/) sa pananaliksik: papaano natin
+mabibigyan ng sentido komun (*common sense*) ang mga LLMs? Maaaring
+maihalintulad ang mga modelo gaya ng GPT-3 bilang isang bata na pinalaki sa loob
+ng isang silid-aklatan.  Mababasa niya lahat ng libro doon, ngunit, handa ba
+siyang lumabas at makihalubilo sa mundo? 
+
+
+### Labis na katigasan
+
+
+
+<!-- the only thing we have that works -->
+
+
+
+
+
+
+
+
+
+
+<!-- figure -->
+
+<!-- pagkabulag -->
+
+<!-- well it works! -->
+<!-- well it's being funded so it must be AGI -->
+
 
 
 <!--
@@ -256,3 +330,4 @@ niyang balarila at estruktura ng pangungusap?
 - <a id="firth1957distrib">Firth, J.R.</a> (1957). "A synopsis of linguistic theory 1930-1955". Studies in Linguistic Analysis: 1–32. Reprinted in F.R. Palmer, ed. (1968). Selected Papers of J.R. Firth 1952-1959. London: Longman.
 - <a id="bender2020nlu">Emily M. Bender and Alexander Koller.</a> 2020. Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data. In *Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics*, pages 5185–5198, Online. Association for Computational Linguistics.
 - <a id="manning2022human">Manning, Christopher D.</a>2022. Human Language Understanding & Reasoning. In *Daedalus, the Journal of the American Academy of Arts & Sciences*
+
