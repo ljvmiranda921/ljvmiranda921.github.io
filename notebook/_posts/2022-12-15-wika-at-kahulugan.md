@@ -175,7 +175,7 @@ Patalo. Bagaman may kabulagan ang paniniwala na naging bulaklak nga ang baton at
 naging baraha ang apoy, mayroon ring kapilayan sa pilit na pagtanggi sa
 kakayahang gawin ito. May dalawang ugali sa panonood ng *magic show*, at sa
 palagay ko katumbas nito ang mga ugali sa diskurso ng LLMs: **pagkamangha** at
-**katigasan**. Gusto ko silang pag-usapan sa konteksto ng *kalabisan*. Ngayon,
+**takot**. Gusto ko silang pag-usapan sa konteksto ng *kalabisan*. Ngayon,
 may labis na pagkamangha at labis na katigasan pagdating sa LLMs.
 
 
@@ -220,8 +220,9 @@ maihalintulad ang mga modelo gaya ng GPT-3 bilang isang bata na pinalaki sa loob
 ng isang silid-aklatan.  Mababasa niya lahat ng libro doon, ngunit, handa ba
 siyang lumabas at makihalubilo sa mundo? 
 
+<!-- conclusion -->
 
-### Labis na katigasan
+### Labis na pagkatakot
 
 
 
