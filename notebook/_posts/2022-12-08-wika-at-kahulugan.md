@@ -20,9 +20,11 @@ excerpt: |
     kong gumawa ng balangkas upang siyasatin ang tanong na ito.
 ---
 
-> *Why are you writing in Filipino?* I realized that there are some nuances
-> and examples that only the richness of Filipino can capture. I might write a translation in the 
-> future, but for now I think Google Translate should give you a decent one.
+> *Why are you writing in Filipino?* I realized that there are some nuances and
+examples that only the richness of Filipino can capture. These are also 
+semi-public thoughts that aren't fully-formed yet, but I already want to put out
+there.  I might write a translation in the future, but for now, Google Translate
+should give you a decent version.
 
 <span class="firstcharacter">H</span>abang nagbabasa ako ng librong *The Way of
 Kings* ni Brandon Sanderson, napansin ko na may isang tauhan, si Shallan
