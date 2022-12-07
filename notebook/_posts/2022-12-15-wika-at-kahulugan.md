@@ -20,6 +20,10 @@ excerpt: |
     kong gumawa ng balangkas upang siyasatin ang tanong na ito.
 ---
 
+> *Why are you writing in Filipino?* I realized that there are some nuances
+> and examples that only the richness of Filipino can capture. I might write a translation in the 
+> future, but for now I think Google Translate should give you a decent one.
+
 <span class="firstcharacter">H</span>abang nagbabasa ako ng librong *The Way of
 Kings* ni Brandon Sanderson, napansin ko na may isang tauhan, si Shallan
 Davar, na mahilig gumamit ng **panunuya** sa kanyang wika. Madalas sasabihin
@@ -105,8 +109,8 @@ o *Wikipedia*.  Mula rito, natututunan ng modelo ang semantiko at gramatikong
 estruktura ng wika.
 
 Halimbawa, kung madalas magkasama ang mga salitang `jeepney` at `Pilipinas` sa
-mga tekstong ginamit para likhain ang ating modelo, magkakaroon ng malakas na
-ugnayan ang mga simbolong ito. Para sa mga dalubwika, ang "pag-unawa" ng isang
+mga tekstong pinanglikha sa'ting modelo, magkakaroon ng malakas na
+ugnayan ang dalawang ito. Para sa mga dalubwika, ang "pag-unawa" ng isang
 istatistikang modelo ay bunga lamang ng semantikang probabilidad at
 distribusyon. Kapag pinakita natin sa modelo ang pangungusap na, *"Binaba ako ng
 jeepney sa Espa&ntilde;a,"* alam nito na ang simbolong `España` ay lugar sa
@@ -121,8 +125,8 @@ isang lugar na mahahanap mo, mapupuntahan mo, at mararanasan mo. Ayon sa teoryan
 hindi yung pang-ukol na `sa` at salitang `jeepney` ang nagbibigay kahulugan sa
 `España`.  Ito yung mga karanasan ko nung binisita ang mga kaibigan sa UST, 
 muntik nang ma-*stranded* sa baha, at nagpatila sa loob ng isang *fastfood
-joint*. Kapag sinabi mo sa akin na binaba ka ng *jeepney* sa PeePeePooPoo, hindi
-kita maiintindihan. Dahil ang kahulugan ng salita ay kumakatawan sa mga
+joint*. Kapag sinabi mo sa akin na binaba ka ng dyip sa *PeePeePooPoo*, hindi
+kita maiintindihan, dahil ang kahulugan ng salita ay kumakatawan sa mga
 parte ng meron. 
 
 ![](/assets/png/wika/espana.jpg){:width="500px" style="padding:10px"}  
@@ -141,13 +145,12 @@ modelo ngayon.
 ![](/assets/png/wika/theory.png){:width="500px" style="padding:10px"}  
 {:style="text-align: center;"}
 
-Sana kahit papaano, nabigyan ko ng linaw ang dalawang uri ng kahulugan. Ang
-tekstuwal na kahulugan ay nakabase sa mga interaksyon at relasyon ng mga
-simbolo. Bilang dalubwika, gumagamit tayo ng mga istatistikang modelo
-upang mapa-igting ang pagbuo ng mga ugnayang ito. Sa kabilang banda, may
-kahulugan na kumakatawan sa mga bagay na may konteksto, karanasan, at
-kasaysayan. Dito, ginagamit ang mga salita at simbolo para tukuyin ang mga
-bagay na ito. 
+Sana kahit papaano, nabigyang linaw ko ang dalawang uri ng kahulugan. May
+tekstuwal na kahulugang nakabase sa mga interaksyon at relasyon ng mga simbolo.
+Ginagamit ng mga dalubwika ang mga istatistikang modelo para paigtingin ang mga
+ugnayang ito. Sa kabilang banda, may kahulugan na kumakatawan sa mga bagay na
+may konteksto, karanasan, at kasaysayan. Dito, ginagamit ang mga salita at
+simbolo bilang panturo sa mga konsepto at karanasang ito.
 
 Aaminin ko na nilililok ko pa ang balangkas na ito. May mga parte na gusto ko
 pang pakinisin at bigyang hugis. Ngunit masaya na ko sa aking progreso.  Sa
@@ -175,23 +178,25 @@ ang kakayahan ng mga LLMs ngayon. Kamakailan lang, nilabas ng
 [OpenAI](https://openai.com) ang [ChatGPT](https://openai.com/blog/chatgpt),
 isang LLM na [maaari mong makausap](https://chat.openai.com/auth/login).  Hindi
 maipagkakaila ang husay ng modelong ito. Aaminin ko: parang tao nga ang kausap
-ko. Nasasagot niya ang aking mga tanong at nakakapagdagdag pa ng konteksto. Parang *magic*!
+ko. Nasasagot niya ang aking mga tanong at nakadaragdag pa ng konteksto. Parang
+*magic*!
 
-Nalala ko noong bata pa 'ko, may pinuntahan akong *birthday party* ng kaibigan.
-May payaso na gumagawa ng *magic tricks*. Yung baton nagiging bulaklak, tapos
-yung apoy nagiging baraha! Ang galing! Nakamamangha! Ngunit klarong-klaro rin sa'king
-alalaala yung kuya ng kaibigan ko. Sa bawat *magic trick*, pilit niyang pinapaliwanag
-ang mekanismo nito:
+Naalala ko dati, pumunta ako sa *birthday party* ng isang kaibigan.  May payaso
+na gumagawa ng *magic tricks*: yung baton nagiging bulaklak, tapos yung apoy
+nagiging baraha! Ang galing! Ngunit klarong-klaro rin sa'king alalaala yung kuya
+ng kaibigan ko. Sa bawat *magic trick*, pilit niyang pinapaliwanag ang mekanismo
+nito:
 
 "Ah, kasi yung bulaklak nasa loob talaga yan ng *stick*..."  
 "Ah, yung baraha nasa manggas niya nakatago..."
 
 Patalo. Bagaman may kabulagan ang paniniwala na naging bulaklak nga ang baton at
-naging baraha ang apoy, mayroon ring kapilayan sa pilit na pagtanggi sa
+naging baraha ang apoy, mayroon ring katigasan sa pilit na pagtanggi sa
 kakayahang gawin ito. May dalawang ugali sa panonood ng *magic show*, at sa
 palagay ko katumbas nito ang mga ugali sa diskurso ng LLMs: **pagkamangha** at
-**takot**. Gusto ko silang pag-usapan sa konteksto ng *kalabisan*. Ngayon,
-may labis na pagkamangha at labis na katigasan pagdating sa LLMs.
+**takot**. Gusto ko silang pag-usapan sa konteksto ng *kalabisan*. Napapansin ko
+ngayon na may labis na pagkamangha at labis na katigasan kapag pinag-uusapan ang mga
+LLMs.
 
 
 
@@ -200,16 +205,11 @@ may labis na pagkamangha at labis na katigasan pagdating sa LLMs.
 May grupo ng mga dalubhasang nagsasabi na may konsepto *na* ng pag-unawa ang mga
 LLMs: "Tingnan mo! Para siyang tao, nauunawaan niya ang sinasabi ko!" Ganito ang
 nangyayari: tinuturing nating ebidensiya ng pag-unawa ang mahusay na paglikha ng
-kahulugang tekstuwal. Dahil kaya ng LLM na bumuo ng mga pangungusap,
-iniisip na natin na may konteksto at karanasan ito at bagkus, may konsepto na ng
-pag-unawa: 
+kahulugang tekstuwal. 
 
-![](/assets/png/wika/labis_na_pagkamangha.png){:width="600px" style="padding:10px"}  
-{:style="text-align: center;"}
-
-Dahil mahusay ang komunikasyon sa pagitan natin at ng mga LLMs, tinatantiya na
-natin na may ganap na pag-unawa ang mga modelong ito. Ngunit may panganib ng
-**pagkabulag** dito:
+Dahil kaya ng LLM na bumuo ng mga pangungusap, iniisip na natin na may konteksto
+at karanasan ito at bagkus, may konsepto na ng pag-unawa. Ngunit may panganib ng
+pagkabulag dito:
 
 - Nakalilimutan natin na ang kakayahan ng mga LLMs ay limitado sa uri at klase ng teksto
     na ginamit para likhain ito. Ang mga ugnayang nakapaloob sa modelo ay base lamang
@@ -242,107 +242,81 @@ patungo sa liwanag, ngunit di natin alam na apoy pala iyon.
 
 ### Labis na pagkatakot
 
+May grupo rin ng mga dalubhasang nagsasabi na walang pag-unawa ang mga
+LLMs&mdash;lahat ay hango lamang sa numero at tsansa. Bagaman may bahid ng
+katotohanan dito, inuunahan na kaagad natin na wala; hindi na tinitingnan ang
+posibilidad na baka may maituro ang mga modelong ito sa'tin.
+
+Hinahalintulad ko ang ugaling ito sa takot. Hindi yung takot na nakikita mo sa
+mga *horror flicks*: yung may sumisigaw at tumatakbo. Sa palagay ko ito yung
+takot na nagbubunga ng katigasan ng ulo. Isang takot na tumatalikod sa mga bagay
+na hindi naiintindihan. Pinipilit ipagkasya ang *phenomena* sa mga konseptong
+alam na. Mala-*Eldritch* kumabaga. May panganib rin dito:
+
+- *The kraken is loose!* Hindi maitatanggi ang realidad na laganap na ang mga
+    LLMs sa ating lipunan. May pag-unawa man o wala, nakaaapekto na ito sa buhay ng
+    tao. Hindi na epektibo ang patuloy na pagpapaaalala na istatistika lamang ang
+    mga ito. Sa ngayon, pahirap na ng pahirap ang pagtukoy kung ang teksto ay
+    isinulat ng isang modelo o ng isang tao. 
+- May natatanging karunungan pa rin ang mga istatistikang modelo. Bagaman kaya
+    nating ipaliwanag ang kanilang mekanismo bilang ugnayan ng mga simbolo, *black
+    box* pa ring maituturing ang mismong mga ugnayang ito. Sa palagay ko, isang
+    klase ng reduksiyon ang paggigiit na numero at tsansa lamang ang kabuuan ng mga
+    LLMs.
+    
+Aaminin ko na mas kumikiling ako sa ugaling ito. May parte pa rin sa aking
+nagpupumilit na dulot lamang ng probabilidad ang resulta ng mga LLMs ngayon.
+Naiintindihan ko ang maingat na paraan nina [Emily
+Bender](https://faculty.washington.edu/ebender/) sa pagsiyasat sa mga tanong na
+ito. Dahil na rin siguro sa kanyang pagsasanay bilang dalubwika, hindi maiiwasan
+na sa lenteng ito niya nahuhusgahan ang mga LLMs.
+
+May lugar ang pagkatakot. Ngunit maaari rin tayong manigas dahil sa labis na
+pangamba&mdash;ni hindi na tayo makagalaw o makausad. Para tayong mga pilay na
+hindi makalakad at sumisigaw lang sa liwanag.
 
 
-<!-- the only thing we have that works -->
-
-
-
-
-
-
-
-
-
-
-<!-- figure -->
-
-<!-- pagkabulag -->
-
-<!-- well it works! -->
-<!-- well it's being funded so it must be AGI -->
-
-
-
-<!--
-1. too much wonder. Ang labis na pagkamangha ay pagkabulag
-2. too much rigor. Ang labis na kahigpitan ay skeptisismo
-    - think of a better word than skepticism. 
-    - pagkapilay kasi isinasantabi mo na yung isang paa without considering it
-
--->
-
-<!-- Sisiyasatin natin
-ang mga tanong na ito sa susunod na seksiyon. -->
-
-
-<!--
-
-### "May konsepto ng pag-unawa ang LLMs. Tingnan mo ang ChatGPT!"
-
-Kamakailan lang, nilabas ng [OpenAI](https://openai.com/) ang
-[ChatGPT](https://openai.com/blog/chatgpt/), isang *language model* na [maaari
-mong makausap](https://chat.openai.com/auth/login). Hindi maipagkakaila ang
-husay ng modelong ito. Maraming nagsasabi na parang tao raw ang kausap nila. 
-Minsan ginagamit siya upang sumulat ng mga tula, sumagot ng mga tanong sa
-*StackOverflow*, o maghanap ng impormasyon. 
-
-Sa palagay ko ganito ang nangyayari:
-
--->
-
-
-<!-- ### "Walang konsepto ng pag-unawa ang LLMs. Ito ay bunga ng tsansa." -->
-
-<!-- Things we still don't know about: how does scale help? implicit notions? -->
-<!-- what's happening now is that we're making math work for us -->
+## Konklusyon: banayad na paglapit
 
 
 
-<!--
-## Konklusyon: may posibilidad ba ng pag-unawa ang mga LLMs?
+Sa sanaysay na ito sinubukang kong makipagbuno sa tanong na: nakauunawa ba ang
+mga *large language models?* Una, pinalalim ko ang depinisyon ng pag-unawa sa
+pamamagitan ng pagtukoy sa dalawang uri ng kahulugan: tekstuwal at kumakatawan.
+Ang kahulugang tekstuwal ay base sa literal na teksto at sa ugnayan ng mga
+simbolo. Sa kabilang banda, ang kahulugang kumakatawan ay base sa salita bilang
+pantukoy sa meron. Karamihan ng mga istatistikang modelo ng wika ay base sa tekstuwal
+na kahulugan.
 
-> *Why are you writing in Filipino?* I realized that there are some nuances
-> and examples that only the richness of Filipino can capture. I might write a translation in the 
-> future, but for now I think Google Translate should give you a decent one.
--->
+Pagkatapos, ginamit ko ang balangkas na ito upang siyasatin ang dalawang
+kalabisan sa diskurso ng mga LLMs: pagkamangha at pagkatakot. Parehong may
+panganib na dulot ang dalawa. Inamin ko rin na mas nakakiling ako sa emosyon ng
+pagkatakot.
+
+Sa huli, naniniwala ako na ang tamang asta pagdating sa diskurso ng pag-unawa ay
+isang **banayad na paglapit**. Hindi napupuno ng pagkamangha o pagkatakot.
+Saktong mangha na makakagalaw ka at saktong pangamba na hindi ka nasisilaw
+patungo sa liwanag. Anong ibig sabihin nito? Sa palagay ko:
+
+- Kapag nakikipag-diskurso, kailangang linawin kung anong klaseng kahulugan ang
+    tinutukoy mo. Tekstuwal ba o kumakatawan? Malaking bahagi sa alitan ng mga
+    akademiko ang kakulangan ng *working definition* o maayos na balangkas.
+- Tanggapin na baka, hindi lang sa larangan ng wika (*linguistics*) mahahanap ang sagot
+    patungkol sa kahulugan. Maaaring may sikolohikal at *neuroscientific* na paraan
+    para siyasatin ito. Huwag makulong sa isa o dalawang lente ng pananaliksik; at
+- Mas bigyang pansin ang pagsisiyasat sa kakayahan ng mga LLMs rumason at
+    magpaliwanag. Bilang mga *black boxes*, hirap pa rin tayong ipaliwanag kung
+    papaano binubuo ang mga ugnayan sa pagitan ng mga simbolo. 
+
+Muli, isang banayad na paglapit. Aaminin kong nakapupukaw ng imahinasyon ang mga
+LLMs ngayon. Ngunit, mahalaga pa ring tiyakin na nilalapit tayo ng teknolohiyang
+ito sa Meron.
 
 
-<!--
-Wala pa ring makapagsasabi kung magkatumbas ang pag-unawa ng isang *NLP model* at
-ng tao. May pansariling konteksto, karanasan, at kasaysayan rin ba ang mga *NLP models*?
-Tingnan ang susunod na pangungusap: "Binaba ako ng jeepney malapit sa Espa&ntilde;a"
-
-![](/assets/png/wika/espana.jpg){:width="600px" style="padding:10px"}  
-{:style="text-align: center;"}
-
-Kung ipapakita mo ito sa isang modelo at tinanong mo kung anong klaseng salita
-ang Espa&ntilde;a, marahil sasabihin nito na ang salitang Espa&ntilde;a ay isang
-lugar. Alam natin na tama ang kanyang sagot ngunit naunawaan ba niya talaga ang 
-pangungusap? Tinawag ba niya itong lugar dahil alam niya na ito'y kalsada sa
-Maynila (at hindi ang bansang Espa&ntilde;a)? O tinawag niya itong lugar dahil
-sa natutunan niyang balarila at estruktura ng pangungusap? 
 
 
-Kapag sinuri natin ang mga teksto na ginagamit upang gumawa ng mga *NLP models*
-ngayon, mapapansin na malaki ang agwat sa pagitan ng tekstuwal at kumakatawang
-kahulugan.
--->
 
-<!-- Ngunit hanggang sa ngayon, hindi pa rin natin alam kung ang  -->
 
-<!--
-Masasabi ba natin na itong semantikong kahulugan ay katumbas ng konteksto,
-karanasan, at kasaysayan ng tao (at bagkus, kaalaman sa mundo)? Tingnan ang
-susunod na pangungusap: "Binaba ako ng jeepney malapit sa Espa&ntilde;a."
-
-Kung ipapakita mo ito sa isang modelo at tinanong mo kung anong klaseng salita
-ang Espa&ntilde;a, marahil sasabihin nito na ang salitang Espa&ntilde;a ay isang
-lugar. Alam natin na tama ang kanyang sagot ngunit naunawaan ba niya talaga ang 
-pangungusap? Tinawag ba niya itong lugar dahil alam niya na ito'y kalsada sa
-Maynila (at hindi isang bansa)? O tinawag niya itong lugar dahil sa natutunan
-niyang balarila at estruktura ng pangungusap?
--->
 
 ## References
 
