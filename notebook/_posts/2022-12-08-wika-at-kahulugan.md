@@ -22,7 +22,7 @@ excerpt: |
 
 > *Why are you writing in Filipino?* I realized that there are some nuances and
 examples that only the richness of Filipino can capture. These are also 
-semi-public thoughts that aren't fully-formed yet, but I already want to put out
+semi-public thoughts that aren't fully-formed yet, but I already want to put them out
 there.  I might write a translation in the future, but for now, Google Translate
 should give you a decent version.
 
