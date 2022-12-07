@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Pagmumuni ukol sa wika at kahulugan"
-date: 2022-12-15
+date: 2022-12-08
 category: notebook
 comments: true
 author: "LJ MIRANDA"
