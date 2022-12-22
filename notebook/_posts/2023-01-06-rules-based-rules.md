@@ -24,9 +24,9 @@ system](https://spacy.io/usage/rule-based-matching). Yes, rules-based. Because
 sometimes, all you need is a hard and fast rule to cover relevant aspects of
 your problem. In this blog post, I'll discuss **design patterns** I learned while
 working on these components. I will focus on token and entity matching in the
-form of the [`Matcher`](https://spacy.io/api/matcher).
+form of the [Matcher](https://spacy.io/api/matcher).
 
-First things first, an overview of the spaCy `Matcher`. You can define patterns
+First things first, an overview of the spaCy Matcher. You can define patterns
 as a list of dictionaries, where each dictionary inscribes a rule to match a
 single token.  A rule is often in the form of `{TOKEN_ATTRIBUTE: RULE}`, which
 roughly translates as: *"match if this token attribute passes this
@@ -73,10 +73,38 @@ any kind of text.  I won't be delving too much into it here since the
 enough for that. Instead, I want to share **tips and design patterns** for
 writing and organizing rules. 
 
-##  Tip #1: reference patterns from a config
-##  Tip #2: reduce regexes
+##  Tip #1: you can reference patterns from a configuration file
+
+One way to store patterns for the [SpanRuler](https://spacy.io/api/spanruler) or
+[EntityRuler](https://spacy.io/api/entityruler) is through the `patterns.jsonl`
+file. But if you find a JSONL file too unwieldy, then it's also possible to
+store patterns in a Python object and reference them from a configuration file.
+This approach makes your rules readable as you can annotate them however you
+wish. 
+
+Suppose we're extracting degree programs from some corpus. We start by creating
+a custom function that returns a set of rules as a list of dictionaries:
+
+```python
+def my_patterns() -> List[Dict[str, Any]]:
+    rules = [
+        {"label": "Degree", "pattern": [{"LOWER": "bs", "OP": "?"}, {}, {"LOWER": "engineering"}]}
+        {"label": "Degree", "pattern": [{"LOWER": "bs"}, {}]}
+    ]
+    return rules
+```
+
+
+
+<!--
+
+##  Tip #2: you can reduce regexes
 <!-- show example of a regex transformed into a dict -->
-##  Tip #3: use linguistic features
+
+<!--
+##  Tip #3: you can take advantage of linguistic features
+-->
+
 
 <!--
 first things first, an overview of spaCy matcher
@@ -108,4 +136,7 @@ But they can also be from an external JSONL file:
 
 <!-- talk about hidden complexity at the end -->
 
+<!--
+
 ## Final thoughts: hidden complexity 
+-->
