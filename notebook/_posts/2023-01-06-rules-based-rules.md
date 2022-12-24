@@ -11,26 +11,27 @@ tags: [nlp, spacy, machine learning, nlproc, natural language processing]
 description: |
     spaCy has a comprehensive way to define rules for matching tokens, phrases,
     entities (and more!) to enhance statistical models. In this blog post, I'll share
-    a few design patterns to write and organize your rules.
+    a design pattern to better write and organize your rules.
 excerpt: |
     spaCy has a comprehensive way to define rules for matching tokens, phrases,
     entities (and more!) to enhance statistical models. In this blog post, I'll share
-    a few design patterns to write and organize your rules.
+    a design pattern to better write and organize your rules.
 ---
 
 <span class="firstcharacter">O</span>ne aspect of the spaCy library that I enjoy
 is its [robust pattern-matching
 system](https://spacy.io/usage/rule-based-matching). Yes, rules-based. Because
 sometimes, all you need is a hard and fast rule to cover relevant aspects of
-your problem. In this blog post, I'll discuss **design patterns** I learned while
+your problem. In this blog post, I'll discuss a **design pattern** I learned while
 working on these components. I will focus on token and entity matching in the
 form of the [Matcher](https://spacy.io/api/matcher).
 
-First things first, an overview of the spaCy Matcher. You can define patterns
-as a list of dictionaries, where each dictionary inscribes a rule to match a
-single token.  A rule is often in the form of `{TOKEN_ATTRIBUTE: RULE}`, which
-roughly translates as: *"match if this token attribute passes this
-rule."* There are [multiple attributes](https://spacy.io/usage/rule-based-matching#adding-patterns-attributes)
+First things first, an overview of the spaCy
+[Matcher](https://spacy.io/api/matcher). You can define patterns as a list of
+dictionaries, where each dictionary inscribes a rule to match a single token.  A
+rule is often in the form of `{TOKEN_ATTRIBUTE: RULE}`, which roughly translates
+as: *"match if this token attribute passes this rule."* There are [multiple
+attributes](https://spacy.io/usage/rule-based-matching#adding-patterns-attributes)
 to choose from, but let's demonstrate a simple case.
 
 
@@ -70,17 +71,22 @@ These are the basics for pattern-matching in spaCy.  With multiple attributes,
 operators, and syntax, we have enough tools to express rules for matching almost
 any kind of text.  I won't be delving too much into it here since the
 [documentation](https://spacy.io/usage/rule-based-matching) is comprehensive
-enough for that. Instead, I want to share **tips and design patterns** for
+enough for that. Instead, I want to share a design pattern for
 writing and organizing rules. 
 
-##  Tip #1: you can reference patterns from a configuration file
+## Config-first design pattern 
 
 One way to store patterns for the [SpanRuler](https://spacy.io/api/spanruler) or
 [EntityRuler](https://spacy.io/api/entityruler) is through the `patterns.jsonl`
-file. But if you find a JSONL file too unwieldy, then it's also possible to
-store patterns in a Python object and reference them from a configuration file.
-This approach makes your rules readable as you can annotate them however you
-wish. 
+file. But if you find a JSONL file too unwieldy, then it's also possible **to
+store patterns in a Python object** and **reference them from a configuration
+file.** This approach makes your rules readable as you can annotate them however
+you wish. 
+
+> If you find a JSONL file too unwieldy, then it's also possible to store patterns
+> in a Python object and reference them from a configuration file.
+
+### Organizing patterns as Python objects
 
 Suppose we're extracting degree programs from some corpus. We start by creating
 a custom function that returns a set of rules as a list of dictionaries:
@@ -88,22 +94,132 @@ a custom function that returns a set of rules as a list of dictionaries:
 ```python
 def my_patterns() -> List[Dict[str, Any]]:
     rules = [
-        {"label": "Degree", "pattern": [{"LOWER": "bs", "OP": "?"}, {}, {"LOWER": "engineering"}]}
+        {"label": "Degree", "pattern": [{"LOWER": "bs", "OP": "?"}, {}, {"LOWER": "engineering"}]},
         {"label": "Degree", "pattern": [{"LOWER": "bs"}, {}]}
     ]
     return rules
 ```
 
+We can then register the `my_patterns` function in the spaCy registry. The name
+of the registry is arbitrary, but it's good practice to store them in `misc` so that your
+function is grouped together with similar ones:
+
+```python
+from spacy.util import registry
+
+@registry.misc("my_rules.v1")
+def my_patterns() -> List[Dict[str, Any]]:
+    rules = [
+        {"label": "Degree", "pattern": [{"LOWER": "bs", "OP": "?"}, {}, {"LOWER": "engineering"}]},
+        {"label": "Degree", "pattern": [{"LOWER": "bs"}, {}]}
+    ]
+    return rules
+```
+
+You can now organize your rules as you like. Personally, I write functions in the form of
+`rules_{entity}_{id}` to differentiate between entities and the type of rule. I can then combine
+these lists together by adding one over the other:
+
+```python
+from spacy.util import registry
+
+# Type alias
+Rules = List[Dict[str, Any]]
+
+@registry.misc("my_rules.v1")
+def my_patterns() -> Rules:
+    rules = (
+        rules_degree_bs() +
+        rules_degree_phd() +
+        rules_course_engg()
+    )
+
+def rules_degree_bs() -> Rules:
+    """Define rules that extract BS degrees from a text"""
+    rules = [
+        {"label": "Degree", "pattern": [{"LOWER": "bs", "OP": "?"}, {}, {"LOWER": "engineering"}]},
+        {"label": "Degree", "pattern": [{"LOWER": "bs"}, {}]}
+    ]
+    return rules
+
+def rules_degree_phd() -> Rules:
+    """Define rules that extract doctorate degrees from a text"""
+    rules = [
+        {"label": "Degree", "pattern": [{"LOWER": "phd"}, {"LOWER": "in"}, {}]},
+        {"label": "Degree", "pattern": [{"LOWER": "doctorate"}, {"LOWER": "in"}, {}]}
+    ]
+    return rules
+
+def rules_course_engg() -> Rules:
+    """Define rules that extract courses from the engineering dept."""
+    rules = [
+        {"label": "Degree", "pattern": [{"LOWER": {"IN": ["elc", "engps"]}}, {"IS_DIGIT": True}]},
+    ]
+    return rules
+```
+
+Writing our patterns this way allows us to organize and annotate them. If you're
+using an IDE, then it's also a good way to pre-validate our rules of any syntax
+or formatting errors. There are many times when a missing bracket or quotation
+cost me hours of debugging. Lastly, if you're using a formatter like
+[black](/notebook/2018/06/21/precommits-using-black-and-flake8/), then you can
+improve your pattern's readability.
+
+### Referencing patterns from a configuration file 
+
+We can take advantage of spaCy's [`assemble`](https://spacy.io/api/cli#assemble)
+command to include our patterns in a configuration file. Suppose we want to
+improve the performance of a named-entity recognizer model using the patterns we
+defined above (via the [SpanRuler](https://spacy.io/api/spanruler)), then the
+process looks like this:
+
+<!-- illustration -->
+
+
+1. We have the base configuration `ner.cfg` that trains a `ner` pipeline and
+    stores the model in the `training/model-best` directory. We can create this
+    configuration through the [`init config`](https://spacy.io/api/cli#init-config) command. 
+2. We also write another configuration for the
+    [SpanRuler](https://spacy.io/api/spanruler), `ruler.cfg`, that defines how it
+    will behave. Here, we reference the name of the registered function (`my_rules.v1`)
+    and other parameters for the component. The configuration file looks like this:
+
+    ```c
+    # ruler.cfg
+    [nlp]
+    pipeline = ["tok2vec","ner", "span_ruler"]
+
+    [components]
+
+    [components.tok2vec]
+    source = training/model-best
+
+    [components.ner]
+    source = training/model-best
+
+    [components.span_ruler]
+    factory = "span_ruler"
+    spans_key = null
+    annotate_ents = true
+    ents_filter = {"@misc": "spacy.prioritize_new_ents_filter.v1"}
+    validate = true
+    overwrite = false
+
+    [initialize.components]
+    [initialize.components.span_ruler]
+    patterns = {"@misc": "restaurant_rules.v1"}
+    ```
+3. We use the [`assemble`](https://spacy.io/api/cli#assemble) command to combine
+    the trained model and the [SpanRuler](https://spacy.io/api/spanruler). This
+    translates into a new model, `model/spanruler`, that has the rules added on top
+    of the trained model.
+
+<!-- talk about the setup first that we will assemble them -->
 
 
 <!--
 
-##  Tip #2: you can reduce regexes
-<!-- show example of a regex transformed into a dict -->
 
-<!--
-##  Tip #3: you can take advantage of linguistic features
--->
 
 
 <!--
