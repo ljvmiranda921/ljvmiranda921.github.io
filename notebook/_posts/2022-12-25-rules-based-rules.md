@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "spaCy Internals: Rules-based rules!"
-date: 2023-01-06
+date: 2022-12-25
 category: notebook
 comments: true
 author: "LJ MIRANDA"
@@ -209,7 +209,7 @@ process looks like this:
 
     [initialize.components]
     [initialize.components.span_ruler]
-    patterns = {"@misc": "restaurant_rules.v1"}
+    patterns = {"@misc": "my_rules.v1"}
     ```
 3. We use the [`assemble`](https://spacy.io/api/cli#assemble) command to combine
     the trained model and the [SpanRuler](https://spacy.io/api/spanruler). This
@@ -240,6 +240,62 @@ from our rules.
 
 ## Explaining SpanRuler config
 
+Let's step back a bit and examine the `ruler.cfg` configuration file in detail.
+Notice how the number of parameters present is small because we'll use it as an
+"extension" of the baseline config through the
+[`assemble`](https://spacy.io/api/cli#assemble) command.
+
+First, the `pipeline` parameter declares the components present in the spaCy
+pipeline with their order. We add the `span_ruler` *after* the `ner` component.
+This process is similar to calling the command `nlp.add_pipe("span_ruler", after="ner")`:
+
+```c
+[nlp]
+pipeline = ["tok2vec","ner", "span_ruler"]
+```
+
+Then we source the `tok2vec` and `ner` pipelines from the trained NER model.
+Here, we pass the path to `model-best`. We can also override these parameters in
+the actual [`assemble`](https://spacy.io/api/cli#assemble) command by passing
+a value to `--components.tok2vec.source` and `--components.ner.source`: 
+
+```c
+[components.tok2vec]
+source = training/model-best
+
+[components.ner]
+source = training/model-best
+```
+
+Then, we setup the parameters for the
+[SpanRuler](https://spacy.io/api/spanruler). Here, we want it as an improvement
+to our NER pipeline, so we set `annotate_ents=True` and `spans_key=null` (we're
+not interested in [span categorization](https://explosion.ai/blog/spancat/)).
+This setting enables the [SpanRuler](https://spacy.io/api/spanruler) to assign
+the detected entities in the `Doc.ents` attribute while ignoring `Doc.spans`. We
+don't want to erase the entities detected by the original NER model, so we set
+`overwrite` to `false`.
+
+```c
+[components.span_ruler]
+factory = "span_ruler"
+spans_key = null
+annotate_ents = true
+ents_filter = {"@misc": "spacy.prioritize_new_ents_filter.v1"}
+validate = true
+overwrite = false
+```
+
+Lastly, we initialize our [`SpanRuler`](https://spacy.io/api/spanruler) by
+passing it our custom registered function. Because we registered `my_rules.v1`
+in the `misc` registry, we can access it using the dictionary format below:
+
+```c
+[initialize.components.span_ruler]
+patterns = {"@misc": "my_rules.v1"}
+```
+
+
 ## Final thoughts
 
 In this blog post, I talked about a design pattern to better organize and
@@ -251,9 +307,9 @@ rules as a registered function in a configuration file rather than in the
 K&aacute;d&aacute;r](https://kadarakos.github.io/) for helping me realize this
 approach while I was working on the [SpanRuler](https://spacy.io/api/spanruler).
 
-Lastly, you can find a example project for the
+Lastly, you can find an example project for the
 [SpanRuler](https://spacy.io/api/spanruler) that uses this pattern in the
 [`explosion/projects`](https://github.com/explosion/projects) repository. Feel
-free to clone and use it as a starting point.
+free to clone and use it as a starting point!
 
 
