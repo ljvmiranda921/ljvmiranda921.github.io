@@ -174,6 +174,8 @@ defined above (via the [SpanRuler](https://spacy.io/api/spanruler)), then the
 process looks like this:
 
 <!-- illustration -->
+![](/assets/png/rules-based/setup.png){:width="700px"}
+{: style="text-align: center;"}
 
 
 1. We have the base configuration `ner.cfg` that trains a `ner` pipeline and
@@ -212,47 +214,46 @@ process looks like this:
 3. We use the [`assemble`](https://spacy.io/api/cli#assemble) command to combine
     the trained model and the [SpanRuler](https://spacy.io/api/spanruler). This
     translates into a new model, `model/spanruler`, that has the rules added on top
-    of the trained model.
+    of the trained model. Note that we have to include the filepath of our registered
+    function in the `--code` parameter so that spaCy can see it:
 
-<!-- talk about the setup first that we will assemble them -->
+    ```sh
+    python -m spacy assemble \
+        configs/ruler.cfg \
+        models/ner_ruler \
+        --components.tok2vec.source training/ner/model-best \
+        --components.ner.source training/ner/model-best \
+        --code rules.py
+    ```
+
+    Note that we also need to source the `tok2vec` and `ner` components
+    from the trained NER model.
+
+It's also possible to have a single configuration file that contains both
+the `ner` and `span_ruler` components. The downside in this approach is that
+if you're still iterating on your patterns, then you have to train a new NER model 
+every time. With two separate configurations, we decouple the statistical model
+from our rules. 
+
+> With two separate configurations, we decouple the statistical model from
+> our rules.
+
+## Explaining SpanRuler config
+
+## Final thoughts
+
+In this blog post, I talked about a design pattern to better organize and
+write rules. Here I introduced a "config-first" approach that stores our
+rules as a registered function in a configuration file rather than in the
+`patterns.jsonl` file. We also talked about using spaCy's
+[`assemble`](https://spacy.io/api/cli#assemble) command to combine the `ner` and
+`span_ruler` pipelines together. Also, huge thanks to [&Aacute;kos
+K&aacute;d&aacute;r](https://kadarakos.github.io/) for helping me realize this
+approach while I was working on the [SpanRuler](https://spacy.io/api/spanruler).
+
+Lastly, you can find a example project for the
+[SpanRuler](https://spacy.io/api/spanruler) that uses this pattern in the
+[`explosion/projects`](https://github.com/explosion/projects) repository. Feel
+free to clone and use it as a starting point.
 
 
-<!--
-
-
-
-
-<!--
-first things first, an overview of spaCy matcher
-- a list of dictionaries, where each dictionary matches a token.
-- so if you just want to match a single word... [example]
-- so if you just want to match multiple words... [example]
-
-
-You can use this system for matching entities and spans via the `SpanRuler` (footnote re: entity_ruler). Under the hood, the SpanRuler creates a Matcher (and a PhraseMatcher) durinng initialization. This means that we only need to learn one pattern-matching system.
-Normally you can write them in Python code..
-
-https://github.com/explosion/spaCy/blob/b69d249a223fa4e633e11babc0830f3b68df57e2/spacy/pipeline/span_ruler.py#L447
-
-But they can also be from an external JSONL file:
-
-
-
--->
-
-
-<!-- assembling rules -->
-
-<!-- my favorite patterns -->
-<!-- wildcards -->
-
-<!-- operators -->
-
-<!-- regex -->
-
-<!-- talk about hidden complexity at the end -->
-
-<!--
-
-## Final thoughts: hidden complexity 
--->
