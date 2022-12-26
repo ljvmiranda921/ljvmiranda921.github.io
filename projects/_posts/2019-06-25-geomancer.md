@@ -165,6 +165,9 @@ BigQuery, [PostGIS](https://postgis.net/), and
 And that's it for the library portion of [Geomancer!](https://github.com/thinkingmachines/geomancer) You can install `geomancer` via `pip`, and start casting spells your way! In the next section, I'll discuss the framework's architecture and layout. 
 It's an interesting read if you want to know more how we set up [Geomancer](https://github.com/thinkingmachines/geomancer) in [Thinking Machines](https://thinkingmachin.es).
 
+![](/assets/png/geomancer/sample2.png){:width="720px"}  
+{: style="text-align: center;"}
+
 ## Architecture
 
 There are two main components for
