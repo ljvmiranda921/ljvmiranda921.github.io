@@ -12,7 +12,7 @@ excerpt: |
     Talking about an open-source project I did at work!
 ---
 
-> November 2022: As of now, the Geomancer repository is archived. I've recently
+> November 2021: As of now, the Geomancer repository is archived. I've recently
 > changed jobs too as I am now working in open-source full time with
 > [Explosion](https://explosion.ai) and [spaCy](https://spacy.io)!
 > You can check out my [retrospective](#postscript) at the end.
