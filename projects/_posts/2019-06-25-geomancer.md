@@ -6,6 +6,7 @@ category: projects
 comments: true
 author: "LJ MIRANDA"
 tags: [geospatial data, geomancer, gis, data science, bigquery, gcp, google cloud]
+header-img: /assets/png/geomancer/header.jpg
 description: |
     Talking about an open-source project I did at work!
 excerpt: |
