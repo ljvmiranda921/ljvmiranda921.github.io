@@ -218,12 +218,11 @@ prep for Ph.D., but winds of change)!
 I'm also grateful for [Thinking Machines](https://thinkingmachin.es) for giving
 me the space to develop this library, and also for various volunteers that
 helped me build it. Thank you!
-
 I wrote this postscript because I want to bookend this experience on a good
 note.[^2] I don't think Geomancer was successful. But at least I can close that 
 chapter with finality. It sucks, but such is life. The Github repository for
 [Geomancer](https://github.com/thinkingmachines/geomancer) is now archived.
-Thinking Machines is now working on another geospatial tool,
+[Thinking Machines](https://thinkingmachin.es) is now working on another geospatial tool,
 [Geowrangler](https://github.com/thinkingmachines/geowrangler). I wish this new
 project success!
 
