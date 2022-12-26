@@ -188,7 +188,7 @@ on engineering features and the latter on setting up pipelines.
 
 ## Postscript
 
-*(Retrospective December 2021)* Unfortunately, development on Geomancer was
+*(Retrospective November 2021)* Unfortunately, development on Geomancer was
 discontinued because of several factors: I got busy on client work, I managed my
 own team, and the use-cases might not be as big as I imagined it to be.
 Development staled and went to a halt.
@@ -198,6 +198,7 @@ Nevertheless, two years after Geomancer, I learned a lot about the
 non-engineering side of software engineering. Sure, I think my technical
 knowledge has grown but the invisible parts of developing software revealed
 themselves to me:
+
 - Time is money. We spent a lot of time developing it that there should always
 be a relevant business-case to "break even." This can be in the form of a client
 project that demonstrates the tool or a SaaS. We don't practice the latter and we
@@ -213,8 +214,8 @@ Lastly, I learned that I love working in open-source! Open source software was
 my gateway to programming since 2017 and five years down the line, it's still
 something I enjoy. I decided to devote myself on open-source when the
 opportunity presented itself, and so I accepted an offer to work at
-[spaCy](https://spacy.io) (originally I was planning to go back to Ateneo to
-prep for Ph.D., but winds of change)!
+[spaCy](https://spacy.io). Originally I was planning to go back to Ateneo to
+prep for Ph.D., but winds of change!
 
 I'm also grateful for [Thinking Machines](https://thinkingmachin.es) for giving
 me the space to develop this library, and also for various volunteers that
