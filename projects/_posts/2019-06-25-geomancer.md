@@ -203,7 +203,7 @@ themselves to me:
 be a relevant business-case to "break even." This can be in the form of a client
 project that demonstrates the tool or a SaaS. We don't practice the latter and we
 can't find the former so it was a cost deficit in the end.
-- Don't be attached to your code. Younger version of me still has an unhealthy relationship with my passion that seeing things not work out bums me out. I have reflected on this recently, see ["my personal framework for flourishing."](life/2021/09/21/build-earn-play/) Sometimes the business strategy changes, and your work may not be part of it.
+- Don't be attached to your code. Younger version of me still has an unhealthy relationship with my passion that seeing things not work out bums me out. I have reflected on this recently, see ["my personal framework for flourishing."](/life/2021/09/21/build-earn-play/) Sometimes the business strategy changes, and your work may not be part of it.
 - Learn to market. Before, the development of Geomancer was done by a small
 group of volunteers. As we all got busy, we deprioritized open-source work for
 more money-generating activities (business development, client work, etc.). I
