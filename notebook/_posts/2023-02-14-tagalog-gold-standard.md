@@ -122,10 +122,7 @@ Also, the texts themselves aren't complete sentences. A model trained on this
 data might translate poorly to longer documents as the *context* of an entity is
 lost. For example, articles (*ang*, *si*, *ang mga*) can point to a noun phrase
 and give clues if it's a person or organization.  However, WikiANN can still be
-useful. We can use it to train a model for bootstrapping our annotations:
-
-![](/assets/png/tagalog-gold-standard/wikiann.png){:width="650px"}  
-{:style="text-align: center;"}
+useful. We can use it to train a model for bootstrapping our annotations.
 
 Fortunately, we have **a lot of unannotated datasets that represent the
 diversity of the Filipino language**. For example, there is the
@@ -137,13 +134,13 @@ dataset as it's more recent, and one of its subdomain (news) resembles that of
 standard NER benchmarks like ConLL.
 
 
-![](/assets/png/tagalog-gold-standard/tlunified.png){:width="650px"}  
-{:style="text-align: center;"}
-
 My process then goes like this: I will train a model from WikiANN and have it 
 predict entities for TLUnified. Then, I will correct the predictions using 
 [Prodigy](https://prodi.gy), an annotation software, to produce gold-standard
 annotations. Piece of cake, right?
+
+![](/assets/png/tagalog-gold-standard/framework_applied.png){:width="650px"}  
+{:style="text-align: center;"}
 
 However, *labeling thousands of samples is not the hardest part.* As the sole
 annotator, it's easy for me to influence a dataset of my biases and errors. In
