@@ -26,6 +26,8 @@ your problem. In this blog post, I'll discuss a **design pattern** I learned whi
 working on these components. I will focus on token and entity matching in the
 form of the [Matcher](https://spacy.io/api/matcher).
 
+## How do we pattern-match in spaCy?
+
 First things first, an overview of the spaCy
 [Matcher](https://spacy.io/api/matcher). You can define patterns as a list of
 dictionaries, where each dictionary inscribes a rule to match a single token.  A
@@ -74,19 +76,19 @@ any kind of text.  I won't be delving too much into it here since the
 enough for that. Instead, I want to share a design pattern for
 writing and organizing rules. 
 
-## Config-first design pattern 
+## Another way to organize patterns
 
 One way to store patterns for the [SpanRuler](https://spacy.io/api/spanruler) or
 [EntityRuler](https://spacy.io/api/entityruler) is through the `patterns.jsonl`
 file. But if you find a JSONL file too unwieldy, then it's also possible **to
-store patterns in a Python object** and **reference them from a configuration
+store patterns in a Python object** then **include them in the configuration
 file.** This approach makes your rules readable as you can annotate them however
 you wish. 
 
 > If you find a JSONL file too unwieldy, then it's also possible to store patterns
-> in a Python object and reference them from a configuration file.
+> in a Python object then include them in the configuration file.
 
-### Organizing patterns as Python objects
+### Store patterns in a Python object...
 
 Suppose we're extracting degree programs from some corpus. We start by creating
 a custom function that returns a set of rules as a list of dictionaries:
@@ -165,7 +167,7 @@ cost me hours of debugging. Lastly, if you're using a formatter like
 [black](/notebook/2018/06/21/precommits-using-black-and-flake8/), then you can
 improve your pattern's readability.
 
-### Referencing patterns from a configuration file 
+### ...then include them in the configuration file 
 
 We can take advantage of spaCy's [`assemble`](https://spacy.io/api/cli#assemble)
 command to include our patterns in a configuration file. Suppose we want to
@@ -238,7 +240,7 @@ from our rules.
 > With two separate configurations, we decouple the statistical model from
 > our rules.
 
-## Explaining SpanRuler config
+## More on SpanRuler's parameters
 
 Let's step back a bit and examine the `ruler.cfg` configuration file in detail.
 Notice how the number of parameters present is small because we'll use it as an
