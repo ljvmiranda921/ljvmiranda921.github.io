@@ -56,9 +56,9 @@ only 10 have adequate NLP resources ([Mortensen](#mortensen), [Tsvetkov, 2017](#
 
 There are many clever ways to build technologies on low-resource languages that
 allow researchers to circumvent the data scarcity problem. They usually involve
-taking advantage of a high-resource language (or domain), and transferring its
-capacity to a low-resource one. The table below outlines different approaches for
-low-resource NLP:
+taking advantage of a high-resource language, and transferring its capacity to a
+low-resource one. The table below outlines different approaches for low-resource
+NLP:
 
 
 | Approach                        | Data*  | Prerequisites                                                                                                | Description                                                                               |
