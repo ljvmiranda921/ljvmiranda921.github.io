@@ -61,7 +61,7 @@ In this blog post, I want to talk about six lessons I learned from this journey.
 
 - keywords
 
-## Throw stuff that don't spark joy
+## Throw drafts that don't spark joy
 
 ## Final thoughts
 -->
