@@ -42,11 +42,30 @@ NLP. You can definitely trace my career path through my [Notebook](/notebook/)!
 
 In this blog post, I want to talk about six lessons I learned from this journey.
 
-## Consistency of output is proportional to input
+## 1. Consistency of output ∝ input
 
 <!--
 
 
 
 ## One for me, one for them
+
+## Think about readers who skim 
+
+- visuals
+- headers
+
+## Don't hit publish right away!
+
+## Marketing starts before writing
+
+- keywords
+
+## Throw stuff that don't spark joy
+
+## Final thoughts
 -->
+
+
+
+
