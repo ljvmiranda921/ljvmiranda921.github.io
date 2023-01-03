@@ -74,7 +74,7 @@ Subscribing to everything is easy but can also be counterproductive. So I
 learned to curate what I consume. This led to some practices I developed over
 time:
 - **Have a backlog of ideas.** I use [Github Issues](https://github.com/ljvmiranda921/ljvmiranda921.github.io/issues) to keep track of random ideas I
-come across from time to time. I'm also liberal in closing Issues I don't find
+come across from time to time. I'm also liberal in closing issues I don't find
 interesting anymore. 
 - **Use RSS Readers and Twitter Lists.** I use [Inoreader](https://inoreader.com) to curate the content I
 consume from the internet. The same goes for Twitter and Mastodon. Sometimes,
