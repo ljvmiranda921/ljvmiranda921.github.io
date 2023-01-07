@@ -189,17 +189,29 @@ data source, `gold` - dataset type).
 ### ...then tested it with baseline NER approaches
 
 I want to see how standard NER approaches fare with `tl_tlunified_gold`. I made
-two sets of experiments, one involving static vectors and the other using language
-models or transformers. In addition, I also want to see the effects of
-[pretraining](https://spacy.io/usage/embeddings-transformers#pretraining) for
-some of these vectors:
+two sets of experiments, one involving word vectors and the other using language
+models or transformers. My overall goal is to identify the best training setup
+for a low-resource corpora like Tagalog. I'm not pitting one against the other;
+I want to setup training pipelines for both in the future.
+
+> My overall goal is to identify the best training setup for a low-resource
+> corpora like Tagalog. I'm not pitting one against the other; I want to setup
+> training pipelines for both in the future.
+
+First, I want to benchmark several word vector settings for NER. I want to check if the
+choice of word vectors (also called [*static
+vectors*](https://spacy.io/usage/embeddings-transformers#static-vectors) in
+spaCy) help improve performance. I also want to investigate the effect of
+[*pretraining*](https://spacy.io/usage/embeddings-transformers#pretraining) in
+this scenario:
+
 
 | Approach| Static Vectors                 | Description                                                                          |
 |---------|------------------------------|--------------------------------------------------------------------------------------|
 | Supervised learning | None                         | Train a NER model from scratch. No tricks, just the annotated data.                  |
-| Supervised learning | None + pretraining     | [Pretrain characters](https://spacy.io/api/architectures#pretrain_chars) using a subset of TLUnified to a finetuned "token to vector" layer. |
-| Supervised learning | fastText                     | Train a set of [fastText](https://fasttext.cc/) vectors from TLUnified and use them as [static vectors](https://spacy.io/usage/embeddings-transformers#static-vectors) for the downstream NER task. |
-| Supervised learning | fastText + pretraining | [Pretrain](https://spacy.io/api/architectures#pretrain_vectors) using the fastText vectors as pretraining objective.                          |
+| Supervised learning | None + pretraining     | Pretrain characters using a subset of TLUnified to a finetuned "token to vector" layer. |
+| Supervised learning | fastText                     | Train a set of [fastText](https://fasttext.cc/) vectors from TLUnified and use them as static vectors for the downstream NER task. |
+| Supervised learning | fastText + pretraining | Pretrain using the fastText vectors as pretraining objective.                          |
 
 **Table:** Experimental setup for word vectors
 {:style="text-align: center;"}
@@ -216,10 +228,13 @@ the representation layer to achieve higher accuracy:
 **Table:** Experimental setup for language models
 {:style="text-align: center;"}
 
-For all the experiments above, I will be using a [spaCy's transition-based
-parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
+Again, I want to use what I learned from these experiments to setup a training
+scheme for a Tagalog pipeline down the road. For all the experiments above, I
+will be using a [spaCy's transition-based parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
 
 ## Experimental Results
+
+<!-- better when in altair? then use LaTeX font ok! -->
 
 | Static Vectors                             | Precision | Recall | F1-score |
 |------------------------------|-----------|--------|----------|
@@ -228,6 +243,15 @@ parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
 | fastText (XXX vectors)       |           |        |          |
 | fastText + pretraining |           |        |          |
 
+<!--
+pretrained chars. vs. pretrained vectors
+-->
+
+<!--
+fasttext vs. fasttext (manual) vs. floret
+compare wrt vector size?
+-->
+
 
 | Language Models                      | Precision | Recall | F1-score |
 |-----------------------|-----------|--------|----------|
@@ -235,16 +259,6 @@ parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
 | xlm-roberta-base      |           |        |          |
 | roberta-tagalog-large |           |        |          |
 | roberta-tagalog-base  |           |        |          |
-
-<!--
-
-|                      |           | TBP |          |           | CRF |          |
-|----------------------|-----------|-------------------------|----------|-----------|--------------------------------|----------|
-|                      | Precision | Recall                  | F1-score | Precision | Recall                         | F1-score |
-| fastText             |           |                         |          |           |                                |          |
-| roberta-tagalog-base |           |                         |          |           |                                |          |
-
--->
 
 
 ## Conclusion
