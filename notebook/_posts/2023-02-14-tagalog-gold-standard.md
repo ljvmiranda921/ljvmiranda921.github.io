@@ -181,12 +181,11 @@ data source, `gold` - dataset type).
 
 
 
-| Tagalog Data    | Sentences | Tokens | PER | ORG | LOC |
-|-----------------|-----------|--------|-----|-----|-----|
-| Training Set    |           |        |     |     |     |
-| Development Set |           |        |     |     |     |
-| Test Set        |           |        |     |     |     |
-
+| Tagalog Data    | Documents | Tokens | PER  | ORG  | LOC  |
+|-----------------|-----------|--------|------|------|------|
+| Training Set    | 6252      | 198588 | 6418 | 3121 | 3296 |
+| Development Set |  782      |  25007 |  793 |  392 |  409 |
+| Test Set        |  782      |  25153 | 818  |  423 |  438 |
 
 ### ...then tested it with baseline NER approaches
 
