@@ -31,28 +31,25 @@ Tagalog-based corpora, my experience in creating a gold-standard dataset
 for named-entity recognition, and my hopes for
 the future of Tagalog NLP.
 
-
-#### Contents
-
 I am focusing on structured prediction tasks like named-entity recognition (NER)
 because it has a lot of practical applications and little work has been done on
 Tagalog NER yet.
 
-- [Background: Tagalog NER corpora is low-resource and silver-standard](#corpora)
-- [Methods: Creating and evaluating gold-standard data](#gold)
-- [Experimental Results](#experimental-results)
-- [Conclusion](#conclusion)
 
+## <a id="corpora"></a>Tagalog NER corpora is scarce
 
-## <a id="corpora"></a>Tagalog NER corpora is low-resource and silver-standard
+Even if Tagalog is text-rich (i.e., a million speakers, thousands of written
+content, etc.), the amount of annotated texts are scarce. We usually label these
+types of languages as **low-resource**. This problem isn't unique to Tagalog.
+Out of the approximately 7000 languages in the world, only 10 have adequate NLP
+resources ([Mortensen](#mortensen), [Tsvetkov,
+2017](#tsvetkov2017opportunities)). We can circumvent the data scarcity problem
+by bootstrapping with the data we have.
 
-We label a language as **low-resource** when there are no annotated corpora
-available. Even if Tagalog is text-rich (i.e., a million speakers, thousands of
-written content, etc.), the amount of annotated texts are scarce. This problem
-isn't unique to Tagalog. Out of the approximately 7000 languages in the world,
-only 10 have adequate NLP resources ([Mortensen](#mortensen), [Tsvetkov, 2017](#tsvetkov2017opportunities)). 
+> We can circumvent the data scarcity problem by bootstrapping with the data
+> we have.
 
-### Working on low-resource corpora
+### We can circumvent the data scarcity problem...
 
 There are many clever ways to build technologies on low-resource languages that
 allow researchers to circumvent the data scarcity problem. They usually involve
@@ -81,7 +78,7 @@ Their annotations are automatically generated, either by a statistical model
 trained from a similar language or a knowledge base. Silver-standard data may
 not be accurate or trustworthy, but they are faster and cheaper to create.
 
-### Working with silver-standard annotations
+### ...by bootstrapping with the data we have 
 
 The best way to work with silver-standard data is to use them for bootstrapping
 the annotations of a much larger and diverse dataset. By bootstrapping the
@@ -92,6 +89,8 @@ illustrates the workflow I'm following:
 ![](/assets/png/tagalog-gold-standard/silver_standard_framework.png){:width="650px"}  
 {:style="text-align: center;"}
 
+> By bootstrapping the annotations, we reduce the cognitive load of labeling
+> and focus more on correcting the model's outputs rather than labeling from scratch.
 
 The only major NER dataset for Tagalog is **WikiANN** ([Pan, Zhang, et al.,
 2017](#pan2017wikiann)). It is a silver-standard dataset based on an English
@@ -121,8 +120,12 @@ set](https://huggingface.co/datasets/wikiann/viewer/tl/validation) have glaring 
 Also, the texts themselves aren't complete sentences. A model trained on this
 data might translate poorly to longer documents as the *context* of an entity is
 lost. For example, articles (*ang*, *si*, *ang mga*) can point to a noun phrase
-and give clues if it's a person or organization.  However, WikiANN can still be
-useful. We can use it to train a model for bootstrapping our annotations.
+and give clues if it's a person or organization.  So we can't rely on a model
+trained with WikiANN. However, WikiANN can still be useful. We can use it to
+train a model for bootstrapping our annotations.
+
+> ...the texts [in WikiANN] aren't complete sentences. A model trained on this
+> data might translate poorly to longer documents...so we can't [just] rely [on it].
 
 Fortunately, we have **a lot of unannotated datasets that represent the
 diversity of the Filipino language**. For example, there is the
@@ -130,9 +133,11 @@ diversity of the Filipino language**. For example, there is the
 data for any language. We also have TLUnified ([Cruz and Cheng,
 2022](#cruz2022tlunified)) and WikiText TL-39 ([Cruz and Cheng,
 2019](#cruz2019wikitext)). For my experiments, I will be using the TLUnified
-dataset as it's more recent, and one of its subdomain (news) resembles that of
-standard NER benchmarks like ConLL.
+dataset as it's more recent, and one of its subdomains (news) resemble that of
+standard NER benchmarks like CoNLL.
 
+> I will be using the TLUnified dataset as it's more recent, and one of its
+> subdomains resemble that of standard NER benchmarks like CoNLL.
 
 My process then goes like this: I will train a model from WikiANN and have it 
 predict entities for TLUnified. Then, I will correct the predictions using 
@@ -150,7 +155,10 @@ Unfortunately, this is the **limitation** of this work. In the next section,
 I'll outline some of my attempts to be more objective when annotating. The ideal
 case is to have multiple annotators though, so [**let me know if you want to help out!**](#helping-out)
 
-## <a id="gold"></a>Creating and evaluating gold-standard data
+> As the sole annotator, [I] can influence a dataset of my biases and errors.
+> This is the limitation of this work.
+
+## <a id="gold"></a>We still want gold-annotated data
 
 In this section, I'll talk about how I annotated TLUnified to produce
 gold-standard data. I'll also introduce the experiments I did to see how
@@ -159,7 +167,7 @@ annotated TLUnified as `tl_tlunified_gold` (`tl` - language code, `tlunified` -
 data source, `gold` - dataset type).
 
 
-### Turning silver to gold
+### I corrected annotations from a silver model...
 
 
 <!-- bootstrapping wikiann -->
@@ -168,7 +176,6 @@ data source, `gold` - dataset type).
 
 
 
-### Annotation guidelines
 
 <!-- annotation guidelines -->
 
@@ -181,7 +188,7 @@ data source, `gold` - dataset type).
 | Test Set        |           |        |     |     |     |
 
 
-### Experimental Setup
+### ...then tested it with baseline NER approaches
 
 I want to see how standard NER approaches fare with `tl_tlunified_gold`. I made
 two sets of experiments, one involving static vectors and the other using language
