@@ -22,31 +22,27 @@ excerpt: |
 ---
 
 
-<span class="firstcharacter">T</span>agalog (tl) is my native language. It's spoken
-by 76 million Filipinos and has been our official language since the 30s. 
-Stories and songs have been written in Tagalog, and it has a long cultural and
-historical significance. It's a **text-rich** language, but unfortunately, a
-**low-resource** one. In this blog post, I'll talk about the state of
-Tagalog-based corpora, my experience in creating a gold-standard dataset
-for named-entity recognition, and my hopes for
-the future of Tagalog NLP.
+<span class="firstcharacter">T</span>agalog (tl) is my native language. It's
+spoken by 76 million Filipinos and has been our official language since the 30s.
+It's a **text-rich** language, but unfortunately, a **low-resource** one. In
+this blog post, I'll talk about the state of Tagalog-based corpora, my
+experience and experiments in creating a gold-standard dataset for named-entity
+recognition, and my hopes for the future of Tagalog NLP. 
 
-I am focusing on structured prediction tasks like named-entity recognition (NER)
-because it has a lot of practical applications and little work has been done on
-Tagalog NER yet.
+I will focus on **named-entity recognition (NER)** because it has a lot of practical
+applications and little work has been done on Tagalog NER yet.
 
 
 ## <a id="corpora"></a>Tagalog NER corpora is scarce
 
-Even if Tagalog is text-rich (i.e., a million speakers, thousands of written
-content, etc.), the amount of annotated texts are scarce. We usually label these
-types of languages as **low-resource**. This problem isn't unique to Tagalog.
-Out of the approximately 7000 languages in the world, only 10 have adequate NLP
-resources ([Mortensen](#mortensen), [Tsvetkov,
+Even if Tagalog is text-rich, the amount of annotated texts are scarce. We
+usually label these types of languages as **low-resource**. This problem isn't
+unique to Tagalog.  Out of the approximately 7000 languages in the world, only
+10 have adequate NLP resources ([Mortensen, 2017](#mortensen) and [Tsvetkov,
 2017](#tsvetkov2017opportunities)). We can circumvent the data scarcity problem
-by bootstrapping with the data we have.
+by bootstrapping the data we have.
 
-> We can circumvent the data scarcity problem by bootstrapping with the data
+> We can circumvent the data scarcity problem by bootstrapping the data
 > we have.
 
 ### We can circumvent the data scarcity problem...
@@ -73,18 +69,21 @@ NLP:
 {:style="text-align: center;"}
 
 
-Some of these methods produce what we usually call  **silver-standard data**.
+I will focus on **supervised** and **few-shot learning** in this blog post.
+Because most of these approaches require a substantial amount of data, we need
+to take advantage of existing corpora. One way is to use *silver-standard data*.
 Their annotations are automatically generated, either by a statistical model
 trained from a similar language or a knowledge base. Silver-standard data may
 not be accurate or trustworthy, but they are faster and cheaper to create.
 
-### ...by bootstrapping with the data we have 
+### ...by bootstrapping the data we have 
 
 The best way to work with silver-standard data is to use them for bootstrapping
-the annotations of a much larger and diverse dataset. By bootstrapping the
-annotations, we reduce the cognitive load of labeling and focus more on
-correcting the model's outputs rather than labeling from scratch. The figure below
-illustrates the workflow I'm following:
+the annotations of a much larger and diverse dataset, thereby producing
+*gold-standard annotations*. By bootstrapping the annotations, we reduce the
+cognitive load of labeling and focus more on correcting the model's outputs
+rather than labeling from scratch. The figure below illustrates the workflow I'm
+following:
 
 ![](/assets/png/tagalog-gold-standard/silver_standard_framework.png){:width="650px"}  
 {:style="text-align: center;"}
