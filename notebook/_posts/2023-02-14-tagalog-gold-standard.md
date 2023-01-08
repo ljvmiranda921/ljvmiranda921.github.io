@@ -26,18 +26,18 @@ excerpt: |
 spoken by 76 million Filipinos and has been our official language since the 30s.
 It's a **text-rich** language, but unfortunately, a **low-resource** one. In
 this blog post, I'll talk about the state of Tagalog-based corpora, my
-experience and experiments in creating a gold-standard dataset for named-entity
+experiments in creating a gold-standard dataset for named-entity
 recognition, and my hopes for the future of Tagalog NLP. 
 
 I will focus on **named-entity recognition (NER)** because it has a lot of practical
-applications and little work has been done on Tagalog NER yet.
+applications and more work still needs to be done on Tagalog NER.
 
 
 ## <a id="corpora"></a>Tagalog NER corpora is scarce
 
-Even if Tagalog is text-rich, the amount of annotated texts are scarce. We
+Even if Tagalog is text-rich, the amount of annotated data is scarce. We
 usually label these types of languages as **low-resource**. This problem isn't
-unique to Tagalog.  Out of the approximately 7000 languages in the world, only
+unique to Tagalog.  Out of the approximately 7000 languages worldwide, only
 10 have adequate NLP resources ([Mortensen, 2017](#mortensen) and [Tsvetkov,
 2017](#tsvetkov2017opportunities)). We can circumvent the data scarcity problem
 by bootstrapping the data we have.
@@ -47,11 +47,10 @@ by bootstrapping the data we have.
 
 ### We can circumvent the data scarcity problem...
 
-There are many clever ways to build technologies on low-resource languages that
-allow researchers to circumvent the data scarcity problem. They usually involve
-taking advantage of a high-resource language, and transferring its capacity to a
-low-resource one. The table below outlines different approaches for low-resource
-NLP:
+Many clever ways in language tech allow researchers to circumvent the data
+scarcity problem. They usually involve taking advantage of a high-resource
+language and transferring its capacity to a low-resource one. The table below
+outlines these approaches:
 
 
 | Approach                        | Data*  | Prerequisites                                                                                                | Description                                                                               |
@@ -93,10 +92,11 @@ following:
 
 The only major NER dataset for Tagalog is **WikiANN** ([Pan, Zhang, et al.,
 2017](#pan2017wikiann)). It is a silver-standard dataset based on an English
-Knowledge Base (KB). The researchers were able to create a framework for tagging
-entities based on Wikipedia and extended it to 282 other languages,
-including Tagalog. It is not perfect. For example, the [first few entries of the validation
-set](https://huggingface.co/datasets/wikiann/viewer/tl/validation) have glaring errors:
+Knowledge Base (KB). The researchers created a framework for tagging entities
+based on Wikipedia and extended it to 282 other languages, including Tagalog. It
+could be better. For example, the [first few entries of the validation
+set](https://huggingface.co/datasets/wikiann/viewer/tl/validation) have glaring
+errors:
 
 <div style="position:relative; overflow: hidden; width;100%; padding-top: 10.25%">
 <iframe src="/assets/png/tagalog-gold-standard/wikiann_error.html" height="100" width="720" style="border:1px solid #ddd;border-radius:10px;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%"></iframe>
@@ -131,14 +131,14 @@ diversity of the Filipino language**. For example, there is the
 [CommonCrawl](https://commoncrawl.org/) repository that contains web-crawled
 data for any language. We also have TLUnified ([Cruz and Cheng,
 2022](#cruz2022tlunified)) and WikiText TL-39 ([Cruz and Cheng,
-2019](#cruz2019wikitext)). For my experiments, I will be using the TLUnified
-dataset as it's more recent, and one of its subdomains (news) resemble that of
+2019](#cruz2019wikitext)). For my experiments, I will use the TLUnified
+dataset as it's more recent, and one of its subdomains (news) resembles that of
 standard NER benchmarks like CoNLL.
 
 > I will be using the TLUnified dataset as it's more recent, and one of its
 > subdomains resemble that of standard NER benchmarks like CoNLL.
 
-My process then goes like this: I will train a model from WikiANN and have it 
+My process goes like this: I will train a model from WikiANN and have it 
 predict entities for TLUnified. Then, I will correct the predictions using 
 [Prodigy](https://prodi.gy), an annotation software, to produce gold-standard
 annotations. Piece of cake, right?
@@ -147,37 +147,52 @@ annotations. Piece of cake, right?
 {:style="text-align: center;"}
 
 However, *labeling thousands of samples is not the hardest part.* As the sole
-annotator, it's easy for me to influence a dataset of my biases and errors. In
+annotator, I can easily influence a dataset of my biases and errors. In
 practice, you'd want three or more annotators (preferably linguists), then
 normalize their annotations based on some inter-annotator agreement.
 Unfortunately, this is the **limitation** of this work. In the next section,
-I'll outline some of my attempts to be more objective when annotating. The ideal
-case is to have multiple annotators though, so [**let me know if you want to help out!**](#helping-out)
+I'll outline some of my attempts to be more objective when annotating. Of
+course, the ideal case is to have multiple annotators, so [**let me know if you
+want to help out!**](#helping-out)
 
 > As the sole annotator, [I] can influence a dataset of my biases and errors.
 > This is the limitation of this work.
 
 ## <a id="gold"></a>We still want gold-annotated data
 
-In this section, I'll talk about how I annotated TLUnified to produce
+This section will discuss how I annotated TLUnified to produce
 gold-standard data. I'll also introduce the experiments I did to see how
-baseline models perform on this dataset. For clarity, I'll be calling the
+baseline models perform on this dataset. For clarity, I'll call the
 annotated TLUnified as `tl_tlunified_gold` (`tl` - language code, `tlunified` -
 data source, `gold` - dataset type).
 
 
 ### I corrected annotations from a silver model...
 
+For the past six months, I corrected annotations produced by the WikiANN model.
+I learned that as an annotator, it's easier to fix annotations than label them
+from scratch. To make the annotation process more objective, I devised
+[annotation guidelines]() ([Artstein, 2017](#artstein2017inter)). Professor Nils Reiter has a [good
+guide](https://sharedtasksinthedh.github.io/2017/10/01/howto-annotation/) for
+developing these. I also took inspiration from The Guardian's work, which uses
+[Prodigy for quotation detection](https://explosion.ai/blog/guardian).
 
-<!-- bootstrapping wikiann -->
-<!-- advantage over labeling from scratch: reduced cognitive load -->
-<!-- experimented over ner.teach -->
+However, I'm the only annotator. Hence, the annotations produced in v1.0 of
+`tl_tlunified_gold` are **not ready** for production. Therefore, using Reiter's
+framework, my annotations are still in the pre-pilot phase. Therefore, getting
+multiple annotations and developing an inter-annotator agreement for several
+iterations is the ideal case.
+
+> ...the annotations produced in v1.0 of `tl_tlunified_gold` are **not ready**
+> for production...my annotations are still in the pre-pilot phase.
 
 
-
-
-<!-- annotation guidelines -->
-
+Nevertheless, I produced some annotations for around 7,000 documents. I split
+them between training, development, and test partitions and uploaded the v1.0 of
+raw annotations to the cloud. You can access the raw annotations and replicate
+the preprocessing step by checking out the [GitHub repository of this
+project](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus).
+The table below shows some dataset statistics:
 
 
 | Tagalog Data    | Documents | Tokens | PER  | ORG  | LOC  |
@@ -186,24 +201,27 @@ data source, `gold` - dataset type).
 | Development Set |  782      |  25007 |  793 |  392 |  409 |
 | Test Set        |  782      |  25153 | 818  |  423 |  438 |
 
+**Table:** Dataset statistics for v1.0 of `tl_tlunified_cold` 
+{:style="text-align: center;"}
+
 ### ...then tested it with baseline NER approaches
 
 I want to see how standard NER approaches fare with `tl_tlunified_gold`. I made
 two sets of experiments, one involving word vectors and the other using language
-models or transformers. My overall goal is to identify the best training setup
-for a low-resource corpora like Tagalog. I'm not pitting one against the other;
-I want to setup training pipelines for both in the future.
+models or transformers. I aim to identify the best training setup for a
+low-resource corpora like Tagalog. I'm not pitting one against the other; I want
+to set up training pipelines for both in the future.
 
 > My overall goal is to identify the best training setup for a low-resource
 > corpora like Tagalog. I'm not pitting one against the other; I want to setup
 > training pipelines for both in the future.
 
-First, I want to benchmark several word vector settings for NER. I want to check if the
-choice of word vectors (also called [*static
+First, I want to benchmark several word vector settings for NER. Then, I want to
+check if the choice of word vectors (also called [*static
 vectors*](https://spacy.io/usage/embeddings-transformers#static-vectors) in
-spaCy) help improve performance. I also want to investigate the effect of
-[*pretraining*](https://spacy.io/usage/embeddings-transformers#pretraining) in
-this scenario:
+spaCy) helps improve performance. Finally, I also want to investigate the effect
+of [*pretraining*](https://spacy.io/usage/embeddings-transformers#pretraining)
+in this scenario:
 
 
 | Approach| Static Vectors                 | Description                                                                          |
@@ -228,9 +246,10 @@ the representation layer to achieve higher accuracy:
 **Table:** Experimental setup for language models
 {:style="text-align: center;"}
 
-Again, I want to use what I learned from these experiments to setup a training
+Again, I want to use what I learned from these experiments to set up a training
 scheme for a Tagalog pipeline down the road. For all the experiments above, I
-will be using a [spaCy's transition-based parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
+will use a [spaCy's transition-based
+parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
 
 ## Experimental Results
 
@@ -294,3 +313,4 @@ compare wrt vector size?
 - <a id="pan2017wikiann">Xiaoman Pan, Boliang Zhang, Jonathan May, Joel Nothman, Kevin Knight, and Heng Ji.</a> 2017. [Cross-lingual Name Tagging and Linking for 282 Languages](https://aclanthology.org/P17-1178). In *Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 1946–1958, Vancouver, Canada. Association for Computational Linguistics.
 - <a id="cruz2022tlunified">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2022. [Improving Large-scale Language Models and Resources for Filipino](https://aclanthology.org/2022.lrec-1.703/). In *Proceedings of the Thirteenth Language Resources and Evaluation Conference*, pages 6548–6555, Marseille, France. European Language Resources Association.
 - <a id="cruz2019wikitext">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2019. [Evaluating Language Model Finetuning Techniques for Low-resource Languages](https://arxiv.org/abs/1907.00409) *arXiv:1907.00409*.
+- <a id="artstein2017inter">Ron Artstein</a>. Inter-annotator Agreement. In: Ide Nancy & Pustejovsky James (eds.) *Handbook of Linguistic Annotation.* Springer, Dordrecht, 2017. DOI 10.1007/978-94-024-0881-2.
