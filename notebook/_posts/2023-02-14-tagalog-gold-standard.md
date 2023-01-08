@@ -172,9 +172,8 @@ data source, `gold` - dataset type).
 For the past six months, I corrected annotations produced by the WikiANN model.
 I learned that as an annotator, it's easier to fix annotations than label them
 from scratch. To make the annotation process more objective, I devised
-[annotation guidelines]() ([Artstein, 2017](#artstein2017inter)). Professor Nils
-Reiter has a [good
-guide](https://sharedtasksinthedh.github.io/2017/10/01/howto-annotation/) for
+[annotation guidelines](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus/guidelines) ([Artstein, 2017](#artstein2017inter)). Professor Nils
+Reiter has an [excellent guide](https://sharedtasksinthedh.github.io/2017/10/01/howto-annotation/) for
 developing these. I also took inspiration from [*The Guardian*'s
 work](https://github.com/JournalismAI-2021-Quotes/quote-extraction/blob/28f429b260fc30dd884cd4d0a8ff0cb9047f0fe4/annotation_rules/Quote%20annotation%20guide.pdf),
 which uses [Prodigy for quotation
