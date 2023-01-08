@@ -230,7 +230,7 @@ in this scenario:
 |---------|------------------------------|--------------------------------------------------------------------------------------|
 | Supervised learning | None                         | Train a NER model from scratch. No tricks, just the annotated data.                  |
 | Supervised learning | None + pretraining     | Pretrain characters using a subset of TLUnified to a finetuned "token to vector" layer. |
-| Supervised learning | fastText                     | Train a set of [fastText](https://fasttext.cc/) vectors from TLUnified and use them as static vectors for the downstream NER task. |
+| Supervised learning | fastText                     | Source fastText vectors for the downstream NER task. |
 | Supervised learning | fastText + pretraining | Pretrain using the fastText vectors as pretraining objective.                          |
 
 **Table:** Experimental setup for word vectors
