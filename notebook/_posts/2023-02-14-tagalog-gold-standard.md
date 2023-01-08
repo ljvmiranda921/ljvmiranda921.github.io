@@ -181,7 +181,7 @@ detection](https://explosion.ai/blog/guardian).
 
 However, I'm the only annotator. Hence, the annotations produced in v1.0 of
 `tl_tlunified_gold` are **not ready** for production. Therefore, using Reiter's
-framework, my annotations are still in the pre-pilot phase. Therefore, getting
+framework, my annotations are still in the pre-pilot phase. Getting
 multiple annotations and developing an inter-annotator agreement for several
 iterations is the ideal case.
 
