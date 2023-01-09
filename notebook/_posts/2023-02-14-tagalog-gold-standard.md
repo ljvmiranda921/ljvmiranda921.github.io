@@ -64,7 +64,7 @@ outlines these approaches:
 <p>* Data: amount of gold-labeled annotations required.</p>
 {:style="text-align: left; font-size: 14px;"}
 
-**Table:** List of techniques for low-resource NLP ([Mortensen](#mortensen), [Tsvetkov, 2017](#tsvetkov2017opportunities)).
+**Table 1:** List of techniques for low-resource NLP ([Mortensen](#mortensen), [Tsvetkov, 2017](#tsvetkov2017opportunities)).
 {:style="text-align: center;"}
 
 
@@ -203,7 +203,7 @@ The table below shows some dataset statistics:
 | Development Set |  782      |  25007 |  793 |  392 |  409 |
 | Test Set        |  782      |  25153 | 818  |  423 |  438 |
 
-**Table:** Dataset statistics for v1.0 of `tl_tlunified_cold` 
+**Table 2:** Dataset statistics for v1.0 of `tl_tlunified_cold` 
 {:style="text-align: center;"}
 
 ### ...then tested it with baseline NER approaches
@@ -224,9 +224,9 @@ First, I want to benchmark several word vector settings for NER. The baseline
 approach simply trains a model from the training and dev data, nothing more.
 Then, I will examine if adding word vectors (also called [*static
 vectors*](https://spacy.io/usage/embeddings-transformers#static-vectors) in
-spaCy) can improve performance. Finally, I will investigate the effect of
+spaCy) can improve performance. Finally, I will investigate if 
 [*pretraining*](https://spacy.io/usage/embeddings-transformers#pretraining)
-as an additional component of the pipeline:
+can help push pipeline performance:
 
 
 | Approach| Setup                 | Description                                                                          |
@@ -235,7 +235,7 @@ as an additional component of the pipeline:
 | Supervised learning | Baseline + fastText                     | Source fastText vectors for the downstream NER task. |
 | Supervised learning | Basline + fastText + pretraining | Pretrain spaCy's token-to-vector layer while sourcing fastText vectors.      |
 
-**Table:** Experimental setup for word vectors
+**Table 3:** Experimental setup for word vectors
 {:style="text-align: center;"}
 
 Next, I will measure the performance of a monolingual and multilingual language
@@ -248,7 +248,7 @@ the representation layer to achieve higher accuracy:
 | Few-shot learning | [roberta-tagalog](https://huggingface.co/jcblaise/roberta-tagalog-large) | Monolingual experiment with a large RoBERTa model trained from TLUnified. I will be testing both `base` and `large` variants. |
 | Few-shot learning | [xlm-roberta](https://huggingface.co/xlm-roberta-large)      | Multilingual experiment with a large XLM-RoBERTa. Trained on 100 different languages. I will be testing both `base` and `large` variants. |
 
-**Table:** Experimental setup for language models
+**Table 4:** Experimental setup for language models
 {:style="text-align: center;"}
 
 Again, I want to use what I learned from these experiments to set up a training
@@ -264,11 +264,15 @@ model-based training setup. If you're interested in replicating my results,
 check out the [spaCy project in
 Github!](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus)
 Lastly, because we're doing a bit of hyperparameter tuning here (choosing the
-right config, etc.), all results will be evaluated on the development set.
+right config, etc.), I will report the results as evaluated on the dev set to
+avoid overfitting.
 
 > The results below aim to answer eventual design decisions for building
 > NLP pipelines for Tagalog. I plan to create a word vector-based and language model-based 
 > training setup.
+
+I ran each experiment for three trials, while reporting the mean and its
+standard deviation.
 
 ### Finding the best word vector training setup
 
@@ -281,7 +285,7 @@ are still design choices left to be made:
 - **On static vectors:** by default, I'm using the vectors available from the
 [fastText website](https://fasttext.cc/docs/en/crawl-vectors.html). These were trained
 from CommonCrawl and Wikipedia. *Questions:* *will it matter if I train my own fastText vectors from
-TLUnified? How much efficiency gain can I get when using [floret vectors](https://github.com/explosion/floret)?*
+TLUnified? How much efficiency gain can I get if I used [floret vectors](https://github.com/explosion/floret)?*
 
 - **On pretraining:** by default, my [pretraining
 objective](https://spacy.io/api/architectures#pretrain) is based on
@@ -291,9 +295,9 @@ words. However, spaCy also provides another [pretraining objective based on a
 static embeddings table](https://spacy.io/api/architectures#pretrain_vectors).
 *Question: which one is more performant between the two?*
 
-#### Sourcing static vectors with pretraining can improve performance 
-
-
+The figure below shows the performance (using default settings) for our three
+training scenarios. In addition, Table 5 shows the relative error decrease as we
+keep adding to our baseline.
 
 | Setup               | Precision    | Recall        | F1-score       |
 |------------------------------|--------------|---------------|----------------|
@@ -304,7 +308,7 @@ static embeddings table](https://spacy.io/api/architectures#pretrain_vectors).
 <p>* 700k vectors/keys. Vectors were sourced from the fastText website.</p>
 {:style="text-align: left; font-size: 14px;"}
 
-**Table:** Evaluated on the development set.
+**Table 5:** Relative error decrease. Evaluated on the development set.
 {:style="text-align: center;"}
 
 #### On static vectors: training my own fastText vectors is worth it
