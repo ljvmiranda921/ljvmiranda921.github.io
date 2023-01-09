@@ -258,9 +258,12 @@ parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
 ## Experimental Results
 
 These results aim to answer eventual design decisions for building NLP pipelines
-for Tagalog. I plan to create a word vector-based and language model-based training
-setup. If you're interested in replicating my results, check out the [spaCy project
-in Github!](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus)
+for Tagalog. I plan to create a word vector-based and language model-based
+training setup. If you're interested in replicating my results, check out the
+[spaCy project in
+Github!](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus)
+Lastly, because we're doing a bit of hyperparameter tuning here (choosing the
+right config, etc.), all results were evaluated on the development set.
 
 ### Finding the best word vector training setup
 
@@ -268,13 +271,16 @@ in Github!](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_c
 
 | Static Vectors               | Precision    | Recall        | F1-score       |
 |------------------------------|--------------|---------------|----------------|
-| None                         | 84.85 (0.01) | 85.35 (0.01)  | 85.01 (0.01)   |
+| None                         |              |               |                |
 | None + pretraining           |              |               |                |
-| fastText*                    | 86.74 (0.01) | 86.21 (0.01)  | 86.47 (0.00)   |
+| fastText*                    |              |               |                |
 | fastText* + pretraining      |              |               |                |
 
 <p>* 700k vectors/keys. Vectors were sourced from the fastText website.</p>
 {:style="text-align: left; font-size: 14px;"}
+
+**Table:** Evaluated on the development set.
+{:style="text-align: center;"}
 
 #### Pretrain vectors than pretrain characters
 
