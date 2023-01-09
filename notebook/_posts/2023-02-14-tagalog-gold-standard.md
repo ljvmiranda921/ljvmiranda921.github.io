@@ -257,21 +257,33 @@ parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
 
 <!-- better when in altair? then use LaTeX font ok! -->
 
-| Static Vectors                             | Precision | Recall | F1-score |
-|------------------------------|-----------|--------|----------|
-| None            |           |        |          |
-| None + pretraining     |           |        |          |
-| fastText (XXX vectors)       |           |        |          |
-| fastText + pretraining |           |        |          |
+### Finding the best word vector training setup
 
-<!--
-pretrained chars. vs. pretrained vectors
--->
+#### Using static vectors with pretraining is much better
 
-<!--
-fasttext vs. fasttext (manual) vs. floret
-compare wrt vector size?
--->
+| Static Vectors               | Precision    | Recall        | F1-score       |
+|------------------------------|--------------|---------------|----------------|
+| None                         | 84.85 (0.01) | 85.35 (0.01)  | 85.01 (0.01)   |
+| None + pretraining           |              |               |                |
+| fastText*                    | 86.74 (0.01) | 86.21 (0.01)  | 86.47 (0.00)   |
+| fastText* + pretraining      |              |               |                |
+
+<p>* 700k vectors/keys. Vectors were sourced from the fastText website.</p>
+{:style="text-align: left; font-size: 14px;"}
+
+#### Pretrain vectors than pretrain characters
+
+<!--talk about pretraining and the difference between the two -->
+
+#### Training my own fastText vectors is worth it
+
+<!--training my own fasttext vectors -->
+
+#### Using floret vectors has efficiency gains
+
+
+
+### Finding the best language model training setup
 
 
 | Language Models                      | Precision | Recall | F1-score |
