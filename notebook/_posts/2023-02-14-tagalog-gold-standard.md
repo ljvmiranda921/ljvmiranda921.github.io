@@ -208,11 +208,13 @@ The table below shows some dataset statistics:
 
 ### ...then tested it with baseline NER approaches
 
-I want to see how standard NER approaches fare with `tl_tlunified_gold`. I made
-two sets of experiments, one involving word vectors and the other using language
-models or transformers. I aim to identify the best training setup for a
-low-resource corpora like Tagalog. I'm not pitting one against the other; I want
-to set up training pipelines for both in the future.
+I want to see how standard NER approaches fare with `tl_tlunified_gold`. **My
+eventual goal is to set up training pipelines that can produce decent Tagalog
+models from this dataset.** I made two sets of experiments, one involving word
+vectors and the other using language models or transformers. I aim to identify
+the best training setup for a low-resource corpora like Tagalog. I'm not pitting
+one against the other; I want to set up training pipelines for both in the
+future.
 
 > My overall goal is to identify the best training setup for a low-resource
 > corpora like Tagalog. I'm not pitting one against the other; I want to setup
@@ -255,7 +257,10 @@ parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
 
 ## Experimental Results
 
-<!-- better when in altair? then use LaTeX font ok! -->
+These results aim to answer eventual design decisions for building NLP pipelines
+for Tagalog. I plan to create a word vector-based and language model-based training
+setup. If you're interested in replicating my results, check out the [spaCy project
+in Github!](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus)
 
 ### Finding the best word vector training setup
 
