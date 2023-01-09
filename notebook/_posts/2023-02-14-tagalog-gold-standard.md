@@ -29,8 +29,8 @@ this blog post, I'll talk about the state of Tagalog-based corpora, my
 experiments in creating a gold-standard dataset for named-entity
 recognition, and my hopes for the future of Tagalog NLP. 
 
-I will focus on **named-entity recognition (NER)** because it has a lot of practical
-applications and more work still needs to be done on Tagalog NER.
+I will focus on **named-entity recognition (NER)** because it has a lot of
+practical applications and more work still needs to be done on that NLP task.
 
 
 ## <a id="corpora"></a>Tagalog NER corpora is scarce
@@ -220,26 +220,27 @@ future.
 > corpora like Tagalog. I'm not pitting one against the other; I want to setup
 > training pipelines for both in the future.
 
-First, I want to benchmark several word vector settings for NER. Then, I want to
-check if the choice of word vectors (also called [*static
+First, I want to benchmark several word vector settings for NER. The baseline
+approach simply trains a model from the training and dev data, nothing more.
+Then, I will examine if adding word vectors (also called [*static
 vectors*](https://spacy.io/usage/embeddings-transformers#static-vectors) in
-spaCy) helps improve performance. Finally, I also want to investigate the effect
-of [*pretraining*](https://spacy.io/usage/embeddings-transformers#pretraining)
-in this scenario:
+spaCy) can improve performance. Finally, I will investigate the effect of
+[*pretraining*](https://spacy.io/usage/embeddings-transformers#pretraining)
+as an additional component of the pipeline:
 
 
-| Approach| Static Vectors                 | Description                                                                          |
+| Approach| Setup                 | Description                                                                          |
 |---------|------------------------------|--------------------------------------------------------------------------------------|
-| Supervised learning | None                         | Train a NER model from scratch. No tricks, just the annotated data.                  |
-| Supervised learning | None + pretraining     | Pretrain characters using a subset of TLUnified to a finetuned "token to vector" layer. |
-| Supervised learning | fastText                     | Source fastText vectors for the downstream NER task. |
-| Supervised learning | fastText + pretraining | Pretrain using the fastText vectors as pretraining objective.                          |
+| Supervised learning | Baseline | Train a NER model from scratch. No tricks, just the annotated data.                  |
+| Supervised learning | Baseline + fastText                     | Source fastText vectors for the downstream NER task. |
+| Supervised learning | Basline + fastText + pretraining | Pretrain spaCy's token-to-vector layer while sourcing fastText vectors.      |
 
 **Table:** Experimental setup for word vectors
 {:style="text-align: center;"}
 
-Then, I will also measure the performance of a monolingual and multilingual
-language model. I'm using transformer models as a [drop-in replacement](https://spacy.io/usage/embeddings-transformers#transformers) for
+Next, I will measure the performance of a monolingual and multilingual language
+model. I'm using transformer models as a [drop-in
+replacement](https://spacy.io/usage/embeddings-transformers#transformers) for
 the representation layer to achieve higher accuracy:
 
 | Approach| Language Models       | Description                                                              |
@@ -252,29 +253,53 @@ the representation layer to achieve higher accuracy:
 
 Again, I want to use what I learned from these experiments to set up a training
 scheme for a Tagalog pipeline down the road. For all the experiments above, I
-will use a [spaCy's transition-based
+will use [spaCy's transition-based
 parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
 
 ## Experimental Results
 
-These results aim to answer eventual design decisions for building NLP pipelines
-for Tagalog. I plan to create a word vector-based and language model-based
-training setup. If you're interested in replicating my results, check out the
-[spaCy project in
+The results below aim to answer eventual design decisions for building NLP
+pipelines for Tagalog. I plan to create a word vector-based and language
+model-based training setup. If you're interested in replicating my results,
+check out the [spaCy project in
 Github!](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus)
 Lastly, because we're doing a bit of hyperparameter tuning here (choosing the
-right config, etc.), all results were evaluated on the development set.
+right config, etc.), all results will be evaluated on the development set.
+
+> The results below aim to answer eventual design decisions for building
+> NLP pipelines for Tagalog. I plan to create a word vector-based and language model-based 
+> training setup.
 
 ### Finding the best word vector training setup
 
-#### Using static vectors with pretraining is much better
+To find the best word vector training setup, I designed an experiment to test 
+how using static vectors and pretraining can improve performance. The baseline
+approach has none of these; it simply trains a model from scratch. Then, I sourced
+static vectors, and eventually a set of pretrained weights. Within these two, there
+are still design choices left to be made:
 
-| Static Vectors               | Precision    | Recall        | F1-score       |
+- **On static vectors:** by default, I'm using the vectors available from the
+[fastText website](https://fasttext.cc/docs/en/crawl-vectors.html). These were trained
+from CommonCrawl and Wikipedia. *Questions:* *will it matter if I train my own fastText vectors from
+TLUnified? How much efficiency gain can I get when using [floret vectors](https://github.com/explosion/floret)?*
+
+- **On pretraining:** by default, my [pretraining
+objective](https://spacy.io/api/architectures#pretrain) is based on
+[characters](https://spacy.io/api/architectures#pretrain_chars), i.e., the model
+is tasked to predict some number of leading and trailing UTF-8 bytes for the
+words. However, spaCy also provides another [pretraining objective based on a
+static embeddings table](https://spacy.io/api/architectures#pretrain_vectors).
+*Question: which one is more performant between the two?*
+
+#### Sourcing static vectors with pretraining can improve performance 
+
+
+
+| Setup               | Precision    | Recall        | F1-score       |
 |------------------------------|--------------|---------------|----------------|
-| None                         |              |               |                |
-| None + pretraining           |              |               |                |
-| fastText*                    |              |               |                |
-| fastText* + pretraining      |              |               |                |
+| Baseline               |              |               |                |
+| Baseline + fastText*                    |              |               |                |
+| Baseline + fastText* + pretraining      |              |               |                |
 
 <p>* 700k vectors/keys. Vectors were sourced from the fastText website.</p>
 {:style="text-align: left; font-size: 14px;"}
@@ -282,16 +307,12 @@ right config, etc.), all results were evaluated on the development set.
 **Table:** Evaluated on the development set.
 {:style="text-align: center;"}
 
-#### Pretrain vectors than pretrain characters
+#### On static vectors: training my own fastText vectors is worth it
 
-<!--talk about pretraining and the difference between the two -->
+#### On static vectors: floret vectors has efficiency gains
 
-#### Training my own fastText vectors is worth it
 
-<!--training my own fasttext vectors -->
-
-#### Using floret vectors has efficiency gains
-
+#### On pretraining: pretrain characters than pretrain vectors
 
 
 ### Finding the best language model training setup
