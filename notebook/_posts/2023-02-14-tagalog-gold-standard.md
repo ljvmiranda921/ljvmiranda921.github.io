@@ -22,6 +22,10 @@ excerpt: |
 ---
 
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+
 <span class="firstcharacter">T</span>agalog (tl) is my native language. It's
 spoken by 76 million Filipinos and has been our official language since the 30s.
 It's a **text-rich** language, but unfortunately, a **low-resource** one. In
@@ -209,15 +213,15 @@ The table below shows some dataset statistics:
 ### ...then tested it with baseline NER approaches
 
 I want to see how standard NER approaches fare with `tl_tlunified_gold`. **My
-eventual goal is to set up training pipelines that can produce decent Tagalog
+eventual goal is to set up training pipelines to produce decent Tagalog
 models from this dataset.** I made two sets of experiments, one involving word
 vectors and the other using language models or transformers. I aim to identify
-the best training setup for a low-resource corpora like Tagalog. I'm not pitting
+the best training setup for a low-resource corpus for Tagalog. I'm not pitting
 one against the other; I want to set up training pipelines for both in the
 future.
 
-> My overall goal is to identify the best training setup for a low-resource
-> corpora like Tagalog. I'm not pitting one against the other; I want to setup
+> My eventual goal is to identify the best training setup for a low-resource
+> corpus for Tagalog. I'm not pitting one against the other; I want to setup
 > training pipelines for both in the future.
 
 First, I want to benchmark several word vector settings for NER. The baseline
@@ -264,28 +268,28 @@ model-based training setup. If you're interested in replicating my results,
 check out the [spaCy project in
 Github!](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus)
 Lastly, because we're doing a bit of hyperparameter tuning here (choosing the
-right config, etc.), I will report the results as evaluated on the dev set to
+proper config, etc.), I will report the results as evaluated on the dev set to
 avoid overfitting.
 
 > The results below aim to answer eventual design decisions for building
 > NLP pipelines for Tagalog. I plan to create a word vector-based and language model-based 
 > training setup.
 
-I ran each experiment for three trials, while reporting the mean and its
-standard deviation.
+I ran each experiment for three trials while reporting the mean and standard
+deviation.
 
 ### Finding the best word vector training setup
 
 To find the best word vector training setup, I designed an experiment to test 
-how using static vectors and pretraining can improve performance. The baseline
+how static vectors and pretraining can improve performance. The baseline
 approach has none of these; it simply trains a model from scratch. Then, I sourced
-static vectors, and eventually a set of pretrained weights. Within these two, there
+static vectors and, eventually, a set of pretrained weights. Within these two, there
 are still design choices left to be made:
 
 - **On static vectors:** by default, I'm using the vectors available from the
 [fastText website](https://fasttext.cc/docs/en/crawl-vectors.html). These were trained
 from CommonCrawl and Wikipedia. *Questions:* *will it matter if I train my own fastText vectors from
-TLUnified? How much efficiency gain can I get if I used [floret vectors](https://github.com/explosion/floret)?*
+TLUnified? How much efficiency gain can I get if I use [floret vectors](https://github.com/explosion/floret)?*
 
 - **On pretraining:** by default, my [pretraining
 objective](https://spacy.io/api/architectures#pretrain) is based on
@@ -295,20 +299,21 @@ words. However, spaCy also provides another [pretraining objective based on a
 static embeddings table](https://spacy.io/api/architectures#pretrain_vectors).
 *Question: which one is more performant between the two?*
 
-The figure below shows the performance (using default settings) for our three
-training scenarios. In addition, Table 5 shows the relative error decrease as we
-keep adding to our baseline.
+The table below shows the performance, using default settings, for our three
+training scenarios. The results suggest that using a **combination of static
+vectors and pretraining** can improve F1-score by at least 2pp.
+
 
 | Setup               | Precision    | Recall        | F1-score       |
 |------------------------------|--------------|---------------|----------------|
-| Baseline               |              |               |                |
-| Baseline + fastText*                    |              |               |                |
-| Baseline + fastText* + pretraining      |              |               |                |
+| Baseline               |    0.87 (0.01)          |  0.87 (0.01)             |  0.87 (0.00)              |
+| Baseline + fastText*   |     0.89 (0.01)            |   0.86 (0.01)           |         0.88 (0.00)                |
+| Baseline + fastText* + pretraining      |     **0.89 (0.01)**         |  **0.89 (0.01)**            |   **0.89 (0.00)**             |
 
 <p>* 700k vectors/keys. Vectors were sourced from the fastText website.</p>
 {:style="text-align: left; font-size: 14px;"}
 
-**Table 5:** Relative error decrease. Evaluated on the development set.
+**Table 5:** Pipeline performance. Evaluated on the development set.
 {:style="text-align: center;"}
 
 #### On static vectors: training my own fastText vectors is worth it
