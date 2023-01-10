@@ -249,7 +249,7 @@ Then, we will use word vectors as additional features for training our
 statistical model (*Baseline + fastText*). Lastly, we will use pretraining to
 initialize the weights of our components (*Baseline + fastText + pretraining*). 
 
-![](/assets/png/tagalog-gold-standard/word_vector_design.png){:width="650px"}  
+![](/assets/png/tagalog-gold-standard/word_vector_design.png){:width="550px"}  
 {:style="text-align: center;"}
 
 Next, I will measure the performance of a monolingual and multilingual language
@@ -285,8 +285,8 @@ avoid overfitting.
 > NLP pipelines for Tagalog. I plan to create a word vector-based and language model-based 
 > training setup.
 
-I ran each experiment for three trials while reporting the mean and standard
-deviation.
+I ran each experiment for three trials, and I will report their mean and
+standard deviation.
 
 ### Finding the best word vector training setup
 
