@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Towards building a gold-standard NER corpus for Tagalog"
+title: "Towards building a Tagalog NER pipeline"
 date: 2023-02-14
 category: notebook
 comments: true
@@ -36,6 +36,15 @@ recognition, and my hopes for the future of Tagalog NLP.
 I will focus on **named-entity recognition (NER)** because it has a lot of
 practical applications and more work still needs to be done on that NLP task.
 
+**Contents**
+- [**Background**](#corpora): *Tagalog NER data is scarce. We can circumvent the data scarcity
+    problem by bootstrapping the data we have.*
+- [**Methods**](#gold): *We still want gold-annotated data. I corrected annotations from a
+    silver model then benchmarked it with baseline NER approaches.*
+- [**Experimental results**](#experimental-results)
+    - [Finding the best word vector training setup](#finding-the-best-word-vector-training-setup)
+    - [Finding the best language model training setup](#finding-the-best-language-model-training-setup)
+- [**Conclusion**](#conclusion)
 
 ## <a id="corpora"></a>Tagalog NER data is scarce
 
@@ -210,7 +219,7 @@ The table below shows some dataset statistics:
 **Table 2:** Dataset statistics for v1.0 of `tl_tlunified_cold` 
 {:style="text-align: center;"}
 
-### ...then tested it with baseline NER approaches
+### ...then benchmarked it with baseline NER approaches
 
 I want to see how standard NER approaches fare with `tl_tlunified_gold`. **My
 eventual goal is to set up training pipelines to produce decent Tagalog
@@ -310,8 +319,8 @@ static embeddings table](https://spacy.io/api/architectures#pretrain_vectors).
 *Question: which one is more performant between the two?*
 
 The table below shows the performance, using default settings, for our three
-training scenarios. The results suggest that using a **combination of static
-vectors and pretraining** can improve F1-score by at least 2pp.
+training scenarios. The results suggest **that using a combination of static
+vectors and pretraining can improve F1-score** by at least 2pp.
 
 
 | Setup               | Precision    | Recall        | F1-score       |
@@ -327,6 +336,15 @@ vectors and pretraining** can improve F1-score by at least 2pp.
 {:style="text-align: center;"}
 
 #### On static vectors: training my own fastText vectors is worth it
+
+In the previous experiment, I used the fastText vectors provided by the
+[fastText website](https://fasttext.cc/docs/en/crawl-vectors.html). These
+vectors were trained from CommonCrawl and Wikipedia.  I'm curious if there's
+performance gain if I trained my own fastText vectors from TLUnified.
+
+
+
+
 
 #### On static vectors: floret vectors has efficiency gains
 
