@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Towards building a Tagalog NER pipeline"
+title: "A Tagalog NER pipeline in spaCy"
 date: 2023-02-27
 category: notebook
 comments: true
@@ -26,21 +26,26 @@ excerpt: |
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
 
-<span class="firstcharacter">T</span>agalog (tl) is my native language. It's
-spoken by 76 million Filipinos and has been our official language since the 30s.
-It's a **text-rich** language, but unfortunately, a **low-resource** one. In
-this blog post, I'll talk about the state of Tagalog-based corpora, my
-experiments in creating a gold-standard dataset for named-entity
-recognition, and my hopes for the future of Tagalog NLP. 
+<span class="firstcharacter">T</span>agalog is my native language. It's
+spoken by 76 million Filipinos and has been the country's official language
+since the 30s.  It's a **text-rich** language, but unfortunately, a
+**low-resource** one. Building NLP pipelines that work on Tagalog is difficult.
 
-I will focus on **named-entity recognition (NER)** because it has a lot of
-practical applications and more work still needs to be done on that NLP task.
+In this blog post, I'll talk about my experience in building a named-entity
+recognition (NER) pipeline in Tagalog. I'll discuss how I came up with a
+gold-standard dataset (and its limitations), my benchmarking results, and my
+hopes for the future of Tagalog NLP.
 
-**Contents**
-- [**Background**](#corpora): *Tagalog NER data is scarce. We can circumvent the data scarcity
-    problem by bootstrapping the data we have.*
-- [**Methods**](#gold): *We still want gold-annotated data. I corrected annotations from a
-    silver model then benchmarked it with baseline NER approaches.*
+> I don't recommend using this pipeline for production purposes yet. See [caveats](#caveats). 
+
+#### Contents
+
+- [**Background**](#corpora): Tagalog NER data is scarce 
+    - [We can circumvent the data scarcity problem...](#we-can-circumvent-the-data-scarcity-problem)
+    - [...by bootstrapping the data we have.](#by-bootstrapping-the-data-we-have)
+- [**Methods**](#gold): We still want gold-annotated data 
+    - [I corrected annotations from a silver model...](#i-corrected-annotations-from-a-silver-model)
+    - [...then benchmarked it with baseline NER approaches.](#then-benchmarked-it-with-baseline-ner-approaches)
 - [**Experimental results**](#experimental-results)
     - [Finding the best word vector training setup](#finding-the-best-word-vector-training-setup)
     - [Finding the best language model training setup](#finding-the-best-language-model-training-setup)
@@ -182,7 +187,7 @@ data source, `gold` - dataset type).
 
 ### I corrected annotations from a silver model...
 
-For the past six months, I corrected annotations produced by the WikiANN model.
+For the past three months, I corrected annotations produced by the WikiANN model.
 I learned that as an annotator, it's easier to fix annotations than label them
 from scratch. To make the annotation process more objective, I devised
 [annotation guidelines](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus/guidelines) ([Artstein, 2017](#artstein2017inter)). Professor Nils
@@ -369,11 +374,9 @@ performance gain if I trained my own fastText vectors from TLUnified.
 ### Helping out
 
 
-### Postscript: reflections while annotating
 
 
-
-## FAQs
+## Caveats
 
 - **Is this supposed to be a new Tagalog benchmark?**
 
