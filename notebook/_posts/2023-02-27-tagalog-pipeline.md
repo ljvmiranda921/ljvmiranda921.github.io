@@ -28,12 +28,12 @@ excerpt: |
 <span class="firstcharacter">T</span>agalog is my native language. It's
 spoken by 76 million Filipinos and has been the country's official language
 since the 30s.  It's a **text-rich** language, but unfortunately, a
-**low-resource** one. Building NLP pipelines that work on Tagalog is difficult.
+**low-resource** one. Hence, building NLP pipelines for Tagalog is difficult.
 
 In this blog post, I'll outline my process in building a named-entity
-recognition (NER) pipeline in Tagalog. I'll discuss how I came up with a
-gold-standard dataset (and its limitations), my benchmarking results, and my
-hopes for the future of Tagalog NLP.
+recognition (NER) pipeline for Tagalog. I'll discuss how I came up with a
+gold-standard dataset, my benchmarking results, and my hopes for the future of
+Tagalog NLP.
 
 > I don't recommend using this pipeline for production purposes yet. See [caveats](#caveats). 
 
