@@ -37,7 +37,7 @@ I will focus on **named-entity recognition (NER)** because it has a lot of
 practical applications and more work still needs to be done on that NLP task.
 
 
-## <a id="corpora"></a>Tagalog NER corpora is scarce
+## <a id="corpora"></a>Tagalog NER data is scarce
 
 Even if Tagalog is text-rich, the amount of annotated data is scarce. We
 usually label these types of languages as **low-resource**. This problem isn't
@@ -240,6 +240,16 @@ can help push pipeline performance:
 | Supervised learning | Basline + fastText + pretraining | Pretrain spaCy's token-to-vector layer while sourcing fastText vectors.      |
 
 **Table 3:** Experimental setup for word vectors
+{:style="text-align: center;"}
+
+
+The figure below shows the default setup for our word vector pipeline. The
+baseline approach won't have any word vectors nor pretraining (*Baseline*).
+Then, we will use word vectors as additional features for training our
+statistical model (*Baseline + fastText*). Lastly, we will use pretraining to
+initialize the weights of our components (*Baseline + fastText + pretraining*). 
+
+![](/assets/png/tagalog-gold-standard/word_vector_design.png){:width="650px"}  
 {:style="text-align: center;"}
 
 Next, I will measure the performance of a monolingual and multilingual language
