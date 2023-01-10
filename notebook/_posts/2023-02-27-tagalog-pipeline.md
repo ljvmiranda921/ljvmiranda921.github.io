@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "A Tagalog NER pipeline in spaCy"
+title: "Towards a Tagalog NLP pipeline"
 date: 2023-02-27
 category: notebook
 comments: true
@@ -9,16 +9,15 @@ author: "LJ MIRANDA"
 published: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
 description: |
-    The lack of Tagalog gold-standard named-entity recognition (NER) data
-    inhibits us from training decent structured prediction pipelines for the
-    language. In this blog post, I'll talk about the state of Tagalog-based
-    corpora, my progress on building a gold-standard dataset (and its
-    limitations), and my hopes for the future of Tagalog NLP.
+    Building NLP pipelines that work on Tagalog is hard. It's because 
+    we lack annotated corpora and concentrated efforts to train models. 
+    In this blog post, I'll report my progress on building a Tagalog NER pipeline and my hopes
+    for the future of Tagalog NLP.
 excerpt: |
-    The lack of Tagalog gold-standard NER data inhibits us from training decent
-    structured prediction pipelines for the language. In this blog post, I'll talk
-    about the state of Tagalog-based corpora, my progress on building a
-    gold-standard dataset (and its limitations), and my hopes for the future of Tagalog NLP.
+    Building NLP pipelines that work on Tagalog is hard. It's because 
+    we lack annotated corpora and concentrated efforts to train models. 
+    In this blog post, I'll report my progress on building a Tagalog NER pipeline and my hopes
+    for the future of Tagalog NLP.
 ---
 
 
@@ -31,7 +30,7 @@ spoken by 76 million Filipinos and has been the country's official language
 since the 30s.  It's a **text-rich** language, but unfortunately, a
 **low-resource** one. Building NLP pipelines that work on Tagalog is difficult.
 
-In this blog post, I'll talk about my experience in building a named-entity
+In this blog post, I'll outline my process in building a named-entity
 recognition (NER) pipeline in Tagalog. I'll discuss how I came up with a
 gold-standard dataset (and its limitations), my benchmarking results, and my
 hopes for the future of Tagalog NLP.
