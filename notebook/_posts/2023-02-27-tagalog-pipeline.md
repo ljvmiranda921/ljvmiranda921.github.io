@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Towards building a Tagalog NER pipeline"
-date: 2023-02-14
+date: 2023-02-27
 category: notebook
 comments: true
 author: "LJ MIRANDA"
