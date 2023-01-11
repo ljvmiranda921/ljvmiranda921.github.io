@@ -367,7 +367,7 @@ of its marginal effect on performance. In addition, a mere 200k drop in the
 vector table size doesn't warrant this additional step. However, floret produced
 a more compact vector table, i.e., less than half of the original (700k &#8594;
 200k). Interestingly, this efficiency gain has no performance penalty. So let's
-see what happens if I train floret with a bucket size of 100k and 50k: 
+see what happens if I train floret with bucket sizes of 100k, 50k, and 20k: 
 
 
 #### On pretraining: pretrain characters than pretrain vectors
