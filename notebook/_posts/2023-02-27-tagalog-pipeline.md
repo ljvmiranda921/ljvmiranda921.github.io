@@ -216,9 +216,9 @@ The table below shows some dataset statistics:
 
 | Tagalog Data    | Documents | Tokens | PER  | ORG  | LOC  |
 |-----------------|-----------|--------|------|------|------|
-| Training Set    | 6252      | 198588 | 6418 | 3121 | 3296 |
-| Development Set |  782      |  25007 |  793 |  392 |  409 |
-| Test Set        |  782      |  25153 | 818  |  423 |  438 |
+| Training Set    | $$6252$$      | $$198588$$ | $$6418$$ | $$3121$$ | $$3296$$ |
+| Development Set | $$782$$      |  $$25007$$ |  $$793$$ |  $$392$$ |  $$409$$ |
+| Test Set        | $$782$$      |  $$25153$$ |  $$818$$  | $$423$$ |  $$438$$ |
 
 **Table 2:** Dataset statistics for v1.0 of `tl_tlunified_cold` 
 {:style="text-align: center;"}
@@ -311,8 +311,8 @@ are still design choices left to be made:
 
 - **On static vectors:** by default, I'm using the vectors available from the
 [fastText website](https://fasttext.cc/docs/en/crawl-vectors.html). These were trained
-from CommonCrawl and Wikipedia. I'd like to know if (1) it matters if I train my own 
-fastText vectors from TLUnified and if (2) there are efficiency gains when using [floret vectors](https://github.com/explosion/floret).
+from CommonCrawl and Wikipedia. I'd like to know if it matters if I train my own 
+fastText vectors from TLUnified and if there are efficiency gains when using [floret vectors](https://github.com/explosion/floret).
 
 - **On pretraining:** by default, my [pretraining
 objective](https://spacy.io/api/architectures#pretrain) is based on
@@ -329,9 +329,9 @@ vectors and pretraining can improve F1-score** by at least 2pp.
 
 | Setup               | Precision    | Recall        | F1-score       |
 |------------------------------|--------------|---------------|----------------|
-| Baseline               |    0.87 (0.01)          |  0.87 (0.01)             |  0.87 (0.00)              |
-| Baseline + fastText*   |     0.89 (0.01)            |   0.86 (0.01)           |         0.88 (0.00)                |
-| Baseline + fastText* + pretraining      |     **0.89 (0.01)**         |  **0.89 (0.01)**            |   **0.89 (0.00)**             |
+| Baseline               |    $$0.87\pm0.01$$          |  $$0.87\pm0.01$$             |  $$0.87\pm0.00$$              |
+| Baseline + fastText*   |     $$0.89\pm0.01$$            |   $$0.86\pm0.01$$           |   $$0.88\pm0.00$$                |
+| Baseline + fastText* + pretraining      |     $$\mathbf{0.89\pm0.01}$$         |  $$\mathbf{0.89\pm0.01}$$            |   $$\mathbf{0.89\pm0.00}$$             |
 
 <p>* 700k vectors/keys. Vectors were sourced from the fastText website.</p>
 {:style="text-align: left; font-size: 14px;"}
@@ -339,18 +339,35 @@ vectors and pretraining can improve F1-score** by at least 2pp.
 **Table 5:** Pipeline performance. Evaluated on the development set.
 {:style="text-align: center;"}
 
-#### On static vectors: training my own fastText vectors is worth it
+#### On static vectors: training my own vectors isn't worth it unless they're floret
 
 In the previous experiment, I used the fastText vectors provided by the
 [fastText website](https://fasttext.cc/docs/en/crawl-vectors.html). These
-vectors were trained from CommonCrawl and Wikipedia.  I'm curious if there's
-performance gain if I trained my own fastText vectors from TLUnified.
+vectors were trained from CommonCrawl and Wikipedia. I'm curious if I can
+achieve better performance if I train my own vectors.
 
+I trained two sets of word vectors from TLUnified, one based on fastText and the
+other on floret. Both vectors were trained using the [skipgram
+method](https://fasttext.cc/docs/en/unsupervised-tutorial.html#advanced-readers-skipgram-versus-cbow), with a dimension of $$200$$, and a subword
+minimum size (`minn`) and maximum size (`maxn`) of $$3$$ and $$5$$ respectively.
 
+The results can be seen in the table below:
 
+| Word Vectors         | Table Size | Precision       | Recall          | F1-score        |
+|----------------------|------------|-----------------|-----------------|-----------------|
+| fastText (default)   | $$700k$$       | $$\mathbf{0.89\pm0.01}$$ | $$0.86\pm0.01$$     | $$\mathbf{0.88\pm0.00}$$ |
+| fastText (TLUnified) | $$500k$$       | $$0.89\pm0.01$$     | $$\mathbf{0.88\pm0.00}$$ | $$0.88\pm0.01$$     |
+| floret (TLUnified)   | $$\mathbf{200k}$$   | $$0.88\pm0.01$$     | $$0.88\pm0.01$$     | $$0.88\pm0.00$$     |
 
+**Table 6:** Comparing word vectors. Evaluated on the development set.
+{:style="text-align: center;"}
 
-#### On static vectors: floret vectors has efficiency gains
+The results suggest that training my own fastText vectors isn't worth it because
+of its marginal effect on performance. In addition, a mere 200k drop in the
+vector table size doesn't warrant this additional step. However, floret produced
+a more compact vector table, i.e., less than half of the original (700k &#8594;
+200k). Interestingly, this efficiency gain has no performance penalty. So let's
+see what happens if I train floret with a bucket size of 100k and 50k: 
 
 
 #### On pretraining: pretrain characters than pretrain vectors
