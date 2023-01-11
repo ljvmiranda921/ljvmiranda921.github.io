@@ -67,7 +67,7 @@ by bootstrapping the data we have.
 Many clever ways in language tech allow researchers to circumvent the data
 scarcity problem. They usually involve taking advantage of a high-resource
 language and transferring its capacity to a low-resource one. The table below
-outlines these approaches:
+outlines them:
 
 
 | Approach                        | Data*  | Prerequisites                                                                                                | Description                                                                               |
@@ -86,7 +86,7 @@ outlines these approaches:
 
 
 I will focus on **supervised** and **few-shot learning** in this blog post.
-Because most of these approaches require a substantial amount of data, we need
+Because most of these methods require a substantial amount of data, we need
 to take advantage of existing corpora. One way is to use *silver-standard data*.
 Their annotations are automatically generated, either by a statistical model
 trained from a similar language or a knowledge base. Silver-standard data may
@@ -178,7 +178,7 @@ want to help out!**](#helping-out)
 ## <a id="gold"></a>We still want gold-annotated data
 
 This section will discuss how I annotated TLUnified to produce
-gold-standard data. I'll also introduce the experiments I did to see how
+gold-standard data. I'll also introduce my benchmarking experiments to see how
 baseline models perform on this dataset. For clarity, I'll call the
 annotated TLUnified as `tl_tlunified_gold` (`tl` - language code, `tlunified` -
 data source, `gold` - dataset type).
@@ -197,7 +197,7 @@ which uses [Prodigy for quotation
 detection](https://explosion.ai/blog/guardian).
 
 However, I'm the only annotator. Hence, the annotations produced in v1.0 of
-`tl_tlunified_gold` are **not ready** for production. Therefore, using Reiter's
+`tl_tlunified_gold` are **not ready** for production. Using Reiter's
 framework, my annotations are still in the pre-pilot phase. Getting
 multiple annotations and developing an inter-annotator agreement for several
 iterations is the ideal case.
@@ -229,12 +229,12 @@ I want to see how standard NER approaches fare with `tl_tlunified_gold`. **My
 eventual goal is to set up training pipelines to produce decent Tagalog
 models from this dataset.** I made two sets of experiments, one involving word
 vectors and the other using language models or transformers. I aim to identify
-the best training setup for a low-resource corpus for Tagalog. I'm not pitting
+the best training setup for this Tagalog corpus. I'm not pitting
 one against the other; I want to set up training pipelines for both in the
 future.
 
-> My eventual goal is to identify the best training setup for a low-resource
-> corpus for Tagalog. I'm not pitting one against the other; I want to setup
+> My eventual goal is to identify the best training setup for this Tagalog corpus. 
+> I'm not pitting one against the other; I want to setup
 > training pipelines for both in the future.
 
 First, I want to benchmark several word vector settings for NER. The baseline
@@ -311,8 +311,8 @@ are still design choices left to be made:
 
 - **On static vectors:** by default, I'm using the vectors available from the
 [fastText website](https://fasttext.cc/docs/en/crawl-vectors.html). These were trained
-from CommonCrawl and Wikipedia. *Questions:* *will it matter if I train my own fastText vectors from
-TLUnified? How much efficiency gain can I get if I use [floret vectors](https://github.com/explosion/floret)?*
+from CommonCrawl and Wikipedia. I'd like to know if (1) it matters if I train my own 
+fastText vectors from TLUnified and if (2) there are efficiency gains when using [floret vectors](https://github.com/explosion/floret).
 
 - **On pretraining:** by default, my [pretraining
 objective](https://spacy.io/api/architectures#pretrain) is based on
@@ -320,7 +320,7 @@ objective](https://spacy.io/api/architectures#pretrain) is based on
 is tasked to predict some number of leading and trailing UTF-8 bytes for the
 words. However, spaCy also provides another [pretraining objective based on a
 static embeddings table](https://spacy.io/api/architectures#pretrain_vectors).
-*Question: which one is more performant between the two?*
+I'd like to know which one is more performant between the two.
 
 The table below shows the performance, using default settings, for our three
 training scenarios. The results suggest **that using a combination of static
