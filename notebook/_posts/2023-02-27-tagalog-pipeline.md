@@ -366,9 +366,20 @@ The results suggest that training my own fastText vectors isn't worth it because
 of its marginal effect on performance. In addition, a mere 200k drop in the
 vector table size doesn't warrant this additional step. However, floret produced
 a more compact vector table, i.e., less than half of the original (700k &#8594;
-200k). Interestingly, this efficiency gain has no performance penalty. So let's
-see what happens if I train floret with bucket sizes of 100k, 50k, and 20k: 
+200k). Interestingly, this **efficiency gain has no performance penalty.** So let's
+see what happens if I train floret with bucket sizes of 100k, 50k, and 25k: 
 
+| Bucket Size     | Precision                | Recall                   | F1-score                 |
+|-----------------|--------------------------|--------------------------|--------------------------|
+| $$200k$$        | $$\mathbf{0.88\pm0.01}$$ | $$\mathbf{0.88\pm0.01}$$ | $$\mathbf{0.88\pm0.00}$$ |
+| $$100k$$        | $$0.88\pm0.00$$          | $$0.87\pm0.00$$          | $$0.88\pm0.01$$          |
+| $$50k$$         | $$0.86\pm0.01$$          | $$0.85\pm0.01$$          | $$0.85\pm0.00$$          |
+| $$25k$$         | $$0.82\pm0.02$$          | $$0.82\pm0.01$$          | $$0.81\pm0.00$$          |
+
+There is a slight degradation in performance when I adjusted the bucket size
+from $$200k$$ to $$25k$$. It's not as drastic from what I expected, but it's
+interesting to see the pattern. There's even a case for using $$100k$$ rows in
+floret, but for now I'll stick to $$200k$$.
 
 #### On pretraining: pretrain characters than pretrain vectors
 
