@@ -347,9 +347,11 @@ vectors were trained from CommonCrawl and Wikipedia. I'm curious if I can
 achieve better performance if I train my own vectors.
 
 I trained two sets of word vectors from TLUnified, one based on fastText and the
-other on floret. Both vectors were trained using the [skipgram
-method](https://fasttext.cc/docs/en/unsupervised-tutorial.html#advanced-readers-skipgram-versus-cbow), with a dimension of $$200$$, and a subword
-minimum size (`minn`) and maximum size (`maxn`) of $$3$$ and $$5$$ respectively.
+other on [floret](https://github.com/explosion/floret). Both vectors were
+trained using the [skipgram
+model](https://fasttext.cc/docs/en/unsupervised-tutorial.html#advanced-readers-skipgram-versus-cbow),
+with a dimension of $$200$$, and a subword minimum (`minn`) and maximum size
+(`maxn`) of $$3$$ and $$5$$ respectively.
 
 The results can be seen in the table below:
 
@@ -366,7 +368,7 @@ The results suggest that training my own fastText vectors isn't worth it because
 of its marginal effect on performance. In addition, a mere 200k drop in the
 vector table size doesn't warrant this additional step. However, floret produced
 a more compact vector table, i.e., less than half of the original (700k &#8594;
-200k). Interestingly, this **efficiency gain has no performance penalty.** So let's
+200k). Interestingly, this **efficiency gain has little performance penalty.** So let's
 see what happens if I train floret with bucket sizes of 100k, 50k, and 25k: 
 
 | Bucket Size     | Precision                | Recall                   | F1-score                 |
@@ -380,6 +382,8 @@ There is a slight degradation in performance when I adjusted the bucket size
 from $$200k$$ to $$25k$$. It's not as drastic from what I expected, but it's
 interesting to see the pattern. There's even a case for using $$100k$$ rows in
 floret, but for now I'll stick to $$200k$$.
+
+<!-- investigate some similarity stuff? -->
 
 #### On pretraining: pretrain characters than pretrain vectors
 
