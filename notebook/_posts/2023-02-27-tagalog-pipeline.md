@@ -333,7 +333,7 @@ vectors and pretraining can improve F1-score** by at least 2pp.
 | Baseline + fastText*   |     $$0.89\pm0.01$$            |   $$0.86\pm0.01$$           |   $$0.88\pm0.00$$                |
 | Baseline + fastText* + pretraining      |     $$\mathbf{0.89\pm0.01}$$         |  $$\mathbf{0.89\pm0.01}$$            |   $$\mathbf{0.89\pm0.00}$$             |
 
-<p>* 700k vectors/keys. Vectors were sourced from the fastText website.</p>
+<p>* 714k keys and unique vectors. Vectors were sourced from the fastText website.</p>
 {:style="text-align: left; font-size: 14px;"}
 
 **Table 5:** Pipeline performance. Evaluated on the development set.
@@ -355,11 +355,14 @@ with a dimension of $$200$$, and a subword minimum (`minn`) and maximum size
 
 The results can be seen in the table below:
 
-| Word Vectors         | Table Size | Precision       | Recall          | F1-score        |
+| Word Vectors         | Unique Vectors* | Precision       | Recall          | F1-score        |
 |----------------------|------------|-----------------|-----------------|-----------------|
-| fastText (default)   | $$700k$$       | $$\mathbf{0.89\pm0.01}$$ | $$0.86\pm0.01$$     | $$\mathbf{0.88\pm0.00}$$ |
-| fastText (TLUnified) | $$500k$$       | $$0.89\pm0.01$$     | $$\mathbf{0.88\pm0.00}$$ | $$0.88\pm0.01$$     |
+| fastText (default)   | $$714k$$       | $$\mathbf{0.89\pm0.01}$$ | $$0.86\pm0.01$$     | $$\mathbf{0.88\pm0.00}$$ |
+| fastText (TLUnified) | $$566k$$       | $$0.89\pm0.01$$     | $$\mathbf{0.88\pm0.00}$$ | $$0.88\pm0.01$$     |
 | floret (TLUnified)   | $$\mathbf{200k}$$   | $$0.88\pm0.01$$     | $$0.88\pm0.01$$     | $$0.88\pm0.00$$     |
+
+<p>* This time, we're talking about unique vectors, not keys. <a href="https://spacy.io/api/vectors#n_keys">Several keys can map to the same vectors</a>, and floret doesn't use the keys table.</p>
+{:style="text-align: left; font-size: 14px;"}
 
 **Table 6:** Comparing word vectors. Evaluated on the development set.
 {:style="text-align: center;"}
@@ -371,7 +374,7 @@ a more compact vector table, i.e., less than half of the original (700k &#8594;
 200k). Interestingly, this **efficiency gain has little performance penalty.** So let's
 see what happens if I train floret with bucket sizes of 100k, 50k, and 25k: 
 
-| Bucket Size     | Precision                | Recall                   | F1-score                 |
+| Unique Vectors  | Precision                | Recall                   | F1-score                 |
 |-----------------|--------------------------|--------------------------|--------------------------|
 | $$200k$$        | $$\mathbf{0.88\pm0.01}$$ | $$\mathbf{0.88\pm0.01}$$ | $$\mathbf{0.88\pm0.00}$$ |
 | $$100k$$        | $$0.88\pm0.00$$          | $$0.87\pm0.00$$          | $$0.88\pm0.01$$          |
@@ -382,8 +385,6 @@ There is a slight degradation in performance when I adjusted the bucket size
 from $$200k$$ to $$25k$$. It's not as drastic from what I expected, but it's
 interesting to see the pattern. There's even a case for using $$100k$$ rows in
 floret, but for now I'll stick to $$200k$$.
-
-<!-- investigate some similarity stuff? -->
 
 #### On pretraining: pretrain characters than pretrain vectors
 
