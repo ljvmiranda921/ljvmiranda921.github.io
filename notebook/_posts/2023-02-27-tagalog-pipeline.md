@@ -365,17 +365,24 @@ with a dimension of $$200$$, and a subword minimum (`minn`) and maximum size
 **Table 6:** Even with a smaller vector table size, floret is competitive with the default fastText vectors. Evaluated on the development set.
 {:style="text-align: center;"}
 
-I also compared the cosine similarity of subword pairs between related and
+We can also inspect the cosine similarity of subword pairs between related and
 unrelated terms. Here I'm using the vectors from fastText and floret, both trained
 with TLUnified:
+
+
+![](/assets/png/tagalog-gold-standard/demo_1.svg){:width="650px"}  
+{:style="text-align: center;"}
+
+![](/assets/png/tagalog-gold-standard/demo_2.svg){:width="650px"}  
+{:style="text-align: center;"}
 
 
 The results suggest that the floret vectors were able to keep the correlation
 between subtokens intact despite its smaller size ($$700k$$ &#8594; $$200k$$).
 Perhaps training my own fastText vectors isn't worth it, but exploring floret
-is. In addition, this **efficiency gain has little to no performance penalty.**
-So let's see what happens if I train floret with bucket sizes of 100k, 50k, and
-25k: 
+is. In addition, this **efficiency gain has little to no performance penalty**
+as seen in Table 6. So let's see what happens if I train floret with bucket
+sizes of 100k, 50k, and 25k: 
 
 | Unique Vectors  | Precision                | Recall                   | F1-score                 |
 |-----------------|--------------------------|--------------------------|--------------------------|
