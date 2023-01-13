@@ -426,12 +426,12 @@ use `PretrainCharacters` for the final pipeline.
 ### Finding the best language model training setup
 
 
-| Language Models                      | Precision | Recall | F1-score |
+| Language Models       | Precision | Recall | F1-score |
 |-----------------------|-----------|--------|----------|
 | roberta-tagalog-base  |           |        |          |
 | xlm-roberta-base      |           |        |          |
 | roberta-tagalog-large |           |        |          |
-| roberta-tagalog-base  |           |        |          |
+| xlm-roberta-large     |           |        |          |
 
 
 ## Conclusion
