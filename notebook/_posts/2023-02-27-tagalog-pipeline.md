@@ -403,6 +403,7 @@ floret, but for now I'll stick to $$200k$$.
 
 #### On pretraining: pretrain characters than pretrain vectors
 
+spaCy provides two ways to pretrain the token-to-vector weights from raw data: 
 
 ### Finding the best language model training setup
 
