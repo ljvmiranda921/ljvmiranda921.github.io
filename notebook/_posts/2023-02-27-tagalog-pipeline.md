@@ -351,28 +351,31 @@ other on [floret](https://github.com/explosion/floret). Both vectors were
 trained using the [skipgram
 model](https://fasttext.cc/docs/en/unsupervised-tutorial.html#advanced-readers-skipgram-versus-cbow),
 with a dimension of $$200$$, and a subword minimum (`minn`) and maximum size
-(`maxn`) of $$3$$ and $$5$$ respectively.
-
-The results can be seen in the table below:
+(`maxn`) of $$3$$ and $$5$$ respectively. The results can be seen in the table below:
 
 | Word Vectors         | Unique Vectors* | Precision       | Recall          | F1-score        |
 |----------------------|------------|-----------------|-----------------|-----------------|
-| fastText (default)   | $$714k$$       | $$\mathbf{0.89\pm0.01}$$ | $$0.86\pm0.01$$     | $$\mathbf{0.88\pm0.00}$$ |
+| fastText (default: CommonCrawl + Wikipedia)   | $$714k$$       | $$\mathbf{0.89\pm0.01}$$ | $$0.86\pm0.01$$     | $$\mathbf{0.88\pm0.00}$$ |
 | fastText (TLUnified) | $$566k$$       | $$0.89\pm0.01$$     | $$\mathbf{0.88\pm0.00}$$ | $$0.88\pm0.01$$     |
 | floret (TLUnified)   | $$\mathbf{200k}$$   | $$0.88\pm0.01$$     | $$0.88\pm0.01$$     | $$0.88\pm0.00$$     |
 
 <p>* This time, we're talking about unique vectors, not keys. <a href="https://spacy.io/api/vectors#n_keys">Several keys can map to the same vectors</a>, and floret doesn't use the keys table.</p>
 {:style="text-align: left; font-size: 14px;"}
 
-**Table 6:** Comparing word vectors. Evaluated on the development set.
+**Table 6:** Even with a smaller vector table size, floret is competitive with the default fastText vectors. Evaluated on the development set.
 {:style="text-align: center;"}
 
-The results suggest that training my own fastText vectors isn't worth it because
-of its marginal effect on performance. In addition, a mere 200k drop in the
-vector table size doesn't warrant this additional step. However, floret produced
-a more compact vector table, i.e., less than half of the original (700k &#8594;
-200k). Interestingly, this **efficiency gain has little performance penalty.** So let's
-see what happens if I train floret with bucket sizes of 100k, 50k, and 25k: 
+I also compared the cosine similarity of subword pairs between related and
+unrelated terms. Here I'm using the vectors from fastText and floret, both trained
+with TLUnified:
+
+
+The results suggest that the floret vectors were able to keep the correlation
+between subtokens intact despite its smaller size ($$700k$$ &#8594; $$200k$$).
+Perhaps training my own fastText vectors isn't worth it, but exploring floret
+is. In addition, this **efficiency gain has little to no performance penalty.**
+So let's see what happens if I train floret with bucket sizes of 100k, 50k, and
+25k: 
 
 | Unique Vectors  | Precision                | Recall                   | F1-score                 |
 |-----------------|--------------------------|--------------------------|--------------------------|
