@@ -391,6 +391,11 @@ sizes of 100k, 50k, and 25k:
 | $$50k$$         | $$0.86\pm0.01$$          | $$0.85\pm0.01$$          | $$0.85\pm0.00$$          |
 | $$25k$$         | $$0.82\pm0.02$$          | $$0.82\pm0.01$$          | $$0.81\pm0.00$$          |
 
+
+**Table 6:** `floret` vector performance on different vector table sizes. All
+*vectors were trained using TLUnified. Evaluated on the development set.
+{:style="text-align: center;"}
+
 There is a slight degradation in performance when I adjusted the bucket size
 from $$200k$$ to $$25k$$. It's not as drastic from what I expected, but it's
 interesting to see the pattern. There's even a case for using $$100k$$ rows in
