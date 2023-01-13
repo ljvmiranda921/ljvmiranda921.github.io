@@ -246,11 +246,11 @@ spaCy) can improve performance. Finally, I will investigate if
 can help push pipeline performance:
 
 
-| Approach| Setup                 | Description                                                                          |
-|---------|------------------------------|--------------------------------------------------------------------------------------|
-| Supervised learning | Baseline | Train a NER model from scratch. No tricks, just the annotated data.                  |
-| Supervised learning | Baseline + fastText                     | Source fastText vectors for the downstream NER task. |
-| Supervised learning | Basline + fastText + pretraining | Pretrain spaCy's token-to-vector layer while sourcing fastText vectors.      |
+| Approach            | Setup                            | Description                                                              |
+|---------------------|----------------------------------|--------------------------------------------------------------------------|
+| Supervised learning | Baseline                         | Train a NER model from scratch. No tricks, just the annotated data.      |
+| Supervised learning | Baseline + fastText              | Source fastText vectors for the downstream NER task.                     |
+| Supervised learning | Basline + fastText + pretraining | Pretrain spaCy's token-to-vector layer while sourcing fastText vectors.  |
 
 **Table 3:** Experimental setup for word vectors
 {:style="text-align: center;"}
@@ -327,11 +327,11 @@ training scenarios. The results suggest **that using a combination of static
 vectors and pretraining can improve F1-score** by at least 2pp.
 
 
-| Setup               | Precision    | Recall        | F1-score       |
-|------------------------------|--------------|---------------|----------------|
-| Baseline               |    $$0.87\pm0.01$$          |  $$0.87\pm0.01$$             |  $$0.87\pm0.00$$              |
-| Baseline + fastText*   |     $$0.89\pm0.01$$            |   $$0.86\pm0.01$$           |   $$0.88\pm0.00$$                |
-| Baseline + fastText* + pretraining      |     $$\mathbf{0.89\pm0.01}$$         |  $$\mathbf{0.89\pm0.01}$$            |   $$\mathbf{0.89\pm0.00}$$             |
+| Setup                                   | Precision                | Recall                    | F1-score                   |
+|-----------------------------------------|--------------------------|---------------------------|----------------------------|
+| Baseline                                | $$0.87\pm0.01$$          |  $$0.87\pm0.01$$          |  $$0.87\pm0.00$$           |
+| Baseline + fastText*                    | $$0.89\pm0.01$$          |  $$0.86\pm0.01$$          |  $$0.88\pm0.00$$           |
+| Baseline + fastText* + pretraining      | $$\mathbf{0.89\pm0.01}$$ |  $$\mathbf{0.89\pm0.01}$$ |  $$\mathbf{0.89\pm0.00}$$  |
 
 <p>* 714k keys and unique vectors. Vectors were sourced from the fastText website.</p>
 {:style="text-align: left; font-size: 14px;"}
@@ -353,11 +353,11 @@ model](https://fasttext.cc/docs/en/unsupervised-tutorial.html#advanced-readers-s
 with a dimension of $$200$$, and a subword minimum (`minn`) and maximum size
 (`maxn`) of $$3$$ and $$5$$ respectively. The results can be seen in the table below:
 
-| Word Vectors         | Unique Vectors* | Precision       | Recall          | F1-score        |
-|----------------------|------------|-----------------|-----------------|-----------------|
-| fastText (default: CommonCrawl + Wikipedia)   | $$714k$$       | $$\mathbf{0.89\pm0.01}$$ | $$0.86\pm0.01$$     | $$\mathbf{0.88\pm0.00}$$ |
-| fastText (TLUnified) | $$566k$$       | $$0.89\pm0.01$$     | $$\mathbf{0.88\pm0.00}$$ | $$0.88\pm0.01$$     |
-| floret (TLUnified)   | $$\mathbf{200k}$$   | $$0.88\pm0.01$$     | $$0.88\pm0.01$$     | $$0.88\pm0.00$$     |
+| Word Vectors                                  | Unique Vectors*     | Precision                | Recall                   | F1-score                 |
+|-----------------------------------------------|---------------------|--------------------------|--------------------------|--------------------------|
+| fastText (default: CommonCrawl + Wikipedia)   | $$714k$$            | $$\mathbf{0.89\pm0.01}$$ | $$0.86\pm0.01$$          | $$\mathbf{0.88\pm0.00}$$ |
+| fastText (TLUnified)                          | $$566k$$            | $$0.89\pm0.01$$          | $$\mathbf{0.88\pm0.00}$$ | $$0.88\pm0.01$$          |
+| floret (TLUnified)                            | $$\mathbf{200k}$$   | $$0.88\pm0.01$$          | $$0.88\pm0.01$$          | $$0.88\pm0.00$$          |
 
 <p>* This time, we're talking about unique vectors, not keys. <a href="https://spacy.io/api/vectors#n_keys">Several keys can map to the same vectors</a>, and floret doesn't use the keys table.</p>
 {:style="text-align: left; font-size: 14px;"}
@@ -379,8 +379,8 @@ with TLUnified:
 
 The results suggest that the floret vectors were able to keep the correlation
 between subtokens intact despite its smaller size ($$700k$$ &#8594; $$200k$$).
-Perhaps training my own fastText vectors isn't worth it, but exploring floret
-is. In addition, this **efficiency gain has little to no performance penalty**
+So perhaps training my own fastText vectors isn't worth it, but exploring floret
+is. In addition, this **efficiency gain has little to no performance penalty**,
 as seen in Table 6. So let's see what happens if I train floret with bucket
 sizes of 100k, 50k, and 25k: 
 
@@ -396,14 +396,32 @@ sizes of 100k, 50k, and 25k:
 *vectors were trained using TLUnified. Evaluated on the development set.
 {:style="text-align: center;"}
 
-There is a slight degradation in performance when I adjusted the bucket size
-from $$200k$$ to $$25k$$. It's not as drastic from what I expected, but it's
+There was a slight degradation in performance when I adjusted the bucket size
+from $$200k$$ to $$25k$$. It's not as drastic as I expected, but it's
 interesting to see the pattern. There's even a case for using $$100k$$ rows in
-floret, but for now I'll stick to $$200k$$.
+floret, but for now, I'll stick to $$200k$$.
 
-#### On pretraining: pretrain characters than pretrain vectors
+#### On pretraining: there is no significant difference between the two pretraining objectives 
 
-spaCy provides two ways to pretrain the token-to-vector weights from raw data: 
+spaCy provides two optimization objectives to pretrain the token-to-vector
+weights from raw data:
+[`PretrainCharacters`](https://spacy.io/api/architectures#pretrain_chars) and
+[`PretrainVectors`](https://spacy.io/api/architectures#pretrain_vectors). Both
+use a trick called language modelling with approximate outputs (LMAO), in which
+we force the network to model something about word cooccurrence. Using their
+default values, I ran an experiment that compares the two:
+
+
+| Pretraining objective  | Precision                | Recall                    | F1-score                   |
+|------------------------|--------------------------|---------------------------|----------------------------|
+| `PretrainCharacters`   | $$0.89\pm0.01$$          |  $$\mathbf{0.89\pm0.01}$$ |  $$0.89\pm0.00$$           |
+| `PretrainVectors`      | $$\mathbf{0.90\pm0.01}$$ |  $$0.89\pm0.00$$          |  $$\mathbf{0.90\pm0.00}$$  |
+
+The results suggest that there is no significant difference between the two.
+`PretrainVectors` has a slight edge on precision, but it's not apparent.
+However, for an agglutinative language like Tagalog, our pipeline might benefit
+from a model with some knowledge of a word's prefixes and suffixes; and so, I'll
+use `PretrainCharacters` for the final pipeline.
 
 ### Finding the best language model training setup
 
