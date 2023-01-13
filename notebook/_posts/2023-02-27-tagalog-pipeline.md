@@ -407,7 +407,7 @@ spaCy provides two optimization objectives to pretrain the token-to-vector
 weights from raw data:
 [`PretrainCharacters`](https://spacy.io/api/architectures#pretrain_chars) and
 [`PretrainVectors`](https://spacy.io/api/architectures#pretrain_vectors). Both
-use a trick called language modelling with approximate outputs (LMAO), in which
+use a trick called language modeling with approximate outputs (LMAO), in which
 we force the network to model something about word cooccurrence. Using their
 default values, I ran an experiment that compares the two:
 
@@ -420,7 +420,7 @@ default values, I ran an experiment that compares the two:
 The results suggest that there is no significant difference between the two.
 `PretrainVectors` has a slight edge on precision, but it's not apparent.
 However, for an agglutinative language like Tagalog, our pipeline might benefit
-from a model with some knowledge of a word's prefixes and suffixes; and so, I'll
+from a model with some knowledge of a word's prefixes and suffixes, so I'll
 use `PretrainCharacters` for the final pipeline.
 
 ### Finding the best language model training setup
