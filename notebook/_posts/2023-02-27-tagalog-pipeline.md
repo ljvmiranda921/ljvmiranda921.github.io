@@ -63,7 +63,7 @@ by bootstrapping the data we have.
 
     Tagalog wasn't exclusively classified as an underdog in Joshi et al.'s
     taxonomy, but with its large amount of text data, the only challenge comes
-    from the lack of annotated corpus. 
+    from the lack of annotated corpora. 
 
 > We can circumvent the data scarcity problem by bootstrapping the data
 > we have.
