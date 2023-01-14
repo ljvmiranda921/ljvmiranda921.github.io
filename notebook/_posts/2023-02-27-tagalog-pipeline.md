@@ -56,8 +56,14 @@ Even if Tagalog is text-rich, the amount of annotated data is scarce. We
 usually label these types of languages as **low-resource**. This problem isn't
 unique to Tagalog.  Out of the approximately 7000 languages worldwide, only
 10 have adequate NLP resources ([Mortensen, 2017](#mortensen) and [Tsvetkov,
-2017](#tsvetkov2017opportunities)). We can circumvent the data scarcity problem
+2017](#tsvetkov2017opportunities)). Tagalog may as well be considered an underdog  ([Joshi et al, 2021](#joshi2021state)).[^1] We can circumvent the data scarcity problem
 by bootstrapping the data we have.
+
+[^1]: 
+
+    Tagalog wasn't exclusively classified as an underdog in Joshi et al.'s
+    taxonomy, but with its large amount of text data, the only challenge comes
+    from the lack of annotated corpus. 
 
 > We can circumvent the data scarcity problem by bootstrapping the data
 > we have.
@@ -272,8 +278,8 @@ the representation layer to achieve higher accuracy:
 
 | Approach| Language Models       | Description                                                              |
 |---------|-----------------------|--------------------------------------------------------------------------|
-| Few-shot learning | [roberta-tagalog](https://huggingface.co/jcblaise/roberta-tagalog-large) | Monolingual experiment with a large RoBERTa model trained from TLUnified. I will be testing both `base` and `large` variants. |
-| Few-shot learning | [xlm-roberta](https://huggingface.co/xlm-roberta-large)      | Multilingual experiment with a large XLM-RoBERTa. Trained on 100 different languages. I will be testing both `base` and `large` variants. |
+| Few-shot learning | [roberta-tagalog](https://huggingface.co/jcblaise/roberta-tagalog-large) | Monolingual experiment with a large RoBERTa model trained from TLUnified. I will be testing the `large` variant. |
+| Few-shot learning | [xlm-roberta](https://huggingface.co/xlm-roberta-large)      | Multilingual experiment with a large XLM-RoBERTa. Trained on 100 different languages. I will be testing the `large` variant. |
 
 **Table 4:** Experimental setup for language models
 {:style="text-align: center;"}
@@ -420,19 +426,28 @@ default values, I ran an experiment that compares the two:
 The results suggest that there is no significant difference between the two.
 `PretrainVectors` has a slight edge on precision, but it's not apparent.
 However, for an agglutinative language like Tagalog, our pipeline might benefit
-from a model with some knowledge of a word's prefixes and suffixes, so I'll
-use `PretrainCharacters` for the final pipeline.
+from a model with some knowledge of a word's affixes, so I'll use
+`PretrainCharacters` for the final pipeline.
 
 ### Finding the best language model training setup
 
+<!-- talk a bit about RoBERTa tagalog and xlm roberta -->
 
-| Language Models       | Precision | Recall | F1-score |
-|-----------------------|-----------|--------|----------|
-| roberta-tagalog-base  |           |        |          |
-| xlm-roberta-base      |           |        |          |
-| roberta-tagalog-large |           |        |          |
-| xlm-roberta-large     |           |        |          |
 
+| Language Model        | Precision                | Recall                   | F1-score                 |
+|-----------------------|--------------------------|--------------------------|--------------------------|
+| roberta-tagalog-large | $$\mathbf{0.90\pm0.01}$$ | $$\mathbf{0.90\pm0.02}$$ | $$\mathbf{0.90\pm0.01}$$ |
+| xlm-roberta-large     | $$0.89\pm0.00$$          | $$0.90\pm0.00$$          | $$0.90\pm0.01$$          |
+
+<!-- didn't really expect that the roberta models are on par with a pretraining + static vectors pipeline -->
+
+
+<!-- final pipeline -->
+<!-- for word vectors: pretrain characters + floret -->
+<!-- for transformers: roberta tagalog large -->
+<!-- show test set performance -->
+<!-- talk about hyperparam search -->
+<!-- test on unseen entities? -->
 
 ## Conclusion
 
@@ -463,6 +478,9 @@ use `PretrainCharacters` for the final pipeline.
 -  <a id="mortensen">David Mortensen.</a>, *Undated*. Low-Resource NLP. Algorithms for Natural Language Processing [[Slides]](http://demo.clab.cs.cmu.edu/algo4nlp20/slides/low-resource-nlp.pdf)
 - <a id="cruz2022tlunified">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2022. [Improving Large-scale Language Models and Resources for Filipino](https://aclanthology.org/2022.lrec-1.703/). In *Proceedings of the Thirteenth Language Resources and Evaluation Conference*, pages 6548–6555, Marseille, France. European Language Resources Association.
 - <a id="cruz2019wikitext">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2019. [Evaluating Language Model Finetuning Techniques for Low-resource Languages](https://arxiv.org/abs/1907.00409) *arXiv:1907.00409*.
+- <a id="joshi2021state">Pratik Joshi, Sebastin Santy, Amar Budhiraja, Kalika Bali, and Monojit Choudhury.</a> 2020. The State and Fate of Linguistic Diversity and Inclusion in the NLP World. In *Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics*, pages 6282–6293, Online. Association for Computational Linguistics.
 - <a id="artstein2017inter">Ron Artstein</a>. Inter-annotator Agreement. In: Ide Nancy & Pustejovsky James (eds.) *Handbook of Linguistic Annotation.* Springer, Dordrecht, 2017. DOI 10.1007/978-94-024-0881-2.
 - <a id="pan2017wikiann">Xiaoman Pan, Boliang Zhang, Jonathan May, Joel Nothman, Kevin Knight, and Heng Ji.</a> 2017. [Cross-lingual Name Tagging and Linking for 282 Languages](https://aclanthology.org/P17-1178). In *Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 1946–1958, Vancouver, Canada. Association for Computational Linguistics.
 - <a id="tsvetkov2017opportunities">Yulia Tsvetkov</a>, 2017. Opportunities and Challenges in Working with Low-Resource Languages. Language Technologies Institute, Carnegie Mellon University. [[Slides]](https://www.cs.cmu.edu/~ytsvetko/jsalt-part1.pdf). 
+
+### Footnotes
