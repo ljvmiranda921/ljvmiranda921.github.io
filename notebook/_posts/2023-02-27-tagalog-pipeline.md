@@ -48,6 +48,7 @@ Tagalog NLP.
 - [**Experimental results**](#results)
     - [Finding the best word vector training setup](#word-vector-setup)
     - [Finding the best language model training setup](#language-model-setup)
+    - [Evaluating our pipelines](#eval-pipeline)
 - [**Conclusion**](#conclusion)
 
 
@@ -279,10 +280,14 @@ the representation layer to achieve higher accuracy:
 
 | Approach| Language Models       | Description                                                              |
 |---------|-----------------------|--------------------------------------------------------------------------|
-| Few-shot learning | [roberta-tagalog](https://huggingface.co/jcblaise/roberta-tagalog-large) | Monolingual experiment with a large RoBERTa model trained from TLUnified. I will be testing the `large` variant. |
-| Few-shot learning | [xlm-roberta](https://huggingface.co/xlm-roberta-large)      | Multilingual experiment with a large XLM-RoBERTa. Trained on 100 different languages. I will be testing the `large` variant. |
+| Few-shot learning | [roberta-tagalog](https://huggingface.co/jcblaise/roberta-tagalog-large) | Monolingual experiment with a large RoBERTa model trained from TLUnified. I will be testing both `base` and `large` variants. |
+| Few-shot learning | [xlm-roberta](https://huggingface.co/xlm-roberta-large)      | Multilingual experiment with a large XLM-RoBERTa. Trained on 100 different languages. I will be testing both `base` and `large` variants. |
 
 **Table 4:** Experimental setup for language models
+{:style="text-align: center;"}
+
+
+![](/assets/png/tagalog-gold-standard/drop_in.png){:width="650px"}  
 {:style="text-align: center;"}
 
 Again, I want to use what I learned from these experiments to set up a training
@@ -476,14 +481,12 @@ that with a transformer model. So, for example, the English transformer model
 of their dense and context-sensitive representations, even if they have higher
 training and runtime costs.
 
-![](/assets/png/tagalog-gold-standard/drop_in.png){:width="650px"}  
-{:style="text-align: center;"}
-
 Luckily, Tagalog has a RoBERTa-based model. The
 [`roberta-tagalog-large`](https://huggingface.co/jcblaise/roberta-tagalog-large)
 was trained using TLUnified and was benchmarked on multilabel text
 classification tasks ([Cruz and Cheng, 2022](#cruz2022tlunified)). The large
-model has 330M parameters, and I'll use this throughout the experiment as my
+model has 330M parameters, whereas the base model has 110M. I'll use both
+variants throughout the experiment as my
 **monolingual language model** of choice.
 
 The only limitation in this setup is that `roberta-tagalog-large` was also
@@ -507,21 +510,75 @@ The results can be seen in the table below:
 
 | Language Model        | Precision                | Recall                   | F1-score                 |
 |-----------------------|--------------------------|--------------------------|--------------------------|
-| roberta-tagalog-large | $$\mathbf{0.90\pm0.01}$$ | $$\mathbf{0.90\pm0.02}$$ | $$\mathbf{0.90\pm0.01}$$ |
-| xlm-roberta-large     | $$0.89\pm0.00$$          | $$0.90\pm0.00$$          | $$0.90\pm0.01$$          |
+| roberta-tagalog-large | $$\mathbf{0.91\pm0.01}$$ | $$\mathbf{0.91\pm0.02}$$ | $$\mathbf{0.91\pm0.01}$$ |
+| roberta-tagalog-base  | $$0.90\pm0.01$$          | $$0.89\pm0.01$$          | $$0.90\pm0.00$$          |
+| xlm-roberta-large     | $$0.88\pm0.00$$          | $$0.88\pm0.00$$          | $$0.89\pm0.01$$          |
+| xlm-roberta-base      | $$0.87\pm0.02$$          | $$0.87\pm0.01$$          | $$0.88\pm0.01$$          |
 
-**Table 8:**  Performance comparison between a monolingual and multilingual language mode. Evaluated on the development set.
+**Table 8:**  Performance comparison between a monolingual and multilingual language model. Evaluated on the development set.
 {:style="text-align: center;"}
 
-<!-- didn't really expect that the roberta models are on par with a pretraining + static vectors pipeline -->
+I didn't expect the two models to be on par with one another. In addition, the
+performance of our word vector pipeline (floret + pretraining) is competitive
+with our transformer approach. Training for the base models took around four
+hours in an NVIDIA V100 GPU (I'm using Google Colab Pro+) and twelve to fifteen
+hours for the larger ones.
 
 
-<!-- final pipeline -->
-<!-- for word vectors: pretrain characters + floret -->
-<!-- for transformers: roberta tagalog large -->
-<!-- show test set performance -->
-<!-- talk about hyperparam search -->
-<!-- test on unseen entities? -->
+#### Some notes for the final transformer pipeline [&crarr;](#toc)
+
+In the future, I hope to create a transformer-based model similar to spaCy's
+`en_core_web_trf` for Tagalog. I'll settle for the following setup:
+
+- **Use `roberta-tagalog-*` as the transformer model.** My hypothesis is that a
+model trained specifically for a given language should outperform a "generalist" language model.
+I will keep tabs on XLM-R but shift focus on building upon `roberta-tagalog`.
+- **Hyperparameter tuning.** Similar to the word vector pipeline, I need to conduct hyperparameter
+search for my transformer pipeline. 
+
+
+### <a id="eval-pipelines"></a> Evaluating our pipelines [&crarr;](#toc)
+
+We now have a word vector and transformer-based pipeline. The former uses floret
+vectors with pretraining, while the latter takes advantage of the
+`roberta-tagalog-*` language model. Let's do a few more
+evaluation to wrap things up. For now I'll be calling them `tl_tlunified_lg` and
+`tl_tlunified_trf` to be consistent with spaCy's model naming convention:
+
+![](/assets/png/tagalog-gold-standard/test_pipeline.png){:width="700px"}  
+{:style="text-align: center;"}
+
+Let's evaluate their performance on the test set:
+
+| Pipeline                 | Precision       | Recall          | F1-score        |
+|--------------------------|-----------------|-----------------|-----------------|
+| tl_tlunified_lg          | $$0.85\pm0.01$$ | $$0.86\pm0.02$$ | $$0.86\pm0.02$$ |
+| tl_tlunified_trf (base)  | $$0.87\pm0.02$$ | $$0.87\pm0.01$$ | $$0.87\pm0.01$$ |
+| tl_tlunified_trf (large) | $$0.89\pm0.01$$ | $$0.89\pm0.00$$ | $$0.90\pm0.02$$ |
+
+**Table 9:**  Performance comparison for the word vector and transformer-based
+*pipelines. Evaluated on the test set.
+{:style="text-align: center;"}
+
+We can see a performance difference between the transformer and word vector
+pipelines (around 4pp). Let's see the per-entity results:
+
+| Pipeline                 | PER             | ORG             | LOC             |
+|--------------------------|-----------------|-----------------|-----------------|
+| tl_tlunified_lg          | $$0.88\pm0.02$$ | $$0.77\pm0.02$$ | $$0.86\pm0.00$$ |
+| tl_tlunified_trf (base)  | $$0.90\pm0.01$$ | $$0.80\pm0.02$$ | $$0.87\pm0.01$$ |
+| tl_tlunified_trf (large) | $$0.92\pm0.01$$ | $$0.81\pm0.02$$ | $$0.87\pm0.00$$ |
+
+**Table 10:**  F1-score comparison for the word vector and transformer-based
+*pipelines (per-entity). Evaluated on the test set.
+{:style="text-align: center;"}
+
+<!-- unseen entities
+
+Let's see how they
+fare with respect to unseen entities:
+
+-->
 
 ## <a id="conclusion"></a> Conclusion [&crarr;](#toc)
 
