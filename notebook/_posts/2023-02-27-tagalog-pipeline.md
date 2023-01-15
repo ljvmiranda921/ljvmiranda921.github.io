@@ -575,10 +575,15 @@ pipelines (per-entity). Evaluated on the test set.
 
 <!-- unseen entities
 
-Let's see how they
-fare with respect to unseen entities:
-
+short description
 -->
+
+| Pipeline                 | Precision       | Recall          | F1-score        |
+|--------------------------|-----------------|-----------------|-----------------|
+| tl_tlunified_lg          | $$0.75\pm0.01$$ | $$0.83\pm0.02$$ | $$0.79\pm0.01$$ |
+| tl_tlunified_trf (base)  | $$0.85\pm0.00$$ | $$0.84\pm0.02$$ | $$0.84\pm0.02$$ |
+| tl_tlunified_trf (large) | $$0.88\pm0.02$$ | $$0.88\pm0.00$$ | $$0.88\pm0.00$$ |
+
 
 ## <a id="conclusion"></a> Conclusion [&crarr;](#toc)
 
