@@ -429,9 +429,44 @@ However, for an agglutinative language like Tagalog, our pipeline might benefit
 from a model with some knowledge of a word's affixes, so I'll use
 `PretrainCharacters` for the final pipeline.
 
+
+#### Some notes for the final word vector pipeline
+
+In the future, I hope to create pipelines akin to spaCy's `en_core_web_md` or
+`en_core_web_lg` but for Tagalog. I'll settle for the following setup:
+
+- **Train floret vectors from TLUnified**. spaCy's floret vectors provide
+efficiency with no cost to performance. The F1-scores are competitive even with the
+vectors sourced from fastText (trained on CommonCrawl and Wikipedia). The size
+of the model (i.e., if it's medium (`*_md`) or large (`*_lg`)) can then be a function
+of the hash table size.
+- **Pretrain token-to-vector weights using the 'characters' objective**.
+Pretraining gives a decent boost to performance. I also think the "characters"
+objective can better model the structure of Tagalog words. Lastly, I only
+pretrained for $$5$$ epochs ($$12$$ hours!), so I might push it to $$10$$ or
+more in the final pipeline.
+- **Hyperparameter tuning**. I've been using the default training and NER
+parameters throughout my experiments. I prefer starting from a crude pipeline
+and moving on to its finer points. I'll spend some time doing a [hyperparameter
+search using WandB](https://github.com/explosion/projects/tree/v3/integrations/wandb) and see if there are more optimizations I can do.
+
 ### Finding the best language model training setup
 
-<!-- talk a bit about RoBERTa tagalog and xlm roberta -->
+With [spaCy's Huggingface
+integration](https://github.com/explosion/spacy-transformers), finding a decent
+language model as a **drop-in replacement for our token-to-vector** embedding layer
+is much faster.  Previously, we used a [`tok2vec`](https://spacy.io/api/tok2vec)
+embedding layer that downstream components like
+[`ner`](https://spacy.io/api/entityrecognizer) use. Here, we effectively replace
+that with a transformer model. So, for example, the English transformer model
+[`en_core_web_trf`](https://spacy.io/models/en#en_core_web_trf) uses RoBERTa
+([Liu, et al., 2019](#liu2019roberta)) as its base. We want transformers because
+of their dense and context-sensitive representations, even if they have higher
+training and runtime costs.
+
+![](/assets/png/tagalog-gold-standard/drop_in.png){:width="650px"}  
+{:style="text-align: center;"}
+
 
 
 | Language Model        | Precision                | Recall                   | F1-score                 |
@@ -478,6 +513,7 @@ from a model with some knowledge of a word's affixes, so I'll use
 -  <a id="mortensen">David Mortensen.</a>, *Undated*. Low-Resource NLP. Algorithms for Natural Language Processing [[Slides]](http://demo.clab.cs.cmu.edu/algo4nlp20/slides/low-resource-nlp.pdf)
 - <a id="cruz2022tlunified">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2022. [Improving Large-scale Language Models and Resources for Filipino](https://aclanthology.org/2022.lrec-1.703/). In *Proceedings of the Thirteenth Language Resources and Evaluation Conference*, pages 6548–6555, Marseille, France. European Language Resources Association.
 - <a id="cruz2019wikitext">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2019. [Evaluating Language Model Finetuning Techniques for Low-resource Languages](https://arxiv.org/abs/1907.00409) *arXiv:1907.00409*.
+- <a id="liu2019roberta">Liu, Yinhan, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, and Veselin Stoyanov.</a> "Roberta: A robustly optimized bert pretraining approach." *arXiv preprint arXiv:1907.11692* (2019).
 - <a id="joshi2021state">Pratik Joshi, Sebastin Santy, Amar Budhiraja, Kalika Bali, and Monojit Choudhury.</a> 2020. The State and Fate of Linguistic Diversity and Inclusion in the NLP World. In *Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics*, pages 6282–6293, Online. Association for Computational Linguistics.
 - <a id="artstein2017inter">Ron Artstein</a>. Inter-annotator Agreement. In: Ide Nancy & Pustejovsky James (eds.) *Handbook of Linguistic Annotation.* Springer, Dordrecht, 2017. DOI 10.1007/978-94-024-0881-2.
 - <a id="pan2017wikiann">Xiaoman Pan, Boliang Zhang, Jonathan May, Joel Nothman, Kevin Knight, and Heng Ji.</a> 2017. [Cross-lingual Name Tagging and Linking for 282 Languages](https://aclanthology.org/P17-1178). In *Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 1946–1958, Vancouver, Canada. Association for Computational Linguistics.
