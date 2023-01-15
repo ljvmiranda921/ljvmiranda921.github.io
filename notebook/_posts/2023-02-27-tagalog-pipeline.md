@@ -570,7 +570,7 @@ pipelines (around 4pp). Let's see the per-entity results:
 | tl_tlunified_trf (large) | $$0.92\pm0.01$$ | $$0.81\pm0.02$$ | $$0.87\pm0.00$$ |
 
 **Table 10:**  F1-score comparison for the word vector and transformer-based
-*pipelines (per-entity). Evaluated on the test set.
+pipelines (per-entity). Evaluated on the test set.
 {:style="text-align: center;"}
 
 <!-- unseen entities
