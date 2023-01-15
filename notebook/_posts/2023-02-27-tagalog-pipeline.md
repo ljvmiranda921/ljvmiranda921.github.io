@@ -37,20 +37,21 @@ Tagalog NLP.
 
 > I don't recommend using this pipeline for production purposes yet. See [caveats](#caveats). 
 
-#### Contents
+#### <a id="toc"></a>Table of Contents (click &crarr; to jump back to the TOC)
 
 - [**Background**](#corpora): Tagalog NER data is scarce 
-    - [We can circumvent the data scarcity problem...](#we-can-circumvent-the-data-scarcity-problem)
-    - [...by bootstrapping the data we have.](#by-bootstrapping-the-data-we-have)
+    - [We can circumvent the data scarcity problem...](#circumvent)
+    - [...by bootstrapping the data we have.](#bootstrapping)
 - [**Methods**](#gold): We still want gold-annotated data 
-    - [I corrected annotations from a silver model...](#i-corrected-annotations-from-a-silver-model)
-    - [...then benchmarked it with baseline NER approaches.](#then-benchmarked-it-with-baseline-ner-approaches)
-- [**Experimental results**](#experimental-results)
-    - [Finding the best word vector training setup](#finding-the-best-word-vector-training-setup)
-    - [Finding the best language model training setup](#finding-the-best-language-model-training-setup)
+    - [I corrected annotations from a silver model...](#corrected)
+    - [...then benchmarked it with baseline NER approaches.](#benchmarked)
+- [**Experimental results**](#results)
+    - [Finding the best word vector training setup](#word-vector-setup)
+    - [Finding the best language model training setup](#language-model-setup)
 - [**Conclusion**](#conclusion)
 
-## <a id="corpora"></a>Tagalog NER data is scarce
+
+## <a id="corpora"></a>Tagalog NER data is scarce [&crarr;](#toc)
 
 Even if Tagalog is text-rich, the amount of annotated data is scarce. We
 usually label these types of languages as **low-resource**. This problem isn't
@@ -68,7 +69,7 @@ by bootstrapping the data we have.
 > We can circumvent the data scarcity problem by bootstrapping the data
 > we have.
 
-### We can circumvent the data scarcity problem...
+### <a id="circumvent"></a> We can circumvent the data scarcity problem... [&crarr;](#toc)
 
 Many clever ways in language tech allow researchers to circumvent the data
 scarcity problem. They usually involve taking advantage of a high-resource
@@ -98,7 +99,7 @@ Their annotations are automatically generated, either by a statistical model
 trained from a similar language or a knowledge base. Silver-standard data may
 not be accurate or trustworthy, but they are faster and cheaper to create.
 
-### ...by bootstrapping the data we have 
+### <a id="bootstrapping"></a> ...by bootstrapping the data we have [&crarr;](#toc)
 
 The best way to work with silver-standard data is to use them for bootstrapping
 the annotations of a much larger and diverse dataset, thereby producing
@@ -181,7 +182,7 @@ want to help out!**](#helping-out)
 > As the sole annotator, [I] can influence a dataset of my biases and errors.
 > This is the limitation of this work.
 
-## <a id="gold"></a>We still want gold-annotated data
+## <a id="gold"></a>We still want gold-annotated data [&crarr;](#toc)
 
 This section will discuss how I annotated TLUnified to produce
 gold-standard data. I'll also introduce my benchmarking experiments to see how
@@ -190,7 +191,7 @@ annotated TLUnified as `tl_tlunified_gold` (`tl` - language code, `tlunified` -
 data source, `gold` - dataset type).
 
 
-### I corrected annotations from a silver model...
+### <a id="corrected"></a> I corrected annotations from a silver model... [&crarr;](#toc)
 
 For the past three months, I corrected annotations produced by the WikiANN model.
 I learned that as an annotator, it's easier to fix annotations than label them
@@ -229,7 +230,7 @@ The table below shows some dataset statistics:
 **Table 2:** Dataset statistics for v1.0 of `tl_tlunified_cold` 
 {:style="text-align: center;"}
 
-### ...then benchmarked it with baseline NER approaches
+### <a id="benchmarked"></a> ...then benchmarked it with baseline NER approaches [&crarr;](#toc)
 
 I want to see how standard NER approaches fare with `tl_tlunified_gold`. **My
 eventual goal is to set up training pipelines to produce decent Tagalog
@@ -289,7 +290,7 @@ scheme for a Tagalog pipeline down the road. For all the experiments above, I
 will use [spaCy's transition-based
 parser](https://spacy.io/api/entityrecognizer) for sequence labeling.
 
-## Experimental Results
+## <a id="results"></a> Experimental Results [&crarr;](#toc)
 
 The results below aim to answer eventual design decisions for building NLP
 pipelines for Tagalog. I plan to create a word vector-based and language
@@ -307,7 +308,7 @@ avoid overfitting.
 I ran each experiment for three trials, and I will report their mean and
 standard deviation.
 
-### Finding the best word vector training setup
+### <a id="word-vector-setup"></a> Finding the best word vector training setup [&crarr;](#toc)
 
 To find the best word vector training setup, I designed an experiment to test 
 how static vectors and pretraining can improve performance. The baseline
@@ -345,7 +346,7 @@ vectors and pretraining can improve F1-score** by at least 2pp.
 **Table 5:** Pipeline performance. Evaluated on the development set.
 {:style="text-align: center;"}
 
-#### On static vectors: training my own vectors isn't worth it unless they're floret
+#### On static vectors: it is worth training floret vectors [&crarr;](#toc)
 
 In the previous experiment, I used the fastText vectors provided by the
 [fastText website](https://fasttext.cc/docs/en/crawl-vectors.html). These
@@ -357,7 +358,11 @@ other on [floret](https://github.com/explosion/floret). Both vectors were
 trained using the [skipgram
 model](https://fasttext.cc/docs/en/unsupervised-tutorial.html#advanced-readers-skipgram-versus-cbow),
 with a dimension of $$200$$, and a subword minimum (`minn`) and maximum size
-(`maxn`) of $$3$$ and $$5$$ respectively. The results can be seen in the table below:
+(`maxn`) of $$3$$ and $$5$$ respectively. 
+
+Lastly, I also removed the annotated texts from TLUnified during training to ensure
+no overlaps that might influence our benchmark results. These results can be seen
+in the table below:
 
 | Word Vectors                                  | Unique Vectors*     | Precision                | Recall                   | F1-score                 |
 |-----------------------------------------------|---------------------|--------------------------|--------------------------|--------------------------|
@@ -407,21 +412,28 @@ from $$200k$$ to $$25k$$. It's not as drastic as I expected, but it's
 interesting to see the pattern. There's even a case for using $$100k$$ rows in
 floret, but for now, I'll stick to $$200k$$.
 
-#### On pretraining: there is no significant difference between the two pretraining objectives 
+#### On pretraining: there is no significant difference between the two pretraining objectives  [&crarr;](#toc)
 
 spaCy provides two optimization objectives to pretrain the token-to-vector
 weights from raw data:
 [`PretrainCharacters`](https://spacy.io/api/architectures#pretrain_chars) and
 [`PretrainVectors`](https://spacy.io/api/architectures#pretrain_vectors). Both
 use a trick called language modeling with approximate outputs (LMAO), in which
-we force the network to model something about word cooccurrence. Using their
-default values, I ran an experiment that compares the two:
+we force the network to model something about word cooccurrence. 
+
+Using their default values, I ran an experiment that compares the two. Similar
+to the previous experiment, I also removed overlaps between the final dataset
+and the pretraining corpus to ensure that they won't affect the results:
 
 
 | Pretraining objective  | Precision                | Recall                    | F1-score                   |
 |------------------------|--------------------------|---------------------------|----------------------------|
 | `PretrainCharacters`   | $$0.89\pm0.01$$          |  $$\mathbf{0.89\pm0.01}$$ |  $$0.89\pm0.00$$           |
 | `PretrainVectors`      | $$\mathbf{0.90\pm0.01}$$ |  $$0.89\pm0.00$$          |  $$\mathbf{0.90\pm0.00}$$  |
+
+
+**Table 7:**  Performance comparison between different pretraining objectives (characters vs. vectors). Evaluated on the development set.
+{:style="text-align: center;"}
 
 The results suggest that there is no significant difference between the two.
 `PretrainVectors` has a slight edge on precision, but it's not apparent.
@@ -430,7 +442,7 @@ from a model with some knowledge of a word's affixes, so I'll use
 `PretrainCharacters` for the final pipeline.
 
 
-#### Some notes for the final word vector pipeline
+#### Some notes for the final word vector pipeline [&crarr;](#toc)
 
 In the future, I hope to create pipelines akin to spaCy's `en_core_web_md` or
 `en_core_web_lg` but for Tagalog. I'll settle for the following setup:
@@ -450,12 +462,12 @@ parameters throughout my experiments. I prefer starting from a crude pipeline
 and moving on to its finer points. I'll spend some time doing a [hyperparameter
 search using WandB](https://github.com/explosion/projects/tree/v3/integrations/wandb) and see if there are more optimizations I can do.
 
-### Finding the best language model training setup
+### <a id="language-model-setup"></a> Finding the best language model training setup [&crarr;](#toc)
 
 With [spaCy's Huggingface
 integration](https://github.com/explosion/spacy-transformers), finding a decent
 language model as a **drop-in replacement for our token-to-vector** embedding layer
-is much faster.  Previously, we used a [`tok2vec`](https://spacy.io/api/tok2vec)
+is much faster.  Previously, we slotted a [`tok2vec`](https://spacy.io/api/tok2vec)
 embedding layer that downstream components like
 [`ner`](https://spacy.io/api/entityrecognizer) use. Here, we effectively replace
 that with a transformer model. So, for example, the English transformer model
@@ -467,12 +479,39 @@ training and runtime costs.
 ![](/assets/png/tagalog-gold-standard/drop_in.png){:width="650px"}  
 {:style="text-align: center;"}
 
+Luckily, Tagalog has a RoBERTa-based model. The
+[`roberta-tagalog-large`](https://huggingface.co/jcblaise/roberta-tagalog-large)
+was trained using TLUnified and was benchmarked on multilabel text
+classification tasks ([Cruz and Cheng, 2022](#cruz2022tlunified)). The large
+model has 330M parameters, and I'll use this throughout the experiment as my
+**monolingual language model** of choice.
+
+The only limitation in this setup is that `roberta-tagalog-large` was also
+trained on parts of TLUnified that I annotated, so it may have some information
+regarding my test set. However, I don't want to pretrain my own transformer
+model for now without the overlapping texts, so I'll use this language model as
+it is. I just want to caveat that this setup may have inflated my reported
+scores.
+
+On the other hand, I also want to benchmark with a **multilingual transformer
+model.** The XLM-RoBERTa (XLM-R) model may be a good fit ([Conneau, et al.,
+2019](#conneau2019xlm)). It was pre-trained on text in 100 languages, including
+Tagalog. Most of its data source came from a cleaned version of CommonCrawl,
+with Tagalog containing 556 million tokens and 3.1 GiB in size. My hope is that
+the XLM-R model can take advantage of learned representations from
+morphologically similar languages for our downstream task.
+
+I finetuned these language models for three trials on different random seeds.
+The results can be seen in the table below:
 
 
 | Language Model        | Precision                | Recall                   | F1-score                 |
 |-----------------------|--------------------------|--------------------------|--------------------------|
 | roberta-tagalog-large | $$\mathbf{0.90\pm0.01}$$ | $$\mathbf{0.90\pm0.02}$$ | $$\mathbf{0.90\pm0.01}$$ |
 | xlm-roberta-large     | $$0.89\pm0.00$$          | $$0.90\pm0.00$$          | $$0.90\pm0.01$$          |
+
+**Table 8:**  Performance comparison between a monolingual and multilingual language mode. Evaluated on the development set.
+{:style="text-align: center;"}
 
 <!-- didn't really expect that the roberta models are on par with a pretraining + static vectors pipeline -->
 
@@ -484,15 +523,15 @@ training and runtime costs.
 <!-- talk about hyperparam search -->
 <!-- test on unseen entities? -->
 
-## Conclusion
+## <a id="conclusion"></a> Conclusion [&crarr;](#toc)
 
 
-### Helping out
+### Helping out [&crarr;](#toc)
 
 
 
 
-## Caveats
+## Caveats [&crarr;](#toc)
 
 - **Is this supposed to be a new Tagalog benchmark?**
 
@@ -510,6 +549,7 @@ training and runtime costs.
 
 ## References
 
+- <a id="conneau2019xlm">Conneau, Alexis, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume Wenzek, Francisco Guzmán, Edouard Grave, Myle Ott, Luke Zettlemoyer, and Veselin Stoyanov.</a> "Unsupervised cross-lingual representation learning at scale." *arXiv preprint arXiv:1911.02116* (2019).
 -  <a id="mortensen">David Mortensen.</a>, *Undated*. Low-Resource NLP. Algorithms for Natural Language Processing [[Slides]](http://demo.clab.cs.cmu.edu/algo4nlp20/slides/low-resource-nlp.pdf)
 - <a id="cruz2022tlunified">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2022. [Improving Large-scale Language Models and Resources for Filipino](https://aclanthology.org/2022.lrec-1.703/). In *Proceedings of the Thirteenth Language Resources and Evaluation Conference*, pages 6548–6555, Marseille, France. European Language Resources Association.
 - <a id="cruz2019wikitext">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2019. [Evaluating Language Model Finetuning Techniques for Low-resource Languages](https://arxiv.org/abs/1907.00409) *arXiv:1907.00409*.
