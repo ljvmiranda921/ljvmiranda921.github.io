@@ -624,11 +624,17 @@ evaluated each pipeline on the held-out test set and a test set with
 previously-unseen entities. The transformer-based models worked well, while the
 word vector-based model is still competitive.
 
-To summarize the process above, we have this figure below:
+To summarize the process above, we have this figure below. I hope that this simplifies
+the whole procedure on building an NLP pipeline:
+
+![](/assets/png/tagalog-gold-standard/process.png){:width="650px"}  
+{:style="text-align: center;"}
 
 ### <a id="next-steps"></a> Next steps [&crarr;](#toc)
 
-Let's use the same figure to talk about the potential next steps for this work:
+There are still a lot of things I want to do. Let's use the same figure to talk
+about the potential next steps for this work:
+
 - **On annotation.** Right now, the annotations were from me. Although I wrote
 myself an [annotation guideline](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus/guidelines), it isn't enough to make the labels more
 objective and error-free. Having multiple annotators and computing for
