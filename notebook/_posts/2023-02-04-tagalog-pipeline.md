@@ -8,6 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
+header-img: /assets/png/tagalog-gold-standard/header.png
 description: |
     Building NLP pipelines for Tagalog takes a lot of work. The common
     bottleneck is the lack of annotated corpora available for training.  In this
