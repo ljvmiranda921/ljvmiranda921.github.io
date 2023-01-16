@@ -50,6 +50,9 @@ Tagalog NLP.
     - [Finding the best language model training setup](#language-model-setup)
     - [Evaluating our pipelines](#eval-pipeline)
 - [**Conclusion**](#conclusion)
+    - [Next steps](#next-steps)
+    - [Caveats](#caveats)
+    - [Final thoughts](#final-thoughts)
 
 
 ## <a id="corpora"></a>Tagalog NER data is scarce [&crarr;](#toc)
@@ -644,6 +647,22 @@ perturbations and [irregular train-test splits](/notebook/2022/08/02/splits/) ([
 
 ### <a id="caveats"></a> Caveats [&crarr;](#toc)
 
+As I've prefaced at the beginning of this blog post, I do not recommend using this for production.
+This NLP pipeline is still a work in progress, and I'm developing ways to make the model more robust.
+Here are the limitations of this work:
+
+- The gold-annotated dataset was labeled by a single annotator. Ideally, this would be done by multiple 
+    annotators to limit bias and errors. You can get the annotated dataset now but use it with caution.
+- The pipelines to date still need to be optimized. I still need to perform a more thorough parameter search to
+    improve the results. This applies to both the word vector and language model-based pipelines.
+- The evaluation still needs a bit of work. Although evaluating on the test set and unseen entities may
+    be standard practice, I'd like to investigate more on which instances the model works. 
+
+The Tagalog corpus is the biggest bottleneck.  Increasing the amount of
+gold-annotated data or increasing the reliability of silver-standard annotations
+should be a priority. The former is a bit of a brute-force approach, but I think
+that sometimes we just need to sit down, tackle the problem, and start
+annotating.
 
 ### <a id="final-thoughts"></a> Final thoughts [&crarr;](#toc)
 
