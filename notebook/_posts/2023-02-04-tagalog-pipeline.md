@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Towards a Tagalog NLP pipeline"
-date: 2023-02-27
+date: 2023-02-04
 category: notebook
 comments: true
 author: "LJ MIRANDA"
