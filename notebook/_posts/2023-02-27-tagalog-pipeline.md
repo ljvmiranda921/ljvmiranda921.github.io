@@ -9,12 +9,12 @@ author: "LJ MIRANDA"
 published: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
 description: |
-    Building NLP pipelines that work on Tagalog is hard. It's because 
+    Building NLP pipelines for Tagalog is hard. It's because 
     we lack annotated corpora and concentrated efforts to train models. 
     In this blog post, I'll report my progress on building a Tagalog NER pipeline and my hopes
     for the future of Tagalog NLP.
 excerpt: |
-    Building NLP pipelines that work on Tagalog is hard. It's because 
+    Building NLP pipelines for Tagalog is hard. It's because 
     we lack annotated corpora and concentrated efforts to train models. 
     In this blog post, I'll report my progress on building a Tagalog NER pipeline and my hopes
     for the future of Tagalog NLP.
@@ -177,8 +177,8 @@ practice, you'd want three or more annotators (preferably linguists), then
 normalize their annotations based on some inter-annotator agreement.
 Unfortunately, this is the **limitation** of this work. In the next section,
 I'll outline some of my attempts to be more objective when annotating. Of
-course, the ideal case is to have multiple annotators, so [**let me know if you
-want to help out!**](#helping-out)
+course, the ideal case is to have multiple annotators, so let me know if you
+want to help out!
 
 > As the sole annotator, [I] can influence a dataset of my biases and errors.
 > This is the limitation of this work.
@@ -530,11 +530,12 @@ hours for the larger ones.
 In the future, I hope to create a transformer-based model similar to spaCy's
 `en_core_web_trf` for Tagalog. I'll settle for the following setup:
 
-- **Use `roberta-tagalog-*` as the transformer model.** My hypothesis is that a
+- **Use `roberta-tagalog-*` as the transformer model.** I hypothesize that a
 model trained specifically for a given language should outperform a "generalist" language model.
 I will keep tabs on XLM-R but shift focus on building upon `roberta-tagalog`.
-- **Hyperparameter tuning.** Similar to the word vector pipeline, I need to conduct hyperparameter
-search for my transformer pipeline. 
+- **Hyperparameter tuning.** Like the word vector pipeline, I need to conduct hyperparameter
+search for my transformer pipeline. Playing around the training and span-getter parameters
+might be a good starting point.
 
 
 ### <a id="eval-pipelines"></a> Evaluating our pipelines [&crarr;](#toc)
@@ -573,10 +574,14 @@ pipelines (around 4pp). Let's see the per-entity results:
 pipelines (per-entity). Evaluated on the test set.
 {:style="text-align: center;"}
 
-<!-- unseen entities
-
-short description
--->
+Lastly, let's look at our pipelines' performance on **unseen entities**. Here, we
+define an unseen test set that contains entities not seen by the model during
+training. This evaluation allows us to check how a model responds to entities it
+newly encounters. The way I split the texts is naive: I based them on the
+orthographic representation of the words. For example, entities like "Makati
+City" and "Lungsod ng Makati" will be treated as separate entities even if they
+point to the same location. For the gold-annotated TLUnified, our unseen test
+set has 784 documents. 
 
 | Pipeline                 | Precision       | Recall          | F1-score        |
 |--------------------------|-----------------|-----------------|-----------------|
@@ -584,25 +589,63 @@ short description
 | tl_tlunified_trf (base)  | $$0.85\pm0.00$$ | $$0.84\pm0.02$$ | $$0.84\pm0.02$$ |
 | tl_tlunified_trf (large) | $$0.88\pm0.02$$ | $$0.88\pm0.00$$ | $$0.88\pm0.00$$ |
 
+**Table 11:**  Performance comparison for the word vector and transformer-based
+*pipelines. Evaluated on the unseen test set.
+{:style="text-align: center;"}
+
+The scores are what we expect. All pipelines dropped their performance when they
+encountered previously unseen entities. However, note that the transformer
+pipelines may have test set leakage during their pretraining, causing it to
+inflate the scores. On the other hand, I have better control of the word vector
+pipeline to run pretraining without the unseen test set. 
+
 
 ## <a id="conclusion"></a> Conclusion [&crarr;](#toc)
 
+In this blog post, I outlined my progress in building an NLP pipeline for
+Tagalog. I started with the named-entity recognition (NER) task because it is a
+crucial problem with many applications. I talked about...
 
-### Helping out [&crarr;](#toc)
+- **..how I created a gold-annotated corpus for Tagalog.** I used a larger dataset
+called TLUnified and pre-annotated it with predictions from a silver-standard
+model trained from WikiANN. I then corrected its annotations using Prodigy,
+thereby producing around 7000+ documents.
+- **...how I built a word-vector and language model-based pipeline.** I did some tests
+to decide the best setup for my two pipelines. The word vector pipeline consists
+of a hash table trained from floret and a pretrained token-to-vector weight
+matrix. On the other hand, the language model pipeline is based on
+`roberta-tagalog`. I also tested how a multilingual model like XLM-R fares
+on the dataset.
+- **...how I evaluated each pipeline.** Aside from the benchmarking tests, I
+evaluated each pipeline on the held-out test set and a test set with
+previously-unseen entities. The transformer-based models worked well, while the
+word vector-based model is still competitive.
+
+To summarize the process above, we have this figure below:
+
+### <a id="next-steps"></a> Next steps [&crarr;](#toc)
+
+Let's use the same figure to talk about the potential next steps for this work:
+- **On annotation.** Right now, the annotations were from me. Although I wrote
+myself an [annotation guideline](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus/guidelines), it isn't enough to make the labels more
+objective and error-free. Having multiple annotators and computing for
+inter-annotator agreement may be the best option.
+- **On building the pipeline.** I want to spend some time performing
+hyperparameter search to optimize the NLP pipelines. For the word vector
+pipeline, it may also be good to do degradation tests to see how the pretrained
+weights respond to dataset size. In the future, I see myself adding more
+components to this pipeline, not just `ner`. For example, some folks at the
+University of the Philippines are [creating a larger Tagalog UD Treebank.](https://linguistics.upd.edu.ph/building-a-tagalog-universal-dependencies-treebank/) I can
+tap into their corpus to train a dependency parser and parts-of-speech (POS)
+tagger for my existing pipelines.
+- **On evaluation.** Aside from evaluating a held-out test set and
+previously-unseen entities, I want to improve the evaluation scheme and include
+perturbations and [irregular train-test splits](/notebook/2022/08/02/splits/) ([Vajjala and Balasubramaniam, 2022](#vajjala2022sota), [S&oslash;gaard, et al., 2021](#sogaard2021random)). 
+
+### <a id="caveats"></a> Caveats [&crarr;](#toc)
 
 
-
-
-## Caveats [&crarr;](#toc)
-
-- **Is this supposed to be a new Tagalog benchmark?**
-
-
-- **Can I use this dataset to train models in production?**
-
-- **Do you know of any other Tagalog datasets?**
-
-
+### <a id="final-thoughts"></a> Final thoughts [&crarr;](#toc)
 
 
 
@@ -613,11 +656,14 @@ short description
 
 - <a id="conneau2019xlm">Conneau, Alexis, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume Wenzek, Francisco Guzmán, Edouard Grave, Myle Ott, Luke Zettlemoyer, and Veselin Stoyanov.</a> "Unsupervised cross-lingual representation learning at scale." *arXiv preprint arXiv:1911.02116* (2019).
 -  <a id="mortensen">David Mortensen.</a>, *Undated*. Low-Resource NLP. Algorithms for Natural Language Processing [[Slides]](http://demo.clab.cs.cmu.edu/algo4nlp20/slides/low-resource-nlp.pdf)
+- <a id="gorman2019standard">Kyle Gorman and Steven Bedrick.</a> 2019. We Need to Talk about Standard Splits. In *Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics*, pages 2786–2791, Florence, Italy. Association for Computational Linguistics.
 - <a id="cruz2022tlunified">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2022. [Improving Large-scale Language Models and Resources for Filipino](https://aclanthology.org/2022.lrec-1.703/). In *Proceedings of the Thirteenth Language Resources and Evaluation Conference*, pages 6548–6555, Marseille, France. European Language Resources Association.
 - <a id="cruz2019wikitext">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2019. [Evaluating Language Model Finetuning Techniques for Low-resource Languages](https://arxiv.org/abs/1907.00409) *arXiv:1907.00409*.
 - <a id="liu2019roberta">Liu, Yinhan, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, and Veselin Stoyanov.</a> "Roberta: A robustly optimized bert pretraining approach." *arXiv preprint arXiv:1907.11692* (2019).
 - <a id="joshi2021state">Pratik Joshi, Sebastin Santy, Amar Budhiraja, Kalika Bali, and Monojit Choudhury.</a> 2020. The State and Fate of Linguistic Diversity and Inclusion in the NLP World. In *Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics*, pages 6282–6293, Online. Association for Computational Linguistics.
 - <a id="artstein2017inter">Ron Artstein</a>. Inter-annotator Agreement. In: Ide Nancy & Pustejovsky James (eds.) *Handbook of Linguistic Annotation.* Springer, Dordrecht, 2017. DOI 10.1007/978-94-024-0881-2.
+- <a id="sogaard2021random">Anders Søgaard, Sebastian Ebert, Jasmijn Bastings, and Katja Filippova.</a> 2021. We Need To Talk About Random Splits. In *Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume*, pages 1823–1832, Online. Association for Computational Linguistics.
+- <a id="vajjala2022sota">Sowmya Vajjala, and Ramya Balasubramaniam.</a> "What do we Really Know about State of the Art NER?." *arXiv preprint arXiv:2205.00034* (2022).
 - <a id="pan2017wikiann">Xiaoman Pan, Boliang Zhang, Jonathan May, Joel Nothman, Kevin Knight, and Heng Ji.</a> 2017. [Cross-lingual Name Tagging and Linking for 282 Languages](https://aclanthology.org/P17-1178). In *Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 1946–1958, Vancouver, Canada. Association for Computational Linguistics.
 - <a id="tsvetkov2017opportunities">Yulia Tsvetkov</a>, 2017. Opportunities and Challenges in Working with Low-Resource Languages. Language Technologies Institute, Carnegie Mellon University. [[Slides]](https://www.cs.cmu.edu/~ytsvetko/jsalt-part1.pdf). 
 
