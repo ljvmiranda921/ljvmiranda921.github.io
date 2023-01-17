@@ -673,7 +673,9 @@ annotating.
 
 ### <a id="final-thoughts"></a> Final thoughts [&crarr;](#toc)
 
+TODO
 
+<!--
 In Tagalog, we have this word called diskarte. There is no direct translation in
 English, but I can describe it loosely as resourcefulness and creativity. It's
 not a highly-cognitive trait: smart people may be bookish, but not madiskarte.
@@ -710,6 +712,7 @@ dependency parser and POS tagger from Universal Dependencies in the future.
 
 That's all for now. Feel free to hit me up if you have any questions and want to
 collaborate! Maraming salamat!
+-->
 
 
 
