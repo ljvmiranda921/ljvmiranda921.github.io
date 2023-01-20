@@ -20,10 +20,9 @@ noticed that research progress for each institution is disconnected from one
 another. I definitely like what's happening in
 [Masakhane](https://www.masakhane.io/) for African languages and
 [IndoNLP](https://indonlp.github.io/) for Indonesian. I think they are good
-community models to follow. In the future, wouldn't it be great if [Komisyon sa
-Wikang Filipino](https://kwf.gov.ph/) had a dedicated computational linguistics
-group? Tagalog is not the only language in the Philippines, and being able to
-solve one Filipino language at a time would be nice.
+community models to follow. Lastly, Tagalog is not the only language in the
+Philippines, and being able to solve one Filipino language at a time would be
+nice.
 
 Right now, I'm working on
 [calamanCy](https://github.com/ljvmiranda921/calamanCy), my attempt to create
