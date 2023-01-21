@@ -408,7 +408,7 @@ weights from raw data:
 [`PretrainCharacters`](https://spacy.io/api/architectures#pretrain_chars) and
 [`PretrainVectors`](https://spacy.io/api/architectures#pretrain_vectors). Both
 use a trick called language modeling with approximate outputs (LMAO), in which
-we force the network to model something about word cooccurrence. 
+we force the network to model something about word co-occurrence. 
 
 Using their default values, I ran an experiment that compares the two. Similar
 to the previous experiment, I also removed overlaps between the final dataset
