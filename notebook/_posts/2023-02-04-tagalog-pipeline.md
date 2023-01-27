@@ -211,7 +211,7 @@ project](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_cala
 | Development Set | $$782$$      |  $$25007$$ |  $$793$$ |  $$392$$ |  $$409$$ |
 | Test Set        | $$782$$      |  $$25153$$ |  $$818$$  | $$423$$ |  $$438$$ |
 
-**Table 2:** Dataset statistics for v1.0 of `tl_tlunified_cold` 
+**Table 2:** Dataset statistics for v1.0 of `tl_tlunified_gold` 
 {:style="text-align: center;"}
 
 ### <a id="benchmarked"></a> ...then benchmarked it with baseline NER approaches [&crarr;](#toc)
@@ -243,7 +243,8 @@ can help push performance further:
 | Supervised learning | Baseline + fastText              | Source fastText vectors for the downstream NER task.                     |
 | Supervised learning | Basline + fastText + pretraining | Pretrain spaCy's token-to-vector layer while sourcing fastText vectors.  |
 
-**Table 3:** Experimental setup for word vectors
+**Table 3:** Experimental setup for word vectors. I will use the [default spaCy
+hyperparameters](https://spacy.io/usage/training#config) for all these experiments.
 {:style="text-align: center;"}
 
 
@@ -326,13 +327,14 @@ vectors and pretraining can improve F1-score** by at least 2pp.
 | Setup                                   | Precision                | Recall                    | F1-score                   |
 |-----------------------------------------|--------------------------|---------------------------|----------------------------|
 | Baseline                                | $$0.87\pm0.01$$          |  $$0.87\pm0.01$$          |  $$0.87\pm0.00$$           |
-| Baseline + fastText*                    | $$0.89\pm0.01$$          |  $$0.86\pm0.01$$          |  $$0.88\pm0.00$$           |
+| Baseline + fastText*                    | $$\mathbf{0.89\pm0.01}$$ |  $$0.86\pm0.01$$          |  $$0.88\pm0.00$$           |
 | Baseline + fastText* + pretraining      | $$\mathbf{0.89\pm0.01}$$ |  $$\mathbf{0.89\pm0.01}$$ |  $$\mathbf{0.89\pm0.00}$$  |
 
 <p>* 714k keys and unique vectors. Vectors were sourced from the fastText website.</p>
 {:style="text-align: left; font-size: 14px;"}
 
-**Table 5:** Pipeline performance. Evaluated on the development set.
+**Table 5:** Pipeline performance. Evaluated on the development set. Using
+*default hyperparameters.
 {:style="text-align: center;"}
 
 #### On static vectors: it is worth training floret vectors [&crarr;](#toc)
@@ -356,8 +358,8 @@ in the table below:
 | Word Vectors                                  | Unique Vectors*     | Precision                | Recall                   | F1-score                 |
 |-----------------------------------------------|---------------------|--------------------------|--------------------------|--------------------------|
 | fastText (default: CommonCrawl + Wikipedia)   | $$714k$$            | $$\mathbf{0.89\pm0.01}$$ | $$0.86\pm0.01$$          | $$\mathbf{0.88\pm0.00}$$ |
-| fastText (TLUnified)                          | $$566k$$            | $$0.89\pm0.01$$          | $$\mathbf{0.88\pm0.00}$$ | $$0.88\pm0.01$$          |
-| floret (TLUnified)                            | $$\mathbf{200k}$$   | $$0.88\pm0.01$$          | $$0.88\pm0.01$$          | $$0.88\pm0.00$$          |
+| fastText (TLUnified)                          | $$566k$$            | $$\mathbf{0.89\pm0.01}$$ | $$\mathbf{0.88\pm0.00}$$ | $$\mathbf{0.88\pm0.01}$$ |
+| floret (TLUnified)                            | $$\mathbf{200k}$$   | $$0.88\pm0.01$$          | $$\mathbf{0.88\pm0.01}$$ | $$\mathbf{0.88\pm0.00}$$ |
 
 <p>* This time, we're talking about unique vectors, not keys. <a href="https://spacy.io/api/vectors#n_keys">Several keys can map to the same vectors</a>, and floret doesn't use the keys table.</p>
 {:style="text-align: left; font-size: 14px;"}
@@ -387,7 +389,7 @@ sizes of 100k, 50k, and 25k:
 | Unique Vectors  | Precision                | Recall                   | F1-score                 |
 |-----------------|--------------------------|--------------------------|--------------------------|
 | $$200k$$        | $$\mathbf{0.88\pm0.01}$$ | $$\mathbf{0.88\pm0.01}$$ | $$\mathbf{0.88\pm0.00}$$ |
-| $$100k$$        | $$0.88\pm0.00$$          | $$0.87\pm0.00$$          | $$0.88\pm0.01$$          |
+| $$100k$$        | $$\mathbf{0.88\pm0.00}$$ | $$0.87\pm0.00$$          | $$\mathbf{0.88\pm0.01}$$ |
 | $$50k$$         | $$0.86\pm0.01$$          | $$0.85\pm0.01$$          | $$0.85\pm0.00$$          |
 | $$25k$$         | $$0.82\pm0.02$$          | $$0.82\pm0.01$$          | $$0.81\pm0.00$$          |
 
@@ -418,7 +420,7 @@ and the pretraining corpus to ensure that they won't affect the results:
 | Pretraining objective  | Precision                | Recall                    | F1-score                   |
 |------------------------|--------------------------|---------------------------|----------------------------|
 | `PretrainCharacters`   | $$0.89\pm0.01$$          |  $$\mathbf{0.89\pm0.01}$$ |  $$0.89\pm0.00$$           |
-| `PretrainVectors`      | $$\mathbf{0.90\pm0.01}$$ |  $$0.89\pm0.00$$          |  $$\mathbf{0.90\pm0.00}$$  |
+| `PretrainVectors`      | $$\mathbf{0.90\pm0.01}$$ |  $$\mathbf{0.89\pm0.00}$$ |  $$\mathbf{0.90\pm0.00}$$  |
 
 
 **Table 7:**  Performance comparison between different pretraining objectives (characters vs. vectors). Evaluated on the development set.
