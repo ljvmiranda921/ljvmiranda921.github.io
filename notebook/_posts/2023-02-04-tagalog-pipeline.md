@@ -641,9 +641,10 @@ perturbations and [irregular train-test splits](/notebook/2022/08/02/splits/) ([
 
 ### <a id="caveats"></a> Caveats [&crarr;](#toc)
 
-As I've prefaced at the beginning of this blog post, I do not recommend using this for production.
-This NLP pipeline is still a work in progress, and I'm developing ways to make the model more robust.
-Here are the limitations of this work:
+As I've prefaced at the beginning of this blog post, I do not recommend using
+this for production.  This NLP pipeline is still a work in progress, and I'm
+developing ways to make the model more robust.  Here are the limitations of this
+work:
 
 - The gold-annotated dataset was labeled by a single annotator. Ideally, this would be done by multiple 
     annotators to limit bias and errors. You can get the annotated dataset now but use it with caution.
@@ -674,7 +675,9 @@ exploring model-based techniques like cross-lingual transfer learning and
 multilingual NLP to "get around" the data bottleneck. After three months (twelve
 weekends, to be specific) of labeling, I realized how long and costly the
 process was. I still believe in getting gold-standard annotations, but I also
-want to balance this approach with model-based solutions. 
+want to balance this approach with model-based solutions. However, I still
+believe that getting enough annotations to support a structured dataset
+evaluation is worth it.
 
 I wish we had more consolidated efforts to work on Tagalog NLP. Right now, I
 noticed that research progress for each institution is disconnected from one
