@@ -197,9 +197,9 @@ which uses [Prodigy for quotation
 detection](https://explosion.ai/blog/guardian). 
 
 For TLUnified, I used three labels for annotation:
-- PER: person entities limited to humans. It may be a single individual or group (e.g., *Juan de la Cruz*, *Nene*, *mga abogado*).
-- ORG: organization entities are limited to corporations, agencies, and other groups of people defined by an organizational structure (e.g., *United Nations*, *DPWH*, *Meralco*).
-- LOC: location entities are geographical regions, areas, and landmasses. Subtypes of geo-political entities (GPE) are also included within this group (e.g., *Pilipinas*, *Manila*, *Luzon*)
+- **PER**: person entities limited to humans. It may be a single individual or group (e.g., *Juan de la Cruz*, *Nene*, *mga abogado*).
+- **ORG**: organization entities are limited to corporations, agencies, and other groups of people defined by an organizational structure (e.g., *United Nations*, *DPWH*, *Meralco*).
+- **LOC**: location entities are geographical regions, areas, and landmasses. Subtypes of geo-political entities (GPE) are also included within this group (e.g., *Pilipinas*, *Manila*, *Luzon*)
 
 Again, you can check the [full annotation
 guidelines](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus/guidelines)
