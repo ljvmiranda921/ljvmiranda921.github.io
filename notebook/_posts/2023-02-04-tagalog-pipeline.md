@@ -147,10 +147,14 @@ data for any language. We also have TLUnified ([Cruz and Cheng,
 2022](#cruz2022tlunified)) and WikiText TL-39 ([Cruz and Cheng,
 2019](#cruz2019wikitext)) that are much more recent. For my experiments, I will
 use the TLUnified dataset because one of its subdomains (news) resembles that of
-standard NER benchmarks like CoNLL.
+standard NER benchmarks like CoNLL. It contains reports from 2009 to 2020 that
+were scraped from major Filipino-language news sites, broadsheet and associated
+tabloid, in the Philippines (e.g., CNN Philippines, ABS-SCBN, Manila Times,
+etc.). 
 
 > I will be using the TLUnified dataset as it's more recent, and one of its
 > subdomains resemble that of standard NER benchmarks like CoNLL.
+
 
 My process goes like this: I will train a model from WikiANN and have it 
 predict entities for TLUnified. Then, I will correct the predictions using 
@@ -190,7 +194,16 @@ Reiter has an [excellent guide](https://sharedtasksinthedh.github.io/2017/10/01/
 developing these. Lastly, I also took inspiration from [*The Guardian*'s
 work](https://github.com/JournalismAI-2021-Quotes/quote-extraction/blob/28f429b260fc30dd884cd4d0a8ff0cb9047f0fe4/annotation_rules/Quote%20annotation%20guide.pdf),
 which uses [Prodigy for quotation
-detection](https://explosion.ai/blog/guardian).
+detection](https://explosion.ai/blog/guardian). 
+
+For TLUnified, I used three labels for annotation:
+- PER: person entities limited to humans. It may be a single individual or group (e.g., *Juan de la Cruz*, *Nene*, *mga abogado*).
+- ORG: organization entities are limited to corporations, agencies, and other groups of people defined by an organizational structure (e.g., *United Nations*, *DPWH*, *Meralco*).
+- LOC: location entities are geographical regions, areas, and landmasses. Subtypes of geo-political entities (GPE) are also included within this group (e.g., *Pilipinas*, *Manila*, *Luzon*)
+
+Again, you can check the [full annotation
+guidelines](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus/guidelines)
+to see the nuances in labeling these entities.
 
 Since there are still gaps in my annotation process, the annotations produced in
 v1.0 of `tl_tlunified_gold` are **not ready** for production. Getting multiple
