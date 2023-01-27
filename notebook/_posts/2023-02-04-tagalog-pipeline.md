@@ -337,6 +337,11 @@ vectors and pretraining can improve F1-score** by at least 2pp.
 *default hyperparameters.
 {:style="text-align: center;"}
 
+It's also worth noting that the baseline result (87% F-score) where we trained a
+model without any static vectors nor pretrained weights performs well! Of
+course, we want to push these scores further so in the next sections, I'll be
+exploring alternative configurations for our word vector pipeline.
+
 #### On static vectors: it is worth training floret vectors [&crarr;](#toc)
 
 In the previous experiment, I used the fastText vectors provided by the
