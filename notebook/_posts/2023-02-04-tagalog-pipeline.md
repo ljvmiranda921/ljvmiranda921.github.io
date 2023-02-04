@@ -562,7 +562,7 @@ Let's evaluate their performance on the test set:
 | tl_tlunified_trf (large) | $$0.89\pm0.01$$ | $$0.89\pm0.00$$ | $$0.90\pm0.02$$ |
 
 **Table 9:**  Performance comparison for the word vector and transformer-based
-*pipelines. Evaluated on the test set.
+pipelines. Evaluated on the test set.
 {:style="text-align: center;"}
 
 We can see a performance difference between the transformer and word vector
@@ -594,7 +594,7 @@ set has 784 documents.
 | tl_tlunified_trf (large) | $$0.88\pm0.02$$ | $$0.88\pm0.00$$ | $$0.88\pm0.00$$ |
 
 **Table 11:**  Performance comparison for the word vector and transformer-based
-*pipelines. Evaluated on the unseen test set.
+pipelines. Evaluated on the unseen test set.
 {:style="text-align: center;"}
 
 The scores are what we expect. All pipelines dropped their performance when they
