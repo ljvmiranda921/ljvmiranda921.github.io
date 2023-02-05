@@ -679,8 +679,9 @@ in English, but I can describe it loosely as resourcefulness and creativity.
 It's not a highly-cognitive trait: smart people may be bookish, but not
 *madiskarte*.  It's more practical, a form of street smarts, even. *Diskarte* is
 a highly-Filipino trait, borne from our need to solve things creatively in the
-presence of constraints. I mention this because working in Tagalog, or any
-low-resource language, requires a little *diskarte*, and I enjoy it! 
+presence of constraints ([Morales, 2017](#morales2017diskarte)). I mention this
+because working in Tagalog, or any low-resource language, requires a little
+*diskarte*, and I enjoy it! 
 
 There are many exciting ways to tackle Tagalog NLP. Right now, I'm taking the
 standard labeling, training, and evaluation approach. However, I'm interested in
@@ -729,4 +730,5 @@ collaborate! *Maraming salamat!*
 - <a id="vajjala2022sota">Sowmya Vajjala, and Ramya Balasubramaniam.</a> "What do we Really Know about State of the Art NER?." *arXiv preprint arXiv:2205.00034* (2022).
 - <a id="pan2017wikiann">Xiaoman Pan, Boliang Zhang, Jonathan May, Joel Nothman, Kevin Knight, and Heng Ji.</a> 2017. [Cross-lingual Name Tagging and Linking for 282 Languages](https://aclanthology.org/P17-1178). In *Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 1946–1958, Vancouver, Canada. Association for Computational Linguistics.
 - <a id="tsvetkov2017opportunities">Yulia Tsvetkov</a>, 2017. Opportunities and Challenges in Working with Low-Resource Languages. Language Technologies Institute, Carnegie Mellon University. [[Slides]](https://www.cs.cmu.edu/~ytsvetko/jsalt-part1.pdf). 
+- <a id="morales2017diskarte">Marie Rose H. Morales</a>, 2017. Defining Diskarte: Exploring Cognitive Processes, Personality Traits, and Social Constraints in Creative Problem Solving, *Philippine Journal of Psychology* vol. 50, no. 2.
 
