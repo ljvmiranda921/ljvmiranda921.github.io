@@ -20,3 +20,16 @@ excerpt: |
     apply chain-of-thought to our prompts? What's the benefit of using this
     technique?
 ---
+
+<span class="firstcharacter">R</span>ecently, I've been working on a project...
+
+<!--
+Few-shot vs. chain of thought (table)
+- types of examples
+
+
+HCI
+- annotation disagreement? look for RRL here
+- ...
+
+-->
