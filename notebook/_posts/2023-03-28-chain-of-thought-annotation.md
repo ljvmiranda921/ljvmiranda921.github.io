@@ -21,7 +21,36 @@ excerpt: |
     technique?
 ---
 
-<span class="firstcharacter">R</span>ecently, I've been working on a project...
+<span class="firstcharacter">R</span>ecently, I've been working on a
+[project](https://github.com/explosion/prodigy-openai-recipes/) that involves
+prompting large language models (LLM) like GPT-3 to obtain zero- and few-shot
+annotations for named entity recognition and text categorization. There, we
+demonstrated how prompt-based interfaces found in the likes of
+[ChatGPT](https://openai.com/blog/chatgpt/) can still be useful for structured
+prediction tasks. Usually, a prompt goes like this (as in the case of text
+categorization):
+
+```
+fsfw
+```
+
+Then GPT-3 will return something like:
+
+```
+Answer:
+Reason: 
+```
+
+There are two properties in our prompt that I want to highlight:
+- **We provided exemplars to guide the LLM on how to respond.** In prompt literature, we call this technique as few-shot prompting. 
+- **We asked GPT-3 to provide a "reason" why it assigned that label for the given text.** I don't want to delve into the nuance of *reasoning* in LLMs (I have [unfinished thoughts](/notebook/2022/12/01/wika-at-kahulugan/) about it). For now, treat this more as a UI layer for reducing a human annotator's cognitive load.
+
+In this blog post, I will investigate how we can combine
+
+
+
+
+<!-- from few-shot to chain of thought -->
 
 <!--
 Few-shot vs. chain of thought (table)
