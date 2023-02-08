@@ -67,11 +67,13 @@ reason: The text is a recipe that talks about cooking fried rice.
 ```
 
 I want to highlight two properties in our prompt:
-- **We provided exemplars to guide the LLM on how to respond.** In prompt literature, we call this technique as few-shot prompting (Brown, et al., 2020). 
+- **We provided exemplars to guide the LLM on how to respond.** In prompt
+literature, we call this technique as few-shot prompting. Large language models
+tend to learn well in this setting ([Brown, et al., 2020](#brown2020fewshot)). 
 - **We asked GPT-3 to provide a "reason" why it assigned that label for the given text.** I don't want to delve into the nuance of *reasoning* in LLMs (I have [unfinished thoughts](/notebook/2022/12/01/wika-at-kahulugan/) about it). For now, treat this more as a UI layer for reducing a human annotator's cognitive load.
 
 In this blog post, I want to investigate how we can reinforce these properties
-together. Here, I turn to **chain-of-thought prompting** (Wei, et al., 2023) to
+together. Here, I turn to **chain-of-thought prompting** ([Wei, et al., 2023](#wei2023chain)) to
 provide insights in accomplishing this task. My thesis is that **annotation is
 also a reasoning task** just like arithmetic, common-sense, and symbolic
 reasoning. We can improve annotation accuracy by applying the same
@@ -119,3 +121,16 @@ HCI
 - ...
 
 -->
+
+## References
+
+- <a id="brown2020fewshot">Brown, T.B., Mann, B., Ryder, N., Subbiah, M.,
+Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A.,
+Agarwal, S., Herbert-Voss, A., Krueger, G., Henighan, T.J., Child, R., Ramesh,
+A., Ziegler, D.M., Wu, J., Winter, C., Hesse, C., Chen, M., Sigler, E., Litwin,
+M., Gray, S., Chess, B., Clark, J., Berner, C., McCandlish, S., Radford, A.,
+Sutskever, I., & Amodei, D.</a> (2020). Language Models are Few-Shot Learners.
+*arXiv, abs/2005.14165.*
+- <a id="wang2023chain">Wei, J., Wang, X., Schuurmans, D., Bosma, M., Chi, E.H.,
+Le, Q., & Zhou, D.</a> (2022). Chain of Thought Prompting Elicits Reasoning in
+Large Language Models. *ArXiv, abs/2201.11903.*
