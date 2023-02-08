@@ -24,21 +24,46 @@ excerpt: |
 <span class="firstcharacter">R</span>ecently, I've been working on a
 [project](https://github.com/explosion/prodigy-openai-recipes/) that involves
 prompting large language models (LLM) like GPT-3 to obtain zero- and few-shot
-annotations for named entity recognition and text categorization. There, we
+annotations for named entity recognition and text categorization. We
 demonstrated how prompt-based interfaces found in the likes of
-[ChatGPT](https://openai.com/blog/chatgpt/) can still be useful for structured
-prediction tasks. Usually, a prompt goes like this (as in the case of text
-categorization):
+[ChatGPT](https://openai.com/blog/chatgpt/) can still be useful even for
+structured prediction tasks. Usually, a prompt goes like this (as in the case of
+text categorization):
 
 ```
-fsfw
+From the text below, determine whether or not it contains a recipe. 
+If it is a recipe, answer ACCEPT. If not, answer REJECT.
+
+Your answer should only be in the following format:
+
+answer: <string>
+reason: <string>
+
+Below are a some examples (only use these as a guide):
+
+Text:
+"""
+Cream cheese is a delicious food.
+"""
+
+answer: REJECT
+reason: The text doesn't talk about a recipe, it only 
+describes cream cheese as a delicious food.
+
+Here is the text that needs classification
+
+Text:
+"""
+Just add 1 clove of garlic, 2 cups of rice, then heat them in a pan
+with butter to make fried rice.
+"""
 ```
 
 Then GPT-3 will return something like:
 
 ```
-Answer:
-Reason: 
+answer: ACCEPT
+reason: The text is a recipe that talks about cooking fried rice.
 ```
 
 I want to highlight two properties in our prompt:
@@ -52,8 +77,9 @@ also a reasoning task** just like arithmetic, common-sense, and symbolic
 reasoning. We can improve annotation accuracy by applying the same
 chain-of-thought techniques in our prompts.
 
-> My thesis: annotation is also a reasoning task... we can improve annotation accuracy
-> by applying the same chain-of-thought techniques in our prompts.
+> My thesis is that annotation is also a reasoning task... we can improve
+> annotation accuracy by applying the same chain-of-thought techniques in our
+> prompts.
 
 ## Annotation is also a reasoning task
 <!--
