@@ -41,7 +41,7 @@ Answer:
 Reason: 
 ```
 
-There are two properties in our prompt that I want to highlight:
+I want to highlight two properties in our prompt:
 - **We provided exemplars to guide the LLM on how to respond.** In prompt literature, we call this technique as few-shot prompting (Brown, et al., 2020). 
 - **We asked GPT-3 to provide a "reason" why it assigned that label for the given text.** I don't want to delve into the nuance of *reasoning* in LLMs (I have [unfinished thoughts](/notebook/2022/12/01/wika-at-kahulugan/) about it). For now, treat this more as a UI layer for reducing a human annotator's cognitive load.
 
@@ -55,8 +55,13 @@ chain-of-thought techniques in our prompts.
 > My thesis: annotation is also a reasoning task... we can improve annotation accuracy
 > by applying the same chain-of-thought techniques in our prompts.
 
+## Annotation is also a reasoning task
 <!--
 Annotation is also a reasoning task
+
+- initial thoughts on annotation: drone work
+- annotation guidelines
+- cite papers
 -->
 
 
