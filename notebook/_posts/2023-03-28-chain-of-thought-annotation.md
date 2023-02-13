@@ -84,6 +84,8 @@ chain-of-thought techniques in our prompts.
 > prompts.
 
 ## Annotation is also a reasoning task
+
+
 <!--
 Annotation is also a reasoning task
 
@@ -91,6 +93,17 @@ Annotation is also a reasoning task
 - annotation guidelines
 - cite papers
 -->
+
+## Chain-of-thought prompting to ellicit LLM reasoning
+
+<!-- give quick background of the paper -->
+
+### Applied to annotation
+
+
+<!-- this is where you get creative -->
+
+
 
 
 
