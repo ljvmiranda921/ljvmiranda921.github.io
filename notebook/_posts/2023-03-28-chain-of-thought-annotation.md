@@ -85,6 +85,8 @@ chain-of-thought techniques in our prompts.
 
 ## Annotation is also a reasoning task
 
+Back then, I thought of data annotation as a grunt task of mindlessly assigning
+labels to specific examples. *I don't need to think hard about it, anyone can do it!*
 
 <!--
 Annotation is also a reasoning task
