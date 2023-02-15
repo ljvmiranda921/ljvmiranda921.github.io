@@ -70,32 +70,27 @@ literature, we call this technique as few-shot prompting. Turns out, large
 language models tend to learn well in this setting ([Brown, et al.,
 2020](#brown2020fewshot)). 
 - **We asked GPT-3 to provide a "reason" why it assigned that label for the
-given text.** As you'll see later on, we want to improve how an LLM produces 
-this output via a prompting technique.
+given text.** I don't want to go down the rabbit hole of whether LLMs can reason. Instead, think
+of this as a UI layer that a human annotator can choose to ignore.
 
 In this blog post, I want to leverage these properties for more complex
 annotation tasks. My goal is to demonstrate how we can leverage large language
-models like GPT-3 as a UX layer to reduce a human annotator's cognitive load.
+models like GPT-3 as a viable affordance to reduce a human annotator's cognitive load.
 Specifically, I want to explore the application of <u>chain-of-thought
 prompting</u> ([Wei, et al., 2023](#wei2023chain)) in the context of annotating
 <u>argument mining</u> datasets.
 
-
-
 ## Annotating argument mining datasets is complex... 
 
-In argument mining literature, an argument consists of a <u>claim</u>
-and a <u>premise</u> ([Palau and Moens, 2009](#palau2009argument)). There are
-many different variations of this task<!-- cite lit review -->, but in our
-case, we formulate the problem as a text categorization task, i.e.,
-determine whether a given text contains a claim.
-
-
-Unfortunately, NLP papers have varying definitions of a claim ([Jakobsen, et
-al., 2022](jakobsen2022sensitivity)).
+In literature, an argument consists of a <u>claim</u> and a <u>premise</u>
+([Palau and Moens, 2009](#palau2009argument)). There are many different
+variations of this task ([Lawrence and Reed, 2019](#lawrence2019argument)), but
+in our case, we formulate argument mining as a text categorization problem, i.e., determine
+whether a given text contains a *claim.* Unfortunately, NLP papers have varying
+definitions of a claim ([Jakobsen, et al., 2022](jakobsen2022sensitivity)),
+making the annotation process all the more complex.
 
 <!-- 
-
 give examples from different papers 
 ...this makes annotating it so complex...
 (maybe talk about inter-annotator agreement in some argument mining datasets)
@@ -127,9 +122,6 @@ why is it complex?
 ## ...we can use chain-of-thought prompting to reduce cognitive load 
 
 <!-- give quick background of the paper -->
-
-### Applied to annotation
-
 
 <!-- this is where you get creative -->
 
@@ -176,6 +168,9 @@ mining: the detection, classification and structure of arguments in text.
 - <a id="jakobsen2022sensitivity">Thorn Jakobsen, T.S., Barrett, M., Søgaard,
 A., & Lassen, D.S.</a> (2022). The Sensitivity of Annotator Bias to Task
 Definitions in Argument Mining. *Law*.
+- <a id="lawrence2019argument">Lawrence, J., Reed, C.</a>(2019) Argument Mining:
+A Survey. *Computational Linguistics* 45 (4): 765–818. doi:
+https://doi.org/10.1162/coli_a_00364.
 - <a id="wang2023chain">Wei, J., Wang, X., Schuurmans, D., Bosma, M., Chi, E.H.,
 Le, Q., & Zhou, D.</a> (2022). Chain of Thought Prompting Elicits Reasoning in
 Large Language Models. *ArXiv, abs/2201.11903.*
