@@ -66,56 +66,46 @@ reason: The text is a recipe that talks about cooking fried rice.
 
 I want to highlight two properties in our prompt:
 - **We provided exemplars to guide the LLM on how to respond.** In prompt
-literature, we call this technique as few-shot prompting. Large language models
-tend to learn well in this setting ([Brown, et al., 2020](#brown2020fewshot)). 
+literature, we call this technique as few-shot prompting. Turns out, large
+language models tend to learn well in this setting ([Brown, et al.,
+2020](#brown2020fewshot)). 
 - **We asked GPT-3 to provide a "reason" why it assigned that label for the
-given text.** I don't want to delve into the nuance of *reasoning* in LLMs (I
-have [unfinished thoughts](/notebook/2022/12/01/wika-at-kahulugan/) about it).
-For now, treat this more as a UI layer for reducing a human annotator's
-cognitive load.
+given text.** As you'll see later on, we want to improve how an LLM produces 
+this output via a prompting technique.
 
-In this blog post, I want to investigate how we can reinforce these properties
-together. Here, I turn to <u>chain-of-thought prompting</u> ([Wei, et al.,
-2023](#wei2023chain)) to provide insights into accomplishing this task. My
-thesis is that **annotation is a reasoning task,** and we can improve the
-quality of our annotations by applying chain-of-thought techniques in our
-prompts. I will be using <u>argument mining</u> as an illustration for it
-involves some level of explicit reasoning.  
-
-> Annotation is a reasoning task, and we can use chain-of-thought
-> prompting to improve the quality of our annotations 
+In this blog post, I want to leverage these properties for more complex
+annotation tasks. My goal is to demonstrate how we can leverage large language
+models like GPT-3 as a UX layer to reduce a human annotator's cognitive load.
+Specifically, I want to explore the application of <u>chain-of-thought
+prompting</u> ([Wei, et al., 2023](#wei2023chain)) in the context of annotating
+<u>argument mining</u> datasets.
 
 
-## Annotation is a reasoning task...
 
-I first thought data annotation is a boring task where you *just* assign labels
-to examples. However, as I worked on different NLP projects, I learned that
-there's more to it. Sure, labeling can be repetitive, but it's not mindless.
-Consider this text:
+## Annotating argument mining datasets is complex... 
 
-```
-The White House wants to end the public health emergency. 
-```
+In argument mining literature, an argument consists of a <u>claim</u>
+and a <u>premise</u> ([Palau and Moens, 2009](#palau2009argument)). There are
+many different variations of this task<!-- cite lit review -->, but in our
+case, we formulate the problem as a text categorization task, i.e.,
+determine whether a given text contains a claim.
 
-What kind of entity is *The White House*? One can say that in the context of the
-sentence, it is an organization. However, we can also argue that by virtue of
-its lexical definition, it is a location. There's definitely some nuance to how
-we assign labels to our texts. This is *just* NER, things get trickier when we
-get to argument mining.
 
-### On argument mining
-
-Arguments consist of a <u>claim</u> and a <u>premise</u> ([Palau and Moens,
-2009](#palau2009argument)). In an argument mining task, our goal is to determine
-whether a given text contains a claim. We can also formulate this task as a span
-labeling problem, but for the purposes of this blog post we'll limit the scope
-to text categorization.
-
-<!-- show example? -->
-
-Unfortunately, NLP papers have varying definitions of a *claim* ([Jakobsen, et
+Unfortunately, NLP papers have varying definitions of a claim ([Jakobsen, et
 al., 2022](jakobsen2022sensitivity)).
-<!-- give examples from different papers -->
+
+<!-- 
+
+give examples from different papers 
+...this makes annotating it so complex...
+(maybe talk about inter-annotator agreement in some argument mining datasets)
+
+the big idea is to help annotators reduce cognitive load by
+adding a UI-suggestions layer to their annotations
+
+
+RISKS: it's also possible that the LLM can influence the results.
+-->
 
 
 <!-- 
@@ -124,11 +114,17 @@ there are different definitions of a claim
 that's why they have different annotation guidelines
 can we leverage these guidelines to obtain few-shot annotations from an LLM?
 
+
+why is it complex?
+- varying definitions
+- implicit and explicit claims?
+- can introduce bias? not sure how to talk about this one
+
 -->
 
 
 
-## ...and we can use chain-of-thought to ellicit reasoning in our few-shot suggestions
+## ...we can use chain-of-thought prompting to reduce cognitive load 
 
 <!-- give quick background of the paper -->
 
