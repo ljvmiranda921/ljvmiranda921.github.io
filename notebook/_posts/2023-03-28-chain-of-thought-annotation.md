@@ -82,7 +82,7 @@ Specifically, I want to explore the application of <u>chain-of-thought
 prompting</u> ([Wei, et al., 2023](#wei2023chain)) in the context of annotating
 <u>argument mining</u> datasets.
 
-## Annotating argument mining datasets is complex... 
+### Annotating argument mining datasets is a complex task... 
 
 In literature, an argument consists of a <u>claim</u> and a <u>premise</u>
 ([Palau and Moens, 2009](#palau2009argument)). There are many different
@@ -121,7 +121,7 @@ why is it complex?
 
 
 
-## ...we can use chain-of-thought prompting to reduce cognitive load 
+### ...but we can use chain-of-thought prompting to reduce a human annotator's cognitive load 
 
 <!-- give quick background of the paper -->
 
