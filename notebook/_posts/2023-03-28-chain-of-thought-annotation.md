@@ -10,13 +10,15 @@ published: true
 tags: [nlp, llm, data annotation, prodigy, natural language processing, chatgpt, gpt-j, gpt-3]
 header-img: /assets/png/tagalog-gold-standard/header.png
 description: |
-    Annotation is a reasoning task, and we can apply the same prompting
-    techniques to improve their quality. In this blog post, I'll explore how we can use chain-of-thought
-    prompting to get zero- or few-shot annotations in argument mining datasets.
+    In this blog post, I want to demonstrate how we can leverage LLMs like GPT-3
+    as a viable affordance to reduce a human annotator's cognitive load. I do
+    this by exploring the application of chain-of-thought prompting in 
+    annotating argument mining datasets.
 excerpt: |
-    Annotation is a reasoning task, and we can apply the same prompting
-    techniques to improve their quality. In this blog post, I'll explore how we can use chain-of-thought
-    prompting to get zero- or few-shot annotations in argument mining datasets.
+    In this blog post, I want to demonstrate how we can leverage LLMs like GPT-3
+    as a viable affordance to reduce a human annotator's cognitive load. I do
+    this by exploring the application of chain-of-thought prompting in 
+    annotating argument mining datasets.
 ---
 
 <span class="firstcharacter">R</span>ecently, I've been working on a
