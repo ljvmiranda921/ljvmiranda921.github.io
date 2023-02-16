@@ -18,3 +18,7 @@ excerpt: |
     pipeline. I want to talk about training curves, in-depth dataset statistics, and
     some new components (dependency parser and part-of-speech tagger).
 ---
+
+<span class="firstcharacter">F</span>irst off, I'm happy to see such warm
+reaction in my first blog post where I [introduced my work in building a Tagalog
+NLP pipeline](/2023/02/04/tagalog-pipeline/).
