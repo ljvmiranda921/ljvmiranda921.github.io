@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Chain of thought prompting for argument mining annotation"
+title: "Prompting language models for argument mining annotation"
 date: 2023-03-28
 category: notebook
 comments: true
@@ -12,12 +12,12 @@ header-img: /assets/png/tagalog-gold-standard/header.png
 description: |
     In this blog post, I want to demonstrate how we can leverage LLMs like GPT-3
     as a viable affordance to reduce a human annotator's cognitive load. I do
-    this by exploring the application of chain-of-thought prompting in 
+    this by exploring the application of LLM prompting in 
     annotating argument mining datasets.
 excerpt: |
     In this blog post, I want to demonstrate how we can leverage LLMs like GPT-3
     as a viable affordance to reduce a human annotator's cognitive load. I do
-    this by exploring the application of chain-of-thought prompting in 
+    this by exploring the application of LLM prompting in 
     annotating argument mining datasets.
 ---
 
@@ -27,60 +27,38 @@ prompting large language models (LLM) like GPT-3 to obtain zero- and few-shot
 annotations for named entity recognition and text categorization. We
 demonstrated how prompt-based interfaces found in the likes of
 [ChatGPT](https://openai.com/blog/chatgpt/) can still be useful even for
-structured prediction tasks. Usually, a prompt goes like this (as in the case of
-text categorization):
+structured prediction tasks. 
 
-```
-From the text below, determine whether or not it contains a recipe. 
-If it is a recipe, answer ACCEPT. If not, answer REJECT.
+In this blog post, I want to explore how this approach translates to more
+complex annotation tasks such as **argument mining**, where task definitions may
+vary ([Jakobsen, et al., 2022](#jakobsen2022sensitivity)).  I'll be working on a
+portion of the [UKP Sentential Argument Mining
+Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
+al., 2018](#stab2018ukp)), where sentences are categorized either as a
+supporting argument, an attacking argument, or not an argument with respect to a
+given topic. I want to investigate three questions:
 
-Your answer should only be in the following format:
+- **Can LLMs provide extra affordance for annotation?** I'd like to explore UI
+elements in which LLMs can help human annotators reduce their cognitive load when labeling.
+- **Are zero-shot annotations from an LLM reliable?** Here, I'd like to benchmark zero-shot
+annotations from GPT-3 and compare it with some baseline approaches. I don't think we should
+rely on GPT-3 alone to annotate our data, but it doesn't hurt to see if they work.
+- **Can chain-of-thought prompting help?** Chain-of-thought prompting ([Wang, et
+al., 2023](#wang2023chain)) is often seen in reasoning tasks like arithmetic. I
+posit that annotation is also a reasoning task, and chain-of-thought might help.
 
-answer: <string>
-reason: <string>
+For the purposes of this blog post, I will be focusing on the topic of
+<u>minimum wage</u> in the UKP corpus. It's interesting, and the number of
+samples is small enough that I don't have to worry about API costs. 
 
-Below are a some examples (only use these as a guide):
+## Are zero-shot annotations reliable?
 
-Text:
-"""
-Cream cheese is a delicious food.
-"""
+## Can LLMs provide extra affordance?
 
-answer: REJECT
-reason: The text doesn't talk about a recipe, it only 
-describes cream cheese as a delicious food.
+## Can chain-of-thought prompting help?
 
-Here is the text that needs classification
 
-Text:
-"""
-Just add 1 clove of garlic, 2 cups of rice, then heat them in a pan
-with butter to make fried rice.
-"""
-```
-
-Then GPT-3 will return something like:
-
-```
-answer: ACCEPT
-reason: The text is a recipe that talks about cooking fried rice.
-```
-
-I want to highlight two properties in our prompt:
-- **We provided exemplars to guide the LLM on how to respond.** In prompt
-literature, we call this technique as few-shot prompting. Turns out, large
-language models tend to learn well in this setting ([Brown, et al.,
-2020](#brown2020fewshot)). 
-- **We asked GPT-3 to provide a "reason" why it assigned that label for the
-given text.** I don't want to go down the rabbit hole of whether LLMs can reason. Instead, think
-of this as a UI layer that a human annotator can choose to ignore.
-
-In this blog post, I want to leverage these properties for more complex
-annotation tasks. My goal is to demonstrate how we can leverage large language
-models like GPT-3 as a viable affordance to reduce a human annotator's cognitive load.
-Specifically, I want to explore the application of <u>chain-of-thought
-prompting</u> ([Wei, et al., 2023](#wei2023chain)) in the context of annotating
-<u>argument mining</u> datasets.
+<!--
 
 ### Annotating argument mining datasets is a complex task... 
 
@@ -91,6 +69,9 @@ in our case, we formulate argument mining as a text categorization problem, i.e.
 whether a given text contains a *claim.* Unfortunately, NLP papers have varying
 definitions of a claim ([Jakobsen, et al., 2022](jakobsen2022sensitivity)),
 making the annotation process all the more complex.
+
+
+-->
 
 <!-- 
 give examples from different papers 
@@ -120,8 +101,6 @@ why is it complex?
 -->
 
 
-
-### ...but we can use chain-of-thought prompting to reduce a human annotator's cognitive load 
 
 <!-- give quick background of the paper -->
 
@@ -161,9 +140,6 @@ HCI
 
 ## References
 
-- <a id="brown2020fewshot">Brown, T.B., Mann, B., et al.</a> (2020). Language
-Models are Few-Shot Learners.
-*arXiv, abs/2005.14165.*
 - <a id="palau2009argument">Palau, R.M., & Moens, M.</a> (2009). Argumentation
 mining: the detection, classification and structure of arguments in text.
 *International Conference on Artificial Intelligence and Law*.
@@ -173,6 +149,11 @@ Definitions in Argument Mining. In *Proceedings of the 16th Linguistic Annotatio
 - <a id="lawrence2019argument">Lawrence, J., Reed, C.</a>(2019) Argument Mining:
 A Survey. *Computational Linguistics* 45 (4): 765–818. doi:
 https://doi.org/10.1162/coli_a_00364.
+- <a id="stab2018ukp">Stab, C., Miller, T., Schiller, B., Rai, P., and Gurevych,
+I.</a> (2018). Cross-topic argument mining from heterogeneous sources. In
+*Proceedings of the 2018 Conference on Empirical Methods in Natural Language
+Processing*, pages 3664–3674, Brussels, Belgium, October-November. Association
+for Computational Linguistics.
 - <a id="wang2023chain">Wei, J., Wang, X., Schuurmans, D., Bosma, M., Chi, E.H.,
 Le, Q., & Zhou, D.</a> (2022). Chain of Thought Prompting Elicits Reasoning in
 Large Language Models. *ArXiv, abs/2201.11903.*
