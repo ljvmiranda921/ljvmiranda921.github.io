@@ -169,7 +169,7 @@ mining: the detection, classification and structure of arguments in text.
 *International Conference on Artificial Intelligence and Law*.
 - <a id="jakobsen2022sensitivity">Thorn Jakobsen, T.S., Barrett, M., Søgaard,
 A., & Lassen, D.S.</a> (2022). The Sensitivity of Annotator Bias to Task
-Definitions in Argument Mining. *Law*.
+Definitions in Argument Mining. In *Proceedings of the 16th Linguistic Annotation Workshop (LAW-XVI) within LREC2022*, pp. 44-61, Marseille, France. European Language Resources Association.
 - <a id="lawrence2019argument">Lawrence, J., Reed, C.</a>(2019) Argument Mining:
 A Survey. *Computational Linguistics* 45 (4): 765–818. doi:
 https://doi.org/10.1162/coli_a_00364.
