@@ -38,11 +38,13 @@ al., 2018](#stab2018ukp)), where sentences are categorized either as a
 supporting argument, an attacking argument, or not an argument with respect to a
 given topic. I want to investigate three questions:
 
-- **Can LLMs provide extra affordance for annotation?** I'd like to explore UI
-elements in which LLMs can help human annotators reduce their cognitive load when labeling.
-- **Are zero-shot annotations from an LLM reliable?** Here, I'd like to benchmark zero-shot
+- **Can LLMs provide extra affordance?** I'd like to explore UI elements in
+which LLMs can help human annotators reduce their cognitive load when labeling.
+
+- **Can zero-shot annotations be reliable?** Here, I'd like to benchmark zero-shot
 annotations from GPT-3 and compare it with some baseline approaches. I don't think we should
 rely on GPT-3 alone to annotate our data, but it doesn't hurt to see if they work.
+
 - **Can chain-of-thought prompting help?** Chain-of-thought prompting ([Wang, et
 al., 2023](#wang2023chain)) is often seen in reasoning tasks like arithmetic. I
 posit that annotation is also a reasoning task, and chain-of-thought might help.
@@ -51,7 +53,7 @@ For the purposes of this blog post, I will be focusing on the topic of
 <u>minimum wage</u> in the UKP corpus. It's interesting, and the number of
 samples is small enough that I don't have to worry about API costs. 
 
-## Are zero-shot annotations reliable?
+## Can zero-shot annotations be reliable?
 
 ## Can LLMs provide extra affordance?
 
