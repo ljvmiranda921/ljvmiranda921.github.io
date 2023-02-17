@@ -55,6 +55,12 @@ samples is small enough that I don't have to worry about API costs.
 
 ## Can zero-shot annotations be reliable?
 
+|           | Zero-shot | Supervised |
+|-----------|-----------|------------|
+| Precision |           |            |
+| Recall    |           |            |
+| F-score   |           |            |
+
 ## Can LLMs provide extra affordance?
 
 ## Can chain-of-thought prompting help?
