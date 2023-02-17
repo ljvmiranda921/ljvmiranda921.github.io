@@ -31,11 +31,11 @@ structured prediction tasks.
 
 In this blog post, I want to explore how this approach translates to more
 complex annotation tasks such as **argument mining**, where task definitions may
-vary ([Jakobsen, et al., 2022](#jakobsen2022sensitivity)).  I'll be working on a
-portion of the [UKP Sentential Argument Mining
+vary from paper to paper ([Jakobsen, et al., 2022](#jakobsen2022sensitivity)).
+I'll be working on a portion of the [UKP Sentential Argument Mining
 Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
 al., 2018](#stab2018ukp)), where sentences are categorized either as a
-supporting argument, an attacking argument, or not an argument with respect to a
+supporting argument, an attacking argument, or a non-argument with respect to a
 given topic. I want to investigate three questions:
 
 - **Can zero-shot annotations be reliable?** Here, I'd like to benchmark zero-shot
