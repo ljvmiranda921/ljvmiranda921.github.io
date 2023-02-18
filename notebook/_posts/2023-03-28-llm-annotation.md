@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Prompting language models for argument mining annotation"
+title: "Prompting language models to annotate argument mining datasets"
 date: 2023-03-28
 category: notebook
 comments: true
