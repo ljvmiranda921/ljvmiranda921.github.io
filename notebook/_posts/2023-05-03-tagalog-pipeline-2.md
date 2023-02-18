@@ -44,4 +44,6 @@ post into three main buckets as shown in the figure below:
 
 ### On which entities does the model make mistakes?
 
+## Final thoughts
+
 
