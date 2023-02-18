@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Some follow up experiments for Tagalog NLP"
+title: "Some follow-up experiments for Tagalog NLP"
 date: 2023-05-03
 category: notebook
 comments: true
@@ -20,5 +20,28 @@ excerpt: |
 ---
 
 <span class="firstcharacter">F</span>irst off, I'm happy to see such warm
-reaction in my first blog post where I [introduced my work in building a Tagalog
-NLP pipeline](/2023/02/04/tagalog-pipeline/).
+reception to my [first blog post](/2023/02/04/tagalog-pipeline/) about building
+a Tagalog NLP pipeline. Thank you! There are a few more experiments that I
+wanted to do for the sake of completeness and rigor. I hope to release the alpha
+version of [calamanCy](https://github.com/ljvmiranda921/calamanCy) in August, so
+this blog post may as well be a lead-up to that release. I will structure this
+post into three main buckets as shown in the figure below:
+
+![](/assets/png/tagalog-gold-standard/process.png){:width="650px"}  
+{:style="text-align: center;"}
+
+## On annotation
+
+### How much change occured between silver to gold?
+
+### Do I need to annotate more? 
+
+## On building the pipeline
+
+### What is the effect of hyperparameters? 
+
+## On evaluation
+
+### On which entities does the model make mistakes?
+
+
