@@ -51,15 +51,45 @@ posit that annotation is also a reasoning task, and chain-of-thought might help.
 
 For the purposes of this blog post, I will be focusing on the topic of
 <u>minimum wage</u> in the UKP corpus. It's interesting, and the number of
-samples is small enough that I don't have to worry about API costs. 
+samples is small enough that I don't have to worry about OpenAI API costs. 
+
+<!-- dataset statistics -->
+
+|                 | Tokens     | No argument     | Supporting | Opposing |
+|-----------------|------------|-----------------|------------|----------|
+| Training set    | $$42589$$  | $$968$$         | $$414$$    | $$396$$  |
+| Development set | $$4899$$   | $$108$$         | $$46$$     | $$44$$   |
+| Test set        | $$13257$$  | $$270$$         | $$116$$    | $$111$$  |
+| **Total**       | $$60745$$  | $$1346$$        | $$576$$    | $$551$$  |
+
 
 ## Can zero-shot annotations be reliable?
 
-|           | Zero-shot | Supervised |
-|-----------|-----------|------------|
-| Precision |           |            |
-| Recall    |           |            |
-| F-score   |           |            |
+<!-- talk about the supervised setup -->
+
+<!-- talk about the prompt for zero-shot -->
+
+| Scores         | Zero-shot          | Supervised          |
+|----------------|--------------------|---------------------|
+| Micro F1-score | $$\mathbf{81.45}$$ |  $$79.88$$          |
+| Macro F1-score | $$\mathbf{78.74}$$ |  $$77.52$$          |
+| Macro AUC      | $$83.46$$          |  $$\mathbf{84.18}$$ |
+
+
+| F1-score (per type)                      | Zero-shot           | Supervised |
+|------------------------------------------|---------------------|------------|
+| Supporting argument (`Argument_for`)     |  $$\mathbf{75.21}$$ | $$73.60$$  |
+| No argument (`NoArgument`)               |  $$\mathbf{86.74}$$ | $$85.66$$  |
+| Opposing argument (`Argument_against`)   |  $$\mathbf{74.26}$$ | $$73.30$$  |
+
+
+| Area under the curve AUC (per type)    | Zero-shot          | Supervised          |
+|----------------------------------------|--------------------|---------------------|
+| Supporting argument (`Argument_for`)   |  $$\mathbf{83.99}$$| $$83.17$$           |
+| No argument (`NoArgument`)             |  $$84.68$$         | $$\mathbf{87.39}$$  |
+| Opposing argument (`Argument_against`) |  $$81.71$$         | $$\mathbf{81.98}$$  |
+
+
 
 ## Can LLMs provide extra affordance?
 
