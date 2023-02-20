@@ -162,7 +162,7 @@ process of annotating and making up the benchmark is what I'm trying to tackle
 in this blog post. 
 
 
-## Can LLMs provide extra affordance?
+## <a id="affordance"></a> Can LLMs provide extra affordance?
 
 ## Can chain-of-thought prompting help?
 
