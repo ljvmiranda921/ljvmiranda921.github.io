@@ -178,9 +178,27 @@ few-shot learning.
 According to [Palau and Moens (2009)](#palau2009argument), an <u>argument</u> is
 a set of **premises** that support a **claim**.[^3] For our dataset, I would
 like to introduce an annotation set-up where the premise and the claim, if
-they're present, are highlighted alongside an LLM's zero-shot prediction. For
-this to work, we need to treat the premise and the claim as spans and prompt
-GPT-3 to identify them for each text as a span labeling task.
+they're present, are highlighted alongside an LLM's zero-shot prediction. 
+
+This set-up aims to give the annotator extra information to confirm an LLM's
+prediction. For example, they can compare the highlighted premise to the
+predicted category and decide whether to correct or accept the suggested
+annotation. For this to work, we need to treat the premise and the claim as
+spans and prompt GPT-3 to identify them for each text as a span labeling task.
+
+<!--
+Our prompt looks like this:
+
+
+With GPT-3 answering in the form of:
+
+I then plugged these 
+-->
+
+
+
+
+
 
 
 
