@@ -7,6 +7,7 @@
         font-style: normal;
         font-display: swap;
     }
+
     @font-face {
         font-family: "Vollkorn";
         src: url("{{ "/assets/fonts/Vollkorn/Vollkorn-Italic-VariableFont_wght.ttf" | relative_url }}") format("truetype");
@@ -14,6 +15,7 @@
         font-style: italic;
         font-display: swap;
     }
+
     /** Lato for headers **/
     @font-face {
         font-family: "Lato";
@@ -21,19 +23,38 @@
         font-style: normal;
         font-display: swap;
     }
-    /** JetBrains Mono for codeblocks **/
+
+    /** Berkeley Mono for codeblocks **/
+
     @font-face {
-        font-family: "JetBrains Mono";
-        src: url("{{ "/assets/fonts/JetBrainsMono/JetBrainsMono-VariableFont_wght.ttf" | relative_url }}") format("truetype");
-        font-weight: 100 800;
+        font-family: 'Berkeley Mono';
+        font-weight: normal;
         font-style: normal;
-        font-display: swap;
+        src: url("{{ "/assets/fonts/BerkeleyMono/BerkeleyMono-Regular.woff2" | relative_url }}") format('woff2'),
+             url("{{ "/assets/fonts/BerkeleyMono/BerkeleyMono-Regular.woff" | relative_url }}") format('woff');
     }
+
     @font-face {
-        font-family: "JetBrains Mono";
-        src: url("{{ "/assets/fonts/JetBrainsMono/JetBrainsMono-Italic-VariableFont_wght.ttf" | relative_url }}") format("truetype");
-        font-weight: 100 800;
+        font-family: 'Berkeley Mono';
+        font-weight: normal;
         font-style: italic;
-        font-display: swap;
+        src: url("{{ "/assets/fonts/BerkeleyMono/BerkeleyMono-Italic.woff2" | relative_url }}") format('woff2'),
+             url("{{ "/assets/fonts/BerkeleyMono/BerkeleyMono-Italic.woff" | relative_url }}") format('woff');
+    }
+
+    @font-face {
+        font-family: 'Berkeley Mono';
+        font-weight: bold;
+        font-style: normal;
+        src: url("{{ "/assets/fonts/BerkeleyMono/BerkeleyMono-Bold.woff2" | relative_url }}") format('woff2'),
+             url("{{ "/assets/fonts/BerkeleyMono/BerkeleyMono-Bold.woff" | relative_url }}") format('woff');
+    }
+
+    @font-face {
+        font-family: 'Berkeley Mono';
+        font-weight: bold;
+        font-style: italic;
+        src: url("{{ "/assets/fonts/BerkeleyMono/BerkeleyMono-BoldItalic.woff2" | relative_url }}") format('woff2'),
+             url("{{ "/assets/fonts/BerkeleyMono/BerkeleyMono-BoldItalic.woff" | relative_url }}") format('woff');
     }
 </style>
