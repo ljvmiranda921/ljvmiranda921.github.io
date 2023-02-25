@@ -30,25 +30,21 @@ demonstrated how prompt-based interfaces found in the likes of
 structured prediction tasks. 
 
 In this blog post, I want to explore how this approach translates to more
-complex annotation tasks, such as **argument mining**, where task definitions
-may vary from paper to paper ([Jakobsen, et al.,
-2022](#jakobsen2022sensitivity)).  I'll be working on a portion of the [UKP
-Sentential Argument Mining
+complex annotation tasks, such as **argument mining**, where chain of reasoning
+applies.  I'll be working on a portion of the [UKP Sentential Argument Mining
 Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
 al., 2018](#stab2018ukp)), where sentences are categorized either as a
 supporting argument, an attacking argument, or a non-argument for a given topic.
-I want to investigate three questions:
+I want to investigate <u>two major questions</u>:
 
 - [**Can zero-shot annotations be reliable?**](#zeroshot) Here, I'd like to benchmark zero-shot
 annotations from GPT-3 and compare them with a baseline approach. I don't think we should
 rely on GPT-3 alone to annotate our data, but it doesn't hurt to see if they work.
 
 - [**Can LLMs provide extra affordance?**](#affordance) I'd like to explore UI elements in
-which LLMs can help human annotators reduce their cognitive load when labeling.
-
-- [**Can chain-of-thought prompting help?**](#cot) Chain-of-thought prompting ([Wang, et
-al., 2023](#wang2023chain)) is often seen in reasoning tasks like arithmetic. I
-posit that annotation is also a reasoning task, and chain-of-thought might help.
+which LLMs can help human annotators reduce their cognitive load when labeling. I want to 
+explore an LLM's ability to highlight spans, provide reason for their labels,
+and accept exemplars to improve its performance.
 
 For this blog post, I will focus on the topic of <u>minimum wage</u> in the UKP
 corpus. It's interesting, and the number of samples is small enough that I don't
@@ -77,7 +73,7 @@ claims on a language model's trustworthiness, only its test set accuracy.
 > of training a supervised model from the corpus.
 
 <!-- talk about the supervised setup -->
-In the <u>supervised setup</u>, I'm using [spaCy's
+In the <u>supervised set-up</u>, I'm using [spaCy's
 TextCategorizer](https://spacy.io/api/textcategorizer) to perform an exclusive 
 text classification task. It uses a [stacked
 ensemble](https://spacy.io/api/architectures#TextCatEnsemble) of a [linear
@@ -94,7 +90,7 @@ predictions on a held-out test set as shown in the figure below:
 {:style="text-align: center;"}
 
 <!-- talk about the prompt for zero-shot -->
-In the <u>zero-shot setup</u>, I completely ignore the training and development
+In the <u>zero-shot set-up</u>, I completely ignore the training and development
 sets and include test set examples in the prompt. Then, I send this prompt to
 GPT-3 and parse the results. Finally, I treat whatever it returns as its
 predictions and compare them with the gold-annotated test data. 
@@ -157,14 +153,53 @@ Perhaps the wrong conclusion to make here is that we can *just* replace our
 supervised model with a zero-shot classifier in production. It's an appealing
 thought because we see higher scores from our LLM predictions. However, that's a
 trap because *we already know* the test set. In production, we either don't have
-access to gold-standard annotations, or we're still making it ourselves. This
-process of annotating and making up the benchmark is what I'm trying to tackle
-in this blog post. 
+access to gold-standard annotations, or we're still making it ourselves.  So
+instead, think of our zero-shot predictions as silver-standard annotations that
+we can refine further to produce trustworthy, gold-standard labels.
+
+> Think of our zero-shot predictions as silver-standard annotations that we
+> can refine further to produce trustworthy, gold-standard labels.
 
 
 ## <a id="affordance"></a> Can LLMs provide extra affordance?
 
-## Can chain-of-thought prompting help?
+In this section, I want to explore what other capabilities a large language
+model can offer as we annotate our dataset. I want to think of these as
+**affordances**, something that an annotator can use as they produce
+gold-standard data. 
+
+In the context of argument mining, we can use LLMs to (1) highlight an
+argument's claim and premise, (2) provide a reason as to why it labeled a
+particular text as such, and (3) improve silver-standard annotations via
+few-shot learning.
+
+### Highlight an argument's claim and/or premise
+
+According to [Palau and Moens (2009)](#palau2009argument), an <u>argument</u> is
+a set of **premises** that support a **claim**.[^3] For our dataset, I would
+like to introduce an annotation set-up where the premise and the claim, if
+they're present, are highlighted alongside an LLM's zero-shot prediction. For
+this to work, we need to treat the premise and the claim as spans and prompt
+GPT-3 to identify them for each text as a span labeling task.
+
+
+
+[^3]: 
+
+    Several NLP papers may still have varying degrees of explicitness towards this
+    definition ([Jakobsen, et al., 2022](#jakobsen2022sensitivity)), but for the
+    purposes of this blog post, we'll stick with the one above.
+
+
+
+
+### Provide reason as to why it labeled a text as such
+
+### Providing exemplars via few-shot learning 
+
+## Final thoughts
+
+
 
 
 <!--
