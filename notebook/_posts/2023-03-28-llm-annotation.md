@@ -197,7 +197,7 @@ Our prompt looks like this:
 
 With GPT-3 answering in the form of:
 
-I then plugged these 
+I then parsed these 
 -->
 
 
