@@ -177,6 +177,9 @@ of reliance over GPT-3's capabilities:
 ![](/assets/png/argument-mining/reliance.png){:width="720px"}  
 {:style="text-align: center;"}
 
+> I noticed that my "attentiveness" decreases as I use affordances that
+> rely heavily on LLMs.
+
 From my annotation experience, I noticed that my "attentiveness" decreases as I
 use affordances that rely heavily on LLMs. It's easier for me to just *accept*
 whatever the language model suggests. This can be dangerous because an LLM can,
