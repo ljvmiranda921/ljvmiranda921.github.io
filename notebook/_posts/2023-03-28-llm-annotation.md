@@ -43,8 +43,8 @@ rely on GPT-3 alone to annotate our data, but it doesn't hurt to see if they wor
 
 - [**Can LLMs provide extra affordance?**](#affordance) I'd like to explore UI elements in
 which LLMs can help human annotators reduce their cognitive load when labeling. I want to 
-explore an LLM's ability to highlight spans, provide reason for their labels,
-and accept exemplars to improve its performance.
+explore an LLM's ability to highlight spans or provide reason for their labels. Each of these
+affordances represent a different level of "reliance" on an LLM's capabilities.
 
 For this blog post, I will focus on the topic of <u>minimum wage</u> in the UKP
 corpus. It's interesting, and the number of samples is small enough that I don't
@@ -169,30 +169,47 @@ model can offer as we annotate our dataset. I want to think of these as
 gold-standard data. 
 
 In the context of argument mining, we can use LLMs to (1) highlight an
-argument's claim and premise, (2) provide a reason as to why it labeled a
-particular text as such, and (3) improve silver-standard annotations via
-few-shot learning.
+argument's claim and premise and (2) provide a reason as to why it labeled a
+particular text as such. I'd like to think of these affordances as different levels
+of reliance over GPT-3's capabilities:
 
-### Highlighting an argument's claim and premise
+
+![](/assets/png/argument-mining/reliance.png){:width="720px"}  
+{:style="text-align: center;"}
+
+From my annotation experience, I noticed that my "attentiveness" decreases as I
+use affordances that rely heavily on LLMs. It's easier for me to just *accept*
+whatever the language model suggests. This can be dangerous because an LLM can,
+in all its biases, influence my annotations. More so if it demonstrates some
+level of intelligible text to defend its decision. Perhaps it's just my personal
+negligence and *laziness*, but I'd like to highlight this experience to provide
+some context to the following sections.
+
+### Directed: highlight an argument's claim and premise
 
 According to [Palau and Moens (2009)](#palau2009argument), an <u>argument</u> is
 a set of **premises** that support a **claim**.[^3] For our dataset, I would
 like to introduce an annotation set-up where the premise and the claim, if
-they're present, are highlighted alongside an LLM's zero-shot prediction. 
+present, are highlighted to guide annotation. 
 
-> Annotation set-up where the premise and claim, if they're present, 
-> are highlighted alongside an LLM's zero-shot prediction. 
+> Annotation set-up where the premise and claim, if present, 
+> are highlighted to guide annotation. 
 
-This set-up aims to give the annotator extra information to confirm an LLM's
-prediction. For example, they can compare the highlighted premise to the
-predicted category and decide whether to correct or accept the suggested
-annotation. For this to work, we need to treat the premise and the claim as
-spans and prompt GPT-3 to identify them for each text as a span labeling task.
+This set-up aims to give an annotator extra information to label a particular
+text. For example, they can use the highlighted spans to easily check the 
+premise of an argument with respect to its claim. The hope is that through this
+practice, we can reduce the cognitive load of annotation as the relevant parts
+of the document are emphasized. 
+
+For this to work, we need to (1) treat the premise and the claim as spans and
+prompt GPT-3 to identify them for each text as a span labeling task. Then, we
+(2) pass this information into our annotation tool and label as usual, except
+that the relevant spans are now highlighted:
 
 ![](/assets/png/argument-mining/highlights.png){:width="600px"}  
 {:style="text-align: center;"}
 
-Our prompt looks like this:
+For GPT-3, the prompt goes like this:
 
 ```
 From the text below, identify the exact span of text that represents 
@@ -211,7 +228,7 @@ higher standard of living .
 """
 ```
 
-With GPT-3 answering in the form of:
+And with expect the answer in the form of:
 
 ```
 Premise: "In 2009", "higher standard of living"
@@ -231,23 +248,19 @@ of this set-up, the spans are highlighted in the UI as shown below:
 ![](/assets/png/argument-mining/prodigy_highlight_examples.png){:width="800px"}  
 {:style="text-align: center;"}
 
-<!--
-Our prompt looks like this:
+This set-up allows annotators to take advantage of relevant spans as they decide
+the label for a particular example. We can also combine our `textcat`
+annotations earlier to pre-select the category choice so that annotators can
+confirm an LLM's prediction. For example, they can compare the highlighted
+premise to the predicted category and decide whether to correct or accept the
+suggested annotation. 
 
-
-With GPT-3 answering in the form of:
-
-I then parsed these 
-
-hmm... premise can be highlighted as a span, while the claim is in the metadata
-or somewhere else
--->
-
-
-
-
-
-
+Finally, I want to mention that this set-up still relies on a human annotator's
+reasoning in order to label the text. The UI presents the relevant components,
+i.e. an argument's premise and claim, but it's still up to the annotator whether
+to use or ignore these affordances.  In the next section, we will double-down on
+GPT-3's capabilities and ask it to "reason" why it labeled a particular text as
+such.
 
 
 [^3]: 
@@ -259,9 +272,8 @@ or somewhere else
 
 
 
-### Provide reason as to why it labeled a text as such
+### Dependent: provide reason on a labeling decision 
 
-### Providing exemplars via few-shot learning 
 
 ## Final thoughts
 
