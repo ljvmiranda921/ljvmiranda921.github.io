@@ -189,7 +189,47 @@ predicted category and decide whether to correct or accept the suggested
 annotation. For this to work, we need to treat the premise and the claim as
 spans and prompt GPT-3 to identify them for each text as a span labeling task.
 
+![](/assets/png/argument-mining/highlights.png){:width="600px"}  
+{:style="text-align: center;"}
+
 Our prompt looks like this:
+
+```
+From the text below, identify the exact span of text that represents 
+the premise, and the claim regarding the topic of minimum wage. 
+Answer in the following format:
+
+Premise: <comma delimited list of string or N/A>
+Claim: <string or N/A>
+
+Here's the text
+
+Text:
+"""
+In 2009, an increase in minimum wage resulted to a 
+higher standard of living .
+"""
+```
+
+With GPT-3 answering in the form of:
+
+```
+Premise: "In 2009", "higher standard of living"
+Claim: "increase in minimum wage"
+```
+
+I implemented this process using the [OpenAI
+recipes](https://github.com/explosion/prodigy-openai-recipes) from
+[Prodigy](https://prodi.gy). In particular, I used the `ner.openai.fetch` recipe
+to prompt GPT-3 to extract spans based on the labels I provided&mdash;i.e.,
+`Premise` and `Claim`. This recipe attaches the premise and claim as spans into
+a new corpus that I can load using Prodigy's built-in
+[`textcat.manual`](https://prodi.gy/docs/recipes#textcat-manual) recipe. Because
+of this set-up, the spans are highlighted in the UI as shown below:
+
+
+![](/assets/png/argument-mining/prodigy_highlight_examples.png){:width="800px"}  
+{:style="text-align: center;"}
 
 <!--
 Our prompt looks like this:
