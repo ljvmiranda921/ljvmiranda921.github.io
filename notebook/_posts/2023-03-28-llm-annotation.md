@@ -173,7 +173,7 @@ argument's claim and premise, (2) provide a reason as to why it labeled a
 particular text as such, and (3) improve silver-standard annotations via
 few-shot learning.
 
-### Highlight an argument's claim and/or premise
+### Highlighting an argument's claim and premise
 
 According to [Palau and Moens (2009)](#palau2009argument), an <u>argument</u> is
 a set of **premises** that support a **claim**.[^3] For our dataset, I would
@@ -198,6 +198,9 @@ Our prompt looks like this:
 With GPT-3 answering in the form of:
 
 I then parsed these 
+
+hmm... premise can be highlighted as a span, while the claim is in the metadata
+or somewhere else
 -->
 
 
