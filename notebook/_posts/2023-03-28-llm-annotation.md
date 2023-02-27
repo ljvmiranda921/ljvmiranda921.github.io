@@ -277,7 +277,8 @@ such.
 This time, we increase our dependence on an LLM's output by asking it to explain
 why it labeled a particular text as such. [Wei, et al.  (2022)](#wei2022chain)
 proposes a prompting method called **chain-of-thought** to elicit complex
-reasoning from large language models.
+reasoning from large language models. We will be using this technique in our
+argument mining dataset.
 
 Chain-of-thought prompting is often applied to arithmetic, commonsense, and
 symbolic reasoning tasks. The trick is to decompose a problem into intermediate
@@ -286,6 +287,16 @@ empirical gains when using chain-of-thought prompting, but it's still a hotly
 debated topic whether large language models can reason like humans do ([Bender
 et al., 2021](#bender2021parrot) and [Bender and Koller, 2020](#bender2020octopus)).
 
+One way we can apply chain-of-thought prompting to our dataset is by
+<u>decomposing an argument into its premise and claim.</u> Then, we can examine
+each premise and determine if they are in favor, against, or irrelevant to the
+claim. From there, we can start classifying the text amongst our three labels.
+
+<!-- show illustration on what this would look like -->
+
+<!--
+https://openreview.net/forum?id=_VjQlMeSB_J
+-->
 
 ## Final thoughts
 
