@@ -46,7 +46,7 @@ which LLMs can help human annotators reduce their cognitive load when labeling. 
 explore an LLM's ability to highlight spans or provide reason for their labels. Each of these
 affordances represent a different level of "reliance" on an LLM's capabilities.
 
-For this blog post, I will focus on the topic of <u>minimum wage</u> in the UKP
+For this blog post, I will focus on the topic of **minimum wage** in the UKP
 corpus. It's interesting, and the number of samples is small enough that I don't
 have to worry about OpenAI API costs. 
 
@@ -73,7 +73,7 @@ claims on a language model's trustworthiness, only its test set accuracy.
 > of training a supervised model from the corpus.
 
 <!-- talk about the supervised setup -->
-In the <u>supervised set-up</u>, I'm using [spaCy's
+In the **supervised set-up**, I'm using [spaCy's
 TextCategorizer](https://spacy.io/api/textcategorizer) to perform an exclusive 
 text classification task. It uses a [stacked
 ensemble](https://spacy.io/api/architectures#TextCatEnsemble) of a [linear
@@ -90,7 +90,7 @@ predictions on a held-out test set as shown in the figure below:
 {:style="text-align: center;"}
 
 <!-- talk about the prompt for zero-shot -->
-In the <u>zero-shot set-up</u>, I completely ignore the training and development
+In the **zero-shot set-up**, I completely ignore the training and development
 sets and include test set examples in the prompt. Then, I send this prompt to
 GPT-3 and parse the results. Finally, I treat whatever it returns as its
 predictions and compare them with the gold-annotated test data. 
@@ -177,10 +177,10 @@ of reliance over GPT-3's capabilities:
 ![](/assets/png/argument-mining/reliance.png){:width="720px"}  
 {:style="text-align: center;"}
 
-> I noticed that my "attentiveness" decreases as I use affordances that
+> I noticed that I become more inattentive as I use affordances that
 > rely heavily on LLMs.
 
-From my annotation experience, I noticed that my "attentiveness" decreases as I
+From my annotation experience, I noticed that I become more *inattentive* as I
 use affordances that rely heavily on LLMs. It's easier for me to just *accept*
 whatever the language model suggests. This can be dangerous because an LLM can,
 in all its biases, influence my annotations. More so if it demonstrates some
@@ -190,7 +190,7 @@ some context to the following sections.
 
 ### Directed: highlight an argument's claim and premise
 
-According to [Palau and Moens (2009)](#palau2009argument), an <u>argument</u> is
+According to [Palau and Moens (2009)](#palau2009argument), an argument is
 a set of **premises** that support a **claim**.[^3] For our dataset, I would
 like to introduce an annotation set-up where the premise and the claim, if
 present, are highlighted to guide annotation. 
