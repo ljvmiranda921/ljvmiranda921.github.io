@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Prompting language models to annotate argument mining datasets"
+title: "How can language models augment the annotation process?"
 date: 2023-03-28
 category: notebook
 comments: true
@@ -10,14 +10,14 @@ published: true
 tags: [nlp, llm, data annotation, prodigy, natural language processing, chatgpt, gpt-j, gpt-3]
 header-img: /assets/png/tagalog-gold-standard/header.png
 description: |
-    In this blog post, I want to demonstrate how we can leverage LLMs like GPT-3
-    as a viable affordance to reduce a human annotator's cognitive load. I do
-    this by exploring the application of LLM prompting in 
+    In this blog post, I want to demonstrate how we can leverage large language
+    models like GPT-3 as a viable affordance to reduce a human annotator's
+    cognitive load. I do this by exploring the application of LLM prompting in 
     annotating argument mining datasets.
 excerpt: |
-    In this blog post, I want to demonstrate how we can leverage LLMs like GPT-3
-    as a viable affordance to reduce a human annotator's cognitive load. I do
-    this by exploring the application of LLM prompting in 
+    In this blog post, I want to demonstrate how we can leverage large language
+    models like GPT-3 as a viable affordance to reduce a human annotator's
+    cognitive load. I do this by exploring the application of LLM prompting in 
     annotating argument mining datasets.
 ---
 
