@@ -231,7 +231,7 @@ higher standard of living .
 """
 ```
 
-And with expect the answer in the form of:
+And we expect the answer in the form of:
 
 ```
 Premise: "In 2009", "higher standard of living"
