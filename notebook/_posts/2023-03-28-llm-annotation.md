@@ -30,9 +30,9 @@ demonstrated how prompt-based interfaces found in the likes of
 structured prediction tasks. 
 
 In this blog post, I want to explore how this approach translates to more
-complex annotation tasks, such as **argument mining**, where chain of reasoning
-applies.  I'll be working on a portion of the [UKP Sentential Argument Mining
-Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
+intricate and challenging annotation tasks, such as **argument mining** where
+one has to trace chains of reasoning.  I'll be working on a portion of the [UKP
+Sentential Argument Mining Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
 al., 2018](#stab2018ukp)), where sentences are categorized either as a
 supporting argument, an attacking argument, or a non-argument for a given topic.
 I want to investigate <u>two major questions</u>:
