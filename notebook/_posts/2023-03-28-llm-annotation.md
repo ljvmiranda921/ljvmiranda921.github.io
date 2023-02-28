@@ -290,9 +290,22 @@ et al., 2021](#bender2021parrot) and [Bender and Koller, 2020](#bender2020octopu
 One way we can apply chain-of-thought prompting to our dataset is by
 <u>decomposing an argument into its premise and claim.</u> Then, we can examine
 each premise and determine if they are in favor, against, or irrelevant to the
-claim. From there, we can start classifying the text amongst our three labels.
+claim.[^4] From there, we can start classifying the text amongst our three labels.
 
-<!-- show illustration on what this would look like -->
+![](/assets/png/argument-mining/chain_of_thought.png){:width="600px"}  
+{:style="text-align: center;"}
+
+[^4]:
+
+    Personally, I think what qualifies as a chain-of-thought prompt is a bit
+    vague. For now, I scoped it as "any prompt that contains a coherent
+    series of intermediate reasoning steps that lead to the final answer of
+    a problem." Lastly, I highly recommend going through the paper's
+    [OpenReview discussion](https://openreview.net/forum?id=_VjQlMeSB_J),
+    there are some interesting points raised by the reviewers regarding
+    evaluation.
+
+
 
 <!--
 https://openreview.net/forum?id=_VjQlMeSB_J
