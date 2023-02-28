@@ -385,10 +385,25 @@ dependent.
 ![](/assets/png/argument-mining/reliance.png){:width="720px"}  
 {:style="text-align: center;"}
 
-<!-- rehash what you did -->
-<!-- i made some claims that aren't tested (annotator fatigue). i'm interested to learn more on how I can better test these hypotheses -->
-<!-- finally, LLMs human loop is still the best. vboykis tweet: https://twitter.com/vboykis/status/1630026514145189889?s=20  -->
+A *directed* approach uses an LLM to provide supplementary information that a
+human annotator can use to inform their labeling decision. On the other hand, a
+*dependent* approach asks an LLM to not only suggest labels, but also explain
+why a text was labeled as such. Personally, I find myself being more inattentive
+as I go from a more dependent approach to LLM-guided annotation.
 
+> The final annotation still rests on a human annotator's decision, not the LLMs.
+> These affordances are mere guides that provide convenience through suggestions.
+
+The final annotation still rests on a human annotator's decision, not the LLMs.
+These affordances are mere guides that provide convenience through suggestions.
+I find it comforting, because I believe there's still some nuance in most
+annotation tasks that only *we* can capture.
+
+Finally, I think I made some claims here about improving efficiency because of
+these UI affordances (e.g., inattentiveness, parsing chain-of-thought). I admit
+that these were all from my personal experiences when annotating and trying out
+these recipes. I'm happy to hear suggestions on how I can verify or test these
+claims. Feel free to drop a comment below.
 
 
 ## References
