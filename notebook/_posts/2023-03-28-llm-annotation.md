@@ -290,7 +290,8 @@ et al., 2021](#bender2021parrot) and [Bender and Koller, 2020](#bender2020octopu
 One way we can apply chain-of-thought prompting to our dataset is by
 <u>decomposing an argument into its premise and claim.</u> Then, we can examine
 each premise and determine if they are in favor, against, or irrelevant to the
-claim.[^4] From there, we can start classifying the text amongst our three labels.
+claim.[^4] From there, we can start classifying the text amongst our three
+labels. This process is shown in the figure below:
 
 ![](/assets/png/argument-mining/chain_of_thought.png){:width="600px"}  
 {:style="text-align: center;"}
@@ -305,96 +306,78 @@ claim.[^4] From there, we can start classifying the text amongst our three label
     there are some interesting points raised by the reviewers regarding
     evaluation.
 
+The prompt is a bit long, but it goes like this: I first
+provided the instructions for the task (i.e., the labels to classify with, the
+format for parsing, etc.), then I included an exemplar that has chain-of-thought
+steps. You can find the complete prompt by clicking the `details` tab below:
+
+&nbsp;
+<details>
+  <summary>Chain of thought prompt for argument mining annotation</summary>
+  <pre><code>
+Determine whether the text below is a supporting argument (Argument_for), 
+opposing argument (Argument_against), or none (NoArgument) regarding 
+the topic of "minimum wage." First, identify the premise and the 
+claim, then determine if the reasons or evidence presented in the 
+argument are in favor of the claim, against the claim, or irrelevant 
+to the claim. Answer in the following format:
+
+answer: &lt;Argument_for, Argument_against, or NoArgument&gt;
+reason: &lt;reasoning process&gt;
+
+Below are some examples
+
+Text:
+"""
+Or instead of hiring fewer employees , the company may start 
+outsourcing jobs to employees in countries that are willing to 
+work for much less than $ 10.10 per hour , resulting in fewer 
+jobs for Americans ."
+"""
+
+answer: Argument_against
+reason: The premise of the text is that if the minimum 
+wage is increased to $10.10 per hour, then companies may 
+start outsourcing jobs to countries where employees are
+willing to work for much less, leading to fewer jobs for 
+Americans. This is an argument against increasing the 
+minimum wage. Therefore the answer is Argument_against.
+
+Text:
+"""
+&lcub;&lcub;text&rcub;&rcub;
+"""
+  </code>
+  </pre>
+</details>
+
+&nbsp;
+
+I used the same recipe as the zero-shot experiment earlier, but changed the
+prompt to the chain-of-thought one. I then loaded OpenAI's output back to a
+custom Prodigy recipe so that I can view the results in a UI. Below, you'll find
+some screenshots of this updated UI (they might be too small in your screen so feel free to
+open the images in another tab). Here, we see GPT-3's explanation alongside its suggestion:
 
 
-<!--
-https://openreview.net/forum?id=_VjQlMeSB_J
--->
+![](/assets/png/argument-mining/cot_examples.png){:width="800px"}  
+{:style="text-align: center;"}
+
+Ideally, annotators can refer to GPT-3's explanation to confirm or correct a
+suggestion. Personally, I find this workflow helpful on texts that are either
+confusing or hard to parse. Having the premise and claim deconstructed in an
+explicit way can help improve annotation efficiency and hopefully reduce
+annotator fatigue.
+
 
 ## Final thoughts
 
 
+<!-- rehash what you did -->
+<!-- i made some claims that aren't tested (annotator fatigue). i'm interested to learn more on how I can better test these hypotheses -->
+<!-- finally, LLMs human loop is still the best. vboykis tweet: https://twitter.com/vboykis/status/1630026514145189889?s=20  -->
 
 
-<!--
-
-### Annotating argument mining datasets is a complex task... 
-
-In literature, an argument consists of a <u>claim</u> and a <u>premise</u>
-([Palau and Moens, 2009](#palau2009argument)). There are many different
-variations of this task ([Lawrence and Reed, 2019](#lawrence2019argument)), but
-in our case, we formulate argument mining as a text categorization problem, i.e., determine
-whether a given text contains a *claim.* Unfortunately, NLP papers have varying
-definitions of a claim ([Jakobsen, et al., 2022](jakobsen2022sensitivity)),
-making the annotation process all the more complex.
-
-
--->
-
-<!-- 
-give examples from different papers 
-...this makes annotating it so complex...
-(maybe talk about inter-annotator agreement in some argument mining datasets)
-
-the big idea is to help annotators reduce cognitive load by
-adding a UI-suggestions layer to their annotations
-
-
-RISKS: it's also possible that the LLM can influence the results.
--->
-
-
-<!-- 
-
-there are different definitions of a claim
-that's why they have different annotation guidelines
-can we leverage these guidelines to obtain few-shot annotations from an LLM?
-
-
-why is it complex?
-- varying definitions
-- implicit and explicit claims?
-- can introduce bias? not sure how to talk about this one
-
--->
-
-
-
-<!-- give quick background of the paper -->
-
-<!-- this is where you get creative -->
-
-
-
-
-
-<!--
-Chain-of-thought prompting, background info
--->
-
-
-<!--
-Chain-of-thought prompting applied to annotation
--->
-
-
-<!--
-Experiments?
--->
-
-
-<!-- from few-shot to chain of thought -->
-
-<!--
-Few-shot vs. chain of thought (table)
-- types of examples
-
-
-HCI
-- annotation disagreement? look for RRL here
-- ...
-
--->
 
 ## References
 
