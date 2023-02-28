@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [nlp, llm, data annotation, prodigy, natural language processing, chatgpt, gpt-j, gpt-3]
-header-img: /assets/png/tagalog-gold-standard/header.png
+header-img: /assets/png/argument-mining/header.png
 description: |
     In this blog post, I want to demonstrate how we can leverage large language
     models like GPT-3 as a viable affordance to reduce a human annotator's
@@ -312,8 +312,9 @@ format for parsing, etc.), then I included an exemplar that has chain-of-thought
 steps. You can find the complete prompt by clicking the `details` tab below:
 
 &nbsp;
+
 <details>
-  <summary>Chain of thought prompt for argument mining annotation</summary>
+  <summary><u>Chain of thought prompt for argument mining annotation</u></summary>
   <pre><code>
 Determine whether the text below is a supporting argument (Argument_for), 
 opposing argument (Argument_against), or none (NoArgument) regarding 
@@ -354,10 +355,11 @@ Text:
 &nbsp;
 
 I used the same recipe as the zero-shot experiment earlier, but changed the
-prompt to the chain-of-thought one. I then loaded OpenAI's output back to a
-custom Prodigy recipe so that I can view the results in a UI. Below, you'll find
-some screenshots of this updated UI (they might be too small in your screen so feel free to
-open the images in another tab). Here, we see GPT-3's explanation alongside its suggestion:
+prompt to use chain-of-thought. I then loaded OpenAI's output back to a custom
+Prodigy recipe so that I can view the results in a UI. Below, you'll find some
+screenshots of this updated UI (they might be too small in your screen so feel
+free to open the images in another tab). Here, we see GPT-3's explanation
+alongside its suggestion:
 
 
 ![](/assets/png/argument-mining/cot_examples.png){:width="800px"}  
@@ -372,6 +374,16 @@ annotator fatigue.
 
 ## Final thoughts
 
+In this blog post, we looked into different ways on how large language models
+like GPT-3 augment the annotation process. We did this in the context of
+argument mining, a complex annotation task that involves reasoning. First, we
+examined how zero-shot predictions fare in the corpus, and then explored
+potential affordances to improve the annotation process. We categorized these
+affordances based from their reliance on LLMs&mdash; manual, directed, and
+dependent.
+
+![](/assets/png/argument-mining/reliance.png){:width="720px"}  
+{:style="text-align: center;"}
 
 <!-- rehash what you did -->
 <!-- i made some claims that aren't tested (annotator fatigue). i'm interested to learn more on how I can better test these hypotheses -->
