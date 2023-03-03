@@ -5,7 +5,7 @@ description: About page of Lj Miranda - Blog
 permalink: /about/
 ---
 
-Hi friends! My name is Lj Miranda, and welcome to my blog! 
+Hi friends! My name is Lj Miranda, and welcome to my website! 
 
 I [build things](https://github.com/ljvmiranda921).
 
@@ -18,7 +18,7 @@ Here, you'll find some of my **thoughts, works, and notes** on software
 development, machine learning, and research. I hope you'll spend a nice time
 here, so go grab yourself a coffee and feel free to look around! 
 
-If you don't know where to start, then check out [this curated list](/highlights/)!
+If you don't know where to go, then [start here](/start-here/)!
 
 ## Background
 
