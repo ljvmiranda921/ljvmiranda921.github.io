@@ -62,6 +62,12 @@ have to worry about OpenAI API costs.
 **Table:**  Dataset statistics for the `minimum wage` subset of the UKP Sentential Argument Mining corpus (Stab, et al., 2018).
 {:style="text-align: center;"}
 
+
+You can find the full project in this [Github
+repository](https://github.com/ljvmiranda921/scratch/tree/master/2023-02-16-ukp-argmin).
+It is an instance of a [spaCy project](https://spacy.io/usage/projects) that you
+can run to reproduce my results.
+
 ## <a id="zeroshot"></a> Can zero-shot annotations be reliable?
 
 First, I want to check how *accurate* GPT-3's zero-shot annotations are. Then, I will
@@ -84,7 +90,7 @@ et al., 2019](#liu2019roberta)).[^1] To recap how supervised learning works, we
 train a model from the training and development data, then evaluate the
 predictions on a held-out test set as shown in the figure below:
 
-[^1]: You can check the configuration file I used for this project in [this Github repository]().
+[^1]: You can check the configuration file I used for this project in [this Github repository](https://github.com/ljvmiranda921/scratch/tree/master/2023-02-16-ukp-argmin).
 
 ![](/assets/png/argument-mining/supervised.png){:width="650px"}  
 {:style="text-align: center;"}
@@ -404,6 +410,7 @@ these UI affordances (e.g., inattentiveness, parsing chain-of-thought). I admit
 that these were all from my personal experiences when annotating and trying out
 these recipes. I'm happy to hear suggestions on how I can verify or test these
 claims. Feel free to drop a comment below.
+
 
 
 ## References
