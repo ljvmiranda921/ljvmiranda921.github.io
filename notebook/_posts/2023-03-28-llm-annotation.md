@@ -46,9 +46,9 @@ which LLMs can help human annotators reduce their cognitive load when labeling. 
 explore an LLM's ability to highlight spans or provide reason for their labels. Each of these
 affordances represent a different level of "reliance" on an LLM's capabilities.
 
-For this blog post, I will focus on the topic of **minimum wage** in the UKP
-corpus. It's interesting, and the number of samples is small enough that I don't
-have to worry about OpenAI API costs. 
+I will focus on the topic of **minimum wage** in the UKP corpus. I find it
+interesting, and the number of samples is small enough that I don't have to
+worry about OpenAI API costs. 
 
 <!-- dataset statistics -->
 
@@ -83,11 +83,10 @@ In the **supervised set-up**, I'm using [spaCy's
 TextCategorizer](https://spacy.io/api/textcategorizer) to perform an exclusive 
 text classification task. It uses a [stacked
 ensemble](https://spacy.io/api/architectures#TextCatEnsemble) of a [linear
-bag-of-words model](https://spacy.io/api/architectures#TextCatBOW) and a neural
-network model. The neural network uses the embeddings of a [RoBERTa
-(large)](https://huggingface.co/roberta-large) transformer ([Liu,
+bag-of-words model](https://spacy.io/api/architectures#TextCatBOW), and a neural
+network model initialized with the weights of a large [RoBERTa](https://huggingface.co/roberta-large) transformer ([Liu,
 et al., 2019](#liu2019roberta)).[^1] To recap how supervised learning works, we
-train a model from the training and development data, then evaluate the
+train a model from the training and development sets, then evaluate the
 predictions on a held-out test set as shown in the figure below:
 
 [^1]: You can check the configuration file I used for this project in [this Github repository](https://github.com/ljvmiranda921/scratch/tree/master/2023-02-16-ukp-argmin).
@@ -97,14 +96,14 @@ predictions on a held-out test set as shown in the figure below:
 
 <!-- talk about the prompt for zero-shot -->
 In the **zero-shot set-up**, I completely ignore the training and development
-sets and include test set examples in the prompt. Then, I send this prompt to
+sets and include test set examples into the prompt. Then, I send this prompt to
 GPT-3 and parse the results. Finally, I treat whatever it returns as its
-predictions and compare them with the gold-annotated test data. 
+predictions and compare them with the gold-standard test data. 
 
 ![](/assets/png/argument-mining/zeroshot.png){:width="500px"}  
 {:style="text-align: center;"}
 
-I formatted the prompt like the one below:
+I formatted the prompt like this:
 
 ```
 Determine whether the text is a supporting argument (Argument_for), 
@@ -119,7 +118,7 @@ Increasing minimum wage will increase our standard of living.
 """
 ```
 
-With GPT-3 usually answering in the form of:[^2]
+And GPT-3 usually answers in the form of:[^2]
 
 ```
 answer: Argument_for
@@ -131,10 +130,9 @@ answer: Argument_for
     response format I set&mdash; it's a statistical model, after all.
     However, I didn't encounter any parser errors during my experiments.
 
-I obtained two sets of predictions from both the supervised and zero-shot
-pipelines, which I evaluated using the gold-annotated test set. As a result, I
-arrived at the tables below, highlighting the higher score in boldface:
-
+For comparison, I evaluated the predictions of the supervised and zero-shot
+setup using the gold-standard test data. The results are shown in the table
+below:
 
 | Scores         | Zero-shot          | Supervised          |
 |----------------|-------------------:|--------------------:|
@@ -192,11 +190,11 @@ whatever the language model suggests. This can be dangerous because an LLM can,
 in all its biases, influence my annotations. More so if it demonstrates some
 level of intelligible text to defend its decision. Perhaps it's just my personal
 negligence and *laziness*, but I'd like to highlight this experience to provide
-some context to the following sections.
+some context to the next sections.
 
 ### Directed: highlight an argument's claim and premise
 
-According to [Palau and Moens (2009)](#palau2009argument), an argument is
+[Palau and Moens (2009)](#palau2009argument) define an argument as
 a set of **premises** that support a **claim**.[^3] For our dataset, I would
 like to introduce an annotation set-up where the premise and the claim, if
 present, are highlighted to guide annotation. 
@@ -204,11 +202,11 @@ present, are highlighted to guide annotation.
 > Annotation set-up where the premise and claim, if present, 
 > are highlighted to guide annotation. 
 
-This set-up aims to give an annotator extra information to label a particular
+This set-up aims to give the annotator extra information to label a particular
 text. For example, they can use the highlighted spans to easily check the 
-premise of an argument with respect to its claim. The hope is that through this
-practice, we can reduce the cognitive load of annotation as the relevant parts
-of the document are emphasized. 
+premise of an argument with respect to its claim. The hope is that through this,
+we can reduce the cognitive load of annotation as the relevant parts of the
+document are already emphasized. 
 
 For this to work, we need to (1) treat the premise and the claim as spans and
 prompt GPT-3 to identify them for each text as a span labeling task. Then, we
@@ -297,7 +295,7 @@ One way we can apply chain-of-thought prompting to our dataset is by
 <u>decomposing an argument into its premise and claim.</u> Then, we can examine
 each premise and determine if they are in favor, against, or irrelevant to the
 claim.[^4] From there, we can start classifying the text amongst our three
-labels. This process is shown in the figure below:
+labels. This "reasoning pipeline" is shown in the figure below:
 
 ![](/assets/png/argument-mining/chain_of_thought.png){:width="600px"}  
 {:style="text-align: center;"}
@@ -312,10 +310,10 @@ labels. This process is shown in the figure below:
     there are some interesting points raised by the reviewers regarding
     evaluation.
 
-The prompt is a bit long, but it goes like this: I first
-provided the instructions for the task (i.e., the labels to classify with, the
-format for parsing, etc.), then I included an exemplar that has chain-of-thought
-steps. You can find the complete prompt by clicking the `details` tab below:
+The prompt is a bit long, but it goes like this: I first provided the
+instructions for the task (i.e., the labels to classify with, the format for
+parsing, etc.), then I included exemplars via chain-of-thought. You can find the
+complete prompt by clicking the `details` tab below:
 
 &nbsp;
 
@@ -395,12 +393,12 @@ A *directed* approach uses an LLM to provide supplementary information that a
 human annotator can use to inform their labeling decision. On the other hand, a
 *dependent* approach asks an LLM to not only suggest labels, but also explain
 why a text was labeled as such. Personally, I find myself being more inattentive
-as I go from a more dependent approach to LLM-guided annotation.
+as I go from a more dependent approach to an LLM-guided annotation.
 
-> The final annotation still rests on a human annotator's decision, not the LLMs.
+> The final annotation still rests on a human annotator's decision, not the LLM's.
 > These affordances are mere guides that provide convenience through suggestions.
 
-The final annotation still rests on a human annotator's decision, not the LLMs.
+The final annotation still rests on a human annotator's decision, not the LLM's.
 These affordances are mere guides that provide convenience through suggestions.
 I find it comforting, because I believe there's still some nuance in most
 annotation tasks that only *we* can capture.
