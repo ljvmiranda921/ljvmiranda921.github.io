@@ -5,9 +5,11 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-
-Below are my research publications. Feel free to check out my [Google
-Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) page:
+Also see my [Google
+Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
+[Semantic
+Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
+profiles:
 
 - [Multi hash embeddings in spaCy](https://arxiv.org/abs/2212.09255) <br> L. J. V. Miranda, &Aacute;. K&aacute;d&aacute;r, A. Boyd, S. Van Landeghem, A. S&oslash;gaard, and M. Honnibal, "Multi hash embeddings in spaCy", *arXiv:2212.09255 [cs.CL]*. 2022.
 - [Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction](https://www.dropbox.com/s/wfgklrndflpqstv/smc2018feature.pdf?dl=0) <br> L. J. V. Miranda and J. Hu, "Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction," _IEEE International Conference on System, Man, and Cybernetics_, IEEE, October 2018.
