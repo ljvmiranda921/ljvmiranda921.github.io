@@ -24,9 +24,32 @@ excerpt: |
 <span class="firstcharacter">P</span>reviously, I investigated how we can
 incorporate large language models (LLMs) into our annotation workflows. It was a
 fun [blog post](/notebook/2023/03/28/llm-annotation/), and I encourage you to
-read it! This time, I want to extend this idea by **including annotation
-guidelines.** Because these guidelines were written to define the parameters of a task, 
-we hope that including them in the prompt can lead to better few-shot predictions.
+read it. This time, I want to extend this idea by **including [annotation
+guidelines](https://sharedtasksinthedh.github.io/2017/10/01/howto-annotation/)
+in the prompt.** Because these guidelines were written to define the parameters
+of a task, I hope that they can be viable affordances to augment the labeling
+process.
+
+> Because annotation guidelines were written to define the parameters of a task,
+> I hope that they can be viable affordances to augment the labeling process.
+
+In this blog post, I want to focus on <u>argumentative sentence detection</u>.
+We want to know if a particular text is an argument. I'll be using the "minimum
+wage" dataset from the [UKP Sentential Argument Mining
+Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
+al., 2018](#stab2018ukp)). In addition, I'll use three other annotation
+guidelines from different NLP papers. **Each guideline defines an argument
+differently.** The choices were based on the work of Jakobsen et al.
+([2022](#jakobsen2022sensitivity)). The table below summarizes these guidelines:
+
+
+
+| Authors                                          | Labels                                              | How they defined an argument                                                                                                                  |
+|--------------------------------------------------|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| [Morante et al., 2020](#morante2020vaccination)  | Claim, No Claim                                     | Arguments are claim-like sentences. This might refer to actual claims or premises that resemble a claim.                                      |
+| [Levy et al., 2018](#levy2018towards)            | Accept (Pro/Con), Reject                            | Here they defined a claim as the conclusion, that is, the assertion the argument aims to prove. They didn't mention anything about premises.  |
+| [Stab et al., 2018](#stab2018ukp)                | Attacking, opposing, non argument | They have an explicit requirement where each claim should be backed-up by another claim or premise. Claims alone don't equate to an argument. |
+| [Shnarch et al., 2018](#shnarch2018unsupervised) | Accept, Reject                                      | They defined an argument as containing a claim (conclusion) and premise (evidence). Claims alone don't equate to an argument.                 |
 
 <!-- insert figure -->
 
@@ -46,15 +69,48 @@ I can imagine two potential applications from this workflow:
 <!-- talk about four chain types -->
 
 
+<!--
+
 ## Highlighting relevant passages via embeddings
 
 
 ## Evaluation
 
-<!-- talk about normalizing the labels across guidelines -->
 
 
 ### Few-shot annotation accuracy
 
 
 ### Cross-topic evaluation
+
+
+-->
+
+
+## References
+
+- <a id="shnarch2018unsupervised">Eyal Shnarch, Leshem Choshen, Guy Moshkowich,
+Ranit Aharonov, and Noam Slonim.</a> 2020. Unsupervised Expressive Rules Provide
+Explainability and Assist Human Experts Grasping New Domains. In *Findings of the
+Association for Computational Linguistics: EMNLP 2020*, pages 2678–2697, Online.
+Association for Computational Linguistics.
+- <a id="levy2018towards">Ran Levy, Ben Bogin, Shai Gretz, Ranit Aharonov, and
+Noam Slonim.</a> 2018. Towards an argumentative content search engine using weak
+supervision. In *Proceedings of the 27th International Conference on
+Computational Linguistics*, pages 2066–2081, Santa Fe, New Mexico, USA.
+Association for Computational Linguistics.
+- <a id="morante2020vaccination">Roser Morante, Chantal van Son, Isa Maks, and
+Piek Vossen.</a> 2020. Annotating Perspectives on Vaccination. In *Proceedings of
+the Twelfth Language Resources and Evaluation Conference*, pages 4964–4973,
+Marseille, France. European Language
+Resources Association.
+- <a id="stab2018ukp">Stab, C., Miller, T., Schiller, B., Rai, P., and Gurevych,
+I.</a> (2018). Cross-topic argument mining from heterogeneous sources. In
+*Proceedings of the 2018 Conference on Empirical Methods in Natural Language
+Processing*, pages 3664–3674, Brussels, Belgium, October-November. Association
+for Computational Linguistics.
+- <a id="jakobsen2022sensitivity">Thorn Jakobsen, T.S., Barrett, M., Søgaard,
+A., & Lassen, D.S.</a> (2022). The Sensitivity of Annotator Bias to Task
+Definitions in Argument Mining. In *Proceedings of the 16th Linguistic
+Annotation Workshop (LAW-XVI) within LREC2022*, pp. 44-61, Marseille, France.
+European Language Resources Association.
