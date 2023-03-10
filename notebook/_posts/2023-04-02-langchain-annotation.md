@@ -72,7 +72,7 @@ that support the LLM's prediction.
 > I'll be using the [Prodigy](https://prodi.gy) annotation tool and
 > [LangChain](https://github.com/hwchase17/langchain) library in this work. 
 > You can find the Prodigy recipe in this [Github repository](). Lastly, to save
-> API calls, I'll only be working on the test set (496 examples).
+> on API costs, I'll only be working with the 496 samples in the test set.
 
 
 ## Fitting annotation guidelines into the prompt
