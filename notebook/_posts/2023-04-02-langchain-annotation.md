@@ -57,20 +57,24 @@ guidelines (the numbers beside each label is its normalized version):
 | [Stab et al., 2018](#stab2018ukp)                | Attacking `(1)`, opposing `(1)`, non argument `(0)` | They have an explicit requirement where each claim should be backed-up by another claim or premise. Claims alone don't equate to an argument. |
 | [Shnarch et al., 2018](#shnarch2018unsupervised) | Accept `(1)`, Reject `(0)`                                      | They defined an argument as containing a claim (conclusion) and premise (evidence). Claims alone don't equate to an argument.                 |
 
-<!-- insert figure -->
-
-<!-- review the process, the dataset you're using, etc. -->
-
-I can imagine two potential applications from this workflow:
-- Get few-shot annotations by feeding the annotation guidelines into the prompt.
-- Highlight passages from the annotation guideline that are relevant to the labeling task.
+By incorporating both the annotation guideline and large language model, I
+envision the following workflows:
+- **Get few-shot annotations by feeding annotation guidelines into the prompt.**
+This is similar to my [previous blog post](/notebook/2023/03/28/llm-annotation/)
+with the addition of more context from the annotation guideline. The engineering
+challenge here is on feeding a long string of text into a [prompt constrained to
+a set amount of tokens](https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them).
+- **Highlight passages from the annotation guideline that are relevant to the
+labeling task.** Here, we want to use both OpenAI embeddings and some clever
+prompts to highlight, in verbatim, relevant parts of the annotation guideline
+that support the LLM's prediction.
 
 > I'll be using the [Prodigy](https://prodi.gy) annotation tool and
 > [LangChain](https://github.com/hwchase17/langchain) library in this work. 
 > You can find the Prodigy recipe in this [Github repository]() (see [caveats](#caveats)).
 
 
-## Feeding annotation guidelines into the prompt
+## Fitting annotation guidelines into the prompt
 
 <!-- talk about four chain types -->
 
