@@ -118,7 +118,7 @@ Increasing minimum wage will increase our standard of living.
 """
 ```
 
-And GPT-3 usually answers in the form of:[^2]
+And GPT-3 answers in the form of:[^2]
 
 ```
 answer: Argument_for
