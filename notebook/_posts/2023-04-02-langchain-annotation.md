@@ -39,13 +39,13 @@ wage" dataset from the [UKP Sentential Argument Mining
 Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
 al., 2018](#stab2018ukp)). In addition, I'll use three other annotation
 guidelines from different NLP papers. **Each guideline defines an argument
-differently.** The choices were based on the work of Jakobsen et al.
-([2022](#jakobsen2022sensitivity)). 
+differently.** The choices were based on the work of [Jakobsen et al.
+(2022)](#jakobsen2022sensitivity). 
 
 
 Because each guideline asks for different labels, I normalized them into `1:
-Argument` and `0: No argument` similar to Jakobsen et al.'s
-([2022](#jakobsen2020sensitivity)) work. The table below summarizes these
+Argument` and `0: No argument` similar to [Jakobsen et al.'s
+(2022)](#jakobsen2022sensitivity) work. The table below summarizes these
 guidelines (the numbers beside each label is its normalized version):
 
 
@@ -77,7 +77,31 @@ that support the LLM's prediction.
 
 ## Fitting annotation guidelines into the prompt
 
-<!-- talk about four chain types -->
+Fitting a long document into OpenAI's prompt is one of the primary engineering
+challenges in this project. The GPT-3.5 `text-davinci-003` model allows a
+maximum request length of 4097 tokens, which are shared between the prompt and
+its completion. So, an eight-page annotation guideline found in [Morante et al.
+(2020)](#morante2020vaccination) won't fit.
+
+[LangChain](https://github.com/hwchase17/langchain) offers a simple solution:
+split the document into chunks and think of prompts as functions.  By doing so,
+we can leverage a wide range of data engineering concepts such as map-reduce,
+reranking, and sequential processing. The [LangChain
+API](https://langchain.readthedocs.io/en/latest/modules/indexes/combine_docs.html)
+dub these as `MapReduce`, `MapRerank`, and `Refine` respectively.
+
+> LangChain offers a simple solution: split the document into chunks and think of prompts as functions.
+> We can then leverage a wide range of data engineering concepts.
+
+<!-- talk about how you split them -->
+
+<!-- talk about testing all three, but refine gives the most consistent results -->
+<!-- talk about refine -->
+
+<!-- show a sample of the prompts -->
+
+![](/assets/png/langchain/refine.png){:width="700px"}  
+{:style="text-align: center;"}
 
 
 <!--
