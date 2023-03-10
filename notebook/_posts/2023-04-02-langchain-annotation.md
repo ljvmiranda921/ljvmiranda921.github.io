@@ -33,8 +33,8 @@ process.
 > Because annotation guidelines were written to define the parameters of a task,
 > I hope that they can be viable affordances to augment the labeling process.
 
-In this blog post, I want to focus on <u>argumentative sentence detection</u>.
-We want to know if a particular text is an argument. I'll be using the "minimum
+In this blog post, I want to focus on <u>argumentative sentence detection</u>:
+we want to know if a given text is an argument. I'll be using the "minimum
 wage" dataset from the [UKP Sentential Argument Mining
 Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
 al., 2018](#stab2018ukp)). In addition, I'll use three other annotation
