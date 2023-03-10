@@ -93,15 +93,27 @@ dub these as `MapReduce`, `MapRerank`, and `Refine` respectively.
 > LangChain offers a simple solution: split the document into chunks and think of prompts as functions.
 > We can then leverage a wide range of data engineering concepts.
 
+During my experiments, I found that using the sequential prompting technique,
+`Refine`, works best for annotation guidelines. The output is more consistent
+and the model does not fail at performing the task. The figure below provides an
+overview of this process:
+
+
+![](/assets/png/langchain/refine.png){:width="700px"}  
+{:style="text-align: center;"}
+
+1. **Split the document into smaller chunks**
+2. **Write a "seed" prompt**
+3. **Write a "refine" prompt**
+
+
+
 <!-- talk about how you split them -->
 
 <!-- talk about testing all three, but refine gives the most consistent results -->
 <!-- talk about refine -->
 
 <!-- show a sample of the prompts -->
-
-![](/assets/png/langchain/refine.png){:width="700px"}  
-{:style="text-align: center;"}
 
 
 <!--
