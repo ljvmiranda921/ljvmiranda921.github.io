@@ -28,19 +28,20 @@ read it. This time, I want to extend this idea by **including [annotation
 guidelines](https://sharedtasksinthedh.github.io/2017/10/01/howto-annotation/)
 in the prompt.** Because these guidelines were written to define the parameters
 of a task, I hope that they can be viable affordances to augment the labeling
-process.
+process. 
 
 > Because annotation guidelines were written to define the parameters of a task,
 > I hope that they can be viable affordances to augment the labeling process.
 
 In this blog post, I want to focus on <u>argumentative sentence detection</u>:
-we want to know if a given text is an argument. I'll be using the "minimum
-wage" dataset from the [UKP Sentential Argument Mining
+we want to know if a given text is an argument. I'll be using the "minimum wage"
+dataset from the [UKP Sentential Argument Mining
 Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
 al., 2018](#stab2018ukp)). In addition, I'll use three other annotation
 guidelines from different NLP papers. **Each guideline defines an argument
 differently.** The choices were based on the work of [Jakobsen et al.
-(2022)](#jakobsen2022sensitivity). 
+(2022)](#jakobsen2022sensitivity). To save API costs, I'll only be using the
+samples from the test set.
 
 
 Because each guideline asks for different labels, I normalized them into `1:
@@ -69,10 +70,10 @@ labeling task.** Here, we want to use both OpenAI embeddings and some clever
 prompts to highlight, in verbatim, relevant parts of the annotation guideline
 that support the LLM's prediction.
 
-> I'll be using the [Prodigy](https://prodi.gy) annotation tool and
-> [LangChain](https://github.com/hwchase17/langchain) library in this work. 
-> You can find the Prodigy recipe in this [Github repository](). Lastly, to save
-> on API costs, I'll only be working with the 496 samples in the test set.
+I plan to accomplish this task using [Prodigy](https://prodi.gy), an annotation
+tool, and [LangChain](https://github.com/hwchase17/langchain), a library for
+working with large language models. You can find the source code from this
+Github repository.
 
 
 ## Fitting annotation guidelines into the prompt
