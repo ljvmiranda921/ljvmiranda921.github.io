@@ -40,16 +40,22 @@ Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
 al., 2018](#stab2018ukp)). In addition, I'll use three other annotation
 guidelines from different NLP papers. **Each guideline defines an argument
 differently.** The choices were based on the work of Jakobsen et al.
-([2022](#jakobsen2022sensitivity)). The table below summarizes these guidelines:
+([2022](#jakobsen2022sensitivity)). 
+
+
+Because each guideline asks for different labels, I normalized them into `1:
+Argument` and `0: No argument` similar to Jakobsen et al.'s
+([2020](#jakobsen2020sensitivity)) work. The table below summarizes these
+guidelines (the numbers beside each label is its normalized version):
 
 
 
-| Authors                                          | Labels                                              | How they defined an argument                                                                                                                  |
+| Authors                                          | Labels                                               | How they defined an argument                                                                                                                  |
 |--------------------------------------------------|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| [Morante et al., 2020](#morante2020vaccination)  | Claim, No Claim                                     | Arguments are claim-like sentences. This might refer to actual claims or premises that resemble a claim.                                      |
-| [Levy et al., 2018](#levy2018towards)            | Accept (Pro/Con), Reject                            | Here they defined a claim as the conclusion, that is, the assertion the argument aims to prove. They didn't mention anything about premises.  |
-| [Stab et al., 2018](#stab2018ukp)                | Attacking, opposing, non argument | They have an explicit requirement where each claim should be backed-up by another claim or premise. Claims alone don't equate to an argument. |
-| [Shnarch et al., 2018](#shnarch2018unsupervised) | Accept, Reject                                      | They defined an argument as containing a claim (conclusion) and premise (evidence). Claims alone don't equate to an argument.                 |
+| [Morante et al., 2020](#morante2020vaccination)  | Claim `(1)`, No Claim `(0)`                                     | Arguments are claim-like sentences. This might refer to actual claims or premises that resemble a claim.                                      |
+| [Levy et al., 2018](#levy2018towards)            | Accept (Pro/Con) `(1)`, Reject `(0)`                            | Here they defined a claim as the conclusion, that is, the assertion the argument aims to prove. They didn't mention anything about premises.  |
+| [Stab et al., 2018](#stab2018ukp)                | Attacking `(1)`, opposing `(1)`, non argument `(0)` | They have an explicit requirement where each claim should be backed-up by another claim or premise. Claims alone don't equate to an argument. |
+| [Shnarch et al., 2018](#shnarch2018unsupervised) | Accept `(1)`, Reject `(0)`                                      | They defined an argument as containing a claim (conclusion) and premise (evidence). Claims alone don't equate to an argument.                 |
 
 <!-- insert figure -->
 
