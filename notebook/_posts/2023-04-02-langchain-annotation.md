@@ -59,7 +59,7 @@ guidelines (the numbers beside each label is its normalized version):
 
 By incorporating both the annotation guideline and large language model, I
 envision the following workflows:
-- **Get few-shot annotations by feeding annotation guidelines into the prompt.**
+- **Get few-shot predictions by feeding annotation guidelines into the prompt.**
 This is similar to my [previous blog post](/notebook/2023/03/28/llm-annotation/)
 with the addition of more context from the annotation guideline. The engineering
 challenge here is on feeding a long string of text into a [prompt constrained to
@@ -71,7 +71,8 @@ that support the LLM's prediction.
 
 > I'll be using the [Prodigy](https://prodi.gy) annotation tool and
 > [LangChain](https://github.com/hwchase17/langchain) library in this work. 
-> You can find the Prodigy recipe in this [Github repository]() (see [caveats](#caveats)).
+> You can find the Prodigy recipe in this [Github repository](). Lastly, to save
+> API calls, I'll only be working on the test set (496 examples).
 
 
 ## Fitting annotation guidelines into the prompt
