@@ -27,11 +27,15 @@ fun [blog post](/notebook/2023/03/28/llm-annotation/), and I encourage you to
 read it. This time, I want to extend this idea by **including [annotation
 guidelines](https://sharedtasksinthedh.github.io/2017/10/01/howto-annotation/)
 in the prompt.** Because these guidelines were written to define the parameters
-of a task, I hope that they can be viable affordances to augment the labeling
-process. 
+of a task, we hope that they can improve the annotation process by providing
+more context and examples. 
 
-> Because annotation guidelines were written to define the parameters of a task,
-> I hope that they can be viable affordances to augment the labeling process.
+> Because these guidelines were written to define the parameters of a task, we
+> hope that they can improve the annotation process by providing more context and
+> examples.
+
+![](/assets/png/langchain/setup.png){:width="600px"}  
+{:style="text-align: center;"}
 
 In this blog post, I want to focus on <u>argumentative sentence detection</u>:
 we want to know if a given text is an argument. I'll be using the "minimum wage"
