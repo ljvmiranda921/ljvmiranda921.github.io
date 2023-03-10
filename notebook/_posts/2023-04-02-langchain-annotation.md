@@ -45,7 +45,7 @@ differently.** The choices were based on the work of Jakobsen et al.
 
 Because each guideline asks for different labels, I normalized them into `1:
 Argument` and `0: No argument` similar to Jakobsen et al.'s
-([2020](#jakobsen2020sensitivity)) work. The table below summarizes these
+([2022](#jakobsen2020sensitivity)) work. The table below summarizes these
 guidelines (the numbers beside each label is its normalized version):
 
 
