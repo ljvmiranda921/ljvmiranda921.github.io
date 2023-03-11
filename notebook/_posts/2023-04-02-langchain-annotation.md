@@ -150,17 +150,56 @@ to think of annotation as a question-answering task.
 
 <!-- screenshot of textcat.manual -->
 
-### Comparing supervised, zero, and few-shot predictions
+### Comparing supervised, zero-, and few-shot predictions
 
 For this evaluation step, I want to compare the results I had in [my previous
-blog post](http://localhost:4000/notebook/2023/03/28/llm-annotation/#zeroshot)
-to the few-shot annotations from [Stab et al (2018)](#stab2018ukp)'s annotation
+blog post](/notebook/2023/03/28/llm-annotation/#zeroshot)
+to the LLM predictions with [Stab et al (2018)](#stab2018ukp)'s annotation
 guidelines.  Note that the original guidelines aren't public. Instead, [Jakobsen
 et al. (2022)](#jakobsen2022sensitivity) constructed a guideline based on the
 description in their paper and sent it to the authors who confirmed the
-similarity.
+similarity. 
 
+Unfortunately, predicting with the annotation guidelines
+underperform more than I expected:
 
+| Scores         | Zero-shot          | Supervised          | Few-shot    |
+|----------------|-------------------:|--------------------:|-------------:
+| Micro F1-score | $$\mathbf{81.45}$$ |  $$79.88$$          | $$61.90$$   |
+| Macro F1-score | $$\mathbf{78.74}$$ |  $$77.52$$          | $$55.02$$   |
+
+| F1-score (per type)                      | Zero-shot           | Supervised | Few-shot  |
+|------------------------------------------|--------------------:|-----------:|-----------:
+| Supporting argument (`Argument_for`)     |  $$\mathbf{75.21}$$ | $$73.60$$  | $$48.74$$ |
+| No argument (`NoArgument`)               |  $$\mathbf{86.74}$$ | $$85.66$$  | $$72.50$$ |
+| Opposing argument (`Argument_against`)   |  $$\mathbf{74.26}$$ | $$73.30$$  | $$46.00$$ |
+
+Let's compare with other annotation guidelines. This time, I normalized the
+labels of the gold-standard test set and LLM predictions. We then arrive at a 
+binary text classification task between an `Argument` and `No argument`. You
+can refer to the table in the introduction to see which label was assigned to
+which:
+
+| Scores         | Stab et al. (2018) | Levy et al. (2018) | Shnarch et al. (2018)  |
+|----------------|-------------------:|--------------------:|-----------------------:
+| Micro F1-score | $$\mathbf{68.35}$$ |  $$60.08$$          | $$42.54$$             |
+| Macro F1-score | $$\mathbf{67.61}$$ |  $$53.71$$          | $$37.94$$             |
+
+| F1-score (per type)        | Stab et al. (2018) | Levy et al. (2018) | Shnarch et al. (2018)  |
+|----------------------------|-------------------:|-------------------:|------------------------:
+| No argument (`NoArgument`) | $$\mathbf{72.50}$$ | $$89.26$$          | $$54.83$$              |
+| Argument (`Argument`)      | $$\mathbf{62.71}$$ | $$36.54$$          | $$21.05$$              |
+
+I have to admit that this one's definitely a **negative result.** I initially
+expected that the few-shot predictions will work better because there's added
+context from the guidelines. But it's also possible that our prompt (plus our
+sequential processing step) became a detriment to get more reliable predictions.
+
+I'm not closing my doors to this hypothesis. There's an interesting distribution
+of scores especially across category types. For example, [Levy et al.,
+(2018)](#levy2018towards) seems to perform well on `NoArgument` cases. Perhaps
+there's something in how the guideline was written that caused this? I might get
+back to this again in a more qualitative light.
 
 ### Cross-guideline evaluation
 <!-- cross topic evaluation -->
