@@ -42,16 +42,16 @@ we want to know if a given text is an argument. I'll be using the "minimum wage"
 dataset from the [UKP Sentential Argument Mining
 Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
 al., 2018](#stab2018ukp)). In addition, I'll use three other annotation
-guidelines from different NLP papers. **Each guideline defines an argument
-differently.** The choices were based on the work of [Jakobsen et al.
-(2022)](#jakobsen2022sensitivity). To save API costs, I'll only be using the
-samples from the test set.
+guidelines from different NLP papers. The choices were based on the work of
+[Jakobsen et al.  (2022)](#jakobsen2022sensitivity). To save API costs, I'll
+only be using the samples from the test set.
 
 
-Because each guideline asks for different labels, I normalized them into `1:
-Argument` and `0: No argument` similar to [Jakobsen et al.'s
-(2022)](#jakobsen2022sensitivity) work. The table below summarizes these
-guidelines (the numbers beside each label is its normalized version):
+Because each guideline defines an argument differently and asks for different
+labels, I normalized them into `1: Argument` and `0: No argument` similar to
+[Jakobsen et al.'s (2022)](#jakobsen2022sensitivity) work. The table below
+summarizes these guidelines (the numbers beside each label is its normalized
+version):
 
 
 
@@ -83,7 +83,7 @@ Github repository.
 ## Fitting annotation guidelines into the prompt
 
 Fitting a long document into OpenAI's prompt is one of the primary engineering
-challenges in this project. The GPT-3.5 `text-davinci-003` model allows a
+challenges in this project. The GPT-3.5 `text-davinci-003` model only allows a
 maximum request length of 4097 tokens, which are shared between the prompt and
 its completion. So, an eight-page annotation guideline found in [Morante et al.
 (2020)](#morante2020vaccination) won't fit.
@@ -93,7 +93,7 @@ split the document into chunks and think of prompts as functions.  By doing so,
 we can leverage a wide range of data engineering concepts such as map-reduce,
 reranking, and sequential processing. The [LangChain
 API](https://langchain.readthedocs.io/en/latest/modules/indexes/combine_docs.html)
-dub these as `MapReduce`, `MapRerank`, and `Refine` respectively.
+dubs these as `MapReduce`, `MapRerank`, and `Refine` respectively.
 
 > LangChain offers a simple solution: split the document into chunks and think of prompts as functions.
 > We can then leverage a wide range of data engineering concepts.
@@ -107,11 +107,33 @@ overview of this process:
 ![](/assets/png/langchain/refine.png){:width="700px"}  
 {:style="text-align: center;"}
 
-1. **Split the document into smaller chunks**
-2. **Write a "seed" prompt**
+1. **Split the document into smaller chunks.** I used LangChain's built-in spaCy
+splitter that splits text into into sentences. This process ensures that the
+text is still coherent when passed to the prompt, especially when an annotation
+guideline provides exemplars to define the task.
+
+2. **Write a "seed" prompt.** The seed prompt asks GPT-3.5 to classify an example
+given the *first chunk* of the annotation guideline. It then returns a
+preliminary answer that will be refined later on using the "refine" prompt. For
+our project, the seed prompt looks like this:
+
+    ```
+    Context information is below.
+    -----------------------------------------
+    {context}
+    -----------------------------------------
+    Given the context information and not prior knowledge, classify
+    the following text:
+    {question}
+    ```
+
 3. **Write a "refine" prompt**
 
 
+Notice that I'm using some terms in the Question-Answering domain: *context*
+refers to the chunk of text from the annotation guideline, and *question* is the
+example to be classified. I patterned my prompts to this domain because it's easier
+to think of annotation as a question-answering task.
 
 <!-- talk about how you split them -->
 
