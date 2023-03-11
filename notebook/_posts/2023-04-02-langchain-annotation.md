@@ -30,7 +30,7 @@ in the prompt.** Because these guidelines were written to define the parameters
 of a task, we hope that they can improve the annotation process by providing
 more context and examples. 
 
-> Because these guidelines were written to define the parameters of a task, we
+> Because [annotation] guidelines were written to define the parameters of a task, we
 > hope that they can improve the annotation process by providing more context and
 > examples.
 
@@ -110,10 +110,10 @@ overview of this process:
 1. **Split the document into smaller chunks.** I used LangChain's built-in spaCy
 splitter that splits text into sentences. This process ensures that the
 text is still coherent when passed to the prompt, especially when an annotation
-guideline provides exemplars to define the task.
-2. **Write a "seed" prompt.** The seed prompt asks GPT-3.5 to classify an example
+guideline provides exemplars for the task.
+2. **Write a seed prompt.** The seed prompt asks GPT-3.5 to classify an example
 given the *first chunk* of the annotation guideline. It then returns a
-preliminary answer that will be refined later on using the "refine" prompt. For
+preliminary answer that will be refined later on using the refine prompt. For
 our project, the seed prompt looks like this:
 
     ```
@@ -125,7 +125,7 @@ our project, the seed prompt looks like this:
     the following text:
     {question}
     ```
-3. **Write a "refine" prompt** This prompt asks GPT-3.5 to refine their answer
+3. **Write a refine prompt** This prompt asks GPT-3.5 to refine their answer
 given new information. This prompt is called successively until all chunks are 
 shown. Then, we take the refined answer and assign it as our LLM's prediction.
 The refine prompt looks like this:
