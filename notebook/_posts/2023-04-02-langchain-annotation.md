@@ -161,10 +161,6 @@ the authors who confirmed the similarity.
 
 
 
-
-
-
-
 ### Cross-guideline evaluation
 <!-- cross topic evaluation -->
 
