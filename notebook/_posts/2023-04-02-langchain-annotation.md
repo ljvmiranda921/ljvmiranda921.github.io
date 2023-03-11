@@ -43,9 +43,7 @@ dataset from the [UKP Sentential Argument Mining
 Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
 al., 2018](#stab2018ukp)). In addition, I'll use three other annotation
 guidelines from different NLP papers. The choices were based on the work of
-[Jakobsen et al.  (2022)](#jakobsen2022sensitivity). To save API costs, I'll
-only be using the samples from the test set.
-
+[Jakobsen et al.  (2022)](#jakobsen2022sensitivity). 
 
 Because each guideline defines an argument differently and asks for different
 labels, I normalized them into `1: Argument` and `0: No argument` similar to
@@ -57,7 +55,6 @@ version):
 
 | Authors                                          | Labels                                               | How they defined an argument                                                                                                                  |
 |--------------------------------------------------|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| [Morante et al., 2020](#morante2020vaccination)  | Claim `(1)`, No Claim `(0)`                                     | Arguments are claim-like sentences. This might refer to actual claims or premises that resemble a claim.                                      |
 | [Levy et al., 2018](#levy2018towards)            | Accept (Pro/Con) `(1)`, Reject `(0)`                            | Here they defined a claim as the conclusion, that is, the assertion the argument aims to prove. They didn't mention anything about premises.  |
 | [Stab et al., 2018](#stab2018ukp)                | Attacking `(1)`, opposing `(1)`, non argument `(0)` | They have an explicit requirement where each claim should be backed-up by another claim or premise. Claims alone don't equate to an argument. |
 | [Shnarch et al., 2018](#shnarch2018unsupervised) | Accept `(1)`, Reject `(0)`                                      | They defined an argument as containing a claim (conclusion) and premise (evidence). Claims alone don't equate to an argument.                 |
@@ -79,14 +76,17 @@ tool, and [LangChain](https://github.com/hwchase17/langchain), a library for
 working with large language models. You can find the source code from this
 Github repository.
 
+> To save costs, I'll only be using the 496 samples from the test set. I also discarded the
+> [Morante et al, 2020](#morante2020vaccination) annotation guideline because it's eight pages long
+> and API calls can balloon from processing it.
+
 
 ## Fitting annotation guidelines into the prompt
 
 Fitting a long document into OpenAI's prompt is one of the primary engineering
 challenges in this project. The GPT-3.5 `text-davinci-003` model only allows a
 maximum request length of 4097 tokens, which are shared between the prompt and
-its completion. So, an eight-page annotation guideline found in [Morante et al.
-(2020)](#morante2020vaccination) won't fit.
+its completion&mdash; most annotation guidelines won't fit.
 
 [LangChain](https://github.com/hwchase17/langchain) offers a simple solution:
 split the document into chunks and think of prompts as functions.  By doing so,
@@ -108,10 +108,9 @@ overview of this process:
 {:style="text-align: center;"}
 
 1. **Split the document into smaller chunks.** I used LangChain's built-in spaCy
-splitter that splits text into into sentences. This process ensures that the
+splitter that splits text into sentences. This process ensures that the
 text is still coherent when passed to the prompt, especially when an annotation
 guideline provides exemplars to define the task.
-
 2. **Write a "seed" prompt.** The seed prompt asks GPT-3.5 to classify an example
 given the *first chunk* of the annotation guideline. It then returns a
 preliminary answer that will be refined later on using the "refine" prompt. For
@@ -126,36 +125,38 @@ our project, the seed prompt looks like this:
     the following text:
     {question}
     ```
+3. **Write a "refine" prompt** This prompt asks GPT-3.5 to refine their answer
+given new information. This prompt is called successively until all chunks are 
+shown. Then, we take the refined answer and assign it as our LLM's prediction.
+The refine prompt looks like this:
 
-3. **Write a "refine" prompt**
-
+    ```
+    The original text to classify is as follows: {question}
+    We have provided an existing answer: {existing_answer}
+    We have the opportunity to refine the existing answer (only if needed)
+    with some more context below.
+    ----------------------------------------------
+    {context}
+    ----------------------------------------------
+    Given the new context, refine the original answer to better
+    classify the question. If the context isn't useful, return
+    the original answer.
+    ```
 
 Notice that I'm using some terms in the Question-Answering domain: *context*
 refers to the chunk of text from the annotation guideline, and *question* is the
 example to be classified. I patterned my prompts to this domain because it's easier
 to think of annotation as a question-answering task.
 
-<!-- talk about how you split them -->
 
-<!-- talk about testing all three, but refine gives the most consistent results -->
-<!-- talk about refine -->
-
-<!-- show a sample of the prompts -->
+<!-- compare supervised, zero-shot, and few-shot results from Stab et al -->
+<!-- cross topic evaluation -->
 
 
 <!--
 
 ## Highlighting relevant passages via embeddings
 
-
-## Evaluation
-
-
-
-### Few-shot annotation accuracy
-
-
-### Cross-topic evaluation
 
 
 -->
