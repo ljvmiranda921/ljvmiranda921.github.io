@@ -148,6 +148,7 @@ refers to the chunk of text from the annotation guideline, and *question* is the
 example to be classified. I patterned my prompts to this domain because it's easier
 to think of annotation as a question-answering task.
 
+<!-- screenshot of textcat.manual -->
 
 <!-- compare supervised, zero-shot, and few-shot results from Stab et al -->
 <!-- cross topic evaluation -->
