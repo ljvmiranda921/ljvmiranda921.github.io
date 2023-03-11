@@ -150,7 +150,22 @@ to think of annotation as a question-answering task.
 
 <!-- screenshot of textcat.manual -->
 
-<!-- compare supervised, zero-shot, and few-shot results from Stab et al -->
+### Comparing supervised, zero, and few-shot predictions
+
+For this evaluation step, I want to compare the results I had in [my previous
+blog post](http://localhost:4000/notebook/2023/03/28/llm-annotation/#zeroshot)
+to the few-shot annotations from Stab et al (2018)'s annotation guidelines.
+Note that the original guidelines aren't public. Instead, Jakobsen et al. (2022)
+constructed a guideline based on the description in their paper and sent it to
+the authors who confirmed the similarity.
+
+
+
+
+
+
+
+### Cross-guideline evaluation
 <!-- cross topic evaluation -->
 
 
