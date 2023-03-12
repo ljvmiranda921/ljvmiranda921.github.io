@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [langchain, nlp, llm, data annotation, prodigy, natural language processing, chatgpt, gpt-j, gpt-3]
-header-img: /assets/png/argument-mining/header.png
+header-img: /assets/png/langchain/header.png
 description: |
     As an extension of my previous post on using LLMs to annotate argument
     mining datasets, I want to explore how we can incorporate annotation
