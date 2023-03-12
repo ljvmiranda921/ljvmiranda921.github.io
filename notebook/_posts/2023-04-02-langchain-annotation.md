@@ -38,17 +38,17 @@ more context and examples.
 {:style="text-align: center;"}
 
 In this blog post, I want to focus on <u>argumentative sentence detection</u>:
-we want to know if a given text is an argument. I'll be using the "minimum wage"
+we want to know if a given text is an argument. I'll use the "minimum wage"
 dataset from the [UKP Sentential Argument Mining
 Corpus](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345) ([Stab, et
 al., 2018](#stab2018ukp)). In addition, I'll use three other annotation
-guidelines from different NLP papers. The choices were based on the work of
+guidelines from different NLP papers. I based these choices from the work of
 [Jakobsen et al.  (2022)](#jakobsen2022sensitivity). 
 
 Because each guideline defines an argument differently and asks for different
 labels, I normalized them into `1: Argument` and `0: No argument` similar to
 [Jakobsen et al.'s (2022)](#jakobsen2022sensitivity) work. The table below
-summarizes these guidelines (the numbers beside each label is its normalized
+summarizes these guidelines (the number beside each label is its normalized
 version):
 
 
@@ -61,7 +61,7 @@ version):
 
 By incorporating both the annotation guideline and large language model, I
 envision the following workflows:
-- **Get few-shot predictions by feeding annotation guidelines into the prompt.**
+- **Get LLM predictions by feeding annotation guidelines into the prompt.**
 This is similar to my [previous blog post](/notebook/2023/03/28/llm-annotation/)
 with the addition of more context from the annotation guideline. The engineering
 challenge here is on feeding a long string of text into a [prompt constrained to
@@ -125,8 +125,8 @@ our project, the seed prompt looks like this:
     the following text:
     {question}
     ```
-3. **Write a refine prompt** This prompt asks GPT-3.5 to refine their answer
-given new information. This prompt is called successively until all chunks are 
+3. **Write a refine prompt** The refine prompt asks GPT-3.5 to refine their answer
+given new information. The prompt is called successively until all chunks are 
 shown. Then, we take the refined answer and assign it as our LLM's prediction.
 The refine prompt looks like this:
 
@@ -143,42 +143,25 @@ The refine prompt looks like this:
     the original answer.
     ```
 
-Notice that I'm using some terms in the Question-Answering domain: *context*
+Notice that I'm using some terms from the Question-Answering domain: *context*
 refers to the chunk of text from the annotation guideline, and *question* is the
 example to be classified. I patterned my prompts to this domain because it's easier
 to think of annotation as a question-answering task.
 
 <!-- screenshot of textcat.manual -->
 
-### Comparing supervised, zero-, and few-shot predictions
+### Comparing predictions to gold-standard data
 
-For this evaluation step, I want to compare the results I had in [my previous
-blog post](/notebook/2023/03/28/llm-annotation/#zeroshot)
-to the LLM predictions with [Stab et al (2018)](#stab2018ukp)'s annotation
-guidelines.  Note that the original guidelines aren't public. Instead, [Jakobsen
-et al. (2022)](#jakobsen2022sensitivity) constructed a guideline based on the
-description in their paper and sent it to the authors who confirmed the
-similarity. 
+For this evaluation step, I want to compare the predictions from each annotation
+guideline to the gold-standard annotations found in the UKP dataset. First, I
+normalized all labels into a binary classification task between an `Argument`
+and `No argument`:
+- Labels assigned to `Argument`: Accept (Pro/Con), Attacking, Opposing, Accept
+- Labels assigned to `No argument`: Reject, Non argument
 
-Unfortunately, predicting with the annotation guidelines
-underperform more than I expected:
-
-| Scores         | Zero-shot          | Supervised          | Few-shot    |
-|----------------|-------------------:|--------------------:|-------------:
-| Micro F1-score | $$\mathbf{81.45}$$ |  $$79.88$$          | $$61.90$$   |
-| Macro F1-score | $$\mathbf{78.74}$$ |  $$77.52$$          | $$55.02$$   |
-
-| F1-score (per type)                      | Zero-shot           | Supervised | Few-shot  |
-|------------------------------------------|--------------------:|-----------:|-----------:
-| Supporting argument (`Argument_for`)     |  $$\mathbf{75.21}$$ | $$73.60$$  | $$48.74$$ |
-| No argument (`NoArgument`)               |  $$\mathbf{86.74}$$ | $$85.66$$  | $$72.50$$ |
-| Opposing argument (`Argument_against`)   |  $$\mathbf{74.26}$$ | $$73.30$$  | $$46.00$$ |
-
-Let's compare with other annotation guidelines. This time, I normalized the
-labels of the gold-standard test set and LLM predictions. We then arrive at a 
-binary text classification task between an `Argument` and `No argument`. You
-can refer to the table in the introduction to see which label was assigned to
-which:
+This process gave us a dataset with $$227$$ examples with the `Argument` class
+and $$270$$ examples with the `No argument` class. The F1-score for each
+annotation guideline is shown below:
 
 | Scores         | Stab et al. (2018) | Levy et al. (2018) | Shnarch et al. (2018)  |
 |----------------|-------------------:|--------------------:|-----------------------:
@@ -190,16 +173,52 @@ which:
 | No argument (`NoArgument`) | $$\mathbf{72.50}$$ | $$89.26$$          | $$54.83$$              |
 | Argument (`Argument`)      | $$\mathbf{62.71}$$ | $$36.54$$          | $$21.05$$              |
 
-I have to admit that this one's definitely a **negative result.** I initially
-expected that the few-shot predictions will work better because there's added
-context from the guidelines. But it's also possible that our prompt (plus our
-sequential processing step) became a detriment to get more reliable predictions.
+As expected, the performance of the [Stab et al., (2018)](#stab2018ukp)
+guideline is closest to the original annotations. It's also interesting how the
+results are heavily biased towards the `NoArgument` class for both [Levy et al.
+(2018)](#levy2018towards) and [Shnarch et al. (2018)](#shnarch2018unsupervised)
+guidelines. From a qualitative inspection, these results make sense because the wording
+from these guidelines denote a more stringent criteria for accepting statements as
+arguments:
 
-I'm not closing my doors to this hypothesis. There's an interesting distribution
-of scores especially across category types. For example, [Levy et al.,
-(2018)](#levy2018towards) seems to perform well on `NoArgument` cases. Perhaps
-there's something in how the guideline was written that caused this? I might get
-back to this again in a more qualitative light.
+![](/assets/png/langchain/shnarch.png){:width="800px"}  
+__Figure:__ Portion of annotation guidelines from [Shnarch, et al. (2018)](#shnarch2018unsupervised)
+{:style="text-align: center;"}
+
+![](/assets/png/langchain/levy.png){:width="800px"}  
+__Figure:__ Portion of annotation guidelines from [Levy, et al. (2018)](#levy2018towards)
+{:style="text-align: center;"}
+
+It's still hard to say which *exact* statements from the guideline informed an
+LLM's decision. But because our prompting strategy refines the answer for each
+chunk of text, it's possible that original `Accept` answers were rejected
+because of new information from the prompt.
+
+Finally, I also noticed that the performance from the [Stab, et al. (2018)
+annotation guideline](#stab2018ukp) is worse than the supervised and zero-shot
+predictions from my [previous blog post](/notebook/2023/03/28/llm-annotation/): 
+
+
+| Scores         | Zero-shot          | Supervised          | Stab, et al. (2018)    |
+|----------------|-------------------:|--------------------:|-------------:
+| Micro F1-score | $$\mathbf{81.45}$$ |  $$79.88$$          | $$61.90$$   |
+| Macro F1-score | $$\mathbf{78.74}$$ |  $$77.52$$          | $$55.02$$   |
+
+
+| F1-score (per type)                      | Zero-shot           | Supervised | Stab, et al. (2018)  |
+|------------------------------------------|--------------------:|-----------:|-----------:
+| Supporting argument (`Argument_for`)     |  $$\mathbf{75.21}$$ | $$73.60$$  | $$48.74$$ |
+| No argument (`NoArgument`)               |  $$\mathbf{86.74}$$ | $$85.66$$  | $$72.50$$ |
+| Opposing argument (`Argument_against`)   |  $$\mathbf{74.26}$$ | $$73.30$$  | $$46.00$$ |
+
+It's an interesting negative result because it ran contrary to what I expected:
+*we already have the annotation guideline, isn't it supposed to work well?*
+However, I realized that it's still difficult to make a straight-up comparison
+between two prompts: it's possible that one prompt was written poorly (not
+"fine-tuned" given known prompt engineering techniques) than the other.
+Personally, I will still dabble into this research lead, but it's also possible
+that writing a short and sweet zero-shot prompt works best for our task.
+
 
 ### Cross-guideline evaluation
 <!-- cross topic evaluation -->
