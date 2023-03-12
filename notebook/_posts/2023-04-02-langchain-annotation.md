@@ -222,10 +222,15 @@ that writing a short and sweet zero-shot prompt works best for our task.
 
 ### Cross-guideline evaluation
 
-This time, let's lean in to the idea that LLM's capture the intention of
+This time, let's lean into the idea that LLM's capture the intention of
 annotation guidelines and compare them against one another. We take one
 guideline as reference, the rest as predictions, and compute the F1-score. We
 then arrive at the graph below:
+
+![](/assets/png/langchain/cats_macro_auc.png){:width="350px"}
+![](/assets/png/langchain/cats_macro_f.png){:width="350px"}
+{:style="text-align: center;"}
+
 
 <!-- cross topic evaluation -->
 
