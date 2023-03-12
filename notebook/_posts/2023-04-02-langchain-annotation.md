@@ -220,7 +220,7 @@ Personally, I will still dabble into this research lead, but it's also possible
 that writing a short and sweet zero-shot prompt works best for our task.
 
 
-### Cross-guideline evaluation
+### Extra: cross-guideline evaluation
 
 This time, let's lean into the idea that LLM's capture the intention of
 annotation guidelines and compare them against one another. We take one
@@ -231,6 +231,17 @@ then arrive at the graph below:
 ![](/assets/png/langchain/cats_macro_f.png){:width="350px"}
 {:style="text-align: center;"}
 
+It's interesting that for all cases, the [Stab et al. (2018)](#stab2018ukp)
+annotation guideline performs best (of course, discounting cases when we
+evaluate a guideline to itself). On the other hand, the [Shnarch et al.
+(2018)](#shnarch2018unsupervised) performs the worst. 
+
+I don't think there's anyting vital to conclude from these results. Perhaps it
+says something about how strict a guideline is? Maybe this can lead to
+experiments that investigate how similar guidelines are to one another. We
+usually measure text similarity via some cosine distance between the text's
+vectors. However, guidelines are *intentional*, and maybe something can be said
+about the products of these intentions, in this case, the annotations.
 
 <!-- cross topic evaluation -->
 
