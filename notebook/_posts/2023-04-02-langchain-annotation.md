@@ -182,11 +182,11 @@ from these guidelines denote a more stringent criteria for accepting statements 
 arguments:
 
 ![](/assets/png/langchain/shnarch.png){:width="800px"}  
-__Figure:__ Portion of annotation guidelines from [Shnarch, et al. (2018)](#shnarch2018unsupervised)
+__Figure:__ Portion of annotation guidelines from [Shnarch et al. (2018)](#shnarch2018unsupervised)
 {:style="text-align: center;"}
 
 ![](/assets/png/langchain/levy.png){:width="800px"}  
-__Figure:__ Portion of annotation guidelines from [Levy, et al. (2018)](#levy2018towards)
+__Figure:__ Portion of annotation guidelines from [Levy et al. (2018)](#levy2018towards)
 {:style="text-align: center;"}
 
 It's still hard to say which *exact* statements from the guideline informed an
@@ -194,12 +194,12 @@ LLM's decision. But because our prompting strategy refines the answer for each
 chunk of text, it's possible that original `Accept` answers were rejected
 because of new information from the prompt.
 
-Finally, I also noticed that the performance from the [Stab, et al. (2018)
+Finally, I also noticed that the performance from the [Stab et al. (2018)
 annotation guideline](#stab2018ukp) is worse than the supervised and zero-shot
 predictions from my [previous blog post](/notebook/2023/03/28/llm-annotation/): 
 
 
-| Scores         | Zero-shot          | Supervised          | Stab, et al. (2018)    |
+| Scores         | Zero-shot          | Supervised          | Stab et al. (2018)    |
 |----------------|-------------------:|--------------------:|-------------:
 | Micro F1-score | $$\mathbf{81.45}$$ |  $$79.88$$          | $$61.90$$   |
 | Macro F1-score | $$\mathbf{78.74}$$ |  $$77.52$$          | $$55.02$$   |
