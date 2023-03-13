@@ -195,8 +195,8 @@ chunk of text, it's possible that original `Accept` answers were rejected
 because of new information from the prompt.
 
 Finally, I also noticed that the performance from the [Stab et al. (2018)
-annotation guideline](#stab2018ukp) is worse than the supervised and zero-shot
-predictions from my [previous blog post](/notebook/2023/03/28/llm-annotation/): 
+annotation guideline](#stab2018ukp) is **worse** than the supervised and
+zero-shot predictions from my [previous blog post](/notebook/2023/03/28/llm-annotation/): 
 
 
 | Scores         | Zero-shot          | Supervised          | Stab et al. (2018)    |
@@ -236,12 +236,12 @@ annotation guideline performs best (of course, discounting cases when we
 evaluate a guideline to itself). On the other hand, the [Shnarch et al.
 (2018)](#shnarch2018unsupervised) performs the worst. 
 
-I don't think there's anyting vital to conclude from these results. Perhaps it
+I don't think there's anything vital to conclude from these results. Perhaps it
 says something about how strict a guideline is? Maybe this can lead to
 experiments that investigate how similar guidelines are to one another. We
 usually measure text similarity via some cosine distance between the text's
 vectors. However, guidelines are *intentional*, and maybe something can be said
-about the products of these intentions, in this case, the annotations.
+about the products of these intentions, which in this case, are the annotations.
 
 
 ## Highlighting relevant passages via embeddings
