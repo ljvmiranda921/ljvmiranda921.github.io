@@ -69,7 +69,8 @@ a set amount of tokens](https://help.openai.com/en/articles/4936856-what-are-tok
 I plan to accomplish this task using [Prodigy](https://prodi.gy), an annotation
 tool, and [LangChain](https://github.com/hwchase17/langchain), a library for
 working with large language models. You can find the source code from this
-Github repository.
+[Github
+repository](https://github.com/ljvmiranda921/scratch/tree/master/2023-03-03-langchain).
 
 > To save costs, I'll only be using the 496 samples from the test set. I also discarded the
 > [Morante et al, 2020](#morante2020vaccination) annotation guideline because it's eight pages long
@@ -231,8 +232,8 @@ annotation guideline performs best (of course, discounting cases when we
 evaluate a guideline to itself). On the other hand, the [Shnarch et al.
 (2018)](#shnarch2018unsupervised) performs the worst. 
 
-I don't think there's anything vital to conclude from these results. Perhaps it
-says something about how strict a guideline is? Maybe this can lead to
+I don't think there's anything vital to conclude from these results. Perhaps they 
+say something about how strict a guideline is? Maybe this can lead to
 experiments that investigate how similar guidelines are to one another. We
 usually measure text similarity via some cosine distance between the text's
 vectors. However, guidelines are *intentional*, and maybe something can be said
@@ -240,6 +241,27 @@ about the products of these intentions, which in this case, are the annotations.
 
 
 ## Final thoughts
+
+In this blog post, we looked into how we can incorporate annotation guidelines
+into our annotation workflows by including them in the prompt. In order to get
+around OpenAI's token limit, we partitioned our document and passed each chunk
+sequentially into the prompt. All of these were accomplished using
+[Prodigy](https://prodi.gy) and [LangChain](https://langchain.readthedocs.io/). 
+
+When comparing to gold-standard annotations, the original guidelines for the UKP
+dataset performed better compared to others that were written for other tasks. 
+However, a zero-shot approach outperformed all methods. In fact, a
+straightforward supervised approach outperforms a prompt with annotation
+guidelines. I see this more as a <u>negative result</u>.
+
+Moving forward, I think much can still be done in this line of work. I imagine
+using this process to evaluate how well an annotation guideline "models" the
+task. I wouldn't use it to get few-shot predictions, it's costly and not
+performant. In addition, it might be interesting to incorporate annotation
+guidelines in the annotation UI, perhaps to highlight relevant parts of the
+document that's useful to accomplish a task. I'm interested to hear any
+suggestions or thoughts about this experiment. Feel free to reach out or comment
+below!
 
 
 ## References
