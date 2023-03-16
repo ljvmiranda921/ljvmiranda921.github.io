@@ -145,6 +145,9 @@ example to be classified. I patterned my prompts to this domain because it's eas
 to think of annotation as a question-answering task.
 
 <!-- screenshot of textcat.manual -->
+Funnily enough, **this problem may be considered solved with the release of
+GPT-4.** With a longer context length (32k tokens or roughly 25,000 words), you
+can fit in a whole annotation guideline without splitting it into chunks.
 
 ### Comparing predictions to gold-standard data
 
