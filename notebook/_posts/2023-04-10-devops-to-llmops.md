@@ -46,7 +46,19 @@ in software deployment, thus necessitating the need for MLOps tools.
 
     *DevOps* is a contentious term. In this blog post, think of this more as
     operationalizing software applications that don't have any machine learning
-    components (e.g., your standard ETL pipeline, a web app, etc.).
+    components (e.g., your standard ETL pipeline, a web app, et cetera).
+
+
+
+<!--
+
+## Systems are becoming more flexible
+
+## Artifacts are becoming more malleable
+
+## Margins are fought on perfomance 
+
+-->
 
 
 ### Footnotes
