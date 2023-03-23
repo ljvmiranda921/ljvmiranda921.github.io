@@ -14,15 +14,16 @@ excerpt: |
 ---
 
 <span class="firstcharacter">A</span>s large language models (LLMs) dominate the
-public zeitgeist, I started to wonder how they can impact our current software practices. In my five years in the industry, I've worked on good old-fashioned ETL
-pipelines to dedicated machine learning applications. However, language models are a different
-kind of software artifact, it's like *clay*, and I'm curious how they can change
-how we build software today.
+public zeitgeist, I started to wonder how they can impact software development.
+In my five years in the industry, I've worked on good old-fashioned ETL
+pipelines to dedicated machine learning applications. However, language models
+are a different kind of software artifact, it's like *clay*, and I'm curious how
+they can change how we build software today.
 
 In this blog post, I will examine trends in software. I divided these into three
 phases&mdash;DevOps,[^1] MLOps, and LLMOps. I will focus on the **logical
-layer**, i.e., the layer responsible for transforming inputs into our desired output. 
-Here are some examples to further delineate the three:
+layer**, i.e., the layer responsible for transforming inputs into our desired
+output.  Here are some examples to further delineate the three:
 
 | Phase  | Description                                                                 | Logical Layer                         | Examples of Logical Layer          | Example Applications                                        |
 |--------|-----------------------------------------------------------------------------|---------------------------------------|------------------------------------|-------------------------------------------------------------|
@@ -32,7 +33,13 @@ Here are some examples to further delineate the three:
 
 
 > Logical layer, the layer responsible for transforming inputs
-> into our desired output.
+> into our desired output...I want to focus more on how changes in the logical layer
+> impact how we build software.
+
+What's out of scope: I won't discuss code generation or AI-assisted development
+in this post. Instead, I want to focus more on **how changes in the logical layer impact
+how we build software.** For example, machine learning models present challenges
+in software deployment, thus necessitating the need for MLOps tools.
 
 
 [^1]:
