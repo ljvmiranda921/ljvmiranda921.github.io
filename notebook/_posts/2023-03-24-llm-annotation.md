@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "How can language models augment the annotation process?"
-date: 2023-03-28
+date: 2023-03-24
 category: notebook
 comments: true
 author: "LJ MIRANDA"
