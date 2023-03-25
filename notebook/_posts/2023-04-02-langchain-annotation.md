@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Labeling with GPT-3 using annotation guidelines"
-date: 2023-04-02
+date: 2023-03-25
 category: notebook
 comments: true
 author: "LJ MIRANDA"
