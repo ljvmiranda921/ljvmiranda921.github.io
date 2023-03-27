@@ -26,9 +26,10 @@ I'm a Machine Learning Engineer at [Explosion](https://explosion.ai). I help
 develop [spaCy](https://spacy.io) and related open-source projects. Previously,
 I've worked for some machine learning startups such as:
 * [Thinking Machines Data Science](https://thinkingmachin.es) (Manila): a data 
-   science consultancy where I built multiple natural language processing and
-   computer vision products, including a a search engine, an industry classifier,
-   and a document processing system to name a few.
+    science consultancy where I built multiple natural language processing products
+    for large enterprises, including a search engine, an industry classifier, and a
+    document processing system to name a few.
+
 * [Preferred Networks](https://www.preferred-networks.jp/en/) (Tokyo): as an
     intern, where I implemented a training parallelization framework for
     [ChainerRL](https://github.com/chainer/chainerrl), an open-source
@@ -53,8 +54,19 @@ I love indie games and [dabble in game
 development](https://ljvmiranda921.itch.io) using [Pico-8](https://www.lexaloffle.com/pico-8.php) and
 [Godot](https://godotengine.org/).
 
+<p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
+<b>Short background</b><br>
+Lj Miranda specializes in natural language processing with over five years of
+experience in consulting, open-source development, and research. He has
+maintained notable open-source libraries such as spaCy and Pyswarms. He dabbles
+in game development during his free time.
+</p>
+
+
+<!--
 ![](/about/aws_community_builder.png){:width="100px"}
 [![](/about/google_data_engineer.png){:width="100px"}](https://www.credential.net/d17f92a5-a21e-41d5-acb0-81d76e3f3e68)
+-->
 
 ## Contact
 
