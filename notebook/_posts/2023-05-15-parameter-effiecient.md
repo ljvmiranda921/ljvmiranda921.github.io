@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-tags: [langchain, nlp, llm, data annotation, prodigy, natural language processing, chatgpt, gpt-j, gpt-3]
+tags: [efficient nlp, nlp, peft, parameter efficient finetuning, gpt, llm, large language models]
 header-img: /assets/png/langchain/header.png
 description: |
     Traditional finetuning involves training the parameters of a large language
