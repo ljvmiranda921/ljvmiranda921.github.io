@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Study notes on parameter-efficient finetuning techniques"
-date: 2023-06-09
+date: 2023-05-15
 category: notebook
 comments: true
 author: "LJ MIRANDA"
