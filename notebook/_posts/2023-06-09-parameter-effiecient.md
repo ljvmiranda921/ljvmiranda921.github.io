@@ -11,14 +11,26 @@ tags: [langchain, nlp, llm, data annotation, prodigy, natural language processin
 header-img: /assets/png/langchain/header.png
 description: |
     Traditional finetuning involves training the parameters of a large language
-    model plus a shallower domain-specific network. However, this process is
-    inefficient given a limited compute budget. In this blog post, I'll go
-    through differrent parameter-efficient finetuning techniques I personally
-    like.
+    model with a shallower domain-specific network. However, this approach
+    requires a large compute budget unavailable to most organizations. In this blog
+    post, I'll go through differrent parameter-efficient finetuning techniques I
+    personally like.
 excerpt: |
     Traditional finetuning involves training the parameters of a large language
-    model plus a shallower domain-specific network. However, this process is
-    inefficient given a limited compute budget. In this blog post, I'll go
-    through differrent parameter-efficient finetuning techniques I personally
-    like.
+    model with a shallower domain-specific network. However, this approach
+    requires a large compute budget unavailable to most organizations. In this blog
+    post, I'll go through differrent parameter-efficient finetuning techniques I
+    personally like.
 ---
+
+<!-- the problem -->
+
+
+
+<!-- adapter networks -->
+
+
+<!-- prefix tuning -->
+
+
+<!-- mixture of experts -->
