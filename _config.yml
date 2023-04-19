@@ -43,6 +43,7 @@ plugins:
 # Kramdown settings
 kramdown:
   input: GFM
+  parse_block_html: true
 
 # Highlighter settings
 highlighter: rouge
