@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Towards data-centric machine learning: a short review"
+title: "Study notes on data-centric machine learning"
 date: 2021-07-30
 category: notebook
 comments: true
