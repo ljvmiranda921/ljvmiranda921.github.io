@@ -5,25 +5,31 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-Also see my [Google
+My current research interests are **low-resource and multilingual NLP**,
+**efficient NLP**, and **corpus linguistics**. I'm broadly interested in how
+we can build equitable language technologies in the presence of severe constraints&mdash;such as the lack of data or compute.
+
+You can also check my [Google
 Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 [Semantic
 Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
-profiles:
+profiles for more info.
 
 - [Multi hash embeddings in spaCy](https://arxiv.org/abs/2212.09255) <br> L. J. V. Miranda, &Aacute;. K&aacute;d&aacute;r, A. Boyd, S. Van Landeghem, A. S&oslash;gaard, and M. Honnibal, "Multi hash embeddings in spaCy", *arXiv:2212.09255 [cs.CL]*. 2022.
 - [Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction](https://www.dropbox.com/s/wfgklrndflpqstv/smc2018feature.pdf?dl=0) <br> L. J. V. Miranda and J. Hu, "Feature Extraction using a Mutually-Competitive Autoencoder for Protein Function Prediction," _IEEE International Conference on System, Man, and Cybernetics_, IEEE, October 2018.
 - [A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction](https://www.dropbox.com/s/qlj0vxb3ieijmg4/compsac2018deep.pdf?dl=0) <br> L. J. V. Miranda and J. Hu, "A Deep Learning Approach based on Stacked Denoising Autoencoders for Protein Function Prediction," _42nd IEEE Computer Society Signature Conference on Computers, Software, and Applications_, IEEE, July 2018. 
 - [PySwarms, a research-toolkit for Particle Swarm Optimization in Python](https://www.dropbox.com/s/8nrtfwpssdv1hn3/joss2018pyswarms.pdf?dl=0) <br> L. J. V. Miranda, “PySwarms, a research-toolkit for Particle Swarm Optimization in Python," _Journal of Open Source Software_, vol. 3, no. 433, 2018. [doi: 10.21105/joss.00433](http://joss.theoj.org/papers/235299884212b9223bce909631e3938b).
 - [Appliance Recognition using Hall-Effect Sensors and k-Nearest Neighbors for Power Management Systems](https://www.dropbox.com/s/iawdrt9rm73siw2/tencon2016power.pdf?dl=0) <br> L. J. V. Miranda, M. J. Gutierrez, S. M. Dumlao, and R. Reyes, “Appliance Recognition using Hall-Effect Sensors and k-Nearest Neighbors for Power Management Systems,” in _Proceedings of the 2016 IEEE Region 10 Conference 2016_, IEEE, November 2016.
-- [Expulsion from Eden: the saga of the Calauit Safari Island Park](https://www.dropbox.com/s/j36m11rvhbl963e/apeiron2016expulsion.pdf?dl=0) <br> L. J. V. Miranda, “Expulsion from Eden: the saga of the Calauit Safari Island Park,” _APEIRON Student Journal of Philosophy_, no. 8, pp. 201–219, 2016. ISBN: 1533659788.
 
+<!--
+- [Expulsion from Eden: the saga of the Calauit Safari Island Park](https://www.dropbox.com/s/j36m11rvhbl963e/apeiron2016expulsion.pdf?dl=0) <br> L. J. V. Miranda, “Expulsion from Eden: the saga of the Calauit Safari Island Park,” _APEIRON Student Journal of Philosophy_, no. 8, pp. 201–219, 2016. ISBN: 1533659788.
+-->
 
 ### Masters Thesis
 
-My Masters thesis involves the prediction of protein functions using
-autoencoder-based techniques. You can find an unpublished version of
-my manuscript below:
+I used to be a bioinformatics researcher. My thesis involves the
+prediction of protein functions using autoencoder-based techniques. You can find
+a version of my manuscript below:
 
 - [Autoencoder-based Feature Extraction Techniques for Protein Function
   Prediction](https://www.dropbox.com/s/345u99e4anukj9u/main-latest.pdf?dl=0) _Masters Thesis_, Waseda University, Unpublished, June 2018.
