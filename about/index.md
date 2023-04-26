@@ -22,24 +22,36 @@ If you don't know where to go, then [start here](/start-here/)!
 
 ## Background
 
-I'm a Machine Learning Engineer at [Explosion](https://explosion.ai). I help
-develop [spaCy](https://spacy.io) and related open-source projects. Previously,
-I've worked for some machine learning startups such as:
+I'm a [Predoctoral Young
+Investigator](https://allenai.org/predoctoral-young-investigators) at the [Allen
+Institute for Artificial Intelligence (AI2)](https://allenai.org) as part of the
+[AllenNLP team](https://allenai.org/allennlp). Previously, I've worked at the
+following places:
+
+* [Explosion](https://explosion.ai) (Berlin): a natural language processing
+    startup where I worked on the 
+    open-source [spaCy](https://spacy.io) library and the
+    [Prodigy](https://prodi.gy) annotation tool. I co-authored our [first technical
+    report](https://arxiv.org/abs/2212.09255) and developed several features and
+    projects for our software libraries.
+    
 * [Thinking Machines Data Science](https://thinkingmachin.es) (Manila): a data 
-    science consultancy where I built multiple natural language processing products
-    for large enterprises, including a search engine, an industry classifier, and a
-    document processing system to name a few.
+    science consultancy where I built multiple natural language processing
+    products for large enterprises. I worked with several of our biggest clients
+    in Southeast Asia and led teams in the Document AI space.
 
 * [Preferred Networks](https://www.preferred-networks.jp/en/) (Tokyo): as an
-    intern, where I implemented a training parallelization framework for
+    intern, I implemented a training parallelization framework for
     [ChainerRL](https://github.com/chainer/chainerrl), an open-source
     reinforcement learning library.
 
 I obtained my master's degree from [Waseda
 University](https://www.waseda.jp/top/en) and my bachelor's in Electronics
 Engineering, minor in Philosophy from [Ateneo de Manila
-University](https://www.ateneo.edu). My research interests include machine
-learning systems design and natural language processing. 
+University](https://www.ateneo.edu). I used to be a bioinformatics researcher
+but moved on to language&mdash; text, like proteins, are sequences after all. My
+research interests include **low-resource and multilingual NLP**, **efficient
+NLP**, and **corpus linguistics**.
 
 Lastly, I'm well-involved in open-source and have authored [several
 projects](https://github.com/ljvmiranda921) of my own.
@@ -57,8 +69,8 @@ development](https://ljvmiranda921.itch.io) using [Pico-8](https://www.lexaloffl
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 <b>Short background</b><br>
 Lj Miranda specializes in natural language processing with over five years of
-experience in consulting, open-source development, and research. He has
-maintained notable open-source libraries such as spaCy and Pyswarms. He dabbles
+experience in consulting, open-source development, and research. He helped
+maintain notable open-source libraries such as spaCy and Pyswarms. He dabbles
 in game development during his free time.
 </p>
 
@@ -71,7 +83,7 @@ in game development during his free time.
 ## Contact
 
 **Lester James V. Miranda**  
-Metro Manila, Philippines  
+Seattle, Washington, USA  
 Email: ljvmiranda [at] gmail [dot] com  
 [Curriculum Vitae (PDF)](https://storage.googleapis.com/ljvmiranda/cv.pdf)
 
