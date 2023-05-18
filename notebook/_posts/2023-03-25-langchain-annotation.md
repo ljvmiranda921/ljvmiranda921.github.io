@@ -23,7 +23,7 @@ excerpt: |
 
 <span class="firstcharacter">P</span>reviously, I investigated how we can
 incorporate large language models (LLMs) into our annotation workflows. It was a
-fun [blog post](/notebook/2023/03/28/llm-annotation/), and I encourage you to
+fun [blog post](/notebook/2023/03/24/llm-annotation/), and I encourage you to
 read it. This time, I want to extend this idea by **including [annotation
 guidelines](https://sharedtasksinthedh.github.io/2017/10/01/howto-annotation/)
 in the prompt.** Because these guidelines were written to define the parameters
