@@ -95,11 +95,20 @@ These north star questions include:
 I realized later in the project that my entity types are too general that we tend to lump several categories in a single label.
 I think that's the next phase of improvement that I can do next.
 
-
 ### Update annotation guidelines
 
+Updating the annotation guidelines allows us to codify our understanding of the task.
+Personally, it is also a good way to preserve our learnings and onboard future annotators in the project.
+Most of the updates involve adding new examples, clarifying definitions, and noting edge-cases.
 
-## Extra: hyperparameter optimization
+I'll be updating the [calamanCy repository](https://github.com/ljvmiranda921/calamanCy) with the latest version of the annotation guidelines.
+It has grown quite a bit (and we're using Google Docs for easier collaboration), but it might be good to transfer it in the open.
+
+## Final thoughts
+
+I'm happy to see the growth of the project from its inception a few months ago. 
+I'm also excited to share these updates and release the trained pipelines soon.
+Finally, I'd like to thank our annotators for helping out in the process.
 
 ## References
 
