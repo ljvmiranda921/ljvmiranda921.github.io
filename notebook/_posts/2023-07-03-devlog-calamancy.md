@@ -84,7 +84,7 @@ These numbers don't factor in our corrections.
 I'm just computing the metrics per batch as I receive them.
 
 
-![](/assets/png/calamancy-devlog-01/visualization.svg){:width="700px"}
+![](/assets/png/calamancy-devlog-01/visualization.svg){:width="600px"}
 {: style="text-align: center;"}
 
 
