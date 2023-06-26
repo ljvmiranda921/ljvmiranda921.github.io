@@ -91,7 +91,7 @@ These north star questions include:
 - "Will this revision enhance our understanding of the phenomena?"
 - "Will it be helpful for the model or [any downstream application] to learn this edge-case?"
 
-In the future, I think it would be better to do a more fine-grained annotation project. 
+**In the future, I think it would be better to do a more fine-grained annotation project.**
 I realized later in the project that my entity types are too general that we tend to lump several categories in a single label.
 I think that's the next phase of improvement that I can do next.
 
