@@ -2,13 +2,13 @@
 layout: post
 type: post
 title: "calamanCy devlog: some thoughts on the annotation process"
-date: 2023-06-30
+date: 2023-07-03
 category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
-header-img: /assets/png/tagalog-gold-standard/header.png
+header-img: /assets/png/calamancy-devlog-01/header.png
 description: |
     A development log on the calamanCy project and the Tagalog NLP pipeline. The tl;dr: we just finished
     re-annotating the dataset. I also want to share some thoughts on my learnings during the annotation process.
