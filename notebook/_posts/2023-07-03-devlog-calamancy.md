@@ -65,14 +65,43 @@ This step usually involves the following activities:
 - **Resolving disagreements / misconceptions**: I compiled the annotations and computed for a partial inter-annotator agreement score (IAA).
     This process allowed me to estimate if our annotations are improving in quality. 
 
-    For named-entity recognition (NER), it is not straightforward to compute for this metric (I use [Cohen's Kappa](https://en.wikipedia.org/wiki/Cohen%27s_kappa)).
+    For named-entity recognition (NER), it is not straightforward to compute for this metric (I used [Cohen's Kappa](https://en.wikipedia.org/wiki/Cohen%27s_kappa)).
     It is possible to compute for this value at the token level, but this leads to an imbalanced dataset (e.g., there are many unlabeled tokens).
-    So I followed what Deleger et al., (2012) and Brandsen et al., (2020) did and computed for the pairwise F1-score as well.
+    So I followed what [Deleger et al., (2012)](#deleger2012gold) and [Brandsen et al., (2020)](#brandsen2020gold) did and computed for the pairwise F1-score as well.
 
 - **Mini-retrospective meetings**: During the initial months of the annotation phase, we conduct sync meetings to talk about confusing examples and labels.
     Confusion may involve edge-case examples or vagueness in the annotation guidelines.
+    We try to resolve this by updating the guidelines or correcting our past annotations. 
+
+- **Assess if we need more annotations**: For this annotation project, I have two stop conditions: (1) if the train curve doesn't improve or (2) if we reached at least 5000 examples.
+    Prodigy provides a [`train-curve`](https://prodi.gy/docs/recipes#train-curve) command to check if we still need more training examples. 
+
+    For the most part, the trend points to us annotating more data, but my budget is running out and I have other things to do, so I stopped after we reached 7000 examples.
+    I'm definitely game to annotate a few more, but in the future I'd want to include other useful labels such as morphological features or parts-of-speech (something for Universal Dependencies) in my next annotation project.
+
+Here's a chart on how our IAA metrics improved over time. 
+These numbers don't factor in our corrections. 
+I'm just computing the metrics per batch as I receive them.
 
 
+Finally, I found it helpful to have "north star questions" as I evaluate our annotations. 
+It is easy to get bogged down by details that I might miss the bigger picture.
+These north star questions include:
+- "If I get these annotations, will they be helpful for doing [insert downstream application]?"
+- "Will this revision enhance our understanding of the phenomena?"
+- "Will it be helpful for the model or [any downstream application] to learn this edge-case?"
+
+In the future, I think it would be better to do a more fine-grained annotation project. 
+I realized later in the project that my entity types are too general that we tend to lump several categories in a single label.
+I think that's the next phase of improvement that I can do next.
+
+
+### Update annotation guidelines
 
 
 ## Extra: hyperparameter optimization
+
+## References
+
+- <a id="deleger2012gold">Deleger, L., Li, Q., Lingren, T., Kaiser, M., Molnar, K., Stoutenborough, L., Kouril, M., Marsolo, K., and Solti, I.</a> (2012). Building gold standard corpora for medical natural language processing tasks. *AMIA Annual Symposium proceedings / AMIA Symposium. AMIA Symposium*, 2012:144–153.
+- <a id="brandsen2020gold">Brandsen, A., Verberne S., Wansleeben, M., and Lambers, K.</a> (2020). Creating a Dataset for Named Entity Recognition in the Archaeology Domain. In *Proceedings of the Twelfth Language Resources and Evaluation Conference*, pages 4573–4577, Marseille, France. European Language Resources Association.
