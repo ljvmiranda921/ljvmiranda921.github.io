@@ -84,6 +84,10 @@ These numbers don't factor in our corrections.
 I'm just computing the metrics per batch as I receive them.
 
 
+![](/assets/png/calamancy-devlog-01/visualization.svg){:width="700px"}
+{: style="text-align: center;"}
+
+
 Finally, I found it helpful to have "north star questions" as I evaluate our annotations. 
 It is easy to get bogged down by details that I might miss the bigger picture.
 These north star questions include:
