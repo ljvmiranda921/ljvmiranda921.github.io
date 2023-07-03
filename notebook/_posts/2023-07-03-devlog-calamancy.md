@@ -73,6 +73,22 @@ This step usually involves the following activities:
     Confusion usually came from edge-case examples or vagueness in the annotation guidelines.
     We try to resolve this by updating the guidelines or correcting our past annotations. 
 
+    I try to make these meetings as short and async as possible (30 minutes to 1 hour). 
+    I pattern these meetings to a typical software development sprint retrospective. 
+
+    We use [Parabol](https://www.parabol.co/) (I co-opted the "Start, Stop, Continue" free template) as our collaboration software. 
+    We frame the questions like so:
+
+    - *Start*: What rules should we include in our annotation guidelines?
+    - *Stop*: Which rules are vague and confusing? Should we remove or update them?
+    - *Continue*: Which rules serve as good examples to retain?
+    <br>
+
+
+    Personally, I enjoy discussing rules as it compels me to establish a coherent pattern when labeling examples.
+    We try to keep a "bank" of edge-cases and work together to address them.
+    However, if we focus too much on individual examples, our meetings may become inundated with edge cases, hindering the improvement of the guidelines.
+
 - **Assess if we need more annotations**: For this annotation project, I have two stop conditions: (1) if the train curve doesn't improve or (2) if we reached at least 5000 examples.
     Prodigy provides a [`train-curve`](https://prodi.gy/docs/recipes#train-curve) command to check if we still need more examples by learning a model at 25%, 50%, and 75% of the training set. 
 
