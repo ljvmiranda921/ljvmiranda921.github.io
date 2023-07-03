@@ -17,7 +17,7 @@ excerpt: |
     re-annotating the dataset. I also want to share some thoughts on my learnings during the annotation process.
 ---
 
-<span class="firstcharacter">F</span>irst off, I'm happy to see such warm reception to my [first blog post](/2023/02/04/tagalog-pipeline/). Thank you!
+<span class="firstcharacter">F</span>irst off, I'm happy to see such warm reception to my [first blog post](/notebook/2023/02/04/tagalog-pipeline/). Thank you!
 There are a few more experiments that I wanted to do for the sake of completeness and rigor. 
 I hope to release the alpha version of [calamanCy](https://github.com/ljvmiranda921/calamanCy) in August, 
 so this blog post may as well be a lead-up to that release. 
