@@ -23,7 +23,10 @@ blacks out even if it's turned on, static-like screen movement, or
 tearing&mdash; then it may just be due to a power-saving setting.
 
 <div style="text-align:center">
-<blockquote class="imgur-embed-pub" lang="en" data-id="EFuItd0"><a href="https://imgur.com/EFuItd0">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<blockquote class="imgur-embed-pub" lang="en" data-id="EFuItd0" data-context="false" >
+    <a href="//imgur.com/EFuItd0"></a>
+</blockquote>
+<script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 </div>
 
 Don't fret, because it's [a common problem with Thinkpad
