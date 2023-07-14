@@ -69,6 +69,17 @@ vector from a transformer. Here, I also used spaCy's
 Static word vectors are called as such because they are not parameters learned by a
 statistical model. On the other hand, word embeddings from a transformer involve the learned parameters.
 
+The training process involves pretraining a filtered version of TLUnified ([Cruz and Cheng, 2021](#cruz2021tlunified)), constructing static word embeddings if necessary, and training the downstream components. 
+You can check and reproduce the whole training procedure by checking out the [corresponding spaCy project on Github](https://github.com/ljvmiranda921/calamanCy/tree/master/models/v0.1.0). Finally, you can find a list of data sources in the table below:
+
+| Source                                                                                 | Authors                                          | License         |
+|----------------------------------------------------------------------------------------|--------------------------------------------------|-----------------|
+| [TLUnified Dataset](https://aclanthology.org/2022.lrec-1.703/)                         | Jan Christian Blaise Cruz and Charibeth Cheng    | GNU GPL 3.0     |
+| [UD_Tagalog-TRG](https://universaldependencies.org/treebanks/tl_trg/index.html)        | Stephanie Samson, Daniel Zeman, and Mary Ann Tan | CC BY-SA 3.0    |
+| [UD_Tagalog-Ugnayan](https://universaldependencies.org/treebanks/tl_ugnayan/index.html) | Angelina Aquino                                  | CC BY-NC_SA 4.0 |
+
+Note that the Ugnayan treebank is not licensed for commercial use while TLUnified is under GNU GPL. 
+Please consider these licenses when using the calamanCy pipelines in your application.
 
 
 ## References
