@@ -31,6 +31,18 @@ It provides general-purpose multitask models with out-of-the-box support for dep
 calamanCy aims to accelerate the progress of Tagalog NLP by consolidating disjointed resources in a unified framework.
 
 In this blog post, I want to talk about the problem it's trying to solve, my process on building the framework, some benchmarks, and future work.
+
+## Tagalog NLP resources are disjointed
+
+
+
+<!-- ## Combining resources into a unified framework
+
+
+## Benchmarking results
+
+
+## What's next -->
 <!--
 problem statement
 -->
