@@ -52,6 +52,22 @@ Therefore, consolidating these resources and providing more options to build Tag
 calamanCy provides three language pipelines that fit any performance or accuracy requirements. 
 Each pipeline provides out-of-the-box support for core NLP tasks:
 
+| Pipeline                                      | Pretraining objective                                                  | Word embeddings                                       | Dimensions                                         |
+|-----------------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------|----------------------------------------------------|
+| Medium-sized pipeline ([tl_calamancy_md](https://huggingface.co/ljvmiranda921/tl_calamancy_md))       | Predict some number of leading and trailing UTF-8 bytes for the words. | Uses [floret](https://github.com/explosion/floret) static vectors trained on the TLUnified corpora. | 50k unique vectors (200 dimensions), Size: 77 MB   |
+| Large-sized pipeline ([tl_calamancy_lg](https://huggingface.co/ljvmiranda921/tl_calamancy_lg))        | Same pretraining objective as the medium-sized pipeline.               | Uses [fastText](https://fasttext.cc) static vectors trained on CommonCrawl corpora. | 714k unique vectors (300 dimensions), Size: 455 MB |
+| Transformer-based pipeline ([tl_calamancy_trf](https://huggingface.co/ljvmiranda921/tl_calamancy_trf)) | No separate pretraining because there's no token-to-vector component.  | Context-sensitive vectors from a transformer network. | Uses roberta-tagalog-base. Size: 813 MB            |
+
+- **Pretraining objective**: involves learning vectors from raw text to better
+inform our [token-to-vector](https://spacy.io/api/tok2vec) model. This process
+only applies to our static word vector models.  The pretraining objective is a
+variant of the *cloze task*, also known as [language modelling with approximate
+outputs (LMAO)](https://spacy.io/usage/embeddings-transformers#pretraining).
+- **Word embeddings**: may involve static vectors or a dense context-sensitive
+vector from a transformer. Here, I also used spaCy's
+[floret](https://github.com/explosion/floret), an efficient version of fastText.
+Static word vectors are called as such because they are not parameters learned by a
+statistical model. On the other hand, word embeddings from a transformer involve the learned parameters.
 
 
 
