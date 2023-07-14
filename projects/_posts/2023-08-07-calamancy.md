@@ -26,7 +26,7 @@ It is built on top of [spaCy](https://spacy.io) to ensure easy experimentation a
 It provides general-purpose multitask models with out-of-the-box support for dependency parsing, part-of-speech (POS) tagging, and named entity recognition (NER).
 The repository is available [on Github](https://github.com/ljvmiranda921/calamanCy), while the models are also accessible in [Huggingface](https://huggingface.co/ljvmiranda921).
 
-More importantly, calamanCy aims to accelerage the progress of Tagalog NLP by consolidating disjointed resources in a unified framework.
+More importantly, calamanCy aims to accelerate the progress of Tagalog NLP by consolidating disjointed resources in a unified framework.
 In this blog post, I want to talk about the problem it's trying to solve, my process on building the framework, some benchmarks, and future work.
 
 ## Tagalog NLP resources are disjointed
