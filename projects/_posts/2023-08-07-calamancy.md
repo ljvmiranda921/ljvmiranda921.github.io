@@ -83,7 +83,18 @@ You can check and reproduce the whole training procedure by checking out the [co
 Note that the Ugnayan treebank is not licensed for commercial use while TLUnified is under GNU GPL. 
 Please consider these licenses when using the calamanCy pipelines in your application.
 
-### Benchmarking results
+### Benchmarking experiments
+
+Before calamanCy, you usually have two options if you want to build a pipeline for Tagalog: (1) piggyback on a model trained from a linguistically-similar language (**cross-lingual transfer**) or (2) finetune a multilingual LM like XLM-R or multilingual BERT on your data (**multilingual finetuning**). Here, I want to test if calamanCy is competitive enough against these alternatives.
+
+I tested on the following tasks and datasets:
+
+<!-- insert table here -->
+
+For text categorization and NER, I ran the experiments for five trials and reported their average and standard deviation.
+For dependency parsing and POS tagging, I used 10-fold cross-validation because the combined UD treebank is still too small.
+
+The results show that our calamanCy pipelines are competitive:
 
 
 
