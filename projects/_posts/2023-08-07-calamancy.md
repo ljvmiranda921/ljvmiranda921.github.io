@@ -30,6 +30,12 @@ The repository is available [on Github](https://github.com/ljvmiranda921/calaman
 pip install calamancy
 ```
 
+```python
+import calamancy
+nlp = calamancy.load("tl_calamancy_md-0.1.0")
+doc = nlp("Ako si Juan de la Cruz.")  # returns a spaCy Doc object
+```
+
 More importantly, calamanCy aims to accelerate the progress of Tagalog NLP by consolidating disjointed resources in a unified framework.
 In this blog post, I want to talk about the problem it's trying to solve, my process on building the framework, some benchmarks, and future work.
 
