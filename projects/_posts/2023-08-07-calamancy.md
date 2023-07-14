@@ -24,7 +24,11 @@ excerpt: |
 <span class="firstcharacter">I</span> am excited to introduce [**calamanCy**](https://github.com/ljvmiranda921/calamanCy), an open-source toolkit for constructing natural language processing (NLP) pipelines for Tagalog.
 It is built on top of [spaCy](https://spacy.io) to ensure easy experimentation and integration with other frameworks.
 It provides general-purpose multitask models with out-of-the-box support for dependency parsing, part-of-speech (POS) tagging, and named entity recognition (NER).
-The repository is available [on Github](https://github.com/ljvmiranda921/calamanCy), while the models are also accessible in [Huggingface](https://huggingface.co/ljvmiranda921).
+The repository is available [on Github](https://github.com/ljvmiranda921/calamanCy), and you can install the package via `pip`:
+
+```
+pip install calamancy
+```
 
 More importantly, calamanCy aims to accelerate the progress of Tagalog NLP by consolidating disjointed resources in a unified framework.
 In this blog post, I want to talk about the problem it's trying to solve, my process on building the framework, some benchmarks, and future work.
@@ -38,16 +42,16 @@ and domain-specific corpora are few and far between ([Cabasag et al., 2019](#cab
 In addition, we only have limited choices when it comes to Tagalog language models (LMs).
 For monolingual LMs, the state-of-the-art is RoBERTa-Tagalog ([Cruz and Cheng, 2021](#cruz2021tlunified)).
 For multilingual LMs, we have the usual XLM-RoBERTa ([Conneau et al., 2019](#conneau2019xlmr)) and multilingual BERT ([Devlin et al., 2019](#devlin2019bert)).
-Tagalog is included in their training pool, but these models are still prone to the *curse of multilinguality*.[^1]
+Tagalog is included in their training pool, but these models are still prone to the curse of multilinguality.
 
-[^1]: 
-
-    The curse of multilinguality is a phenomenon when per-language performance of a language model drops as they cover more languages. XLM-R and mBERT 
-    were trained on 100+ languages in CommonCrawl, making them prone to this fundamental limitation.
 
 Therefore, consolidating these resources and providing more options to build Tagalog NLP pipelines is still an open problem.
 
 ## ...enter calamanCy, an effort to consolidate these resources
+
+calamanCy provides three language pipelines that fit any performance or accuracy requirements. 
+Each pipeline provides out-of-the-box support for core NLP tasks:
+
 
 
 
@@ -63,7 +67,6 @@ Therefore, consolidating these resources and providing more options to build Tag
 
 
 
-## Footnotes
 
 
 
