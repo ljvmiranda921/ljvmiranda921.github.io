@@ -8,7 +8,7 @@ permalink: /projects/
 
 Here are some of the non-trivial projects I built for the past few years.  My
 definition of a *project* is a bit fuzzy; for now, these are things that I have
-worked on with a tangible outcome like a library, website, or game.
+worked on with a tangible outcome like a library, website, or a game.
 
 <ul>
   {% for post in site.categories.projects %}
