@@ -31,15 +31,44 @@ In this blog post, I want to talk about the problem it's trying to solve, my pro
 
 ## Tagalog NLP resources are disjointed
 
+Despite Tagalog being a widely-spoken language here in the Philippines, model and data resources are still scarce.
+For example, our Universal Dependencies (UD) treebanks are tiny (less than 20k words) ([Samson, 2018](#samson2018trg); [Aquino and de Leon, 2020](#aquino2020ugnayan)) 
+and domain-specific corpora are few and far between ([Cabasag et al., 2019](#cabasag2019hatespeech); [Livelo and Cheng, 2018](#livelo2018dengue)).
+
+In addition, we only have limited choices when it comes to Tagalog language models (LMs).
+For monolingual LMs, the state-of-the-art is RoBERTa-Tagalog ([Cruz and Cheng, 2021](#cruz2021tlunified)).
+For multilingual LMs, we have the usual XLM-RoBERTa ([Conneau et al., 2019](#conneau2019xlmr)) and multilingual BERT ([Devlin et al., 2019](#devlin2019bert)).
+Tagalog is included in their training pool, but these models are still prone to the *curse of multilinguality*.[^1]
+
+[^1]: 
+
+    The curse of multilinguality is a phenomenon when per-language performance of a language model drops as they cover more languages. XLM-R and mBERT 
+    were trained on 100+ languages in CommonCrawl, making them prone to this fundamental limitation.
+
+Therefore, consolidating these resources and providing more options to build Tagalog NLP pipelines is still an open problem.
+
+## ...enter calamanCy, an effort to consolidate these resources
 
 
-<!-- ## Combining resources into a unified framework
+
+## References
+
+- <a id="samson2018trg">Stephanie Dawn Samson.</a> 2018. A treebank prototype of Tagalog. Bachelor’s thesis, University of Tübingen, Germany.
+- <a id="aquino2020ugnayan">Angelina A. Aquino and Franz A. de Leon.</a> 2020. Parsing in the absence of related languages: Evaluating low-resource dependency parsers on Tagalog. In *Universal Dependencies Workshop*.
+- <a id="cabasag2019hatespeech">Neil Vicente P. Cabasag, Vicente Raphael C. Chan, Sean Christian Y. Lim, Mark Edward M. Gonzales, and Charibeth K. Cheng.</a> 2019. Hate Speech in Philippine Election-Related Tweets: Automatic Detection and Classification Using Natural Language Processing. *Philippine Computing Journal Dedicated Issue on Natural Language Processing*, pages 1–14.
+- <a id="livelo2018dengue">Evan Dennison S. Livelo and Charibeth Ko Cheng.</a> 2018. Intelligent Dengue Infoveillance Using Gated Recurrent Neural Learning and Cross-Label Fre- quencies. *2018 IEEE International Conference on Agents (ICA)*, pages 2–7.
+- <a id="cruz2021tlunified">Jan Christian Blaise Cruz and Charibeth Ko Cheng.</a> 2021. Improving Large-scale Language Models and Resources for Filipino. In *International Conference on Language Resources and Evaluation*
+- <a id="conneau2019xlmr">Alexis Conneau, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume Wenzek, Francisco Guzmán, Edouard Grave, Myle Ott, Luke Zettlemoyer, and Veselin Stoyanov.</a> 2019. Unsupervised Cross-lingual Representation Learning at Scale. In *Annual Meeting of the Association for Computational Linguistics*.
+- <a id="devlin2019bert">Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.</a> 2019. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv, abs/1810.04805
 
 
-## Benchmarking results
+
+## Footnotes
 
 
-## What's next -->
+
+
+
 <!--
 problem statement
 -->
