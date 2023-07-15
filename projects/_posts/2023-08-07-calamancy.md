@@ -91,16 +91,21 @@ Please consider these licenses when using the calamanCy pipelines in your applic
 
 ### Benchmarking experiments
 
-Before calamanCy, you usually have two options if you want to build a pipeline for Tagalog: (1) piggyback on a model trained from a linguistically-similar language (**cross-lingual transfer**) or (2) finetune a multilingual LM like XLM-R or multilingual BERT on your data (**multilingual finetuning**). Here, I want to test if calamanCy is competitive enough against these alternatives.
+Before calamanCy, you usually have two options if you want to build a pipeline for Tagalog: (1) piggyback on a model trained from a linguistically-similar language (**cross-lingual transfer**) or (2) finetune a multilingual LM like XLM-R or multilingual BERT on your data (**multilingual finetuning**). Here, I want to check if calamanCy is competitive enough against these alternatives. I tested on the following tasks and datasets:
 
-I tested on the following tasks and datasets:
-
-<!-- insert table here -->
+| Dataset                                                     | Task / Labels                                                           | Description                                                                                                                       |
+|-------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| Hatespeech ([Cabasag et al., 2019](#cabasag2019hatespeech)) | Binary text classification (*hate speech, not hate speech*)               | Contains 10k tweets collected during the 2016 Philippine Presidential Elections labeled as hatespeech or non-hate speech.         |
+| Dengue ([Livelo and Cheng, 2018](#livelo2018dengue))        | Multilabel text classification (*absent, dengue, health, sick, mosquito*) | Contains 4k dengue-related tweets collected for a health infoveillance application that classifies text into dengue subtopics.    |
+| TLUnified-NER (Held-out test split)                         | Named entity recognition (*Person, Organization, Location*)               | A held-out test split from the annotated TLUnified corpora ([Cruz and Cheng, 2021](#cruz2021tlunified)) containing news reports.  |
+| Merged UD                                                   | Dependency parsing and POS tagging                                      | Merged version of the Ugnayan and TRG treebanks ([Aquino and de Leon, 2020](#aquino2020ugnayan); [Samson, 2018](#samson2018trg)). |
 
 For text categorization and NER, I ran the experiments for five trials and reported their average and standard deviation.
 For dependency parsing and POS tagging, I used 10-fold cross-validation because the combined UD treebank is still too small.
 
 The results show that our calamanCy pipelines are competitive:
+
+<!-- insert results here -->
 
 
 
