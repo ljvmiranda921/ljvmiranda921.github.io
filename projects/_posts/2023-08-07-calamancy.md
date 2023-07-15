@@ -136,24 +136,25 @@ The results show that our calamanCy pipelines are competitive (you can reproduce
 
 ## What's next
 
-I highly recommend that you try out calamanCy and give your feedback so that I can improve the models over time. 
-My first priority for 0.2.0+ is to write domain-specific tokenizers to help with simple NLP tasks (e.g., for parsing tweets).
+
+I highly recommend trying out calamanCy and giving your feedback so that I can improve the models over time. 
+My priority for 0.2.0+ is to write domain-specific tokenizers to help with simple NLP tasks (e.g., for parsing tweets).
 I also want to do a few more data annotation projects as a precursor to v1.0.0.
 These projects include a more fine-grained label set for NER, and a better Universal Dependencies Treebank.
 
-On the experiment side, I'm curious how large language models fare on Tagalog
-data. We've already built up some nice benchmarks because of this effort, it might be
+On the research side, I'm curious how large language models fare on Tagalog
+data. We've already built up some nice benchmarks because of this effort so it might be
 nice to do a side-by-side comparison for zero/few-shot prompting. I'm also interested in training
 language-specific adapters for efficiency.
 
 
 ### FAQs
 
-- **Can I use this in production?** Yes. Compared to my [previous blog post](notebook/2023/02/04/tagalog-pipeline/), the NER corpora has been [reannotated](/notebook/2023/07/03/devlog-calamancy/) with multiple annotators so this should perform a bit better. However, note that some of the corpora used for training have non-commercial licenses, so the application of calamanCy is still restricted.
+- **Can I use this in production?** Yes. Compared to my [previous blog post](notebook/2023/02/04/tagalog-pipeline/), the NER corpora has been [reannotated](/notebook/2023/07/03/devlog-calamancy/) with multiple annotators so I'm more confident with our corpus. However, note that some of the datasets used for training have non-commercial licenses, so the application of calamanCy is still restricted.
 - **The licenses are too restrictive!** It's quite unfortunate that the UD treebanks and pretraining corpora available for Tagalog have stricter licenses. Aside from creating a new
 corpora myself, I'm still thinking of ways to get around that. If you have any ideas, then let me know!
 - **What's the design decision for only including X component?** I want to make calamanCy as general-purpose as possible yet flexible enough to be finetuned on specific tasks.
-That's why we have to train a new component for text categorization. 
+That's why we have to train a new component for text categorization. All of the official spaCy pipelines also follow this architecture.
 
 If you have any questions, feel free to reach out on [Github](https://github.com/ljvmiranda921/calamanCy/issues) or my [email](mailto:ljvmiranda@gmail.com)!
 
