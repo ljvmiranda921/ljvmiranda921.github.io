@@ -114,10 +114,15 @@ The results show that our calamanCy pipelines are competitive (you can reproduce
 ## What's next
 
 I highly recommend that you try out calamanCy and give your feedback so that I can improve the models over time. 
-In the medium-term, I want to do few more data annotation projects as a precursor to v1. 
+My first priority for 0.2.0+ is to write domain-specific tokenizers to help with simple NLP tasks (e.g., for parsing tweets).
+I also want to do a few more data annotation projects as a precursor to v1.0.0.
 These projects include a more fine-grained label set for NER, and a better Universal Dependencies Treebank.
-I'm also excited to write tokenizers and lemmatizers (both rule-based or parameterized) to help with simple NLP tasks.
-There are a lot of optimizations that can be done for these components.
+
+On the experiment side, I'm curious how large language models fare on Tagalog
+data. We've already built up some nice benchmarks because of this effort, it might be
+nice to do a side-by-side comparison for zero/few-shot prompting. I'm also interested in training
+language-specific adapters for efficiency.
+
 
 ### FAQs
 
