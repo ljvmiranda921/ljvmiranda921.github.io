@@ -127,7 +127,7 @@ corpora myself, I'm still thinking of ways to get around that. If you have any i
 - **What's the design decision for only including X component?** I want to make calamanCy as general-purpose as possible yet flexible enough to be finetuned on specific tasks.
 That's why we have to train a new component for text categorization. 
 
-If you have any questions, feel free to reach out on [Github](https://github.com/ljvmiranda921/calamanCy) or my [email](mailto:ljvmiranda@gmail.com)!
+If you have any questions, feel free to reach out on [Github](https://github.com/ljvmiranda921/calamanCy/issues) or my [email](mailto:ljvmiranda@gmail.com)!
 
 
 ## References
