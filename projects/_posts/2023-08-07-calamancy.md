@@ -78,6 +78,7 @@ statistical model. On the other hand, word embeddings from a transformer involve
 
 The training process involves pretraining a filtered version of TLUnified ([Cruz and Cheng, 2021](#cruz2021tlunified)), constructing static word embeddings if necessary, and training the downstream components. 
 Each pipeline contains a [`Tagger`](https://spacy.io/api/tagger), [`DependencyParser`](https://spacy.io/api/dependencyparser), [`Morphologizer`](https://spacy.io/api/morphologizer), and [`EntityRecognizer`](https://spacy.io/api/entityregognizer) spaCy components.
+These models are also available on [HuggingFace 🤗](https://huggingface.co/ljvmiranda921).
 
 You can check and reproduce the whole training procedure by checking out the [corresponding spaCy project on Github](https://github.com/ljvmiranda921/calamanCy/tree/master/models/v0.1.0). Finally, you can find a list of data sources in the table below:
 
