@@ -109,6 +109,15 @@ The results show that our calamanCy pipelines are competitive:
 <!-- insert results here -->
 
 
+## What's next
+
+I highly recommend that you try out calamanCy and give your feedback so that I can improve the models over time. 
+In the medium-term, I want to do a few more data annotation projects as a precursor to v1. 
+These projects include a more fine-grained label set for NER, and a better Universal Dependencies Treebank.
+I'm also excited to write tokenizers and lemmatizers (both rule-based or parameterized) to help with simple NLP tasks.
+There are a lot of optimizations that can be done for these components.
+
+If you have any questions, feel free to reach out on [Github](https://github.com/ljvmiranda921/calamanCy) or my [email](mailto:ljvmiranda@gmail.com)!
 
 
 ## References
