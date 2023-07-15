@@ -42,7 +42,8 @@ In this blog post, I want to talk about the problem it's trying to solve, my pro
 
 ## How it works
 
-calamanCy offers two word vector-based pipelines and one transformer-based pipeline. For example, we want to perform named-entity recognition (NER):
+calamanCy offers two word vector-based pipelines and one transformer-based pipeline.
+Let's say we want to detect named entities from a given text (NER):
 
 ```python
 import calamancy
@@ -57,8 +58,8 @@ Here, the variable `nlp` is an instance of spaCy's [`Language`](https://spacy.io
 Each pipeline contains a dependency parser, tagger, and entity recognizer. 
 The built-in entity recognizer was trained with annotations resembling ConLL. It contains entities such as *Person*, *Organization*, and *Location*.
 
-You can use these models as-is or finetune them to your specific task.
-In a latter section, I'll demonstrate these capabilities by benchmarking our models on an unseen text categorization task.
+You can use these models as-is or finetune them to your dataset.
+In a latter section, I'll demonstrate these capabilities by benchmarking our models on both seen and unseen tasks. 
 For more information on model training, please check out the [spaCy documentation](https://spacy.io/usage/training).
 
 
@@ -102,7 +103,8 @@ The training process involves pretraining a filtered version of TLUnified ([Cruz
 Each pipeline contains a [`Tagger`](https://spacy.io/api/tagger), [`DependencyParser`](https://spacy.io/api/dependencyparser), [`Morphologizer`](https://spacy.io/api/morphologizer), and [`EntityRecognizer`](https://spacy.io/api/entityregognizer) spaCy components.
 These models are also available on [HuggingFace 🤗](https://huggingface.co/ljvmiranda921).
 
-You can check and reproduce the whole training procedure by checking out the [corresponding spaCy project on Github](https://github.com/ljvmiranda921/calamanCy/tree/master/models/v0.1.0). Finally, you can find a list of data sources in the table below:
+You can reproduce the whole training procedure by running the [corresponding spaCy project on Github](https://github.com/ljvmiranda921/calamanCy/tree/master/models/v0.1.0).
+Finally, you can find a list of data sources in the table below:
 
 | Source                                                                                 | Authors                                          | License         |
 |----------------------------------------------------------------------------------------|--------------------------------------------------|-----------------|
