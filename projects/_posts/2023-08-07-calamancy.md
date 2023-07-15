@@ -43,7 +43,7 @@ In this blog post, I want to talk about the problem it's trying to solve, my pro
 ## How it works
 
 calamanCy offers two word vector-based pipelines and one transformer-based pipeline.
-Let's say we want to detect named entities from a given text (NER):
+Suppose we want to detect named entities from a given text (NER):
 
 ```python
 import calamancy
@@ -156,7 +156,7 @@ corpora myself, I'm still thinking of ways to get around that. If you have any i
 - **What's the design decision for only including X component?** I want to make calamanCy as general-purpose as possible yet flexible enough to be finetuned on specific tasks.
 That's why we have to train a new component for text categorization. All of the official spaCy pipelines also follow this architecture.
 
-If you have any questions, feel free to reach out on [Github](https://github.com/ljvmiranda921/calamanCy/issues) or my [email](mailto:ljvmiranda@gmail.com)!
+If you have any questions, feel free to reach out on [Github](https://github.com/ljvmiranda921/calamanCy/) or my [email](mailto:ljvmiranda@gmail.com)!
 
 
 ## References
