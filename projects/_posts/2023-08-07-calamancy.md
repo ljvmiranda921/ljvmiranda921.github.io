@@ -40,6 +40,28 @@ doc = nlp("Ako si Juan de la Cruz.")  # returns a spaCy Doc object
 More importantly, calamanCy aims to accelerate the progress of Tagalog NLP by consolidating disjointed resources in a unified framework.
 In this blog post, I want to talk about the problem it's trying to solve, my process on building the framework, some benchmarks, and future work.
 
+## How it works
+
+calamanCy offers two word vector-based pipelines and one transformer-based pipeline. For example, we want to perform named-entity recognition (NER):
+
+```python
+import calamancy
+nlp = calamancy.load("tl_calamancy_md-0.1.0")
+doc = nlp("Pumunta si Juan sa Japan kahapon.")
+
+for ent in doc.ents:
+    print(ent.text, ent.label_)  # (Juan, PER), (Japan, LOC)
+```
+
+Here, the variable `nlp` is an instance of spaCy's [`Language`](https://spacy.io/api/language) class while `doc` is a spaCy [`Doc`](https://spacy.io/api/doc) object.
+Each pipeline contains a dependency parser, tagger, and entity recognizer. 
+The built-in entity recognizer was trained with annotations resembling ConLL. It contains entities such as *Person*, *Organization*, and *Location*.
+
+You can use these models as-is or finetune them to your specific task.
+In a latter section, I'll demonstrate these capabilities by benchmarking our models on an unseen text categorization task.
+For more information on model training, please check out the [spaCy documentation](https://spacy.io/usage/training).
+
+
 ## Tagalog NLP resources are disjointed
 
 Despite Tagalog being a widely-spoken language here in the Philippines, model and data resources are still scarce.
@@ -108,7 +130,6 @@ For dependency parsing and POS tagging, I used 10-fold cross-validation because 
 The results show that our calamanCy pipelines are competitive (you can reproduce the results by following this [spaCy project](https://github.com/ljvmiranda921/calamanCy/tree/master/paper/benchmark)):
 
 <!-- insert results here -->
-
 
 
 ## What's next
