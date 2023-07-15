@@ -60,14 +60,15 @@ works best on desktop!
 > or termite mound, hence the name.
 
 <div style="display:flex">
-    <!-- video -->
-    <div style="flex:33.33%;padding:5px">
-        <video width="360" height="360" controls  loop><source src="https://imgur.com/32IzDcS.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-    </div>
-    <!-- image -->
-    <div style="flex:33.33%;padding:5px">
-        <img src="/assets/png/ph-clip/nuno_sa_punso.png" width="360">
-    </div>
+<!-- video -->
+<div style="flex:33.33%;padding:5px">
+<video width="360" height="360" controls loop><source src="https://imgur.com/32IzDcS.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+
+</div>
+<!-- image -->
+<div style="flex:33.33%;padding:5px">
+<img src="/assets/png/ph-clip/nuno_sa_punso.png" width="360">
+</div>
 </div>
 
 ### 2. Tiktik
@@ -79,14 +80,14 @@ works best on desktop!
 
 
 <div style="display:flex">
-    <!-- video -->
-    <div style="flex:33.33%;padding:5px">
-        <video width="360" height="360" controls  loop><source src="https://imgur.com/562OYMa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-    </div>
-    <!-- image -->
-    <div style="flex:33.33%;padding:5px">
-        <img src="/assets/png/ph-clip/tiktik.png" width="360">
-    </div>
+<!-- video -->
+<div style="flex:33.33%;padding:5px">
+<video width="360" height="360" controls  loop><source src="https://imgur.com/562OYMa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div>
+<!-- image -->
+<div style="flex:33.33%;padding:5px">
+<img src="/assets/png/ph-clip/tiktik.png" width="360">
+</div>
 </div>
 
 
@@ -98,14 +99,14 @@ works best on desktop!
 > around in circles, you're said to be played around by a kapre.
 
 <div style="display:flex">
-    <!-- video -->
-    <div style="flex:33.33%;padding:5px">
-        <video width="360" height="360" controls  loop><source src="https://imgur.com/Sg2w8X0.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-    </div>
-    <!-- image -->
-    <div style="flex:33.33%;padding:5px">
-        <img src="/assets/png/ph-clip/kapre.png" width="360">
-    </div>
+<!-- video -->
+<div style="flex:33.33%;padding:5px">
+<video width="360" height="360" controls  loop><source src="https://imgur.com/Sg2w8X0.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div>
+<!-- image -->
+<div style="flex:33.33%;padding:5px">
+<img src="/assets/png/ph-clip/kapre.png" width="360">
+</div>
 </div>
 
 
@@ -118,14 +119,14 @@ works best on desktop!
 
 
 <div style="display:flex">
-    <!-- video -->
-    <div style="flex:33.33%;padding:5px">
-        <video width="360" height="360" controls  loop><source src="https://imgur.com/2cTcXG1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-    </div>
-    <!-- image -->
-    <div style="flex:33.33%;padding:5px">
-        <img src="/assets/png/ph-clip/tikbalang.png" width="360">
-    </div>
+<!-- video -->
+<div style="flex:33.33%;padding:5px">
+<video width="360" height="360" controls  loop><source src="https://imgur.com/2cTcXG1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div>
+<!-- image -->
+<div style="flex:33.33%;padding:5px">
+<img src="/assets/png/ph-clip/tikbalang.png" width="360">
+</div>
 </div>
 
 ### 5. Manananggal
@@ -137,14 +138,14 @@ works best on desktop!
 >  who is sleeping.
 
 <div style="display:flex">
-    <!-- video -->
-    <div style="flex:33.33%;padding:5px">
-        <video width="360" height="360" controls  loop><source src="https://imgur.com/8KjHw3O.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-    </div>
-    <!-- image -->
-    <div style="flex:33.33%;padding:5px">
-        <img src="/assets/png/ph-clip/manananggal.png" width="360">
-    </div>
+<!-- video -->
+<div style="flex:33.33%;padding:5px">
+<video width="360" height="360" controls  loop><source src="https://imgur.com/8KjHw3O.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div>
+<!-- image -->
+<div style="flex:33.33%;padding:5px">
+<img src="/assets/png/ph-clip/manananggal.png" width="360">
+</div>
 </div>
 
 
@@ -156,14 +157,14 @@ works best on desktop!
 > offended when a human attempts to whistle along them.
 
 <div style="display:flex">
-    <!-- video -->
-    <div style="flex:33.33%;padding:5px">
-        <video width="360" height="360" controls  loop><source src="https://imgur.com/nBvTQiY.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-    </div>
-    <!-- image -->
-    <div style="flex:33.33%;padding:5px">
-        <img src="/assets/png/ph-clip/mantiw.png" width="360">
-    </div>
+<!-- video -->
+<div style="flex:33.33%;padding:5px">
+<video width="360" height="360" controls  loop><source src="https://imgur.com/nBvTQiY.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div>
+<!-- image -->
+<div style="flex:33.33%;padding:5px">
+<img src="/assets/png/ph-clip/mantiw.png" width="360">
+</div>
 </div>
 
 ### 7. Tiyanak
@@ -174,14 +175,14 @@ works best on desktop!
 >  unfortunate passerby, it reverts to its true form and attacks the victim.
 
 <div style="display:flex">
-    <!-- video -->
-    <div style="flex:33.33%;padding:5px">
-        <video width="360" height="360" controls  loop><source src="https://imgur.com/sQ0V68X.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-    </div>
-    <!-- image -->
-    <div style="flex:33.33%;padding:5px">
-        <img src="/assets/png/ph-clip/tiyanak.png" width="360">
-    </div>
+<!-- video -->
+<div style="flex:33.33%;padding:5px">
+<video width="360" height="360" controls  loop><source src="https://imgur.com/sQ0V68X.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div>
+<!-- image -->
+<div style="flex:33.33%;padding:5px">
+<img src="/assets/png/ph-clip/tiyanak.png" width="360">
+</div>
 </div>
 
 ### 8. Sigbin
@@ -192,14 +193,14 @@ works best on desktop!
 > clay.
 
 <div style="display:flex">
-    <!-- video -->
-    <div style="flex:33.33%;padding:5px">
-        <video width="360" height="360" controls  loop><source src="https://imgur.com/JlNQfwW.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-    </div>
-    <!-- image -->
-    <div style="flex:33.33%;padding:5px">
-        <img src="/assets/png/ph-clip/sigbin.png" width="360">
-    </div>
+<!-- video -->
+<div style="flex:33.33%;padding:5px">
+<video width="360" height="360" controls  loop><source src="https://imgur.com/JlNQfwW.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div>
+<!-- image -->
+<div style="flex:33.33%;padding:5px">
+<img src="/assets/png/ph-clip/sigbin.png" width="360">
+</div>
 </div>
 
 ### 9. Santelmo
@@ -211,14 +212,14 @@ works best on desktop!
 
 
 <div style="display:flex">
-    <!-- video -->
-    <div style="flex:33.33%;padding:5px">
-        <video width="360" height="360" controls  loop><source src="https://imgur.com/xgjWVf5.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-    </div>
-    <!-- image -->
-    <div style="flex:33.33%;padding:5px">
-        <img src="/assets/png/ph-clip/santelmo.png" width="360">
-    </div>
+<!-- video -->
+<div style="flex:33.33%;padding:5px">
+<video width="360" height="360" controls  loop><source src="https://imgur.com/xgjWVf5.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div>
+<!-- image -->
+<div style="flex:33.33%;padding:5px">
+<img src="/assets/png/ph-clip/santelmo.png" width="360">
+</div>
 </div>
 
 
@@ -230,14 +231,14 @@ works best on desktop!
 
 
 <div style="display:flex">
-    <!-- video -->
-    <div style="flex:33.33%;padding:5px">
-        <video width="360" height="360" controls  loop><source src="https://imgur.com/KS2Ayag.mp4" type="video/mp4">Your browser does not support the video tag.</video>
-    </div>
-    <!-- image -->
-    <div style="flex:33.33%;padding:5px">
-        <img src="/assets/png/ph-clip/bakunawa.png" width="360">
-    </div>
+<!-- video -->
+<div style="flex:33.33%;padding:5px">
+<video width="360" height="360" controls  loop><source src="https://imgur.com/KS2Ayag.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+</div>
+<!-- image -->
+<div style="flex:33.33%;padding:5px">
+<img src="/assets/png/ph-clip/bakunawa.png" width="360">
+</div>
 </div>
 
 ## Postscript
