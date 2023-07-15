@@ -105,18 +105,27 @@ Before calamanCy, you usually have two options if you want to build a pipeline f
 For text categorization and NER, I ran the experiments for five trials and reported their average and standard deviation.
 For dependency parsing and POS tagging, I used 10-fold cross-validation because the combined UD treebank is still too small.
 
-The results show that our calamanCy pipelines are competitive:
+The results show that our calamanCy pipelines are competitive (you can reproduce the results by following this [spaCy project](https://github.com/ljvmiranda921/calamanCy/tree/master/paper/benchmark)):
 
 <!-- insert results here -->
+
 
 
 ## What's next
 
 I highly recommend that you try out calamanCy and give your feedback so that I can improve the models over time. 
-In the medium-term, I want to do a few more data annotation projects as a precursor to v1. 
+In the medium-term, I want to do few more data annotation projects as a precursor to v1. 
 These projects include a more fine-grained label set for NER, and a better Universal Dependencies Treebank.
 I'm also excited to write tokenizers and lemmatizers (both rule-based or parameterized) to help with simple NLP tasks.
 There are a lot of optimizations that can be done for these components.
+
+### FAQs
+
+- **Can I use this in production?** Yes. Compared to my [previous blog post](notebook/2023/02/04/tagalog-pipeline/), the NER corpora has been [reannotated](/notebook/2023/07/03/devlog-calamancy/) with multiple annotators so this should perform a bit better. However, note that some of the corpora used for training have non-commercial licenses, so the application of calamanCy is still restricted.
+- **The licenses are too restrictive!** It's quite unfortunate that the UD treebanks and pretraining corpora available for Tagalog have stricter licenses. Aside from creating a new
+corpora myself, I'm still thinking of ways to get around that. If you have any ideas, then let me know!
+- **What's the design decision for only including X component?** I want to make calamanCy as general-purpose as possible yet flexible enough to be finetuned on specific tasks.
+That's why we have to train a new component for text categorization. 
 
 If you have any questions, feel free to reach out on [Github](https://github.com/ljvmiranda921/calamanCy) or my [email](mailto:ljvmiranda@gmail.com)!
 
