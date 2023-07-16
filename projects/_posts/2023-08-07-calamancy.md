@@ -123,7 +123,7 @@ Before calamanCy, you usually have two options if you want to build a pipeline f
 |-------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | Hatespeech ([Cabasag et al., 2019](#cabasag2019hatespeech)) | Binary text classification (*hate speech, not hate speech*)               | Contains 10k tweets collected during the 2016 Philippine Presidential Elections labeled as hatespeech or non-hate speech.         |
 | Dengue ([Livelo and Cheng, 2018](#livelo2018dengue))        | Multilabel text classification (*absent, dengue, health, sick, mosquito*) | Contains 4k dengue-related tweets collected for a health infoveillance application that classifies text into dengue subtopics.    |
-| TLUnified-NER ([Cruz and Cheng, 2021](#cruz2021tlunified)) | Named entity recognition (*Person, Organization, Location*)               | A held-out test split from the annotated TLUnified corpora containing news reports.  |
+| TLUnified-NER ([Cruz and Cheng, 2021](#cruz2021tlunified)) | NER (*Person, Organization, Location*)               | A held-out test split from the annotated TLUnified corpora containing news reports.  |
 | Merged UD ([Aquino and de Leon, 2020](#aquino2020ugnayan); [Samson, 2018](#samson2018trg))   | Dependency parsing and POS tagging                                      | Merged version of the Ugnayan and TRG treebanks from the Universal Dependencies framework. |
 
 For text categorization and NER, I ran the experiments for five trials and reported their average and standard deviation.
@@ -132,6 +132,30 @@ For dependency parsing and POS tagging, I used 10-fold cross-validation because 
 The results show that our calamanCy pipelines are competitive (you can reproduce the results by following this [spaCy project](https://github.com/ljvmiranda921/calamanCy/tree/master/paper/benchmark)):
 
 <!-- insert results here -->
+
+| Language Pipeline      | Binary textcat (Hatespeech) | Multilabel textcat (Dengue)  | NER (TLUnified-NER)  | Dependency parsing, UAS (Merged UD) | Dependency parsing, LAS (Merged UD) |
+|------------------------|---------------------------------------------------------|----------------------------------------------------------|-----------------------------------------------------|-------------------------------------|-------------------------------------|
+| tl_calamancy_md        | 74.40 (0.05)                                            | 65.32 (0.04)                                             | 87.67 (0.03)                                        | 76.47                               | 54.40                               |
+| tl_calamancy_lg        | 75.62 (0.02)                                            | 68.42 (0.01)                                             | 88.90 (0.01)                                        | 82.13                               | 70.32                               |
+| tl_calamancy_trf       | 78.25 (0.06)                                            | 72.45 (0.02)                                             | 90.34 (0.02)                                        | 92.48                               | 80.90                               |
+
+We also evaluated cross-lingual and multilingual approaches in our benchmarks: 
+- **Cross-lingual**: we chose the source languages using a WALS-reliant metric (Agic, 2017) to choose the linguistically-closest languages to Tagalog and looked for their corresponding spaCy pipelines. 
+  We came up with Indonesian (id), Vietnamese (vi), Ukranian (uk), Romanian (ro), and Catalan (ca). However, only uk, ca, ro have spaCy pipelines. We finetuned each dataset for each task and evaluated them similarly to our Tagalog monolingual models.
+
+| Language Pipeline      | Binary textcat (Hatespeech) | Multilabel textcat (Dengue)  | NER (TLUnified-NER)  | Dependency parsing, UAS (Merged UD) | Dependency parsing, LAS (Merged UD) |
+|------------------------|---------------------------------------------------------|----------------------------------------------------------|-----------------------------------------------------|-------------------------------------|-------------------------------------|
+| uk_core_news_trf       | 75.24 (0.05)                                            | 65.57 (0.01)                                             | 51.11 (0.02)                                        | 54.77                               | 82.86                               |
+| ro_core_news_lg        | 69.01 (0.01)                                            | 59.10 (0.01)                                             | 02.01 (0.00)                                        | 84.65                               | 82.80                               |
+| ca_core_news_trf       | 70.01 (0.02)                                            | 59.42 (0.03)                                             | 14.58 (0.02)                                        | 91.17                               | 83.09                               |
+
+- **Multilingual**: we used XLM RoBERTa and an uncased version of mBERT as our base transformer models. We also finetuned each model for each task and did similar evaluations.
+  Note that finetuning on XLM RoBERTa (both base and large versions) may require at least a V100 GPU. I've seen more consistent and stable training with an A100 GPU. Same can be said for mBERT.
+
+| Language Pipeline      | Binary textcat (Hatespeech) | Multilabel textcat (Dengue)  | NER (TLUnified-NER)  | Dependency parsing, UAS (Merged UD) | Dependency parsing, LAS (Merged UD) |
+|------------------------|---------------------------------------------------------|----------------------------------------------------------|-----------------------------------------------------|-------------------------------------|-------------------------------------|
+| xlm-roberta-base       | 77.57 (0.01)                                            | 67.20 (0.01)                                             | 88.03 (0.03)                                        | 88.34                               | 76.07                               |
+| bert-base-multilingual | 76.40 (0.02)                                            | 71.07 (0.04)                                             | 87.40 (0.02)                                        | 90.79                               | 78.52                               |
 
 
 ## What's next
