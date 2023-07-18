@@ -11,10 +11,12 @@ tags: [nlp, tagalog, low-resource languages, prodigy, natural language processin
 header-img: /assets/png/calamancy-devlog-01/header.png
 description: |
     A development log on the calamanCy project and the Tagalog NLP pipeline. The tl;dr: we just finished
-    re-annotating the dataset. I also want to share some thoughts on my learnings during the annotation process.
+    re-annotating the dataset. I also want to share my learnings during the annotation process.
+    Access the corpus at https://huggingface.co/datasets/ljvmiranda921/tlunified-ner
 excerpt: |
     A development log on the calamanCy project and the Tagalog NLP pipeline. The tl;dr: we just finished
-    re-annotating the dataset. I also want to share some thoughts on my learnings during the annotation process.
+    re-annotating the dataset. I also want to share my learnings during the annotation process.
+    Access the corpus at https://huggingface.co/datasets/ljvmiranda921/tlunified-ner
 ---
 
 <span class="firstcharacter">F</span>irst off, I'm happy to see such warm reception to my [first blog post](/notebook/2023/02/04/tagalog-pipeline/). Thank you!
@@ -25,6 +27,9 @@ so this blog post may as well be a lead-up to that release.
 This blog post can be summarized as: *"young and naive researcher just learned something very obvious!"* 
 I am mostly referring to the **annotation process**.
 Luckily, I was able to find two more folks to help with data annotation, and we've been updating the original dataset for the past three months.
+
+> Tl;dr, we just finished re-annotating TLUnified with NER tags!
+> You can access the updated corpus, TLUnified-NER, in [HuggingFace Datasets](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner).
 
 ## Data annotation is iterative
 
