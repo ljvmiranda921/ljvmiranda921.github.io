@@ -22,6 +22,8 @@ excerpt: |
 They claim a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.[^1]
 I was inspired to run a proper benchmark given the corpora I had in [calamanCy](https://github.com/ljvmiranda921/calamancy), so this blog post was born!
 
+This time, I will test on the benchmarks I used in my calamanCy blog post
+
 
 
 
