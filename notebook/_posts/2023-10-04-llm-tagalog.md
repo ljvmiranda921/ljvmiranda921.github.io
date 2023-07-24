@@ -17,3 +17,10 @@ excerpt: |
     But how well do they perform when presented with Tagalog text?
     I'll explore that question in this blog post.
 ---
+
+
+<!--
+How much does Tagalog make up in a large language model's corpora?
+no info on gpt-3, but we can guess assuming it was trained on internet text (check c4)
+show large language models tagalog "exposure"
+-->
