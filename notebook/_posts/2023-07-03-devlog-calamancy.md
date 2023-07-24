@@ -1,14 +1,14 @@
 ---
 layout: post
 type: post
-title: "calamanCy devlog: some thoughts on the annotation process"
+title: "Some thoughts on the annotation process"
 date: 2023-07-03
 category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
-header-img: /assets/png/calamancy-devlog-01/header.png
+header-img: /assets/png/calamancy-annotation/header.png
 description: |
     A development log on the calamanCy project and the Tagalog NLP pipeline. The tl;dr: we just finished
     re-annotating the dataset. I also want to share my learnings during the annotation process.
@@ -38,7 +38,7 @@ In fact, the final diagram in my [February blog post](https://ljvmiranda921.gith
 We don't just annotate a thousand examples until we're tired and call it a day. 
 Instead, **annotation is iterative**:
 
-![](/assets/png/calamancy-devlog-01/iterative-process.png){:width="700px"}
+![](/assets/png/calamancy-annotation/iterative-process.png){:width="700px"}
 {: style="text-align: center;"}
 
 Nils Reiter's [blog post](https://sharedtasksinthedh.github.io/2017/10/01/howto-annotation/) has been my annotation bible for the past few months.
@@ -105,7 +105,7 @@ These numbers don't factor in our corrections.
 I'm just computing the metrics per batch as I receive them.
 
 
-![](/assets/png/calamancy-devlog-01/visualization.svg){:width="600px"}
+![](/assets/png/calamancy-annotation/visualization.svg){:width="600px"}
 {: style="text-align: center;"}
 
 
