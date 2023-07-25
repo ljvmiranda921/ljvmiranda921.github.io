@@ -64,9 +64,11 @@ labels = ["PER","ORG","LOC"]
 label_definitions = {"PER": "PERSON", "ORG": "ORGANIZATION", "LOC": "LOCATION OR GEOPOLITICAL ENTITY"}
 ```
 
-Here, the `spacy.NER.v2` points to a [`task`](https://spacy.io/api/large-language-models#tasks) with its own prompt.
-From there, you can check [the documentation](https://spacy.io/api/large-language-models#ner-v2) and cross-reference the prompt template (tip: check the `template` argument in the docs).
-For NER, we have [this Jinja2 file](https://github.com/explosion/spacy-llm/blob/main/spacy_llm/tasks/templates/ner.v2.jinja).
+Here, `spacy.NER.v2` points to a [`task`](https://spacy.io/api/large-language-models#tasks) with its own prompt.
+From there, you can check [the documentation](https://spacy.io/api/large-language-models#ner-v2) and cross-reference the template (tip: check the `template` argument in the docs).
+For NER, we have [this Jinja2 file](https://github.com/explosion/spacy-llm/blob/main/spacy_llm/tasks/templates/ner.v2.jinja). 
+At runtime, our configuration maps to the Jinja2 template and pre-fill it with our specific needs.
+
 
 ## Benchmarks
 
