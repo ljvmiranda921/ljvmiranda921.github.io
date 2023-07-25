@@ -44,44 +44,60 @@ For Hatespeech, Dengue, and TLUnified-NER, I will run a **zero-shot prompt** onl
 For the two treebanks, I will run the prompt on the whole dataset. 
 
 Few-shot prompting is out of scope for this blog post: it's too hard to optimize prompts and it might be difficult to do a comparison.
-I'll also run the experiments for three trials and report the mean and standard deviation to account for variance in the LLM's output.
+I'll also run the experiments for three trials and report the mean and standard deviation to account for variance in the LLM's output. The prompt text will still be in English, just to be consistent with TM's blog post, i.e., they only prompted with *"What's the sentiment of this tweet?"*
 
-Finally, the prompt text will still be in English, just to be consistent with TM's blog post, i.e., they only prompted with *"What's the sentiment of this tweet?"*
-I am using [spacy-llm](https://github.com/explosion/spacy-llm) throughout the experiments. 
+Finally, I am using [spacy-llm](https://github.com/explosion/spacy-llm) throughout the experiments. 
+I highly recommend trying spacy-llm if you're building production-grade LLM pipelines.
 You can find and reproduce my work on Github!
 
-## Models
-<!-- models to use -->
-<!--
-GPT-4
-GPT-3.5
-Cohere
-Dolly
-Llama
-Falcon
-StableLM
--->
+## Preliminary: how do I view your prompts?
+
+The [spacy-llm](https://github.com/explosion/spacy-llm) library provides a set of built-in prompt templates for zero-shot learning.
+These prompts are categorized and versioned per task.
+You can view them by checking the configuration file [in the Github repo](), and looking at the `components.llm.task` section.
+For example, in NER, we have something like this:
+
+```ini
+[components.llm.task]
+@llm_tasks = "spacy.NER.v2"
+labels = ["PER","ORG","LOC"]
+label_definitions = {"PER": "PERSON", "ORG": "ORGANIZATION", "LOC": "LOCATION OR GEOPOLITICAL ENTITY"}
+```
+
+Here, the `spacy.NER.v2` points to a [`task`](https://spacy.io/api/large-language-models#tasks) with its own prompt.
+From there, you can check [the documentation](https://spacy.io/api/large-language-models#ner-v2) and cross-reference the prompt template (tip: check the `template` argument in the docs).
+For NER, we have [this Jinja2 file](https://github.com/explosion/spacy-llm/blob/main/spacy_llm/tasks/templates/ner.v2.jinja).
 
 ## Benchmarks
 
-### Named entity recognition
-
-<!-- define the task -->
-<!-- show the prompt -->
+I tested on a variety of large language models, from commercial ones like GPT-4 to open-source models like Dolly.
+The table below reports the results (Metrics: macro F1-score for Dengue and Hatespeech, F1-score for TLUnified-NER, and tag accuracy for the two treebanks):
 
 
-### Text categorization 
+| LLM           | Dengue           | Hatespeech       | TLUnified-NER    | UD TRG  | UD Ugnayan |
+|---------------|------------------|------------------|------------------|---------|------------|
+| gpt-4         | $$62.04 (0.20)$$                 |                  | $$65.89 (0.44)$$ |         |            |
+| gpt-3.5-turbo | $$51.21 (0.38)$$ | $$73.90 (0.27)$$ | $$53.05 (0.42)$$ |         |            |
+| claude-2      |                  |                  |                  |         |            |
+| command       |                  |                  |                  |         |            |
+| dolly-v2-3b   |                  |                  |                  |         |            |
+| Llama2-7b-hf  |                  |                  |                  |         |            |
+| falcon-7b     |                  |                  |                  |         |            |
+
+For comparison, the table below shows the results for the large and transformer-based pipelines in [calamanCy](https://github.com/ljvmiranda921/calamanCy). 
+Both were trained using good old-fashioned supervised learning.
+I also included the results from finetuning XLM-RoBERTa ([Conneau et al., 2019](#conneau2019xlmr)) and multilingual BERT ([Devlin et al., 2019](#devlin2019bert)). 
+I omitted the results for POS tagging because I used 10-fold cross-validation to measure the non-LLM pipelines and it's too expensive to do the same for all LLMs.
+You can read more about these pipelines in [this blog post](/projects/2023/08/07/calamancy/).
 
 
-<!-- define the task -->
-<!-- show the prompt -->
+| Pipeline           | Dengue           | Hatespeech       | TLUnified-NER    | UD TRG  | UD Ugnayan |
+|---------------|------------------|------------------|------------------|---------|------------|
+| [tl_calamancy_lg](https://huggingface.co/ljvmiranda921/tl_calamancy_lg) | $$68.42 (0.01)$$ | $$75.62 (0.02)$$         | $$88.90 (0.01)$$            | - | - |
+| [tl_calamancy_trf](https://huggingface.co/ljvmiranda921/tl_calamancy_trf) | $$72.45 (0.02)$$ | $$78.25 (0.06)$$ | $$90.34 (0.02)$$ | - | - |
+| xlm-roberta-base | $$67.20 (0.01)$$ | $$77.57 (0.01)$$                  | $$88.03(0.03)$$                 | - | - |
+| bert-base-multilingual | $$71.07(0.04)$$  | $$76.40 (0.02)$$                 | $$87.40(0.02)$$                 |  -       | -           |
 
-### Parts-of-speech tagging
-
-<!-- define the task -->
-<!-- show the prompt -->
-
-## Tagalog representation on LLM corpora
 
 
 ## Takeaways
