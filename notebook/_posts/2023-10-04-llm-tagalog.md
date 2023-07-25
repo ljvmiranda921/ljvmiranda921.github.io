@@ -37,8 +37,8 @@ As a refresher, here are the datasets:
 | Hatespeech ([Cabasag et al., 2019](#cabasag2019hatespeech)) | Binary text classification (*hate speech, not hate speech*)               | Contains 10k tweets collected during the 2016 Philippine Presidential Elections labeled as hatespeech or non-hate speech.         |
 | Dengue ([Livelo and Cheng, 2018](#livelo2018dengue))        | Multilabel text classification (*absent, dengue, health, sick, mosquito*) | Contains 4k dengue-related tweets collected for a health infoveillance application that classifies text into dengue subtopics.    |
 | TLUnified-NER ([Cruz and Cheng, 2021](#cruz2021tlunified)) | NER (*Person, Organization, Location*)               | A held-out test split from the annotated TLUnified corpora containing news reports.  |
-| [UD_Tagalog-TRG](https://universaldependencies.org/treebanks/tl_trg/index.html) ([Samson, 2018](#samson2018trg))        | POS tagging (*ADJ, ADP, AUX, DET, INTJ, NOUN, etc.*)                                 | Treebank whth 55 sentences from the Tagalog Reference Grammar and Essential Tagalog Grammar: A Reference for Learners of Tagalog.     |
-| [UD_Tagalog-Ugnayan](https://universaldependencies.org/treebanks/tl_ugnayan/index.html) ([Aquino and de Leon, 2020](#aquino2020ugnayan)) | POS tagging (*ADJ, ADP, AUX, DET, INTJ, NOUN, etc.*)              | Treebank with 94 sentences from the DepEd Learning resource Portal.  |
+| [UD_Tagalog-TRG](https://universaldependencies.org/treebanks/tl_trg/index.html) ([Samson, 2018](#samson2018trg))        | Lemmatization                                 | Treebank whth 55 sentences from the Tagalog Reference Grammar and Essential Tagalog Grammar: A Reference for Learners of Tagalog.     |
+| [UD_Tagalog-Ugnayan](https://universaldependencies.org/treebanks/tl_ugnayan/index.html) ([Aquino and de Leon, 2020](#aquino2020ugnayan)) | Lemmatization              | Treebank with 94 sentences from the DepEd Learning resource Portal.  |
 
 For Hatespeech, Dengue, and TLUnified-NER, I will run a **zero-shot prompt** only on the test set.
 For the two treebanks, I will run the prompt on the whole dataset. 
@@ -47,12 +47,39 @@ Few-shot prompting is out of scope for this blog post: it's too hard to optimize
 I'll also run the experiments for three trials and report the mean and standard deviation to account for variance in the LLM's output.
 
 Finally, the prompt text will still be in English, just to be consistent with TM's blog post, i.e., they only prompted with *"What's the sentiment of this tweet?"*
-You can find and reproduce[^2] my experiments on Github!
+I am using [spacy-llm](https://github.com/explosion/spacy-llm) throughout the experiments. 
+You can find and reproduce my work on Github!
 
-[^2]:
+## Models
+<!-- models to use -->
+<!--
+GPT-4
+GPT-3.5
+Cohere
+Dolly
+Llama
+Falcon
+StableLM
+-->
 
-    Reproducing LLM experiments, especially in the in-context learning scenario, is difficult.
-    Although my tasks are easy and boring enough so I hope that we'll see some consistency.
+## Benchmarks
+
+### Named entity recognition
+
+<!-- define the task -->
+<!-- show the prompt -->
+
+
+### Text categorization 
+
+
+<!-- define the task -->
+<!-- show the prompt -->
+
+### Lemmatization 
+
+<!-- define the task -->
+<!-- show the prompt -->
 
 
 
