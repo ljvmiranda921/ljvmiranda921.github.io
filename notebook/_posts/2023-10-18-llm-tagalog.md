@@ -72,7 +72,7 @@ At runtime, our configuration maps to the Jinja2 template and pre-fill it with o
 
 ## Benchmarks
 
-I tested on a variety of large language models, from commercial ones like GPT-4 to open-source models like Dolly.
+I tested on a variety of decoder-only large language models, from commercial ones like GPT-4 to open-source models like Dolly.
 The table below reports the results (Metrics: macro F1-score for Dengue and Hatespeech, F1-score for TLUnified-NER, and tag accuracy for the two treebanks):
 
 
@@ -86,10 +86,11 @@ The table below reports the results (Metrics: macro F1-score for Dengue and Hate
 | Llama2-7b-hf  |                  |                  |                  |         |            |
 | falcon-7b     |                  |                  |                  |         |            |
 
-For comparison, the table below shows the results for the large and transformer-based pipelines in [calamanCy](https://github.com/ljvmiranda921/calamanCy). 
+For comparison, the table below shows the results for the large and (encoder-only) transformer-based pipelines in [calamanCy](https://github.com/ljvmiranda921/calamanCy). 
 Both were trained using good old-fashioned supervised learning.
 I also included the results from finetuning XLM-RoBERTa ([Conneau et al., 2019](#conneau2019xlmr)) and multilingual BERT ([Devlin et al., 2019](#devlin2019bert)). 
 I omitted the results for POS tagging because I used 10-fold cross-validation to measure the non-LLM pipelines and it's too expensive to do the same for all LLMs.
+
 You can read more about these pipelines in [this blog post](/projects/2023/08/07/calamancy/).
 
 
