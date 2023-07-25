@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Do large language models understand Tagalog?"
-date: 2023-10-04
+date: 2023-10-18
 category: notebook
 comments: true
 author: "LJ MIRANDA"
