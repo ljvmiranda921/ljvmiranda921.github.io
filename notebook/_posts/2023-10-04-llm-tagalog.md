@@ -84,6 +84,15 @@ StableLM
 ## Tagalog representation on LLM corpora
 
 
+## Takeaways
+
+<!--
+
+1. generation != prediction. doesn't mean you can generate coherent text you can understand it.
+2. information per query (IPQ), efficient, in visual design, information per square inch of ink.
+
+-->
+
 
 
 ### Footnotes
