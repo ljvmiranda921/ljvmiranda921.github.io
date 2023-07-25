@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Do large language models understand Tagalog?"
+title: "Do large language models work on Tagalog?"
 date: 2023-10-18
 category: notebook
 comments: true
