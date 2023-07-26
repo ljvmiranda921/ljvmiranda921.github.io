@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Do large language models work on Tagalog?"
-date: 2023-10-18
+date: 2023-08-16
 category: notebook
 comments: true
 author: "LJ MIRANDA"
@@ -18,10 +18,11 @@ excerpt: |
     In this blog post, I'll share some of my preliminary benchmarking results.
 ---
 
-<span class="firstcharacter">A</span> few months ago, I saw an [interesting blog post](https://stories.thinkingmachin.es/llm-customer-sentiment-analysis/) from Thinking Machines (TM) where they ran Filipino tweets on GPT-4 for a sentiment analysis task.
+<span class="firstcharacter">A</span> few weeks ago, I saw an [interesting blog post](https://stories.thinkingmachin.es/llm-customer-sentiment-analysis/) from Thinking Machines (TM) where they ran Filipino tweets on GPT-4 for a sentiment analysis task.
 They claim a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.[^1]
+However, I want to see the full-picture performance of these LLMs, hence this blog post. 
 
-In this blog post, I will conduct a systematic check on how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model.
+In this work, I will conduct a systematic check on how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model.
 I will be comparing them on the named entity recognition (NER) and text categorization benchmarks in my [calamanCy project](/projects/2023/08/07/calamancy/). As a refresher, here are the datasets:
 
 [^1]:
@@ -50,7 +51,7 @@ Finally, I am using [spacy-llm](https://github.com/explosion/spacy-llm) througho
 I highly recommend trying spacy-llm if you're building production-grade LLM pipelines.
 You can find and reproduce my work on Github!
 
-## Preliminary: how do I view your prompts?
+## Preliminary: where are my prompts?
 
 The [spacy-llm](https://github.com/explosion/spacy-llm) library provides a set of built-in prompt templates for zero-shot learning.
 These prompts are categorized and versioned per task.
@@ -67,12 +68,10 @@ label_definitions = {"PER": "PERSON", "ORG": "ORGANIZATION", "LOC": "LOCATION OR
 Here, `spacy.NER.v2` points to a [`task`](https://spacy.io/api/large-language-models#tasks) with its own prompt.
 From there, you can check [the documentation](https://spacy.io/api/large-language-models#ner-v2) and cross-reference the template (tip: check the `template` argument in the docs).
 For NER, we have [this Jinja2 file](https://github.com/explosion/spacy-llm/blob/main/spacy_llm/tasks/templates/ner.v2.jinja). 
-At runtime, our configuration maps to the Jinja2 template and pre-fill it with our settings.
+At runtime, `spacy-llm` maps our config to the Jinja2 template, thereby producing the final prompt sent to the LLM.
 
 Some `spacy-llm` tasks provide additional arguments such as `label_definitions` to explicitly describe a label to an LLM, and `examples` for few-shot prompting.
 The library covers most of the core NLP tasks such as NER, text categorization, and lemmatization.
-But, they recently added an NLU summarization task, so that's neat!
-
 
 ## Benchmarks
 
