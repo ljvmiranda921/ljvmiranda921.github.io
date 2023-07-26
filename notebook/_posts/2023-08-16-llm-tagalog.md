@@ -85,7 +85,7 @@ The table below reports the results (Metrics: macro F1-score for Dengue and Hate
 | OpenAI (`gpt-3.5-turbo`)            | $$51.21 (0.38)$$ | $$73.90 (0.27)$$ | $$53.05 (0.42)$$ | 
 | Anthropic (`claude-1`)              |                  |                  |                  | 
 | Cohere (`command`)                  | $$39.27 (0.64)$$ |                  | $$25.48 (0.11)$$ | 
-| Databricks (`dolly-v2-3b`)          |                  |                  |                  | 
+| Databricks (`dolly-v2-7b`)          |                  |                  |                  | 
 | Meta (`Llama2-7b-hf`)               |                  |                  |                  | 
 | TII (`falcon-7b`)                   |                  |                  |                  | 
 | Stability (`stablelm-base-alpha-7b`)|                  |                  |                  | 
@@ -103,6 +103,8 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/07
 | XLM-RoBERTa (`xlm-roberta-base`)                                                          | $$67.20 (0.01)$$ | $$77.57 (0.01)$$ | $$88.03(0.03)$$  | 
 | Multilingual BERT (`bert-base-multilingual`)                                                    | $$71.07(0.04)$$  | $$76.40 (0.02)$$ | $$87.40(0.02)$$  | 
 
+It is apparent that there is a big gap between our encoder-only and decoder-only models. 
+These results are consistent to the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM))
 <!--
 big gap between performance
 -->
@@ -116,6 +118,15 @@ big gap between performance
 2. information per query (IPQ), efficient, in visual design, information per square inch of ink.
 
 -->
+
+## References
+
+- <a id="cabasag2019hatespeech">Neil Vicente P. Cabasag, Vicente Raphael C. Chan, Sean Christian Y. Lim, Mark Edward M. Gonzales, and Charibeth K. Cheng.</a> 2019. Hate Speech in Philippine Election-Related Tweets: Automatic Detection and Classification Using Natural Language Processing. *Philippine Computing Journal Dedicated Issue on Natural Language Processing*, pages 1–14.
+- <a id="livelo2018dengue">Evan Dennison S. Livelo and Charibeth Ko Cheng.</a> 2018. Intelligent Dengue Infoveillance Using Gated Recurrent Neural Learning and Cross-Label Fre- quencies. *2018 IEEE International Conference on Agents (ICA)*, pages 2–7.
+- <a id="cruz2021tlunified">Jan Christian Blaise Cruz and Charibeth Ko Cheng.</a> 2021. Improving Large-scale Language Models and Resources for Filipino. In *International Conference on Language Resources and Evaluation*
+- <a id="conneau2019xlmr">Alexis Conneau, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume Wenzek, Francisco Guzmán, Edouard Grave, Myle Ott, Luke Zettlemoyer, and Veselin Stoyanov.</a> 2019. Unsupervised Cross-lingual Representation Learning at Scale. In *Annual Meeting of the Association for Computational Linguistics*.
+- <a id="devlin2019bert">Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.</a> 2019. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv, abs/1810.04805
+- <a id="wang2022WhatLM">Thomas Wang, Adam Roberts, Daniel Hesslow, Teven Le Scao, Hyung Won Chung, Iz Beltagy, Julien Lauanay, and Colin Raffel.</a> 2022. What Language Model Architecture and Pretraining Objective Work Best for Zero-Shot Generalization? *Proceedings of the 39th International Conference on Machine Learning*.
 
 
 
