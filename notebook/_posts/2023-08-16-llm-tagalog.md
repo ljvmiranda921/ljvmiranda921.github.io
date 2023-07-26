@@ -22,7 +22,7 @@ excerpt: |
 They claim a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.[^1]
 However, I want to see the full-picture performance of these LLMs, hence this blog post. 
 
-In this work, I will conduct a systematic check on how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model.
+In this work, I will conduct a **systematic check** on how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model.
 I will be comparing them on the named entity recognition (NER) and text categorization benchmarks in my [calamanCy project](/projects/2023/08/07/calamancy/). As a refresher, here are the datasets:
 
 [^1]:
@@ -38,7 +38,7 @@ I will be comparing them on the named entity recognition (NER) and text categori
 | Dengue ([Livelo and Cheng, 2018](#livelo2018dengue))        | Multilabel text classification (*absent, dengue, health, sick, mosquito*) | Contains 4k dengue-related tweets collected for a health infoveillance application that classifies text into dengue subtopics.    |
 | TLUnified-NER ([Cruz and Cheng, 2021](#cruz2021tlunified)) | NER (*Person, Organization, Location*)               | A held-out test split from the annotated TLUnified corpora containing news reports.  |
 
-For Hatespeech, Dengue, and TLUnified-NER, I will run a **zero-shot prompt** only on the test set. 
+I will run a **zero-shot prompt** only on the test set. 
 I didn't include the Universal Dependencies (UD) treebanks in this experiment because querying the APIs are getting too expensive. 
 Maybe next time I'll post an update here!
 
@@ -47,7 +47,7 @@ I'll also run the experiments for three trials and report the mean and standard 
 The prompt text will still be in English, just to be consistent with TM's blog post. 
 Their prompt was simple: *"What's the sentiment of this tweet?"*
 
-Finally, I am using [spacy-llm](https://github.com/explosion/spacy-llm) throughout the experiments. 
+Finally, I am using [**spacy-llm**](https://github.com/explosion/spacy-llm) throughout the experiments. 
 I highly recommend trying spacy-llm if you're building production-grade LLM pipelines.
 You can find and reproduce my work on Github!
 
