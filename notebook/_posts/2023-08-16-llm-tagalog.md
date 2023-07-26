@@ -73,7 +73,7 @@ At runtime, `spacy-llm` maps our config to the Jinja2 template, thereby producin
 Some `spacy-llm` tasks provide additional arguments such as `label_definitions` to explicitly describe a label to an LLM, and `examples` for few-shot prompting.
 The library covers most of the core NLP tasks such as NER, text categorization, and lemmatization and seems to be adding more in the NLU space (e.g., summarization).
 
-*[Full disclosure: I used to help out in the earlier versions of spacy-llm during my time at Explosion]*
+*[Full disclosure: I used to contribute to the earlier versions of spacy-llm]*
 
 ## Benchmarking results
 
