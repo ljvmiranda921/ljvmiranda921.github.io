@@ -22,7 +22,7 @@ excerpt: |
 They claim a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.[^1]
 However, I want to see the full-picture performance of these LLMs, hence this blog post. 
 
-In this work, I will conduct a **systematic check** on how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model.
+In this work, I will conduct a **systematic check** on how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model for a low-resource language.
 I will be comparing them on the named entity recognition (NER) and text categorization benchmarks in my [calamanCy project](/projects/2023/08/07/calamancy/). As a refresher, here are the datasets:
 
 [^1]:
@@ -55,7 +55,7 @@ You can find and reproduce my work on Github!
 
 The [spacy-llm](https://github.com/explosion/spacy-llm) library provides a set of built-in prompt templates for zero-shot learning.
 These prompts are categorized and versioned per task.
-You can view them by checking the configuration file [in the Github repo](), and looking at the `components.llm.task` section.
+You can view them by checking the configuration file [in the Github repo]() and looking at the `components.llm.task` section.
 For example, in NER, we have something like this:
 
 ```ini
@@ -71,9 +71,11 @@ For NER, we have [this Jinja2 file](https://github.com/explosion/spacy-llm/blob/
 At runtime, `spacy-llm` maps our config to the Jinja2 template, thereby producing the final prompt sent to the LLM.
 
 Some `spacy-llm` tasks provide additional arguments such as `label_definitions` to explicitly describe a label to an LLM, and `examples` for few-shot prompting.
-The library covers most of the core NLP tasks such as NER, text categorization, and lemmatization.
+The library covers most of the core NLP tasks such as NER, text categorization, and lemmatization and seems to be adding more in the NLU space (e.g., summarization).
 
-## Benchmarks
+*[Full disclosure: I used to help out in the earlier versions of spacy-llm during my time at Explosion]*
+
+## Benchmarking results
 
 I tested on a variety of decoder-only large language models, from commercial ones like GPT-4 to open-source models like Dolly.
 The table below reports the results (Metrics: macro F1-score for Dengue and Hatespeech and F1-score for TLUnified-NER):
@@ -103,21 +105,27 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/07
 | XLM-RoBERTa (`xlm-roberta-base`)                                                          | $$67.20 (0.01)$$ | $$77.57 (0.01)$$ | $$88.03(0.03)$$  | 
 | Multilingual BERT (`bert-base-multilingual`)                                                    | $$71.07(0.04)$$  | $$76.40 (0.02)$$ | $$87.40(0.02)$$  | 
 
-It is apparent that there is a big gap between our encoder-only and decoder-only models. 
-These results are consistent to the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM))
-<!--
-big gap between performance
--->
+
+## Discussion
+
+It is apparent that our **supervised approach outperformed zero-shot prompting** in our datasets.
+These results are consistent to the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM)). 
+Their experiments showed that although decoder-only models trained on an autoregressive LM objective (basically the majority of our LLMs) exhibited the strongest zero-shot generalization, they're still outperformed by models trained via masked language modeling followed by multitask finetuning (BERT and friends).
+
+I want to expound on these results with three discussion points.
+
+### Generation != prediction
+
+### Tagalog is still underrepresented in the training corpora
 
 
-## Takeaways
 
-<!--
+### Zero-shot economics don't scale
 
-1. generation != prediction. doesn't mean you can generate coherent text you can understand it.
-2. information per query (IPQ), efficient, in visual design, information per square inch of ink.
+## Final thoughts
 
--->
+<!-- I'd love to stop building corpora, but I don't think we're there yet -->
+
 
 ## References
 
