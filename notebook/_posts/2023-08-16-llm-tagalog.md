@@ -109,7 +109,7 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/07
 ## Discussion
 
 It is apparent that our **supervised approach outperformed zero-shot prompting** in our datasets.
-These results are consistent to the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM)). 
+These results are consistent with the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM)). 
 Their experiments showed that although decoder-only models trained on an autoregressive LM objective (basically the majority of our LLMs) exhibited the strongest zero-shot generalization, they're still outperformed by models trained via masked language modeling followed by multitask finetuning (BERT and friends).
 
 I want to expound on these results with three discussion points.
