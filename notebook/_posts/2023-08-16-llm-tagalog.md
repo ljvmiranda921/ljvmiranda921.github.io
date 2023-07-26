@@ -19,18 +19,11 @@ excerpt: |
 ---
 
 <span class="firstcharacter">A</span> few weeks ago, I saw an [interesting blog post](https://stories.thinkingmachin.es/llm-customer-sentiment-analysis/) from Thinking Machines where they ran Filipino tweets on GPT-4 for a sentiment analysis task.
-They claim a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.[^1]
-However, I want to see the full picture of this LLM performance, hence this blog post. 
+They obtained a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.
+This inspired me to see the full picture of LLM performance on Tagalog, hence this blog post.
 
 In this work, I will conduct a **systematic check** on how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model for a low-resource language.
 I will be comparing them on the named entity recognition (NER) and text categorization benchmarks in my [calamanCy project](/projects/2023/08/07/calamancy/). As a refresher, here are the datasets:
-
-[^1]:
-
-    The experimental details were a bit sparse. 
-    The weighted F1-score may not be too informative of a metric given the potential class imbalance between labels (I'm assuming there are *many* more negative tweets than positive).
-    Reporting macro recall might be more relevant in this case.
-
 
 | Dataset                                                     | Task / Labels                                                           | Description                                                                                                                       |
 |-------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
@@ -51,7 +44,7 @@ Finally, I am using [**spacy-llm**](https://github.com/explosion/spacy-llm) thro
 I highly recommend trying spacy-llm if you're building production-grade LLM pipelines.
 You can find and reproduce my work on Github!
 
-*[Full disclosure: I used to contribute to the earlier versions of spacy-llm as part of my work at Explosion]*
+*[Full disclosure: I used to contribute to earlier versions of spacy-llm as part of my work at Explosion]*
 
 ## Preliminary: where are my prompts?
 
@@ -106,7 +99,7 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/07
 | Multilingual BERT (`bert-base-multilingual`)                                                    | $$71.07(0.04)$$  | $$76.40 (0.02)$$ | $$87.40(0.02)$$  | 
 
 
-## Discussion
+## Discussion: why are LLMs underperforming?
 
 It is apparent that our **supervised approach outperformed zero-shot prompting** in our datasets.
 These results are consistent with the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM)). 
@@ -114,7 +107,19 @@ Their experiments showed that although decoder-only models trained on an autoreg
 
 I want to expound on these results with three discussion points.
 
-### Generation != prediction
+### Generation != understanding
+
+I argue that one common misconception with LLMs is that we equate the generation of coherent texts to language understanding.
+Just because an LLM can generate [*co&ntilde;o*](https://en.wiktionary.org/wiki/konyo#Tagalog) text or [*jejemon*](https://en.wikipedia.org/wiki/Jejemon) doesn't mean it understands linguistic grammar.
+LLMs are, after all, stochastic parrots ([Bender et al., 2021](#bender2021parrots)).
+They might be performant "numbers-wise," but they can bring unnoticeable harm when used liberally.
+
+There are also differences from an architecture standpoint.
+The transformer architectures that we consider today as LLMs (GPT, Cohere, Dolly, etc.) are decoder-only models.
+They were trained using a next sentence prediction objective that asks the model to predict the next token given a certain context window.
+On the other hand, models like BERT that dominated structured prediction benchmarks are encoder-only models...
+
+
 
 ### Tagalog is still underrepresented in the training corpora
 
@@ -124,18 +129,18 @@ I want to expound on these results with three discussion points.
 
 ## Final thoughts
 
+I hope that this blog post is a more sober view of LLM capabilities for low-resource languages.
+It would be great to live in a world where we don't need to gruelingly build corpora, but I don't think we're there yet.
+
 <!-- I'd love to stop building corpora, but I don't think we're there yet -->
 
 
 ## References
 
+- <a id="bender2021parrots">Emily Bender, Timnit Gebru, Angelina McMillan-Major and Margaret Mitchell</a>. “On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜.” Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (2021): n. pag.
 - <a id="cabasag2019hatespeech">Neil Vicente P. Cabasag, Vicente Raphael C. Chan, Sean Christian Y. Lim, Mark Edward M. Gonzales, and Charibeth K. Cheng.</a> 2019. Hate Speech in Philippine Election-Related Tweets: Automatic Detection and Classification Using Natural Language Processing. *Philippine Computing Journal Dedicated Issue on Natural Language Processing*, pages 1–14.
 - <a id="livelo2018dengue">Evan Dennison S. Livelo and Charibeth Ko Cheng.</a> 2018. Intelligent Dengue Infoveillance Using Gated Recurrent Neural Learning and Cross-Label Fre- quencies. *2018 IEEE International Conference on Agents (ICA)*, pages 2–7.
 - <a id="cruz2021tlunified">Jan Christian Blaise Cruz and Charibeth Ko Cheng.</a> 2021. Improving Large-scale Language Models and Resources for Filipino. In *International Conference on Language Resources and Evaluation*
 - <a id="conneau2019xlmr">Alexis Conneau, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume Wenzek, Francisco Guzmán, Edouard Grave, Myle Ott, Luke Zettlemoyer, and Veselin Stoyanov.</a> 2019. Unsupervised Cross-lingual Representation Learning at Scale. In *Annual Meeting of the Association for Computational Linguistics*.
 - <a id="devlin2019bert">Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.</a> 2019. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv, abs/1810.04805
 - <a id="wang2022WhatLM">Thomas Wang, Adam Roberts, Daniel Hesslow, Teven Le Scao, Hyung Won Chung, Iz Beltagy, Julien Lauanay, and Colin Raffel.</a> 2022. What Language Model Architecture and Pretraining Objective Work Best for Zero-Shot Generalization? *Proceedings of the 39th International Conference on Machine Learning*.
-
-
-
-### Footnotes
