@@ -20,7 +20,9 @@ excerpt: |
 
 <span class="firstcharacter">A</span> few months ago, I saw an [interesting blog post](https://stories.thinkingmachin.es/llm-customer-sentiment-analysis/) from Thinking Machines (TM) where they ran Filipino tweets on GPT-4 for a sentiment analysis task.
 They claim a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.[^1]
-This inspired me to conduct a proper benchmark given the corpora I had in [calamanCy](https://github.com/ljvmiranda921/calamancy), hence this blog post was born!
+
+In this blog post, I will conduct a systematic check on how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model.
+I will be comparing them on the named entity recognition (NER) and text categorization benchmarks in my [calamanCy project](/projects/2023/08/07/calamancy/). As a refresher, here are the datasets:
 
 [^1]:
 
@@ -29,19 +31,17 @@ This inspired me to conduct a proper benchmark given the corpora I had in [calam
     Reporting macro recall might be more relevant in this case.
 
 
-This time, I will test on the benchmark datasets I used in the [calamanCy blog post](/projects/2023/08/07/calamancy/).
-As a refresher, here are the datasets:
-
 | Dataset                                                     | Task / Labels                                                           | Description                                                                                                                       |
 |-------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | Hatespeech ([Cabasag et al., 2019](#cabasag2019hatespeech)) | Binary text classification (*hate speech, not hate speech*)               | Contains 10k tweets collected during the 2016 Philippine Presidential Elections labeled as hatespeech or non-hate speech.         |
 | Dengue ([Livelo and Cheng, 2018](#livelo2018dengue))        | Multilabel text classification (*absent, dengue, health, sick, mosquito*) | Contains 4k dengue-related tweets collected for a health infoveillance application that classifies text into dengue subtopics.    |
 | TLUnified-NER ([Cruz and Cheng, 2021](#cruz2021tlunified)) | NER (*Person, Organization, Location*)               | A held-out test split from the annotated TLUnified corpora containing news reports.  |
 
-For Hatespeech, Dengue, and TLUnified-NER, I will run a **zero-shot prompt** only on the test set.
-For the two treebanks, I will run the prompt on the whole dataset. 
+For Hatespeech, Dengue, and TLUnified-NER, I will run a **zero-shot prompt** only on the test set. 
+I didn't include the Universal Dependencies (UD) treebanks in this experiment because querying the APIs are getting too expensive. 
+Maybe next time I'll post an update here!
 
-Few-shot prompting is out of scope for this blog post: it's too hard to optimize prompts and it might be difficult to do a comparison.
+Also, few-shot prompting is out of scope for this blog post: it's too hard to optimize prompts and it might be difficult to do a comparison.
 I'll also run the experiments for three trials and report the mean and standard deviation to account for variance in the LLM's output. 
 The prompt text will still be in English, just to be consistent with TM's blog post. 
 Their prompt was simple: *"What's the sentiment of this tweet?"*
@@ -104,6 +104,9 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/07
 | XLM-RoBERTa (`xlm-roberta-base`)                                                          | $$67.20 (0.01)$$ | $$77.57 (0.01)$$ | $$88.03(0.03)$$  | 
 | Multilingual BERT (`bert-base-multilingual`)                                                    | $$71.07(0.04)$$  | $$76.40 (0.02)$$ | $$87.40(0.02)$$  | 
 
+<!--
+big gap between performance
+-->
 
 
 ## Takeaways
