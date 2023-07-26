@@ -110,7 +110,7 @@ I want to expound on these results with three discussion points.
 ### Generation != understanding
 
 I argue that one common misconception with LLMs is that we equate the generation of coherent texts to language understanding.
-Just because an LLM can generate [*co&ntilde;o*](https://en.wiktionary.org/wiki/konyo#Tagalog) text or [*jejemon*](https://en.wikipedia.org/wiki/Jejemon) doesn't mean it understands linguistic grammar.
+Just because an LLM can "speak" [*co&ntilde;o*](https://en.wiktionary.org/wiki/konyo#Tagalog) or [*jejemon*](https://en.wikipedia.org/wiki/Jejemon) doesn't mean it understands linguistic grammar.
 LLMs are, after all, stochastic parrots ([Bender et al., 2021](#bender2021parrots)).
 They might be performant "numbers-wise," but they can bring unnoticeable harm when used liberally.
 
