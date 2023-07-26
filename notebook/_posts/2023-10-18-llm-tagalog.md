@@ -78,10 +78,10 @@ The table below reports the results (Metrics: macro F1-score for Dengue and Hate
 
 | LLM           | Dengue           | Hatespeech       | TLUnified-NER    | UD TRG  | UD Ugnayan |
 |---------------|------------------|------------------|------------------|---------|------------|
-| gpt-4         | $$62.04 (0.20)$$                 |                  | $$65.89 (0.44)$$ |         |            |
+| gpt-4         | $$62.04 (0.20)$$ | $$45.74 (9.16)$$ | $$65.89 (0.44)$$ |         |            |
 | gpt-3.5-turbo | $$51.21 (0.38)$$ | $$73.90 (0.27)$$ | $$53.05 (0.42)$$ |         |            |
-| claude-2      |                  |                  |                  |         |            |
-| command       |                  |                  |                  |         |            |
+| claude-1      |                  |                  |                  |         |            |
+| command       | $$25.48 (0.11)$$ |                  |                  |         |            |
 | dolly-v2-3b   |                  |                  |                  |         |            |
 | Llama2-7b-hf  |                  |                  |                  |         |            |
 | falcon-7b     |                  |                  |                  |         |            |
@@ -96,10 +96,10 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/07
 
 | Pipeline           | Dengue           | Hatespeech       | TLUnified-NER    | UD TRG  | UD Ugnayan |
 |---------------|------------------|------------------|------------------|---------|------------|
-| [tl_calamancy_lg](https://huggingface.co/ljvmiranda921/tl_calamancy_lg) | $$68.42 (0.01)$$ | $$75.62 (0.02)$$         | $$88.90 (0.01)$$            | - | - |
+| [tl_calamancy_lg](https://huggingface.co/ljvmiranda921/tl_calamancy_lg)   | $$68.42 (0.01)$$ | $$75.62 (0.02)$$ | $$88.90 (0.01)$$ | - | - |
 | [tl_calamancy_trf](https://huggingface.co/ljvmiranda921/tl_calamancy_trf) | $$72.45 (0.02)$$ | $$78.25 (0.06)$$ | $$90.34 (0.02)$$ | - | - |
-| xlm-roberta-base | $$67.20 (0.01)$$ | $$77.57 (0.01)$$                  | $$88.03(0.03)$$                 | - | - |
-| bert-base-multilingual | $$71.07(0.04)$$  | $$76.40 (0.02)$$                 | $$87.40(0.02)$$                 |  -       | -           |
+| xlm-roberta-base       | $$67.20 (0.01)$$ | $$77.57 (0.01)$$  | $$88.03(0.03)$$  | - | - |
+| bert-base-multilingual | $$71.07(0.04)$$  | $$76.40 (0.02)$$  | $$87.40(0.02)$$  | - | - |
 
 
 
