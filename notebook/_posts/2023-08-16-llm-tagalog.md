@@ -35,7 +35,7 @@ I will run a **zero-shot prompt** only on the test set.
 I didn't include the Universal Dependencies (UD) treebanks in this experiment because querying the APIs are getting too expensive. 
 Maybe next time I'll post an update here!
 
-Also, few-shot prompting is out of scope for this blog post: it's too laborious to optimize prompts and it might be difficult to do a comparison.
+Also, few-shot prompting is out of scope for this blog post&mdash;it's too laborious to optimize prompts and it might be difficult to do a comparison.
 I'll also run the experiments for three trials and report the mean and standard deviation to account for variance in the LLM's output. 
 The prompt text will still be in English, just to be consistent with the Thinking Machines blog post 
 (their prompt for sentiment analysis was simple: *"What's the sentiment of this tweet?"*).
