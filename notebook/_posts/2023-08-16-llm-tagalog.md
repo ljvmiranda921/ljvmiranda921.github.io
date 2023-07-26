@@ -18,9 +18,9 @@ excerpt: |
     In this blog post, I'll share some of my preliminary benchmarking results.
 ---
 
-<span class="firstcharacter">A</span> few weeks ago, I saw an [interesting blog post](https://stories.thinkingmachin.es/llm-customer-sentiment-analysis/) from Thinking Machines (TM) where they ran Filipino tweets on GPT-4 for a sentiment analysis task.
+<span class="firstcharacter">A</span> few weeks ago, I saw an [interesting blog post](https://stories.thinkingmachin.es/llm-customer-sentiment-analysis/) from Thinking Machines where they ran Filipino tweets on GPT-4 for a sentiment analysis task.
 They claim a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.[^1]
-However, I want to see the full-picture performance of these LLMs, hence this blog post. 
+However, I want to see the full picture of this LLM performance, hence this blog post. 
 
 In this work, I will conduct a **systematic check** on how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model for a low-resource language.
 I will be comparing them on the named entity recognition (NER) and text categorization benchmarks in my [calamanCy project](/projects/2023/08/07/calamancy/). As a refresher, here are the datasets:
@@ -44,12 +44,14 @@ Maybe next time I'll post an update here!
 
 Also, few-shot prompting is out of scope for this blog post: it's too laborious to optimize prompts and it might be difficult to do a comparison.
 I'll also run the experiments for three trials and report the mean and standard deviation to account for variance in the LLM's output. 
-The prompt text will still be in English, just to be consistent with TM's blog post. 
-Their prompt was simple: *"What's the sentiment of this tweet?"*
+The prompt text will still be in English, just to be consistent with the Thinking Machines blog post 
+(their prompt for sentiment analysis was simple: *"What's the sentiment of this tweet?"*).
 
 Finally, I am using [**spacy-llm**](https://github.com/explosion/spacy-llm) throughout the experiments. 
 I highly recommend trying spacy-llm if you're building production-grade LLM pipelines.
 You can find and reproduce my work on Github!
+
+*[Full disclosure: I used to contribute to the earlier versions of spacy-llm as part of my work at Explosion]*
 
 ## Preliminary: where are my prompts?
 
@@ -72,8 +74,6 @@ At runtime, `spacy-llm` maps our config to the Jinja2 template, thereby producin
 
 Some `spacy-llm` tasks provide additional arguments such as `label_definitions` to explicitly describe a label to an LLM, and `examples` for few-shot prompting.
 The library covers most of the core NLP tasks such as NER, text categorization, and lemmatization and seems to be adding more in the NLU space (e.g., summarization).
-
-*[Full disclosure: I used to contribute to the earlier versions of spacy-llm]*
 
 ## Benchmarking results
 
