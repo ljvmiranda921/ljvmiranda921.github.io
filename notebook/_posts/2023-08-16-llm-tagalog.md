@@ -80,7 +80,7 @@ The table below reports the results (Metrics: macro F1-score for Dengue and Hate
 | OpenAI (`gpt-3.5-turbo`)            | $$51.21 (0.38)$$ | $$73.90 (0.27)$$ | $$53.05 (0.42)$$ | 
 | Anthropic (`claude-1`)              |                  |                  |                  | 
 | Cohere (`command`)                  | $$39.27 (0.64)$$ | $$16.38 (0.88)$$ | $$25.48 (0.11)$$ | 
-| Databricks (`dolly-v2-7b`)          | $$27.26 (0.40)$$ |                  | $$13.07 (0.14)$$ | 
+| Databricks (`dolly-v2-7b`)          | $$27.26 (0.40)$$ | $$32.30 (0.18)$$ | $$13.07 (0.14)$$ | 
 | Meta (`Llama2-7b-hf`)               |                  |                  |                  | 
 | TII (`falcon-7b`)                   |                  |                  |                  | 
 | Stability (`stablelm-base-alpha-7b`)|                  |                  |                  | 
