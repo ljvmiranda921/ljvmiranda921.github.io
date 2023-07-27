@@ -83,7 +83,7 @@ The table below reports the results (Metrics: macro F1-score for Dengue and Hate
 | Databricks (`dolly-v2-7b`)          | $$27.26 (0.40)$$ | $$32.30 (0.18)$$ | $$13.07 (0.14)$$ | 
 | Meta (`Llama2-7b-hf`)               |                  |                  |                  | 
 | TII (`falcon-7b`)                   |                  |                  |                  | 
-| Stability (`stablelm-base-alpha-7b`)|                  |                  |                  | 
+| Stability (`stablelm-base-alpha-7b`)| $$15.56 (0.08)$$ | $$32.17 (0.24)$$ | $$00.25 (0.03)$$ | 
 | OpenLM (`open_llama_7b`)            |                  |                  |                  | 
 
 For comparison, the table below shows the results for the large and (encoder-only) transformer-based pipelines in [calamanCy](https://github.com/ljvmiranda921/calamanCy). 
