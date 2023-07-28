@@ -82,7 +82,7 @@ The table below reports the results (Metrics: macro F1-score for Dengue and Hate
 | Cohere (`command`)                  | $$39.27 (0.64)$$ | $$16.38 (0.88)$$ | $$25.48 (0.11)$$ | 
 | Databricks (`dolly-v2-7b`)          | $$27.26 (0.40)$$ | $$32.30 (0.18)$$ | $$13.07 (0.14)$$ | 
 | Meta (`Llama2-7b-hf`)               |                  |                  |                  | 
-| TII (`falcon-7b`)                   |                  |                  | $$8.65  (0.04)$$ | 
+| TII (`falcon-7b`)                   | $$14.77 (0.35)$$ | $$33.00 (0.11)$$ | $$8.65  (0.04)$$ | 
 | Stability (`stablelm-base-alpha-7b`)| $$15.56 (0.08)$$ | $$32.17 (0.24)$$ | $$00.25 (0.03)$$ | 
 | OpenLM (`open_llama_7b`)            | $$15.24 (0.43)$$ | $$32.18 (0.73)$$ | $$15.09 (0.48)$$ | 
 
@@ -123,7 +123,9 @@ On the other hand, models like BERT that dominated structured prediction benchma
 
 ### Tagalog is still underrepresented in the training corpora
 
-
+- multilingual c4: https://www.semanticscholar.org/reader/74276a37bfa50f90dfae37f767b2b67784bd402a
+- commoncrawl stats: https://commoncrawl.github.io/cc-crawl-statistics/plots/languages
+- the Pile for stableLM: https://arxiv.org/pdf/2101.00027.pdf (seems all english, it's actually 97.4% SIR)
 
 ### Zero-shot economics don't scale
 
