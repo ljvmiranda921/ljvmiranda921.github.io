@@ -84,7 +84,7 @@ The table below reports the results (Metrics: macro F1-score for Dengue and Hate
 | Meta (`Llama2-7b-hf`)               |                  |                  |                  | 
 | TII (`falcon-7b`)                   |                  |                  |                  | 
 | Stability (`stablelm-base-alpha-7b`)| $$15.56 (0.08)$$ | $$32.17 (0.24)$$ | $$00.25 (0.03)$$ | 
-| OpenLM (`open_llama_7b`)            |                  |                  |                  | 
+| OpenLM (`open_llama_7b`)            | $$15.24 $$       |  32.18           |       15.09      | 
 
 For comparison, the table below shows the results for the large and (encoder-only) transformer-based pipelines in [calamanCy](https://github.com/ljvmiranda921/calamanCy). 
 Both were trained using good old-fashioned supervised learning.
