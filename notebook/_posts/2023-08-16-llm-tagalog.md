@@ -22,7 +22,7 @@ excerpt: |
 They obtained a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.
 This inspired me to see the full picture of LLM performance on Tagalog, hence this blog post.
 
-In this work, I will conduct a **systematic check** on how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model for a low-resource language.
+In this work, I will check how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model for a low-resource language.
 I will be comparing them to the named entity recognition (NER) and text categorization benchmarks in my [calamanCy project](/projects/2023/08/07/calamancy/). As a refresher, here are the datasets:
 
 | Dataset                                                     | Task / Labels                                                           | Description                                                                                                                       |
@@ -37,7 +37,7 @@ Maybe next time I'll post an update here!
 
 Also, few-shot prompting is out of scope for this blog post&mdash;it's too laborious to optimize prompts and it might be difficult to do a comparison.
 I'll also run the experiments for three trials and report the mean and standard deviation to account for variance in the LLM's output. 
-The prompt text will still be in English, just to be consistent with the Thinking Machines blog post 
+The prompt text will still be in English in order to be consistent with the Thinking Machines blog post 
 (their prompt for sentiment analysis was simple: *"What's the sentiment of this tweet?"*).
 
 Finally, I am using [**spacy-llm**](https://github.com/explosion/spacy-llm) throughout the experiments. 
@@ -81,7 +81,6 @@ The table below reports the results (Metrics: macro F1-score for Dengue and Hate
 | Anthropic (`claude-1`)              |                  |                  |                  | 
 | Cohere (`command`)                  | $$39.27 (0.64)$$ | $$16.38 (0.88)$$ | $$25.48 (0.11)$$ | 
 | Databricks (`dolly-v2-7b`)          | $$27.26 (0.40)$$ | $$32.30 (0.18)$$ | $$13.07 (0.14)$$ | 
-| Meta (`Llama2-7b-hf`)               |                  |                  |                  | 
 | TII (`falcon-7b`)                   | $$14.77 (0.35)$$ | $$33.00 (0.11)$$ | $$8.65  (0.04)$$ | 
 | Stability (`stablelm-base-alpha-7b`)| $$15.56 (0.08)$$ | $$32.17 (0.24)$$ | $$00.25 (0.03)$$ | 
 | OpenLM (`open_llama_7b`)            | $$15.24 (0.43)$$ | $$32.18 (0.73)$$ | $$15.09 (0.48)$$ | 
