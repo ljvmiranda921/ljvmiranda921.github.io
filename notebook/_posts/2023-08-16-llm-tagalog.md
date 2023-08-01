@@ -19,11 +19,15 @@ excerpt: |
 ---
 
 <span class="firstcharacter">A</span> few weeks ago, I saw an [interesting blog post](https://stories.thinkingmachin.es/llm-customer-sentiment-analysis/) from Thinking Machines where they ran Filipino tweets on GPT-4 for a sentiment analysis task.
+Their prompt was simple: they simply asked *"what is the sentiment of this tweet?"*
 They obtained a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.
-This inspired me to see the full picture of LLM performance on Tagalog, hence this blog post.
+This inspired me to see the full picture of LLM performance on Tagalog, hence these experiments.
 
-In this work, I will check how these decoder-only autoregressive models fare (using zero-shot generalization) against finetuning an encoder-only model for a low-resource language.
-I will be comparing them to the named entity recognition (NER) and text categorization benchmarks in my [calamanCy project](/projects/2023/08/07/calamancy/). As a refresher, here are the datasets:
+In this blog post, I will test how these large language models (LLMs) fare against standard finetuning techniques in Tagalog.
+I will be benchmarking them to the named entity recognition (NER) and text categorization datasets from the [calamanCy project](/projects/2023/08/07/calamancy/). 
+
+As a refresher, the table below shows the datasets. Notice that I didn't include the Universal Dependencies (UD) treebanks.
+The main reason is that querying from third-party APIs is getting too costly so I have to make compromise on the scope:
 
 | Dataset                                                     | Task / Labels                                                           | Description                                                                                                                       |
 |-------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
@@ -31,24 +35,20 @@ I will be comparing them to the named entity recognition (NER) and text categori
 | Dengue ([Livelo and Cheng, 2018](#livelo2018dengue))        | Multilabel text classification (*absent, dengue, health, sick, mosquito*) | Contains 4k dengue-related tweets collected for a health infoveillance application that classifies text into dengue subtopics.    |
 | TLUnified-NER ([Cruz and Cheng, 2021](#cruz2021tlunified)) | NER (*Person, Organization, Location*)               | A held-out test split from the annotated TLUnified corpora containing news reports.  |
 
-I will run a **zero-shot prompt** only on the test set. 
-I didn't include the Universal Dependencies (UD) treebanks in this experiment because querying the APIs are getting too expensive. 
-Maybe next time I'll post an update here!
-
-Also, few-shot prompting is out of scope for this blog post&mdash;it's too laborious to optimize prompts and it might be difficult to do a comparison.
-I'll also run the experiments for three trials and report the mean and standard deviation to account for variance in the LLM's output. 
-The prompt text will still be in English in order to be consistent with the Thinking Machines blog post 
-(their prompt for sentiment analysis was simple: *"What's the sentiment of this tweet?"*).
+I wrote a zero-shot prompt and ran it on the test set.
+Zero-shot prompting only requires a task description for inference. 
+Few-shot prompting is out of scope for this blog post&mdash;it's too laborious to engineer prompts and it might be difficult to do a comparison.
+I'll also run the experiments for three trials and report the mean and standard deviation to account for variance. 
+The prompt text will still be in English in order to be consistent with the Thinking Machines blog post.
 
 Finally, I am using [**spacy-llm**](https://github.com/explosion/spacy-llm) throughout the experiments. 
 I highly recommend trying spacy-llm if you're building production-grade LLM pipelines.
-You can find and reproduce my work on Github!
-
-*[Full disclosure: I used to contribute to earlier versions of spacy-llm as part of my work at Explosion]*
+You can find and reproduce my work on Github! 
+*(Full disclosure: I used to contribute to earlier versions of spacy-llm as part of my work at Explosion)*
 
 ## Preliminary: where are my prompts?
 
-The [spacy-llm](https://github.com/explosion/spacy-llm) library provides a set of built-in prompt templates for zero-shot learning.
+The [spacy-llm](https://github.com/explosion/spacy-llm) library provides a set of built-in prompt templates for zero- and few-shot prompting.
 These prompts are categorized and versioned per task.
 You can view them by checking the configuration file [in the Github repo]() and looking at the `components.llm.task` section.
 For example, in NER, we have something like this:
@@ -70,8 +70,8 @@ The library covers most of the core NLP tasks such as NER, text categorization, 
 
 ## Benchmarking results
 
-I tested on a variety of decoder-only large language models, from commercial ones like GPT-4 to open-source models like Dolly.
-The table below reports the results (Metrics: macro F1-score for Dengue and Hatespeech and F1-score for TLUnified-NER):
+I tested on a variety of [decoder-only](https://huggingface.co/learn/nlp-course/chapter1/6) large language models, from commercial ones like GPT-4 to open-source models like Dolly.
+The table below reports the results (**Metrics:** <u>macro F1-score</u> for Dengue and Hatespeech and <u>F1-score</u> for TLUnified-NER):
 
 
 | LLM                                 | Dengue           | Hatespeech       | TLUnified-NER    | 
@@ -85,7 +85,7 @@ The table below reports the results (Metrics: macro F1-score for Dengue and Hate
 | Stability (`stablelm-base-alpha-7b`)| $$15.56 (0.08)$$ | $$32.17 (0.24)$$ | $$00.25 (0.03)$$ | 
 | OpenLM (`open_llama_7b`)            | $$15.24 (0.43)$$ | $$32.18 (0.73)$$ | $$15.09 (0.48)$$ | 
 
-For comparison, the table below shows the results for the large and (encoder-only) transformer-based pipelines in [calamanCy](https://github.com/ljvmiranda921/calamanCy). 
+For comparison, the table below shows the results for the word vector and [encoder-only](https://huggingface.co/learn/nlp-course/chapter1/5?fw=pt) transformer-based pipelines from [calamanCy](https://github.com/ljvmiranda921/calamanCy). 
 Both were trained using good old-fashioned supervised learning.
 I also included the results from finetuning XLM-RoBERTa ([Conneau et al., 2019](#conneau2019xlmr)) and multilingual BERT ([Devlin et al., 2019](#devlin2019bert)). 
 You can read more about these pipelines in [this blog post](/projects/2023/08/07/calamancy/).
@@ -101,17 +101,16 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/07
 ## Discussion: why are LLMs underperforming?
 
 It is apparent that our **supervised approach outperformed zero-shot prompting** in our datasets.
-These results are consistent with the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM)). 
-Their experiments showed that although decoder-only models trained on an autoregressive LM objective (basically the majority of our LLMs) exhibited the strongest zero-shot generalization, they're still outperformed by models trained via masked language modeling followed by multitask finetuning (BERT and friends).
-
-I want to expound on these results with three discussion points.
+These results are consistent with the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM)), 
+where they showed that although decoder-only models trained on an autoregressive exhibited the strongest zero-shot generalization, they're still outperformed by models trained via masked language modeling followed by multitask finetuning.
+Let me expound these results in the following sections.
 
 ### Generation != understanding
 
 I argue that one common misconception with LLMs is that we equate the generation of coherent texts to language understanding.
 Just because an LLM can "speak" [*co&ntilde;o*](https://en.wiktionary.org/wiki/konyo#Tagalog) or [*jejemon*](https://en.wikipedia.org/wiki/Jejemon) doesn't mean it understands linguistic grammar.
 LLMs are, after all, stochastic parrots ([Bender et al., 2021](#bender2021parrots)).
-They might be performant "numbers-wise," but they can bring unnoticeable harm when used liberally.
+They might be performant in leaderboards, but they can bring unnoticeable harm when used liberally.
 
 There are also differences from an architecture standpoint.
 The transformer architectures that we consider today as LLMs (GPT, Cohere, Dolly, etc.) are decoder-only models.
@@ -125,6 +124,7 @@ On the other hand, models like BERT that dominated structured prediction benchma
 - multilingual c4: https://www.semanticscholar.org/reader/74276a37bfa50f90dfae37f767b2b67784bd402a
 - commoncrawl stats: https://commoncrawl.github.io/cc-crawl-statistics/plots/languages
 - the Pile for stableLM: https://arxiv.org/pdf/2101.00027.pdf (seems all english, it's actually 97.4% SIR)
+- https://arxiv.org/pdf/2303.18223.pdf go to chapter 3.2 (BookCorpus, CommonCrawl)
 
 ### Zero-shot economics don't scale
 
