@@ -24,7 +24,7 @@ They obtained a weighted F1-score of 76%&mdash; pretty decent for a straightforw
 This inspired me to see the full picture of LLM performance on Tagalog, hence these experiments.
 
 In this blog post, I will test how these large language models (LLMs) fare against standard finetuning techniques in Tagalog.
-I will be benchmarking them to the named entity recognition (NER) and text categorization datasets from the [calamanCy project](/projects/2023/08/07/calamancy/). 
+I will be benchmarking them to the named entity recognition (NER) and text categorization datasets from the [calamanCy project](/projects/2023/08/01/calamancy/). 
 
 As a refresher, the table below shows the datasets. Notice that I didn't include the Universal Dependencies (UD) treebanks.
 The main reason is that querying from third-party APIs is getting too costly so I have to make compromise on the scope:
@@ -88,7 +88,7 @@ The table below reports the results (**Metrics:** <u>macro F1-score</u> for Deng
 For comparison, the table below shows the results for the word vector and [encoder-only](https://huggingface.co/learn/nlp-course/chapter1/5?fw=pt) transformer-based pipelines from [calamanCy](https://github.com/ljvmiranda921/calamanCy). 
 Both were trained using good old-fashioned supervised learning.
 I also included the results from finetuning XLM-RoBERTa ([Conneau et al., 2019](#conneau2019xlmr)) and multilingual BERT ([Devlin et al., 2019](#devlin2019bert)). 
-You can read more about these pipelines in [this blog post](/projects/2023/08/07/calamancy/).
+You can read more about these pipelines in [this blog post](/projects/2023/08/01/calamancy/).
 
 | Pipeline                                                                                        | Dengue           | Hatespeech       | TLUnified-NER    |
 |-------------------------------------------------------------------------------------------------|------------------|------------------|------------------|
