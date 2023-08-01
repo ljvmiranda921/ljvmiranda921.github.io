@@ -97,6 +97,9 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/01
 | XLM-RoBERTa (`xlm-roberta-base`)                                                                | $$67.20 (0.01)$$ | $$77.57 (0.01)$$ | $$88.03 (0.03)$$  | 
 | Multilingual BERT (`bert-base-multilingual`)                                                    | $$71.07(0.04)$$  | $$76.40 (0.02)$$ | $$87.40 (0.02)$$  | 
 
+![](/assets/png/calamancy-llm/results.svg){:width="700px"}
+{: style="text-align: center;"}
+
 
 ## Discussion: why are LLMs underperforming?
 
