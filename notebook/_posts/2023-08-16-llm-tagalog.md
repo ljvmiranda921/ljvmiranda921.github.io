@@ -158,6 +158,9 @@ For example, the [Pile](https://pile.eleuther.ai/) dataset is English-only while
     For example, the XGLM language model ([Lin et al., 2022](#lin2022xglm)) was only trained on 2.3k tokens of Tagalog data whereas the <span style="font-variant:small-caps;">Bloom</span> language model ([Scao et al., 2022](#scao2022bloom)) doesn't contain any Tagalog text at all. There's still a long way to go.
 
 
+Given these gaps, I posit that the best way to use LLMs in the context of low-resource languages like Tagalog is to **maximize information-per-query (IPQ).**
+Yes, that's a made-up term, so let me explain.
+
 
 <!--
 Given these constraints, I think the best way to use LLMs in the context of low-resource languages like Tagalog is to maximize information per query (IPQ).
