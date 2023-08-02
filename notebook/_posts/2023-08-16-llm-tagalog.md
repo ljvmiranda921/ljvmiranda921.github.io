@@ -19,7 +19,7 @@ excerpt: |
 ---
 
 <span class="firstcharacter">A</span> few weeks ago, I saw an [interesting blog post](https://stories.thinkingmachin.es/llm-customer-sentiment-analysis/) from Thinking Machines where they ran Filipino tweets on GPT-4 for a sentiment analysis task.
-Their prompt was simple: they simply asked *"what is the sentiment of this tweet?"*
+Their prompt was simple. They asked: *"what is the sentiment of this tweet?"*
 They obtained a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.
 This inspired me to see the full picture of LLM performance on Tagalog, hence these experiments.
 
@@ -27,7 +27,7 @@ In this blog post, I will test how these large language models (LLMs) fare again
 I will be benchmarking them to the named entity recognition (NER) and text categorization datasets from the [calamanCy project](/projects/2023/08/01/calamancy/). 
 
 As a refresher, the table below shows the datasets. Notice that I didn't include the Universal Dependencies (UD) treebanks.
-The main reason is that querying from third-party APIs is getting too costly so I have to make compromise on the scope:
+The main reason is that querying from third-party APIs is getting too costly so I have to compromise on the scope:
 
 | Dataset                                                     | Task / Labels                                                           | Description                                                                                                                       |
 |-------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
@@ -97,6 +97,9 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/01
 | XLM-RoBERTa (`xlm-roberta-base`)                                                                | $$67.20 (0.01)$$ | $$77.57 (0.01)$$ | $$88.03 (0.03)$$  | 
 | Multilingual BERT (`bert-base-multilingual`)                                                    | $$71.07(0.04)$$  | $$76.40 (0.02)$$ | $$87.40 (0.02)$$  | 
 
+The graph below shows a better visual of our results.
+The grey bars represent our large language models while the red bars represent the supervised ones.
+
 ![](/assets/png/calamancy-llm/results.svg){:width="700px"}
 {: style="text-align: center;"}
 
@@ -105,7 +108,7 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/01
 
 It is apparent that our **supervised approach outperformed zero-shot prompting** in our datasets.
 These results are consistent with the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM)), 
-where they showed that although decoder-only models trained on an autoregressive exhibited the strongest zero-shot generalization, they're still outperformed by models trained via masked language modeling followed by multitask finetuning.
+where they showed that although decoder-only models trained on an autoregressive objective exhibited the strongest zero-shot generalization, they're still outperformed by models trained via masked language modeling followed by multitask finetuning.
 Let me expound these results in the following sections.
 
 ### Generation != understanding
@@ -119,6 +122,10 @@ There are also differences from an architecture standpoint.
 The transformer architectures that we consider today as LLMs (GPT, Cohere, Dolly, etc.) are decoder-only models.
 They were trained using a next sentence prediction objective that asks the model to predict the next token given a certain context window.
 On the other hand, models like BERT that dominated structured prediction benchmarks are encoder-only models...
+
+<!--
+right tool for the job
+-->
 
 
 
