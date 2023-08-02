@@ -92,10 +92,10 @@ Pumunta si Juan sa Japan.
 I won't be pasting the prompts for binary and multilabel text categorization here to save space.
 Again, the best way to view them is to check my [configuration files]() and cross-reference them with the [prompt templates in the spacy-llm repository]().
 
-Some `spacy-llm` tasks provide additional arguments such as `label_definitions` to explicitly describe a label to an LLM, and `examples` for few-shot prompting.
+Lastly, some `spacy-llm` tasks provide additional arguments such as `label_definitions` to explicitly describe a label to an LLM, and `examples` for few-shot prompting.
 The library covers most of the core NLP tasks such as NER, text categorization, and lemmatization and seems to be adding more in the natural language understanding (NLU) space (e.g., summarization).
 
-## Benchmarking results
+## Results: LLMs vs good old-fashioned supervised learning
 
 I tested on a variety of [decoder-only](https://huggingface.co/learn/nlp-course/chapter1/6) large language models, from commercial ones like GPT-4 to open-source models like Dolly.
 The table below reports the results (**Metrics:** <u>macro F1-score</u> for Dengue and Hatespeech and <u>F1-score</u> for TLUnified-NER):
@@ -136,7 +136,8 @@ The grey bars represent our large language models while the red bars represent t
 It is apparent that our **supervised approach outperformed zero-shot prompting** in our datasets.
 These results are consistent with the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM)), 
 where they showed that although decoder-only models trained on an autoregressive objective exhibited the strongest zero-shot generalization, they're still outperformed by models trained via masked language modeling followed by multitask finetuning.
-Let me explain a bit further:
+I argue that LLMs underperform because of two major gaps:
+
 
 * <b style="font-variant:small-caps;">Conceptual gap: </b>**text generation != text understanding**. I argue that one common misconception with LLMs is that we equate the generation of coherent texts to language understanding.
 Just because an LLM can "speak" [*co&ntilde;o*](https://en.wiktionary.org/wiki/konyo#Tagalog) or [*jejemon*](https://en.wikipedia.org/wiki/Jejemon) doesn't mean it understands linguistic grammar.
@@ -147,8 +148,15 @@ In addition, our decoder-only LLMs may not be suited to our structured predictio
     As an aside, this may also be a call for building NLU-benchmarks for low-resource corpora. 
     If you're working on something related, I'm interested to help so feel free to reach out!
 
-- <b style="font-variant:small-caps;">Data gap: </b>**Tagalog is still underrepresented in most LLM training corpora**. Training an LLM requires a large *data mixture*. 
-Some datasets in this mixture may include CommonCrawl, The Pile, C4, and Wikipedia among others. Unfortunately, Tagalog is severely underrepresented in these datasets, even in multilingual LMs. For example, 
+- <b style="font-variant:small-caps;">Data gap: </b>**Tagalog is still underrepresented in most LLM training corpora**. 
+    Training an LLM requires a large *data mixture*. 
+Datasets in this mixture may include [CommonCrawl](https://commoncrawl.org/), [The Pile](https://pile.eleuther.ai/), [C4](https://github.com/google-research/text-to-text-transfer-transformer#c4), and Wikipedia among many others. 
+Most of these datasets are heavily Anglocentric.
+For example, the [Pile](https://pile.eleuther.ai/) dataset is English-only while CommonCrawl is dominated by western languages (Tagalog is at a mere $$0.0073\%$$).
+
+    Unfortunately, Tagalog is underrepresented even in multilingual LMs. 
+    For example, the XGLM language model ([Lin et al., 2022](#lin2022xglm)) was only trained on 2.3k tokens of Tagalog data whereas the <span style="font-variant:small-caps;">Bloom</span> language model ([Scao et al., 2022](#scao2022bloom)) doesn't contain any Tagalog text at all. There's still a long way to go.
+
 
 
 <!--
@@ -183,8 +191,10 @@ It would be great to live in a world where we don't need to gruelingly build cor
 
 - <a id="bender2021parrots">Emily Bender, Timnit Gebru, Angelina McMillan-Major and Margaret Mitchell</a>. “On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜.” Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (2021): n. pag.
 - <a id="cabasag2019hatespeech">Neil Vicente P. Cabasag, Vicente Raphael C. Chan, Sean Christian Y. Lim, Mark Edward M. Gonzales, and Charibeth K. Cheng.</a> 2019. Hate Speech in Philippine Election-Related Tweets: Automatic Detection and Classification Using Natural Language Processing. *Philippine Computing Journal Dedicated Issue on Natural Language Processing*, pages 1–14.
-- <a id="livelo2018dengue">Evan Dennison S. Livelo and Charibeth Ko Cheng.</a> 2018. Intelligent Dengue Infoveillance Using Gated Recurrent Neural Learning and Cross-Label Fre- quencies. *2018 IEEE International Conference on Agents (ICA)*, pages 2–7.
+- <a id="livelo2018dengue">Evan Dennison S. Livelo and Charibeth Ko Cheng.</a> 2018. Intelligent Dengue Infoveillance Using Gated Recurrent Neural Learning and Cross-Label Frequencies. *2018 IEEE International Conference on Agents (ICA)*, pages 2–7.
 - <a id="cruz2021tlunified">Jan Christian Blaise Cruz and Charibeth Ko Cheng.</a> 2021. Improving Large-scale Language Models and Resources for Filipino. In *International Conference on Language Resources and Evaluation*
 - <a id="conneau2019xlmr">Alexis Conneau, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume Wenzek, Francisco Guzmán, Edouard Grave, Myle Ott, Luke Zettlemoyer, and Veselin Stoyanov.</a> 2019. Unsupervised Cross-lingual Representation Learning at Scale. In *Annual Meeting of the Association for Computational Linguistics*.
 - <a id="devlin2019bert">Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.</a> 2019. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv, abs/1810.04805
 - <a id="wang2022WhatLM">Thomas Wang, Adam Roberts, Daniel Hesslow, Teven Le Scao, Hyung Won Chung, Iz Beltagy, Julien Lauanay, and Colin Raffel.</a> 2022. What Language Model Architecture and Pretraining Objective Work Best for Zero-Shot Generalization? *Proceedings of the 39th International Conference on Machine Learning*.
+- <a id="lin2022xglm">Xi Victoria Lin, , Todor Mihaylov, Mikel Artetxe, Tianlu Wang, Shuohui Chen, Daniel Simig, Myle Ott, Naman Goyal, Shruti Bhosale, Jingfei Du, Ramakanth Pasunuru, Sam Shleifer, Punit Singh Koura, Vishrav Chaudhary, Brian O'Horo, Jeff Wang, Luke Zettlemoyer, Zornitsa Kozareva, Mona T. Diab, Ves Stoyanov and Xian Li.</a> 2022. Few-shot Learning with Multilingual Generative Language Models. *Conference on Empirical Methods in Natural Language Processing.*
+- <a id="scao2022bloom">Teven Le Scao, Angela Fan, Thomas Wolf and others</a> 2022. BLOOM: A 176B-Parameter Open-Access Multilingual Language Model. *ArXiV:abs/2211.05100*.
