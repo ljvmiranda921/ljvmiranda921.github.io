@@ -109,19 +109,25 @@ The grey bars represent our large language models while the red bars represent t
 It is apparent that our **supervised approach outperformed zero-shot prompting** in our datasets.
 These results are consistent with the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM)), 
 where they showed that although decoder-only models trained on an autoregressive objective exhibited the strongest zero-shot generalization, they're still outperformed by models trained via masked language modeling followed by multitask finetuning.
-Let me expound these results in the following sections.
+Let me explain a bit further:
 
-### Generation != understanding
-
-I argue that one common misconception with LLMs is that we equate the generation of coherent texts to language understanding.
+* <b style="font-variant:small-caps;">Conceptual gap: </b>**text generation != text understanding**. I argue that one common misconception with LLMs is that we equate the generation of coherent texts to language understanding.
 Just because an LLM can "speak" [*co&ntilde;o*](https://en.wiktionary.org/wiki/konyo#Tagalog) or [*jejemon*](https://en.wikipedia.org/wiki/Jejemon) doesn't mean it understands linguistic grammar.
 LLMs are, after all, stochastic parrots ([Bender et al., 2021](#bender2021parrots)).
-They might be performant in leaderboards, but they can bring unnoticeable harm when used liberally.
+They might be performant in leaderboards, but they can bring unnoticeable harm when used liberally. 
+In addition, our decoder-only LLMs may not be suited to our structured prediction benchmarks.
 
-There are also differences from an architecture standpoint.
-The transformer architectures that we consider today as LLMs (GPT, Cohere, Dolly, etc.) are decoder-only models.
-They were trained using a next sentence prediction objective that asks the model to predict the next token given a certain context window.
-On the other hand, models like BERT that dominated structured prediction benchmarks are encoder-only models...
+    As an aside, this may also be a call for building NLU-benchmarks for low-resource corpora. 
+    If you're working on something related, I'm interested to help so feel free to reach out!
+
+- <b style="font-variant:small-caps;">Data gap: </b>**Tagalog is still underrepresented in most LLM training corpora**. Training an LLM requires a large *data mixture*. 
+Some datasets in this mixture may include CommonCrawl, The Pile, C4, and Wikipedia among others. Unfortunately, Tagalog is severely underrepresented in these datasets, even in multilingual LMs. For example, 
+
+
+<!--
+Given these constraints, I think the best way to use LLMs in the context of low-resource languages like Tagalog is to maximize information per query (IPQ).
+-->
+
 
 <!--
 right tool for the job
@@ -129,14 +135,14 @@ right tool for the job
 
 
 
-### Tagalog is still underrepresented in the training corpora
+<!-- ### Tagalog is still underrepresented in the training corpora
 
 - multilingual c4: https://www.semanticscholar.org/reader/74276a37bfa50f90dfae37f767b2b67784bd402a
 - commoncrawl stats: https://commoncrawl.github.io/cc-crawl-statistics/plots/languages
 - the Pile for stableLM: https://arxiv.org/pdf/2101.00027.pdf (seems all english, it's actually 97.4% SIR)
 - https://arxiv.org/pdf/2303.18223.pdf go to chapter 3.2 (BookCorpus, CommonCrawl)
 
-### Zero-shot economics don't scale
+### Zero-shot economics don't scale -->
 
 ## Final thoughts
 
