@@ -46,7 +46,7 @@ I highly recommend trying spacy-llm if you're building production-grade LLM pipe
 You can find and reproduce my work on Github! 
 *(Full disclosure: I used to contribute to earlier versions of spacy-llm as part of my work at Explosion)*
 
-## Preliminary: where are my prompts?
+## Methodology: what are my prompts?
 
 The [spacy-llm](https://github.com/explosion/spacy-llm) library provides a set of built-in prompt templates for zero- and few-shot prompting.
 These prompts are categorized and versioned per task.
@@ -63,10 +63,37 @@ label_definitions = {"PER": "PERSON", "ORG": "ORGANIZATION", "LOC": "LOCATION OR
 Here, `spacy.NER.v2` points to a [`task`](https://spacy.io/api/large-language-models#tasks) with its own prompt.
 From there, you can check [the documentation](https://spacy.io/api/large-language-models#ner-v2) and cross-reference the template (tip: check the `template` argument in the docs).
 For NER, we have [this Jinja2 file](https://github.com/explosion/spacy-llm/blob/main/spacy_llm/tasks/templates/ner.v2.jinja). 
-At runtime, `spacy-llm` maps our config to the Jinja2 template, thereby producing the final prompt sent to the LLM.
+At runtime, `spacy-llm` renders our config to the Jinja2 template, thereby producing the final prompt sent to the LLM:
+
+```
+You are an expert Named Entity Recognition (NER) system.  Your task is to accept
+Text as input and extract named entities for the set of predefined entity
+labels.  From the Text input provided, extract named entities for each label in
+the following format:
+
+PER: <comma delimited list of strings>
+ORG: <comma delimited list of strings>
+LOC: <comma delimited list of strings>
+
+Below are definitions of each label to help aid you in what kinds of named
+entities to extract for each label.  Assume these definitions are written by an
+expert and follow them closely.
+
+PER: PERSON
+ORG: ORGANIZATION
+LOC: LOCATION OR GEOPOLITICAL ENTITY
+
+Text:
+'''
+Pumunta si Juan sa Japan.
+'''
+```
+
+I won't be pasting the prompts for binary and multilabel text categorization here to save space.
+Again, the best way to view them is to check my [configuration files]() and cross-reference them with the [prompt templates in the spacy-llm repository]().
 
 Some `spacy-llm` tasks provide additional arguments such as `label_definitions` to explicitly describe a label to an LLM, and `examples` for few-shot prompting.
-The library covers most of the core NLP tasks such as NER, text categorization, and lemmatization and seems to be adding more in the NLU space (e.g., summarization).
+The library covers most of the core NLP tasks such as NER, text categorization, and lemmatization and seems to be adding more in the natural language understanding (NLU) space (e.g., summarization).
 
 ## Benchmarking results
 
