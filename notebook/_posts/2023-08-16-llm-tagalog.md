@@ -21,13 +21,13 @@ excerpt: |
 <span class="firstcharacter">A</span> few weeks ago, I saw an [interesting blog post](https://stories.thinkingmachin.es/llm-customer-sentiment-analysis/) from Thinking Machines where they ran Filipino tweets on GPT-4 for a sentiment analysis task.
 Their prompt was simple. They asked: *"what is the sentiment of this tweet?"*
 They obtained a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.
-This inspired me to see the full picture of LLM performance on Tagalog, hence these experiments.
+This inspired me to test LLM performance on other Tagalog NLP tasks, hence these experiments.
 
 In this blog post, I will test how these large language models (LLMs) fare against standard finetuning techniques in Tagalog.
 I will be benchmarking them to the named entity recognition (NER) and text categorization datasets from the [calamanCy project](/projects/2023/08/01/calamancy/). 
 
-As a refresher, the table below shows the datasets. Notice that I didn't include the Universal Dependencies (UD) treebanks.
-The main reason is that querying from third-party APIs is getting too costly so I have to compromise on the scope:
+As a refresher, you can check the table below for the datasets I'm using. 
+I didn't include the Universal Dependencies (UD) treebanks this time because querying third-party APIs is getting too costly.
 
 | Dataset                                                     | Task / Labels                                                           | Description                                                                                                                       |
 |-------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
@@ -37,20 +37,20 @@ The main reason is that querying from third-party APIs is getting too costly so 
 
 I wrote a zero-shot prompt and ran it on the test set.
 Zero-shot prompting only requires a task description for inference. 
-Few-shot prompting is out of scope for this blog post&mdash;it's too laborious to engineer prompts and it might be difficult to do a comparison.
+In addition, few-shot prompting is out of scope for this blog post&mdash;it's too laborious to engineer prompts and it might be difficult to compare them properly.
 I'll also run the experiments for three trials and report the mean and standard deviation to account for variance. 
 The prompt text will still be in English in order to be consistent with the Thinking Machines blog post.
 
 Finally, I am using [**spacy-llm**](https://github.com/explosion/spacy-llm) throughout the experiments. 
 I highly recommend trying spacy-llm if you're building production-grade LLM pipelines.
-You can find and reproduce my work on Github! 
+You can find and reproduce my work on [Github](https://github.com/ljvmiranda921/scratch/tree/master/2023-07-25-llm-tl)! 
 *(Full disclosure: I used to contribute to earlier versions of spacy-llm as part of my work at Explosion)*
 
 ## Methodology: what are my prompts?
 
 The [spacy-llm](https://github.com/explosion/spacy-llm) library provides a set of built-in prompt templates for zero- and few-shot prompting.
 These prompts are categorized and versioned per task.
-You can view them by checking the configuration file [in the Github repo]() and looking at the `components.llm.task` section.
+You can view them by checking the configuration file [in the Github repo](https://github.com/ljvmiranda921/scratch/tree/master/2023-07-25-llm-tl) and looking at the `components.llm.task` section.
 For example, in NER, we have something like this:
 
 ```ini
@@ -90,7 +90,7 @@ Pumunta si Juan sa Japan.
 ```
 
 I won't be pasting the prompts for binary and multilabel text categorization here to save space.
-Again, the best way to view them is to check my [configuration files]() and cross-reference them with the [prompt templates in the spacy-llm repository]().
+Again, the best way to view them is to check my [configuration files](https://github.com/ljvmiranda921/scratch/tree/master/2023-07-25-llm-tl/configs) and cross-reference them with the [prompt templates in the spacy-llm repository](https://github.com/explosion/spacy-llm/tree/main/spacy_llm/tasks/templates).
 
 Lastly, some `spacy-llm` tasks provide additional arguments such as `label_definitions` to explicitly describe a label to an LLM, and `examples` for few-shot prompting.
 The library covers most of the core NLP tasks such as NER, text categorization, and lemmatization and seems to be adding more in the natural language understanding (NLU) space (e.g., summarization).
