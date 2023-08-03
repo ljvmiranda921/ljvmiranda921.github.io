@@ -159,7 +159,7 @@ For example, the [Pile](https://pile.eleuther.ai/) dataset is English-only while
     There's still a long way to go.
     Currently, there are efforts such as [Cohere's Aya project](https://txt.cohere.com/aya-multilingual/) that aims to close that multilingual gap.
     
-
+### Thoughts on how we should use LLMs
 
 Given these gaps, I think that the best way to use LLMs in the context of low-resource languages is to **maximize information-per-query (IPQ).**
 *Yes, I made that one up.*
@@ -179,7 +179,7 @@ For a more thoughtful reading, I highly recommend [Eugene Yan's blog post](https
 Notice that most of these patterns aim to maximize IPQ.
 I also recommend [Vicki Boykis's reflection](https://vickiboykis.com/2023/02/26/what-should-you-use-chatgpt-for/) as it echoes what I feel towards ChatGPT in this age of AI hype.
 
-## Final thoughts
+## Final thoughts: we're not there yet
 
 I hope that this blog post is a more sober view of LLM capabilities for low-resource languages.
 It would be great to live in a world where we don't need to gruelingly build corpora, but I don't think we're there yet.
