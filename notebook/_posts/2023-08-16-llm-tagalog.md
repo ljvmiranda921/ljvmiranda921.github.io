@@ -92,8 +92,8 @@ Pumunta si Juan sa Japan.
 I won't be pasting the prompts for binary and multilabel text categorization here to save space.
 Again, the best way to view them is to check my [configuration files](https://github.com/ljvmiranda921/scratch/tree/master/2023-07-25-llm-tl/configs) and cross-reference them with the [prompt templates in the spacy-llm repository](https://github.com/explosion/spacy-llm/tree/main/spacy_llm/tasks/templates).
 
-Lastly, some `spacy-llm` tasks provide additional arguments such as `label_definitions` to explicitly describe a label to an LLM, and `examples` for few-shot prompting.
-The library covers most of the core NLP tasks such as NER, text categorization, and lemmatization and seems to be adding more in the natural language understanding (NLU) space (e.g., summarization).
+Lastly, some `spacy-llm` tasks provide additional arguments such as `label_definitions` for explicitly describing a label to an LLM, and `examples` for incorporating exemplars in few-shot prompting.
+The library covers most of the core NLP tasks (NER, text categorization, and lemmatization) and seems to be adding more in the natural language understanding (NLU) space (e.g., summarization).
 
 ## Results: LLMs vs good old-fashioned supervised learning
 
@@ -136,7 +136,7 @@ The grey bars represent our large language models while the red bars represent t
 It is apparent that our **supervised approach outperformed zero-shot prompting** in our datasets.
 These results are consistent with the findings of the BigScience group ([Wang et al., 2022](#wang2022WhatLM)), 
 where they showed that although decoder-only models trained on an autoregressive objective exhibited the strongest zero-shot generalization, they're still outperformed by models trained via masked language modeling followed by multitask finetuning.
-I argue that LLMs underperform because of two major gaps:
+I think there are two major reasons why LLMs underperform on Tagalog:
 
 
 * <b style="font-variant:small-caps;">Conceptual gap: </b>**text generation != text understanding**. I argue that one common misconception with LLMs is that we equate the generation of coherent texts to language understanding.
@@ -150,37 +150,34 @@ In addition, our decoder-only LLMs may not be suited to our structured predictio
 
 - <b style="font-variant:small-caps;">Data gap: </b>**Tagalog is still underrepresented in most LLM training corpora**. 
     Training an LLM requires a large *data mixture*. 
-Datasets in this mixture may include [CommonCrawl](https://commoncrawl.org/), [The Pile](https://pile.eleuther.ai/), [C4](https://github.com/google-research/text-to-text-transfer-transformer#c4), and Wikipedia among many others. 
+Datasets in this mixture usually include [CommonCrawl](https://commoncrawl.org/), [The Pile](https://pile.eleuther.ai/), [C4](https://github.com/google-research/text-to-text-transfer-transformer#c4), and Wikipedia among many others. 
 Most of these datasets are heavily Anglocentric.
-For example, the [Pile](https://pile.eleuther.ai/) dataset is English-only while CommonCrawl is dominated by western languages (Tagalog is at a mere $$0.0073\%$$).
+For example, the [Pile](https://pile.eleuther.ai/) dataset is English-only while CommonCrawl is dominated by Western languages (Tagalog is at a mere $$0.0073\%$$).
 
     Unfortunately, Tagalog is underrepresented even in multilingual LMs. 
-    For example, the XGLM language model ([Lin et al., 2022](#lin2022xglm)) was only trained on 2.3k tokens of Tagalog data whereas the <span style="font-variant:small-caps;">Bloom</span> language model ([Scao et al., 2022](#scao2022bloom)) doesn't contain any Tagalog text at all. There's still a long way to go.
+    For example, the XGLM language model ([Lin et al., 2022](#lin2022xglm)) was only trained on 2.3k tokens of Tagalog data whereas the <span style="font-variant:small-caps;">Bloom</span> language model ([Scao et al., 2022](#scao2022bloom)) doesn't contain any Tagalog text at all. 
+    There's still a long way to go.
+    Currently, there are efforts such as [Cohere's Aya project](https://txt.cohere.com/aya-multilingual/) that aims to close that multilingual gap.
+    
 
 
-Given these gaps, I posit that the best way to use LLMs in the context of low-resource languages like Tagalog is to **maximize information-per-query (IPQ).**
-Yes, that's a made-up term, so let me explain.
+Given these gaps, I think that the best way to use LLMs in the context of low-resource languages is to **maximize information-per-query (IPQ).**
+*Yes, I made that one up.*
+The idea is to extract higher quality information for every query from an LLM.
+Here, I define **quality as reusability**, i.e.,  something that can still be refined further for other downstream tasks.
+I'd even argue that NLU-based outputs such as summarization, common-sense reasoning, and question-answering have inherently high information bandwidth (and hence high IPQ) because it taps to the LLM's interconnections from its very large training corpora.
 
+For example, using raw LLM outputs as the final predictions for a structured prediction task (NER, text categorization, sentiment analysis) has low IPQ.
+This is because we already exhausted the lifetime of our query by serving it directly in our system.
+Asking an LLM to tag a text as hatespeech or not may not be the most efficient use of its capabilities.
 
-<!--
-Given these constraints, I think the best way to use LLMs in the context of low-resource languages like Tagalog is to maximize information per query (IPQ).
--->
+We can increase IPQ by [using these predictions to assist data annotation](/notebook/2023/03/24/llm-annotation/), thereby producing a supervised model with a more deterministic performance.
+Other ways to maximize IPQ is to prompt an LLM in a chain-of-thought style to elicit "reasoning" ([Wei et al., 2022](#wei2022cot)) or building a knowledge graph from its "internal" model ([Cohen et al., 2023](#cohen2023kb))&mdash;anything that utilizes an LLM into its fullest potential in a single query.
 
-
-<!--
-right tool for the job
--->
-
-
-
-<!-- ### Tagalog is still underrepresented in the training corpora
-
-- multilingual c4: https://www.semanticscholar.org/reader/74276a37bfa50f90dfae37f767b2b67784bd402a
-- commoncrawl stats: https://commoncrawl.github.io/cc-crawl-statistics/plots/languages
-- the Pile for stableLM: https://arxiv.org/pdf/2101.00027.pdf (seems all english, it's actually 97.4% SIR)
-- https://arxiv.org/pdf/2303.18223.pdf go to chapter 3.2 (BookCorpus, CommonCrawl)
-
-### Zero-shot economics don't scale -->
+I admit that this made-up measure is rough at best. 
+For a more thoughtful reading, I highly recommend [Eugene Yan's blog post](https://eugeneyan.com/writing/llm-patterns/) on LLM patterns. 
+Notice that most of these patterns aim to maximize IPQ.
+I also recommend [Vicki Boykis's reflection](https://vickiboykis.com/2023/02/26/what-should-you-use-chatgpt-for/) as it echoes what I feel towards ChatGPT in this age of AI hype.
 
 ## Final thoughts
 
@@ -201,3 +198,5 @@ It would be great to live in a world where we don't need to gruelingly build cor
 - <a id="wang2022WhatLM">Thomas Wang, Adam Roberts, Daniel Hesslow, Teven Le Scao, Hyung Won Chung, Iz Beltagy, Julien Lauanay, and Colin Raffel.</a> 2022. What Language Model Architecture and Pretraining Objective Work Best for Zero-Shot Generalization? *Proceedings of the 39th International Conference on Machine Learning*.
 - <a id="lin2022xglm">Xi Victoria Lin, , Todor Mihaylov, Mikel Artetxe, Tianlu Wang, Shuohui Chen, Daniel Simig, Myle Ott, Naman Goyal, Shruti Bhosale, Jingfei Du, Ramakanth Pasunuru, Sam Shleifer, Punit Singh Koura, Vishrav Chaudhary, Brian O'Horo, Jeff Wang, Luke Zettlemoyer, Zornitsa Kozareva, Mona T. Diab, Ves Stoyanov and Xian Li.</a> 2022. Few-shot Learning with Multilingual Generative Language Models. *Conference on Empirical Methods in Natural Language Processing.*
 - <a id="scao2022bloom">Teven Le Scao, Angela Fan, Thomas Wolf and others</a> 2022. BLOOM: A 176B-Parameter Open-Access Multilingual Language Model. *ArXiV:abs/2211.05100*.
+- <a id="wei2022cot">Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed Huai-hsin Chi, F. Xia, Quoc Le and Denny Zhou.</a> “Chain of Thought Prompting Elicits Reasoning in Large Language Models.” ArXiv abs/2201.11903 (2022): n. pag.
+- <a id="cohen2023kb">Roi Cohen, Mor Geva, Jonathan Berant and Amir Globerson.</a> “Crawling The Internal Knowledge-Base of Language Models.” *Findings of the ACL* (2023).
