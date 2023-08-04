@@ -8,6 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
+header-img: /assets/png/calamancy-llm/header.png
 description: |
     Large language models showed promise on structured prediction tasks like named entity recognition and text categorization.
     But how well do they perform when presented with Tagalog text?
