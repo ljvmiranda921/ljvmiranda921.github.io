@@ -183,9 +183,11 @@ I also recommend [Vicki Boykis's reflection](https://vickiboykis.com/2023/02/26/
 
 I hope that this blog post is a more sober view of LLM capabilities for low-resource languages.
 It would be great to live in a world where we don't need to gruelingly build corpora, but I don't think we're there yet.
+I still believe that LLMs have a use for structured prediction tasks, mainly, as annotators to build training corpora for supervised models.
 
-<!-- I'd love to stop building corpora, but I don't think we're there yet -->
-
+Personally, I'm interested in building parallel corpora for low-resource languages so that we have a comprehensive view of an LLM's multilingual performance.
+I'm also curious about various ways we can maximize the information obtained from LLMs and using the *secondary information* for other downstream tasks.
+Finally, there might also be a good argument for building an LLM geared towards long-tail languages, I do think that it is a worthwile endeavour.
 
 ## References
 
