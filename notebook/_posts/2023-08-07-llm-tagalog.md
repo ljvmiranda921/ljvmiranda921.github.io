@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Do large language models work on Tagalog?"
-date: 2023-08-16
+date: 2023-08-07
 category: notebook
 comments: true
 author: "LJ MIRANDA"
