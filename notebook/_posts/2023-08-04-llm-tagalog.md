@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Do large language models work on Tagalog?"
-date: 2023-08-07
+date: 2023-08-04
 category: notebook
 comments: true
 author: "LJ MIRANDA"
@@ -183,12 +183,12 @@ I also recommend [Vicki Boykis's reflection](https://vickiboykis.com/2023/02/26/
 ## Final thoughts: we're not there yet
 
 I hope that this blog post is a more sober view of LLM capabilities for low-resource languages.
-It would be great to live in a world where we don't need to gruelingly build corpora, but I don't think we're there yet.
-I still believe that LLMs have a use for structured prediction tasks, mainly, as annotators to build training corpora for supervised models.
+It would be great to live in a world where we don't need to build corpora, but I don't think we're there yet.
+I still believe that LLMs have a use for structured prediction tasks, such as in annotation or as a silver-standard knowledge-base.
 
-Personally, I'm interested in building parallel corpora for low-resource languages so that we have a comprehensive view of an LLM's multilingual performance.
-I'm also curious about various ways we can maximize the information obtained from LLMs and using the *secondary information* for other downstream tasks.
-Finally, there might also be a good argument for building an LLM geared towards long-tail languages, I do think that it is a worthwile endeavour.
+Personally, I'm interested in building parallel corpora so that we can have a comprehensive view of an LLM's multilingual performance.
+I'm also curious about various ways we can maximize the information obtained from LLMs and using that for downstream tasks.
+Finally, there might also be a good argument for building an LLM geared towards low-resource languages, I do think that it is a worthwile endeavour.
 
 ## References
 
