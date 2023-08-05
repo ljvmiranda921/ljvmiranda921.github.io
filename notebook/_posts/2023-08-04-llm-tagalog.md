@@ -24,10 +24,10 @@ Their prompt was simple. They asked: *"what is the sentiment of this tweet?"*
 They obtained a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.
 This inspired me to test LLM performance on other Tagalog NLP tasks, hence these experiments.
 
-In this blog post, I will test how these large language models (LLMs) fare against standard finetuning techniques in Tagalog.
-I will be benchmarking them to the named entity recognition (NER) and text categorization datasets from the [calamanCy project](/projects/2023/08/01/calamancy/). 
+In this blog post, I will test how these large language models (LLMs) fare compared to standard finetuning techniques in Tagalog.
+I will be benchmarking them on the named entity recognition (NER) and text categorization datasets from the [calamanCy project](/projects/2023/08/01/calamancy/). 
 
-As a refresher, you can check the table below for the datasets I'm using. 
+As a refresher, you can check the datasets I'm using in the table below. 
 I didn't include the Universal Dependencies (UD) treebanks this time because querying third-party APIs is getting too costly.
 
 | Dataset                                                     | Task / Labels                                                           | Description                                                                                                                       |
@@ -40,7 +40,7 @@ I wrote a zero-shot prompt and ran it on the test set.
 Zero-shot prompting only requires a task description for inference. 
 In addition, few-shot prompting is out of scope for this blog post&mdash;it's too laborious to engineer prompts and it might be difficult to compare them properly.
 I'll also run the experiments for three trials and report the mean and standard deviation to account for variance. 
-The prompt text will still be in English in order to be consistent with the Thinking Machines blog post.
+The prompt text will still be in English so as to be consistent with the Thinking Machines blog post.
 
 Finally, I am using [**spacy-llm**](https://github.com/explosion/spacy-llm) throughout the experiments. 
 I highly recommend trying spacy-llm if you're building production-grade LLM pipelines.
@@ -67,18 +67,18 @@ For NER, we have [this Jinja2 file](https://github.com/explosion/spacy-llm/blob/
 At runtime, `spacy-llm` renders our config to the Jinja2 template, thereby producing the final prompt sent to the LLM:
 
 ```
-You are an expert Named Entity Recognition (NER) system.  Your task is to accept
-Text as input and extract named entities for the set of predefined entity
-labels.  From the Text input provided, extract named entities for each label in
-the following format:
+You are an expert Named Entity Recognition (NER) system. Your task is 
+to accept Text as input and extract named entities for the set of 
+predefined entity labels. From the Text input provided, extract named 
+entities for each label in the following format:
 
 PER: <comma delimited list of strings>
 ORG: <comma delimited list of strings>
 LOC: <comma delimited list of strings>
 
-Below are definitions of each label to help aid you in what kinds of named
-entities to extract for each label.  Assume these definitions are written by an
-expert and follow them closely.
+Below are definitions of each label to help aid you in what kinds of 
+named entities to extract for each label.  Assume these definitions are 
+written by an expert and follow them closely.
 
 PER: PERSON
 ORG: ORGANIZATION
@@ -182,7 +182,7 @@ I also recommend [Vicki Boykis's reflection](https://vickiboykis.com/2023/02/26/
 
 ## Final thoughts: we're not there yet
 
-I hope that this blog post is a more sober view of LLM capabilities for low-resource languages.
+I hope that this blog post is a more sober view of LLM capabilities for Tagalog.
 It would be great to live in a world where we don't need to build corpora, but I don't think we're there yet.
 I still believe that LLMs have a use for structured prediction tasks, such as in annotation or as a silver-standard knowledge-base.
 
