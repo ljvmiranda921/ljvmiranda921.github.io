@@ -158,7 +158,7 @@ For example, the [Pile](https://pile.eleuther.ai/) dataset is English-only while
     Unfortunately, Tagalog is underrepresented even in multilingual LMs. 
     For example, the XGLM language model ([Lin et al., 2022](#lin2022xglm)) was only trained on 2.3k tokens of Tagalog data whereas the <span style="font-variant:small-caps;">Bloom</span> language model ([Scao et al., 2022](#scao2022bloom)) doesn't contain any Tagalog text at all. 
     There's still a long way to go.
-    Currently, there are efforts such as [Cohere's Aya project](https://txt.cohere.com/aya-multilingual/) that aims to close that multilingual gap.
+    Currently, there are efforts such as [Cohere's Aya project](https://txt.cohere.com/aya-multilingual/) that aim to close that multilingual gap.
     
 ### Thoughts on how we should use LLMs
 
