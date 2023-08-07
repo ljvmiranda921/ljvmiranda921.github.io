@@ -289,9 +289,6 @@ something to nourish your soul. With that said:
 > "Take two then till the third:" choose an option that satisfies two, then
 > cultivate the missing third
 
-![](/assets/png/flourishing/take_two.png){:width="480px"}  
-{: style="text-align: center;"}
-
 Hobbies are definitely a perfect example of this. Most jobs give you the
 opportunity to *build* and *earn*, but not much room to *play*. You can't
 really just introduce any other tech, or any other framework in your next
