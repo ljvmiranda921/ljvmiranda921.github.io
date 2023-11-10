@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "\"Are you sure?\" Asking LLMs follow-up questions"
+title: "'Are you sure?' Asking LLMs follow-up questions"
 date: 2023-12-29
 category: notebook
 comments: true
