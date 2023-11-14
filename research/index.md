@@ -16,8 +16,8 @@ Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
 profiles for more info.
 
-- [calamanCy: a Tagalog Natural Language Processing Toolkit]() <br> Lester James V. Miranda, *Proceedings of the EMNLP 2023 Workshop on NLP Open Source Software (NLP-OSS)*. December 2023. *To appear.*
-- [Developing a Named Entity Recognition Dataset for Tagalog]() <br> Lester James V. Miranda, *Proceedings of the IJCNLP-AACL 2023 Workshop on Southeast Asian Language Processing (SEALP)*. November 2023. *To appear.* [[Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)]
+- [calamanCy: a Tagalog Natural Language Processing Toolkit](https://arxiv.org/abs/2311.07171) <br> Lester James V. Miranda, *Proceedings of the EMNLP 2023 Workshop on NLP Open Source Software (NLP-OSS)*. December 2023. *To appear.*
+- [Developing a Named Entity Recognition Dataset for Tagalog](https://arxiv.org/abs/2311.07161) <br> Lester James V. Miranda, *Proceedings of the IJCNLP-AACL 2023 Workshop on Southeast Asian Language Processing (SEALP)*. November 2023. *To appear.* [[Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)]
 - [Multi hash embeddings in spaCy](https://arxiv.org/abs/2212.09255) <br> Lester James V. Miranda\*, &Aacute;kos K&aacute;d&aacute;r\*, Adriane Boyd, Sofie Van Landeghem, Anders S&oslash;gaard, and Matthew Honnibal, "Multi hash embeddings in spaCy", *arXiv:2212.09255 [cs.CL]*. November 2022. *(&lowast;: co-author)*
 
 <!--
