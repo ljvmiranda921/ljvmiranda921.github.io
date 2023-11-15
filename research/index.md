@@ -16,14 +16,14 @@ Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
 profiles for more info.
 
-- [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://www.universalner.org/assets/Universal_NER.pdf) <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <u>LJ Miranda</u>, Barabara Plank, Yuval Pinter. *arXiv:2212.09255 [cs.CL]*. November 2023.
-<br> [[Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GQ8HDL)] [[Website](https://www.universalner.org/)]
-
 - [calamanCy: a Tagalog Natural Language Processing Toolkit](https://arxiv.org/abs/2311.07171) <br> <u>Lester James V. Miranda</u>, *Proceedings of the EMNLP 2023 Workshop on NLP Open Source Software (NLP-OSS)*. December 2023. *To appear.*
 <br> [[Code](https://github.com/ljvmiranda921/calamanCy)]
 
 - [Developing a Named Entity Recognition Dataset for Tagalog](https://arxiv.org/abs/2311.07161) <br> <u>Lester James V. Miranda</u>, *Proceedings of the IJCNLP-AACL 2023 Workshop on Southeast Asian Language Processing (SEALP)*. November 2023. *To appear.* 
 <br> [[Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)] [[Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner)] [[Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark)]
+
+- [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://www.universalner.org/assets/Universal_NER.pdf) <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <u>LJ Miranda</u>, Barabara Plank, Yuval Pinter. *arXiv:2212.09255 [cs.CL]*. November 2023.
+<br> [[Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GQ8HDL)] [[Website](https://www.universalner.org/)]
 
 - [Multi hash embeddings in spaCy](https://arxiv.org/abs/2212.09255) <br> <u>Lester James V. Miranda</u>\*, &Aacute;kos K&aacute;d&aacute;r\*, Adriane Boyd, Sofie Van Landeghem, Anders S&oslash;gaard, and Matthew Honnibal, "Multi hash embeddings in spaCy", *arXiv:2212.09255 [cs.CL]*. November 2022. *(&lowast;: equal contributions)*
 <br> [[Code](https://github.com/explosion/projects/tree/v3/benchmarks/ner_embeddings)]
