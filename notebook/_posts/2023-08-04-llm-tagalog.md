@@ -188,7 +188,7 @@ I still believe that LLMs have a use for structured prediction tasks, such as in
 
 Personally, I'm interested in building parallel corpora so that we can have a comprehensive view of an LLM's multilingual performance.
 I'm also curious about various ways we can maximize the information obtained from LLMs and using that for downstream tasks.
-Finally, there might also be a good argument for building an LLM geared towards low-resource languages, I do think that it is a worthwile endeavour.
+Finally, there might also be a good argument for building an LLM geared towards low-resource languages, I do think that it is a worthwhile endeavour.
 
 ## References
 
