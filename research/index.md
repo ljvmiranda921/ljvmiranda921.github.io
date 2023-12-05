@@ -16,10 +16,10 @@ Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
 profiles for more info.
 
-- [calamanCy: a Tagalog Natural Language Processing Toolkit](https://arxiv.org/abs/2311.07171) <br> <u>Lester James V. Miranda</u>, *Proceedings of the EMNLP 2023 Workshop on NLP Open Source Software (NLP-OSS)*. ACL. Singapore. December 2023. *To appear.*
+- [calamanCy: a Tagalog Natural Language Processing Toolkit](https://aclanthology.org/2023.nlposs-1.1/) <br> <u>Lester James V. Miranda</u>, *Proceedings of the EMNLP 2023 Workshop on NLP Open Source Software (NLP-OSS)*. EMNLP. Singapore, Singapore. December 2023. 
 <br> [[Code](https://github.com/ljvmiranda921/calamanCy)] [[Poster](/assets/png/calamancy/poster.png)] [[Video](https://youtu.be/2fbzs1KbFTQ?si=_vKEY11Z1Jzuaxeu)]
 
-- [Developing a Named Entity Recognition Dataset for Tagalog](https://arxiv.org/abs/2311.07161) <br> <u>Lester James V. Miranda</u>, *Proceedings of the IJCNLP-AACL 2023 Workshop on Southeast Asian Language Processing (SEALP)*. ACL. Bali, Indonesia. November 2023. *To appear.* 
+- [Developing a Named Entity Recognition Dataset for Tagalog](https://arxiv.org/abs/2311.07161) <br> <u>Lester James V. Miranda</u>, *Proceedings of the IJCNLP-AACL 2023 Workshop on Southeast Asian Language Processing (SEALP)*. ACL. Bali, Indonesia. November 2023.
 <br> [[Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark)] [[Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner)] [[Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)] 
 
 - [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://www.universalner.org/assets/Universal_NER.pdf) <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <u>LJ Miranda</u>, Barabara Plank, Yuval Pinter. *Preprint*. November 2023.
