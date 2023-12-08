@@ -19,6 +19,8 @@ excerpt: |
     Access the corpus at https://huggingface.co/datasets/ljvmiranda921/tlunified-ner
 ---
 
+> Parts of this work were published in the paper, ["Developing a Named Entity Recognition Dataset for Tagalog"](https://arxiv.org/abs/2311.07161), at IJCNLP-AACL's Southeast Asian Language Processing Workshop. Feel free to cite that paper in your own work.
+
 <span class="firstcharacter">F</span>irst off, I'm happy to see such warm reception to my [first blog post](/notebook/2023/02/04/tagalog-pipeline/). Thank you!
 There are a few more experiments that I wanted to do for the sake of completeness and rigor. 
 I hope to release the alpha version of [calamanCy](https://github.com/ljvmiranda921/calamanCy) in August, 
