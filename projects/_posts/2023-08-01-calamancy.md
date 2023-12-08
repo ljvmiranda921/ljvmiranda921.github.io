@@ -22,6 +22,8 @@ excerpt: |
 <img src="https://raw.githubusercontent.com/ljvmiranda921/calamanCy/master/logo.png" width="120" height="120" align="right" />
 
 
+> Update (2023-12-06): This work was published in the EMNLP NLP-OSS workshop! Check out ["calamanCy: A Tagalog Natural Language Processing Toolkit"](https://aclanthology.org/2023.nlposs-1.1/)! 
+
 <span class="firstcharacter">I</span> am excited to introduce [**calamanCy**](https://github.com/ljvmiranda921/calamanCy), an open-source toolkit for constructing natural language processing (NLP) pipelines for Tagalog.
 It is built on top of [spaCy](https://spacy.io) to ensure easy experimentation and integration with other frameworks.
 It provides general-purpose multitask models with out-of-the-box support for dependency parsing, part-of-speech (POS) tagging, and named entity recognition (NER).
