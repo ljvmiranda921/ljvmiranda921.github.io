@@ -25,6 +25,10 @@ excerpt: |
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
 
+
+> Update (2023-12-06): I am happy to announce that two papers came out from this project: ["Developing a Named Entity Recognition Dataset for Tagalog"](https://arxiv.org/abs/2311.07161) and ["calamanCy: A Tagalog Natural Language Processing Toolkit"](https://aclanthology.org/2023.nlposs-1.1/). 
+
+
 <span class="firstcharacter">T</span>agalog is my native language. It's spoken
 by 76 million Filipinos and has been the country's official language since the
 30s.  It's a **text-rich** language, but unfortunately, a
