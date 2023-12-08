@@ -19,6 +19,8 @@ excerpt: |
     In this blog post, I'll share some of my preliminary benchmarking results.
 ---
 
+> Parts of this work were published in the paper, ["Developing a Named Entity Recognition Dataset for Tagalog"](https://arxiv.org/abs/2311.07161), at IJCNLP-AACL's Southeast Asian Language Processing Workshop. Feel free to cite that paper in your own work.
+
 <span class="firstcharacter">A</span> few weeks ago, I saw an [interesting blog post](https://stories.thinkingmachin.es/llm-customer-sentiment-analysis/) from Thinking Machines where they ran Filipino tweets on GPT-4 for a sentiment analysis task.
 Their prompt was simple. They asked: *"what is the sentiment of this tweet?"*
 They obtained a weighted F1-score of 76%&mdash; pretty decent for a straightforward zero-shot approach.
