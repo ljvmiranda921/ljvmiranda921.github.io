@@ -16,16 +16,27 @@ Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
 profiles for more info.
 
+### 2024
+
+- [RewardBench: Evaluating Reward Models]() <br> Nathan Lambert, Valentina Pyatkin, Jacob Morrison, <u>LJ Miranda</u>, Bill Yuchen Lin, Khyathi Chandu, Nouha Dziri, Sachin Kumar, Tom Zick, Yejin Choi, Noah A. Smith, and Hannaneh Hajishirzi, *Preprint*. <br> [[Leaderboard](https://huggingface.co/spaces/allenai/reward-bench)] [[Code](https://github.com/allenai/reward-bench)] 
+
+
+- [Allen Institute for AI @ SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages]().  <u>Lester James V. Miranda</u>, *Proceedings of the EACL 6th Workshop on Research in Computational Linguistic Typology and Multilingual NLP*. ACL. St. Julian's, Malta. March 2024. <br> [[Code](https://github.com/ljvmiranda921/LiBERTus)] [[Video](https://www.youtube.com/watch?v=rjOw_G-Rv9I)] 
+
+### 2023
+
 - [calamanCy: a Tagalog Natural Language Processing Toolkit](https://aclanthology.org/2023.nlposs-1.1/) <br> <u>Lester James V. Miranda</u>, *Proceedings of the EMNLP 2023 Workshop on NLP Open Source Software (NLP-OSS)*. EMNLP. Singapore, Singapore. December 2023. 
 <br> [[Code](https://github.com/ljvmiranda921/calamanCy)] [[Poster](/assets/png/calamancy/poster.png)] [[Video](https://youtu.be/2fbzs1KbFTQ?si=_vKEY11Z1Jzuaxeu)]
 
-- [Developing a Named Entity Recognition Dataset for Tagalog](https://arxiv.org/abs/2311.07161) <br> <u>Lester James V. Miranda</u>, *Proceedings of the IJCNLP-AACL 2023 Workshop on Southeast Asian Language Processing (SEALP)*. ACL. Bali, Indonesia. November 2023.
+- [Developing a Named Entity Recognition Dataset for Tagalog](https://aclanthology.org/2023.sealp-1.2/) <br> <u>Lester James V. Miranda</u>, *Proceedings of the IJCNLP-AACL 2023 Workshop on Southeast Asian Language Processing (SEALP)*. ACL. Nusa Dua, Bali, Indonesia. November 2023.
 <br> [[Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark)] [[Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner)] [[Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)] 
 
-- [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://www.universalner.org/assets/Universal_NER.pdf) <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <u>LJ Miranda</u>, Barabara Plank, Yuval Pinter. *Preprint*. November 2023.
+- [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://arxiv.org/abs/2311.09122) <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <u>LJ Miranda</u>, Barabara Plank, Arij Riabi, Yuval Pinter. Preprint. *arXiv:2311.09122 [cs.CL]*  November 2023.
 <br> [[Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GQ8HDL)] [[Website](https://www.universalner.org/)]
 
-- [Multi hash embeddings in spaCy](https://arxiv.org/abs/2212.09255) <br> <u>Lester James V. Miranda</u>\*, &Aacute;kos K&aacute;d&aacute;r\*, Adriane Boyd, Sofie Van Landeghem, Anders S&oslash;gaard, and Matthew Honnibal, "Multi hash embeddings in spaCy", *arXiv:2212.09255 [cs.CL]*. November 2022. *(&lowast;: equal contributions)*
+### 2022
+
+- [Multi hash embeddings in spaCy](https://arxiv.org/abs/2212.09255) <br> <u>Lester James V. Miranda</u>\*, &Aacute;kos K&aacute;d&aacute;r\*, Adriane Boyd, Sofie Van Landeghem, Anders S&oslash;gaard, and Matthew Honnibal. Preprint. *arXiv:2212.09255 [cs.CL]*. November 2022. <br> *(&lowast;: equal contributions)*
 <br> [[Code](https://github.com/explosion/projects/tree/v3/benchmarks/ner_embeddings)]
 
 <!--
