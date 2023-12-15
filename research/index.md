@@ -32,6 +32,12 @@ profiles for more info.
 - [Expulsion from Eden: the saga of the Calauit Safari Island Park](https://www.dropbox.com/s/j36m11rvhbl963e/apeiron2016expulsion.pdf?dl=0) <br> Lester James V. Miranda, “Expulsion from Eden: the saga of the Calauit Safari Island Park,” _APEIRON Student Journal of Philosophy_, no. 8, pp. 201–219, 2016. ISBN: 1533659788.
 -->
 
+&nbsp;
+
+---
+
+&nbsp;
+
 ### Previous research
 
 I used to be a bioinformatics researcher at the [Furuzuki Neurocomputing Systems Laboratory](https://www.waseda.jp/sem-hflab/nclab/index.html), working on nature-inspired algorithms and proteomics. 
