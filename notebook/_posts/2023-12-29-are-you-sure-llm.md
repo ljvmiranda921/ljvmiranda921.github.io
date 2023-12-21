@@ -11,7 +11,10 @@ header-img: /assets/png/llm-follow-up/header.png
 tags: [nlp, llm, large language models, rlhf, natural language processing, eleutherai]
 description: |
     I often notice that ChatGPT tends to change its answer when you challenge their response.
-    So, I tried this on multiple language models and a variety of quenstion-answering tasks.
-    In this blog post, 
+    So, I tried this on multiple language models and a variety of quenstion-answering tasks&mdash; turns out, this is actually the case!
+    Let me share my findings in this blog post.
 excerpt: |
+    I often notice that ChatGPT tends to change its answer when you challenge their response.
+    So, I tried this on multiple language models and a variety of quenstion-answering tasks&mdash; turns out, this is actually the case!
+    Let me share my findings in this blog post.
 ---
