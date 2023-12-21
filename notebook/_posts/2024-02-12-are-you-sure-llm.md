@@ -20,4 +20,4 @@ excerpt: |
 ---
 
 <span class="firstcharacter">W</span>henever I use ChatGPT, I notice that it tends to change its answer when challenged.
-For example, there was a time I asked it if *Seinfeld*
+This is often 
