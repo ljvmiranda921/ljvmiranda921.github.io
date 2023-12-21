@@ -7,6 +7,6 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-tags: [llm, humaneval, human evaluation, annotation, prodigy, nlp, gpt, qa]
+tags: [llm, humaneval, evaluation, annotation, prodigy, nlp, gpt, qa, hellaswag, winogrande]
 ---
 
