@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "'Are you sure?' Asking LLMs follow-up questions"
+title: "'Are you sure?' Challenging LLMs with follow-up questions"
 date: 2024-02-12
 category: notebook
 comments: true
@@ -24,4 +24,5 @@ One time, I asked if *Shove* in *Dungeons & Dragons* is an action or a bonus act
 Initially, it answered that shove is an action. 
 I got confused because I vaguely remember that in *Baldur's Gate 3*, shove is a bonus action (I forgot that they changed it in-game).
 So I replied: "are you sure?"&mdash; and ChatGPT gladly changed its answer to the incorrect one. 
+
 
