@@ -20,4 +20,8 @@ excerpt: |
 ---
 
 <span class="firstcharacter">W</span>henever I use ChatGPT, I notice that it tends to change its answer when challenged.
-This is often 
+One time, I asked if *Shove* in *Dungeons & Dragons* is an action or a bonus action.
+Initially, it answered that shove is an action. 
+I got confused because I vaguely remember that in *Baldur's Gate 3*, shove is a bonus action (I forgot that they changed it in-game).
+So I replied: "are you sure?"&mdash; and ChatGPT gladly changed its answer to the incorrect one. 
+
