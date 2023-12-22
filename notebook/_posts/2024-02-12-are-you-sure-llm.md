@@ -29,7 +29,7 @@ There were many moments like this, so I decided to investigate this more systema
 
 ## Evaluating LMs on knowledge-based QA tasks
 
-For my experiment, 
+I'll look into *knowledge-based* tasks for my experiments, i.e., they contain questions that require factual knowledge.
 
 
 
