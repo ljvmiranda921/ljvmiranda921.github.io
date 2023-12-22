@@ -23,13 +23,14 @@ excerpt: |
 One time, I asked if *Shove* in *Dungeons & Dragons* is an action or a bonus action.
 Initially, it answered that shove is an action. 
 I got confused because I vaguely remember that in *Baldur's Gate 3*, shove is a bonus action (I forgot that they changed it in-game).
-So I replied: "are you sure?"&mdash; and ChatGPT gladly changed its answer to the incorrect one. 
+So I replied: "are you sure?"&mdash; and ChatGPT gladly changed its answer to the incorrect one! 
 
 There were many moments like this, so I decided to investigate this more systematically.
 
 ## Evaluating LMs on knowledge-based QA tasks
 
-I'll look into *knowledge-based* tasks for my experiments, i.e., they contain questions that require factual knowledge.
+For my experiments, I'll investigate *knowledge-based* tasks, i.e., tasks that contain questions requiring factual knowledge.
+
 
 
 
