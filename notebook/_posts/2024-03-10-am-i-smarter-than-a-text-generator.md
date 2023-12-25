@@ -38,4 +38,4 @@ And this brings us back to the title of this blog post: am I smarter than a text
 
 ### TruthfulQA
 
-###
+## Final thoughts
