@@ -11,13 +11,14 @@ tags: [llm, humaneval, evaluation, annotation, prodigy, nlp, gpt, qa, hellaswag,
 ---
 
 <span class="firstcharacter">N</span>owadays, it's common to see researchers evaluate large language models on "very human" tasks such as reasoning, logic, or math.
-Unlike linguistic tasks such as NER and POS tagging, these *humanlike* tasks assess skills that we use everyday.
-Several benchmark datasets (e.g., HellaSwag, LogiQA, Winogrande, etc.) were even built to examine these skills.
+Unlike linguistic tasks such as NER and POS tagging, these *human-like* tasks assess skills that we use everyday.
+Several benchmark datasets (e.g., HellaSwag, LogiQA, Winogrande, etc.) were even built to examine these skills. 
+As a human, I find myself asking: how well will I fare on these benchmarks?
 
-Most of these datasets were written in the question-answering (QA) format.
-I like QA because it is an affordance that is one step closer to how we function as interlocutors&mdash; we don't answer in terms of parse trees or span offsets, but we answer in terms of phrases and utterances.
-Because of this parity, I am inclined to see how well I'll fare if exposed to the same questions a language model had.
-And this brings us back to the title of this blog post: am I smarter than a text generator?
+The purpose of this blog post is threefold: 
+- First, I want to see how well I'll perform when subjected to the same evaluation (task instruction) most LLMs undergo. 
+- Second, I want to assess individual examples and determine if they effectively test the skills for which they were designed to evaluate.
+- Finally, I want to identify cases where the model's response disagrees with mine, and verify if this disparity is just an annotation error, a random fluke, or an erroneous attribute of the data sample.
 
 ## Annotating multi-choice QA datasets
 
