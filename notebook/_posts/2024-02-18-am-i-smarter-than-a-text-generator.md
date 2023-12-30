@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Am I smarter than a text generator?"
-date: 2024-03-10
+date: 2024-02-18
 category: notebook
 comments: true
 author: "LJ MIRANDA"
