@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-tags: [llm, humaneval, evaluation, annotation, prodigy, nlp, gpt, qa, hellaswag, winogrande]
+tags: [llm, humaneval, evaluation, annotation, prodigy, nlp, gpt, qa, hellaswag, winogrande, ranked classification]
 header-img: /assets/png/am-i-smarter-than-a-text-generator/header.png
 description: |
     In this blog post, join me as I subject myself to the same eval schemes large language models undergo.
@@ -34,13 +34,27 @@ So, I plan to uncover three things from this small experiment:
 
 ## Annotating multi-choice QA datasets
 
-<!-- experimental setup -->
+Most LM evaluation tasks are written in a question-answering (QA) format.
+The idea here is simple: we ask the model a question, and then we evaluate its answer (i.e., the generated text).
+However, I will focus on multi-choice QA tasks.
+The setup is still the same, but instead of answering in free-form, the model must choose its answer from a list of predefined options.
 
-## Overall results
+I annotated the following question-answering (QA) datasets.
+<!-- insert table-->
 
-## Annotation notes for each dataset
 
-### HellaSwag
+One limitation of this experiment is that I only annotated 100-200 samples for each task.
+So it's hard to say if performance on a small subset will scale on the whole dataset.
+Finally, I followed the same QA format in EleutherAI's llm-harness tool to ensure that the language model and I receive the same question prompts.
+You can find these prompts in the GitHub repo.
+
+## Getting the results
+
+<!--ranked classification -->
+
+## Observations 
+
+<!-- ### HellaSwag
 
 ### PIQA
 
@@ -49,6 +63,6 @@ So, I plan to uncover three things from this small experiment:
 
 ### LogiQA
 
-### TruthfulQA
+### TruthfulQA -->
 
 ## Final thoughts
