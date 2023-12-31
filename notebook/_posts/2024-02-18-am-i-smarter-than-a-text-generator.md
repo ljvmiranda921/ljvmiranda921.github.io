@@ -48,20 +48,21 @@ So it's hard to say if performance on a small subset will scale on the whole dat
 
 ## Constructing the prompt
 
-### Prompt for the model
+### Prompting the model
 
 I followed the same QA format seen in EleutherAI's [llm-evaluation-harness tool](https://github.com/EleutherAI/lm-evaluation-harness).
 This tool makes LM evaluation easy by providing prompt templates for each task and unifying the evaluation process in just a single command.
-It's also been used in HuggingFace's [Open LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard), so we're sure that it's official and vetted by researchers.
+It's also been used in HuggingFace's [Open LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard), so we're at least confident that it's vetted by the wider NLP community.
 
 For example, below is a comparison between the "raw" HellaSwag dataset and its prompt-formatted version:
 
 Notice how the options aren't included in the prompt.
 It is because we evaluate LMs using the **ranked classification** method.
+
 <!--explain-->
 
 
-### Prompt for the human
+### Prompting humans
 
 I also used the same formatted version during annotation to ensure parity between myself and the language model.
 Here, I employed [Prodigy](https://prodigy.ai) and created multiple-choice annotation tasks.
