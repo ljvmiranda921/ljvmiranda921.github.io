@@ -28,9 +28,9 @@ so that I can assess how effective our benchmarks are in evaluating LLMs.
 However, we can't just compare two accuracies and call it a day.
 So, I plan to uncover three things from this small experiment: 
 
-- First, I want to see how well I'll perform when subjected to the same evaluation (task instruction) most LLMs undergo. 
-- Second, I want to assess individual examples and determine if they effectively test the skills for which they were designed to evaluate.
-- Finally, I want to identify cases where the model's response disagrees with mine, and verify if this disparity is just an annotation error, a random fluke, or an erroneous attribute of the data sample.
+- **Performance**: First, I want to see how well I'll perform when subjected to the same evaluation (task instruction) most LLMs undergo. 
+- **Efficacy**: Second, I want to assess individual examples and determine if they effectively test the skills for which they were designed to evaluate.
+- **Disagreement**: Finally, I want to identify cases where the model's response disagrees with mine, and verify if this disparity is just an annotation error, a random fluke, or an erroneous attribute of the data sample.
 
 ## Choosing multi-choice QA datasets to test
 
@@ -50,16 +50,16 @@ So it's hard to say if performance on a small subset will scale on the whole dat
 
 ### Prompt for the model
 
-I followed the same QA format seen in EleutherAI's llm-harness tool.
+I followed the same QA format seen in EleutherAI's [llm-evaluation-harness tool](https://github.com/EleutherAI/lm-evaluation-harness).
 This tool makes LM evaluation easy by providing prompt templates for each task and unifying the evaluation process in just a single command.
-It's also been used in HuggingFace's LLM leaderboard, so we're sure that it's official and vetted.
+It's also been used in HuggingFace's [Open LLM leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard), so we're sure that it's official and vetted by researchers.
 
 For example, below is a comparison between the "raw" HellaSwag dataset and its prompt-formatted version:
 
 Notice how the options aren't included in the prompt.
-It is because we evaluate LM's using the **ranked classification** method.
-Don't worry, I'll explain this in the next section!
-For now, the key takeaway is that llm-harness helps us format our datasets into a prompt commonly-used in LM evaluation research.
+It is because we evaluate LMs using the **ranked classification** method.
+<!--explain-->
+
 
 ### Prompt for the human
 
@@ -67,8 +67,7 @@ I also used the same formatted version during annotation to ensure parity betwee
 Here, I employed [Prodigy](https://prodigy.ai) and created multiple-choice annotation tasks.
 
 
-
-## Getting the results
+## Results
 
 <!--ranked classification -->
 
