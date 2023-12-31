@@ -32,21 +32,41 @@ So, I plan to uncover three things from this small experiment:
 - Second, I want to assess individual examples and determine if they effectively test the skills for which they were designed to evaluate.
 - Finally, I want to identify cases where the model's response disagrees with mine, and verify if this disparity is just an annotation error, a random fluke, or an erroneous attribute of the data sample.
 
-## Annotating multi-choice QA datasets
+## Choosing multi-choice QA datasets to test
 
 Most LM evaluation tasks are written in a question-answering (QA) format.
 The idea here is simple: we ask the model a question, and then we evaluate its answer (i.e., the generated text).
 However, I will focus on multi-choice QA tasks.
 The setup is still the same, but instead of answering in free-form, the model must choose its answer from a list of predefined options.
 
-I annotated the following question-answering (QA) datasets.
+The table below shows the question-answering (QA) datasets I annotated.
+The choice of these datasets is arbitrary, but I made sure that these are the datasets most LLMs are evaluated on.
 <!-- insert table-->
-
 
 One limitation of this experiment is that I only annotated 100-200 samples for each task.
 So it's hard to say if performance on a small subset will scale on the whole dataset.
-Finally, I followed the same QA format in EleutherAI's llm-harness tool to ensure that the language model and I receive the same question prompts.
-You can find these prompts in the GitHub repo.
+
+## Constructing the prompt
+
+### Prompt for the model
+
+I followed the same QA format seen in EleutherAI's llm-harness tool.
+This tool makes LM evaluation easy by providing prompt templates for each task and unifying the evaluation process in just a single command.
+It's also been used in HuggingFace's LLM leaderboard, so we're sure that it's official and vetted.
+
+For example, below is a comparison between the "raw" HellaSwag dataset and its prompt-formatted version:
+
+Notice how the options aren't included in the prompt.
+It is because we evaluate LM's using the **ranked classification** method.
+Don't worry, I'll explain this in the next section!
+For now, the key takeaway is that llm-harness helps us format our datasets into a prompt commonly-used in LM evaluation research.
+
+### Prompt for the human
+
+I also used the same formatted version during annotation to ensure parity between myself and the language model.
+Here, I employed [Prodigy](https://prodigy.ai) and created multiple-choice annotation tasks.
+
+
 
 ## Getting the results
 
