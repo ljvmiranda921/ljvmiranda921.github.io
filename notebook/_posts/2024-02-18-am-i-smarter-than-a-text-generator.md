@@ -19,7 +19,7 @@ excerpt: |
     This and more, in am I smarter than a text generator!
 ---
 
-<span class="firstcharacter">N</span>owadays, it's common to see researchers evaluate large language models on "very human" tasks such as reasoning, logic, and math.
+<span class="firstcharacter">N</span>owadays, it's common to see researchers evaluate large language models on various human reasoning tasks.
 They perform these evaluations using benchmark datasets such as HellaSwag, LogiQA, and Winogrande.
 Unlike linguistic tasks such as NER and POS tagging, these *human-centric* tasks assess skills that we consciously use everyday. So as a human, I find myself asking: how well will I fare on these benchmarks?
 
