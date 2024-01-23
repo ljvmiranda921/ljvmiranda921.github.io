@@ -18,7 +18,7 @@ Here, you'll find some of my **thoughts, works, and notes** on software
 development, machine learning, and research. I hope you'll spend a nice time
 here, so go grab yourself a coffee and feel free to look around! 
 
-[[Game Dev](https://ljvmiranda921.itch.io)] [[Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery)]
+Other links: [[Game Dev](https://ljvmiranda921.itch.io)] [[Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery)]
 
 
 ## Background
