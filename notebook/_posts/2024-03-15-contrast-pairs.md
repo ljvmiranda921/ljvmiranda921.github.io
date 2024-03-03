@@ -42,7 +42,7 @@ The table below shows the sources I used:
 For OpenAI's Summarize and SHP, the preferences are in the form of individual matchups.
 To get the canonical chosen and rejected responses, I used the [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) to obtain the top and bottom completions.
 
-## Computing embeddings
+## Computing sentence embeddings
 
 The figure below shows my process:
 
