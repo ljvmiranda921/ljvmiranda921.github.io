@@ -15,17 +15,20 @@ description: |
 
 <span class="firstcharacter">P</span>reference data is a staple in the final step of the LLM training pipeline.
 During RLHF, we train a reward model by showing pairs of chosen and rejected model outputs so that it can teach a policy model how to generate more preferable responses.
-The hope is: our reward model can capture the nuance in human preferences.
+The hope is, our reward model can capture the nuance in human preferences.
 
 However, preference is subjective by nature, and few studies tried to articulate it.
 For example, some looked into different aspects of a response's helpfulness / harmlessness ([Bai et al., 2022](https://arxiv.org/abs/2204.05862)) while others investigated surface-level characteristics like its length ([Singhal et al., 2023](https://arxiv.org/pdf/2310.03716.pdf)).
 
 In this blog post, I want to offer a different approach: **what if instead of looking at qualitative aspects or token-level features, we use sentence embeddings?**
 Sentence embeddings capture the lexical and semantic meaning of a text in a high-dimensional vector space.
-Specifically, I'm curious if we can ascertain lexical differences between chosen and rejected responses *just* by looking at text embeddings.
+If that's the case, can we ascertain lexical differences between chosen and rejected responses *just* by looking at text embeddings?
 
 ## Getting preference data
 
+First, I sampled preference data across different sources. 
+For bigger datasets such as SHP, I only took a particular subset I am interested in.
+The table below shows the sources I used:
 
 | Dataset                                                                                                                                                      | Description                                                                                                                                                                                                                                     |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -36,9 +39,12 @@ Specifically, I'm curious if we can ascertain lexical differences between chosen
 | [Berkeley Nest Lab's Nectar Dataset](https://huggingface.co/datasets/berkeley-nest/Nectar)                                                                   | Preference ranking dataset for training the Starling 7B reward model ([Zhu et al., 2023](https://starling.cs.berkeley.edu/)), and consequently, the Starling 7B language model.                                                                 |
 
 <!-- talk about elo ranking for matchup-type datasets -->
-
+For OpenAI's Summarize and SHP, the preferences are in the form of individual matchups.
+To get the canonical chosen and rejected responses, I used the [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) to obtain the top and bottom completions.
 
 ## Computing embeddings
+
+The figure below shows my process:
 
 ## Findings
 
