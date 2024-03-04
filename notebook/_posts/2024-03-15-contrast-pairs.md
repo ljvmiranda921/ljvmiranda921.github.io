@@ -10,8 +10,8 @@ published: true
 tags: [rlhf, preference data, llm, shp, openai, berkeley-nest]
 header-img: /assets/png/contrast-pairs/header.png
 description: |
-    Can we spot differences between preference pairs just by looking at their word embeddings? 
-    In this blog post, I want to share my findings from examining lexical distances between chosen and rejected responses in preference datasets.
+  Can we spot differences between preference pairs just by looking at their word embeddings? 
+  In this blog post, I want to share my findings from examining lexical distances between chosen and rejected responses in preference datasets.
 ---
 
 <span class="firstcharacter">P</span>reference data is a staple in the final step of the LLM training pipeline.
@@ -23,16 +23,16 @@ For example, some looked into different aspects of a response's helpfulness / ha
 
 In this blog post, I want to offer a different approach: **what if instead of looking at qualitative aspects or token-level features, we use sentence embeddings?**
 Sentence embeddings capture the lexical and semantic meaning of a text in a high-dimensional vector space.
-If that's the case, can we ascertain lexical differences between chosen and rejected responses *just* by looking at text embeddings?
+If that's the case, can we ascertain lexical differences between chosen and rejected responses _just_ by looking at text embeddings?
 
 ## Getting preference data
 
-First, I sampled preference data across different sources. 
+First, I sampled preference data across different sources.
 For bigger datasets such as SHP, I only took a particular subset I am interested in.
 The table below shows the sources I used:
 
 | Dataset                                                                                                                                                      | Description                                                                                                                                                                                                                                     |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | OpenAI's Summarize from Human Feedback ([Stiennon et al., 2022](https://arxiv.org/abs/2009.01325))                                                           | Dataset used to train a summarization reward model. I used the `comparisons` subset where each instance represents a matchup between two summaries.                                                                                             |
 | Stanford Human Preferences Dataset ([Ethayarajh et al., 2022](https://proceedings.mlr.press/v162/ethayarajh22a.html))                                        | Contains a collection of human preferences over responses to questions or instructions. I used the `explainlikeimfive_train` subset to represent OpenQA questions.                                                                              |
 | [Argilla's Ultrafeedback Multi-Binarized Cleaned Dataset](https://huggingface.co/datasets/argilla/ultrafeedback-multi-binarized-quality-preferences-cleaned) | A clean version of the original Ultrafeedback dataset ([Cui et al., 2023](https://arxiv.org/abs/2310.01377)). The cleanup process can be found [in their writeup](https://huggingface.co/datasets/argilla/ultrafeedback-binarized-preferences). |
@@ -40,6 +40,7 @@ The table below shows the sources I used:
 | [Berkeley Nest Lab's Nectar Dataset](https://huggingface.co/datasets/berkeley-nest/Nectar)                                                                   | Preference ranking dataset for training the Starling 7B reward model ([Zhu et al., 2023](https://starling.cs.berkeley.edu/)), and consequently, the Starling 7B language model.                                                                 |
 
 <!-- talk about elo ranking for matchup-type datasets -->
+
 For OpenAI's Summarize and SHP, the preferences are in the form of individual matchups.
 To get the canonical chosen and rejected responses, I used the [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) to obtain the top and bottom completions.
 
@@ -54,9 +55,8 @@ The figure below shows my process:
 
 ### Lexical differences are apparent in some datasets
 
-### Typical Elo ranking correlates with cosine distance
+### Elo ranking correlates with cosine distance
 
 ### Some tasks have more pronounced lexical differences
-
 
 ## Final thoughts
