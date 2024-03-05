@@ -54,6 +54,7 @@ Finally, for each row, I computed the cosine distance ($$\mathbf{d}$$) between t
 ![](/assets/png/contrast-pairs/process.png){:width="700px"}
 {: style="text-align: center;"}
 
+
 ## Findings
 
 ### Lexical differences are apparent in some datasets
