@@ -47,9 +47,9 @@ To get the canonical chosen and rejected responses, I used the [Elo rating syste
 ## Computing sentence embeddings
 
 The figure below shows my process. 
-Given a set of preference data, I split the completions based on whether they were chosen or rejected by an evaluator (human or GPT, depending on the dataset).
+Given a set of preference data, I split the completions based on whether they were chosen ($$\mathbf{y}_w$$) or rejected ($$\mathbf{y}_l$$) by an evaluator&mdash;human or GPT, depending on the dataset.
 Then, I embedded them using [sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) to produce 384-dimensional sentence embeddings.
-Finally, for each row, I computed the cosine distance between the chosen and rejected vectors.
+Finally, for each row, I computed the cosine distance ($$\mathbf{d}$$) between the chosen and rejected vectors.
 
 ![](/assets/png/contrast-pairs/process.png){:width="700px"}
 {: style="text-align: center;"}
