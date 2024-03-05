@@ -59,6 +59,8 @@ The figure below illustrates this process.
 
 ### Lexical differences are apparent in some datasets
 
+<iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_hist_plot.html"></iframe>
+
 ### Elo ranking correlates with cosine distance
 
 ### Some tasks have more pronounced lexical differences
