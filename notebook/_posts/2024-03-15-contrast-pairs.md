@@ -44,15 +44,32 @@ The table below shows the sources I used:
 For OpenAI's Summarize and SHP, the preferences are in the form of individual matchups.
 To get the canonical chosen and rejected responses, I used the [Elo rating system](https://en.wikipedia.org/wiki/Elo_rating_system) to obtain the top and bottom completions.
 
-## Computing sentence embeddings
+## Measuring distance between pairs
 
 Given a set of preference data, I split the completions based on whether they were chosen ($$\mathbf{y}_w$$) or rejected ($$\mathbf{y}_l$$) by an evaluator&mdash;human or GPT, depending on the dataset.
 Then, I embedded them using [sentence-transformers/all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) to produce 384-dimensional sentence embeddings.
-Finally, for each row, I computed the cosine distance ($$\mathbf{d}$$) between the chosen and rejected vectors.
+Finally, for each row, I computed the distance ($$\mathbf{d}$$) between the chosen and rejected vectors.
 The figure below illustrates this process. 
 
 ![](/assets/png/contrast-pairs/process.png){:width="700px"}
 {: style="text-align: center;"}
+
+To compute for the distances, I used the cosine distance from [`scipy`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cosine.html).
+Cosine distance measures the direction between two vectors, allowing us to capture similarity even if the length of the sentences or overall frequency of the words differ.
+It is represented by the following equation:
+
+$$
+\mathbf{d}(\mathbf{v}_w, \mathbf{v}_l) = 1 - \dfrac{\mathbf{v}_w \cdot \mathbf{v}_l}{\lVert\mathbf{v}_w\rVert_2 \lVert\mathbf{v}_l\rVert_2}
+,$$
+
+where the distance value ranges from $$(0, 2)$$.
+Usually, when we talk about distances between preference pairs, we talk about **quality-based distances**.
+They're often in the form of rankings (i.e., get top-1 and top-N) based on an evaluator's assessment. 
+Again, in this blog post we're looking at **lexical-based distances** that are readily-available from a text's surface form.
+In the next section, I'll talk about some interesting findings from these distance calculations.
+
+
+
 
 
 ## Findings
