@@ -8,6 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [rlhf, preference data, llm, shp, openai, berkeley-nest]
+header-img: /assets/png/contrast-pairs/header.png
 description: |
     Can we spot differences between preference pairs just by looking at their word embeddings? 
     In this blog post, I want to share my findings from examining lexical distances between chosen and rejected responses in preference datasets.
@@ -45,6 +46,9 @@ To get the canonical chosen and rejected responses, I used the [Elo rating syste
 ## Computing sentence embeddings
 
 The figure below shows my process:
+
+![](/assets/png/contrast-pairs/process.png){:width="700px"}
+{: style="text-align: center;"}
 
 ## Findings
 
