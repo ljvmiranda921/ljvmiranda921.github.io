@@ -7,6 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
+header-img: /assets/png/talk-unc-charlotte/header.png
 tags: [argument mining, fake news, llm, evaluation, annotation, prodigy, ai, large language models]
 description: |
     A few weeks ago, I held a guest lecture at University of North Carolina
