@@ -80,6 +80,9 @@ In the next section, I'll talk about some interesting findings from these distan
 
 ### Elo ranking correlates with cosine distance
 
+openai-summarize = 2.042
+shp = 1.967
+
 ### Some tasks have more pronounced lexical differences
 
 ## Final thoughts
