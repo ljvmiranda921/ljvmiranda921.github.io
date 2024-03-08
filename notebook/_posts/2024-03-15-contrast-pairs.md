@@ -102,6 +102,14 @@ Upon checking the actual preferences and corresponding [evaluator notes](https:/
 openai-summarize = 2.042
 shp = 1.967
 
+
+pearson correlation
+openai-summarize = 0.779
+shp = 0.785
+berkeley-nest = 0.818
+
+berkeley-nest = 0.772
+
 <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_openai___summarize_from_feedback.html"></iframe>
 
 
