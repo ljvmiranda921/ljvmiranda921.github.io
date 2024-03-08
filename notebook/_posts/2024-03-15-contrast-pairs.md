@@ -93,13 +93,16 @@ For example, OpenAI's summarization dataset should still have closer preference 
 Summarization is about compressing a text while maintaining information.
 Upon checking the actual preferences and corresponding [evaluator notes](https://openaipublic.blob.core.windows.net/summarize-from-feedback/website/index.html#/tldr_comparisons), I noticed that rejected completions are oftentimes a matter of recall.
 
-### Elo rating correlates with cosine distance
+### Elo ranking correlates with cosine distance
 
-Next, I looked into how Elo rating corresponds to the cosine distance of the text embeddings.
+Next, I looked into how Elo ranking corresponds to the cosine distance of the text embeddings.
 Preference datasets like OpenAI's Summarization, SHP, and Berkeley-Nest's Nectar represent their preferences as individual matchups, allowing us to compute the Elo rating of individual completions.
+Then, we can order these ratings to achieve a rank of completions from most preferable to least.
+
+<!-- maybe add a diagram? -->
 
 However, OpenAI's Summarization and SHP have unequal number of ranks per prompt $$\mathbf{x}$$.
-So to simplify the visualizations, I took the chosen completion $$\mathbf{y}_w$$, the top-2 completion $$\mathbf{y}_{l,next}$$, the middle performer $$\mathbf{y}_{l,mid}$$, and the last placer $$\mathbf{y}_{l,last}$$ (which is equivalent to $$\mathbf{y}_l$$ in the previous section).
+So to simplify the visualizations, I took the chosen completion $$\mathbf{y}_w$$, the top-2 completion $$\mathbf{y}_{l,next}$$, the middle-performer $$\mathbf{y}_{l,mid}$$, and the bottom-performer $$\mathbf{y}_{l,last}$$ (which is equivalent to $$\mathbf{y}_l$$ in the previous section).
 On the other hand, Berkeley-Nest's Nectar provides a 7-rank scale of preferences.
 This allowed me to compute the distance from the first and second choices until the last one: $$\mathbf{d}(\mathbf{y}_1, \mathbf{y}_{2\ldots7})$$.
 You can find the results in the figures below.
