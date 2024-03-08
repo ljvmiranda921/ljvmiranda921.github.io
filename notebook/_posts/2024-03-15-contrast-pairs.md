@@ -93,11 +93,17 @@ For example, OpenAI's summarization dataset should still have closer preference 
 Summarization is about compressing a text while maintaining information.
 Upon checking the actual preferences and corresponding [evaluator notes](https://openaipublic.blob.core.windows.net/summarize-from-feedback/website/index.html#/tldr_comparisons), I noticed that rejected completions are oftentimes a matter of recall.
 
-### Elo ranking correlates with cosine distance
+### Elo rating correlates with cosine distance
+
+Next, I looked into how Elo rating corresponds to the cosine distance of the text embeddings.
+Preference datasets like OpenAI's Summarization, SHP, and Berkeley-Nest's Nectar represent their preferences as individual matchups, allowing us to compute the Elo rating of individual completions.
+
+However, OpenAI's Summarization and SHP have unequal number of ranks per prompt $$\mathbf{x}$$.
+So to simplify the visualizations, I took the chosen completion $$\mathbf{y}_w$$, the top-2 completion  $$\mathbf{y}_{l,next}$$, the middle performer $$\mathbf{y}_{l,mid}$$, and the last placer $$\mathbf{y}_{l,last}$$ (which is equivalent to $$\mathbf{y}_l$$ in the previous section).
 
 <!-- maybe ensure that correlation exists? -->
 
-openai-summarize = 2.042
+<!-- openai-summarize = 2.042
 shp = 1.967
 
 
@@ -106,7 +112,7 @@ openai-summarize = 0.779
 shp = 0.785
 berkeley-nest = 0.818
 
-berkeley-nest = 0.772
+berkeley-nest = 0.772 -->
 
 <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_openai___summarize_from_feedback.html"></iframe>
 
