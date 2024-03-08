@@ -133,7 +133,7 @@ It is interesting that completions that performed similarly during matchups are 
 You can find some examples below:
 
 
-Finally, the figures below show a linechart between a completion's Elo rating (not ranking) versus its cosine distance with respect to the chosen text.
+Finally, the figures below show a line chart between a completion's Elo rating (not ranking) versus its cosine distance with respect to the chosen text.
 
 ### Some tasks have more pronounced lexical differences
 
