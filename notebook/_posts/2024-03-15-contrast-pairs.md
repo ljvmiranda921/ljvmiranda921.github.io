@@ -16,7 +16,7 @@ description: |
 
 <span class="firstcharacter">P</span>reference data is a staple in the final step of the LLM training pipeline.
 During RLHF, we train a reward model by showing pairs of chosen and rejected model outputs so that it can teach a policy model how to generate more preferable responses.
-The hope is, our reward model can capture the nuance in human preferences.
+The hope is, our reward model can capture the nuance and diversity of human judgment.
 
 However, preference is subjective by nature, and few studies have tried articulating it.
 For example, some looked into different aspects of a response's helpfulness / harmlessness ([Bai et al., 2022](https://arxiv.org/abs/2204.05862)) while others investigated surface-level characteristics like its length ([Singhal et al., 2023](https://arxiv.org/pdf/2310.03716.pdf)).
@@ -99,7 +99,11 @@ Next, I looked into how Elo rating corresponds to the cosine distance of the tex
 Preference datasets like OpenAI's Summarization, SHP, and Berkeley-Nest's Nectar represent their preferences as individual matchups, allowing us to compute the Elo rating of individual completions.
 
 However, OpenAI's Summarization and SHP have unequal number of ranks per prompt $$\mathbf{x}$$.
-So to simplify the visualizations, I took the chosen completion $$\mathbf{y}_w$$, the top-2 completion  $$\mathbf{y}_{l,next}$$, the middle performer $$\mathbf{y}_{l,mid}$$, and the last placer $$\mathbf{y}_{l,last}$$ (which is equivalent to $$\mathbf{y}_l$$ in the previous section).
+So to simplify the visualizations, I took the chosen completion $$\mathbf{y}_w$$, the top-2 completion $$\mathbf{y}_{l,next}$$, the middle performer $$\mathbf{y}_{l,mid}$$, and the last placer $$\mathbf{y}_{l,last}$$ (which is equivalent to $$\mathbf{y}_l$$ in the previous section).
+On the other hand, Berkeley-Nest's Nectar provides a 7-rank scale of preferences.
+This allowed me to compute the distance from the first and second choices until the last one: $$\mathbf{d}(\mathbf{y}_1, \mathbf{y}_{2\ldots7})$$.
+
+Finally, I also computed the Pearson correlation between the cosine distances of our preference pairs and their Elo rating.
 
 <!-- maybe ensure that correlation exists? -->
 
@@ -123,5 +127,7 @@ berkeley-nest = 0.772 -->
 <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_berkeley-nest___Nectar_fine.html"></iframe>
 
 ### Some tasks have more pronounced lexical differences
+
+<!-- check helpsteer -->
 
 ## Final thoughts
