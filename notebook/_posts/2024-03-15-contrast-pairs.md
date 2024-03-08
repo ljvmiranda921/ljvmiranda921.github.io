@@ -125,7 +125,17 @@ Here, the Pearson correlation is 0.818.
 If you look at the "chosen and rejected (2)" red line, you'll notice that the cosine distances start very small but fall off afterwards.
 It is interesting that completions that performed similarly during matchups are quite similar to one another based on their embeddings.
 
-<!-- <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_berkeley-nest___Nectar_fine.html"></iframe> -->
+| Dataset                        | Number of ranks (avg) | Mid rank | Pearson-r Elo ranking | Pearson-r Elo rating |
+|--------------------------------|-----------------------|----------|-----------------------|----------------------|
+| openai/summarize_from_feedback | 4.109                 | 2.042    | 0.779                 | -0.534               |
+| stanfordnlp/SHP                | 4.600                 | 1.967    | 0.7845                | -0.458               |
+| berkeley-nest/Nectar           | 7.000                 | 4.000    | 0.818                 | -                    |
+
+The table above shows the ranking statistics for each dataset.
+I also measured the Pearson correlation between the rejected text's ranking (and Elo rating) with respect to its embedding distance from the chosen text.
+The sign (+/-) corresponds to the direction of the correlation. 
+For example, the negative sign in the last column shows that as the text's Elo rating increases, then its lexical distance from the chosen text decreases (i.e., they become more similar).
+
 
 
 
