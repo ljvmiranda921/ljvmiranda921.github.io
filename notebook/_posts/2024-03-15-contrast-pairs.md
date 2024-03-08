@@ -107,8 +107,6 @@ On the other hand, Berkeley-Nest's Nectar provides a 7-rank scale of preferences
 This allowed me to compute the distance from the first and second choices until the last one: $$\mathbf{d}(\mathbf{y}_1, \mathbf{y}_{2\ldots7})$$.
 Then, I plotted these distances in a histogram (I only retained the curve so that the charts look cleaner) as seen below.
 
-<!-- maybe ensure that correlation exists? -->
-
 <!-- openai-summarize = 2.042
 shp = 1.967
 
@@ -119,6 +117,8 @@ shp = 0.785
 berkeley-nest = 0.818
 
 berkeley-nest = 0.772 -->
+
+<!-- show examples of high distance and low distance? -->
 
 <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_openai___summarize_from_feedback.html"></iframe>
 
