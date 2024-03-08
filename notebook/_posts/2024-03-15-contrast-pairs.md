@@ -105,7 +105,7 @@ However, OpenAI's Summarization and SHP have unequal number of ranks per prompt 
 So to simplify the visualizations, I took the chosen completion $$\mathbf{y}_w$$, the top-2 completion $$\mathbf{y}_{l,next}$$, the middle-performer $$\mathbf{y}_{l,mid}$$, and the bottom-performer $$\mathbf{y}_{l,last}$$ (which is equivalent to $$\mathbf{y}_l$$ in the previous section).
 On the other hand, Berkeley-Nest's Nectar provides a 7-rank scale of preferences.
 This allowed me to compute the distance from the first and second choices until the last one: $$\mathbf{d}(\mathbf{y}_1, \mathbf{y}_{2\ldots7})$$.
-You can find the results in the figures below.
+Then, I plotted these distances in a histogram (I only retained the curve so that the charts look cleaner) as seen below.
 
 <!-- maybe ensure that correlation exists? -->
 
