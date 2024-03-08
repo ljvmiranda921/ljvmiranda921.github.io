@@ -102,8 +102,7 @@ However, OpenAI's Summarization and SHP have unequal number of ranks per prompt 
 So to simplify the visualizations, I took the chosen completion $$\mathbf{y}_w$$, the top-2 completion $$\mathbf{y}_{l,next}$$, the middle performer $$\mathbf{y}_{l,mid}$$, and the last placer $$\mathbf{y}_{l,last}$$ (which is equivalent to $$\mathbf{y}_l$$ in the previous section).
 On the other hand, Berkeley-Nest's Nectar provides a 7-rank scale of preferences.
 This allowed me to compute the distance from the first and second choices until the last one: $$\mathbf{d}(\mathbf{y}_1, \mathbf{y}_{2\ldots7})$$.
-
-Finally, I also computed the Pearson correlation between the cosine distances of our preference pairs and their Elo rating.
+You can find the results in the figures below.
 
 <!-- maybe ensure that correlation exists? -->
 
@@ -125,6 +124,8 @@ berkeley-nest = 0.772 -->
 <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_berkeley-nest___Nectar_coarse.html"></iframe>
 
 <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_berkeley-nest___Nectar_fine.html"></iframe>
+
+To test this observation, I computed the Pearson correlation between the cosine distances of our preference pairs and their Elo rating.
 
 ### Some tasks have more pronounced lexical differences
 
