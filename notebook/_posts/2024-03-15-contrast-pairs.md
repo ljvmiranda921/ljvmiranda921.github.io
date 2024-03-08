@@ -120,9 +120,20 @@ berkeley-nest = 0.772 -->
 
 <!-- show examples of high distance and low distance? -->
 
+The cosine distances from the **OpenAI Summarization** preference dataset follow a certain pattern:
+completions that are closer in ranking have smaller lexical distance. The average mid ranking is 2.042 (with a 4.109 average number of ranks) and the Pearson correlation between the distances and Elo ranking is 0.779:
+
 <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_openai___summarize_from_feedback.html"></iframe>
 
+Below you'll find some examples for each pair configuration:
+
+For the **Stanford Human Preferences (SHP)** dataset, I chose the `explainlikeimfive subset` to simulate OpenQA tasks. 
+Interestingly, it has a less pronounced visual correlation even though its Pearson-r is 0.785, much higher than OpenAI Summarization. 
+The average mid ranking is 1.967 with an average rank number of 4.600.
+
 <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_stanford___SHP.html"></iframe>
+
+Below are some examples for each pair configuration:
 
 <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_berkeley-nest___Nectar_coarse.html"></iframe>
 
