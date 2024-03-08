@@ -99,7 +99,8 @@ Next, I looked into how Elo ranking corresponds to the cosine distance of the te
 Preference datasets like OpenAI's Summarization, SHP, and Berkeley-Nest's Nectar represent their preferences as individual matchups, allowing us to compute the Elo rating of individual completions.
 Then, we can order these ratings to achieve a rank of completions from most preferable to least.
 
-<!-- maybe add a diagram? -->
+![](/assets/png/contrast-pairs/elo_ranking.png){:width="720px"}
+{: style="text-align: center;"}
 
 However, OpenAI's Summarization and SHP have unequal number of ranks per prompt $$\mathbf{x}$$.
 So to simplify the visualizations, I took the chosen completion $$\mathbf{y}_w$$, the top-2 completion $$\mathbf{y}_{l,next}$$, the middle-performer $$\mathbf{y}_{l,mid}$$, and the bottom-performer $$\mathbf{y}_{l,last}$$ (which is equivalent to $$\mathbf{y}_l$$ in the previous section).
