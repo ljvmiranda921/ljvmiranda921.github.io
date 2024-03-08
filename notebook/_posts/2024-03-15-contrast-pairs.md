@@ -107,19 +107,6 @@ On the other hand, Berkeley-Nest's Nectar provides a 7-rank scale of preferences
 This allowed me to compute the distance from the first and second choices until the last one: $$\mathbf{d}(\mathbf{y}_1, \mathbf{y}_{2\ldots7})$$.
 Then, I plotted these distances in a histogram (I only retained the curve so that the charts look cleaner) as seen below.
 
-<!-- openai-summarize = 2.042
-shp = 1.967
-
-
-pearson correlation
-openai-summarize = 0.779
-shp = 0.785
-berkeley-nest = 0.818
-
-berkeley-nest = 0.772 -->
-
-<!-- show examples of high distance and low distance? -->
-
 The cosine distances from the **OpenAI Summarization** preference dataset follow a certain pattern:
 completions that are closer in ranking have smaller lexical distance. The average mid ranking is 2.042 (with a 4.109 average number of ranks) and the Pearson correlation between the distances and Elo ranking is 0.779:
 
@@ -135,11 +122,18 @@ The average mid ranking is 1.967 with an average rank number of 4.600.
 
 Below are some examples for each pair configuration:
 
-<iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_berkeley-nest___Nectar_coarse.html"></iframe>
+<!-- <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_berkeley-nest___Nectar_coarse.html"></iframe> -->
+For **Berkeley-Nest's Nectar** dataset, the rankings were already given so I didn't have to compute my own.
+Here, the Pearson correlation is 0.818.
+If you look at the "chosen and rejected (2)" red line, you'll notice that the cosine distances start very small but fall off afterwards.
+It is interesting that completions that performed similarly during matchups are quite similar to one another based on their embeddings.
 
 <iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_berkeley-nest___Nectar_fine.html"></iframe>
 
-To test this observation, I computed the Pearson correlation between the cosine distances of our preference pairs and their Elo rating.
+You can find some examples below:
+
+
+Finally, the figures below show a linechart between a completion's Elo rating (not ranking) versus its cosine distance with respect to the chosen text.
 
 ### Some tasks have more pronounced lexical differences
 
