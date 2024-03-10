@@ -137,7 +137,9 @@ I also measured the Pearson correlation between the rejected text's ranking (and
 The sign (+/-) corresponds to the direction of the correlation. 
 For example, the negative sign in the last column shows that as the text's Elo rating increases, then its lexical distance from the chosen text decreases (i.e., they become more similar).
 
+### Lexical distance is consistent across preference attributes
 
+<iframe width="720" height="600" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_helpsteer_plot.html"></iframe>
 
 
 ### Some tasks have more pronounced lexical differences
