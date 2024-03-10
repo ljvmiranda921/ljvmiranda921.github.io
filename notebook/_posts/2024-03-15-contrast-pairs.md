@@ -25,6 +25,10 @@ In this blog post, I want to offer a different approach: **what if instead of lo
 Sentence embeddings capture a text's lexical and semantic meaning in a high-dimensional vector space.
 If so, can we ascertain lexical differences between chosen and rejected responses _just_ by looking at text embeddings?
 
+One reason why this is important is due to synthetic data.
+I think that it is easier to generate synthetic pairs conditioned on lexical distance (as opposed to some quality-based metric).
+Maybe, there are some tasks and domains where generating with respect to cosine distances is plausible.
+
 ## Getting preference data
 
 First, I sampled preference data across different sources.
@@ -139,11 +143,30 @@ For example, the negative sign in the last column shows that as the text's Elo r
 
 ### Lexical distance is consistent across preference attributes
 
-<iframe width="720" height="600" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_helpsteer_plot.html"></iframe>
+Finally, I was curious how individual attributes of preference manifest in lexical distances using the [HelpSteer](https://huggingface.co/datasets/nvidia/HelpSteer) dataset ([Wang et al., 2023](https://arxiv.org/abs/2311.09528)).
+Most datasets only give us a single view of human judgment, but HelpSteer provides finegrained preferences such as helpfulness, correctness, coherence, complexity, and verbosity.
 
+So, I did the same experiments for each of these attributes and found that the distribution didn't change much.
+I'm not quite confident on how I preprocessed this dataset.
+Unlike other preference datasets that uses matchups, HelpSteer uses scores from 0 to 4 so some texts can end up having the same scores.
+Here, I simply sorted the texts with their score, and designated the chosen text as the first one on the list (whatever Python's sort function made it to be), and the rejected text as the last element.
+You can see the figure below:
 
-### Some tasks have more pronounced lexical differences
+<iframe width="720" height="550" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_helpsteer_plot.html"></iframe>
 
-<!-- check helpsteer -->
+I think that there's still a lot that can be done on this angle.
+One way is to format the data in terms of individual matchups.
+This process leads to a forced ranking, allowing us to easily designate the chosen and rejected pair.
+Since HelpSteer is the only one we have (as far as I know), then I'll leave my analysis as is for now.
 
 ## Final thoughts
+
+In this blog post, I presented a lexical view of preference pairs using embeddings.
+Using different preference datasets, I computed for their sentence embeddings, and then measured the cosine distance between chosen and rejected pairs.
+I found that some datasets exhibit lexical differences and that it correlates to human judgment (i.e., Elo rating).
+Finally, using the HelpSteer dataset, I saw that cosine distances are consistent even on different attributes of preference.
+
+This experiment is really just a curiosity as I work on RLHF.
+I've been doing some experiments on my job that are a little bit orthogonal to this work.
+I think this is just my way of exploring interesting avenues and scratching my itch.
+If you're interested in this type of work, feel free to reach out and discuss!
