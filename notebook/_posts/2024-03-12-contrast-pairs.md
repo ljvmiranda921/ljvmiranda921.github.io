@@ -170,3 +170,5 @@ This experiment is really just a curiosity as I work on RLHF.
 I've been doing some experiments on my job that are a little bit orthogonal to this work.
 I think this is just my way of exploring interesting avenues and scratching my itch.
 If you're interested in this type of work, feel free to reach out and discuss!
+
+You can find the [source code for this work](https://github.com/ljvmiranda921/scratch/tree/master/2024-02-21-contrast-pairs) on GitHub!
