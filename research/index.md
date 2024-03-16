@@ -21,7 +21,7 @@ profiles for more info.
 - [RewardBench: Evaluating Reward Models]() <br> Nathan Lambert, Valentina Pyatkin, Jacob Morrison, <u>LJ Miranda</u>, Bill Yuchen Lin, Khyathi Chandu, Nouha Dziri, Sachin Kumar, Tom Zick, Yejin Choi, Noah A. Smith, and Hannaneh Hajishirzi, *Preprint*. <br> [[Leaderboard](https://huggingface.co/spaces/allenai/reward-bench)] [[Code](https://github.com/allenai/reward-bench)] 
 
 
-- [Allen Institute for AI @ SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages]().  <u>Lester James V. Miranda</u>, *Proceedings of the EACL 6th Workshop on Research in Computational Linguistic Typology and Multilingual NLP*. ACL. St. Julian's, Malta. March 2024. <br> [[Code](https://github.com/ljvmiranda921/LiBERTus)] [[Video](https://www.youtube.com/watch?v=rjOw_G-Rv9I)] 
+- [Allen Institute for AI @ SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages](https://aclanthology.org/2024.sigtyp-1.18/).  <u>Lester James V. Miranda</u>, *Proceedings of the EACL 6th Workshop on Research in Computational Linguistic Typology and Multilingual NLP*. ACL. St. Julian's, Malta. March 2024. <br> [[Code](https://github.com/ljvmiranda921/LiBERTus)] [[Video](https://www.youtube.com/watch?v=rjOw_G-Rv9I)] 
 
 ### 2023
 
