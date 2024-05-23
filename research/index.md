@@ -18,6 +18,9 @@ profiles for more info.
 
 ### 2024
 
+- [The Surprising Complexities of a Simple Task: A Full-Pipeline Study of Human Preference Labeling](). 
+Yizhong Wang\*, <u>LJ Miranda</u>\*, Pradeep Dasigi, Yanai Elazar, Valentina Pyatkin, Sachin Kumar, Faeze Brahman, Noah A. Smith, and Hannaneh Hajishirzi. *Proceedings of the 38th Conference on Neural Information Processing  (NeurIPS) Track on Datasets and Benchmarks*. Vancouver, Canada. December, 2024.
+
 - [RewardBench: Evaluating Reward Models](https://arxiv.org/abs/2403.13787) <br> Nathan Lambert, Valentina Pyatkin, Jacob Morrison, <u>LJ Miranda</u>, Bill Yuchen Lin, Khyathi Chandu, Nouha Dziri, Sachin Kumar, Tom Zick, Yejin Choi, Noah A. Smith, and Hannaneh Hajishirzi. Preprint. *arXiv:2403.13787 [cs.LG]*. March 2024. <br> [[Leaderboard](https://huggingface.co/spaces/allenai/reward-bench)] [[Code](https://github.com/allenai/reward-bench)] [[Blog](https://blog.allenai.org/rewardbench-the-first-benchmark-leaderboard-for-reward-models-used-in-rlhf-1d4d7d04a90b)]
 
 
