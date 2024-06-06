@@ -18,15 +18,22 @@ profiles for more info.
 
 ### 2024
 
-- [Whose Preference is High-Quality? A Full-Pipeline Study of Human Preference Annotation](). 
-Yizhong Wang\*, <u>LJ Miranda</u>\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi. *Proceedings of the 38th Conference on Neural Information Processing  (NeurIPS) Track on Datasets and Benchmarks*. Vancouver, Canada. December, 2024. *(&lowast;: equal contributions)*<br> [[Code]()] [[Dataset]()]
+*At AI2, I worked on various aspects of LM adaptation such as data collection (MultiPref) and evaluation (RewardBench). I also continued collaborations in the multilingual NLP front (SEACrowd, DPIv2). I'm looking forward to combine these two aspects of my research in the future!*
 
-- [RewardBench: Evaluating Reward Models](https://arxiv.org/abs/2403.13787) <br> Nathan Lambert, Valentina Pyatkin, Jacob Morrison, <u>LJ Miranda</u>, Bill Yuchen Lin, Khyathi Chandu, Nouha Dziri, Sachin Kumar, Tom Zick, Yejin Choi, Noah A. Smith, and Hannaneh Hajishirzi. *Proceedings of the 38th Conference on Neural Information Processing  (NeurIPS) Track on Datasets and Benchmarks*. Vancouver, Canada. December, 2024. (Preprint March 2024). <br> [[Leaderboard](https://huggingface.co/spaces/allenai/reward-bench)] [[Code](https://github.com/allenai/reward-bench)] [[Blog](https://blog.allenai.org/rewardbench-the-first-benchmark-leaderboard-for-reward-models-used-in-rlhf-1d4d7d04a90b)]
+- [SEACrowd: Consolidating Open Datasets of Southeast Asian Languages and Cultures](). 
+Holy Lovenia, Samuel Cahyawijaya, Rahmad Mahendra, Salsabil Maulana Akbar, <u>Lester James Miranda</u>, and 55 other authors. *Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing*. Miami, Florida. November, 2024.<br> [[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
+
+- [Through the Looking-Glass: Tracing Shifts in AI Data Consent across the Web](). 
+Shayne Longpre, Robert Mahari, Ariel N. Lee, and 45 other authors (I'm somewhere there). *Proceedings of the 38th Conference on Neural Information Processing  (NeurIPS) Track on Datasets and Benchmarks*. Vancouver, Canada. December, 2024. I contributed in data annotation and adding Southeast Asian datasets to the analyses.
+
+- [RewardBench: Evaluating Reward Models for Language Modelling](https://arxiv.org/abs/2403.13787) <br> Nathan Lambert, Valentina Pyatkin, Jacob Morrison, <u>LJ Miranda</u>, Bill Yuchen Lin, Khyathi Chandu, Nouha Dziri, Sachin Kumar, Tom Zick, Yejin Choi, Noah A. Smith, and Hannaneh Hajishirzi. *Proceedings of the 38th Conference on Neural Information Processing  (NeurIPS) Track on Datasets and Benchmarks*. Vancouver, Canada. December, 2024. (Preprint March 2024). <br> [[Leaderboard](https://huggingface.co/spaces/allenai/reward-bench)] [[Code](https://github.com/allenai/reward-bench)] [[Blog](https://blog.allenai.org/rewardbench-the-first-benchmark-leaderboard-for-reward-models-used-in-rlhf-1d4d7d04a90b)]
 
 
 - [Allen Institute for AI @ SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages](https://aclanthology.org/2024.sigtyp-1.18/).  <u>Lester James V. Miranda</u>, *Proceedings of the EACL 6th Workshop on Research in Computational Linguistic Typology and Multilingual NLP*. ACL. St. Julian's, Malta. March 2024. <br> [[Code](https://github.com/ljvmiranda921/LiBERTus)] [[Video](https://www.youtube.com/watch?v=rjOw_G-Rv9I)] 
 
 ### 2023
+
+*I spent the early parts of 2023 working on low-resource languages and multilinguality, especially Tagalog, my native language. I mostly focused on core NLP tasks: POS tagging, NER, dependency parsing, etc.*
 
 - [calamanCy: a Tagalog Natural Language Processing Toolkit](https://aclanthology.org/2023.nlposs-1.1/) <br> <u>Lester James V. Miranda</u>, *Proceedings of the EMNLP 2023 Workshop on NLP Open Source Software (NLP-OSS)*. EMNLP. Singapore, Singapore. December 2023. 
 <br> [[Code](https://github.com/ljvmiranda921/calamanCy)] [[Poster](/assets/png/calamancy/poster.png)] [[Video](https://youtu.be/2fbzs1KbFTQ?si=_vKEY11Z1Jzuaxeu)]
