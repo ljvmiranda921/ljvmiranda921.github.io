@@ -20,7 +20,7 @@ profiles for more info.
 
 *At AI2, I worked on various aspects of LM adaptation such as data collection (MultiPref) and evaluation (RewardBench). I also continued collaborations in the multilingual NLP front (SEACrowd, DPIv2). I'm looking forward to combine these two aspects of my research in the future!*
 
-- [SEACrowd: Consolidating Open Datasets of Southeast Asian Languages and Cultures](). 
+- [SEACrowd: Multimodal Data Hub and Benchmarks for Southeast Asian Languages](). 
 Holy Lovenia, Samuel Cahyawijaya, Rahmad Mahendra, Salsabil Maulana Akbar, <u>Lester James Miranda</u>, and 55 other authors. *Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing*. Miami, Florida. November, 2024.<br> [[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
 
 - [Through the Looking-Glass: Tracing Shifts in AI Data Consent across the Web](). 
