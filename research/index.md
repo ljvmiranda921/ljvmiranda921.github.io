@@ -15,18 +15,19 @@ Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 [Semantic
 Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
 profiles for more info.
+Items marked with a star (&#9733;) are representative of my current interests.
 
 ### 2024
 
-*At AI2, I worked on various aspects of LM adaptation such as preference data collection (MultiPref) and evaluation (RewardBench). I also continued collaborations in the multilingual NLP front (SEACrowd, DPIv2). I'm looking forward to combine these two aspects of my research in the future!*
+*At AI2, I worked on various aspects of LM adaptation such as preference data collection (MultiPref) and evaluation (RewardBench). I also continued collaborations in the multilingual NLP front (SEACrowd, SIGTYP). I'm looking forward to combine these two aspects of my research in the future!*
 
-- [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](). 
+- &#9733; [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](). 
 Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <u>Lester James Miranda</u>\*, and 55 other authors. *Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing*. Miami, Florida. November, 2024. *(&lowast;: major contributors)*<br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
 
 - [Through the Looking-Glass: Tracing Shifts in AI Data Consent across the Web](). 
 Shayne Longpre, Robert Mahari, Ariel N. Lee, and 45 other authors (I'm somewhere there). *Proceedings of the 38th Conference on Neural Information Processing  (NeurIPS) Track on Datasets and Benchmarks*. Vancouver, Canada. December, 2024. I contributed in data annotation and adding Southeast Asian datasets to the analyses.
 
-- [RewardBench: Evaluating Reward Models for Language Modelling](https://arxiv.org/abs/2403.13787) <br> Nathan Lambert, Valentina Pyatkin, Jacob Morrison, <u>LJ Miranda</u>, Bill Yuchen Lin, Khyathi Chandu, Nouha Dziri, Sachin Kumar, Tom Zick, Yejin Choi, Noah A. Smith, and Hannaneh Hajishirzi. *Proceedings of the 38th Conference on Neural Information Processing  (NeurIPS) Track on Datasets and Benchmarks*. Vancouver, Canada. December, 2024. (Preprint March 2024). <br> [[Leaderboard](https://huggingface.co/spaces/allenai/reward-bench)] [[Code](https://github.com/allenai/reward-bench)] [[Blog](https://blog.allenai.org/rewardbench-the-first-benchmark-leaderboard-for-reward-models-used-in-rlhf-1d4d7d04a90b)]
+- &#9733; [RewardBench: Evaluating Reward Models for Language Modelling](https://arxiv.org/abs/2403.13787) <br> Nathan Lambert, Valentina Pyatkin, Jacob Morrison, <u>LJ Miranda</u>, Bill Yuchen Lin, Khyathi Chandu, Nouha Dziri, Sachin Kumar, Tom Zick, Yejin Choi, Noah A. Smith, and Hannaneh Hajishirzi. *Proceedings of the 38th Conference on Neural Information Processing  (NeurIPS) Track on Datasets and Benchmarks*. Vancouver, Canada. December, 2024. (Preprint March 2024). <br> [[Leaderboard](https://huggingface.co/spaces/allenai/reward-bench)] [[Code](https://github.com/allenai/reward-bench)] [[Blog](https://blog.allenai.org/rewardbench-the-first-benchmark-leaderboard-for-reward-models-used-in-rlhf-1d4d7d04a90b)]
 
 
 - [Allen Institute for AI @ SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages](https://aclanthology.org/2024.sigtyp-1.18/).  <u>Lester James V. Miranda</u>, *Proceedings of the EACL 6th Workshop on Research in Computational Linguistic Typology and Multilingual NLP*. ACL. St. Julian's, Malta. March 2024. <br> [[Code](https://github.com/ljvmiranda921/LiBERTus)] [[Video](https://www.youtube.com/watch?v=rjOw_G-Rv9I)] 
@@ -35,13 +36,13 @@ Shayne Longpre, Robert Mahari, Ariel N. Lee, and 45 other authors (I'm somewhere
 
 *I spent the early parts of 2023 working on low-resource languages and multilinguality, especially Tagalog, my native language. I mostly focused on core NLP tasks: POS tagging, NER, dependency parsing, etc.*
 
-- [calamanCy: a Tagalog Natural Language Processing Toolkit](https://aclanthology.org/2023.nlposs-1.1/) <br> <u>Lester James V. Miranda</u>, *Proceedings of the EMNLP 2023 Workshop on NLP Open Source Software (NLP-OSS)*. EMNLP. Singapore, Singapore. December 2023. 
+- &#9733; [calamanCy: a Tagalog Natural Language Processing Toolkit](https://aclanthology.org/2023.nlposs-1.1/) <br> <u>Lester James V. Miranda</u>, *Proceedings of the EMNLP 2023 Workshop on NLP Open Source Software (NLP-OSS)*. EMNLP. Singapore, Singapore. December 2023. 
 <br> [[Code](https://github.com/ljvmiranda921/calamanCy)] [[Poster](/assets/png/calamancy/poster.png)] [[Video](https://youtu.be/2fbzs1KbFTQ?si=_vKEY11Z1Jzuaxeu)]
 
-- [Developing a Named Entity Recognition Dataset for Tagalog](https://aclanthology.org/2023.sealp-1.2/) <br> <u>Lester James V. Miranda</u>, *Proceedings of the IJCNLP-AACL 2023 Workshop on Southeast Asian Language Processing (SEALP)*. ACL. Nusa Dua, Bali, Indonesia. November 2023.
+- &#9733; [Developing a Named Entity Recognition Dataset for Tagalog](https://aclanthology.org/2023.sealp-1.2/) <br> <u>Lester James V. Miranda</u>, *Proceedings of the IJCNLP-AACL 2023 Workshop on Southeast Asian Language Processing (SEALP)*. ACL. Nusa Dua, Bali, Indonesia. November 2023.
 <br> [[Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark)] [[Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner)] [[Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)] 
 
-- [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://arxiv.org/abs/2311.09122) <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <u>LJ Miranda</u>, Barbara Plank, Arij Riabi, Yuval Pinter. *Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT)*. Mexico City, Mexico. June 2024. (Preprint November 2023). 
+- &#9733; [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://arxiv.org/abs/2311.09122) <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <u>LJ Miranda</u>, Barbara Plank, Arij Riabi, Yuval Pinter. *Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (NAACL-HLT)*. Mexico City, Mexico. June 2024. (Preprint November 2023). 
 <br> [[Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GQ8HDL)] [[Website](https://www.universalner.org/)] 
 
 ### 2022
