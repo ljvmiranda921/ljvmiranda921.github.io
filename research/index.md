@@ -18,10 +18,10 @@ profiles for more info.
 
 ### 2024
 
-*At AI2, I worked on various aspects of LM adaptation such as data collection (MultiPref) and evaluation (RewardBench). I also continued collaborations in the multilingual NLP front (SEACrowd, DPIv2). I'm looking forward to combine these two aspects of my research in the future!*
+*At AI2, I worked on various aspects of LM adaptation such as preference data collection (MultiPref) and evaluation (RewardBench). I also continued collaborations in the multilingual NLP front (SEACrowd, DPIv2). I'm looking forward to combine these two aspects of my research in the future!*
 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](). 
-Holy Lovenia, Rahmad Mahendra, Salsabil Maulana Akbar, <u>Lester James Miranda</u>, and 55 other authors. *Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing*. Miami, Florida. November, 2024.<br> [[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
+Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <u>Lester James Miranda</u>\*, and 55 other authors. *Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing*. Miami, Florida. November, 2024. *(&lowast;: major contributors)*<br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
 
 - [Through the Looking-Glass: Tracing Shifts in AI Data Consent across the Web](). 
 Shayne Longpre, Robert Mahari, Ariel N. Lee, and 45 other authors (I'm somewhere there). *Proceedings of the 38th Conference on Neural Information Processing  (NeurIPS) Track on Datasets and Benchmarks*. Vancouver, Canada. December, 2024. I contributed in data annotation and adding Southeast Asian datasets to the analyses.
@@ -45,6 +45,8 @@ Shayne Longpre, Robert Mahari, Ariel N. Lee, and 45 other authors (I'm somewhere
 <br> [[Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GQ8HDL)] [[Website](https://www.universalner.org/)] 
 
 ### 2022
+
+*My first foray to NLP research is a technical report on spaCy's hash embedding method. I'm lucky to have worked with established researchers in the field.*
 
 - [Multi hash embeddings in spaCy](https://arxiv.org/abs/2212.09255) <br> <u>Lester James V. Miranda</u>\*, &Aacute;kos K&aacute;d&aacute;r\*, Adriane Boyd, Sofie Van Landeghem, Anders S&oslash;gaard, and Matthew Honnibal. Preprint. *arXiv:2212.09255 [cs.CL]*. November 2022. <br> *(&lowast;: equal contributions)*
 <br> [[Code](https://github.com/explosion/projects/tree/v3/benchmarks/ner_embeddings)]
