@@ -50,9 +50,7 @@ I obtained my master's degree from [Waseda
 University](https://www.waseda.jp/top/en) and my bachelor's in Electronics
 Engineering, minor in Philosophy from [Ateneo de Manila
 University](https://www.ateneo.edu). I used to be a bioinformatics researcher
-but moved on to language&mdash; text, like proteins, are sequences after all. My
-research interests include **low-resource and multilingual NLP**, **efficient
-NLP**, and **corpus linguistics**.
+but moved on to language&mdash; text, like proteins, are sequences after all. I'm broadly interested in data-centric approaches in building equitable language technologies for all.
 
 Lastly, I'm well-involved in open-source and have authored [several
 projects](https://github.com/ljvmiranda921) of my own.
@@ -84,7 +82,7 @@ in game development during his free time.
 ## Contact
 
 **Lester James V. Miranda**  
-Seattle, Washington, USA  
+Seattle, WA  
 Email: ljvmiranda [at] gmail [dot] com  
 [Curriculum Vitae (PDF)](https://storage.googleapis.com/ljvmiranda/cv.pdf)
 

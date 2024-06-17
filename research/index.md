@@ -5,10 +5,8 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-I'm broadly interested in building equitable language technologies in the
-presence of severe constraints&mdash; such as the lack of data or compute.
-My current research interests are **low-resource and multilingual NLP**,
-**efficient NLP**, and **corpus linguistics**. 
+I'm broadly interested in data-centric approaches in building equitable language technologies for all.
+My work spans topics such as **low-resource and multilingual NLP**, **language model adaptation**, and **data-centric AI**.
 
 You can also check my [Google
 Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
