@@ -5,7 +5,7 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-I'm broadly interested in data-centric approaches in building equitable language technologies for all.
+I'm broadly interested in data-centric approaches to building equitable language technologies for all.
 My work spans topics such as **low-resource and multilingual NLP**, **language model adaptation**, and **data-centric AI**.
 
 You can also check my [Google

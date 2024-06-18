@@ -50,7 +50,7 @@ I obtained my master's degree from [Waseda
 University](https://www.waseda.jp/top/en) and my bachelor's in Electronics
 Engineering, minor in Philosophy from [Ateneo de Manila
 University](https://www.ateneo.edu). I used to be a bioinformatics researcher
-but moved on to language&mdash; text, like proteins, are sequences after all. I'm broadly interested in data-centric approaches in building equitable language technologies for all.
+but moved on to language&mdash; text, like proteins, are sequences after all. I'm broadly interested in data-centric approaches to building equitable language technologies for all.
 
 Lastly, I'm well-involved in open-source and have authored [several
 projects](https://github.com/ljvmiranda921) of my own.
