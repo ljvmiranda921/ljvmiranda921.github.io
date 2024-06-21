@@ -17,7 +17,7 @@ Items marked with a star (&#9733;) are representative of my current interests.
 
 ### 2024
 
-*At AI2, I worked on various aspects of LM adaptation such as preference data collection (MultiPref) and evaluation (RewardBench). I also continued collaborations in the multilingual NLP front (SEACrowd, SIGTYP). I'm looking forward to combine these two aspects of my research in the future!*
+*At AI2, I worked on various aspects of LM adaptation such as preference data collection (MultiPref) and evaluation (RewardBench). I also expanded my work in the multilingual NLP front (SEACrowd, SIGTYP). I'm looking forward to combine these two aspects of my research in the future!*
 
 - &#9733; [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://arxiv.org/abs/2406.10118). 
 Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <u>Lester James Miranda</u>\*, and 55 other authors. *Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing*. Miami, Florida. November, 2024. *(&lowast;: major contributors)*<br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
