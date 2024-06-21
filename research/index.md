@@ -5,15 +5,29 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-I'm broadly interested in data-centric approaches to building equitable language technologies for all.
-My work spans topics such as **low-resource and multilingual NLP**, **language model adaptation**, and **data-centric AI**.
+I'm interested in how data-centric approaches can systematically improve the construction of NLP datasets and their impact on downstream model performance.
+The hope is, we can improve model performance through rigorous and efficient annotation, analysis of annotator disagreements, and comprehensive benchmarking.
+
+- **Preference data for post-training LMs**: 
+    We often use preference data to align LMs with human values, yet it is a highly-subjective task for humans and even LLM judges. 
+    [Selectively choosing instances]() where humans or LLMs are good at is important, as well as [improving the benchmarks](https://arxiv.org/abs/2403.13787) used to evaluate the reward models trained on these datasets.
+    
+- **NLP resources and evaluation**: 
+
+- **Data-centric perspectives in NLP**:
 
 You can also check my [Google
 Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 [Semantic
 Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
-profiles for more info.
+profiles for more information.
 Items marked with a star (&#9733;) are representative of my current interests.
+
+&nbsp;
+
+---
+
+&nbsp;
 
 ### 2024
 
