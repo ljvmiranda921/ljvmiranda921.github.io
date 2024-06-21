@@ -5,16 +5,21 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-I'm interested in how data-centric approaches can systematically improve the construction of NLP datasets and their impact on downstream model performance.
-The hope is, we can improve model performance through rigorous and efficient annotation, analysis of annotator disagreements, and comprehensive benchmarking.
+I'm interested in how **data-centric** approaches can systematically improve the construction of NLP datasets and their impact on downstream model performance.
+The hope is, we can improve model performance through rigorous and efficient annotation, principled synthetic data generation, and comprehensive benchmarking.
 
 - **Preference data for post-training LMs**: 
     We often use preference data to align LMs with human values, yet it is a highly-subjective task for humans and even LLM judges. 
     [Selectively choosing instances]() where humans or LLMs are good at is important, as well as [improving the benchmarks](https://arxiv.org/abs/2403.13787) used to evaluate the reward models trained on these datasets.
+
+- **Synthetic data generation**:
+    Human annotation is costly and high-effort. 
+
     
 - **NLP resources and evaluation**: 
+    I've worked on several datasets and benchmarks to improve the state of low-resource NLP.
+    These involve [Filipino](https://aclanthology.org/2023.sealp-1.2/) [datasets](https://aclanthology.org/2024.naacl-long.243/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), [benchmarks for Southeast Asian languages](https://arxiv.org/abs/2406.10118), and [more]().
 
-- **Data-centric perspectives in NLP**:
 
 You can also check my [Google
 Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
@@ -31,7 +36,7 @@ Items marked with a star (&#9733;) are representative of my current interests.
 
 ### 2024
 
-*At AI2, I worked on various aspects of LM adaptation such as preference data collection (MultiPref) and evaluation (RewardBench). I also expanded my work in the multilingual NLP front (SEACrowd, SIGTYP). I'm looking forward to combine these two aspects of my research in the future!*
+*At AI2, I worked on various aspects of LM adaptation such as preference data collection (MultiPref) and evaluation (RewardBench). I also expanded my work in the multilingual NLP front (SEACrowd, SIGTYP).*
 
 - &#9733; [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://arxiv.org/abs/2406.10118). 
 Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <u>Lester James Miranda</u>\*, and 55 other authors. *Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing*. Miami, Florida. November, 2024. *(&lowast;: major contributors)*<br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
