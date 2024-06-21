@@ -18,7 +18,7 @@ The hope is, we can improve model performance through rigorous and efficient ann
     
 - **NLP resources and evaluation**: 
     I've worked on several datasets and benchmarks to improve the state of low-resource NLP.
-    These involve [Filipino](https://aclanthology.org/2023.sealp-1.2/) [datasets](https://aclanthology.org/2024.naacl-long.243/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), [benchmarks for Southeast Asian languages](https://arxiv.org/abs/2406.10118), and [more]().
+    These involve [Filipino](https://aclanthology.org/2023.sealp-1.2/) [datasets](https://aclanthology.org/2024.naacl-long.243/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), [multilingual and multimodal benchmarks for Southeast Asian languages](https://arxiv.org/abs/2406.10118), and [more]().
 
 
 You can also check my [Google
