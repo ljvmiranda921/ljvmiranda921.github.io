@@ -6,20 +6,16 @@ permalink: /research/
 ---
 
 I'm interested in how **data-centric** approaches can systematically improve the construction of NLP datasets and their impact on downstream model performance.
-The hope is, we can improve model performance through rigorous and efficient annotation, principled synthetic data generation, and comprehensive benchmarking.
+The hope is, we can achieve state-of-the-art performance through rigorous and efficient annotation, principled synthetic data generation, and comprehensive benchmarking.
 
-- **Preference data for post-training LMs**: 
-    We often use preference data to align LMs with human values, yet it is a highly-subjective task for humans and even LLM judges. 
-    [Selectively choosing instances]() where humans or LLMs are good at is important, as well as [improving the benchmarks](https://arxiv.org/abs/2403.13787) used to evaluate the reward models trained on these datasets.
+- **Understanding human-LM alignment**: 
+    Instruction-tuned models undergo preference learning to further align with human values.
+    I'm interested in how we should [collect and define]() these values and preferences, as well as how we can [properly evaluate reward models](https://arxiv.org/abs/2403.13787) trained on these datasets.
 
-- **Synthetic data generation**:
-    Human annotation is costly and high-effort. 
-
-    
 - **NLP resources and evaluation**: 
-    No language should be left behind, especially with data. 
+    No language should be left behind, especially regarding data. 
     I've worked on several datasets and benchmarks to improve the state of low-resource NLP.
-    These involve [Filipino](https://aclanthology.org/2023.sealp-1.2/) [datasets](https://aclanthology.org/2024.naacl-long.243/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), [multilingual and multimodal benchmarks for Southeast Asian languages](https://arxiv.org/abs/2406.10118), and [more]().
+    These projects involve [Filipino](https://aclanthology.org/2023.sealp-1.2/) [datasets](https://aclanthology.org/2024.naacl-long.243/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), [multilingual and multimodal benchmarks for Southeast Asian languages](https://arxiv.org/abs/2406.10118), and [more]().
 
 
 You can also check my [Google
