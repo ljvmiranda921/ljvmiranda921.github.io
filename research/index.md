@@ -12,6 +12,11 @@ The hope is, we can achieve state-of-the-art performance through rigorous and ef
     Instruction-tuned models undergo preference learning to further align with human values.
     I'm interested in how we should [efficiently and reliably collect]() these preferences, as well as how we can [properly evaluate reward models](https://arxiv.org/abs/2403.13787) trained on these datasets.
 
+- **Efficient annotation and synthetic data generation**:
+    Human annotation costs a lot of money and effort.
+    How can we leverage language models to streamline this process while still approximating human-quality annotations?
+    I explored this question in the context of [preference]() and multilingual data.
+
 - **Resources and evaluation**: 
     No language should be left behind, especially with data. 
     I've worked on several datasets and benchmarks to improve the state of low-resource and multilingual NLP.
