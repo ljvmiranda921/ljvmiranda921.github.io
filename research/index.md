@@ -10,7 +10,7 @@ The hope is, we can achieve state-of-the-art performance through rigorous and ef
 
 - **Understanding human-LM alignment**: 
     Instruction-tuned models undergo preference learning to further align with human values.
-    I'm interested in how we should [efficiently and reliably collect]() these preferences, as well as how we can [properly evaluate reward models](https://arxiv.org/abs/2403.13787) trained on these datasets.
+    I'm interested in how we should [reliably collect]() these preferences, as well as how we can [properly evaluate reward models](https://arxiv.org/abs/2403.13787) trained on these datasets.
 
 - **Efficient annotation and synthetic data generation**:
     Human annotation costs a lot of money and effort.
