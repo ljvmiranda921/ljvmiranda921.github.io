@@ -12,10 +12,10 @@ The hope is, we can achieve state-of-the-art performance through rigorous and ef
     Instruction-tuned models undergo preference learning to further align with human values.
     I'm interested in how we should [collect and define]() these values and preferences, as well as how we can [properly evaluate reward models](https://arxiv.org/abs/2403.13787) trained on these datasets.
 
-- **NLP resources and evaluation**: 
+- **Resources and evaluation**: 
     No language should be left behind, especially regarding data. 
-    I've worked on several datasets and benchmarks to improve the state of low-resource NLP.
-    These projects involve [Filipino](https://aclanthology.org/2023.sealp-1.2/) [datasets](https://aclanthology.org/2024.naacl-long.243/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), [multilingual and multimodal benchmarks for Southeast Asian languages](https://arxiv.org/abs/2406.10118), and [more]().
+    I've worked on several datasets and benchmarks to improve the state of low-resource and multilingual NLP.
+    These projects involve Filipino [datasets](https://aclanthology.org/2023.sealp-1.2/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), multilingual benchmarks for [Southeast Asia](https://arxiv.org/abs/2406.10118) and [beyond](https://arxiv.org/abs/2406.10118), and [more]().
 
 
 You can also check my [Google
