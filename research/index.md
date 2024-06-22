@@ -22,19 +22,19 @@ The hope is, we can achieve state-of-the-art performance through rigorous and ef
     I've worked on several datasets and benchmarks to improve the state of low-resource and multilingual NLP.
     These projects involve Filipino [datasets](https://aclanthology.org/2023.sealp-1.2/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), multilingual benchmarks for [Southeast Asia](https://arxiv.org/abs/2406.10118) and [beyond](https://arxiv.org/abs/2406.10118), and [more]().
 
+&nbsp;
 
+---
+
+&nbsp;
+
+Below is a list of my publications, sorted by year.
 You can also check my [Google
 Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 [Semantic
 Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
 profiles for more information.
 Items marked with a star (&#9733;) are representative of my current interests.
-
-&nbsp;
-
----
-
-&nbsp;
 
 ### 2024
 
