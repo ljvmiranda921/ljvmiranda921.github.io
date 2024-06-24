@@ -47,7 +47,7 @@ Items marked with a star (&#9733;) are representative of my current interests.
 
 - [Through the Looking-Glass: Tracing Shifts in AI Data Consent across the Web]() 
 <br>*NeurIPS D&B '24*
-<br>Shayne Longpre, Robert Mahari, Ariel N. Lee, and 45 other authors (I'm somewhere there). I contributed in data annotation and adding Southeast Asian datasets to the analyses.
+<br>Shayne Longpre, Robert Mahari, Ariel N. Lee, and 45 other authors (I'm somewhere there). I contributed in data annotation and adding Southeast Asian datasets to the collection.
 
 - &#9733; [RewardBench: Evaluating Reward Models for Language Modelling](https://arxiv.org/abs/2403.13787)
 <br>*NeurIPS D&B '24, ArXiV '24*
