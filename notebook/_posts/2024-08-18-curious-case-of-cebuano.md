@@ -22,3 +22,13 @@ The reason why Cebuano Wikipedia is inundated with articles is because of [lsjbo
 
 Unfortunately, most datasets we use for training large language models contain texts from Wikipedia.
 How will this affect generation quality if a portion of our training data was written by bots? Does it even matter?
+
+## The extent of bot-like texts in pretraining
+
+I was curious how big the
+
+## Supervised finetuning (SFT) on Cebuano instructions
+
+### Comparing with other models
+
+## How about you try it yourself?
