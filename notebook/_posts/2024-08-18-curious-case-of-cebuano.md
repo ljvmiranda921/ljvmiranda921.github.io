@@ -23,6 +23,12 @@ The reason why Cebuano Wikipedia is inundated with articles is because of [lsjbo
 Unfortunately, most datasets we use for training large language models contain texts from Wikipedia.
 How will this affect generation quality if a portion of our training data was written by bots? Does it even matter?
 
+## A thing or two about Cebuano
+
+Cebuano is a language spoken in the Visayan region of the Philippines.
+It is part of the Visayan group of languages, including Hiligaynon, Karay-a, Boholano, and more.
+My mom's side of the family speaks Ilonggo, and I don't understand anything they say as a Tagalog speaker.
+
 ## The extent of bot-like texts in pretraining
 
 I was curious how big the
