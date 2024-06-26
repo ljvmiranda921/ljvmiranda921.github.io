@@ -68,7 +68,7 @@ Items marked with a star (&#9733;) are representative of my current interests.
 <br> [[Code](https://github.com/ljvmiranda921/calamanCy)] [[Poster](/assets/png/calamancy/poster.png)] [[Video](https://youtu.be/2fbzs1KbFTQ?si=_vKEY11Z1Jzuaxeu)]
 
 - &#9733; [Developing a Named Entity Recognition Dataset for Tagalog](https://aclanthology.org/2023.sealp-1.2/)
-<br>*Southeast Asian Language Processing (SEALP) Workshop @ AACL '23* 
+<br>*Southeast Asian Language Processing (SEALP) Workshop @ IJCNLP-AACL '23* 
 <br> <u>Lester James V. Miranda</u>
 <br> [[Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark)] [[Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner)] [[Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)] 
 
