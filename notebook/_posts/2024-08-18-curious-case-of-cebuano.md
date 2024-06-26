@@ -16,11 +16,11 @@ description: |
 ---
 
 <span class="firstcharacter">D</span>id you know that Cebuano is the [second most dominant language in Wikipedia](https://simple.wikipedia.org/wiki/Cebuano_Wikipedia)?
-It has around 6,117,000 articles, almost 13,000% more than Tagalog!
+It has around 6,117,000 articles, almost **13,000%** more than Tagalog!
 However, this statistic is not because of an active volunteer community in the Philippines.
 The reason why Cebuano Wikipedia is inundated with articles is because of [lsjbot](https://en.wikipedia.org/wiki/Lsjbot), an automated bot that creates wikis on living organisms and geographical entities.
 
-Unfortunately, most datasets we use for training large language models contain texts from Wikipedia.
+Most datasets we use for training large language models contain texts from Wikipedia.
 How will this affect generation quality if a portion of our training data was written by bots? Does it even matter?
 
 ## A thing or two about Cebuano
