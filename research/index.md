@@ -15,7 +15,7 @@ I've tackled this problem across the following areas:
     Instruction-tuned models undergo preference learning to further align with human values.
     I'm interested in how we should [reliably collect]() these preferences, as well as how we can [properly evaluate reward models](https://arxiv.org/abs/2403.13787) trained on these datasets.
 
-- **Resources and evaluation**: 
+- **Multilinguality**: 
     No language should be left behind, especially with data. 
     I've worked on several datasets and benchmarks to improve the state of low-resource and multilingual NLP.
     These projects involve Filipino [datasets](https://aclanthology.org/2023.sealp-1.2/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), multilingual benchmarks for [Southeast Asia](https://arxiv.org/abs/2406.10118) and [beyond](https://arxiv.org/abs/2406.10118), and [more]().
@@ -26,12 +26,12 @@ I've tackled this problem across the following areas:
 
 &nbsp;
 
-Below is a list of my publications, sorted by year.
+Below is a list of my publications.
 You can also check my [Google
 Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 [Semantic
 Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
-profiles for more information.
+profiles for more info.
 Items marked with a star (&#9733;) are representative of my current interests.
 
 ### 2024
