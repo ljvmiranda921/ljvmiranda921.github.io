@@ -5,17 +5,15 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-I'm interested in how **data-centric** approaches can systematically improve the construction of NLP datasets and their impact on downstream model performance.
-The hope is, we can achieve state-of-the-art performance through rigorous and efficient annotation, principled synthetic data generation, and comprehensive benchmarking.
+As they often say in computer science: [garbage in, garbage out](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out).
+I'm particularly interested in **data-centric** techniques aimed at improving datasets rather than models.
+This means <u>building reliable and high-quality datasets</u> for training models, 
+and <u>constructing benchmarks</u> that faithfully evaluate things we care about.
+I've tackled this problem across the following areas:
 
-- **Understanding human-LM alignment**: 
+- **LLM post-training**: 
     Instruction-tuned models undergo preference learning to further align with human values.
     I'm interested in how we should [reliably collect]() these preferences, as well as how we can [properly evaluate reward models](https://arxiv.org/abs/2403.13787) trained on these datasets.
-
-- **Efficient annotation and synthetic data generation**:
-    Human annotation costs a lot of money and effort.
-    How can we leverage language models to streamline this process while still approximating human-quality annotations?
-    I explored this question in the context of [preference]() and multilingual data.
 
 - **Resources and evaluation**: 
     No language should be left behind, especially with data. 
