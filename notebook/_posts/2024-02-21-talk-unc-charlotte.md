@@ -24,7 +24,8 @@ excerpt: |
 <span class="firstcharacter">A</span> few weeks ago, I held a guest lecture in the DSBA 6188: Text Mining and Information Retrieval Class at UNC Charlotte on using large language models (LLMs) for annotation. 
 It was fun because I could expand my previous blog posts on LLM annotation into a full-fledged lecture.
 
-This blog post is my (abridged) lecture in written format. You can find the slides [here](https://docs.google.com/presentation/d/1uGoI8meg66gATzim03ZQlQsvQHYUFw2SDetiAosaNzA/edit?usp=sharing).
+This blog post is my (abridged) lecture in written format. 
+**You can find the slides in this [link](https://docs.google.com/presentation/d/1uGoI8meg66gATzim03ZQlQsvQHYUFw2SDetiAosaNzA/edit?usp=sharing).**
 Finally, thanks to [Ryan Wesslen](https://twitter.com/ryanwesslen) and [Chang Hsin Lee](https://twitter.com/ChangLeeTW) for inviting me!
 <!-- You can also watch the live recording [here](https://youtu.be/bKKlx46MopQ?si=Iul6PnApqr6IknwI). -->
 &nbsp;
