@@ -28,6 +28,9 @@ This blog post is my (abridged) lecture in written format.
 **You can find the slides in this [link](https://docs.google.com/presentation/d/1uGoI8meg66gATzim03ZQlQsvQHYUFw2SDetiAosaNzA/edit?usp=sharing).**
 Finally, thanks to [Ryan Wesslen](https://twitter.com/ryanwesslen) and [Chang Hsin Lee](https://twitter.com/ChangLeeTW) for inviting me!
 <!-- You can also watch the live recording [here](https://youtu.be/bKKlx46MopQ?si=Iul6PnApqr6IknwI). -->
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRbvp2rKHC9B5fm7IvDz_k0y4odjLsSnsTJPJMGsJnE51v1o1KTC7uGK9BcFPfiQ2JkiJwiGDyw_zM5/embed?start=false&loop=true&delayms=3000" frameborder="0" width="720" height="434" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 &nbsp;
 
 ---
