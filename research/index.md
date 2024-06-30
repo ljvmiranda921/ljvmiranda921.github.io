@@ -18,7 +18,7 @@ I've tackled this problem across the following areas:
 - **Multilinguality**: 
     No language should be left behind, especially with data. 
     I've worked on several datasets and benchmarks to improve the state of low-resource and multilingual NLP.
-    These projects involve Filipino [datasets](https://aclanthology.org/2023.sealp-1.2/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), multilingual benchmarks for [Southeast Asia](https://arxiv.org/abs/2406.10118) and [beyond](https://arxiv.org/abs/2406.10118), and [more]().
+    These projects involve Filipino [datasets](https://aclanthology.org/2023.sealp-1.2/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), multilingual benchmarks for [Southeast Asia](https://arxiv.org/abs/2406.10118) and [beyond](unc-charlotte), and [more]().
 
 &nbsp;
 
