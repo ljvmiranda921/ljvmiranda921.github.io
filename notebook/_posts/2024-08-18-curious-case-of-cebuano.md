@@ -32,9 +32,12 @@ The major difference between Cebuano and Tagalog is the lexicon: they have large
 These differences often make for some funny interactions, such as _langgam_ which means "an ant" in Tagalog but "a bird" in Cebuano, or _libog_ which means "to be aroused" in Tagalog but "to be confused" in Cebuano.
 Despite that, there are syntactical similarities betwen the two: both follow a verb-subject-object order and has an actor- or object-focus.
 
-## The extent of bot-like texts in pretraining
+## The extent of bot-like texts in training
 
 I was curious how big the
+
+![](/assets/png/curious-case-of-cebuano/dataset_distrib.png){:width="600px"}
+{: style="text-align: center;"}
 
 ## Supervised finetuning (SFT) on Cebuano instructions
 
