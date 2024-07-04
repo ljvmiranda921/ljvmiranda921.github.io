@@ -41,18 +41,14 @@ I ran it on a sample of the [Aya Collection's Cebuano training split](https://hu
 ![](/assets/png/curious-case-of-cebuano/dataset_distrib.png){:width="600px"}  
 {: style="text-align: center;"}
 
-There is definitely a considerable amount of machine-translated examples.
-
-
-
-Compared to Tagalog, Cebuano actually has way more training instances (4.12M vs. 1.46k) in Aya.
+There is definitely a considerable amount of machine-translated examples here.
+Compared to the Filipino subset, Cebuano actually has way more training instances (4.12M vs. 1.46k) in Aya.
 My hunch is that most of these are coming from Wikipedia, which we already know has a lot of bot-like or machine-generated text.
 I spent some time tracing the data provenance of the Aya subsets and arrived at the following:
 
-
 <!-- data provenance? -->
 
-## Supervised finetuning (SFT) on Cebuano instructions
+## Supervised finetuning (SFT) on Cebuano
 
 ### Comparing with other models
 
