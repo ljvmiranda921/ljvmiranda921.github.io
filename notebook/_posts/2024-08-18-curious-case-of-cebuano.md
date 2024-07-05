@@ -19,8 +19,8 @@ It has around 6,117,000 articles, almost 13,000% more than Tagalog!
 However, this statistic is not because of an active volunteer community in the Philippines.
 The reason why Cebuano Wikipedia is inundated with articles is because of [lsjbot](https://en.wikipedia.org/wiki/Lsjbot), an automated bot that creates wikis of living organisms and geographical entities.
 
-Unfortunately, most datasets we use for training large language models contain texts from Wikipedia.
-How will this affect generation quality if a portion of our training data was written by bots? Does it even matter?
+Because Cebuano is a low to middle-resource language, most of the texts that we can use to train Cebuano-based LMs aren't naturally written by humans&mdash; instead, they were translated from English by another model.
+I'm curious if this affects generation quality, so join me as we unravel the curious case of Cebuano!
 
 ## A thing or two about Cebuano
 
@@ -28,23 +28,26 @@ Cebuano is a language spoken in the Visayan region of the Philippines.
 It is part of the Visayan group of languages, including Hiligaynon, Karay-a, Boholano, and more.
 It is also the [second most widely spoken native language](https://en.wikipedia.org/wiki/Languages_of_the_Philippines) in the Philippines with over 28.9M speakers.
 
-The major difference between Cebuano and Tagalog is the lexicon: they have largely different vocabularies making them mutually unintelligible.
+The major difference between Cebuano and Tagalog is their lexicon: each language have different vocabularies, making them mutually unintelligible.
 These differences often make for some funny interactions, such as _langgam_ which means "an ant" in Tagalog but "a bird" in Cebuano, or _libog_ which means "to be aroused" in Tagalog but "to be confused" in Cebuano.
 Despite that, there are syntactical similarities betwen the two: both follow a verb-subject-object order and has an actor- or object-focus.
 
 ## The extent of bot-like texts in training
 
-First, I want to check how much of the Cebuano training data contains machine-generated text.
-Luckily, the SEACrowd folks trained [a model that detects translationese](https://huggingface.co/SEACrowd/mdeberta-v3_sea_translationese) across 9 Southeast Asian languages.
-I ran it on a sample of the [Aya Collection's Cebuano training split](https://huggingface.co/datasets/CohereForAI/aya_collection_language_split/viewer/cebuano) and arrived at the chart below:
+My goal is to train an instruction-finetuned (IFT) model using the Cebuano subset of [the Aya Collection](https://huggingface.co/datasets/CohereForAI/aya_collection_language_split/viewer/cebuano).
+This subset is composed of texts from well-known question-answering (QA) datasets.
+**However, a significant portion of this subset also contains translated texts.**
+Even so, I'm still curious if these translations are of human- or bot-like quality.
+I used a [translationese classifier](https://huggingface.co/SEACrowd/mdeberta-v3_sea_translationese) trained on 9 Southeast Asian languages (including Cebuano) from the [SEACrowd project](https://arxiv.org/pdf/2406.10118).
+I ran it on a sample of the Aya Collection and arrived at the chart below:
 
 ![](/assets/png/curious-case-of-cebuano/dataset_distrib.png){:width="600px"}  
 {: style="text-align: center;"}
 
-There is definitely a considerable amount of machine-translated examples here.
+
+<!-- There is definitely a considerable amount of machine-translated examples here.
 Compared to the Filipino subset, Cebuano actually has way more training instances (4.12M vs. 1.46k) in Aya.
-My hunch is that most of these are coming from Wikipedia, which we already know has a lot of bot-like or machine-generated text.
-I spent some time tracing the data provenance of the Aya subsets and arrived at the following:
+My hunch is that most of these are coming from Wikipedia, which we already know has a lot of bot-like or machine-generated text. -->
 
 <!-- data provenance? -->
 
