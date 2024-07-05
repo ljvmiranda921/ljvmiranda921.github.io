@@ -7,8 +7,9 @@ permalink: /research/
 
 As they often say in computer science: [garbage in, garbage out](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out).
 I'm particularly interested in **data-centric** techniques aimed at improving datasets instead of models.
-This means <u>building reliable and high-quality datasets</u> for training, <u>finding cost-efficient ways</u> of collecting data, 
-and <u>constructing benchmarks</u> that faithfully evaluate things we care about.
+This approach is crucial as we face diminishing returns from model scaling and increasing concerns about AI reliability and fairness.
+
+By focusing on <u>building reliable and high-quality datasets</u> for training, <u>finding cost-efficient ways</u> of collecting data, and <u>constructing benchmarks</u> that faithfully evaluate things we care about, we can address fundamental challenges in AI development and deployment. 
 I've tackled this problem across the following areas:
 
 - **LLM post-training**: 
