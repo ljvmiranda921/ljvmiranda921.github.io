@@ -5,12 +5,11 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-As they often say in computer science: [garbage in, garbage out](https://en.wikipedia.org/wiki/Garbage_in,_garbage_out).
-I'm particularly interested in **data-centric** techniques aimed at improving datasets instead of models.
-This approach is crucial as we face diminishing returns from model scaling and increasing concerns about AI reliability and fairness.
+My primary research interest focuses on **data-centric techniques aimed at improving how we construct datasets and benchmarks** for training and evaluating language models.
+This focus is crucial as we face diminishing returns from model scaling and growing concerns about LM reliability and fairness. 
 
-By focusing on <u>building reliable and high-quality datasets</u> for training, <u>finding cost-efficient ways</u> of collecting data, and <u>constructing benchmarks</u> that faithfully evaluate things we care about, we can address fundamental challenges in AI development and deployment. 
-I've tackled this problem across the following areas:
+More specifically, I’m interested in how data-centric techniques can benefit (i) **post-training of large language models** (LLMs), and (ii) expanding model capabilities for **multilingual and low-resource use-cases**.
+
 
 - **LLM post-training**: 
     Instruction-tuned models undergo preference learning to further align with human values.
