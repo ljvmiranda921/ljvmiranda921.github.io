@@ -50,6 +50,8 @@ For now, let's use what we have and try training a Cebuano LM!
 
 ## Instruction finetuning (IFT) on Cebuano
 
+<!-- make a diagram -->
+
 ### Comparing with other models
 
 ## How about you try it yourself?
