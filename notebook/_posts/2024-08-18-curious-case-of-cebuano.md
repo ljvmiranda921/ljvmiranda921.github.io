@@ -44,14 +44,11 @@ I ran it on a sample of the Aya Collection and arrived at the chart below:
 ![](/assets/png/curious-case-of-cebuano/dataset_distrib.png){:width="600px"}  
 {: style="text-align: center;"}
 
+So even if all of these datasets were translated, a good portion of them still has natural, human-like quality texts.
+Unfortunately we don't have a full-natural Cebuano dataset to compare upon, but it's nice to see that the classifier still detected some instances as such.
+For now, let's use what we have and try training a Cebuano LM!
 
-<!-- There is definitely a considerable amount of machine-translated examples here.
-Compared to the Filipino subset, Cebuano actually has way more training instances (4.12M vs. 1.46k) in Aya.
-My hunch is that most of these are coming from Wikipedia, which we already know has a lot of bot-like or machine-generated text. -->
-
-<!-- data provenance? -->
-
-## Supervised finetuning (SFT) on Cebuano
+## Instruction finetuning (IFT) on Cebuano
 
 ### Comparing with other models
 
