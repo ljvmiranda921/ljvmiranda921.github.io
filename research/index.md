@@ -8,7 +8,7 @@ permalink: /research/
 I'm interested in **how we can use data-centric techniques to improve the construction of datasets and benchmarks** for training and evaluating large language models.
 Focusing on data instead of models is crucial, as we face diminishing returns from model scaling and growing concerns about model reliability and fairness. 
 
-My goal is to develop systematic methodologies for resource creation while actively building new datasets and benchmarks to enhance language model training and evaluation.
+My goal is to <u>develop systematic methodologies for resource creation</u> while actively <u>building new datasets and benchmarks</u> to enhance language model training and evaluation.
 More concretely, I'm interested in the following areas:
 
 - **Efficient approaches to annotation**:
