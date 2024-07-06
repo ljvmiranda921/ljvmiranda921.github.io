@@ -5,10 +5,10 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-My primary research interest focuses on **data-centric techniques aimed at improving how we construct datasets and benchmarks** for training and evaluating language models.
-This focus is crucial as we face diminishing returns from model scaling and growing concerns about LM reliability and fairness. 
+I'm interested in **data-centric techniques aimed at improving how we construct datasets and benchmarks** for training and evaluating language models (LMs).
+This focus is crucial as we face diminishing returns from model scaling and growing concerns about model reliability and fairness. 
 
-More specifically, I’m interested in how data-centric techniques can benefit (i) **post-training of large language models** (LLMs), and (ii) expanding model capabilities for **multilingual and low-resource use-cases**.
+More specifically, I’m interested in how data-centric techniques can benefit (i) <u>post-training of large language models</u> (LLMs), and (ii) expanding model capabilities for <u>multilingual and low-resource use-cases</u>.
 
 
 - **LLM post-training**: 
