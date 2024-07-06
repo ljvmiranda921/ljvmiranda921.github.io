@@ -23,7 +23,7 @@ More concretely, I'm interested in the following areas:
     How can we design benchmarks that accurately reflect the true capabilities and limitations of LLMs?
     I've explored this question in the context of [evaluating reward models](https://arxiv.org/abs/2403.13787), and in multilinguality as in the case of [Southeast Asian languages](https://arxiv.org/abs/2406.10118).
 
-If you are interested in these types of research, or have ideas to improve the state of Filipino NLP, then please do not hesitate to [reach out](mailto:ljvmiranda@gmail.com)! 
+If you are interested in these types of research, especially in improving the state of Filipino NLP, then please do not hesitate to [reach out](mailto:ljvmiranda@gmail.com)! 
 I'm happy to discuss my works and collaborate! 
 
 &nbsp;
