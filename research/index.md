@@ -8,16 +8,20 @@ permalink: /research/
 I'm interested in **how we can use data-centric techniques to improve the construction of datasets and benchmarks** for training and evaluating large language models.
 Focusing on data instead of models is crucial, as we face diminishing returns from model scaling and growing concerns about model reliability and fairness. 
 
-More specifically, I’m interested in how data-centric techniques can benefit (i) <u>post-training of large language models</u>, and (ii) expansion of model capabilities for <u>multilingual and low-resource use-cases</u>.
+My goal is to develop systematic methodologies for resource creation while actively building new datasets and benchmarks to enhance language model training and evaluation.
+More concretely, I'm interested in the following areas:
 
-- **LLM post-training**: 
-    Instruction-tuned models undergo preference learning to further align with human values.
-    I'm interested in how we should [reliably collect]() these preferences, as well as how we can [properly evaluate reward models](https://arxiv.org/abs/2403.13787) trained on these datasets.
+- **Efficient approaches to annotation**:
+    Human annotations are costly. How can we reduce this cost while preserving the nuance that human annotators provide? I'm currently exploring this question in the context of human preferences and synthetic data generation for LLM post-training.
 
-- **Multilinguality**: 
+- **Resources for multilingual NLP**: 
     No language should be left behind, especially with data. 
-    I've worked on several datasets and benchmarks to improve the state of low-resource and multilingual NLP.
-    These projects involve Filipino [datasets](https://aclanthology.org/2023.sealp-1.2/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), multilingual benchmarks for [Southeast Asia](https://arxiv.org/abs/2406.10118) and [beyond](https://aclanthology.org/2024.naacl-long.243/), and [more]().
+    I've worked on several datasets to improve the state of low-resource and multilingual NLP.
+    These projects involve Filipino [datasets](https://aclanthology.org/2023.sealp-1.2/) & [tooling](https://aclanthology.org/2023.nlposs-1.1/), and [large-scale multilingual datasets](https://aclanthology.org/2024.naacl-long.243/).
+
+- **Faithful benchmarks of model capabilities**:
+    How can we design benchmarks that accurately reflect the true capabilities and limitations of LLMs?
+    I've explored this question in the context of [evaluating reward models](https://arxiv.org/abs/2403.13787), and in multilinguality as in the case of [Southeast Asian languages](https://arxiv.org/abs/2406.10118).
 
 If you are interested in these types of research, or have ideas to improve the state of Filipino NLP, then please do not hesitate to [reach out](mailto:ljvmiranda@gmail.com)! 
 I'm happy to discuss my works and collaborate! 
