@@ -10,7 +10,6 @@ Focusing on data instead of models is crucial, as we face diminishing returns fr
 
 More specifically, I’m interested in how data-centric techniques can benefit (i) <u>post-training of large language models</u>, and (ii) expansion of model capabilities for <u>multilingual and low-resource use-cases</u>.
 
-
 - **LLM post-training**: 
     Instruction-tuned models undergo preference learning to further align with human values.
     I'm interested in how we should [reliably collect]() these preferences, as well as how we can [properly evaluate reward models](https://arxiv.org/abs/2403.13787) trained on these datasets.
@@ -19,6 +18,9 @@ More specifically, I’m interested in how data-centric techniques can benefit (
     No language should be left behind, especially with data. 
     I've worked on several datasets and benchmarks to improve the state of low-resource and multilingual NLP.
     These projects involve Filipino [datasets](https://aclanthology.org/2023.sealp-1.2/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), multilingual benchmarks for [Southeast Asia](https://arxiv.org/abs/2406.10118) and [beyond](https://aclanthology.org/2024.naacl-long.243/), and [more]().
+
+If you are interested in these types of research, or have ideas to improve the state of Filipino NLP, then please do not hesitate to [reach out](mailto:ljvmiranda@gmail.com)! 
+I'm happy to discuss my works and collaborate! 
 
 &nbsp;
 
