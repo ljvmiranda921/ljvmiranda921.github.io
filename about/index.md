@@ -21,50 +21,6 @@ here, so go grab yourself a coffee and feel free to look around!
 Other links: [[Game Dev](https://ljvmiranda921.itch.io)] [[Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery)]
 
 
-## Background
-
-I'm a [Predoctoral Young
-Investigator](https://allenai.org/predoctoral-young-investigators) at the [Allen
-Institute for Artificial Intelligence (AI2)](https://allenai.org) as part of the
-[AllenNLP team](https://allenai.org/allennlp). Previously, I've worked at the
-following places:
-
-* [Explosion](https://explosion.ai) (Berlin): a natural language processing
-    startup where I worked on the 
-    open-source [spaCy](https://spacy.io) library and the
-    [Prodigy](https://prodi.gy) annotation tool. I co-authored our [first technical
-    report](https://arxiv.org/abs/2212.09255) and developed several features and
-    projects for our software libraries.
-    
-* [Thinking Machines Data Science](https://thinkingmachin.es) (Manila): a data 
-    science consultancy where I built multiple natural language processing
-    products for large enterprises. I worked with several of our biggest clients
-    in Southeast Asia and led teams in the Document AI space.
-
-* [Preferred Networks](https://www.preferred-networks.jp/en/) (Tokyo): as an
-    intern, I implemented a training parallelization framework for
-    [ChainerRL](https://github.com/chainer/chainerrl), an open-source
-    reinforcement learning library.
-
-I obtained my master's degree from [Waseda
-University](https://www.waseda.jp/top/en) and my bachelor's in Electronics
-Engineering, minor in Philosophy from [Ateneo de Manila
-University](https://www.ateneo.edu). I used to be a bioinformatics researcher
-but moved on to language&mdash; text, like proteins, are sequences after all. I'm broadly interested in data-centric approaches to building equitable language technologies for all.
-
-Lastly, I'm well-involved in open-source and have authored [several
-projects](https://github.com/ljvmiranda921) of my own.
-[Pyswarms](https://github.com/ljvmiranda921/pyswarms) has been quite
-successful; I've seen it being used in [quantum
-physics](https://arxiv.org/abs/1801.07686),
-[chemistry](https://pubs.acs.org/doi/abs/10.1021/acscentsci.8b00307), and
-[teaching](https://www.gousios.gr/courses/algo-ds/optimizations.html), amongst
-[other
-things](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15267041073198929167).
-I love indie games and [dabble in game
-development](https://ljvmiranda921.itch.io) using [Pico-8](https://www.lexaloffle.com/pico-8.php) and
-[Godot](https://godotengine.org/).
-
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 <b>Short background</b><br>
 Lj Miranda specializes in natural language processing with over five years of
@@ -72,12 +28,6 @@ experience in consulting, open-source development, and research. He helped
 maintain notable open-source libraries such as spaCy and Pyswarms. He dabbles
 in game development during his free time.
 </p>
-
-
-<!--
-![](/about/aws_community_builder.png){:width="100px"}
-[![](/about/google_data_engineer.png){:width="100px"}](https://www.credential.net/d17f92a5-a21e-41d5-acb0-81d76e3f3e68)
--->
 
 ## Contact
 
