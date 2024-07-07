@@ -38,7 +38,8 @@ My goal is to train an instruction-finetuned (IFT) model using the Cebuano subse
 This subset is composed of texts from well-known question-answering (QA) datasets.
 **However, a significant portion of this subset also contains translated texts.**
 Even so, I'm still curious if these translations are of human- or bot-like quality.
-I used a [translationese classifier](https://huggingface.co/SEACrowd/mdeberta-v3_sea_translationese) trained on 9 Southeast Asian languages (including Cebuano) from the [SEACrowd project](https://arxiv.org/pdf/2406.10118).
+
+In order to discriminate between human and bot-like text, I used a [translationese classifier](https://huggingface.co/SEACrowd/mdeberta-v3_sea_translationese) trained on 9 Southeast Asian languages (including Cebuano) from the [SEACrowd project](https://arxiv.org/pdf/2406.10118).
 I ran it on a sample of the Aya Collection and arrived at the chart below:
 
 ![](/assets/png/curious-case-of-cebuano/dataset_distrib.png){:width="600px"}  
