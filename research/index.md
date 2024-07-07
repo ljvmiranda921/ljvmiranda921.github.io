@@ -32,6 +32,8 @@ I'm happy to discuss research and collaborate!
 
 &nbsp;
 
+## Publications
+
 Below is a list of my publications.
 You can also check my [Google
 Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
