@@ -51,9 +51,9 @@ Items marked with a star (&#9733;) are representative of my current interests.
 <br>Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <u>Lester James Miranda</u>\*, and 50+ other authors *(&lowast;: major contributors)*.
 <br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
 
-- [Through the Looking-Glass: Tracing Shifts in AI Data Consent across the Web]() 
+- [Consent in Crisis: The Rapid Decline of the AI Data Commons]() 
 <br>*NeurIPS D&B '24*
-<br>Shayne Longpre, Robert Mahari, Ariel N. Lee, ..., <u>Lester Miranda</u>, and 40+ other authors. I contributed in data annotation and adding Southeast Asian datasets to the collection.
+<br>Shayne Longpre, Robert Mahari, Ariel Lee, Campbell Lund,..., <u>Lester Miranda</u>, and 40+ other authors. I contributed in the annotation process design for Web Domain services and annotation quality review.
 
 - &#9733; [RewardBench: Evaluating Reward Models for Language Modelling](https://arxiv.org/abs/2403.13787)
 <br>*NeurIPS D&B '24, ArXiV preprint '24*
