@@ -45,6 +45,8 @@ I ran it on a sample of the Aya Collection and arrived at the chart below:
 ![](/assets/png/curious-case-of-cebuano/dataset_distrib.png){:width="600px"}  
 {: style="text-align: center;"}
 
+<!-- add a table of what each dataset is about -->
+
 So even if all of these datasets were translated, a good portion of them still has natural, human-like quality texts.
 Unfortunately we don't have a full-natural Cebuano dataset to compare upon, but it's nice to see that the classifier still detected some instances as such.
 For now, let's use what we have and try training a Cebuano LM!
