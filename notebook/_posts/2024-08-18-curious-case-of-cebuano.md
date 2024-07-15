@@ -75,8 +75,9 @@ Below you'll find the distribution of natural and machine-translated texts for a
 I adapted the finetuning script from the [Aya-23 8B notebook](https://huggingface.co/CohereForAI/aya-23-8B/blob/main/Aya_23_notebook.ipynb).
 It is nice because it gives you reasonable defaults for finetuning a model on a T4 or A100 GPU, which are all available in Google Colab.
 Here, I trained with quantization and PEFT&mdash; basically trying to fit everything on a small machine. 
-You can find my finetuning and inference script in this [GitHub repository]().
+You can find my finetuning and inference code on [GitHub]().
 
+<!-- evals? on what? -->
 
 ### Comparing with other models
 
