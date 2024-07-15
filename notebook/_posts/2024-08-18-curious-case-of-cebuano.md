@@ -25,8 +25,8 @@ I'm curious if this affects generation quality, so join me as we unravel the cur
 ## A thing or two about Cebuano
 
 Cebuano is a language spoken in the Visayan region of the Philippines.
-It is part of the Visayan group of languages, including Hiligaynon, Karay-a, Boholano, and more.
-It is also the [second most widely spoken native language](https://en.wikipedia.org/wiki/Languages_of_the_Philippines) in the Philippines with over 28.9M speakers.
+It is part of the Visayan group of languages and the
+[second most widely spoken native language](https://en.wikipedia.org/wiki/Languages_of_the_Philippines) in the Philippines, after Tagalog, with over 28.9M speakers.
 
 The major difference between Cebuano and Tagalog is their lexicon: each language have different vocabularies, making them mutually unintelligible.
 These differences often make for some funny interactions, such as _langgam_ which means "an ant" in Tagalog but "a bird" in Cebuano, or _libog_ which means "to be aroused" in Tagalog but "to be confused" in Cebuano.
@@ -63,9 +63,9 @@ In order to examine the downstream effect of a dataset's translation quality, I 
 Again, I used the translationese classifier, but this time I combined the *Human-translated* and *Natural* labels into a single class.
 And so, I arrived at the following data mixes:
 
-- **Human-Mix**: Large proportion of human-written prompts (400k).
-- **Machine-Mix**: Large proportion of machine-translated prompts (400k).
-- **Random**: Randomly-sampled instances to match the original `ceb` distribution (400k).
+- **Human-Mix**: Large proportion of human-written prompts (200k).
+- **Machine-Mix**: Large proportion of machine-translated prompts (200k).
+- **Random**: Randomly-sampled instances to match the original `ceb` distribution (200k).
 
 
 Below you'll find the distribution of natural and machine-translated texts for all mixes, as well as their source distribution:
