@@ -40,7 +40,13 @@ This subset is composed of texts from well-known question-answering (QA) dataset
 Even so, I'm still curious if these translations are of human- or bot-like quality.
 
 In order to discriminate between human and bot-like text, I used a [translationese classifier](https://huggingface.co/SEACrowd/mdeberta-v3_sea_translationese) trained on 9 Southeast Asian languages (including Cebuano) from the [SEACrowd project](https://arxiv.org/pdf/2406.10118).
-I ran it on a sample of the Aya Collection and arrived at the chart below:
+It defines three classes:
+
+- **Human-translated**: texts that were originally in English but translated by humans.
+- **Natural**: texts that were originally in the target language (in this case, Cebuano).
+- **Machine-translated**: texts that were translated using another model.
+
+I ran the classifier on a sample of the Aya Collection and arrived at the chart below:
 
 ![](/assets/png/curious-case-of-cebuano/dataset_distrib.png){:width="600px"}  
 {: style="text-align: center;"}
@@ -51,7 +57,20 @@ For now, let's use what we have and try training a Cebuano LM!
 
 ## Instruction finetuning (IFT) on Cebuano
 
-<!-- make a diagram -->
+In order to examine the downstream effect of a dataset's translation quality, I finetuned [Aya-23 8B](https://huggingface.co/CohereForAI/aya-23-8B) on different mixes of the Cebuano subset.
+Again, I used the translationese classifier, but this time I combined the *Human-translated* and *Natural* labels into a single class.
+And so, I arrived at the following data mixes:
+
+- **Human-Mix**: Large proportion of human-written prompts (400k).
+- **Machine-Mix**: Large proportion of machine-translated prompts (400k).
+- **Random**: Randomly-sampled instances to match the original `ceb` distribution (400k).
+
+
+Below you'll find the distribution of natural and machine-translated texts for all mixes, as well as their source distribution:
+
+<!-- insert bar charts of distribution wrt natural vs. machine and then based on source -->
+
+
 
 ### Comparing with other models
 
