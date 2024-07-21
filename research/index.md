@@ -13,10 +13,10 @@ My goal is to <u>develop systematic methodologies for resource creation</u> whil
 More concretely, I'm interested in the following areas:
 
 - **Efficient approaches to annotation**:
-    Human annotations are costly. How can we reduce this cost while preserving the nuance that human annotators provide? I'm currently exploring this question in the context of human preferences and synthetic data generation for LLM post-training.
+    Human annotations are costly. How can we reduce this cost while preserving the nuance that human annotators provide? I'm currently exploring this question in the context of human preferences in LLM post-training (RLHF).
 
 - **Resources for multilingual NLP**: 
-    No language should be left behind, especially with data. 
+    No language should be left behind, especially in data. 
     I've worked on several datasets to improve the state of low-resource and multilingual NLP.
     These projects involve Filipino [datasets](https://aclanthology.org/2023.sealp-1.2/) & [tooling](https://aclanthology.org/2023.nlposs-1.1/), and [large-scale multilingual datasets](https://aclanthology.org/2024.naacl-long.243/).
 
