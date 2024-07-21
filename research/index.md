@@ -44,19 +44,20 @@ profiles for more updated information.
 
 ### 2024
 
-*At AI2, I worked on various aspects of LM adaptation such as preference data collection (MultiPref) and evaluation (RewardBench). I also expanded my work in the multilingual NLP front (SEACrowd, SIGTYP).*
+*At AI2, I worked on various aspects of LM adaptation such as preference data collection and evaluation. I also expanded my work in the multilingual NLP front (SEACrowd, SIGTYP).*
 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://arxiv.org/abs/2406.10118) 
-<br>*EMNLP '24, ArXiV preprint '24*
+<br>*ArXiV preprint '24*
 <br>Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <u>Lester James Miranda</u>\*, and 50+ other authors *(&lowast;: major contributors)*.
 <br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
 
-- [Consent in Crisis: The Rapid Decline of the AI Data Commons]() 
-<br>*NeurIPS D&B '24*
+- [Consent in Crisis: The Rapid Decline of the AI Data Commons](https://www.dataprovenance.org/Consent_in_Crisis.pdf) 
+<br>*Preprint '24*
 <br>Shayne Longpre, Robert Mahari, Ariel Lee, Campbell Lund,..., <u>Lester Miranda</u>, and 40+ other authors. I contributed in the annotation process design for Web Domain services and annotation quality review.
+<br>[[Website](https://www.dataprovenance.org/)] [[Collection](https://github.com/Data-Provenance-Initiative/Data-Provenance-Collection)] [[New York Times Feature](https://www.nytimes.com/2024/07/19/technology/ai-data-restrictions.html)]
 
 - [RewardBench: Evaluating Reward Models for Language Modelling](https://arxiv.org/abs/2403.13787)
-<br>*NeurIPS D&B '24, ArXiV preprint '24*
+<br>*ArXiV preprint '24*
 <br> Nathan Lambert, Valentina Pyatkin, Jacob Morrison, <u>LJ Miranda</u>, Bill Yuchen Lin, Khyathi Chandu, Nouha Dziri, Sachin Kumar, Tom Zick, Yejin Choi, Noah A. Smith, and Hannaneh Hajishirzi <br> [[Leaderboard](https://huggingface.co/spaces/allenai/reward-bench)] [[Code](https://github.com/allenai/reward-bench)] [[Blog](https://blog.allenai.org/rewardbench-the-first-benchmark-leaderboard-for-reward-models-used-in-rlhf-1d4d7d04a90b)]
 
 
