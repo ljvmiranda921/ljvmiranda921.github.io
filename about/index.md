@@ -19,9 +19,9 @@ development, machine learning, and research. I hope you'll spend a nice time
 here, so go grab yourself a coffee and feel free to look around! 
 
 <!-- 【】 -->
-【[Game Dev](https://ljvmiranda921.itch.io)】
-【[Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery)】
-【[Curriculum Vitae](https://storage.googleapis.com/ljvmiranda/cv.pdf)】
+【[🎮 Game Dev](https://ljvmiranda921.itch.io)】
+【[📷 Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery)】
+【[📄 Curriculum Vitae](https://storage.googleapis.com/ljvmiranda/cv.pdf)】
 <!-- Other links: [] [[Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery)] -->
 
 
