@@ -51,7 +51,7 @@ profiles for more updated information.
 <br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
 
 - [Consent in Crisis: The Rapid Decline of the AI Data Commons](https://arxiv.org/abs/2407.14933) 
-<br>*Preprint '24*
+<br>*ArXiV preprint '24*
 <br>Shayne Longpre, Robert Mahari, Ariel Lee, Campbell Lund,..., <u>Lester Miranda</u>, and 40+ other authors. I contributed in the annotation process design for Web Domain services and annotation quality review.
 <br>[[Website](https://www.dataprovenance.org/)] [[Collection](https://github.com/Data-Provenance-Initiative/Data-Provenance-Collection)] [[New York Times Feature](https://www.nytimes.com/2024/07/19/technology/ai-data-restrictions.html)]
 
