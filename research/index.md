@@ -19,9 +19,8 @@ More concretely, I'm interested in the following areas:
     I've worked on several datasets to improve the state of low-resource and multilingual NLP.
     These projects involve Filipino [datasets](https://aclanthology.org/2023.sealp-1.2/) & [tooling](https://aclanthology.org/2023.nlposs-1.1/), and [large-scale multilingual datasets](https://aclanthology.org/2024.naacl-long.243/).
 
-- **Faithful benchmarks of model capabilities**:
-    How can we design benchmarks that accurately reflect the true capabilities and limitations of LLMs?
-    I've explored this question in the context of [evaluating reward models (RewardBench)](https://arxiv.org/abs/2403.13787), and in assessing multilingual capabilities of LLMs on [Southeast Asian languages](https://arxiv.org/abs/2406.10118).
+- **Evaluating overlooked aspects of LLMs**:
+    I am interested in evaluating less-explored aspects of LLMs, such as their [multilingual capabilities](https://arxiv.org/abs/2406.10118) or [reward model performance](https://arxiv.org/abs/2403.13787), which are often overlooked in mainstream discussions or research.
 
 If you are interested in these types of work, especially in improving the state of Filipino NLP, then do not hesitate to [reach out](mailto:ljvmiranda@gmail.com). 
 I'm happy to discuss research and collaborate! 
