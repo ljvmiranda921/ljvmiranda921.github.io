@@ -5,11 +5,12 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-<!-- I am interested in **how we can use data-centric techniques to improve the construction of datasets** for training and evaluating large language models. -->
+【[🎓 Google Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en)】
+【[📚 Semantic Scholar](https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871)】
+
 I'm broadly interested in **data-centric approaches to building language technologies at scale.**
-<!-- Focusing on data instead of models is crucial, as we face diminishing returns from model scaling and growing concerns about model reliability and fairness.  -->
-My goal is to <u>develop systematic methodologies for efficiently constructing NLP resources</u> while actively <u>building new datasets and benchmarks</u> to enhance language model training and evaluation.
-More concretely, I'm interested in the following areas:
+I believe that a careful and systematic understanding of data&mdash; from its collection to its downstream influence on training&mdash; is crucial to build general-purpose language models.
+More specifically, I'm interested to work on the following topics:
 
 - **Efficient approaches to annotation**:
     Human annotations are costly. How can we reduce this cost while preserving the nuance that human annotators provide? I'm currently exploring this question in the context of human preferences in LLM post-training (RLHF).
