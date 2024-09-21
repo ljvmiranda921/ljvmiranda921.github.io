@@ -15,6 +15,7 @@ Make sure that you have [bundler](https://bundler.io/) and
 your system:
 
 ```shell
+sudo apt-get -y ruby ruby-dev
 gem install bundler
 ```
 
