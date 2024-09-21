@@ -46,7 +46,7 @@ profiles for more updated information.
 *At AI2, I'm working on various aspects of LM adaptation such as preference data collection and evaluation. I also expanded my work in the multilingual NLP front (SEACrowd, SIGTYP).*
 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://arxiv.org/abs/2406.10118) 
-<br>*ArXiV preprint '24*
+<br>*ArXiV preprint '24, EMNLP (Long Paper) '24*
 <br>Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <u>Lester James Miranda</u>\*, and 50+ other authors *(&lowast;: major contributor)*.
 <br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
 
