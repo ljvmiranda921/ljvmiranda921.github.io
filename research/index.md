@@ -46,12 +46,12 @@ profiles for more updated information.
 *At AI2, I'm working on various aspects of LM adaptation such as preference data collection and evaluation. I also expanded my work in the multilingual NLP front (SEACrowd, SIGTYP).*
 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://arxiv.org/abs/2406.10118) 
-<br>*ArXiV preprint '24, EMNLP (Long Paper) '24*
+<br>*EMNLP '24, ArXiV preprint '24*
 <br>Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <u>Lester James Miranda</u>\*, and 50+ other authors *(&lowast;: major contributor)*.
 <br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
 
 - [Consent in Crisis: The Rapid Decline of the AI Data Commons](https://arxiv.org/abs/2407.14933) 
-<br>*ArXiV preprint '24*
+<br>*NeurIPS D&B '24, ArXiV preprint '24*
 <br>Data Provenance Initiative Team (40+ authors). I contributed in the annotation process design for Web Domain services and annotation quality review.
 <br>[[Website](https://www.dataprovenance.org/)] [[Collection](https://github.com/Data-Provenance-Initiative/Data-Provenance-Collection)] [[New York Times Feature](https://www.nytimes.com/2024/07/19/technology/ai-data-restrictions.html)]
 
