@@ -66,7 +66,7 @@ profiles for more updated information.
 
 ### 2023
 
-*I spent the early parts of 2023 working on low-resource languages and multilinguality, especially Tagalog, my native language. I mostly focused on core NLP tasks: POS tagging, NER, dependency parsing, etc.*
+*I spent the early parts of 2023 working on low-resource languages and multilinguality, especially Tagalog, my native language. I mostly focused on linguistic tasks such as POS tagging, NER, and dependency parsing*
 
 - [calamanCy: a Tagalog Natural Language Processing Toolkit](https://aclanthology.org/2023.nlposs-1.1/) 
 <br>*NLP Open-Source Software (NLP-OSS) Workshop @ EMNLP '23*
