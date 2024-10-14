@@ -45,11 +45,15 @@ profiles for more updated information.
 
 *At AI2, I'm working on various aspects of LM adaptation such as preference data collection and evaluation. I also expanded my work in the multilingual NLP front (SEACrowd, SIGTYP).*
 
+- [Evaluating Reward Models in Multilingual Settings]()
+<br>*Preprint '24*
+<br>Srishti Gureja\*, <u>Lester James V. Miranda</u>\*, Shayekh bin Islam\*, Rishabh Maheshwary, Drishti Sushma, Gusti Winata, Sebastian Ruder, Sara Hooker, Marzieh Fadaee.
+<br>[[Code]()] [[M-RewardBench Dataset]()]
+
 - [Hybrid Preferences: Learning to Route between Human and AI Feedback]()
 <br>*Preprint '24*
 <br><u>Lester James V. Miranda</u>\*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh  Hajishirzi, and Pradeep Dasigi.
 <br>[[Code]()] [[MultiPref Dataset]()]
-
 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://arxiv.org/abs/2406.10118) 
 <br>*EMNLP '24, Preprint '24*
