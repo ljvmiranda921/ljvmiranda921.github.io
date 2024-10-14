@@ -48,6 +48,7 @@ profiles for more updated information.
 - [Hybrid Preferences: Learning to Route between Human and AI Feedback]()
 <br>*Preprint '24*
 <br><u>Lester James V. Miranda</u>\*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh  Hajishirzi, and Pradeep Dasigi.
+<br>[[Code]()] [[MultiPref Dataset]()]
 
 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://arxiv.org/abs/2406.10118) 
