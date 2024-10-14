@@ -46,7 +46,7 @@ profiles for more updated information.
 *At AI2, I'm working on various aspects of LM adaptation such as preference data collection and evaluation. I also expanded my work in the multilingual NLP front (SEACrowd, SIGTYP).*
 
 - [Hybrid Preferences: Learning to Route between Human and AI Feedback]()
-<br>*ArXiV preprint '24*
+<br>*Preprint '24*
 <br><u>Lester James V. Miranda</u>\*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh  Hajishirzi, and Pradeep Dasigi.
 
 
