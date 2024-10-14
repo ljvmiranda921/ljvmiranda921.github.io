@@ -46,17 +46,17 @@ profiles for more updated information.
 *At AI2, I'm working on various aspects of LM adaptation such as preference data collection and evaluation. I also expanded my work in the multilingual NLP front (SEACrowd, SIGTYP).*
 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://arxiv.org/abs/2406.10118) 
-<br>*EMNLP '24, ArXiV preprint '24*
+<br>*EMNLP '24, Preprint '24*
 <br>Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <u>Lester James Miranda</u>\*, and 50+ other authors *(&lowast;: major contributor)*.
 <br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
 
 - [Consent in Crisis: The Rapid Decline of the AI Data Commons](https://arxiv.org/abs/2407.14933) 
-<br>*NeurIPS D&B '24, ArXiV preprint '24*
+<br>*NeurIPS D&B '24, Preprint '24*
 <br>Data Provenance Initiative Team (40+ authors). I contributed in the annotation process design for Web Domain services and annotation quality review.
 <br>[[Website](https://www.dataprovenance.org/)] [[Collection](https://github.com/Data-Provenance-Initiative/Data-Provenance-Collection)] [[New York Times Feature](https://www.nytimes.com/2024/07/19/technology/ai-data-restrictions.html)]
 
 - [RewardBench: Evaluating Reward Models for Language Modelling](https://arxiv.org/abs/2403.13787)
-<br>*ArXiV preprint '24*
+<br>*Preprint '24*
 <br> Nathan Lambert, Valentina Pyatkin, Jacob Morrison, <u>LJ Miranda</u>, Bill Yuchen Lin, Khyathi Chandu, Nouha Dziri, Sachin Kumar, Tom Zick, Yejin Choi, Noah A. Smith, and Hannaneh Hajishirzi <br> [[Leaderboard](https://huggingface.co/spaces/allenai/reward-bench)] [[Code](https://github.com/allenai/reward-bench)] [[Blog](https://blog.allenai.org/rewardbench-the-first-benchmark-leaderboard-for-reward-models-used-in-rlhf-1d4d7d04a90b)]
 
 
@@ -79,7 +79,7 @@ profiles for more updated information.
 <br> [[Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark)] [[Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner)] [[Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)] 
 
 - [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://aclanthology.org/2024.naacl-long.243/)
-<br>*NAACL '24, ArXiv preprint '23*
+<br>*NAACL '24, Preprint '23*
 <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <u>LJ Miranda</u>, Barbara Plank, Arij Riabi, Yuval Pinter 
 <br> [[Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GQ8HDL)] [[Website](https://www.universalner.org/)] 
 
@@ -88,7 +88,7 @@ profiles for more updated information.
 *My first foray to NLP research is a technical report on spaCy's hash embedding method. I'm lucky to have worked with established researchers in the field.*
 
 - [Multi hash embeddings in spaCy](https://arxiv.org/abs/2212.09255)
-<br>*ArXiV preprint '22*
+<br>*Preprint '22*
 <br> <u>Lester James V. Miranda</u>\*, &Aacute;kos K&aacute;d&aacute;r\*, Adriane Boyd, Sofie Van Landeghem, Anders S&oslash;gaard, and Matthew Honnibal *(&lowast;: equal contributions)*.
 <br> [[Code](https://github.com/explosion/projects/tree/v3/benchmarks/ner_embeddings)]
 
