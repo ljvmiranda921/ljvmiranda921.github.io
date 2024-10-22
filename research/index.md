@@ -50,7 +50,7 @@ profiles for more updated information.
 <br><u>Lester James V. Miranda</u>\*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh  Hajishirzi, and Pradeep Dasigi.
 <br>[[Code](https://github.com/allenai/hybrid-preferences)] [[MultiPref Dataset](https://huggingface.co/datasets/allenai/multipref)]
 
-- [M-RewardBench: Evaluating Reward Models in Multilingual Settings]()
+- [M-RewardBench: Evaluating Reward Models in Multilingual Settings](https://arxiv.org/abs/2410.15522)
 <br>*Preprint '24*
 <br>Srishti Gureja\*, <u>Lester James V. Miranda</u>\*, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee.
 <br>[[Website](https://m-rewardbench.github.io/)] [[Code](https://github.com/for-ai/aya_rm_multilingual)] [[M-RewardBench Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7)] 
