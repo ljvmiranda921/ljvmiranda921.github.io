@@ -1,4 +1,4 @@
----
+hy---
 layout: page
 title: Research work
 description: Research work of Lester James V. Miranda
@@ -13,7 +13,7 @@ I believe that a careful and systematic understanding of data&mdash; from its co
 More specifically, I'm interested to work on the following topics:
 
 - **Efficient approaches to annotation**:
-    Human annotations are costly. How can we reduce this cost while preserving the nuance that human annotators provide? I'm currently exploring this question in the context of human preferences in LLM post-training (RLHF).
+    Human annotations are costly. How can we reduce this cost while preserving the nuance that human annotators provide? I'm currently exploring this question in the context of [human preferences in LLM post-training (RLHF)](https://arxiv.org/abs/2410.19133).
 
 - **Resources for multilingual NLP**: 
     No language should be left behind, especially in data. 
