@@ -1,4 +1,4 @@
-hy---
+---
 layout: page
 title: Research work
 description: Research work of Lester James V. Miranda
