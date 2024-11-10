@@ -45,7 +45,7 @@ title: News
   color: #828282;
 }
 .news-item .date {
-  color: #a00000;
+  color: #000000;
 }
 .news-item a {
   color: #828282;
