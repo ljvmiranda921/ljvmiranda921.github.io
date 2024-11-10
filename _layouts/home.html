@@ -44,18 +44,33 @@ layout: default
 
   &nbsp;
 
-  <h2>Recent Posts</h2>
+<div class="row">
+  <div class="column" style="width:48%; float:left;">
+    <h2>Recent Posts</h2>
 
-  <ul class="post-list">
-    {% assign mainPosts = site.posts | where: 'type', 'post' %}
-    {% for post in mainPosts limit:3 %}
-    <li>
-      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-      <span class="post-meta">{{ post.date | date: date_format }} &verbar; {{ post.category | capitalize }}</span>
+    <ul class="post-list">
+      {% assign mainPosts = site.posts | where: 'type', 'post' %}
+      {% for post in mainPosts limit:3 %}
+      <li>
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">{{ post.date | date: date_format }} &verbar; {{ post.category | capitalize }}</span>
 
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-      <p style="color:#828282">{{ post.description }}</p>
-    </li>
-    {% endfor %}
-  </ul>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        <p style="color:#828282">{{ post.description }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="column" style="width:48%; float:right;">
+    <h2>News</h2>
+    <ul class="post-list">
+      {% assign news_content = site.pages | where: "path", "news.md" | first %}
+      {{ news_content.content | markdownify }}
+    </ul>
+    </ul>
+  </div>
+</div>
+
+
 </div>
