@@ -4,23 +4,23 @@ title: News
 ---
 
 <div class="news-item">
-<p><span class="date">**Oct 2024**</span>: Our paper on routing preference instances to human or LM annotators, [*Hybrid Preferences*](https://arxiv.org/abs/2410.19133), is now available. This is the first work I co-led (with Yizhong Wang) at Ai2!</p>
+<p><span class="date">**Oct 2024**</span>: Our paper on routing preference instances to human or LM annotators, [Hybrid Preferences](https://arxiv.org/abs/2410.19133), is now available. This is the first work I co-led (with Yizhong Wang) at Ai2!</p>
 </div>
 
 <div class="news-item">
-<p><span class="date">**Oct 2024**</span>: Our paper on evaluating reward models in multilingual settings, [*M-RewardBench*](https://arxiv.org/abs/2410.15522), is now available. This was a fun collab with folks from Cohere for AI!</p>
+<p><span class="date">**Oct 2024**</span>: Our paper on evaluating reward models in multilingual settings, [M-RewardBench](https://arxiv.org/abs/2410.15522), is now available. This was a fun collab with folks from Cohere for AI!</p>
 </div>
 
 <div class="news-item">
-<p><span class="date">**Sep 2024**</span>: My cross-institutional collabs, [_Consent in Crisis_](https://arxiv.org/abs/2407.14933) and [_SEACrowd_](https://arxiv.org/abs/2406.10118), were accepted to Neurips D&B and EMNLP 2024, respectively.</p>
+<p><span class="date">**Sep 2024**</span>: My cross-institutional collabs, [Consent in Crisis](https://arxiv.org/abs/2407.14933) and [SEACrowd](https://arxiv.org/abs/2406.10118), were accepted to NeurIPS D&B and EMNLP 2024, respectively.</p>
 </div>
 
 <div class="news-item">
-<p><span class="date">**Mar 2024**</span>: [*Universal NER*](https://arxiv.org/abs/2311.09122) was accepted to NAACL 2024. I hope to still work on linguistic aspects of NLP in the future!</p>
+<p><span class="date">**Mar 2024**</span>: [Universal NER](https://arxiv.org/abs/2311.09122) was accepted to NAACL 2024. I hope to still work on linguistic aspects of NLP in the future!</p>
 </div>
 
 <div class="news-item">
-<p><span class="date">**Mar 2024**</span>: We released [*RewardBench*](https://arxiv.org/abs/2403.13787), the first benchmark for evaluating reward models.</p>
+<p><span class="date">**Mar 2024**</span>: We released [RewardBench](https://arxiv.org/abs/2403.13787), the first benchmark for evaluating reward models.</p>
 </div>
 
 <div class="news-item">
@@ -40,15 +40,15 @@ title: News
   margin-bottom: 0.7em;
 }
 .news-item p {
-  font-size: 0.95em;
+  font-size: 0.9em;
   margin: 0;
-  color: #828282;
+  /* color: #828282; */
 }
 .news-item .date {
   color: #000000;
 }
-.news-item a {
-  color: #828282;
+/* .news-item a {
+  color: #828282; 
   text-decoration: underline;
-}
+} */
 </style>
