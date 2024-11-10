@@ -3,6 +3,24 @@ layout: null
 title: News
 ---
 
+<style>
+.news-item {
+  margin-bottom: 0.7em;
+}
+.news-item p {
+  font-size: 0.9em;
+  margin: 0;
+  /* color: #828282; */
+}
+.news-item .date {
+  color: #000000;
+}
+/* .news-item a {
+  color: #828282; 
+  text-decoration: underline;
+} */
+</style>
+
 <div class="news-item">
 <p><span class="date">**Oct 2024**</span>: Our paper on routing preference instances to human or LM annotators, [Hybrid Preferences](https://arxiv.org/abs/2410.19133), is now available. This is the first work I co-led (with Yizhong Wang) at Ai2!</p>
 </div>
@@ -34,21 +52,3 @@ title: News
 <div class="news-item">
 <p><span class="date">**Jan 2024**</span>: I am now based in Seattle! I started working as a [Predoctoral Young Investigator](https://allenai.org/predoctoral-young-investigators) at the [Allen Institute for AI](https://allenai.org/) last October.</p>
 </div>
-
-<style>
-.news-item {
-  margin-bottom: 0.7em;
-}
-.news-item p {
-  font-size: 0.9em;
-  margin: 0;
-  /* color: #828282; */
-}
-.news-item .date {
-  color: #000000;
-}
-/* .news-item a {
-  color: #828282; 
-  text-decoration: underline;
-} */
-</style>
