@@ -42,8 +42,13 @@ title: News
 .news-item p {
   font-size: 0.95em;
   margin: 0;
+  color: #828282;
 }
 .news-item .date {
-  color: #000;
+  color: #a00000;
+}
+.news-item a {
+  color: #828282;
+  text-decoration: underline;
 }
 </style>
