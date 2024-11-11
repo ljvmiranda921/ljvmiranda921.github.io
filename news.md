@@ -34,15 +34,15 @@ title: News
 </div>
 
 <div class="news-item">
+<p><span class="date">**Jul 2024**</span>: I gave a [guest lecture](/notebook/2024/07/02/talk-dlsu/) at DLSU about building Filipino NLP resources. Thanks to Dr. Charibeth Cheng for inviting me!</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**Mar 2024**</span>: [Universal NER](https://arxiv.org/abs/2311.09122) was accepted to NAACL 2024. I hope to still work on linguistic aspects of NLP in the future!</p>
 </div>
 
 <div class="news-item">
 <p><span class="date">**Mar 2024**</span>: We released [RewardBench](https://arxiv.org/abs/2403.13787), the first benchmark for evaluating reward models.</p>
-</div>
-
-<div class="news-item">
-<p><span class="date">**Jul 2024**</span>: I gave a [guest lecture](/notebook/2024/07/02/talk-dlsu/) at DLSU about building Filipino NLP resources. Thanks to Dr. Charibeth Cheng for inviting me!</p>
 </div>
 
 <div class="news-item">
