@@ -34,6 +34,10 @@ title: News
 </div>
 
 <div class="news-item">
+<p><span class="date">**Aug 2024**</span>: 🏆 Our work on evaluating reward models in multilingual settings won Silver Prize in [Cohere for AI's Aya Expedition](https://cohere.com/blog/empowering-others-to-explore-the-next-frontier-expedition-aya)!</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**Mar 2024**</span>: [Universal NER](https://arxiv.org/abs/2311.09122) was accepted to NAACL 2024. I hope to still work on linguistic aspects of NLP in the future!</p>
 </div>
 
