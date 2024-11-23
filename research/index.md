@@ -45,10 +45,10 @@ profiles for more updated information.
 
 _At AI2, I'm working on various aspects of LM adaptation such as preference data collection and evaluation. I also expanded my work in the multilingual NLP front (SEACrowd, M-RewardBench)._
 
-- [T&uuml;lu 3: Exploring Frontiers in Open Language Model Post-Training]()
+- [T&uuml;lu 3: Exploring Frontiers in Open Language Model Post-Training](https://allenai.org/papers/tulu-3-report.pdf)
   <br>_Preprint '24_
-  <br>Nathan Lambert, Jacob Morrison, Valentina Pyatkin, Shenyi Huang, Hamish Ivison, Faeze Brahman, <u>Lester James V. Miranda </u>\*, Alisa Liu, Nouha Dziri, Yuling Gu, Saumya Malik, Victoria Graf, Jena Hwang, Luca Soldiani, Oyvind Tajford, Noah A. Smith, Yizhong Wang, Pradeep Dasigi, Hannaneh Hajishirzi.
-  <br>[[HuggingFace Collection]()] [[Website]()]
+  <br>Nathan Lambert\*, Jacob Morrison\*, Valentina Pyatkin\*, Shenyi Huang\*, Hamish Ivison\*, Faeze Brahman\*, <u>Lester James V. Miranda </u>\*, Alisa Liu, Nouha Dziri, Xinxi Lyu, Yuling Gu, Saumya Malik, Victoria Graf, Jena D. Hwang, Jiangjiang Yang, Ronan Le Bras, Oyvind Tajford, Chris Wilhelm, Luca Soldiani, Noah A. Smith, Yizhong Wang, Pradeep Dasigi, Hannaneh Hajishirzi.
+  <br>[[Models](https://huggingface.co/collections/allenai/tulu-3-models-673b8e0dc3512e30e7dc54f5)] [[Datasets](https://huggingface.co/collections/allenai/tulu-3-datasets-673b8df14442393f7213f372)] [[Website](https://allenai.org/tulu)]
 
 - [Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback](https://arxiv.org/abs/2410.19133)
   <br>_Preprint '24_
