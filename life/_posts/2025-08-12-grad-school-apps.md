@@ -32,4 +32,15 @@ Unfortunately, academia has its in-group, and it's quite important that your let
 It's crazy competitive out there.
 
 Inasmuch as I'd like to think that I got into the same schools solely because of my efforts, I got lucky because of people who took chances on me.
-My first break into NLP research was in spaCy, when Matt/Ines and Sofie 
+My first break into NLP research was in spaCy, when Matt and Sofie supported me in co-leading (with Akos!) our hash-embeddings technical report.
+This gave me the confidence to undertake my own independent work for Tagalog NLP, which led to calamanCy and TLUnified-NER.
+
+
+
+**I think I've developed a mantra over time: people over projects, projects over publications.**
+
+### On choosing programs
+
+
+
+### What's next, and hope for the next few years
