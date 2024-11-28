@@ -37,7 +37,7 @@ Early on, I realized that pivoting from industry to academia will entail a lot o
 A part of me thought that maybe I should have just continued to PhD right after my Masters.
 Looking back, my experience in the industry validated that (1) I still like doing research that I'm willing to sacrifice do a big pivot and (2) I can always go back to industry if this experiment-of-a-pivot didn't pan out.
 
-### The big pivot and the first road to PhD
+### The big pivot and the long road to PhD applications
 
 Inasmuch as I'd like to think that I got into top schools solely because of my efforts, I got lucky because of the people who took chances on me.
 My first break into NLP research was in spaCy, when Matt and Sofie supported me in co-leading (with Akos!) our hash-embeddings technical report.
