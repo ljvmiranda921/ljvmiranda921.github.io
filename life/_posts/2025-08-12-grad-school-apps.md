@@ -25,3 +25,6 @@ Finally, some news:
 
 ### The reality of CS grad school applications
 
+As the fields of machine learning and NLP grow every year, the competition for top PhD programs can grow very intense.
+There was a time when I was looking at the newly-admitted PhD students at Stanford and University of Washington (UW) and it's common to see them having first-author publications to top conferences.
+
