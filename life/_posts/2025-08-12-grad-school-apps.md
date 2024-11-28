@@ -17,7 +17,7 @@ What happened, and what took me so long?
 In this blog post, I want to reflect on the past three years&mdash;spanning multiple countries, jobs, and experiences.
 That journey is finally over, and now I'm preparing myself on the cusp of another one.
 
-This is not a "How to apply to grad school" blog post, but perhaps you'll find some nuggets along the way.
+This is not a "How to apply to grad school" blog post, but perhaps you'll find something valuable along the way.
 If you want an actual guide, I recommend reading John Boaz Lee's [guide](https://drive.google.com/file/d/1N5ETwBh9dyLpxGRKIA9LXXJ_Jy44i1TP/view) (more Filipino context) or Tim Dettmer's [blog post](https://timdettmers.com/2018/11/26/phd-applications/).
 
 Finally, some news:
