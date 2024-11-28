@@ -25,16 +25,18 @@ Finally, some news:
 
 ### The reality of CS grad school applications
 
-As the fields of machine learning and NLP grow every year, the competition for top PhD programs can become very intense.
-There was a time when I was looking at the newly-admitted PhD students at Stanford and University of Washington (UW) and it's common to see them having first-author publications to top conferences.
+As the fields of machine learning and NLP grow every year, the competition for top PhD programs has become increasingly intense.
+There was a time when I was looking at the newly-admitted PhD students at Stanford and University of Washington and it's common to see them having first-author publications to top conferences.
 In addition to **research experience**, a large factor for acceptance are your **letters of recommendation (LoR)**.
-Unfortunately, academia has an in-group, and it's quite important that at least one of your writers are within this group.
-Overall, CS PhD applications especially in top schools are crazily competitive.
+Unfortunately, academia has its in-group, and it's quite important that your letter-writers are within this group.
+Indeed, CS PhD applications at top programs are crazily competitive.
 
 Back in 2021, I did feel disadvantaged sometimes: I'm fresh from the industry, and I don't have both.
-But now I realized that that feeling allowed me to see research differently&mdash; instead of focusing on how many papers I write, I focused on what type of research (or *project*) I'm excited to do. 
+But now I realize that this feeling allowed me to see research differently.
+Instead of fixating on how many papers I write, I focused on what type of research (or *project*) I'm excited to do. 
 Instead of thinking about who my letter-writers are, I think about who are the people I enjoy working with. 
 Early on I had this mantra: "projects over pubs (publications); people over projects."
+
 
 > Projects over publications; people over projects.
 
