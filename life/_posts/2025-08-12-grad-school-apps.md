@@ -38,7 +38,7 @@ Looking back, my experience in the industry validated that (1) I still like doin
 ### The big pivot and the long road to PhD applications
 
 Inasmuch as I'd like to think that I got into top schools solely because of my efforts, I got lucky because of the **people who took chances on me.**
-My first break into NLP research was in spaCy, when Matt and Sofie supported me in co-leading (with Akos!) our hash-embeddings technical report.
+My first break into NLP research was in [spaCy](https://spacy.io), when Matt and Sofie supported me in co-leading (with Akos!) our hash-embeddings technical report.
 This gave me the confidence to undertake my own independent work for Tagalog NLP, which led to calamanCy and TLUnified-NER.
 
 <div style="display: flex; justify-content: center;">
