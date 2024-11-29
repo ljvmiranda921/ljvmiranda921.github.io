@@ -14,7 +14,7 @@ description: |
 <span class="firstcharacter">B</span>ack in 2021, I decided I wanted to embark on a PhD program to pursue an academic research career.
 However, it took me *four years* to finally apply.
 *What happened, and what took me so long?*
-In this blog post, I want to reflect on the past three years&mdash;spanning multiple countries, jobs, and experiences.
+In this blog post, I want to reflect on the past four years&mdash;spanning multiple countries, jobs, and experiences.
 That journey is finally over, and now I'm preparing myself on the cusp of another one.
 
 This is not a "How to apply to grad school" blog post, but perhaps you'll find something valuable along the way.
@@ -49,21 +49,23 @@ In addition, working with Magda and Vincent on incorporating LLMs in the Prodigy
 <img src="/assets/png/grad-school/berlin.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/remote.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 </div>
-_From left to right: view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard._
+_From left to right (2021---2022): view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard._
 {: style="text-align: center;"}
 
-
-At Ai2, I'm lucky to have been mentored by Pradeep and worked on several projects with Yizhong.
-
+At AI2, I was fortunate to be mentored by Pradeep & Yanai and to collaborate on several projects with Yizhong. 
+My experience at AI2 shaped my research interests and solidified what type of researcher I want to be: competent and kind. 
+I still remember when we were unable to submit our first project in time for a conference due to unexpected results, yet they remained supportive as we went back to the drawing board. 
+Later, they (together with Nathan) trusted me to deliver the preference scaling aspect of the T&uuml;lu 3 and OLMo 2 project, which was something I was proud to accomplish last year. 
+Even after working on spaCy previously, I still felt like an outsider in the NLP research community, but they made me feel welcome! 
+Those small gestures meant a lot&mdash;and I hope I can be that person for another fledgling researcher in the future.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/aurora.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/market.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 </div>
-_From left to right: the Fremont library where I spent a lot of time writing papers and doing PhD apps, view of the Aurora bridge on the way to the office, the Farmer's market in Seattle._
+_From left to right (2024): the Fremont library where I spent a lot of time writing papers and doing PhD apps, view of the Aurora bridge on the way to the office, the Farmer's market in Seattle._
 {: style="text-align: center;"}
-
 
 **I think I've developed a mantra over time: people over projects, projects over publications.**
 
