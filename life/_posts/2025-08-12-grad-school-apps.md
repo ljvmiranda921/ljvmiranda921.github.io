@@ -90,13 +90,19 @@ By doing so, I can focus on which research projects I should say yes to.
 _From left to right (2024): snippets of my life in Seattle including the Fremont graffiti, the pottery studio at Yu Tang Ceramics, and the Farmer's Market in downtown._
 {: style="text-align: center;"}
 
-In a way, four years is a long time and there were times when instead of being too focused on applying to grad school, I just enjoyed life.
+It took me years to build up a stronger portfolio, and even then I still thought my profile isn't strong enough when I was applying.
+But my then fianc&eacute;e-now-wife encouraged me a lot and boosted my confidence.
+Surrounding myself with people who support you are important, especially in academia, where each stage of your career is based on someone evaluating you (e.g., PhD apps, paper submissions, job applications, grants, etc.).
+
+
+### On the admissions cycle and on choosing programs
+
+<!-- (this is not the first paragraph)  -->
+<!-- In a way, four years is a long time and there were times when instead of being too focused on applying to grad school, I just enjoyed life.
 Back in 2021, I set myself a goal and I was too laser-focused on things I need to accomplish but through the years I learned to let things be (I also found this helpful to relieve the anxiety).
+It took me years to build up a strong portfolio, and even then I still think my profile isn't strong enough when I was applying. -->
 
 
-
-
-### On choosing programs
 
 <!-- (this is not the first paragraph)  -->
 I feel privileged and blessed to have this problem of choice.
