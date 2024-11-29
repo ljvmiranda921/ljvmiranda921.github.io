@@ -13,7 +13,7 @@ description: |
 
 <span class="firstcharacter">B</span>ack in 2021, I decided I wanted to embark on a PhD program to pursue an academic research career.
 However, it took me *four years* to finally apply.
-What happened, and what took me so long?
+*What happened, and what took me so long?*
 In this blog post, I want to reflect on the past three years&mdash;spanning multiple countries, jobs, and experiences.
 That journey is finally over, and now I'm preparing myself on the cusp of another one.
 
