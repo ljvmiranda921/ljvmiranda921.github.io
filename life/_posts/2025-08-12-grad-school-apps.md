@@ -62,8 +62,6 @@ Later, they (together with Nathan) trusted me to deliver the preference scaling 
 Even after working on spaCy previously, I still felt like an outsider in the NLP research community, but they made me feel welcome![^1]
 Those small gestures meant a lot&mdash;and I hope I can be that person for another fledgling researcher in the future.
 
-
-
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/aurora.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -73,6 +71,14 @@ _From left to right (2024): the Fremont library where I spent a lot of time writ
 {: style="text-align: center;"}
 
 **I think I've developed a mantra over time: people over projects, projects over publications.**
+I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash; every topic is equally interesting given the right people.
+During the four-year journey, I've met folks from [SIGSEA/SEACrowd](https://seacrowd.github.io/seacrowd-catalogue/contributors) (Holy, Samuel, Genta, Aji, Yong), the [Data Provenance Initiative](https://www.dataprovenance.org/) (Shayne), and even [Cohere for AI](https://cohere.com/research) (Srishti, Shayekh, Rishabh, Marzieh, Sebastian, Sara) who are great collaborators and luckily interested in the topics I care about.
+
+> I think I've developed a mantra over time: people over projects, projects over publications.
+
+Back then, I was also hung up on publications: I had this looming feeling that I always need to publish so I can keep up with the profiles of those *other folks* accepted in top institutions.
+Although this is still true in some way, now I prioritize projects and big-picture research directions.
+By doing so, I can focus on which research projects I should say yes to.
 
 ### On choosing programs
 
