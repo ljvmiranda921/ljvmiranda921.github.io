@@ -20,8 +20,11 @@ That journey is finally over, and now I'm preparing myself on the cusp of anothe
 This is not a "How to apply to grad school" blog post, but perhaps you'll find something valuable along the way.
 If you want an actual guide, I recommend reading John Boaz Lee's [guide](https://drive.google.com/file/d/1N5ETwBh9dyLpxGRKIA9LXXJ_Jy44i1TP/view) (more Filipino context) or Tim Dettmer's [blog post](https://timdettmers.com/2018/11/26/phd-applications/).
 
-📣 Finally, some news: I will be starting my **PhD in X** at **ABC**.
+
+<p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
+📣 Finally, some news: I will be starting my **PhD in X** this Fall at **ABC**.
 I also got accepted to several universities here in the US (A, B, C), so this admissions cycle was truly a blessing.
+</p>
 
 *All photos you'll see below were taken by a Gameboy Camera. I realized when writing this blog post that my camera captured all events in the past four years. For more photos, check out my [gallery](/gallery).*
 
