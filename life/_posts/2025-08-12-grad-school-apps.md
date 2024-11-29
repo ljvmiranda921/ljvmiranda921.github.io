@@ -65,10 +65,13 @@ _From left to right: the Fremont library where I spent a lot of time writing pap
 {: style="text-align: center;"}
 
 
-
-
 **I think I've developed a mantra over time: people over projects, projects over publications.**
 
 ### On choosing programs
+
+<!-- (this is not the first paragraph)  -->
+I feel privileged and blessed to have this problem of choice.
+Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements!
+In addition, if you're interested to do research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out and I'm happy to mentor you!
 
 
