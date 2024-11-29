@@ -38,14 +38,17 @@ Looking back, my experience in the industry validated that (1) I still like doin
 ### The big pivot and the long road to PhD applications
 
 Inasmuch as I'd like to think that I got into top schools solely because of my efforts, I got lucky because of the **people who took chances on me.**
-My first break into NLP research was in [spaCy](https://spacy.io), when Matt and Sofie supported me in co-leading (with Akos!) our hash-embeddings technical report.
-This gave me the confidence to undertake my own independent work for Tagalog NLP, which led to calamanCy and TLUnified-NER.
+My first break into NLP research was in [spaCy](https://spacy.io), when Matt, Ines, and Sofie supported me in co-leading (with Akos!) our [hash-embeddings technical report](https://arxiv.org/abs/2212.09255).
+That experience opened up a lot of opportunities, like being able to collaborate with linguists like Anders S&oslash;gaard.
+This gave me the confidence to undertake my own independent work for Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/skyscraper.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/berlin.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/remote.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 </div>
+_From left to right: view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard._
+{: style="text-align: center;"}
 
 
 At Ai2, I'm lucky to have been mentored by Pradeep and worked on several projects with Yizhong.
@@ -56,6 +59,8 @@ At Ai2, I'm lucky to have been mentored by Pradeep and worked on several project
 <img src="/assets/png/grad-school/aurora.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/market.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 </div>
+_From left to right: the Fremont library where I spent a lot of time writing papers and doing PhD apps, view of the Aurora bridge on the way to the office, the Farmer's market in Seattle._
+{: style="text-align: center;"}
 
 
 
