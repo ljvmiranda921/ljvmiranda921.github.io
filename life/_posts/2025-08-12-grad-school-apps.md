@@ -90,10 +90,10 @@ By doing so, I can focus on which research projects I should say yes to.
 _From left to right (2024): snippets of my life in Seattle including the Fremont graffiti, the pottery studio at Yu Tang Ceramics, and the Farmer's Market in downtown._
 {: style="text-align: center;"}
 
-It took me years to build up a stronger portfolio, and even then I still thought my profile isn't strong enough when I was applying.
+It took me years to build up a stronger portfolio, and **even then I still thought my profile isn't strong enough when I was applying.**
 But my then fianc&eacute;e-now-wife encouraged me a lot and boosted my confidence.
 Surrounding myself with people who support you are important, especially in academia, where each stage of your career is based on someone evaluating you (e.g., PhD apps, paper submissions, job applications, grants, etc.).
-
+And so I applied to 10 programs: I got X rejections, Y interviews, and Z offers.
 
 ### On the admissions cycle and on choosing programs
 
