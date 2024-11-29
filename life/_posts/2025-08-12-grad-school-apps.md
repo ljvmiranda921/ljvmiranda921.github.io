@@ -65,13 +65,13 @@ Those small gestures meant a lot&mdash;and I hope I can be that person for anoth
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/aurora.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/market.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/ai2.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 </div>
-_From left to right (2024): the Fremont library where I spent a lot of time writing papers and doing PhD apps, view of the Aurora bridge on the way to the office, the Farmer's market in Seattle._
+_From left to right (2024): the Fremont library where I spent a lot of time writing papers and doing PhD apps, view of the Aurora bridge on the way to the office, the Ai2 logo in the office._
 {: style="text-align: center;"}
 
 **I think I've developed a mantra over time: people over projects, projects over publications.**
-I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash; every topic is equally interesting given the right people.
+I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash; I believe that every topic is equally interesting given the right people.
 During the four-year journey, I've met folks from [SIGSEA/SEACrowd](https://seacrowd.github.io/seacrowd-catalogue/contributors) (Holy, Samuel, Genta, Aji, Yong), the [Data Provenance Initiative](https://www.dataprovenance.org/) (Shayne), and even [Cohere for AI](https://cohere.com/research) (Srishti, Shayekh, Rishabh, Marzieh, Sebastian, Sara) who are great collaborators and luckily interested in the topics I care about.
 
 > I think I've developed a mantra over time: people over projects, projects over publications.
@@ -79,6 +79,20 @@ During the four-year journey, I've met folks from [SIGSEA/SEACrowd](https://seac
 Back then, I was also hung up on publications: I had this looming feeling that I always need to publish so I can keep up with the profiles of those *other folks* accepted in top institutions.
 Although this is still true in some way, now I prioritize projects and big-picture research directions.
 By doing so, I can focus on which research projects I should say yes to.
+
+<div style="display: flex; justify-content: center;">
+<img src="/assets/png/grad-school/fremont.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/pottery.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/market.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+</div>
+_From left to right (2024): snippets of my life in Seattle including the Fremont graffiti, the pottery studio at Yu Tang Ceramics, and the Farmer's Market in downtown._
+{: style="text-align: center;"}
+
+In a way, four years is a long time and there were times when instead of being too focused on applying to grad school, I just enjoyed life.
+Back in 2021, I set myself a goal and I was too laser-focused on things I need to accomplish but through the years I learned to let things be (I also found this helpful to relieve the anxiety).
+
+
+
 
 ### On choosing programs
 
