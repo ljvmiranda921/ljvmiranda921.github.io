@@ -12,10 +12,11 @@ description: |
 ---
 
 <span class="firstcharacter">B</span>ack in 2021, I decided I wanted to embark on a PhD program to pursue an academic research career.
+I knew I wanted to do research and had a strong feeling I'll enjoy mentorship and teaching.
 However, it took me *four years* to finally apply.
 *What happened, and what took me so long?*
 In this blog post, I want to reflect on the past four years&mdash;spanning multiple countries, jobs, and experiences.
-The path was long and I'd daresay: pretty unconventional.
+The path was long and unconventional.
 That journey is finally over, and now I'm preparing myself on the cusp of another one.
 
 This is not a "How to apply to grad school" blog post, but perhaps you'll find some nuggets of wisdom along the way.
