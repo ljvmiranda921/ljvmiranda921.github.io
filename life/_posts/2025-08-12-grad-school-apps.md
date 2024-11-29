@@ -41,6 +41,8 @@ Inasmuch as I'd like to think that I got into top schools solely because of my e
 My first break into NLP research was in [spaCy](https://spacy.io), when Matt, Ines, and Sofie supported me in co-leading (with Akos!) our [hash-embeddings technical report](https://arxiv.org/abs/2212.09255).
 That experience opened up a lot of opportunities, like being able to collaborate with linguists like Anders S&oslash;gaard.
 This gave me the confidence to undertake my own independent work for Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
+In addition, working with Magda and Vincent on incorporating LLMs in the Prodigy annotation tool helped inform my current and future research directions on LLM annotation.
+
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/skyscraper.png" width="220" style="border: 2px solid black; margin: 0 5px;">
