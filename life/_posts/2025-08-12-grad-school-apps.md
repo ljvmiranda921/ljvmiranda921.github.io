@@ -50,7 +50,7 @@ Inasmuch as I'd like to think that I got into top schools solely because of my e
 My first break into NLP research was in [spaCy](https://spacy.io), when Matt, Ines, and Sofie supported me in co-leading (with Akos!) our [hash-embeddings technical report](https://arxiv.org/abs/2212.09255).
 That experience opened up a lot of opportunities, like being able to collaborate with linguists like Anders S&oslash;gaard.
 This gave me the confidence to undertake my own independent work for Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
-In addition, working with Magda and Vincent on incorporating LLMs in the Prodigy annotation tool helped inform my current and future research directions on LLM annotation.
+In addition, working with Magda and Vincent on incorporating LLMs in the [Prodigy annotation tool](https://prodigy.ai/) helped inform my current and future research directions on LLM annotation.
 
 
 <div style="display: flex; justify-content: center;">
@@ -81,7 +81,7 @@ I prioritize finding people whom I'm excited and energized to work with over spe
 During the four-year journey, I've met folks from [SIGSEA/SEACrowd](https://seacrowd.github.io/seacrowd-catalogue/contributors) (Holy, Samuel, Genta, Aji, Yong), the [Data Provenance Initiative](https://www.dataprovenance.org/) (Shayne), and even [Cohere for AI](https://cohere.com/research) (Srishti, Shayekh, Rishabh, Marzieh, Sebastian, Sara) who are great collaborators and luckily interested in the topics I care about.
 More importantly, I also want to thank my Masters professor, [Jinglu Hu](https://nclab.w.waseda.jp/jinglu/personal.html), for inspiring me to pursue research. 
 He was happy to write me a letter and I'm more than happy that he wrote it&mdash; it felt like it went full circle.
-I have fond memories of Waseda back in 2016, and that time was formative of my career.
+I have fond memories of Waseda back in 2016, and that time was formative in my career.
 
 > I think I've developed a mantra over time: people over projects, projects over publications.
 
@@ -99,8 +99,8 @@ _From left to right (2024): snippets of my life in Seattle including the Fremont
 
 It took me years to build up a stronger portfolio, and **even then I still thought my profile isn't strong enough when I was applying.**
 But my then fianc&eacute;e-now-wife encouraged me a lot and boosted my confidence.
-Surrounding myself with people who support you are important, especially in academia, where each stage of your career is based on someone evaluating you (e.g., PhD apps, paper submissions, job applications, grants, etc.).
-And so I applied to 10 programs: I got X rejections, Y interviews, and Z offers.
+Surrounding myself with people who support you are important, especially in academia, where each stage of your career is based on someone evaluating you, from PhD apps, journal/conference submissions, job applications, grants, etc..
+And so, mustering myself, I applied to 10 PhD programs in the US, UK, and Canada.
 
 ### On the admissions cycle and on choosing programs
 
