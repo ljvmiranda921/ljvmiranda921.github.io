@@ -12,7 +12,7 @@ description: |
 ---
 
 <span class="firstcharacter">B</span>ack in 2021, I decided I wanted to embark on a PhD program to pursue an academic research career.
-However, it took me *three years* to finally apply.
+However, it took me *four years* to finally apply.
 What happened, and what took me so long?
 In this blog post, I want to reflect on the past three years&mdash;spanning multiple countries, jobs, and experiences.
 That journey is finally over, and now I'm preparing myself on the cusp of another one.
@@ -20,7 +20,10 @@ That journey is finally over, and now I'm preparing myself on the cusp of anothe
 This is not a "How to apply to grad school" blog post, but perhaps you'll find something valuable along the way.
 If you want an actual guide, I recommend reading John Boaz Lee's [guide](https://drive.google.com/file/d/1N5ETwBh9dyLpxGRKIA9LXXJ_Jy44i1TP/view) (more Filipino context) or Tim Dettmer's [blog post](https://timdettmers.com/2018/11/26/phd-applications/).
 
-Finally, some news:
+Finally, some news: I will be starting my **PhD in X** at **ABC**.
+I also got accepted to several universities here in the US (A, B, C), so this admissions cycle was truly a blessing.
+
+*All photos you'll see below were taken by a Gameboy Camera. I realized when writing this blog post that my camera captured all events in the past four years. For more photos, check out my [gallery](/gallery).*
 
 
 ### Prelude: the reality of CS grad school applications
@@ -43,7 +46,20 @@ Inasmuch as I'd like to think that I got into top schools solely because of my e
 My first break into NLP research was in spaCy, when Matt and Sofie supported me in co-leading (with Akos!) our hash-embeddings technical report.
 This gave me the confidence to undertake my own independent work for Tagalog NLP, which led to calamanCy and TLUnified-NER.
 
+<div style="display: flex; justify-content: center;">
+<img src="/assets/png/grad-school/skyscraper.png" width="220" style="border: 2px solid black; margin: 0 10px;">
+<img src="/assets/png/grad-school/berlin.png" width="220" style="border: 2px solid black; margin: 0 10px;">
+<img src="/assets/png/grad-school/remote.png" width="220" style="border: 2px solid black; margin: 0 10px;">
+</div>
+
 At Ai2, I'm lucky to have been mentored by Pradeep and worked on several projects with Yizhong.
+
+
+<div style="display: flex; justify-content: center;">
+<img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 10px;">
+<img src="/assets/png/grad-school/aurora.png" width="220" style="border: 2px solid black; margin: 0 10px;">
+<img src="/assets/png/grad-school/market.png" width="220" style="border: 2px solid black; margin: 0 10px;">
+</div>
 
 
 
