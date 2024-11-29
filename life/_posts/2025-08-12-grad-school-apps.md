@@ -20,7 +20,7 @@ That journey is finally over, and now I'm preparing myself on the cusp of anothe
 This is not a "How to apply to grad school" blog post, but perhaps you'll find something valuable along the way.
 If you want an actual guide, I recommend reading John Boaz Lee's [guide](https://drive.google.com/file/d/1N5ETwBh9dyLpxGRKIA9LXXJ_Jy44i1TP/view) (more Filipino context) or Tim Dettmer's [blog post](https://timdettmers.com/2018/11/26/phd-applications/).
 
-Finally, some news: I will be starting my **PhD in X** at **ABC**.
+📣 Finally, some news: I will be starting my **PhD in X** at **ABC**.
 I also got accepted to several universities here in the US (A, B, C), so this admissions cycle was truly a blessing.
 
 *All photos you'll see below were taken by a Gameboy Camera. I realized when writing this blog post that my camera captured all events in the past four years. For more photos, check out my [gallery](/gallery).*
@@ -52,12 +52,14 @@ In addition, working with Magda and Vincent on incorporating LLMs in the Prodigy
 _From left to right (2021---2022): view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard._
 {: style="text-align: center;"}
 
-At AI2, I was fortunate to be mentored by Pradeep & Yanai and to collaborate on several projects with Yizhong. 
-My experience at AI2 shaped my research interests and solidified what type of researcher I want to be: competent and kind. 
+At AI2, I was fortunate to be mentored by Pradeep and to collaborate on several projects with Yizhong. 
+My experience at AI2 shaped my research interests and solidified what **type of researcher I want to be: competent, steadfast, and kind.**
 I still remember when we were unable to submit our first project in time for a conference due to unexpected results, yet they remained supportive as we went back to the drawing board. 
 Later, they (together with Nathan) trusted me to deliver the preference scaling aspect of the [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) project, which was something I was proud to accomplish last year. 
-Even after working on spaCy previously, I still felt like an outsider in the NLP research community, but they made me feel welcome! 
+Even after working on spaCy previously, I still felt like an outsider in the NLP research community, but they made me feel welcome![^1]
 Those small gestures meant a lot&mdash;and I hope I can be that person for another fledgling researcher in the future.
+
+
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -77,3 +79,5 @@ Now that I'm past the hump of PhD applications, I'd like to give back: if you're
 In addition, if you're interested to do research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out and I'm happy to mentor you!
 
 
+
+[^1]: There are many people in Ai2 who helped me of course: Yanai, Valentina, Faeze, Sachin, Hannah and Noah (and much more)! It does take a village. I'm also thankful to Pradeep, Hanna+Yizhong who drafted my recommendation letters!
