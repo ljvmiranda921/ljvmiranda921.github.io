@@ -39,15 +39,15 @@ I also got accepted to several universities here in the US (A, B, C), so this ad
 
 As the fields of machine learning and NLP grow every year, the **competition for top PhD programs has become increasingly competitive.**
 There was a time when I was looking at the newly-admitted PhD students at Stanford and University of Washington, and it's common to see them with first-author publications in top conferences prior to their PhD.
-Although I have worked on NLP-adjacent projects at [Thinking Machines](https://thinkingmachin.es/), I don't have any academic NLP research experience in my profile back in 2021.
+Although I have worked on NLP-adjacent projects at [Thinking Machines](https://thinkingmachin.es/), I didn't have any academic NLP research experience in my profile back in 2021.
 Early on, I realized that **pivoting from industry to academia will entail a lot of hard work.**
 A part of me thought that maybe I should have just continued to PhD right after my Masters.
-Looking back, my experience in the industry validated that (1) I still like doing research that I'm willing to sacrifice and do The Big Pivot and (2) I can always go back to industry if this experiment-of-a-pivot didn't pan out.
+Looking back, my experience in the industry validated that (1) I still liked doing research that I'm willing to sacrifice and do The Big Pivot and (2) I can always go back to industry if this experiment-of-a-pivot didn't pan out.
 
 I called it The Big Pivot because it represented a reorientation of my career path. 
 After my time in consulting, I discovered that my passion for research hadn't diminished&mdash;if anything, it had grown stronger. 
 While the transition from industry to academia might seem straightforward on paper, the reality was far more complex. 
-It meant potentially relocating to another country, accepting a significant pay cut, and adjusting my personal milestones to align with a new career trajectory. 
+It meant potentially relocating to another country, accepting a significant pay cut, and adjusting my life stages to align with a new career trajectory. 
 Looking back to 2021, I remember feeling overwhelmed by the self-imposed pressure to make everything fall perfectly into place.
 
 ### The big pivot and the long road to PhD applications
