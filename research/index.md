@@ -34,16 +34,24 @@ I'm happy to discuss research and collaborate!
 
 ## Selected Publications
 
-Below is a list of my publications.
+Below is a list of my publications in reverse chronological order.
 You can also check my [Google
 Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 [Semantic
 Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
 profiles for more updated information.
 
+### 2025
+
+
+- [2 OLMo 2 Furious]()
+  <br>_Preprint '24_
+  <br>OLMo Team (30+ authors). I contributed in applying the T&uuml;lu 3 recipe of generating synthetic preferences for the OLMo 2 suite of DPO models.
+  <br>[[Collection](https://huggingface.co/collections/allenai/olmo-2-674117b93ab84e98afc72edc)] [[Website](https://allenai.org/blog/olmo2)]
+
 ### 2024
 
-_At AI2, I'm working on various aspects of LM post-training such as preference data collection and evaluation. I also expanded my work in the multilingual NLP front (SEACrowd, M-RewardBench)._
+_At AI2, I've worked on various aspects of LM post-training such as preference data collection and evaluation. I also expanded my work in the multilingual NLP front (SEACrowd, M-RewardBench)._
 
 - [T&uuml;lu 3: Exploring Frontiers in Open Language Model Post-Training](https://allenai.org/papers/tulu-3-report.pdf)
   <br>_Preprint '24_
