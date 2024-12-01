@@ -95,6 +95,8 @@ I have fond memories of Waseda back in 2016, and that time was formative in my c
 Back then, I was also hung up on publications: I had this looming feeling that I always need to publish so I can keep up with the profiles of those *other folks* accepted in top institutions.
 Although this is still true in some way, now I prioritize projects and big-picture research directions.
 By doing so, I can focus on which research projects I should say yes to.
+This shift helped me focus on becoming a good researcher instead of trying to be the "perfect" PhD applicant.
+I find that mindset more freeing&mdash; as I develop [a healthy detachment](https://www.ignatianspirituality.com/the-grace-of-detachment/) from my goals.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/fremont.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -104,9 +106,9 @@ By doing so, I can focus on which research projects I should say yes to.
 _From left to right (2024): snippets of my life in Seattle including the Fremont graffiti, the pottery studio at Yu Tang Ceramics, and the Farmer's Market in downtown._
 {: style="text-align: center;"}
 
-It took me years to build up a stronger portfolio, and even then I still thought my profile isn't strong enough when I was applying.
+It took me years to build up a stronger portfolio, and even then I still thought my profile isn't strong enough when I was applying (it's easy to compare oneself to others).
 But my then fianc&eacute;e-now-wife encouraged me a lot and boosted my confidence.
-**Surrounding myself with people who support me are important**, especially in academia, where each stage of your career is based on someone evaluating you, from PhD apps, journal/conference submissions, job applications, grants, etc..
+**Surrounding myself with people who support me are important**, especially in academia, where each stage of your career is based on someone evaluating you, from PhD apps, journal/conference submissions, job applications, grants, etc.
 And so, mustering myself, I applied to 10 PhD programs in the US, UK, and Canada.
 
 ### On the admissions cycle and on choosing programs
@@ -122,6 +124,11 @@ It took me years to build up a strong portfolio, and even then I still think my 
 I feel privileged and blessed to have this problem of choice.
 Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements!
 In addition, if you're interested to do research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out and I'm happy to mentor you!
+
+### Final thoughts and some unsolicited advice
+
+
+<!-- journey before destination -->
 
 
 ### Footnotes
