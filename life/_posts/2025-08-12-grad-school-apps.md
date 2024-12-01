@@ -47,7 +47,7 @@ But in hindsight, my experience in the industry validated that (1) I still liked
 I called it The Big Pivot because it represented a reorientation of my career path. 
 After my time in consulting, I discovered that my passion for research hadn't diminished&mdash;if anything, it had grown stronger. 
 While the transition from industry to academia might seem straightforward on paper, the reality was far more complex. 
-It meant potentially relocating to another country, accepting a significant pay cut, and adjusting my life stages to align with a new career trajectory. 
+It meant potentially relocating to another country, accepting a significant pay cut, and adjusting my life stages (e.g., getting married, growing a family) to align with a new career trajectory. 
 Looking back to 2021, I remember feeling overwhelmed by the self-imposed pressure to make everything fall perfectly into place.
 
 ### The big pivot and the long road to PhD applications
