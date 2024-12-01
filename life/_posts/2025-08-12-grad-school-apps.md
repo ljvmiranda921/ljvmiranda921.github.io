@@ -42,7 +42,7 @@ There was a time when I was looking at the newly-admitted PhD students at Stanfo
 Although I have worked on NLP-adjacent projects at [Thinking Machines](https://thinkingmachin.es/), I didn't have any academic NLP research experience in my profile back in 2021.
 Early on, I realized that **pivoting from industry to academia will entail a lot of hard work.**
 A part of me thought that maybe I should have just continued to PhD right after my Masters.
-Looking back, my experience in the industry validated that (1) I still liked doing research that I'm willing to sacrifice and do The Big Pivot and (2) I can always go back to industry if this experiment-of-a-pivot didn't pan out.
+But in hindsight, my experience in the industry validated that (1) I still liked doing research that I'm willing to sacrifice and do The Big Pivot and (2) I can always go back to industry if this experiment-of-a-pivot didn't pan out.
 
 I called it The Big Pivot because it represented a reorientation of my career path. 
 After my time in consulting, I discovered that my passion for research hadn't diminished&mdash;if anything, it had grown stronger. 
