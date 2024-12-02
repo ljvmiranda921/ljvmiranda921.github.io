@@ -13,7 +13,7 @@ excerpt: |
     Talking about an open-source project I did at work!
 ---
 
-> November 2022: As of now, there's no development in Geomancer, and  we archived the repository. I've recently
+> November 2022: We've stopped development of Geomancer and archived the repository. I've recently
 > changed jobs, too, as I am working in open source full-time with
 > [Explosion](https://explosion.ai) and [spaCy](https://spacy.io)!
 > You can check out my [retrospective](#postscript) at the end.
@@ -26,7 +26,6 @@ through my slides and give a deeper context to some of the library's design.
 
 ![](/assets/png/geomancer/title.jpg){:width="560px"}  
 {: style="text-align: center;"}
-
 
 ## Why build Geomancer?
 
