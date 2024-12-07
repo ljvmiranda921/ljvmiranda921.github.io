@@ -25,3 +25,7 @@ Take [calamanCy](https://ljvmiranda921/calamanCy) for example: we spent countles
 However, outside of pure linguistics research, these components are usually part of larger systems aimed at tasks like information extraction and question answering.
 In the past years, we've seen how LLMs can perform these downstream tasks end-to-end, without needing these components at all.
 
+Recently, we've also seen the release of capable multilingual LLMs such as Meta's [Llama 3.1+](https://ai.meta.com/blog/meta-llama-3-1/), Cohere for AI's [Aya Expanse](https://cohere.com/blog/aya-expanse-connecting-our-world), and even Southeast Asian models such as AI Singapore's [SEA-LION](https://sea-lion.ai/) and Sea AI's [Sailor](https://huggingface.co/collections/sail/sailor2-language-models-674d7c9e6b4dbbd9a869906b).
+Sure, one can argue that they may not always work on Filipino (and I've argued these before [[1](/notebook/2023/08/04/llm-tagalog/)] [[2](/notebook/2024/07/02/talk-dlsu/)]), but perhaps I'm getting [*scale-pilled*](https://arxiv.org/abs/2001.08361) right now and it's only a matter of time that they reach these decent Filipino language capabilities.
+This is not a retraction of my previous arguments, but more of a recontextualization of what type of Filipino NLP research we can do in the age of LLMs.
+
