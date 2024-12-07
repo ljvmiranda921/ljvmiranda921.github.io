@@ -16,7 +16,8 @@ tags:
     llm,
   ]
 description: |
-    In this blog post, I'll outline my thoughts on what LLM researchers interested in improving Filipino NLP should focus on.
-    I'll talk about missing pieces, dead-ends, and promising research directions.
+    The rise of LLMs is forcing us to rethink Filipino NLP. But there's still a ton of work to do&mdash;just not the stuff you might think. Here's my take on what's worth doing, what's a waste of time, and where Filipino NLP research should be heading.
 excerpt: |
 ---
+
+<span class="firstcharacter">W</span>hen I started working in NLP
