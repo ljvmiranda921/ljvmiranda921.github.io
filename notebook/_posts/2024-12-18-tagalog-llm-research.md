@@ -29,6 +29,9 @@ Recently, we've seen the release of capable multilingual LLMs such as Meta's [Ll
 Sure, one can argue that they don't always work well on Filipino (and I've argued these before [[1](/notebook/2023/08/04/llm-tagalog/)] [[2](/notebook/2024/07/02/talk-dlsu/)]), but perhaps I'm getting [*scale-pilled*](https://arxiv.org/abs/2001.08361) now and it's only a matter of time before LLMs reach these decent Filipino language capabilities.
 This isn't a retraction of my previous arguments; we should still build artisanal Filipino NLP resources, but **we should also build resources that support the training and evaluation of multilingual LLMs in order to advocate the representation of Philippine languages.**
 
+> We should also build resources that support the training and evaluation
+> of multilingual LLMs to advocate the representation of Philippine languages.
+
 Our majority language, Tagalog, is still low-resource even in the age of LLMs.
 Sometimes I feel a tinge of sadness when a research group releases a new multilingual LLM and Tagalog is not supported.[^1]
 You can't blame them&mdash; there's not a lot of readily-available Tagalog data.
