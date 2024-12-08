@@ -32,11 +32,9 @@ This isn't a retraction of my previous arguments; we should still build artisana
 > We should also build resources that support the training and evaluation
 > of multilingual LLMs to advocate the representation of Philippine languages.
 
-Our majority language, Tagalog, is still low-resource even in the age of LLMs.
+Tagalog is still low-resource even in the age of LLMs.
 Sometimes I feel a tinge of sadness when a research group releases a new multilingual LLM and Tagalog is not supported.
-You can't blame them&mdash; there's not a lot of readily-available Tagalog data.
-In fact, the largest Philippine language in terms of volume is Cebuano, not because of a dedicated group of Cebuano researchers but rather due to the proliferation of [lsjbot](https://en.wikipedia.org/wiki/Lsjbot) in Cebuano Wikipedia.
-One can even argue that the texts produced by lsjbot do not correspond to how Cebuano is used by actual speakers.
+You can't blame them&mdash; there's not a lot of readily-available Tagalog data for LM training.
 There are still missing pieces ripe for research.
 
 This brings us to three actionable directions for Filipino NLP: (1) create resources that support LLM post-training, (2) build reliable benchmarks for Filipino, and (3) participate in grassroots research and annotation efforts.
@@ -50,13 +48,17 @@ This stage usually involves two main steps: **instruction finetuning (IFT)** and
 Most IFT data comes in question-answer pairs containing a *user instruction*, an optional *context*, and a given *response*.
 PreFT data, on the other hand, consists of human preferences on model outputs, which can be collected either [manually](https://arxiv.org/abs/2204.05862) or using [another language model](https://arxiv.org/abs/2310.01377) (or a [combination of both](https://arxiv.org/abs/2410.19133)).
 
-![](/assets/png/filipino-llm/llm_training.png){:width="700px"}
+![](/assets/png/filipino-llm/llm_training.png){:width="700px"}  
+*A simple language modelling pipeline (as seen in models like InstructGPT, Tulu 2, etc.).  
+Currently, we lack quality Filipino data for post-training.*
 {: style="text-align: center;"}
 
 I want to focus on collecting post-training data because it can be tailored to specific domains and is more economical to run experiments with.
 This is unlike pretraining, which requires processing massive text corpora and very expensive to attempt.
 **As of now, Philippine languages lack quality post-training data.**
 The best we have so far in IFT is the Aya dataset, with around X.XXk samples for Tagalog and X.XXk for Cebuano.
+In fact, the largest Philippine language in IFT is Cebuano, not because of a dedicated group of Cebuano researchers but rather due to the proliferation of [lsjbot](https://en.wikipedia.org/wiki/Lsjbot) in Cebuano Wikipedia.
+One can even argue that the texts produced by lsjbot do not correspond to how Cebuano is used by actual speakers.
 
 > Philippine languages lack quality post-training data
 
