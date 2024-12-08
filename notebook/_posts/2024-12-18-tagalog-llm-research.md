@@ -40,6 +40,7 @@ One can even argue that the texts produced by lsjbot do not correspond to how Ce
 There are still missing pieces ripe for research.
 
 This brings us to three actionable directions for Filipino NLP: (1) create resources that support LLM post-training, (2) build reliable benchmarks for Filipino, and (3) participate in grassroots research and annotation efforts.
+**Also, if you are interested to collaborate in these types of efforts, feel free to [reach out](mailto:ljvmiranda@gmail.com)!**
 
 
 ### Create resources that support post-training
@@ -55,6 +56,8 @@ I want to focus on collecting post-training data because it can be tailored to s
 This is unlike pretraining, which requires processing massive text corpora and very expensive to attempt.
 **As of now, Philippine languages lack quality post-training data.**
 The best we have so far in IFT is the Aya dataset, with around X.XXk samples for Tagalog and X.XXk for Cebuano.
+
+> Philippine languages lack quality post-training data
 
 <!-- bar chart of Tagalog Cebuano in AYa -->
 
