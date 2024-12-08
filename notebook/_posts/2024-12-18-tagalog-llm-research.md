@@ -51,7 +51,7 @@ PreFT data, on the other hand, consists of human preferences on model outputs, w
 
 <!-- simple diagram for LLM modelling -->
 
-I want to focus on collecting post-training data because it can be tailored to specific purposes or domains and is more economical to run experiments with.
+I want to focus on collecting post-training data because it can be tailored to specific domains and is more economical to run experiments with.
 This is unlike pretraining, which requires processing massive text corpora and very expensive to attempt.
 **As of now, Philippine languages lack quality post-training data.**
 The best we have so far in IFT is the Aya dataset, with around X.XXk samples for Tagalog and X.XXk for Cebuano.
