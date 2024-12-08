@@ -43,6 +43,13 @@ This brings us to three actionable directions for Filipino NLP: (1) create resou
 
 ### Create resources that support post-training
 
+<p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
+<b>Key Insight:</b> 
+Better to focus on post-training since it requires relatively lower investment than pretraining.
+Prioritize collecting instruction finetuning datasets since it's in this step where we usually observe significant performance gains. 
+Better if they contain general chat, but domain-specific data should also work.
+</p>
+
 Post-training is the stage in the large language modelling pipeline where we adapt a pretrained model to a specific style of input for chat interactions, such as following natural language instructions and responding in accordance with human preferences among many others.
 This stage usually involves two main steps: **instruction finetuning (IFT)** and **preference finetuning (PreFT)**.
 Most IFT data comes in question-answer pairs containing a *user instruction*, an optional *context*, and a given *response*.
@@ -63,6 +70,9 @@ One can even argue that the texts produced by lsjbot do not correspond to how Ce
 > Philippine languages lack quality post-training data
 
 <!-- bar chart of Tagalog Cebuano in AYa -->
+
+There are many ways to collect IFT data.
+
 
 
 
