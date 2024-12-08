@@ -2,6 +2,23 @@
 layout: default
 ---
 
+<style>
+  @media screen and (min-width: 769px) {
+    .column {
+      width: 50%;
+      float: left;
+      max-width: 50%;
+      padding: 5px;
+    }
+    .row {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+</style>
+
+
 <div class="home">
 
   <div class="divider">
@@ -43,9 +60,8 @@ layout: default
   <hr>
 
   &nbsp;
-
   <div class="row">
-    <div class="column" style="width:48%; float:left;">
+    <div class="column" style="width:100%; float:left;">
       <h2 style="font-size: 1.5em;">Recent Posts</h2>
 
       <ul class="post-list">
@@ -63,7 +79,7 @@ layout: default
       </ul>
     </div>
 
-    <div class="column" style="width:48%; float:right;">
+    <div class="column" style="width:100%; float:right;">
       <h2 style="font-size: 1.5em;">What's New?</h2>
       <ul class="post-list">
         {% assign news_content = site.pages | where: "path", "news.md" | first %}
@@ -71,6 +87,5 @@ layout: default
       </ul>
     </div>
   </div>
-
 
 </div>
