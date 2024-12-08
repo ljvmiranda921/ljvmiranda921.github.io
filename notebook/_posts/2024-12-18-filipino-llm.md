@@ -50,7 +50,8 @@ This stage usually involves two main steps: **instruction finetuning (IFT)** and
 Most IFT data comes in question-answer pairs containing a *user instruction*, an optional *context*, and a given *response*.
 PreFT data, on the other hand, consists of human preferences on model outputs, which can be collected either [manually](https://arxiv.org/abs/2204.05862) or using [another language model](https://arxiv.org/abs/2310.01377) (or a [combination of both](https://arxiv.org/abs/2410.19133)).
 
-<!-- simple diagram for LLM modelling -->
+![](/assets/png/filipino-llm/llm_training.png){:width="700px"}
+{: style="text-align: center;"}
 
 I want to focus on collecting post-training data because it can be tailored to specific domains and is more economical to run experiments with.
 This is unlike pretraining, which requires processing massive text corpora and very expensive to attempt.
