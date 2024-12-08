@@ -45,10 +45,10 @@ This brings us to three actionable directions for Filipino NLP: (1) create resou
 
 ### Create resources that support post-training
 
-Post-training is the stage in the large language modelling pipeline where we adapt a pretrained model to specific tasks, such as following instructions given a prompt.
-This stage usually involves two main steps: instruction finetuning (IFT) and preference finetuning (PreFT).
+Post-training is the stage in the large language modelling pipeline where we adapt a pretrained model to a specific style of input for chat interactions, such as following natural language instructions and responding in accordance with human preferences among many others.
+This stage usually involves two main steps: **instruction finetuning (IFT)** and **preference finetuning (PreFT)**.
 Most IFT data comes in question-answer pairs containing a *user instruction*, an optional *context*, and a given *response*.
-PreFT data, on the other hand, consists of human preferences on model outputs, which can be collected either manually or using another LLM.
+PreFT data, on the other hand, consists of human preferences on model outputs, which can be collected either [manually](https://arxiv.org/abs/2204.05862) or using [another language model](https://arxiv.org/abs/2310.01377) (or a [combination of both](https://arxiv.org/abs/2410.19133)).
 
 <!-- simple diagram for LLM modelling -->
 
