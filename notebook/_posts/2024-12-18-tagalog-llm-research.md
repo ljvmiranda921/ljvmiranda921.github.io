@@ -33,26 +33,33 @@ This isn't a retraction of my previous arguments; we should still build artisana
 > of multilingual LLMs to advocate the representation of Philippine languages.
 
 Our majority language, Tagalog, is still low-resource even in the age of LLMs.
-Sometimes I feel a tinge of sadness when a research group releases a new multilingual LLM and Tagalog is not supported.[^1]
+Sometimes I feel a tinge of sadness when a research group releases a new multilingual LLM and Tagalog is not supported.
 You can't blame them&mdash; there's not a lot of readily-available Tagalog data.
 In fact, the largest Philippine language in terms of volume is Cebuano, not because of a dedicated group of Cebuano researchers but rather due to the proliferation of [lsjbot](https://en.wikipedia.org/wiki/Lsjbot) in Cebuano Wikipedia.
 One can even argue that the texts produced by lsjbot do not correspond to how Cebuano is used by actual speakers.
 There are still missing pieces ripe for research.
+
+<!-- bar chart of Filipino Cebuano in Aya, in CommonCrawl, etc. -->
 
 This brings us to three actionable directions for Filipino NLP: (1) create resources that support LLM post-training, (2) build reliable benchmarks for Filipino, and (3) participate in grassroots research and annotation efforts.
 
 
 ### Create resources that support post-training
 
+Post-training is the stage in the large language modelling pipeline where we adapt a pretrained model to specific tasks, like following instructions given a prompt.
+This stage usually involves two main steps: instruction finetuning (IFT) and preference finetuning (PreFT).
+Most IFT data come in question-answering pairs containing a *user instruction*, an optional *context*, and a given response.
+On the other hand, PreFT data consists of human preferences on model outputs which can be collected manually or using another LLM.
+
+First, I want to focus on collecting post-training data because it can be tailored to specific purposes or domains, and it's more economical to run experiments on top of it.
+This is unlike pretraining, which requires processing massive text corpora and very expensive to attempt.
+
+
+
+
+
 ### Build reliable benchmarks for Filipino
 
 
 ### Participate in grassroots research & annotation efforts
-
-
-[^1]: 
-
-    One might ask the question: *why care if Tagalog isn't supported? Is there anything linguistically interesting in the language?*
-    This reminded me of this [thread](https://bsky.app/profile/lchoshen.bsky.social/post/3lcijglidls2p).
-    There are already good answers (I particularly like [Nathan Schneider](https://bsky.app/profile/complingy.bsky.social/post/3lcows7qcc223) and [Antonis Anstasopoulos](https://bsky.app/profile/antonisa.bsky.social/post/3lcjscpzurc26)'s responses), but even if there's no linguistically interesting aspect in Tagalog, I care because I speak the language and I grew up (and was formed) by it.
 
