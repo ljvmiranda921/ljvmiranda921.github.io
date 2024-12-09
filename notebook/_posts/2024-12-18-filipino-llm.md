@@ -41,7 +41,7 @@ This brings us to three actionable directions for Filipino NLP: (1) create resou
 **Also, if you are interested to collaborate in these types of efforts, feel free to [reach out](mailto:ljvmiranda@gmail.com)!**
 
 
-### Create resources that support post-training
+### Create resources that enable LLM post-training
 
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 <b>Key Insight:</b> 
@@ -73,16 +73,13 @@ Preference data is also important, but collecting it requires more annotation ef
 **As of now, Philippine languages lack quality IFT data.**
 The best we have so far in IFT is the Aya dataset, with around 1.46k samples for Tagalog and 4.12M for Cebuano.
 At first glance, Cebuano looks promising with more than a million examples, but upon inspection, majority of these examples were translated from another language (possibly English) or was derived from the Cebuano Wikipedia which is [mostly synthetic and unnatural](https://en.wikipedia.org/wiki/Cebuano_Wikipedia).[^1]
+There are several ways to collect IFT data. We can (1) annotate our own datasets, (2) translate existing English IFT datasets into Filipino, or (3) repurpose existing Filipino datasets into a question-answering format. 
+It's important to note that these datasets don't need to focus on general chat. 
+Researchers can continue working in their domains of interest while reframing their problems as question-answering tasks. 
 
-
-<!-- bar chart of Tagalog Cebuano in AYa -->
-
-There are many ways to collect IFT data.
-We can (1) annotate our own datasets, (2) translate existing English IFT datasets to Filipino, (3) or repurpose existing Filipino datasets into a question-answering format.
-I also want to reiterate that the domain for these dataset doesn't need to be about general chat.
-Researchers can still continue working on their own domains of interest, yet reframe the problem as a question-answering task.
-There are many open problems that other languages have already explored that we can apply in our language.
-If you're interested to collaborate on this, then feel free to [reach out](mailto:ljvmiranda@gmail.com)!
+Ideally, collecting Filipino IFT instances **in the order of hundreds of thousands (100K-400K) is crucial for this work.**
+It would be even better if these instances were evenly distributed across our major languages (e.g., Tagalog, Cebuano, Ilocano, Hiligaynon).
+If you're interested in collaborating on this, [feel free to reach out](mailto:ljvmiranda@gmail.com)!
 
 
 ### Build reliable benchmarks for Filipino
