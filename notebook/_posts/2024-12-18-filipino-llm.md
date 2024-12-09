@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-header-img:
+header-img: /assets/png/filipino-llm/header.png
 tags:
   [
     tagalog,
