@@ -71,9 +71,8 @@ Preference data is also important, but collecting it requires more annotation ef
 > Philippine languages lack quality instruction finetuning data
 
 **As of now, Philippine languages lack quality IFT data.**
-The best we have so far in IFT is the Aya dataset, with around X.XXk samples for Tagalog and X.XXk for Cebuano.
-Interestingly, Cebuano's dataset is larger primarily because of it came from the Cebuano Wikipedia, which is [the 2nd largest Wikipedia in the world](https://en.wikipedia.org/wiki/Cebuano_Wikipedia).
-However, the articles in Cebuano Wiki were machine-generated and may not reflect how users actually speak the language.
+The best we have so far in IFT is the Aya dataset, with around 1.46k samples for Tagalog and 4.12M for Cebuano.
+At first glance, Cebuano looks promising with more than a million examples, but upon inspection, majority of these examples were translated from another language (possibly English) or was derived from the Cebuano Wikipedia which is [mostly synthetic and unnatural](https://en.wikipedia.org/wiki/Cebuano_Wikipedia).[^1]
 
 
 <!-- bar chart of Tagalog Cebuano in AYa -->
@@ -91,3 +90,7 @@ If you're interested to collaborate on this, then feel free to [reach out](mailt
 
 ### Participate in grassroots research & annotation efforts
 
+
+[^1]: 
+
+    The Cebuano Wikipedia is the second-largest Wikipedia in terms of number of articles. Although this appears impressive, its size is due to an article-generating bot called [Lsjbot](https://en.wikipedia.org/wiki/Lsjbot) rather than a dedicated group of Wikipedia volunteers. Unfortunately, the articles in Cebuano Wikipedia are unnatural and do not reflect how the language is actually used by native speakers.
