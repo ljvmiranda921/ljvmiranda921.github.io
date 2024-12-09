@@ -71,7 +71,7 @@ Preference data is also important, but collecting it requires more annotation ef
 > Philippine languages lack quality instruction finetuning data
 
 **As of now, Philippine languages lack quality IFT data.**
-The best we have so far in IFT is the Aya dataset, with around 1.46k samples for Tagalog and 4.12M for Cebuano.
+The best we have so far is the Aya dataset, with around 1.46k samples for Tagalog and 4.12M for Cebuano.
 At first glance, Cebuano looks promising with more than a million examples, but upon inspection, majority of these examples were translated from another language (possibly English) or was derived from the Cebuano Wikipedia which is [mostly synthetic and unnatural](https://en.wikipedia.org/wiki/Cebuano_Wikipedia).[^1]
 There are several ways to collect IFT data. We can (1) annotate our own datasets, (2) translate existing English IFT datasets into Filipino, or (3) repurpose existing Filipino datasets into a question-answering format. 
 It's important to note that these datasets don't need to focus on general chat. 
@@ -82,8 +82,9 @@ It would be even better if these instances were evenly distributed across our ma
 Collecting 100k instances seems daunting, but I already have some ideas in mind.
 If you're interested in collaborating on this, [feel free to reach out](mailto:ljvmiranda@gmail.com)!
 
-
 ### Build reliable benchmarks for Filipino
+
+
 
 
 ### Participate in grassroots research & annotation efforts
