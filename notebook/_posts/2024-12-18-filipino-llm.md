@@ -79,6 +79,7 @@ Researchers can continue working in their domains of interest while reframing th
 
 Ideally, collecting Filipino IFT instances **in the order of hundreds of thousands (100K-400K) is crucial for this work.**
 It would be even better if these instances were evenly distributed across our major languages (e.g., Tagalog, Cebuano, Ilocano, Hiligaynon).
+Collecting 100k instances seems daunting, but I already have some ideas in mind.
 If you're interested in collaborating on this, [feel free to reach out](mailto:ljvmiranda@gmail.com)!
 
 
