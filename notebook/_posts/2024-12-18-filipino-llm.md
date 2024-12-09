@@ -64,7 +64,7 @@ Currently, we lack quality Filipino data for post-training.*
 
 I want to focus on collecting IFT data because it can be **tailored to specific domains** and is **more economical to run experiments with**.
 This means that NLP researchers interested in Filipino can still continue focusing on their own domains of interest while still contributing to this larger goal of improving our Filipino data pool.
-Take [SciRIFF](https://arxiv.org/abs/2406.07835) for example: it contains question answering pairs for scientific literature that serves the authors' own purpose, yet we were able to use it in [T&uuml;lu 3](https://arxiv.org/abs/2411.15124) to build generalist language models.
+Take [SciRIFF](https://arxiv.org/abs/2406.07835) for example: it contains question answering pairs for scientific literature that serves the authors' own purpose, yet we were able to use it in [T&uuml;lu 3](https://arxiv.org/abs/2411.15124) to build *generalist language models* that are capable of chat, reasoning, coding, and other skills.
 In addition, **IFT is computationally cheaper than pretraining**; laboratories with a decent grant and cloud capacity can [easily finetune a 7B-parameter model](https://github.com/hiyouga/LLaMA-Factory?tab=readme-ov-file#hardware-requirement).
 Preference data is also important, but collecting it requires more annotation effort and stronger multilingual models that *actually work* in Filipino (more on that in the following sections).
 
@@ -79,8 +79,10 @@ Researchers can continue working in their domains of interest while reframing th
 
 Ideally, collecting Filipino IFT instances **in the order of hundreds of thousands (100K-400K) is crucial for this work.**
 It would be even better if these instances were evenly distributed across our major languages (e.g., Tagalog, Cebuano, Ilocano, Hiligaynon).
+Once we have this dataset, it will then be easier for us, the Filipino language community, to train our own generalist LMs.
+In addition, it also makes it easier for other organizations to incorporate our dataset into their own data mixing pipelines thereby increasing the representation of Filipino to these larger-scale LM projects.
 Collecting 100k instances seems daunting, but I already have some ideas in mind.
-If you're interested in collaborating on this, [feel free to reach out](mailto:ljvmiranda@gmail.com)!
+If you're interested in collaborating on this, [then reach out](mailto:ljvmiranda@gmail.com)!
 
 ### Build reliable benchmarks for Filipino
 
