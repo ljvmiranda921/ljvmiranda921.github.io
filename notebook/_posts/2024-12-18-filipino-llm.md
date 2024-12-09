@@ -51,30 +51,39 @@ Better if they contain general chat, but domain-specific data should also work.
 </p>
 
 Post-training is the stage in the large language modelling pipeline where we adapt a pretrained model to a specific style of input for chat interactions, such as following natural language instructions and responding in accordance with human preferences among many others.
-This stage usually involves two main steps: **instruction finetuning (IFT)** and **preference finetuning (PreFT)**.
+This stage usually involves two main steps: instruction finetuning (IFT) and preference finetuning (PreFT).
+I want to focus on the former.
 Most IFT data comes in question-answer pairs containing a *user instruction*, an optional *context*, and a given *response*.
-PreFT data, on the other hand, consists of human preferences on model outputs, which can be collected either [manually](https://arxiv.org/abs/2204.05862) or using [another language model](https://arxiv.org/abs/2310.01377) (or a [combination of both](https://arxiv.org/abs/2410.19133)).
+<!-- PreFT data, on the other hand, consists of human preferences on model outputs, which can be collected either [manually](https://arxiv.org/abs/2204.05862) or using [another language model](https://arxiv.org/abs/2310.01377) (or a [combination of both](https://arxiv.org/abs/2410.19133)). -->
+For the next year or so, I believe there's a **more urgent need for Filipino IFT datasets.**
 
 ![](/assets/png/filipino-llm/llm_training.png){:width="700px"}  
 *A simple language modelling pipeline (as seen in models like InstructGPT, Tulu 2, etc.).  
 Currently, we lack quality Filipino data for post-training.*
 {: style="text-align: center;"}
 
-I want to focus on collecting post-training data because it can be tailored to specific domains and is more economical to run experiments with.
-This is unlike pretraining, which requires processing massive text corpora and very expensive to attempt.
-**As of now, Philippine languages lack quality post-training data.**
-The best we have so far in IFT is the Aya dataset, with around X.XXk samples for Tagalog and X.XXk for Cebuano.
-In fact, the largest Philippine language in IFT is Cebuano, not because of a dedicated group of Cebuano researchers but rather due to the proliferation of [lsjbot](https://en.wikipedia.org/wiki/Lsjbot) in Cebuano Wikipedia.
-One can even argue that the texts produced by lsjbot do not correspond to how Cebuano is used by actual speakers.
+I want to focus on collecting IFT data because it can be **tailored to specific domains** and is **more economical to run experiments with**.
+This means that NLP researchers interested in Filipino can still continue focusing on their own domains of interest while still contributing to this larger goal of improving our Filipino data pool.
+Take [SciRIFF](https://arxiv.org/abs/2406.07835) for example: it contains question answering pairs for scientific literature that serves the authors' own purpose, yet we were able to use it in [T&uuml;lu 3](https://arxiv.org/abs/2411.15124) to build generalist language models.
+In addition, **IFT is computationally cheaper than pretraining**; laboratories with a decent grant and cloud capacity can [easily finetune a 7B-parameter model](https://github.com/hiyouga/LLaMA-Factory?tab=readme-ov-file#hardware-requirement).
+Preference data is also important, but collecting it requires more annotation effort and stronger multilingual models that *actually work* in Filipino (more on that in the following sections).
 
-> Philippine languages lack quality post-training data
+> Philippine languages lack quality instruction finetuning data
+
+**As of now, Philippine languages lack quality IFT data.**
+The best we have so far in IFT is the Aya dataset, with around X.XXk samples for Tagalog and X.XXk for Cebuano.
+Interestingly, Cebuano's dataset is larger primarily because of it came from the Cebuano Wikipedia, which is [the 2nd largest Wikipedia in the world](https://en.wikipedia.org/wiki/Cebuano_Wikipedia).
+However, the articles in Cebuano Wiki were machine-generated and may not reflect how users actually speak the language.
+
 
 <!-- bar chart of Tagalog Cebuano in AYa -->
 
 There are many ways to collect IFT data.
-
-
-
+We can (1) annotate our own datasets, (2) translate existing English IFT datasets to Filipino, (3) or repurpose existing Filipino datasets into a question-answering format.
+I also want to reiterate that the domain for these dataset doesn't need to be about general chat.
+Researchers can still continue working on their own domains of interest, yet reframe the problem as a question-answering task.
+There are many open problems that other languages have already explored that we can apply in our language.
+If you're interested to collaborate on this, then feel free to [reach out](mailto:ljvmiranda@gmail.com)!
 
 
 ### Build reliable benchmarks for Filipino
