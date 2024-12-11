@@ -79,13 +79,17 @@ Researchers can continue working in their domains of interest while reframing th
 
 Ideally, collecting Filipino IFT instances **in the order of hundreds of thousands (100K-400K) is crucial for this work.**
 It would be even better if these instances were evenly distributed across our major languages (e.g., Tagalog, Cebuano, Ilocano, Hiligaynon).
-Once we have this dataset, it will then be easier for us, the Filipino language community, to train our own generalist LMs.
+Once we have this dataset, it will then be easier for us, the Filipino language community, to train our own generalist LLMs.
 In addition, it also makes it easier for other organizations to incorporate our dataset into their own data mixing pipelines thereby increasing the representation of Filipino to these larger-scale LM projects.
 Collecting 100k instances seems daunting, but I already have some ideas in mind.
 If you're interested in collaborating on this, [then reach out](mailto:ljvmiranda@gmail.com)!
 
 ### Build reliable benchmarks for Filipino
 
+Even before we start training language models, it is important to measure how current state-of-the-art LLMs perform on Filipino.
+Most of the evidences I see are anecdotal: someone will post a single ChatGPT screenshot in Filipino and claim that the model already *understands* the language.
+However, it is easy to see how this performance can degrade as you keep chatting (e.g., misunderstanding of idioms and expressions, unrecognized words, etc.).
+We need a **systematic approach to evaluating these models.**
 
 
 
