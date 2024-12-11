@@ -102,7 +102,7 @@ It allows us to say *"this LLM works on these specific Filipino tasks but fails 
 This also opens up several potential avenues to advocate particular research directions for Filipino&mdash; focusing on language X, building a language-specific LLM, etc.&mdash; because there are metrics we hold ourselves onto (while acknowledging [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law)).
 Basically, we just need something instead of nothing, and that something is a huge step forward.
 
-### Participate in grassroots research & annotation efforts
+### Participate in grassroots research efforts
 
 
 [^1]: 
