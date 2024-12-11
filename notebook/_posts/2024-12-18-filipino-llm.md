@@ -91,6 +91,16 @@ Most of the evidences I see are anecdotal: someone will post a single ChatGPT sc
 However, it is easy to see how this performance can degrade as you keep chatting (e.g., misunderstanding of idioms and expressions, unrecognized words, etc.).
 We need a **systematic approach to evaluating these models.**
 
+We have a few promising benchmarks at hand.
+For example, [KALAHI](https://huggingface.co/datasets/aisingapore/kalahi) tests for an LLM's ability to discern the correct response on culturally-specific situations that Filipinos face in their day-to-day lives.
+[NewsPH NLI](https://huggingface.co/datasets/jcblaise/newsph_nli) and [EMoTES-3k](https://huggingface.co/datasets/NLPinas/EMoTES-3K) are also relevant as they reflect some of the potential questions that one asks an LLM.
+I believe that through the years, we have developed several datasets that tests different facets of the Filipino language, we just need to scour and curate them in order to filter those that are relevant for Filipino use-cases.
+
+
+
+
+
+
 
 
 ### Participate in grassroots research & annotation efforts
