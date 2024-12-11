@@ -94,14 +94,13 @@ We need a **systematic approach to evaluating these models.**
 We have a few promising benchmarks at hand.
 For example, [KALAHI](https://huggingface.co/datasets/aisingapore/kalahi) tests for an LLM's ability to discern the correct response on culturally-specific situations that Filipinos face in their day-to-day lives.
 [NewsPH NLI](https://huggingface.co/datasets/jcblaise/newsph_nli) and [EMoTES-3k](https://huggingface.co/datasets/NLPinas/EMoTES-3K) are also relevant as they reflect some of the potential questions that one asks an LLM.
-I believe that through the years, we have developed several datasets that tests different facets of the Filipino language, we just need to scour and curate them in order to filter those that are relevant for Filipino use-cases.
+I believe that through the years, we have developed several datasets that tests different facets of the Filipino language, we need to **scour and curate** them in order to filter those that are relevant for Filipino use-cases.
+There are several frameworks that allow us to do this such as [Eleuther AI's harness](https://github.com/EleutherAI/lm-evaluation-harness) and [HuggingFace's lighteval](https://github.com/huggingface/lighteval) that enable us to seamlessly evaluate several LMs at scale.
 
-
-
-
-
-
-
+Creating a language-specific benchmark is useful because it serves not just the academic community for that language but also the industry at large.
+It allows us to say *"this LLM works on these specific Filipino tasks but fails at some"* in academia, and help advise industry practitioners on which LLMs work on their particular use case.
+This also opens up several potential avenues to advocate particular research directions for Filipino&mdash; focusing on language X, building a language-specific LLM, etc.&mdash; because there are metrics we hold ourselves onto (while acknowledging [Goodhart's Law](https://en.wikipedia.org/wiki/Goodhart%27s_law)).
+Basically, we just need something instead of nothing, and that something is a huge step forward.
 
 ### Participate in grassroots research & annotation efforts
 
