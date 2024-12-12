@@ -86,6 +86,13 @@ If you're interested in collaborating on this, [then reach out](mailto:ljvmirand
 
 ### Build reliable benchmarks for Filipino
 
+<p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
+<b>Key Insight:</b> 
+We need to systematically answer the question: <i>"Does this LLM work on Filipino?"</i>
+Although we already have several datasets that examine various aspects of the Filipino language,
+we need to curate which of these are relevant for LLM evaluation then build an evaluation suite.
+</p>
+
 Even before we start training language models, it is important to measure how current state-of-the-art LLMs perform on Filipino.
 Most of the evidence I see is anecdotal: someone will post a single ChatGPT screenshot in Filipino and claim that the model already *understands* the language.
 However, it is easy to see how this performance can degrade during extended conversations (e.g., misunderstanding of idioms and expressions, unrecognized words, etc.).
