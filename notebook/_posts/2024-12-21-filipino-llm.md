@@ -152,10 +152,11 @@ I appreciate this framework because it provides multiple dimensions for measurin
 I maintain that Philippine languages remain low-resource across several dimensions. 
 Even Tagalog, our majority language, still lacks the necessary tools and datasets to produce robust NLP pipelines. 
 I believe the three research directions I described above can both increase the number of artifacts available for building language technologies and enhance our agency as a research community.
-I admit that I haven't done enough for Filipino NLP this year[^1] and this blog post serves not just as a research statement but also a commitment to improve my involvement in this language.
+I admit that I haven't done enough for Filipino NLP this year[^2] and this blog post serves not just as a research statement but **also a commitment to improve my involvement in this language.**
+I have some ideas (this blog post is one small part of it), so if you want to help out, [feel free to reach out](mailto:ljvmiranda@gmail.com)!
 
-
+### Footnotes
 
 [^1]: The Cebuano Wikipedia is the second-largest Wikipedia in terms of number of articles. Although this appears impressive, its size is due to an article-generating bot called [Lsjbot](https://en.wikipedia.org/wiki/Lsjbot) rather than a dedicated group of Wikipedia volunteers. Unfortunately, the articles in Cebuano Wikipedia are unnatural and do not reflect how the language is actually used by native speakers.
 
-[^1]: This year we published [SEACrowd](https://aclanthology.org/2024.emnlp-main.296/), [Universal NER](https://aclanthology.org/2024.naacl-long.243/), and the [largest Tagalog UD Treebank](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317), but most of these efforts started back in 2023. 
+[^2]: This year we published [SEACrowd](https://aclanthology.org/2024.emnlp-main.296/), [Universal NER](https://aclanthology.org/2024.naacl-long.243/), and the [largest Tagalog UD Treebank](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317), but most of these efforts started back in 2023. 
