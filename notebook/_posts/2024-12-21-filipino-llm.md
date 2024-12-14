@@ -111,6 +111,14 @@ Basically, we just need something instead of nothing, and that something is a hu
 ### Participate in grassroots research efforts
 
 For the past few years, I've witnessed several grassroots NLP efforts that led to significant breakthroughs in the multilingual world.
+[SEACrowd](https://seacrowd.github.io/) is one example.
+They were able to rally a community of researchers from Southeast Asia (SEA) and [build a data hub for all SEA datasets](https://arxiv.org/abs/2406.10118), which is very much needed today.
+Other examples include [Cohere for AI's Aya](https://share.hsforms.com/10OrjljwpQ52ILJA6ftENIwch5vw) and HuggingFace's [Data is Better Together](https://huggingface.co/data-is-better-together) projects.
+Right now, it's nice to see familiar Filipino faces participating in these communities, but **it would be nice if we can increase our involvement in these larger grassroots projects**.
+
+
+
+<!-- Regional examples also exist, such as [Masakhane](https://www.masakhane.io/) for African languages and [IndoNLP](https://indonlp.github.io/) for Indonesian. -->
 
 ### Final thoughts: are we truly 'low-resource'?
 
