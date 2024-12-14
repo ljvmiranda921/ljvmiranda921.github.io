@@ -27,7 +27,7 @@ This way, we can **actively push for the inclusion of Philippine languages in th
 
 > We need to focus on creating high-quality datasets and evaluation benchmarks [to] actively push for the inclusion of Philippine languages in the next generation of multilingual LLMs.
 
-Tagalog is still low-resource even in the age of LLMs ([more on this later](#final-thoughts-are-we-truly-low-resource)).
+Tagalog is still left behind even in the age of LLMs ([more on this later](#final-thoughts-are-we-truly-low-resource)).
 Sometimes I feel a tinge of sadness when a research group releases a new multilingual LLM and Tagalog is not supported.
 You can't blame them&mdash; there's not a lot of readily-available Tagalog data for LM training.
 There are still missing pieces ripe for research.
