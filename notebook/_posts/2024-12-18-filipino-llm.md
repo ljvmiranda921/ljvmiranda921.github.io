@@ -109,6 +109,9 @@ Basically, we just need something instead of nothing, and that something is a hu
 
 ### Participate in grassroots research efforts
 
+For the past few years, I've witnessed several grassroots NLP efforts that led to significant breakthroughs in the multilingual world.
+
 ### Final thoughts: are we truly 'low-resource'?
+
 
 [^1]: The Cebuano Wikipedia is the second-largest Wikipedia in terms of number of articles. Although this appears impressive, its size is due to an article-generating bot called [Lsjbot](https://en.wikipedia.org/wiki/Lsjbot) rather than a dedicated group of Wikipedia volunteers. Unfortunately, the articles in Cebuano Wikipedia are unnatural and do not reflect how the language is actually used by native speakers.
