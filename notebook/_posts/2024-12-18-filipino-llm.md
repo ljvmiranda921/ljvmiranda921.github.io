@@ -33,7 +33,7 @@ You can't blame them&mdash; there's not a lot of readily-available Filipino data
 This is even true for other Philippine languages (Hiligaynon, Ilokano, etc.)
 There are still missing pieces ripe for research.
 
-This brings us to three actionable directions for Filipino NLP: (1) create resources that support LLM post-training, (2) build reliable benchmarks for Filipino, and (3) participate in grassroots research and annotation efforts.
+In this blog post, I want to talk about three actionable directions for Filipino NLP: (1) create resources that support LLM post-training, (2) build reliable benchmarks for Filipino, and (3) participate in grassroots research and annotation efforts.
 **Also, if you are interested to collaborate in these types of efforts, feel free to [reach out](mailto:ljvmiranda@gmail.com)!**
 
 ### Create resources that enable LLM post-training
