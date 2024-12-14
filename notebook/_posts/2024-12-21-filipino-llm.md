@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "The missing pieces in Filipino NLP in the age of LLMs"
-date: 2024-12-18
+date: 2024-12-21
 category: notebook
 comments: true
 author: "LJ MIRANDA"
@@ -46,7 +46,7 @@ Prioritize collecting instruction finetuning datasets since it's in this step wh
 Better if they contain general chat, but domain-specific data should also work.
 </p>
 
-Post-training is the stage in the large language modelling pipeline where we adapt a pretrained model to a specific style of input for chat interactions, such as following natural language instructions and responding in accordance with human preferences among many others.
+Post-training is the stage in the large language modelling pipeline where we adapt a pretrained model to a specific style of input for chat interactions, such as following natural language instructions or responding in accordance with human preferences.
 This stage usually involves two main steps: instruction finetuning (IFT) and preference finetuning (PreFT).
 I want to focus on the former.
 Most IFT data comes in question-answer pairs containing a _user instruction_, an optional _context_, and a given _response_.
@@ -64,7 +64,7 @@ I want to focus on collecting IFT data because it can be **tailored to specific 
 This means that NLP researchers interested in Filipino can still continue focusing on their own domains of interest while still contributing to this larger goal of improving our Filipino data pool.
 Take [SciRIFF](https://arxiv.org/abs/2406.07835) for example: it contains question answering pairs for scientific literature that serves the authors' own purpose, yet we were able to use it in [T&uuml;lu 3](https://arxiv.org/abs/2411.15124) to build _generalist language models_ that are capable of chat, reasoning, coding, and other skills.
 In addition, **IFT is computationally cheaper than pretraining**; laboratories with a decent grant and cloud capacity can [easily finetune a 7B-parameter model](https://github.com/hiyouga/LLaMA-Factory?tab=readme-ov-file#hardware-requirement).
-Preference data is also important, but collecting it requires more annotation effort and stronger multilingual models that _actually work_ in Filipino (more on that in the following sections).
+Preference data is also important, but collecting it requires more annotation effort and stronger multilingual models that _actually work_ in Filipino (for that we need good evaluation, which I'll discuss in the [next section](#build-reliable-benchmarks-for-filipino)).
 
 > Philippine languages lack quality instruction finetuning data
 
@@ -76,7 +76,7 @@ It's important to note that these datasets don't need to focus on general chat.
 Researchers can continue working in their domains of interest while reframing their problems as question-answering tasks.
 
 Ideally, collecting Filipino IFT instances **in the order of hundreds of thousands (100K-400K) is crucial for this work.**
-It would be even better if these instances were evenly distributed across our major languages (e.g., Tagalog, Cebuano, Ilocano, Hiligaynon).
+It would be even better if these instances were evenly distributed across our major languages (e.g., Tagalog, Cebuano, Ilokano, Hiligaynon).
 Once we have this dataset, it will then be easier for us, the Filipino language community, to train our own generalist LLMs.
 In addition, it also makes it easier for other organizations to incorporate our dataset into their own data mixing pipelines thereby increasing the representation of Filipino to these larger-scale LM projects.
 Collecting 100k instances seems daunting, but I already have some ideas in mind.
@@ -93,7 +93,7 @@ we need to curate which of these are relevant for LLM evaluation then build an e
 
 Even before we start training language models, it is important to measure how current state-of-the-art LLMs perform on Filipino.
 Most of the evidence I see is anecdotal: someone will post a single ChatGPT screenshot in Filipino and claim that the model already _understands_ the language.
-However, it is easy to see how this performance can degrade during extended conversations (e.g., misunderstanding of idioms and expressions, unrecognized words, etc.).
+However, it is easy to see how this performance can degrade during extended conversations, such as misunderstanding idioms and expressions or lacking cultural knowledge.
 We need a **systematic approach to evaluating these models.**
 
 We have several promising benchmarks at hand.
