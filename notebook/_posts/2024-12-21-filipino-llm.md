@@ -116,6 +116,10 @@ They were able to rally a community of researchers from Southeast Asia (SEA) and
 Other examples include [Cohere for AI's Aya](https://share.hsforms.com/10OrjljwpQ52ILJA6ftENIwch5vw) and HuggingFace's [Data is Better Together](https://huggingface.co/data-is-better-together) projects.
 Right now, it's nice to see familiar Filipino faces participating in these communities, but **it would be nice if we can increase our involvement in these larger grassroots projects**.
 
+I strongly believe that we can achieve true impact in multilingual LLM research via a **participatory approach**.
+This means actively collaborating with researchers and immersing ourselves in grassroots efforts focused on data annotation, data curation, and model testing.
+This approach stands in constrast to the [sweatshop model](https://www.washingtonpost.com/world/2023/08/28/scale-ai-remotasks-philippines-artificial-intelligence/), where Filipino annotators, though recruited, are excluded from meaningful participation since they merely follow annotation guidelines set by their employers without input into the process.
+
 
 
 <!-- Regional examples also exist, such as [Masakhane](https://www.masakhane.io/) for African languages and [IndoNLP](https://indonlp.github.io/) for Indonesian. -->
