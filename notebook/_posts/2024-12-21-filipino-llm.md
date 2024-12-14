@@ -153,7 +153,7 @@ I maintain that Philippine languages remain low-resource across several dimensio
 Even Tagalog, our majority language, still lacks the necessary tools and datasets to produce robust NLP pipelines. 
 I believe the three research directions I described above can both increase the number of artifacts available for building language technologies and enhance our agency as a research community.
 I admit that I haven't done enough for Filipino NLP this year[^2] and this blog post serves not just as a research statement but **also a commitment to improve my involvement in this language.**
-I have some ideas (this blog post is one small part of it), so if you want to help out, [feel free to reach out](mailto:ljvmiranda@gmail.com)!
+I have some ideas (the ideas in this blog post are just a small part of it), so if you want to help out, [feel free to reach out](mailto:ljvmiranda@gmail.com)!
 
 ### Footnotes
 
