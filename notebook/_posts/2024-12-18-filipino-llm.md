@@ -22,7 +22,8 @@ The pace of progress in multilingual LLMs has also been relentless this year.
 We've seen several high-profile releases such as Meta's [Llama 3.1](https://ai.meta.com/blog/meta-llama-3-1/), Cohere for AI's [Aya Expanse](https://cohere.com/blog/aya-expanse-connecting-our-world), and Southeast Asian models such as AI Singapore's [SEA-LION](https://sea-lion.ai/) and Sea AI's [Sailor](https://huggingface.co/collections/sail/sailor2-language-models-674d7c9e6b4dbbd9a869906b).
 Sure, one can still argue that building custom-made pipelines is still viable because current LLMs don't always work well on Filipino (and I've argued these before [[1](/notebook/2023/08/04/llm-tagalog/)] [[2](/notebook/2024/07/02/talk-dlsu/)]) and that there are [advantages in building modular, non-black box components](https://speakerdeck.com/inesmontani/applied-nlp-with-llms-beyond-black-box-monoliths),
 but the [impressive gains in multilinguality](https://huggingface.co/CohereForAI/aya-101) from [data scale](https://arxiv.org/abs/2001.08361) have changed my perspective somewhat.
-While I still believe in building artisanal Filipino NLP resources, I now see that **we need to simultaneously focus on creating high-quality Filipino datasets and evaluation benchmarks.**
+
+While I still believe in building artisanal Filipino NLP resources, I now see that **we need to simultaneously support the development of multilingual LLMs by creating high-quality Filipino datasets and benchmarks.**
 This way, we can **actively push for the inclusion of Philippine languages in the next generation of multilingual LLMs**, rather than just waiting for improvements to happen on their own.
 
 > We need to focus on creating high-quality datasets and evaluation benchmarks [to] actively push for the inclusion of Philippine languages in the next generation of multilingual LLMs.
@@ -30,7 +31,7 @@ This way, we can **actively push for the inclusion of Philippine languages in th
 Filipino is still left behind even in the age of LLMs ([more on this later](#final-thoughts-are-we-truly-low-resource)).
 Sometimes I feel a tinge of sadness when a research group releases a new multilingual LLM and Filipino is not supported.
 You can't blame them&mdash; there's not a lot of readily-available Filipino data for LM training and evaluation.
-This is even true for other Philippine languages (Hiligaynon, Ilokano, etc.)
+This is even true for other Philippine languages such as Hiligaynon, Kapampangan, and Ilokano.
 There are still missing pieces ripe for research.
 
 In this blog post, I want to talk about three actionable directions for Filipino NLP: (1) create resources that support LLM post-training, (2) build reliable benchmarks for Filipino, and (3) participate in grassroots research and annotation efforts.
