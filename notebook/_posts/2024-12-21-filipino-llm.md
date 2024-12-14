@@ -80,7 +80,6 @@ It would be even better if these instances were evenly distributed across our ma
 Once we have this dataset, it will then be easier for us, the Filipino language community, to train our own generalist LLMs.
 In addition, it also makes it easier for other organizations to incorporate our dataset into their own data mixing pipelines thereby increasing the representation of Filipino to these larger-scale LM projects.
 Collecting 100k instances seems daunting, but I already have some ideas in mind.
-If you're interested in collaborating on this, [then reach out](mailto:ljvmiranda@gmail.com)!
 
 ### Build reliable benchmarks for Filipino
 
