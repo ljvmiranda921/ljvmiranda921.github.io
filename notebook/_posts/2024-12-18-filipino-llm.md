@@ -29,7 +29,7 @@ This way, we can **actively push for the inclusion of Philippine languages in th
 
 Tagalog is still left behind even in the age of LLMs ([more on this later](#final-thoughts-are-we-truly-low-resource)).
 Sometimes I feel a tinge of sadness when a research group releases a new multilingual LLM and Tagalog is not supported.
-You can't blame them&mdash; there's not a lot of readily-available Tagalog data for LM training.
+You can't blame them&mdash; there's not a lot of readily-available Tagalog data for LM training and evaluation.
 There are still missing pieces ripe for research.
 
 This brings us to three actionable directions for Filipino NLP: (1) create resources that support LLM post-training, (2) build reliable benchmarks for Filipino, and (3) participate in grassroots research and annotation efforts.
