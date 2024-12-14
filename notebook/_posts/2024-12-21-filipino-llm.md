@@ -110,19 +110,34 @@ Basically, we just need something instead of nothing, and that something is a hu
 
 ### Participate in grassroots research efforts
 
+<p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
+<b>Key Insight:</b> 
+There are several large-scale grassroots research efforts happening as we speak.
+We need a lot of Filipino representation in these initiatives.
+Here's an opportunity: join our <a href="https://grassroots.science">Grassroots Science effort</a> that we will launch next year!
+</p>
+
 For the past few years, I've witnessed several grassroots NLP efforts that led to significant breakthroughs in the multilingual world.
 [SEACrowd](https://seacrowd.github.io/) is one example.
 They were able to rally a community of researchers from Southeast Asia (SEA) and [build a data hub for all SEA datasets](https://arxiv.org/abs/2406.10118), which is very much needed today.
 Other examples include [Cohere for AI's Aya](https://share.hsforms.com/10OrjljwpQ52ILJA6ftENIwch5vw) and HuggingFace's [Data is Better Together](https://huggingface.co/data-is-better-together) projects.
 Right now, it's nice to see familiar Filipino faces participating in these communities, but **it would be nice if we can increase our involvement in these larger grassroots projects**.
 
+![](/assets/png/filipino-llm/seacrowd.jpg){:width="500px"}  
+{: style="text-align: center;"}
+
 I strongly believe that we can achieve true impact in multilingual LLM research via a **participatory approach**.
 This means actively collaborating with researchers and immersing ourselves in grassroots efforts focused on data annotation, data curation, and model testing.
 This approach stands in constrast to the [sweatshop model](https://www.washingtonpost.com/world/2023/08/28/scale-ai-remotasks-philippines-artificial-intelligence/), where Filipino annotators, though recruited, are excluded from meaningful participation since they merely follow annotation guidelines set by their employers without input into the process.
 
+**Here's a call to action**: we're launching a [year-long Grassroots effort](https://grassroots.science/) to collect preference data for LLM post-training in different languages.
+It would be awesome to see fresh Filipino faces helping us out&mdash; so [join us](https://docs.google.com/forms/d/e/1FAIpQLSeLI-bwV0VYdwmRRqAzHtTSBMajNkUL-DG97LASSD2RmIZ1SQ/viewform)!
+This is important because human preferences, even in English, is still tricky due to its subjectivity and diversity.
+Things that may be harmless to some cultures might be harmful for us.
+I believe it is important for us, the Filipino research community, to have a say on how the next-generation of multilingual LLMs will be trained.
 
-
-<!-- Regional examples also exist, such as [Masakhane](https://www.masakhane.io/) for African languages and [IndoNLP](https://indonlp.github.io/) for Indonesian. -->
+![](/assets/png/filipino-llm/grassroots.jpg){:width="700px"}  
+{: style="text-align: center;"}
 
 ### Final thoughts: are we truly 'low-resource'?
 
