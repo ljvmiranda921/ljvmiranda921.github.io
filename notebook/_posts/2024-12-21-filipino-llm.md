@@ -141,15 +141,16 @@ I believe it is important for us, the Filipino research community, to have a say
 
 ### Final thoughts: are we truly 'low-resource'?
 
-One of my favorite papers this year is [*The Zeno's Paradox of Low-Resource Languages*](https://arxiv.org/pdf/2410.20817).
-It examines how we define low-resource across different axes, namely, in terms of Artifacts, Resources, Socio-Political, and Agency.
-For example, Tagalog and Cebuano actually has millions of speakers (**&uarr; Resources**), and it's reasonable to expect that there is enough *raw data* in the form of digitized text that can be used for downstream NLP tasks.
-However, we still lack high-quality data for several core NLP and language modelling tasks (**&darr; Artifacts**) and there's still opportunities to grow our participation in how these language technologies are built (**&darr; Agency**).
-I like this framework because it provides several dimensions on a language's low-resourcedness, and we don't need to argue (nor [bikeshed](https://en.wikipedia.org/wiki/Law_of_triviality)) new definitions of the same thing.
+"Low-resource" is a term the NLP research community use to describe languages that lack sufficient resources for building language technologies.
+Many indigenous and endangered languages fall into this category due to their limited number of speakers and dedicated NLP researchers.
+Tagalog occupies an interesting middle ground: while we have a large speaker population and presumably extensive written content, there remains a scarcity of readily available datasets for downstream NLP tasks.
 
-I believe that Philippine languages are still low-resource in several dimensions.
-Even Tagalog, our majority language, still lacks the tools and datasets needed to produce decent NLP pipelines.
-I believe that the three research directions I described above can increase the number of artifacts we can use in building language technologies, and also enhance our agency as a research community.
+One of my favorite papers this year, [*The Zeno's Paradox of Low-Resource Languages*](https://arxiv.org/pdf/2410.20817), helped clarify these definitions by examining how we define "low-resource" across different axes: Artifacts, Resources, Socio-Political factors, and Agency.
+Although Tagalog has millions of speakers (**&uarr; Resources**), it still lacks high-quality data for several core NLP and language modelling tasks (**&darr; Artifacts**), and there remains significant room for growth in our participatin in developing these language technologies (**&middot; Agency**).
+I appreciate this framework because it provides multiple dimensions for measuring a language's low-resource status, eliminating the need to debate or bikeshed new definitions.
 
+I maintain that Philippine languages remain low-resource across several dimensions. 
+Even Tagalog, our majority language, still lacks the necessary tools and datasets to produce robust NLP pipelines. 
+I believe the three research directions I described above can both increase the number of artifacts available for building language technologies and enhance our agency as a research community.
 
 [^1]: The Cebuano Wikipedia is the second-largest Wikipedia in terms of number of articles. Although this appears impressive, its size is due to an article-generating bot called [Lsjbot](https://en.wikipedia.org/wiki/Lsjbot) rather than a dedicated group of Wikipedia volunteers. Unfortunately, the articles in Cebuano Wikipedia are unnatural and do not reflect how the language is actually used by native speakers.
