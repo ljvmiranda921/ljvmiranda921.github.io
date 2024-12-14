@@ -18,12 +18,14 @@ excerpt: |
 Take [calamanCy](https://ljvmiranda921/calamanCy) for example: we spent countless hours annotating [named-entity recognition (NER)](https://aclanthology.org/2023.sealp-1.2/) datasets and validating [dependency parsing treebanks](https://huggingface.co/datasets/UD-Filipino/UD_Tagalog-NewsCrawl) to train statistical models using frameworks like [spaCy](https://spacy.io).
 Back then, these components typically power larger systems that handle tasks like information extraction and question answering. But lately, we've seen how LLMs can tackle these tasks end-to-end, without needing any of these components at all.
 
-The pace of progress in multilingual LLMs has also been relentless this year as we've seen several high-profile releases such as Meta's [Llama 3.1](https://ai.meta.com/blog/meta-llama-3-1/), Cohere for AI's [Aya Expanse](https://cohere.com/blog/aya-expanse-connecting-our-world), and Southeast Asian models such as AI Singapore's [SEA-LION](https://sea-lion.ai/) and Sea AI's [Sailor](https://huggingface.co/collections/sail/sailor2-language-models-674d7c9e6b4dbbd9a869906b).
-Sure, one can argue that they don't always work well on Filipino (and I've argued these before [[1](/notebook/2023/08/04/llm-tagalog/)] [[2](/notebook/2024/07/02/talk-dlsu/)]), but perhaps I'm getting [\_scale-pilled\_](https://arxiv.org/abs/2001.08361) now and it's only a matter of time before LLMs reach decent capabilities in Filipino.
-This isn't a retraction of my previous arguments; we should still build artisanal Filipino NLP resources, but **we should also build resources that support the training and evaluation of multilingual LLMs in order to advocate the representation of Philippine languages.**
+The pace of progress in multilingual LLMs has also been relentless this year.
+We've seen several high-profile releases such as Meta's [Llama 3.1](https://ai.meta.com/blog/meta-llama-3-1/), Cohere for AI's [Aya Expanse](https://cohere.com/blog/aya-expanse-connecting-our-world), and Southeast Asian models such as AI Singapore's [SEA-LION](https://sea-lion.ai/) and Sea AI's [Sailor](https://huggingface.co/collections/sail/sailor2-language-models-674d7c9e6b4dbbd9a869906b).
+Sure, one can still argue that building custom-made pipelines is still viable because current LLMs don't always work well on Filipino (and I've argued these before [[1](/notebook/2023/08/04/llm-tagalog/)] [[2](/notebook/2024/07/02/talk-dlsu/)]) and that there are [advantages in building modular, non-black box components](https://speakerdeck.com/inesmontani/applied-nlp-with-llms-beyond-black-box-monoliths),
+but the [impressive gains in multilinguality](https://huggingface.co/CohereForAI/aya-101) from [data scale](https://arxiv.org/abs/2001.08361) have changed my perspective somewhat.
+While I still believe in building artisanal Filipino NLP resources, I now see that **we need to simultaneously focus on creating high-quality Filipino datasets and evaluation benchmarks.**
+This way, we can **actively push for the inclusion of Philippine languages in the next generation of multilingual LLMs**, rather than just waiting for improvements to happen on their own.
 
-> We should also build resources that support the training and evaluation
-> of multilingual LLMs to advocate the representation of Philippine languages.
+> We need to focus on creating high-quality datasets and evaluation benchmarks [to] actively push for the inclusion of Philippine languages in the next generation of multilingual LLMs.
 
 Tagalog is still low-resource even in the age of LLMs ([more on this later](#final-thoughts-are-we-truly-low-resource)).
 Sometimes I feel a tinge of sadness when a research group releases a new multilingual LLM and Tagalog is not supported.
