@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "The missing pieces in Filipino NLP in the age of LLMs"
-date: 2024-12-21
+date: 2024-12-17
 category: notebook
 comments: true
 author: "LJ MIRANDA"
@@ -144,12 +144,12 @@ I believe it is important for us, the Filipino research community, to have a say
 Many indigenous and endangered languages fall into this category due to their limited number of speakers and dedicated NLP researchers.
 Tagalog occupies an interesting middle ground: while we have a large speaker population and presumably extensive written content, there remains a scarcity of readily available datasets for downstream NLP tasks.
 
-One of my favorite papers this year, [*The Zeno's Paradox of Low-Resource Languages*](https://arxiv.org/pdf/2410.20817), helped clarify these definitions by examining how we define "low-resource" across different axes: Artifacts, Resources, Socio-Political factors, and Agency.
+One of my favorite papers this year, [_The Zeno's Paradox of Low-Resource Languages_](https://arxiv.org/pdf/2410.20817), helped clarify these definitions by examining how we define "low-resource" across different axes: Artifacts, Resources, Socio-Political factors, and Agency.
 Although Tagalog has millions of speakers (**&uarr; Resources**), it still lacks high-quality data for several core NLP and language modelling tasks (**&darr; Artifacts**), and there remains significant room for growth in our participatin in developing these language technologies (**&middot; Agency**).
 I appreciate this framework because it provides multiple dimensions for measuring a language's low-resource status, eliminating the need to debate or bikeshed new definitions.
 
-I maintain that Philippine languages remain low-resource across several dimensions. 
-Even Tagalog, our majority language, still lacks the necessary tools and datasets to produce robust NLP pipelines. 
+I maintain that Philippine languages remain low-resource across several dimensions.
+Even Tagalog, our majority language, still lacks the necessary tools and datasets to produce robust NLP pipelines.
 I believe the three research directions I described above can both increase the number of artifacts available for building language technologies and enhance our agency as a research community.
 I admit that I haven't done enough for Filipino NLP this year[^2] and this blog post serves not just as a research statement but **also a commitment to improve my involvement in this language.**
 I have some ideas (the ideas in this blog post are just a small part of it), so if you want to help out, [feel free to reach out](mailto:ljvmiranda@gmail.com)!
@@ -157,5 +157,4 @@ I have some ideas (the ideas in this blog post are just a small part of it), so 
 ### Footnotes
 
 [^1]: The Cebuano Wikipedia is the second-largest Wikipedia in terms of number of articles. Although this appears impressive, its size is due to an article-generating bot called [Lsjbot](https://en.wikipedia.org/wiki/Lsjbot) rather than a dedicated group of Wikipedia volunteers. Unfortunately, the articles in Cebuano Wikipedia are unnatural and do not reflect how the language is actually used by native speakers.
-
-[^2]: This year we published [SEACrowd](https://aclanthology.org/2024.emnlp-main.296/), [Universal NER](https://aclanthology.org/2024.naacl-long.243/), and the [largest Tagalog UD Treebank](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317), but most of these efforts started back in 2023. 
+[^2]: This year we published [SEACrowd](https://aclanthology.org/2024.emnlp-main.296/), [Universal NER](https://aclanthology.org/2024.naacl-long.243/), and the [largest Tagalog UD Treebank](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317), but most of these efforts started back in 2023.
