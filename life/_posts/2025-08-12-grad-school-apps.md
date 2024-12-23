@@ -122,18 +122,20 @@ It took me years to build up a strong portfolio, and even then I still think my 
 One of the hardest challenges in entering a PhD is balancing your career aspirations and future life plans.
 This is especially true for me who is in my early 30s: a PhD program can take 4-6 years, pays low, and will coincide the time when you might want to start a family.
 I spent the early months of 2023 communicating with my family and wife on how this decision would affect them.
-
+Because of that, there was pressure and anxiety to ensure that things move like clockwork, but I've learned that I'm not alone in this journey&mdash; I have my family and friends along the way.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/cbtl.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/retreat.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/ring.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 </div>
-_From left to right (2022--2023): snippets of ._
+_From left to right (early 2022 and 2023): coffee shop where my wife and I talked about our plans, my room during a Holy Week retreat, our engagement ring._
 {: style="text-align: center;"}
 
 Furthermore, these considerations also factored in which PhD program I'll choose.
-
+For example, short PhD programs (3-4 years) became attractive although some might argue its drawbacks come job search.
+Location took more priority, as I will uproot my wife and ensure she can work there and live comfortably.
+Of course, the usual factors came into play: advisor fit, research topic, university, etc.&mdash; it's just that this time, I'm not just thinking about my career.
 
 
 
