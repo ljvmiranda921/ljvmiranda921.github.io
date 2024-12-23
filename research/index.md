@@ -58,6 +58,11 @@ _At AI2, I've worked on various aspects of LM post-training such as preference d
   <br>Nathan Lambert\*, Jacob Morrison\*, Valentina Pyatkin\*, Shenyi Huang\*, Hamish Ivison\*, Faeze Brahman\*, <u>Lester James V. Miranda </u>\*, Alisa Liu, Nouha Dziri, Xinxi Lyu, Yuling Gu, Saumya Malik, Victoria Graf, Jena D. Hwang, Jiangjiang Yang, Ronan Le Bras, Oyvind Tajford, Chris Wilhelm, Luca Soldiani, Noah A. Smith, Yizhong Wang, Pradeep Dasigi, Hannaneh Hajishirzi _(&lowast;: core contributor)_.
   <br>[[Models](https://huggingface.co/collections/allenai/tulu-3-models-673b8e0dc3512e30e7dc54f5)] [[Datasets](https://huggingface.co/collections/allenai/tulu-3-datasets-673b8df14442393f7213f372)] [[Website](https://allenai.org/tulu)]
 
+- [Bridging the Data Provenance Gap Across Text, Speech, and Video](https://www.dataprovenance.org/Multimodal_Data_Provenance.pdf)
+  <br>_Preprint '24_
+  <br>Data Provenance Initiative Team (40+ authors). I contributed in the annotation process design for Web Domain services and annotation quality review.
+  <br>[[Website](https://www.dataprovenance.org/)] [[MIT Technology Review](https://www.technologyreview.com/2024/12/18/1108796/this-is-where-the-data-to-build-ai-comes-from/)]
+
 - [Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback](https://arxiv.org/abs/2410.19133)
   <br>_Preprint '24_
   <br><u>Lester James V. Miranda</u>\*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi.
