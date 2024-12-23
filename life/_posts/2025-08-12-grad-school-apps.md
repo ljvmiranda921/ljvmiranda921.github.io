@@ -135,7 +135,7 @@ _From left to right (early 2022 and 2023): coffee shop where my wife and I talke
 Furthermore, these considerations also factored in which PhD program I'll choose.
 For example, short PhD programs (3-4 years) became attractive although some might argue its drawbacks come job search.
 Location took more priority, as I will uproot my wife and ensure she can work there and live comfortably.
-Of course, the usual factors came into play: advisor fit, research topic, university, etc.&mdash; it's just that this time, I'm not just thinking about my career.
+Of course, the usual considerations came into play: advisor fit, research topic, university, etc.&mdash; it's just that this time, I'm not just thinking about my career.
 
 
 
