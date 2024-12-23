@@ -119,6 +119,14 @@ Back in 2021, I set myself a goal and I was too laser-focused on things I need t
 It took me years to build up a strong portfolio, and even then I still think my profile isn't strong enough when I was applying. -->
 
 
+<div style="display: flex; justify-content: center;">
+<img src="/assets/png/grad-school/cbtl.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/retreat.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/ring.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+</div>
+_From left to right (2022--2023): snippets of ._
+{: style="text-align: center;"}
+
 
 <!-- (this is not the first paragraph)  -->
 I feel privileged and blessed to have this problem of choice.
