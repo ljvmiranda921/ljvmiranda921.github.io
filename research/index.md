@@ -41,13 +41,6 @@ Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
 profiles for more updated information.
 
-### 2025
-
-
-- [2 OLMo 2 Furious]()
-  <br>_Preprint '24_
-  <br>OLMo Team (30+ authors). I contributed in applying the T&uuml;lu 3 recipe of generating synthetic preferences for the OLMo 2 suite of DPO models.
-  <br>[[Collection](https://huggingface.co/collections/allenai/olmo-2-674117b93ab84e98afc72edc)] [[Website](https://allenai.org/blog/olmo2)]
 
 ### 2024
 
@@ -57,6 +50,11 @@ _At AI2, I've worked on various aspects of LM post-training such as preference d
   <br>_Preprint '24_
   <br>Nathan Lambert\*, Jacob Morrison\*, Valentina Pyatkin\*, Shenyi Huang\*, Hamish Ivison\*, Faeze Brahman\*, <u>Lester James V. Miranda </u>\*, Alisa Liu, Nouha Dziri, Xinxi Lyu, Yuling Gu, Saumya Malik, Victoria Graf, Jena D. Hwang, Jiangjiang Yang, Ronan Le Bras, Oyvind Tajford, Chris Wilhelm, Luca Soldiani, Noah A. Smith, Yizhong Wang, Pradeep Dasigi, Hannaneh Hajishirzi _(&lowast;: core contributor)_.
   <br>[[Models](https://huggingface.co/collections/allenai/tulu-3-models-673b8e0dc3512e30e7dc54f5)] [[Datasets](https://huggingface.co/collections/allenai/tulu-3-datasets-673b8df14442393f7213f372)] [[Website](https://allenai.org/tulu)]
+
+- [2 OLMo 2 Furious]()
+  <br>_Preprint '24_
+  <br>OLMo Team (30+ authors). I contributed in applying the T&uuml;lu 3 recipe of generating synthetic preferences for the OLMo 2 suite of DPO models.
+  <br>[[Collection](https://huggingface.co/collections/allenai/olmo-2-674117b93ab84e98afc72edc)] [[Website](https://allenai.org/blog/olmo2)]
 
 - [Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback](https://arxiv.org/abs/2410.19133)
   <br>_Preprint '24_
