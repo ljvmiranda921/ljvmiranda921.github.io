@@ -5,8 +5,8 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-【[🎓 Google Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en)】
-【[📚 Semantic Scholar](https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871)】
+<!-- 【[🎓 Google Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en)】
+【[📚 Semantic Scholar](https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871)】 -->
 
 I'm broadly interested in **data-centric approaches to building language technologies at scale.**
 I believe that a careful and systematic understanding of data&mdash; from its collection to its downstream influence on training&mdash; is crucial to build general-purpose language models.
@@ -35,10 +35,10 @@ I'm happy to discuss research and collaborate!
 ## Selected Publications
 
 Below is a list of my publications.
-You can also check my [Google
-Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
-[Semantic
-Scholar](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
+You can also check my [**Google
+Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
+[**Semantic
+Scholar**](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
 profiles for more updated information.
 
 ### 2024
