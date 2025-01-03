@@ -34,6 +34,7 @@ I'm happy to discuss research and collaborate!
 
 ## Selected Publications
 
+
 Below is a list of my publications.
 You can also check my [**Google
 Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
@@ -41,14 +42,25 @@ Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 Scholar**](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
 profiles for more updated information.
 
+
 ### 2024
 
-_At AI2, I'm working on various aspects of LM post-training such as preference data collection and evaluation. I also expanded my work in the multilingual NLP front (SEACrowd, M-RewardBench)._
+_At AI2, I've worked on various aspects of LM post-training such as preference data collection and evaluation. I also expanded my work in the multilingual NLP front (SEACrowd, M-RewardBench)._
 
-- [T&uuml;lu 3: Exploring Frontiers in Open Language Model Post-Training](https://allenai.org/papers/tulu-3-report.pdf)
+- [T&uuml;lu 3: Exploring Frontiers in Open Language Model Post-Training](https://arxiv.org/abs/2411.15124)
   <br>_Preprint '24_
   <br>Nathan Lambert\*, Jacob Morrison\*, Valentina Pyatkin\*, Shenyi Huang\*, Hamish Ivison\*, Faeze Brahman\*, <u>Lester James V. Miranda </u>\*, Alisa Liu, Nouha Dziri, Xinxi Lyu, Yuling Gu, Saumya Malik, Victoria Graf, Jena D. Hwang, Jiangjiang Yang, Ronan Le Bras, Oyvind Tajford, Chris Wilhelm, Luca Soldiani, Noah A. Smith, Yizhong Wang, Pradeep Dasigi, Hannaneh Hajishirzi _(&lowast;: core contributor)_.
   <br>[[Models](https://huggingface.co/collections/allenai/tulu-3-models-673b8e0dc3512e30e7dc54f5)] [[Datasets](https://huggingface.co/collections/allenai/tulu-3-datasets-673b8df14442393f7213f372)] [[Website](https://allenai.org/tulu)]
+
+- [2 OLMo 2 Furious](https://arxiv.org/abs/2501.00656)
+  <br>_Preprint '24_
+  <br>OLMo Team (30+ authors). I contributed in applying the T&uuml;lu 3 recipe of generating synthetic preferences for the OLMo 2 suite of DPO models.
+  <br>[[Collection](https://huggingface.co/collections/allenai/olmo-2-674117b93ab84e98afc72edc)] [[Website](https://allenai.org/blog/olmo2)]
+
+- [Bridging the Data Provenance Gap Across Text, Speech, and Video](https://www.dataprovenance.org/Multimodal_Data_Provenance.pdf)
+  <br>_Preprint '24_
+  <br>Data Provenance Initiative Team (40+ authors). I contributed in the annotation process design for Web Domain services and annotation quality review.
+  <br>[[Website](https://www.dataprovenance.org/)] [[MIT Technology Review](https://www.technologyreview.com/2024/12/18/1108796/this-is-where-the-data-to-build-ai-comes-from/)]
 
 - [Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback](https://arxiv.org/abs/2410.19133)
   <br>_Preprint '24_
