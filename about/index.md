@@ -18,12 +18,6 @@ Here, you'll find some of my **thoughts, works, and notes** on software
 development, machine learning, and research. I hope you'll spend a nice time
 here, so go grab yourself a coffee and feel free to look around! 
 
-<!-- 【】 -->
-【[🎮 Game Dev](https://ljvmiranda921.itch.io)】
-【[📷 Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery)】
-【[📄 Curriculum Vitae](https://storage.googleapis.com/ljvmiranda/cv.pdf)】
-<!-- Other links: [] [[Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery)] -->
-
 
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 <b>Short background</b><br>
@@ -32,6 +26,12 @@ experience in consulting, open-source development, and research. He helped
 maintain notable open-source libraries such as spaCy and Pyswarms. He dabbles
 in game development during his free time.
 </p>
+
+## Other links
+
+- [Game Dev](https://ljvmiranda921.itch.io): games I developed using Godot and PICO-8.
+- [Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery): photos taken using a Game Boy Camera.
+
 
 ## Contact
 
