@@ -74,7 +74,7 @@ _From left to right (2021---2022): view from my condo when I was working from ho
 {: style="text-align: center;"}
 
 At AI2, I was fortunate to be mentored by Pradeep and to collaborate on several projects with Yizhong.
-My experience at AI2 shaped my research interests and solidified what **type of researcher I want to be: competent, steadfast, and kind.**
+My experience at AI2 shaped my research interests and solidified what **type of researcher I want to be: earnest and competent.**
 I still remember when we were unable to submit our first project in time for a conference due to unexpected results, yet they remained supportive as we went back to the drawing board.
 We then reframed the project and it became a better paper than before!
 Later, they also trusted me to deliver the preference scaling aspect of the [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) projects, which resulted in significant performance gains in our DPO models&mdash; a contribution I'm proud to accomplish last year.
