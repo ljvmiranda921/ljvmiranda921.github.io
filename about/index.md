@@ -20,22 +20,17 @@ here, so go grab yourself a coffee and feel free to look around!
 
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 <b>Short background</b><br>
-Lj Miranda specializes in natural language processing with over five years of
-experience in consulting, open-source development, and research. He helped
-maintain notable open-source libraries such as spaCy and Pyswarms. He dabbles
-in game development during his free time.
+Lj Miranda is a PhD student at the University of Cambridge, <a href="https://ltl.mmll.cam.ac.uk/">studying multilingual and equitable NLP</a>.
+Prior to his PhD, he has over five years of industry experience in consulting, open-source software development, and research, including work at the 
+<a href="https://allenai.org">Allen Instiute for AI</a> and <a href="https://explosion.ai">Explosion</a> (the team behind <a href="https://spacy.org">spaCy</a> and <a href="https://prodigy.ai">Prodigy</a>).
+Beyond his professional pursuits, Lj dabbles in <a href="https://ljvmiranda921.github.io/gallery">photography</a> and <a href="https://ljvmiranda921.itch.io">game development</a>.
 </p>
 
-## Other links
-
-- [Game Dev](https://ljvmiranda921.itch.io): games I developed using Godot and PICO-8.
-- [Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery): photos taken using a Game Boy Camera.
-- [Micro Blog](https://ljvmiranda.micro.blog): micro-blog for "today I learned" (TIL) posts and tweets.
 
 ## Contact
 
 **Lester James V. Miranda**  
-Seattle, WA  
+Cambridge, UK  
 Email: ljvmiranda [at] gmail [dot] com  
 [Curriculum Vitae (PDF)](https://storage.googleapis.com/ljvmiranda/cv.pdf)
 
