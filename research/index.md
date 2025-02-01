@@ -15,9 +15,9 @@ More specifically, I'm interested to work on the following topics:
 - **Efficient and scalable data collection**:
   Human annotations are costly. How can we reduce this cost while preserving the nuance that human annotators provide? I've explored this in the context of LM post-training, by [routing preference instances to human/LMs](https://arxiv.org/abs/2410.19133) and in [generating synthetic preference data](https://arxiv.org/abs/2411.15124).
 
-- **Multilingual NLP and post-training**:
+- **Multilingual NLP**:
   No language should be left behind, especially in data.
-  I've worked on evaluating [reward models in multilingual settings](https://arxiv.org/abs/2410.15522), curating [datasets for Southeast Asia](https://arxiv.org/abs/2406.10118), and building [large-scale NER datasets](https://arxiv.org/abs/2311.09122).
+  I've worked on evaluating [reward models in multilingual settings](https://arxiv.org/abs/2410.15522), curating [datasets for Southeast Asia](https://arxiv.org/abs/2406.10118), and building [large-scale named-entity recognition datasets](https://arxiv.org/abs/2311.09122).
 
 - **Improving the state of Filipino NLP**:
   I care a lot about representing my language, and I hope to continue doing so by building NLP resources.
@@ -58,7 +58,7 @@ _At AI2, I've worked on various aspects of LM post-training such as preference d
   <br>[[Collection](https://huggingface.co/collections/allenai/olmo-2-674117b93ab84e98afc72edc)] [[Website](https://allenai.org/blog/olmo2)]
 
 - [Bridging the Data Provenance Gap Across Text, Speech, and Video](https://www.dataprovenance.org/Multimodal_Data_Provenance.pdf)
-  <br>_Preprint '24_
+  <br>_ICLR '25, Preprint '24_
   <br>Data Provenance Initiative Team (40+ authors). I contributed in the annotation process design for Web Domain services and annotation quality review.
   <br>[[Website](https://www.dataprovenance.org/)] [[MIT Technology Review](https://www.technologyreview.com/2024/12/18/1108796/this-is-where-the-data-to-build-ai-comes-from/)]
 
@@ -83,7 +83,7 @@ _At AI2, I've worked on various aspects of LM post-training such as preference d
   <br>[[Website](https://www.dataprovenance.org/)] [[Collection](https://github.com/Data-Provenance-Initiative/Data-Provenance-Collection)] [[New York Times Feature](https://www.nytimes.com/2024/07/19/technology/ai-data-restrictions.html)]
 
 - [RewardBench: Evaluating Reward Models for Language Modelling](https://arxiv.org/abs/2403.13787)
-  <br>_Preprint '24_
+  <br>_NAACL (Findings) '25, Preprint '24_
   <br> Nathan Lambert, Valentina Pyatkin, Jacob Morrison, <u>LJ Miranda</u>, Bill Yuchen Lin, Khyathi Chandu, Nouha Dziri, Sachin Kumar, Tom Zick, Yejin Choi, Noah A. Smith, and Hannaneh Hajishirzi <br> [[Leaderboard](https://huggingface.co/spaces/allenai/reward-bench)] [[Code](https://github.com/allenai/reward-bench)] [[Blog](https://blog.allenai.org/rewardbench-the-first-benchmark-leaderboard-for-reward-models-used-in-rlhf-1d4d7d04a90b)]
 
 - [Allen Institute for AI @ SIGTYP 2024 Shared Task on Word Embedding Evaluation for Ancient and Historical Languages](https://aclanthology.org/2024.sigtyp-1.18/)
