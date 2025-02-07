@@ -13,7 +13,8 @@ I'm broadly interested in **building language technologies that are equitable an
 I believe that a careful and systematic understanding of data&mdash; from its collection to its downstream influence on training&mdash; is crucial to build general-purpose language models.
 
 The following are the research themes I am interested in, along with some representative publications.
-I am eager to explore these themes individually or at their intersection.
+<!-- I am eager to explore these themes individually or at their intersection. -->
+My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
 Finally, you can also check my [**Google Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) for a complete and up-to-date list.
 
 _Keywords: data-centric AI, multilinguality, resources & evaluation_
@@ -27,7 +28,7 @@ What constitutes high-quality data? And how can we efficiently and scalably coll
 I've explored these questions in the context of acquiring post-training data by examining human factors in preference annotation such as in HyPER, and devising new techniques in data synthesis and generation as seen in T&uuml;lu 3.
 
 - [**Hy**brid **P**ref**er**ences: Learning to Route Instances for Human vs. AI Feedback](https://arxiv.org/abs/2410.19133)
-  <br>_Preprint '24_
+  <br>_ACL '25 Main_
   <br><u>Lester James V. Miranda</u>\*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi.
   <br>[[Code](https://github.com/allenai/hybrid-preferences)] [[MultiPref Dataset](https://huggingface.co/datasets/allenai/multipref)]
 
@@ -42,12 +43,12 @@ No language should be left behind, especially in data.
 I'm motivated to pursue research that ensures that the next generation of state-of-the-art LLMs cater to languages beyond English; by improving training data quality and building faithful multilingual benchmarks.
 
 - [M-RewardBench: Evaluating Reward Models in Multilingual Settings](https://arxiv.org/abs/2410.15522)
-  <br>_Preprint '24_
+  <br>_ACL '25 Main_
   <br>Srishti Gureja\*, <u>Lester James V. Miranda</u>\*, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee.
   <br>[[Code](https://github.com/for-ai/aya_rm_multilingual)] [[Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7)]
 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://aclanthology.org/2024.emnlp-main.296/)
-  <br>_EMNLP '24_
+  <br>_EMNLP '24 Main_
   <br>Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <u>Lester James Miranda</u>\*, and 50+ other authors _(&lowast;: major contributor)_.
   <br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
 
@@ -56,11 +57,12 @@ This involves building resources for training and evaluation.
 I also write a lot about Filipino NLP in this blog.
 
 - [The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project]()
+  <br>_ACL '25 Main_
   <br>Angelina A. Aquino\*, <u>Lester James V. Miranda</u>\*, Elsie Marie T. Or\*
   <br>[[Dataset](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317)]
 
 - [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://aclanthology.org/2024.naacl-long.243/)
-  <br>_NAACL '24_
+  <br>_NAACL '24 Main_
   <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <u>LJ Miranda</u>, Barbara Plank, Arij Riabi, Yuval Pinter
   <br> [[Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GQ8HDL)] [[Website](https://www.universalner.org/)]
 
