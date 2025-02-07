@@ -22,6 +22,10 @@ title: News
 </style>
 
 <div class="news-item">
+<p><span class="date">**Apr 2025**</span>: Three of my first (or co-first) author papers were accepted in ACL: Hybrid Preferences, M-RewardBench, and UD-NewsCrawl!</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**Nov 2024**</span>: Happy to have been part of the exciting [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) releases! My primary contribution is scaling-up our preference data using a synthetic on-policy pipeline that led to improvements in our DPO models.</p>
 </div>
 
@@ -45,13 +49,13 @@ title: News
 <p><span class="date">**Jul 2024**</span>: I gave a [guest lecture](/notebook/2024/07/02/talk-dlsu/) at DLSU about building Filipino NLP resources. Thanks to Dr. Charibeth Cheng for inviting me!</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Mar 2024**</span>: [Universal NER](https://arxiv.org/abs/2311.09122) was accepted to NAACL 2024. I hope to still work on linguistic aspects of NLP in the future!</p>
-</div>
+</div> -->
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Mar 2024**</span>: We released [RewardBench](https://arxiv.org/abs/2403.13787), the first benchmark for evaluating reward models.</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**Feb 2024**</span>: I gave a [guest lecture](/notebook/2024/02/21/talk-unc-charlotte/) at UNC Charlotte about how we can use LLMs for data annotation. Thanks Ryan Wesslen and Chang Hsin Lee for inviting me!</p>
