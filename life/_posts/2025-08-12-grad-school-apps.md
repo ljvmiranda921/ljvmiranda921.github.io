@@ -29,8 +29,8 @@ If you want an actual guide, I recommend reading John Boaz Lee's [guide](https:/
 <!-- include: https://nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf -->
 
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
-📣 Finally, some news: I will be starting my **PhD in X** this Fall at **ABC**.
-I also got accepted to several universities here in the US (A, B, C), so this admissions cycle was truly a blessing.
+📣 Finally, some news: I will be starting my **PhD in Computation, Cognition, and Language** this Fall at the **University of Cambridge**.
+I also got accepted to several universities here in the US and Canada, so this admissions cycle was truly a blessing.
 </p>
 
 _All photos you'll see below were taken by a Gameboy Camera. I realized when writing this blog post that my camera captured all events in the past four years. For more photos, check out my [gallery](/gallery)._
@@ -49,7 +49,7 @@ One just need to look at these tweets from professors and admissions committee (
 Although I have worked on NLP-adjacent projects at [Thinking Machines](https://thinkingmachin.es/), I didn't have any academic NLP research experience in my profile back in 2021.
 Early on, I realized that **pivoting from industry to academia will entail a lot of hard work.**
 A part of me thought that maybe I should have just continued to PhD right after my Masters.
-But in hindsight, my experience in the industry validated that (1) I still liked doing research that I'm willing to sacrifice and do The Big Pivot and (2) I can always go back to industry if this experiment-of-a-pivot didn't pan out.
+But in hindsight, my experience in the industry validated that (1) I still liked doing research that I'm willing to sacrifice and pivot my career and that (2) I can always go back to industry if academia didn't pan out.
 
 I called it The Big Pivot because it represented a reorientation of my career path.
 After my time in consulting, I discovered that my passion for research hadn't diminished&mdash;if anything, it had grown stronger.
