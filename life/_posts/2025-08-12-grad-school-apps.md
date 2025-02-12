@@ -148,7 +148,8 @@ In addition, if you're interested to do research on Tagalog and Filipino NLP wit
 
 ### Final thoughts and some unsolicited advice
 
-<!-- journey before destination -->
+<!-- pictures of Cambridge! -->
+<!-- colored matriculation picture!! -->
 
 ### Footnotes
 
