@@ -151,13 +151,13 @@ In addition, if you're interested to do research on Tagalog and Filipino NLP wit
 We have been here at Cambridge for a month.
 Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that I'll be here for some time.
 
+<!-- pictures of Cambridge! -->
+
 I'm happy to close this chapter that lasted for almost four years.
 I'm thankful to all the people who helped me along the way, as I've learned a lot about myself and who I wanted to be.
 The path was long and winding, but I'm happy we made it.
-The next few years will be equally exciting, but I just want to linger in this moment, that "in-between" as you turn the page to another chapter.
+The next few years will be equally exciting, but I just want to linger in this moment, that in-between as you turn the page to another chapter.
 _Padayon!_
-
-<!-- pictures of Cambridge! -->
 
 <!-- colored matriculation picture!! -->
 
