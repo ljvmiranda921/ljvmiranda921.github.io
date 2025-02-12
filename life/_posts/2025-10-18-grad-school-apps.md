@@ -146,7 +146,16 @@ Although there's undoubtedly a strong impact in working in those topics, I don't
 Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements!
 In addition, if you're interested to do research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out and I'm happy to mentor you!
 
-### Final thoughts and some unsolicited advice
+### Final thoughts
+
+We have been here at Cambridge for a month.
+Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that I'll be here for some time.
+
+I'm happy to close this chapter that lasted for almost four years.
+I'm thankful to all the people who helped me along the way, as I've learned a lot about myself and who I wanted to be.
+The path was long and winding, but I'm happy we made it.
+The next few years will be equally exciting, but I just want to linger in this moment, that "in-between" as you turn the page to another chapter.
+_Padayon!_
 
 <!-- pictures of Cambridge! -->
 
