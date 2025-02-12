@@ -56,7 +56,7 @@ While the transition from industry to academia might seem straightforward, the r
 It meant potentially relocating to another country, accepting a significant pay cut, and adjusting my life stages (e.g., getting married, growing a family) to align with a new career trajectory.
 Looking back to 2021, I remember feeling overwhelmed by the self-imposed pressure to make everything fall perfectly into place.
 
-### The big pivot and the long road to PhD applications
+### The long road to PhD applications
 
 Inasmuch as I'd like to think that I got into PhD programs solely because of my efforts, I got lucky because of the **people who took chances on me.**
 My first break into NLP research was in [spaCy](https://spacy.io), when Matt, Ines, and Sofie supported me in co-leading (with Akos!) our [hash-embeddings technical report](https://arxiv.org/abs/2212.09255).
