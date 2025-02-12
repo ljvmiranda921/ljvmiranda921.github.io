@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Reflections of a Pinoy applying to CS PhD programs abroad"
-date: 2025-08-12
+date: 2025-10-08
 category: life
 comments: true
 author: "LJ MIRANDA"
@@ -149,6 +149,7 @@ In addition, if you're interested to do research on Tagalog and Filipino NLP wit
 ### Final thoughts and some unsolicited advice
 
 <!-- pictures of Cambridge! -->
+
 <!-- colored matriculation picture!! -->
 
 ### Footnotes
