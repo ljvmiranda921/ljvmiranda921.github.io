@@ -153,7 +153,7 @@ Things still look unfamiliar, but I'm taking my time to let the place reveal its
 
 <!-- pictures of Cambridge! -->
 
-I'm happy to close this chapter that lasted for almost four years.
+I'm happy to close this chapter that lasted for four years.
 I'm thankful to all the people who helped me along the way, as I've learned a lot about myself and who I wanted to be.
 The path was long and winding, but I'm happy we made it.
 The next few years will be equally exciting, but I just want to linger in this moment, that in-between as you turn the page to another chapter.
