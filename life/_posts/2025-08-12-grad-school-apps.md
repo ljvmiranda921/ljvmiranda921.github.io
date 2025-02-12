@@ -1,12 +1,12 @@
 ---
 layout: post
 type: post
-title: "Reflections of a Pinoy applying to top CS PhD programs abroad"
+title: "Reflections of a Pinoy applying to CS PhD programs abroad"
 date: 2025-08-12
 category: life
 comments: true
 author: "LJ MIRANDA"
-summary: "Reflections of a Pinoy applying to top CS PhD programs abroad"
+summary: "Reflections of a Pinoy applying to CS PhD programs abroad"
 excerpt: |
   A long reflection about my journey from industry to grad school applications&mdash;spanning countries, jobs, and experiences.
   This is not an advise post, but I hope you'll find something valuable along the way.
@@ -51,15 +51,14 @@ Early on, I realized that **pivoting from industry to academia will entail a lot
 A part of me thought that maybe I should have just continued to PhD right after my Masters.
 But in hindsight, my experience in the industry validated that (1) I still liked doing research that I'm willing to sacrifice and pivot my career and that (2) I can always go back to industry if academia didn't pan out.
 
-I called it The Big Pivot because it represented a reorientation of my career path.
 After my time in consulting, I discovered that my passion for research hadn't diminished&mdash;if anything, it had grown stronger.
-While the transition from industry to academia might seem straightforward on paper, the reality was far more complex.
+While the transition from industry to academia might seem straightforward, the reality was far more complex.
 It meant potentially relocating to another country, accepting a significant pay cut, and adjusting my life stages (e.g., getting married, growing a family) to align with a new career trajectory.
 Looking back to 2021, I remember feeling overwhelmed by the self-imposed pressure to make everything fall perfectly into place.
 
 ### The big pivot and the long road to PhD applications
 
-Inasmuch as I'd like to think that I got into top schools solely because of my efforts, I got lucky because of the **people who took chances on me.**
+Inasmuch as I'd like to think that I got into PhD programs solely because of my efforts, I got lucky because of the **people who took chances on me.**
 My first break into NLP research was in [spaCy](https://spacy.io), when Matt, Ines, and Sofie supported me in co-leading (with Akos!) our [hash-embeddings technical report](https://arxiv.org/abs/2212.09255).
 That experience opened up a lot of opportunities, like being able to collaborate with linguists like Anders S&oslash;gaard.
 This gave me the confidence to undertake my own independent work for Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
@@ -115,19 +114,14 @@ _From left to right (2024): snippets of my life in Seattle including the Fremont
 It took me years to build up a stronger portfolio, and even then I still thought my profile isn't strong enough when I was applying (it's easy to compare oneself to others, especially with this crazy competition).
 But my then fianc&eacute;e-now-wife encouraged me a lot and boosted my confidence.
 **Surrounding myself with people who support me are important**, especially in academia, where each stage of your career is based on someone evaluating you, from PhD apps, journal/conference submissions, job applications, grants, etc.
-And so, mustering myself, I applied to 10 PhD programs in the US, UK, and Canada.
+And so, mustering myself, I applied to PhD programs in the US, UK, and Canada.
 
 ### On the admissions cycle and on choosing programs
 
-<!-- (this is not the first paragraph)  -->
-<!-- In a way, four years is a long time and there were times when instead of being too focused on applying to grad school, I just enjoyed life.
-Back in 2021, I set myself a goal and I was too laser-focused on things I need to accomplish but through the years I learned to let things be (I also found this helpful to relieve the anxiety).
-It took me years to build up a strong portfolio, and even then I still think my profile isn't strong enough when I was applying. -->
-
-One of the hardest challenges in entering a PhD is balancing your career aspirations and future life plans.
-This is especially true for me who is in my early 30s: a PhD program can take 4-6 years, pays low, and will coincide the time when you might want to start a family.
+One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
+This is especially true for me who is in my early 30s: a PhD program can take 4-6 years, pays low, and will coincide the time when I might want to start a family.
 I spent the early months of 2023 communicating with my family and wife on how this decision would affect them.
-Because of that, there was pressure and anxiety to ensure that things move like clockwork, but I've learned that I'm not alone in this journey&mdash; I have my family and friends along the way.
+Because of that, there was **pressure and anxiety to ensure that things move like clockwork**, but I've learned that I'm not alone in this journey&mdash; I have my family and friends along the way.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/cbtl.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -141,10 +135,14 @@ Furthermore, these considerations also factored in which PhD program I'll choose
 For example, short PhD programs (3-4 years) became attractive although some might argue its drawbacks come job search.
 Location took more priority, as I will uproot my wife and ensure she can work there and live comfortably.
 Of course, the usual considerations came into play: advisor fit, research topic, university, etc.&mdash; it's just that this time, I'm not just thinking about my career.
+Apart from these practical considerations, what helped me decide is asking myself this question: _will I be happy if I became successful in a certain path I chose?_
+During the time I'm applying, LM reasoning and agents were the hottest topics, and so some of my potential advisors were interested in those.[^2]
+Although there's undoubtedly a strong impact in working in those topics, I don't imagine myself happy as opposed to, say, improving equitability of NLP for language communities like mine.
 
-<!-- (this is not the first paragraph)  -->
+> What helped me decide is asking myself this question: _will I be happy if I became successful in a certain path I chose?_ (see my notes on [flourishing](/life/2021/09/21/build-earn-play/)).
 
-I feel privileged and blessed to have this problem of choice.
+<!-- add pictures from different places during visit days -->
+
 Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements!
 In addition, if you're interested to do research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out and I'm happy to mentor you!
 
@@ -155,3 +153,4 @@ In addition, if you're interested to do research on Tagalog and Filipino NLP wit
 ### Footnotes
 
 [^1]: There are many people in Ai2 who helped me of course: Yanai, Valentina, Faeze, Nathan, Kyle R., Sachin, Hannah and Noah (and much more)! It does take a village. I'm also thankful to Pradeep, Hanna+Yizhong who drafted my recommendation letters!
+[^2]: It's reasonable to chase the hottest trends as grant-giving bodies and funding decisions tend to be biased around these topics.
