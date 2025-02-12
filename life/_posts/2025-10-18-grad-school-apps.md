@@ -40,12 +40,6 @@ _All photos you'll see below were taken by a Gameboy Camera. I realized when wri
 As the fields of machine learning and NLP grow every year, the **competition for top PhD programs has become increasingly competitive.**
 There was a time when I was looking at the newly-admitted PhD students at Stanford and University of Washington (UW), and it's common to see them with first-author publications in top conferences prior to their PhD.
 One just need to look at [these tweets](https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw) from professors and admissions committee (AdCom) members during the Fall 2025 cycle in order to recognize how competitive the CS PhD Applications have been.
-
-<!-- <center>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Pretty crazy after reviewing the applications of some Stanford PhD applicants and feel like they can graduate right away after the admission 😄 <a href="https://t.co/8pyJzaajNr">https://t.co/8pyJzaajNr</a></p>&mdash; Shirley Wu (@ShirleyYXWu) <a href="https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw">January 5, 2025</a>
-</blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</center> -->
-
 Although I have worked on NLP-adjacent projects at [Thinking Machines](https://thinkingmachin.es/), I didn't have any academic NLP research experience in my profile back in 2021.
 Early on, I realized that **pivoting from industry to academia will entail a lot of hard work.**
 A part of me thought that maybe I should have just continued to PhD right after my Masters.
