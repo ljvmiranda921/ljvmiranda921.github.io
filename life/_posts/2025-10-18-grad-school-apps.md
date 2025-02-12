@@ -29,7 +29,7 @@ If you want an actual guide, I recommend reading John Boaz Lee's [guide](https:/
 <!-- include: https://nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf -->
 
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
-📣 Finally, some news: I will be starting my **PhD in Computation, Cognition, and Language** this Fall at the **University of Cambridge**.
+📣 Finally, some news: I will be starting my **PhD in Computation, Cognition, and Language** at the **University of Cambridge** this Fall!
 I also got accepted to several universities here in the US and Canada, so this admissions cycle was truly a blessing.
 </p>
 
