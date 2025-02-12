@@ -137,7 +137,7 @@ Location took more priority, as I will uproot my wife and ensure she can work th
 Of course, the usual considerations came into play: advisor fit, research topic, university, etc.&mdash; it's just that this time, I'm not just thinking about my career.
 Apart from these practical considerations, what helped me decide is asking myself this question: _will I be happy if I became successful in a certain path I chose?_
 During the time I'm applying, LM reasoning and agents were the hottest topics, and so some of my potential advisors were interested in those.[^2]
-Although there's undoubtedly a strong impact in working in those topics, I don't imagine myself happy as opposed to, say, improving equitability of NLP for language communities like mine.
+Although there's undoubtedly a strong impact in working in those topics, I don't imagine myself happy as opposed to, say, improving equitability of NLP for language communities like mine (which I've been doing for Filipino since then).
 
 > What helped me decide is asking myself this question: _will I be happy if I became successful in a certain path I chose?_ (see my notes on [flourishing](/life/2021/09/21/build-earn-play/)).
 
