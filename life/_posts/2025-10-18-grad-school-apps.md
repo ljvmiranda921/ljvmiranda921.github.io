@@ -132,7 +132,7 @@ Because of that, there was **pressure and anxiety to ensure that things move lik
 <img src="/assets/png/grad-school/retreat.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/ring.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 </div>
-_From left to right (early 2022 and 2023): coffee shop where my wife and I talked about our plans, my room during a Holy Week retreat, our engagement ring._
+_From left to right (early 2022 and 2023): coffee shop where my wife and I talked about our plans, my room during a Holy Week retreat in Sacred Heart, our engagement ring._
 {: style="text-align: center;"}
 
 Furthermore, these considerations also factored in which PhD program I'll choose.
