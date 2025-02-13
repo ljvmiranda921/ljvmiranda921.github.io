@@ -138,7 +138,7 @@ _From left to right (early 2022 and 2023): coffee shop where my wife and I talke
 Furthermore, these considerations also factored in which PhD program I'll choose.
 For example, short PhD programs (3-4 years) became attractive although some might argue its drawbacks come job search.
 Location took more priority, as I will uproot my wife and ensure she can work there and live comfortably.
-Of course, the usual considerations came into play: advisor fit, research topic, university, etc. (which is another topic altogether!).
+Of course, the usual considerations came into play: advisor fit, research topic, university, etc.&mdash; which is another topic altogether!
 
 Apart from these practical considerations, what helped me decide is asking myself this question: _will I be happy if I became successful in a certain path I chose?_
 During the time I'm applying, LM reasoning and agents were the hottest topics, and so some of my potential advisors were interested in those.[^2]
