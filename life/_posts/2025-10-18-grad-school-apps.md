@@ -51,7 +51,7 @@ But in hindsight, my experience in the industry validated that (1) I still like 
 <img src="/assets/png/grad-school/bgc.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/lantern.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 </div>
-_From left to right (--2021): Snippets of my life in Bonifacio Global City (BGC) a few weeks after TM. A bike on display inside Coffee Project, some view of BGC, and a Japanese lantern in The Fort._
+_From left to right (--2021): Snippets of my life in Bonifacio Global City (BGC) a few weeks after my time in Thinking Machines and in-between jobs. A bike on display inside Coffee Project, some view of BGC, and a Japanese lantern in The Fort._
 {: style="text-align: center;"}
 
 After my time in consulting, I discovered that my passion for research hadn't diminished&mdash;if anything, it had grown stronger.
@@ -61,7 +61,6 @@ Looking back to 2021, I remember feeling overwhelmed by the self-imposed pressur
 
 ### The long road to PhD applications
 
-Inasmuch as I'd like to think that I got into PhD programs solely because of my efforts, I got lucky because of the **people who took chances on me.**
 My first break into NLP research was in [spaCy](https://spacy.io), when Matt, Ines, and Sofie supported me in co-leading (with Akos!) our [hash-embeddings technical report](https://arxiv.org/abs/2212.09255).
 That experience opened up a lot of opportunities, like being able to collaborate with linguists like Anders S&oslash;gaard.
 This gave me the confidence to undertake my own independent work for Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
@@ -91,8 +90,10 @@ Those small gestures meant a lot&mdash;and I hope I can be that person for anoth
 _From left to right (2024): the Fremont library where I spent a lot of time writing papers and doing PhD apps, view of the Aurora bridge on the way to the office, the Ai2 logo in the office._
 {: style="text-align: center;"}
 
-**I think I've developed a mantra over time: people over projects, projects over publications.**
+Inasmuch as I'd like to think that I got into PhD programs solely because of my efforts, I got lucky because of the people who took chances on me.
+And so, I've developed a mantra over time: **people over projects, projects over publications.**
 I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash; I believe that every topic is equally interesting given the right people.
+
 During the four-year journey, I've met folks from [SIGSEA/SEACrowd/Grassroots](https://seacrowd.github.io/seacrowd-catalogue/contributors) (Holy, Samuel, Genta, Aji, Yong, Ruochen), the [Data Provenance Initiative](https://www.dataprovenance.org/) (Shayne), Filipino NLP (Joseph, Blaise, Ely, Conner, Ma'am Elsie, Angel), and even [Cohere for AI](https://cohere.com/research) (Srishti, Shayekh, Rishabh, Marzieh, Sebastian, Sara) who are great collaborators and luckily interested in the topics I care about.
 More importantly, I also want to thank my Masters professor, [Jinglu Hu](https://nclab.w.waseda.jp/jinglu/personal.html), for inspiring me to pursue research.
 He was happy to write me a recommendation letter and I'm more than happy that he wrote it&mdash; it felt like it went full circle.
