@@ -40,10 +40,19 @@ _All photos you'll see below were taken by a Gameboy Camera. I realized when wri
 As the fields of machine learning and NLP grow every year, the **competition for top PhD programs has become increasingly competitive.**
 There was a time when I was looking at the newly-admitted PhD students at Stanford and University of Washington (UW), and it's common to see them with first-author publications in top conferences prior to their PhD.
 One just need to look at [these tweets](https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw) from professors and admissions committee (AdCom) members during the Fall 2025 cycle in order to recognize how competitive the CS PhD Applications have been.
+
 Although I have worked on NLP-adjacent projects at [Thinking Machines](https://thinkingmachin.es/), I didn't have any academic NLP research experience in my profile back in 2021.
 Early on, I realized that **pivoting from industry to academia will entail a lot of hard work.**
 A part of me thought that maybe I should have just continued to PhD right after my Masters.
-But in hindsight, my experience in the industry validated that (1) I still liked doing research that I'm willing to sacrifice and pivot my career and that (2) I can always go back to industry if academia didn't pan out.
+But in hindsight, my experience in the industry validated that (1) I still like doing research and that (2) I can always go back to industry if academia didn't pan out.
+
+<div style="display: flex; justify-content: center;">
+<img src="/assets/png/grad-school/bike.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/bgc.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/lantern.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+</div>
+_From left to right (--2021): Snippets of my life in Bonifacio Global City (BGC) a few weeks after TM. A bike on display inside Coffee Project, some view of BGC, and a Japanese lantern in The Fort._
+{: style="text-align: center;"}
 
 After my time in consulting, I discovered that my passion for research hadn't diminished&mdash;if anything, it had grown stronger.
 While the transition from industry to academia might seem straightforward, the reality was far more complex.
