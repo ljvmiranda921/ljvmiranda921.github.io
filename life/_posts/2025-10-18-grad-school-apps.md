@@ -75,12 +75,13 @@ _From left to right (2021---2022): view from my condo when I was working from ho
 {: style="text-align: center;"}
 
 At AI2, I was fortunate to be mentored by Pradeep, Yanai, and Yizhong.
-My experience at AI2 shaped my research interests and solidified what **type of researcher I want to be: earnest and competent.**
+My experience at AI2 shaped my research interests and solidified what type of researcher I want to be: earnest and competent.
 I still remember when we were unable to submit our first project in time for a conference due to unexpected results, yet they remained supportive as we went back to the drawing board.
 We then reframed the project and it became a better paper than before!
-Later, they also trusted me to deliver the preference scaling aspect of the [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) projects, which resulted in significant performance gains in our DPO models&mdash; a contribution I'm proud to accomplish last year.
-Even after working on spaCy previously, I still felt like an outsider in the NLP research community, but they made me feel welcome.[^1]
-Those small gestures meant a lot&mdash;and I hope I can be that person for another researcher in the future.
+Later, they also trusted me to deliver the preference scaling aspect of the [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) projects, which resulted in significant performance gains in our models&mdash; a contribution I'm proud to have accomplished last year.
+
+<!-- Even after working on spaCy previously, I still felt like an outsider in the NLP research community, but they made me feel welcome.[^1]
+Those small gestures meant a lot&mdash;and I hope I can be that person for another researcher in the future. -->
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
