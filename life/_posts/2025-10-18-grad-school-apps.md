@@ -94,6 +94,7 @@ _From left to right (2024): the Fremont library where I spent a lot of time writ
 Inasmuch as I'd like to think that I got into PhD programs solely because of my efforts, I got lucky because of the people who took chances on me.
 And so, I've developed a mantra over time: **people over projects, projects over publications.**
 I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash; I believe that every topic is equally interesting given the right people.
+Everyone I worked with made me feel welcome, and I hope I can be that person to another aspiring researcher in the future.
 
 During the four-year journey, I've met folks from [SIGSEA/SEACrowd/Grassroots](https://seacrowd.github.io/seacrowd-catalogue/contributors) (Holy, Samuel, Genta, Aji, Yong, Ruochen), the [Data Provenance Initiative](https://www.dataprovenance.org/) (Shayne), Filipino NLP (Joseph, Blaise, Ely, Conner, Ma'am Elsie, Angel), and even [Cohere for AI](https://cohere.com/research) (Srishti, Shayekh, Rishabh, Marzieh, Sebastian, Sara) who are great collaborators and luckily interested in the topics I care about.
 More importantly, I also want to thank my Masters professor, [Jinglu Hu](https://nclab.w.waseda.jp/jinglu/personal.html), for inspiring me to pursue research.
