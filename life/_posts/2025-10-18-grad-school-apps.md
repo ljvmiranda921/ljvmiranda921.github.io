@@ -140,7 +140,7 @@ Because of that, there was **pressure and anxiety to ensure that things move lik
 _From left to right (early 2022 and 2023): coffee shop where my wife and I talked about our plans, my room during a Holy Week retreat in Sacred Heart, our engagement ring._
 {: style="text-align: center;"}
 
-Furthermore, these considerations also factored in which PhD program I'll choose.
+These considerations factored in which PhD program I'll choose.
 For example, short PhD programs (3-4 years) became attractive although some might argue its drawbacks come job search.
 Location took more priority, as I will uproot my wife and ensure she can work there and live comfortably.
 Of course, the usual considerations came into play: advisor fit, research topic, university, etc.&mdash; which is another topic altogether!
