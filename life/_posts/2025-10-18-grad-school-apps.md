@@ -122,9 +122,7 @@ But my then fianc&eacute;e-now-wife encouraged me a lot and boosted my confidenc
 **Surrounding myself with people who support me are important**, especially in academia, where each stage of your career is based on someone evaluating you, from PhD apps, journal/conference submissions, job applications, grants, etc.
 And so, mustering myself, I applied to PhD programs in the US, UK, and Canada.
 
-### On the admissions cycle
-
-### On choosing programs
+### On the admissions cycle and choosing PhD programs
 
 One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
 This is especially true for me who is in my early 30s: a PhD program can take 4-6 years, pays low, and will coincide the time when I might want to start a family.
