@@ -124,6 +124,9 @@ And so, mustering myself, I applied to PhD programs in the US, UK, and Canada.
 
 ### On the admissions cycle and choosing PhD programs
 
+<!-- writing personal statement -->
+<!-- payment -->
+
 One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
 This is especially true for me who is in my early 30s: a PhD program can take 4-6 years, pays low, and will coincide the time when I might want to start a family.
 I spent the early months of 2023 communicating with my family and wife on how this decision would affect them.
