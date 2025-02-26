@@ -8,18 +8,20 @@ permalink: /research/
 <!-- 【[🎓 Google Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en)】
 【[📚 Semantic Scholar](https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871)】 -->
 
+My field is in natural language processing and machine learning.
 I'm broadly interested in **data-centric approaches to building language technologies at scale.**
 I believe that a careful and systematic understanding of data&mdash; from its collection to its downstream influence on training&mdash; is crucial to build general-purpose language models.
 
 The following are the research themes I am interested in, along with some representative publications.
 You can check my [**Google Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) for a complete and up-to-date list.
 
-If you are interested in these types of work, then do not hesitate to [reach out](mailto:ljvmiranda@gmail.com).
-I'm happy to discuss research and collaborate!
+<!-- If you are interested in these types of work, then do not hesitate to [reach out](mailto:ljvmiranda@gmail.com).
+I'm happy to discuss research and collaborate! -->
 
-## Efficient and scalable data collection
+## Understanding high-quality data
 
-Human annotations are costly. How can we reduce this cost while preserving the nuance that human annotators provide? I've explored this in the context of LM post-training, by [routing preference instances to human/LMs](https://arxiv.org/abs/2410.19133) and in [generating synthetic preference data](https://arxiv.org/abs/2411.15124).
+What constitutes high-quality data? And how can we efficiently and scalably collect it?
+I've explored these questions in the context of acquiring post-training data by examining human factors in annotation and devising new techniques in data synthesis and generation.
 
 - [Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback](https://arxiv.org/abs/2410.19133)
   <br>_Preprint '24_
@@ -31,10 +33,10 @@ Human annotations are costly. How can we reduce this cost while preserving the n
   <br>Nathan Lambert\*, Jacob Morrison\*, Valentina Pyatkin\*, Shenyi Huang\*, Hamish Ivison\*, Faeze Brahman\*, <u>Lester James V. Miranda </u>\*, Alisa Liu, Nouha Dziri, Xinxi Lyu, Yuling Gu, Saumya Malik, Victoria Graf, Jena D. Hwang, Jiangjiang Yang, Ronan Le Bras, Oyvind Tajford, Chris Wilhelm, Luca Soldiani, Noah A. Smith, Yizhong Wang, Pradeep Dasigi, Hannaneh Hajishirzi _(&lowast;: core contributor)_.
   <br>[[Models](https://huggingface.co/collections/allenai/tulu-3-models-673b8e0dc3512e30e7dc54f5)] [[Datasets](https://huggingface.co/collections/allenai/tulu-3-datasets-673b8df14442393f7213f372)] [[Website](https://allenai.org/tulu)]
 
-## Multilingual and equitable NLP
+## Data for multilingual and equitable NLP
 
 No language should be left behind, especially in data.
-I've worked on evaluating [reward models in multilingual settings](https://arxiv.org/abs/2410.15522), curating [datasets for Southeast Asia](https://arxiv.org/abs/2406.10118), and building [large-scale named-entity recognition datasets](https://arxiv.org/abs/2311.09122).
+I'm motivated to pursue research that ensures that the next generation of state-of-the-art LLMs cater to languages beyond English; by improving training data quality and building faithful multilingual benchmarks.
 
 - [M-RewardBench: Evaluating Reward Models in Multilingual Settings](https://arxiv.org/abs/2410.15522)
   <br>_Preprint '24_
@@ -46,19 +48,18 @@ I've worked on evaluating [reward models in multilingual settings](https://arxiv
   <br>Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <u>Lester James Miranda</u>\*, and 50+ other authors _(&lowast;: major contributor)_.
   <br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
 
-- [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://aclanthology.org/2024.naacl-long.243/)
-  <br>_NAACL '24, Preprint '23_
-  <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <u>LJ Miranda</u>, Barbara Plank, Arij Riabi, Yuval Pinter
-  <br> [[Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GQ8HDL)] [[Website](https://www.universalner.org/)]
-
-## Improving the state of Filipino NLP
-
-I care a lot about representing my language, and I hope to continue doing so by building NLP resources.
-I've built [datasets](https://aclanthology.org/2023.sealp-1.2/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), to name a few&mdash;and still more to come! I've also written a lot about Filipino NLP in this blog.
+Within this theme, I also care a lot about **improving the state of Filipino NLP** and representing my native language.
+This involves building resources for training and evaluation.
+I also write a lot about Filipino NLP in this blog.
 
 - [The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project]()
   <br>Angelina A. Aquino\*, <u>Lester James V. Miranda</u>\*, Elsie Marie T. Or\*
   <br>[[Dataset](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317)]
+
+- [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://aclanthology.org/2024.naacl-long.243/)
+  <br>_NAACL '24, Preprint '23_
+  <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <u>LJ Miranda</u>, Barbara Plank, Arij Riabi, Yuval Pinter
+  <br> [[Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GQ8HDL)] [[Website](https://www.universalner.org/)]
 
 - [calamanCy: a Tagalog Natural Language Processing Toolkit](https://aclanthology.org/2023.nlposs-1.1/)
   <br>_NLP Open-Source Software (NLP-OSS) Workshop @ EMNLP '23_
