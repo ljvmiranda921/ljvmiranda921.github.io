@@ -10,21 +10,25 @@ permalink: /research/
 
 I'm broadly interested in **data-centric approaches to building language technologies at scale.**
 I believe that a careful and systematic understanding of data&mdash; from its collection to its downstream influence on training&mdash; is crucial to build general-purpose language models.
-More specifically, I'm interested to work on the following topics:
 
-- **Efficient and scalable data collection**:
-  Human annotations are costly. How can we reduce this cost while preserving the nuance that human annotators provide? I've explored this in the context of LM post-training, by [routing preference instances to human/LMs](https://arxiv.org/abs/2410.19133) and in [generating synthetic preference data](https://arxiv.org/abs/2411.15124).
-
-- **Multilingual NLP**:
-  No language should be left behind, especially in data.
-  I've worked on evaluating [reward models in multilingual settings](https://arxiv.org/abs/2410.15522), curating [datasets for Southeast Asia](https://arxiv.org/abs/2406.10118), and building [large-scale named-entity recognition datasets](https://arxiv.org/abs/2311.09122).
-
-- **Improving the state of Filipino NLP**:
-  I care a lot about representing my language, and I hope to continue doing so by building NLP resources.
-  I've built [datasets](https://aclanthology.org/2023.sealp-1.2/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), to name a few&mdash;and still more to come! I've also written a lot about Filipino NLP in this blog.
-
+Below are the research themes I'm interested in and some representative publications.
+You can check my [**Google Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) for more updated information
 If you are interested in these types of work, then do not hesitate to [reach out](mailto:ljvmiranda@gmail.com).
 I'm happy to discuss research and collaborate!
+
+## Efficient and scalable data collection
+
+Human annotations are costly. How can we reduce this cost while preserving the nuance that human annotators provide? I've explored this in the context of LM post-training, by [routing preference instances to human/LMs](https://arxiv.org/abs/2410.19133) and in [generating synthetic preference data](https://arxiv.org/abs/2411.15124).
+
+## Multilingual and equitable NLP
+
+No language should be left behind, especially in data.
+I've worked on evaluating [reward models in multilingual settings](https://arxiv.org/abs/2410.15522), curating [datasets for Southeast Asia](https://arxiv.org/abs/2406.10118), and building [large-scale named-entity recognition datasets](https://arxiv.org/abs/2311.09122).
+
+## Improving the state of Filipino NLP
+
+I care a lot about representing my language, and I hope to continue doing so by building NLP resources.
+I've built [datasets](https://aclanthology.org/2023.sealp-1.2/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), to name a few&mdash;and still more to come! I've also written a lot about Filipino NLP in this blog.
 
 &nbsp;
 
@@ -34,14 +38,12 @@ I'm happy to discuss research and collaborate!
 
 ## Selected Publications
 
-
 Below is a list of my publications.
 You can also check my [**Google
 Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) and
 [**Semantic
 Scholar**](https://www.semanticscholar.org/author/Lester-James-V.-Miranda/13614871)
 profiles for more updated information.
-
 
 ### 2024
 
