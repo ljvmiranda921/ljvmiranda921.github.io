@@ -56,6 +56,10 @@ I've worked on evaluating [reward models in multilingual settings](https://arxiv
 I care a lot about representing my language, and I hope to continue doing so by building NLP resources.
 I've built [datasets](https://aclanthology.org/2023.sealp-1.2/) and [tooling](https://aclanthology.org/2023.nlposs-1.1/), to name a few&mdash;and still more to come! I've also written a lot about Filipino NLP in this blog.
 
+- [The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project]()
+  <br>Angelina A. Aquino\*, <u>Lester James V. Miranda</u>\*, Elsie Marie T. Or\*
+  <br>[[Dataset](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317)]
+
 - [calamanCy: a Tagalog Natural Language Processing Toolkit](https://aclanthology.org/2023.nlposs-1.1/)
   <br>_NLP Open-Source Software (NLP-OSS) Workshop @ EMNLP '23_
   <br> <u>Lester James V. Miranda</u>
