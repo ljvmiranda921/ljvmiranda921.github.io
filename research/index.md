@@ -12,7 +12,7 @@ I'm broadly interested in **data-centric approaches to building language technol
 I believe that a careful and systematic understanding of data&mdash; from its collection to its downstream influence on training&mdash; is crucial to build general-purpose language models.
 
 The following are the research themes I am interested in, along with some representative publications.
-You can check my [**Google Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) for more updated information.
+You can check my [**Google Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) for a complete and up-to-date list.
 
 If you are interested in these types of work, then do not hesitate to [reach out](mailto:ljvmiranda@gmail.com).
 I'm happy to discuss research and collaborate!
