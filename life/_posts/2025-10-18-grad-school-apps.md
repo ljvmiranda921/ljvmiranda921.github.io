@@ -122,10 +122,26 @@ But my wife encouraged me a lot and boosted my confidence.
 **Surrounding myself with people who support me are important**, especially in academia, where each stage of your career is based on someone evaluating you, from PhD apps, journal/conference submissions, job applications, grants, etc.
 And so, mustering myself, I applied to PhD programs in the US, UK, and Canada.
 
-### On the admissions cycle and choosing PhD programs
+### On the admissions cycle
 
-<!-- writing personal statement -->
-<!-- payment, expensive!! -->
+The admissions cycle spanned three months, from December to February, with the earliest deadline on December 4.
+Because I also have to prepare for my wedding in December, I tried to finish all applications and essays by November.
+I vividly recall arriving at the library as soon as it opens and remaining there until it closes.
+The holiday season also brought a reflective mood, with fewer people around and a quieter atmosphere, I was able to reflect what type of research I wanted to pursue.
+
+<!-- add pictures of fremont library, pho place in fremont, cafe ladro -->
+
+I applied for 9 programs, and it's actually quite expensive!
+I missed some of the fee waiver deadlines because I was busy, so I had to shell out $1350 to $1500 for application fees.
+Don't make my mistake and keep in mind that fee waivers exist and most universities are generous, especially for international students.
+
+<!-- sankey diagram -->
+
+By January, I started receiving interview invites.
+I won't delve too much into this, because many guides have been written on how to prepare for interviews.
+Let's just say I had a mix of interview formats during this cycle: a research presentation, a short 15-20 minute informal chat, and a formal interview.
+
+### Choosing PhD programs
 
 One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
 This is especially true for me who is in my early 30s: a PhD program can take 4-6 years, pays low, and will coincide the time when I might want to start a family.
