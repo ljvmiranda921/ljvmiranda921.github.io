@@ -135,11 +135,19 @@ I applied for 9 programs, and it's actually quite expensive!
 I missed some of the fee waiver deadlines because I was busy, so I had to shell out $1350 to $1500 for application fees.
 Don't make my mistake and keep in mind that fee waivers exist and most universities are generous, especially for international students.
 
-<!-- sankey diagram -->
-
 By January, I started receiving interview invites.
 I won't delve too much into this, because many guides have been written on how to prepare for interviews.
 Let's just say I had a mix of interview formats during this cycle: a research presentation, a short 15-20 minute informal chat, and a formal interview.
+The last two weeks of January and the early weeks of February were the most intense as it involved a lot of waiting and uncertainty.
+I tried to keep myself busy, focusing on my current research and playing Kingdom Come Deliverance 2.
+
+<!-- sankey diagram -->
+
+Another thing to note is that in Cambridge, acceptance to the program is separate from a guarantee of funding.
+This is unlike in the US or Canada (MILA) where a PhD offer already means a fully-funded PhD position.
+Funding decisions for Cambridge often happens in March and April (sometimes extending to August!).
+This means that I had to let go of other opportunities while waiting for funding&mdash; it was a pretty anxious time.
+In the end, I got the prestigious [Harding Distinguished Postgraduate Scholarship](https://www.hardingscholars.fund.cam.ac.uk/), which solidified my choice to go to Cambridge.
 
 ### Choosing PhD programs
 
