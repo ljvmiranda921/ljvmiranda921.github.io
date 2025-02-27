@@ -130,6 +130,13 @@ I vividly recall arriving at the library as soon as it opens and remaining there
 The holiday season also brought a reflective mood, with fewer people around and a quieter atmosphere, I was able to reflect what type of research I wanted to pursue.
 
 <!-- add pictures of fremont library, pho place in fremont, cafe ladro -->
+<div style="display: flex; justify-content: center;">
+<img src="/assets/png/grad-school/fremont.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/pottery.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/market.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+</div>
+_From left to right (2024-2025): snapshots during the admissions season: writing essays in the Fremont library or in Cafe Ladro, buying food from PCC._
+{: style="text-align: center;"}
 
 I applied for 9 programs, and it's actually quite expensive!
 I missed some of the fee waiver deadlines because I was busy, so I had to shell out $1350 to $1500 for application fees.
