@@ -38,7 +38,7 @@ _All photos you'll see below were taken by a Gameboy Camera. I realized when wri
 ### Prelude: the reality of CS grad school applications
 
 As the fields of machine learning and NLP grow every year, the **competition for top PhD programs has become increasingly competitive.**
-There was a time when I was looking at the newly-admitted PhD students at Stanford and University of Washington (UW), and it's common to see them with first-author publications in top conferences prior to their PhD.
+There was a time when I was looking at the newly-admitted PhD students here in the US, and it's common to see them with first-author publications in top conferences prior to their PhD.
 One just need to look at [these tweets](https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw) from professors and admissions committee (AdCom) members during the Fall 2025 cycle in order to recognize how competitive the CS PhD Applications have been.
 
 Although I have worked on NLP-adjacent projects at [Thinking Machines (TM)](https://thinkingmachin.es/), I didn't have any academic NLP research experience in my profile back in 2021.
