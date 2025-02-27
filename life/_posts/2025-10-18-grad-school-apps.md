@@ -155,7 +155,7 @@ I tried to keep myself busy, focusing on my current research and playing Kingdom
 
 <!-- sankey diagram -->
 
-Another thing to note is that in Cambridge, acceptance to the program is separate from a guarantee of funding.
+Another thing to note is that in Cambridge, acceptance to the program doesn't mean funding is guaranteed.
 From what I understand, after your potential supervisor accepts you, they will forward your application to a funding committee, which then makes a separate decision to which scholarship you'll obtain.
 This is unlike in the US or Canada (MILA) where a PhD offer already means a fully-funded PhD position.
 Funding decisions for Cambridge often happens in March and April (sometimes extending to August!).
