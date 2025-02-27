@@ -133,7 +133,10 @@ The holiday season also brought a reflective mood, with fewer people around and 
 
 I applied for 9 programs, and it's actually quite expensive!
 I missed some of the fee waiver deadlines because I was busy, so I had to shell out $1350 to $1500 for application fees.
-Don't make my mistake and keep in mind that fee waivers exist and most universities are generous, especially for international students.
+In addition, some universities require official TOEFL scores, so you also have to pay TOEFL in order to send your test results to those universities (~$35).
+Don't make my mistake and keep in mind that fee waivers exist and most universities are generous, especially for international students, but just note that grad school apps can be very expensive.
+
+<!-- other pictures, i don't know which ones -->
 
 By January, I started receiving interview invites.
 I won't delve too much into this, because many guides have been written on how to prepare for interviews.
@@ -141,9 +144,12 @@ Let's just say I had a mix of interview formats during this cycle: a research pr
 The last two weeks of January and the early weeks of February were the most intense as it involved a lot of waiting and uncertainty.
 I tried to keep myself busy, focusing on my current research and playing Kingdom Come Deliverance 2.
 
+![](/assets/png/grad-school/sankey.png)
+
 <!-- sankey diagram -->
 
 Another thing to note is that in Cambridge, acceptance to the program is separate from a guarantee of funding.
+From what I understand, after your potential supervisor accepts you, they will forward your application to a funding committee, which then makes a separate decision to which scholarship you'll obtain.
 This is unlike in the US or Canada (MILA) where a PhD offer already means a fully-funded PhD position.
 Funding decisions for Cambridge often happens in March and April (sometimes extending to August!).
 This means that I had to let go of other opportunities while waiting for funding&mdash; it was a pretty anxious time.
