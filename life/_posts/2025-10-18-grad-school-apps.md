@@ -74,7 +74,7 @@ In addition, working with Magda and Vincent on incorporating LLMs in the [Prodig
 _From left to right (2021---2022): view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard._
 {: style="text-align: center;"}
 
-At AI2, I was fortunate to be mentored by Pradeep, Yanai, and Yizhong.
+At AI2, I was fortunate to be mentored by Pradeep, Yanai, and Yizhong.[^1]
 My experience at AI2 shaped my research interests and solidified what type of researcher I want to be: earnest and competent.
 I still remember when we were unable to submit our first project in time for a conference due to unexpected results, yet they remained supportive as we went back to the drawing board.
 We then reframed the project and it became a better paper than before!
@@ -210,5 +210,6 @@ _Padayon!_
 
 ### Footnotes
 
-[^1]: There are many people in Ai2 who helped me of course: Yanai, Valentina, Faeze, Nathan, Kyle R., Sachin, Hannah and Noah (and much more)! It does take a village. I'm also thankful to Pradeep, Hanna+Yizhong who drafted my recommendation letters!
+[^1]: There are many people in Ai2 who helped me of course: Valentina, Faeze, Nathan, Kyle R., Sachin, Maarten, Hannah and Noah (and much more)! It does take a village. I'm also thankful to Pradeep, Hanna+Yizhong who drafted my recommendation letters!
+
 [^2]: It's reasonable to chase the hottest trends as grant-giving bodies and funding decisions tend to be biased around these topics.
