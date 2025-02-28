@@ -149,7 +149,7 @@ By January, I started receiving interview invites.
 I won't delve too much into this, because many guides have been written on how to prepare for interviews.
 Let's just say I had a mix of interview formats during this cycle: a research presentation, a short 15-20 minute informal chat, and a formal interview.
 The last two weeks of January and the early weeks of February were the most intense as it involved a lot of waiting and uncertainty.
-I tried to keep myself busy, focusing on my current research and playing Kingdom Come Deliverance 2.
+I tried to keep myself busy, focusing on work and my current research projects.
 
 ![](/assets/png/grad-school/sankey.png)
 
@@ -211,5 +211,4 @@ _Padayon!_
 ### Footnotes
 
 [^1]: There are many people in Ai2 who helped me of course: Valentina, Faeze, Nathan, Kyle R., Sachin, Maarten, Hannah and Noah (and much more)! It does take a village. I'm also thankful to Pradeep, Hanna+Yizhong who drafted my recommendation letters!
-
 [^2]: It's reasonable to chase the hottest trends as grant-giving bodies and funding decisions tend to be biased around these topics.
