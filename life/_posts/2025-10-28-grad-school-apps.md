@@ -167,7 +167,7 @@ In the end, I got the prestigious [Harding Distinguished Postgraduate Scholarshi
 One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
 This is especially true for me who is in my early 30s: a PhD program can take 4-6 years, pays low, and will coincide the time when I might want to start a family.
 I spent the early months of 2023 communicating with my family and wife on how this decision would affect them.
-Because of that, there was **pressure and anxiety to ensure that things move like clockwork**, but I've learned that I'm not alone in this journey&mdash; I have my family and friends along the way.
+Because of that, there was pressure and anxiety to ensure that things move like clockwork, but I've learned that I'm not alone in this journey&mdash; I have my family and friends along the way.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/cbtl.png" width="220" style="border: 2px solid black; margin: 0 5px;">
