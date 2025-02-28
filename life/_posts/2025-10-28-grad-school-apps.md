@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Reflections of a Pinoy applying to CS PhD programs abroad"
-date: 2025-10-08
+date: 2025-10-28
 category: life
 comments: true
 author: "LJ MIRANDA"
