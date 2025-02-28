@@ -114,7 +114,7 @@ I find that mindset more freeing&mdash; as I develop [a healthy detachment](http
 <img src="/assets/png/grad-school/pottery.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/market.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 </div>
-_From left to right (2024): snippets of my life in Seattle including the Fremont graffiti, the pottery studio at Yu Tang Ceramics, and the Farmer's Market in downtown._
+_From left to right (2024): snippets of my life in Seattle including the Fremont artwork, the pottery studio at Yu Tang Ceramics, and the Farmer's Market in downtown._
 {: style="text-align: center;"}
 
 It took me years to build up a stronger portfolio, and even then I still thought my profile isn't strong enough when I was applying (it's easy to compare oneself to others, especially with this crazy competition).
@@ -124,16 +124,16 @@ And so, mustering myself, I applied to PhD programs in the US, UK, and Canada.
 
 ### On the admissions cycle
 
-The admissions cycle spanned three months, from December to February, with the earliest deadline on December 4.
+The admissions cycle spanned three months, from December to February, with the earliest deadline last December 4.
 Because I also have to prepare for my wedding in December, I tried to finish all applications and essays by November.
 I vividly recall arriving at the library as soon as it opens and remaining there until it closes.
 The holiday season also brought a reflective mood, with fewer people around and a quieter atmosphere, I was able to reflect what type of research I wanted to pursue.
 
 <!-- add pictures of fremont library, pho place in fremont, cafe ladro -->
 <div style="display: flex; justify-content: center;">
-<img src="/assets/png/grad-school/fremont.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/fremont2.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/pottery.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/market.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/pcc.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 </div>
 _From left to right (2024-2025): snapshots during the admissions season: writing essays in the Fremont library or in Cafe Ladro, buying food from PCC._
 {: style="text-align: center;"}
