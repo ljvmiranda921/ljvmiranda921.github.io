@@ -132,7 +132,7 @@ The holiday season also brought a reflective mood, with fewer people around and 
 <!-- add pictures of fremont library, pho place in fremont, cafe ladro -->
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/fremont2.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/pottery.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/ladro.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/pcc.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 </div>
 _From left to right (2024-2025): snapshots during the admissions season: writing essays in the Fremont library or in Cafe Ladro, buying food from PCC._
