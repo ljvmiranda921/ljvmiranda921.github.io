@@ -149,7 +149,7 @@ By January, I started receiving interview invites.
 I won't delve too much into this, because many guides have been written on how to prepare for interviews.
 Let's just say I had a mix of interview formats during this cycle: a research presentation, a short 15-20 minute informal chat, and a formal interview.
 The last two weeks of January and the early weeks of February were the most intense as it involved a lot of waiting and uncertainty.
-I tried to keep myself busy, focusing on my current research and playing Kingdom Come Deliverance 2.
+I tried to keep myself busy, focusing on work and my current research projects.
 
 ![](/assets/png/grad-school/sankey.png)
 
@@ -160,14 +160,14 @@ From what I understand, after your potential supervisor accepts you, they will f
 This is unlike in the US or Canada (MILA) where a PhD offer already means a fully-funded PhD position.
 Funding decisions for Cambridge often happens in March and April (sometimes extending to August!).
 This means that I had to let go of other opportunities while waiting for funding&mdash; it was a pretty anxious time.
-In the end, I got the prestigious [Harding Distinguished Postgraduate Scholarship](https://www.hardingscholars.fund.cam.ac.uk/), which solidified my choice to go to Cambridge.
+In the end, I got the prestigious [Harding Distinguished Postgraduate Scholarship](https://www.hardingscholars.fund.cam.ac.uk/) as early as March, which solidified my choice to go to Cambridge.
 
 ### Choosing PhD programs
 
 One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
 This is especially true for me who is in my early 30s: a PhD program can take 4-6 years, pays low, and will coincide the time when I might want to start a family.
 I spent the early months of 2023 communicating with my family and wife on how this decision would affect them.
-Because of that, there was **pressure and anxiety to ensure that things move like clockwork**, but I've learned that I'm not alone in this journey&mdash; I have my family and friends along the way.
+Because of that, there was pressure and anxiety to ensure that things move like clockwork, but I've learned that I'm not alone in this journey&mdash; I have my family and friends along the way.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/cbtl.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -196,6 +196,7 @@ In addition, if you're interested to do research on Tagalog and Filipino NLP wit
 ### Final thoughts
 
 We have been here at Cambridge for a month.
+There's a lot to say about Cambridge&mdash; the collegiate system, the traditions, the culture, and more.
 Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that I'll be here for some time.
 
 <!-- pictures of Cambridge! -->
@@ -211,5 +212,4 @@ _Padayon!_
 ### Footnotes
 
 [^1]: There are many people in Ai2 who helped me of course: Valentina, Faeze, Nathan, Kyle R., Sachin, Maarten, Hannah and Noah (and much more)! It does take a village. I'm also thankful to Pradeep, Hanna+Yizhong who drafted my recommendation letters!
-
 [^2]: It's reasonable to chase the hottest trends as grant-giving bodies and funding decisions tend to be biased around these topics.
