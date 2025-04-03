@@ -30,7 +30,7 @@ If you want an actual guide, I recommend reading John Boaz Lee's [guide](https:/
 
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 📣 Finally, some news: I will be starting my **PhD in Computation, Cognition, and Language** at the **University of Cambridge** this Fall!
-I also got accepted to several universities here in the US and Canada, so this admissions cycle was truly a blessing.
+I also got accepted to universities in the US and Canada, so this admissions cycle was truly a blessing.
 </p>
 
 _All photos you'll see below were taken by a Gameboy Camera. I realized when writing this blog post that my camera captured all events in the past four years. For more photos, check out my [gallery](/gallery)._
