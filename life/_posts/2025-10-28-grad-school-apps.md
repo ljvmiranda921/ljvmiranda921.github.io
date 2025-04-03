@@ -151,7 +151,7 @@ Let's just say I had a mix of interview formats during this cycle: a research pr
 The last two weeks of January and the early weeks of February were the most intense as it involved a lot of waiting and uncertainty.
 I tried to keep myself busy, focusing on work and my current research projects.
 
-![](/assets/png/grad-school/sankey.png)
+<!-- ![](/assets/png/grad-school/sankey.png) -->
 
 <!-- sankey diagram -->
 
