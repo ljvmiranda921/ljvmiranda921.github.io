@@ -188,7 +188,13 @@ Although there's undoubtedly a strong impact in working in those topics, I don't
 
 > What helped me decide is asking myself this question: _will I be happy if I became successful in a certain path I chose?_ (see my notes on [flourishing](/life/2021/09/21/build-earn-play/)).
 
-<!-- add pictures from different places during visit days -->
+<div style="display: flex; justify-content: center;">
+<img src="/assets/png/grad-school/cornell3.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/sage_hall.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/nyc.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+</div>
+_Photos during my PhD visit days in NYC._
+{: style="text-align: center;"}
 
 Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements!
 In addition, if you're interested to do research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out and I'm happy to mentor you!
