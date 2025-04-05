@@ -29,7 +29,7 @@ If you want an actual guide, I recommend reading John Boaz Lee's [guide](https:/
 <!-- include: https://nguyenthanhvuh.github.io/phd-cs-us/demystify.pdf -->
 
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
-📣 Finally, some news: I will be starting my **PhD in Computation, Cognition, and Language** at the **University of Cambridge** this Fall!
+📣 Finally, some news: I started my **PhD in Computation, Cognition, and Language** at the **University of Cambridge** this Fall!
 I also got accepted to universities in the US and Canada, so this admissions cycle was truly a blessing.
 </p>
 
@@ -151,7 +151,13 @@ Let's just say I had a mix of interview formats during this cycle: a research pr
 The last two weeks of January and the early weeks of February were the most intense as it involved a lot of waiting and uncertainty.
 I tried to keep myself busy, focusing on work and my current research projects.
 
-<!-- ![](/assets/png/grad-school/sankey.png) -->
+<div style="display: flex; justify-content: center;">
+<img src="/assets/png/grad-school/bike2.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/phinney.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/usa.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+</div>
+_From left to right (2024-2025): The PhD applications forced me to think whether I want to stay in the US or move again abroad. Some snippets of my life (from left to right): a bike in Roosevelt Island, my apartment at Phinney, a US flag in Grand Central Station._
+{: style="text-align: center;"}
 
 <!-- sankey diagram -->
 
