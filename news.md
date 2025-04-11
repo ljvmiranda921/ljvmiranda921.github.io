@@ -26,7 +26,7 @@ title: News
 </div>
 
 <div class="news-item">
-<p><span class="date">**Apr 2025**</span>: Three of my first (or co-first) author papers were accepted in ACL: Hybrid Preferences, M-RewardBench, and UD-NewsCrawl!</p>
+<p><span class="date">**May 2025**</span>: Three of my first (or co-first) author papers were accepted in ACL: Hybrid Preferences, M-RewardBench, and UD-NewsCrawl!</p>
 </div>
 
 <div class="news-item">
