@@ -21,9 +21,9 @@ title: News
 } */
 </style>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Sep 2025**</span>: Starting my PhD in the Language Technology Lab (LTL) at the University of Cambridge!</p>
-</div>
+</div> -->
 
 <div class="news-item">
 <p><span class="date">**May 2025**</span>: Three of my first (or co-first) author papers were accepted in ACL: Hybrid Preferences, M-RewardBench, and UD-NewsCrawl!</p>
