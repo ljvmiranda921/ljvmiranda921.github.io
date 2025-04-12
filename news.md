@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**Oct 2025**</span>: Started my PhD in the Language Technology Lab at the University of Cambridge! I will be supervised by Prof. Anna Korhonen.</p>
+<p><span class="date">**Oct 2025**</span>: Starting my PhD at the University of Cambridge in the [Language Technology Lab](https://ltl.mmll.cam.ac.uk/)! I will be supervised by Prof. Anna Korhonen and supported by the [Jardine Scholarship](https://en.wikipedia.org/wiki/Jardine_Scholarship) and [Cambridge Trust](https://www.cambridgetrust.org/scholarships/cambridge-international-scholarship).</p>
 </div>
 
 <div class="news-item">
@@ -49,13 +49,13 @@ title: News
 <p><span class="date">**Aug 2024**</span>: 🏆 Our work on evaluating reward models in multilingual settings won Silver Prize in [Cohere for AI's Aya Expedition](https://cohere.com/blog/empowering-others-to-explore-the-next-frontier-expedition-aya)!</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Jul 2024**</span>: I gave a [guest lecture](/notebook/2024/07/02/talk-dlsu/) at DLSU about building Filipino NLP resources. Thanks to Dr. Charibeth Cheng for inviting me!</p>
 </div>
 
 <div class="news-item">
 <p><span class="date">**Mar 2024**</span>: [Universal NER](https://arxiv.org/abs/2311.09122) was accepted to NAACL 2024. I hope to still work on linguistic aspects of NLP in the future!</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**Mar 2024**</span>: We released [RewardBench](https://arxiv.org/abs/2403.13787), the first benchmark for evaluating reward models.</p>
