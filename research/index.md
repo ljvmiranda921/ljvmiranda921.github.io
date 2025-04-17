@@ -14,7 +14,7 @@ I believe that a careful and systematic understanding of data&mdash; from its co
 
 The following are the research themes I am interested in, along with some representative publications.
 <!-- I am eager to explore these themes individually or at their intersection. -->
-My works have been published in top NLP conferences such as ACL, NAACL, and EMNLP.
+My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
 Finally, you can also check my [**Google Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) for a complete and up-to-date list.
 
 _Keywords: data-centric AI, multilinguality, resources & evaluation_
