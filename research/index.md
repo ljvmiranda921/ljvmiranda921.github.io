@@ -9,7 +9,7 @@ permalink: /research/
 【[📚 Semantic Scholar](https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871)】 -->
 
 My field is in natural language processing and machine learning.
-I'm broadly interested in **data-centric approaches to building language technologies at scale.**
+I'm broadly interested in **building language technologies that are equitable and useful, through data.**
 I believe that a careful and systematic understanding of data&mdash; from its collection to its downstream influence on training&mdash; is crucial to build general-purpose language models.
 
 The following are the research themes I am interested in, along with some representative publications.
