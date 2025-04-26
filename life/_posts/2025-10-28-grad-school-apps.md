@@ -166,7 +166,6 @@ From what I understand, after your potential supervisor accepts you, they will f
 This is unlike in the US or Canada (MILA) where a PhD offer already means a fully-funded PhD position.
 Funding decisions for Cambridge often happens in March and April (sometimes extending to August!).
 This means that I had to let go of other opportunities while waiting for funding&mdash; it was a pretty anxious time.
-<!-- In the end, I got the prestigious [Harding Distinguished Postgraduate Scholarship](https://www.hardingscholars.fund.cam.ac.uk/) as early as March, which solidified my choice to go to Cambridge. -->
 
 ### Choosing PhD programs
 
