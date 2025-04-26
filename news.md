@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**Oct 2025**</span>: I'm starting my PhD in the [Language Technology Lab](https://ltl.mmll.cam.ac.uk/) at the University of Cambridge, supervised by Anna Korhonen! I will be supported by the [Jardine Scholarship](https://en.wikipedia.org/wiki/Jardine_Scholarship) and [Cambridge Trust](https://www.cambridgetrust.org/scholarships/cambridge-international-scholarship).</p>
+<p><span class="date">**Oct 2025**</span>: I'm starting my PhD in the [Language Technology Lab](https://ltl.mmll.cam.ac.uk/) at the University of Cambridge, supervised by Anna Korhonen.</p>
 </div>
 
 <div class="news-item">
