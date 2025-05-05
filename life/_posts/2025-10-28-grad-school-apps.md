@@ -169,7 +169,7 @@ This is just one of the many considerations, alongside research fit and potentia
 
 > Getting into a PhD becomes a life decision moreso than a career decision.
 
-Although choosing a PhD program seems like a cerebral choice that entails a lot of calculus, a large part of my decision-making involved a lot of [spiritual discernment](https://www.ignatianspirituality.com/making-good-decisions/an-approach-to-good-choices/an-ignatian-framework-for-making-a-decision/).
+Although choosing a PhD program seems like a cerebral choice that entails a lot of calculus, a large part of my decision-making involved a lot of [discernment](https://www.ignatianspirituality.com/making-good-decisions/an-approach-to-good-choices/an-ignatian-framework-for-making-a-decision/).
 Attuning myself to my [*desires*](https://godinallthings.com/2013/09/02/desire/) and praying over them helped a lot. 
 One thing I've learned during this time is that **I can never make this decision with absolute certainty.**
 There will always be doubt, and I should welcome that.
