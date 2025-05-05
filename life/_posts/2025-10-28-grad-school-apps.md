@@ -176,14 +176,6 @@ I just tell myself during those times that this is a good problem to have.
 
 > Getting into a PhD becomes a life decision moreso than a career decision.
 
-Although choosing a PhD program seems like a cerebral choice that entails a lot of calculus, a large part of my decision-making involved a lot of [spiritual discernment](https://www.ignatianspirituality.com/making-good-decisions/an-approach-to-good-choices/an-ignatian-framework-for-making-a-decision/).
-Attuning myself to my [*desires*](https://godinallthings.com/2013/09/02/desire/) and praying over them helped a lot. 
-One thing I've learned during this time is that **I can never make this decision with absolute certainty.**
-There will always be doubt, and I should welcome that.
-Doubt is also a blessing because it invites faith and mystery.[^2]
-
-
-
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/cornell3.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/sage_hall.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -191,6 +183,15 @@ Doubt is also a blessing because it invites faith and mystery.[^2]
 </div>
 _Photos during my PhD visit days in NYC._
 {: style="text-align: center;"}
+
+Although choosing a PhD program seems like a cerebral choice that entails a lot of calculus, a large part of my decision-making involved a lot of [spiritual discernment](https://www.ignatianspirituality.com/making-good-decisions/an-approach-to-good-choices/an-ignatian-framework-for-making-a-decision/).
+Attuning myself to my [*desires*](https://godinallthings.com/2013/09/02/desire/) and praying over them helped a lot. 
+One thing I've learned during this time is that **I can never make this decision with absolute certainty.**
+There will always be doubt, and I should welcome that.
+Doubt is also a blessing because it invites faith and mystery.[^2]
+
+> I've learned that I can never make this decision [of choosing a PhD program] with absolute certainty.
+> Doubt is also a blessing because it invites faith and mystery.
 
 Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements!
 In addition, if you're interested to do research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out and I'm happy to mentor you!
