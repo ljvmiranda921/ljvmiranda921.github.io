@@ -162,10 +162,17 @@ Getting into a PhD becomes a life decision moreso than a career decision.
 _From left to right (early 2022 and 2023): coffee shop where my wife and I talked about our plans, my room during a Holy Week retreat in Sacred Heart, our engagement ring._
 {: style="text-align: center;"}
 
-Perhaps, this is also the reason why some aspects that may be deemed a "disadvantage" in a PhD program became *positives* for me. 
-For example, there's a commonly held view that longer programs (6 years, as in the case of US PhDs) will give you more time to do research, making you more productive, and, hence, more competitive by the time you graduate.
+Perhaps, this is also the reason why some aspects that may be seen as a disadvantage in a PhD program became *positives* for me. 
+For example, there's a commonly held view that longer programs (6 years, as in the case of US PhDs) will give you more time for research, making you more productive, and, hence, more competitive by the time you graduate.
 However, if I consider other factors outside of my career (e.g., starting a family, stability), shorter 4-year programs become more attractive.
 This is just one of the many considerations, alongside research fit and potential opportunities after graduation.
+
+A lot has been written on how to choose PhD programs (my favorite was [Tim Dettmer's post](https://timdettmers.com/2022/03/13/how-to-choose-your-grad-school)). 
+In general, this is a good problem to have: several professors have taken a bet on you, and it's your turn to assess which program you see yourself in.
+During one of my visit days, another prospective student told me that "choosing between offers is hard because now it's *real*."
+There's definitely this fear of closing other doors and potential futures, perhaps due to loss aversion.
+It's a decision that will dictate the next four to six years, and perhaps the rest of your academic career&mdash; no pressure!
+
 
 > Getting into a PhD becomes a life decision moreso than a career decision.
 
