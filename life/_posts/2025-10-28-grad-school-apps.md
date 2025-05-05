@@ -60,7 +60,7 @@ Looking back to 2021, I remember feeling overwhelmed by the self-imposed pressur
 ### The long road to PhD applications
 
 My first break into NLP research was in [spaCy](https://spacy.io), when Matt, Ines, and Sofie supported me in my research aspirations, which resulted in co-leading (with Akos!) our [hash-embeddings technical report](https://arxiv.org/abs/2212.09255).
-That experience opened up a lot of opportunities, like being able to collaborate with linguists like Anders S&oslash;gaard.
+That experience opened up a lot of opportunities, like being able to collaborate with academic researchers.
 It also gave me the confidence to undertake my own independent work for Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
 In addition, working with Magda and Vincent on incorporating LLMs in the [Prodigy annotation tool](https://prodigy.ai/) inspired my interest in researching data-centric approaches to NLP.
 
