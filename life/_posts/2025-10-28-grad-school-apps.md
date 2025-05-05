@@ -150,9 +150,9 @@ This means that I had to let go of other opportunities while waiting for funding
 ### Choosing PhD programs
 
 One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
-This is especially true for me who is in my early 30s: a PhD program can take 4-6 years, pays low, and will coincide the time when I might want to start a family.
-I spent the early months of 2023 communicating with my family and wife on how this decision would affect them.
-Because of that, there was pressure and anxiety to ensure that things move like clockwork, but I've learned that I'm not alone in this journey&mdash; I have my family and friends along the way.
+This is especially true for someone like me in my early 30s: a PhD program can take 4-6 years, usually pays low, and will coincide the time when I might want to start a family.
+Making this decision in my thirties is different if I made this decision during my twenties.
+Getting into a PhD becomes a life decision moreso than a career decision.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/cbtl.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -162,16 +162,20 @@ Because of that, there was pressure and anxiety to ensure that things move like 
 _From left to right (early 2022 and 2023): coffee shop where my wife and I talked about our plans, my room during a Holy Week retreat in Sacred Heart, our engagement ring._
 {: style="text-align: center;"}
 
-These considerations factored in as to why I chose Cambridge.
-For example, short PhD programs (3-4 years) became attractive.
-Location took more priority, as I will uproot my wife and ensure she can work there and live comfortably.
-Of course, the usual considerations came into play: advisor fit, research topic, university prestige, etc.&mdash; and these are bigger topics altogether!
+Perhaps, this is also the reason why some aspects that may be deemed a "disadvantage" in a PhD program became *positives* for me. 
+For example, there's a commonly held view that longer programs (6 years, as in the case of US PhDs) will give you more time to do research, making you more productive, and, hence, more competitive by the time you graduate.
+However, if I consider other factors outside of my career (e.g., starting a family, stability), shorter 4-year programs becomes more attractive.
+This is just one of the many considerations, alongside research fit and potential opportunities after graduation.
 
-<!-- Apart from these practical considerations, what helped me decide is asking myself this question: _will I be happy if I became successful in a certain path I chose?_
-During the time I'm applying, LM reasoning and agents were the hottest topics, and so some of my potential advisors were interested in those.[^2]
-Although there's undoubtedly a strong impact in working in those topics, I don't imagine myself happy as opposed to, say, improving equitability of NLP for language communities like mine (which I've been doing for Filipino since then). -->
+> Getting into a PhD becomes a life decision moreso than a career decision.
 
-<!-- > What helped me decide is asking myself this question: _will I be happy if I became successful in a certain path I chose?_ (see my notes on [flourishing](/life/2021/09/21/build-earn-play/)). -->
+Although choosing a PhD program seems like a cerebral choice that entails a lot of calculus, a large part of my decision-making involved a lot of [spiritual discernment](https://www.ignatianspirituality.com/making-good-decisions/an-approach-to-good-choices/an-ignatian-framework-for-making-a-decision/).
+Attuning myself to my [*desires*](https://godinallthings.com/2013/09/02/desire/) and praying over them helped a lot. 
+One thing I've learned during this time is that **I can never make this decision with absolute certainty.**
+There will always be doubt, and I should welcome that.
+Doubt is also a blessing because it invites faith and mystery.[^2]
+
+
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/cornell3.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -202,5 +206,5 @@ _Padayon!_
 
 ### Footnotes
 
-[^1]: There are many people in Ai2 who helped me of course: Valentina, Faeze, Nathan, Kyle R., Sachin, Maarten, Hannah and Noah (and much more)! It does take a village. I'm also thankful to Pradeep, Hanna+Yizhong who drafted my recommendation letters!
-[^2]: It's reasonable to chase the hottest trends as grant-giving bodies and funding decisions tend to be biased around these topics.
+[^1]: There are many people in Ai2 who helped me of course: Valentina, Faeze, Nathan, Kyle R., Sachin, Shashank, Harsh, Ashish, Hannah and Noah (and much more)! It does take a village. I'm also thankful to Pradeep, Hanna, and Yizhong who drafted my recommendation letters!
+[^2]: I think that Cardinal Lawrence's (Ralph Fiennes) [speech in *Conclave*](https://www.youtube.com/watch?v=oEg8bQXY7Sk) encapsulates this idea of doubt and certainty. Really good movie! I think I made my decision to go to Cambridge a day after watching this movie.
