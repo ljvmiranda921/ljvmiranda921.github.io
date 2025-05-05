@@ -78,9 +78,6 @@ I still remember when we were unable to submit our first project in time for a c
 We then reframed the project and it became a better paper than before!
 Later, they also trusted me to deliver the preference scaling aspect of the [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) projects, which resulted in significant performance gains in our models&mdash; a contribution I'm proud to have accomplished last year.
 
-<!-- Even after working on spaCy previously, I still felt like an outsider in the NLP research community, but they made me feel welcome.[^1]
-Those small gestures meant a lot&mdash;and I hope I can be that person for another researcher in the future. -->
-
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/aurora.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -91,20 +88,11 @@ _From left to right (2024): the Fremont library where I spent a lot of time writ
 
 I got lucky because of the people who took chances on me, that's why I developed a mantra over time: **people over projects, projects over publications.**
 I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash; I believe that every topic is equally interesting given the right people.
+During the four-year journey, I've met folks from different places such as in SEACrowd and Cohere Labs who were great collaborators and interested in the topics I care about.
+I also met people who are equally interested in Filipino NLP and I'm glad we made some projects together.
 Everyone I worked with made me feel welcome, and I hope I can be that person to another aspiring researcher in the future.
 
-During the four-year journey, I've met folks from [SIGSEA/SEACrowd/Grassroots](https://seacrowd.github.io/seacrowd-catalogue/contributors) (Holy, Samuel, Genta, Aji, Yong), the [Data Provenance Initiative](https://www.dataprovenance.org/) (Shayne), Filipino NLP (Joseph, Blaise, Ely, Conner, Ma'am Elsie, Angel), and even [Cohere for AI](https://cohere.com/research) (Srishti, Shayekh, Rishabh, Marzieh, Sebastian, Sara) who are great collaborators and luckily interested in the topics I care about.
-More importantly, I also want to thank my Masters professor, [Jinglu Hu](https://nclab.w.waseda.jp/jinglu/personal.html), for inspiring me to pursue research.
-He was happy to write me a recommendation letter and I'm more than happy that he wrote it&mdash; it felt like it went full circle.
-I have fond memories of Waseda back in 2016, and that time was formative in my career.
-
-> I think I've developed a mantra over time: people over projects, projects over publications.
-
-Back then, I was also hung up on publications: I had this looming feeling that I always need to publish so I can keep up with the profiles of those _other folks_ accepted in top institutions.
-Although this is still true in some way, now I prioritize projects and big-picture research directions.
-By doing so, I can focus on which research projects I should say yes to.
-This shift helped me focus on becoming a good researcher instead of trying to be the "perfect" PhD applicant.
-I find that mindset more freeing&mdash; as I develop [a healthy detachment](https://www.ignatianspirituality.com/the-grace-of-detachment/) from my goals.
+> I've developed a mantra over time: people over projects, projects over publications.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/fremont.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -114,10 +102,9 @@ I find that mindset more freeing&mdash; as I develop [a healthy detachment](http
 _From left to right (2024): snippets of my life in Seattle including the Fremont artwork, the pottery studio at Yu Tang Ceramics, and the Farmer's Market in downtown._
 {: style="text-align: center;"}
 
-It took me years to build up a stronger portfolio, and even then I still thought my profile isn't strong enough when I was applying (it's easy to compare oneself to others, especially with this crazy competition).
-But my wife encouraged me a lot and boosted my confidence.
-**Surrounding myself with people who support me are important**, especially in academia, where each stage of your career is based on someone evaluating you, from PhD apps, journal/conference submissions, job applications, grants, etc.
-And so, mustering myself, I applied to PhD programs in the US, UK, and Canada.
+My Masters professor, [Jinglu Hu](https://nclab.w.waseda.jp/jinglu/personal.html), also supported me all the way during my PhD applications.
+He was happy to write me a recommendation letter and I'm more than happy that he wrote it&mdash; it felt like it went full circle.
+I have fond memories of Waseda back in 2016, and that time was formative in my career.
 
 ### On the admissions cycle
 
