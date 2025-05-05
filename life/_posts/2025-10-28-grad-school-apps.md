@@ -127,13 +127,10 @@ I missed some of the fee waiver deadlines because I was busy, so I had to shell 
 In addition, some universities require official TOEFL scores, so you also have to pay TOEFL in order to send your test results to those universities (~$35).
 Don't make my mistake and keep in mind that fee waivers exist and most universities are generous, especially for international students, but just note that grad school apps can be very expensive.
 
-<!-- other pictures, i don't know which ones -->
-
 By January, I started receiving interview invites.
-I won't delve too much into this, because many guides have been written on how to prepare for interviews.
-Let's just say I had a mix of interview formats during this cycle: a research presentation, a short 15-20 minute informal chat, and a formal interview.
+I had a mix of interview formats during this cycle: a research presentation, a short 15-20 minute informal chat, and a formal interview.
 The last two weeks of January and the early weeks of February were the most intense as it involved a lot of waiting and uncertainty.
-I tried to keep myself busy, focusing on work and my current research projects.
+I tried to keep myself busy, focusing on work and my current research projects&mdash; those were the longest two months I ever experienced.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/bike2.png" width="220" style="border: 2px solid black; margin: 0 5px;">
