@@ -15,7 +15,7 @@ description: |
   This is not an advise post, but I hope you'll find something valuable along the way.
 ---
 
-<span class="firstcharacter">B</span>ack in 2021, I decided I wanted to embark on a PhD program to pursue an academic research career.
+<span class="firstcharacter">B</span>ack in 2021, I decided to embark on a PhD program and pursue an academic research career.
 I knew I wanted to do research and had a strong feeling I'll enjoy mentorship and teaching.
 However, it took me _four years_ to finally apply.
 _What happened, and what took me so long?_
@@ -39,10 +39,10 @@ _All photos you'll see below were taken by a Gameboy Camera. I realized when wri
 
 As the fields of machine learning and NLP grow every year, the **competition for top PhD programs has become increasingly competitive.**
 There was a time when I was looking at the newly-admitted PhD students here in the US, and it's common to see them with first-author publications in top conferences prior to their PhD.
-One just need to look at [these tweets](https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw) from professors and admissions committee (AdCom) members during the Fall 2025 cycle in order to recognize how competitive the CS PhD Applications have been.
+One just need to look at [these tweets](https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw) from professors and admissions committee members during the Fall 2025 cycle in order to recognize how competitive the CS PhD Applications have been.
 
-Although I have worked on NLP-adjacent projects at [Thinking Machines (TM)](https://thinkingmachin.es/), I didn't have any academic NLP research experience in my profile back in 2021.
-Early on, I realized that **pivoting from industry to academia will entail a lot of hard work.**
+Although I have worked on NLP-adjacent projects at [Thinking Machines](https://thinkingmachin.es/) in the Philippines, I didn't have any academic NLP research experience in my profile back in 2021.
+Early on, I realized that pivoting from industry to academia will entail a lot of hard work.
 A part of me thought that maybe I should have just continued to PhD right after my Masters.
 But in hindsight, my experience in the industry validated that (1) I still like doing research and that (2) I can always go back to industry if academia didn't pan out.
 
@@ -54,9 +54,7 @@ But in hindsight, my experience in the industry validated that (1) I still like 
 _From left to right (--2021): Snippets of my life in Bonifacio Global City (BGC) a few weeks after my time in TM. A bike on display inside Coffee Project, some view of BGC, and a Japanese lantern in The Fort._
 {: style="text-align: center;"}
 
-After my time in consulting, I discovered that my passion for research hadn't diminished&mdash;if anything, it had grown stronger.
-While the transition from industry to academia might seem straightforward, the reality was far more complex.
-It meant potentially relocating to another country, accepting a significant pay cut, and adjusting my life stages (e.g., getting married, growing a family) to align with a new career trajectory.
+After my time in consulting, I discovered that I still like doing research, but transitioning will be challenging: it meant potentially relocating to another country, accepting a significant pay cut, and adjusting my life stages (e.g., getting married, growing a family) to align with a new career trajectory.
 Looking back to 2021, I remember feeling overwhelmed by the self-imposed pressure to make everything fall perfectly into place.
 
 ### The long road to PhD applications
