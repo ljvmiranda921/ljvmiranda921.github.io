@@ -127,11 +127,6 @@ I missed some of the fee waiver deadlines because I was busy, so I had to shell 
 In addition, some universities require official TOEFL scores, so you also have to pay TOEFL in order to send your test results to those universities (~$35).
 Don't make my mistake and keep in mind that fee waivers exist and most universities are generous, especially for international students, but just note that grad school apps can be very expensive.
 
-By January, I started receiving interview invites.
-I had a mix of interview formats during this cycle: a research presentation, a short 15-20 minute informal chat, and a formal interview.
-The last two weeks of January and the early weeks of February were the most intense as it involved a lot of waiting and uncertainty.
-I tried to keep myself busy, focusing on work and my current research projects&mdash; those were the longest two months I ever experienced.
-
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/bike2.png" width="220" style="border: 2px solid black; margin: 0 5px;">
 <img src="/assets/png/grad-school/phinney.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -140,13 +135,17 @@ I tried to keep myself busy, focusing on work and my current research projects&m
 _From left to right (2024-2025): The PhD applications forced me to think whether I want to stay in the US or move again abroad. Some snippets of my life (from left to right): a bike in Roosevelt Island, my apartment at Phinney, a US flag in Grand Central Station._
 {: style="text-align: center;"}
 
-<!-- sankey diagram -->
 
-Another thing to note is that in Cambridge, acceptance to the program doesn't mean funding is guaranteed.
+By January, I started receiving interview invites.
+I had a mix of interview formats during this cycle: a research presentation, a short 15-20 minute informal chat, and a formal interview.
+The last two weeks of January and the early weeks of February were the most intense as it involved a lot of waiting and uncertainty.
+I tried to keep myself busy, focusing on work and my current research projects&mdash; those were the longest two months I ever experienced.
+
+<!-- Another thing to note is that in Cambridge, acceptance to the program doesn't mean funding is guaranteed.
 From what I understand, after your potential supervisor accepts you, they will forward your application to a funding committee, which then makes a separate decision to which scholarship you'll obtain.
 This is unlike in the US or Canada (MILA) where a PhD offer already means a fully-funded PhD position.
 Funding decisions for Cambridge often happens in March and April (sometimes extending to August!).
-This means that I had to let go of other opportunities while waiting for funding&mdash; it was a pretty anxious time.
+This means that I had to let go of other opportunities while waiting for funding&mdash; it was a pretty anxious time. -->
 
 ### Choosing PhD programs
 
