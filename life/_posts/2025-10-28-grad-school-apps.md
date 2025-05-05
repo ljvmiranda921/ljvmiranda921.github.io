@@ -172,7 +172,7 @@ In general, this is a good problem to have: several professors have taken a bet 
 During one of my visit days, another prospective student told me that "choosing between offers is hard because now it's *real*."
 There's definitely this fear of closing other doors and potential futures, perhaps due to loss aversion.
 It's a decision that will dictate the next four to six years, and perhaps the rest of your academic career&mdash; no pressure!
-
+I just tell myself during those times that this is a good problem to have.
 
 > Getting into a PhD becomes a life decision moreso than a career decision.
 
