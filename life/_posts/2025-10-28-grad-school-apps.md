@@ -198,7 +198,7 @@ In addition, if you're interested to do research on Tagalog and Filipino NLP wit
 
 ### Final thoughts
 
-We have been here at Cambridge for a month.
+It's October, and my wife and I have been here at Cambridge for a month.
 There's a lot to say about Cambridge&mdash; the collegiate system, the traditions, the culture, and more.
 Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that I'll be here for some time.
 
