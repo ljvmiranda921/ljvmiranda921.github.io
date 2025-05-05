@@ -171,12 +171,12 @@ A lot has been written on how to choose PhD programs (my favorite was [Tim Dettm
 In general, this is a good problem to have: several professors have taken a bet on you, and it's your turn to assess which program you see yourself in.
 During one of my visit days, another prospective student told me that "choosing between offers is hard because now it's *real*."
 There's definitely this fear of closing other doors and potential futures, perhaps due to loss aversion.
-It's a decision that will dictate the next four to six years, and perhaps the rest of your academic career&mdash; no pressure!
+It's a decision that will dictate the next four to six years, and maybe the rest of your academic career&mdash; no pressure!
 I just tell myself during those times that this is a good problem to have.
 
 > Getting into a PhD becomes a life decision moreso than a career decision.
 
-Although choosing a PhD program seems like a cerebral choice that entails a lot of calculus, a large part of my decision-making involved a lot of [discernment](https://www.ignatianspirituality.com/making-good-decisions/an-approach-to-good-choices/an-ignatian-framework-for-making-a-decision/).
+Although choosing a PhD program seems like a cerebral choice that entails a lot of calculus, a large part of my decision-making involved a lot of [spiritual discernment](https://www.ignatianspirituality.com/making-good-decisions/an-approach-to-good-choices/an-ignatian-framework-for-making-a-decision/).
 Attuning myself to my [*desires*](https://godinallthings.com/2013/09/02/desire/) and praying over them helped a lot. 
 One thing I've learned during this time is that **I can never make this decision with absolute certainty.**
 There will always be doubt, and I should welcome that.
