@@ -164,7 +164,7 @@ _From left to right (early 2022 and 2023): coffee shop where my wife and I talke
 
 Perhaps, this is also the reason why some aspects that may be deemed a "disadvantage" in a PhD program became *positives* for me. 
 For example, there's a commonly held view that longer programs (6 years, as in the case of US PhDs) will give you more time to do research, making you more productive, and, hence, more competitive by the time you graduate.
-However, if I consider other factors outside of my career (e.g., starting a family, stability), shorter 4-year programs becomes more attractive.
+However, if I consider other factors outside of my career (e.g., starting a family, stability), shorter 4-year programs become more attractive.
 This is just one of the many considerations, alongside research fit and potential opportunities after graduation.
 
 > Getting into a PhD becomes a life decision moreso than a career decision.
