@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**May 2025**</span>: Three of my first (or co-first) author papers were accepted in ACL: [Hybrid Preferences](), [M-RewardBench](), and [UD-NewsCrawl](). Also, another large collab project, SEA-VL, got accepted!</p>
+<p><span class="date">**May 2025**</span>: Three of my first (or co-first) author papers were accepted in ACL Main: [Hybrid Preferences](https://arxiv.org/abs/2410.19133), [M-RewardBench](https://arxiv.org/abs/2410.15522), and [UD-NewsCrawl](). Another large collab project, [SEA-VL](https://arxiv.org/abs/2503.07920), also got into Main. See you in Vienna!</p>
 </div>
 
 <div class="news-item">
