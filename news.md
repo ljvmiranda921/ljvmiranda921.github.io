@@ -27,7 +27,7 @@ title: News
 
 
 <div class="news-item">
-<p><span class="date">**May 2025**</span>: Excited to share that I have three first author papers accepted in ACL Main: [Hybrid Preferences](https://arxiv.org/abs/2410.19133), [M-RewardBench](https://arxiv.org/abs/2410.15522), and [UD-NewsCrawl](). [SEA-VL](https://arxiv.org/abs/2503.07920), a large collab project, also got into Main. See you in Vienna!</p>
+<p><span class="date">**May 2025**</span>: Excited to share that I have three first author papers accepted at [ACL Main](https://2025.aclweb.org/): [HyPER](https://arxiv.org/abs/2410.19133), [M-RewardBench](https://arxiv.org/abs/2410.15522), and [UD-NewsCrawl](). A large collab project, [SEA-VL](https://arxiv.org/abs/2503.07920), also got into Main!</p>
 </div>
 
 <div class="news-item">
