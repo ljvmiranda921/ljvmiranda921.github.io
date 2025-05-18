@@ -22,6 +22,11 @@ title: News
 </style>
 
 <div class="news-item">
+<p><span class="date">**Aug 2025**</span>: I'm proud to introduce [FilBench](), a [comprehensive LLM benchmark](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) for Filipino, to the world. In-press at EMNLP Main.</p>
+</div>
+
+
+<div class="news-item">
 <p><span class="date">**May 2025**</span>: Excited to share that I have three first author papers accepted in ACL Main: [Hybrid Preferences](https://arxiv.org/abs/2410.19133), [M-RewardBench](https://arxiv.org/abs/2410.15522), and [UD-NewsCrawl](). [SEA-VL](https://arxiv.org/abs/2503.07920), a large collab project, also got into Main. See you in Vienna!</p>
 </div>
 
