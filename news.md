@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**Aug 2025**</span>: I'm proud to introduce [FilBench](), a [comprehensive LLM benchmark](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) for Filipino, to the world. In-press at EMNLP Main.</p>
+<p><span class="date">**Aug 2025**</span>: I'm proud to introduce [FilBench](), a [comprehensive LLM benchmark](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) for Filipino, to the world. Accepted at EMNLP Main.</p>
 </div>
 
 
