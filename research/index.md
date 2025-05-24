@@ -30,7 +30,7 @@ I've explored these questions in the context of acquiring post-training data by 
 - [**Hy**brid **P**ref**er**ences: Learning to Route Instances for Human vs. AI Feedback](https://arxiv.org/abs/2410.19133)
   <br>_ACL '25 Main_
   <br><b>Lester James V. Miranda\*</b>, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi.
-  <br>[[Code](https://github.com/allenai/hybrid-preferences)] [[MultiPref Dataset](https://huggingface.co/datasets/allenai/multipref)]
+  <br>[[Code](https://github.com/allenai/hybrid-preferences)] [[Dataset](https://huggingface.co/datasets/allenai/multipref)]
 
 - [T&uuml;lu 3: Exploring Frontiers in Open Language Model Post-Training](https://arxiv.org/abs/2411.15124)
   <br>_Preprint '24_
