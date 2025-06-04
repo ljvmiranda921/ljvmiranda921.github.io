@@ -21,7 +21,7 @@ here, so go grab yourself a coffee and feel free to look around!
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 <b>Short background</b><br>
 Lj is a PhD student at the University of Cambridge, <a href="https://ltl.mmll.cam.ac.uk/">studying multilingual and equitable NLP</a>.
-Before his PhD studies, he has over five years of industry experience in consulting, open-source software development, and research, including work as a predoctoral researcher at the <a href="https://allenai.org">Allen Institute for AI</a> and an engineer working on spaCy and Prodigy at <a href="https://explosion.ai">Explosion</a>.
+Before his PhD, he has over seven years of industry experience in consulting, open-source software development, and research, including work as a predoctoral researcher at the <a href="https://allenai.org">Allen Institute for AI</a> and an engineer working on spaCy and Prodigy at <a href="https://explosion.ai">Explosion</a>.
 Outside of work, he dabbles in <a href="https://ljvmiranda921.github.io/gallery">photography</a> and <a href="https://ljvmiranda921.itch.io">game development</a>.
 </p>
 
