@@ -20,10 +20,10 @@ here, so go grab yourself a coffee and feel free to look around!
 
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 <b>Short background</b><br>
-Lj Miranda is a PhD student at the University of Cambridge, <a href="https://ltl.mmll.cam.ac.uk/">studying multilingual and equitable NLP</a>.
-Prior to his PhD, he has over five years of industry experience in consulting, open-source software development, and research, including work at the 
-<a href="https://allenai.org">Allen Instiute for AI</a> and <a href="https://explosion.ai">Explosion</a> (the team behind <a href="https://spacy.org">spaCy</a> and <a href="https://prodigy.ai">Prodigy</a>).
-Beyond his professional pursuits, Lj dabbles in <a href="https://ljvmiranda921.github.io/gallery">photography</a> and <a href="https://ljvmiranda921.itch.io">game development</a>.
+I'm a PhD student at the University of Cambridge, <a href="https://ltl.mmll.cam.ac.uk/">studying multilingual and equitable NLP</a>.
+Prior to my PhD, I have over five years of industry experience in consulting, open-source software development, and research, including work at the 
+<a href="https://allenai.org">Allen Institute for AI</a> and <a href="https://explosion.ai">Explosion</a> (the team behind <a href="https://spacy.org">spaCy</a> and <a href="https://prodigy.ai">Prodigy</a>).
+Outside of work, I dabble in <a href="https://ljvmiranda921.github.io/gallery">photography</a> and <a href="https://ljvmiranda921.itch.io">game development</a>.
 </p>
 
 
