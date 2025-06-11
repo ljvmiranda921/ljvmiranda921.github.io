@@ -73,7 +73,7 @@ _From left to right (2021---2022): view from my condo when I was working from ho
 
 My time at Ai2 as a pre-doc was incredibly formative. 
 Working alongside experienced researchers gave me a clearer picture of what academic research entailed and helped me identify the qualities I wanted to develop in myself as I grow into this career.
-Aside from doing independent work, I was also lucky to be part of large collaborative projects like [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/blog/olmo2) which gave me hands-on experience with frontier model post-training.
+I was also lucky to be part of large collaborative projects like [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/blog/olmo2) which gave me hands-on experience with frontier model post-training.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
