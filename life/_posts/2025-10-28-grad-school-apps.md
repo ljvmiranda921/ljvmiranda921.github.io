@@ -102,15 +102,15 @@ _From left to right (2024): snippets of my life in Seattle including the Fremont
 {: style="text-align: center;"}
 
 My Masters professor, [Jinglu Hu](https://nclab.w.waseda.jp/jinglu/personal.html), also supported me all the way during my PhD applications.
-He was happy to write me a recommendation letter and I'm more than happy that he wrote it&mdash; it felt like it went full circle.
+He was happy to write me a recommendation letter, and I'm more than happy that he wrote it&mdash;it felt like things had gone full circle.
 I have fond memories of Waseda back in 2016, and that time was formative in my career.
 
 ### On the admissions cycle
 
-The admissions cycle spanned three months, from December to February, with the earliest deadline last December 4.
-Because I also have to prepare for my wedding in December, I tried to finish all applications and essays by November.
-I vividly recall arriving at the library as soon as it opens and remaining there until it closes.
-The holiday season also brought a reflective mood, with fewer people around and a quieter atmosphere, I was able to reflect what type of research I wanted to pursue.
+The admissions cycle spanned three months, from December to February, with the earliest deadline on December 4.
+Because I also had to prepare for my wedding in December, I tried to finish all applications and essays by November.
+I vividly recall arriving at the library as soon as it opened and remaining there until it closed.
+The holiday season also brought a reflective mood, with fewer people around and a quieter atmosphere, I was able to reflect on what type of research I wanted to pursue.
 
 <!-- add pictures of fremont library, pho place in fremont, cafe ladro -->
 <div style="display: flex; justify-content: center;">
@@ -121,9 +121,9 @@ The holiday season also brought a reflective mood, with fewer people around and 
 _From left to right (2024-2025): snapshots during the admissions season: writing essays in the Fremont library or in Cafe Ladro, buying food from PCC._
 {: style="text-align: center;"}
 
-I applied for 9 programs, and it's actually quite expensive!
-I missed some of the fee waiver deadlines because I was busy, so I had to shell out $1350 to $1500 for application fees.
-In addition, some universities require official TOEFL scores, so you also have to pay TOEFL in order to send your test results to those universities (~$35).
+I applied to 9 programs, and they're actually quite expensive!
+I missed some of the fee waiver deadlines because I was busy, so I had to shell out $1,350 to $1,500 for application fees.
+In addition, some universities require official TOEFL scores, so you also have to pay TOEFL fees in order to send your test results to those universities (~$35).
 Don't make my mistake and keep in mind that fee waivers exist and most universities are generous, especially for international students, but just note that grad school apps can be very expensive.
 
 <div style="display: flex; justify-content: center;">
@@ -137,8 +137,8 @@ _From left to right (2024-2025): The PhD applications forced me to think whether
 
 By January, I started receiving interview invites.
 I had a mix of interview formats during this cycle: a research presentation, a short 15-20 minute informal chat, and a formal interview.
-The last two weeks of January and the early weeks of February were the most intense as it involved a lot of waiting and uncertainty.
-I tried to keep myself busy, focusing on work and my current research projects&mdash; those were the longest two months I ever experienced.
+The last two weeks of January and the early weeks of February were the most intense, as they involved a lot of waiting and uncertainty.
+I tried to keep myself busy, focusing on work and my current research projects&mdash; those were the longest two months I had ever experienced.
 
 <!-- Another thing to note is that in Cambridge, acceptance to the program doesn't mean funding is guaranteed.
 From what I understand, after your potential supervisor accepts you, they will forward your application to a funding committee, which then makes a separate decision to which scholarship you'll obtain.
@@ -149,9 +149,9 @@ This means that I had to let go of other opportunities while waiting for funding
 ### Choosing PhD programs
 
 One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
-This is especially true for someone like me in my early 30s: a PhD program can take 4-6 years, pays low, and will coincide the time when I might want to start a family.
-Making this decision in my thirties is different if I made this decision during my twenties.
-Getting into a PhD becomes a life decision moreso than a career decision.
+This is especially true for someone like me in their early 30s: a PhD program can take 4-6 years, pays poorly, and will coincide with the time when I might want to start a family.
+Making this decision in my thirties is different from if I had made this decision during my twenties.
+Getting into a PhD becomes a life decision more so than a career decision.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/cbtl.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -161,17 +161,17 @@ Getting into a PhD becomes a life decision moreso than a career decision.
 _From left to right (early 2022 and 2023): coffee shop where my wife and I talked about our plans, my room during a Holy Week retreat in Sacred Heart, our engagement ring._
 {: style="text-align: center;"}
 
-Perhaps, this is also the reason why some aspects that may be seen as a disadvantage in a PhD program became *positives* for me. 
+Perhaps this is also the reason why some aspects that may be seen as disadvantages in a PhD program became *positives* for me. 
 For example, there's a commonly held view that longer programs (6 years, as in the case of US PhDs) will give you more time for research, making you more productive, and, hence, more competitive by the time you graduate.
-However, if I consider other factors outside of my career (e.g., starting a family, stability), shorter 4-year programs become more attractive.
+However, when I consider other factors outside of my career (e.g., starting a family, stability), shorter 4-year programs become more attractive.
 This is just one of the many considerations, alongside research fit and potential opportunities after graduation.
 
 A lot has been written on how to choose PhD programs (my favorite was [Tim Dettmer's post](https://timdettmers.com/2022/03/13/how-to-choose-your-grad-school)). 
 In general, this is a good problem to have: several professors have taken a bet on you, and it's your turn to assess which program you see yourself in.
 During one of my visit days, another prospective student told me that "choosing between offers is hard because now it's *real*."
-There's definitely this fear of closing other doors and potential futures, what if you made the wrong choice?
+There's definitely this fear of closing other doors and potential futures&mdash;what if you made the wrong choice?
 It's a decision that will dictate the next four to six years, and maybe the rest of your academic career.
-I just tell myself during those times that this is a good problem to have.
+I just tell myself during those times that this was a good problem to have.
 
 > Getting into a PhD becomes a life decision moreso than a career decision.
 
@@ -188,13 +188,13 @@ Attuning myself to my [*desires*](https://godinallthings.com/2013/09/02/desire/)
 One thing I've learned during this time is that **I can never make this decision with absolute certainty.**
 Doubt will always be present, and I should welcome that.
 Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements.
-In addition, if you're interested to do research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out and I'm happy to mentor you!
+In addition, if you're interested in doing research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out, and I'm happy to mentor you!
 
 ### Final thoughts
 
 It's October, and my wife and I have been here at Cambridge for a month.
-There's a lot to say about Cambridge&mdash; the collegiate system, the traditions, the culture, and more.
-Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that I'll be here for some time.
+There's a lot to say about Cambridge&mdash;the collegiate system, the traditions, the culture, and more.
+Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that we'll be here for a while.
 
 <!-- pictures of Cambridge! -->
 
