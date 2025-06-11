@@ -20,7 +20,6 @@ ACL is one of the top conferences in NLP, with researchers presenting a wide ran
 This was also the very first NLP conference I attended.
 Although I had published in *CL venues before, I never had the chance to attend in person.
 Attending ACL was also a great way to immerse myself in the broader NLP community before starting my Ph.D.
-
 <!-- pictures of vienna and the place baby! -->
 
 
@@ -44,7 +43,8 @@ And a big collab project from SEACrowd:
 In fact, HyPER was a reject from ICLR and my involvement in UD-NewsCrawl started way back in 2023.
 Good research takes time, and I'm lucky to have great collaborators during these long periods of work.
 
-## Interesting papers
+## My favorite papers
+
 
 <!-- top five papers -->
 
@@ -60,15 +60,20 @@ Good research takes time, and I'm lucky to have great collaborators during these
 <!-- collage of photos -->
 
 * **I attended the SEACrowd Birds-of-a-Feather (BoF) session!** Finally, I've met my long-time collaborators.
+    I've been involved with the SEACrowd group during their initial project, so it's nice to meet Holy, Samuel, Aji, and Genta in person.
+    During the BoF, we talked about
+* **Met with some Pinoy NLP researchers.** Glad to meet Lj F. again! 
+
 
 
 ## Final thoughts
 
 Attending ACL 2025 is a great way to close my pre-PhD years and start my new journey as a PhD student.
-As my first NLP conference, ACL gave me a good first impression of the community at large.
+As my first NLP conference, ACL gave me a favorable first impression of the community at large.
 Perhaps I've been lucky with the people I've talked to, but everyone was warm, friendly, and welcoming.
 Good vibes all throughout, no notes.
 
-Also, I enjoyed writing this field report: it's a good way for me to synthesize things I've learned during the conference, and hopefully it's a good way for non-attendees to get an inside look into these academic research events.
-I admit I haven't been writing in this blog recently (although in general, I've written way more during the past two years), so this might be a good way to fill-in those spaces during the year.
+Also, I enjoyed writing this field report: it's a good exercise for me to synthesize things I've learned during the conference, and hopefully it's informative for non-attendees to get an inside look into these academic research events.
+I admit I haven't been writing in this blog recently (although in general, I've written way more during the past two years), so this might be another way to fill-in those spaces during the year.
+
 Hoping to write more field reports in the future!
