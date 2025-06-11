@@ -26,6 +26,8 @@ Attending ACL was also a great way to immerse myself in the broader NLP communit
 
 ## Works I presented during the conference
 
+<!-- collage of photos of YOU with your posters! -->
+
 Some self-promotion: I had four papers accepted in the ACL Main Proceedings, three of which I was the first or co-first author on (all in the Resources & Evaluation track):
 
 - [Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback](https://arxiv.org/abs/2410.19133)<br>TLDR: We find that some preference instances are better annotated by humans than by language models (LMs). We use that information to train a hybrid preference router (HyPER) that allocates instances to either humans or LMs.
@@ -54,6 +56,8 @@ Good research takes time, and I'm lucky to have great collaborators during these
 
 
 ## Miscellaneous
+
+<!-- collage of photos -->
 
 * **I attended the SEACrowd Birds-of-a-Feather (BoF) session!** Finally, I've met my long-time collaborators.
 
