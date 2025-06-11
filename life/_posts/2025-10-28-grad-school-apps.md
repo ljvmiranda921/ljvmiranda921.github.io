@@ -21,7 +21,7 @@ However, it took me _four years_ to finally apply.
 _What happened, and what took me so long?_
 In this blog post, I want to reflect on the past four years&mdash;spanning multiple countries, jobs, and experiences.
 The path was long and unconventional.
-That journey is finally over, and now I'm preparing myself for the cusp of another one.
+That journey is finally over, and now I'm on the cusp of another one.
 
 This is not a "How to apply to grad school" blog post, but perhaps you'll find some nuggets of wisdom along the way.
 If you want an actual guide, I recommend reading John Boaz Lee's [guide](https://drive.google.com/file/d/1N5ETwBh9dyLpxGRKIA9LXXJ_Jy44i1TP/view) (more Filipino context) or Tim Dettmer's [blog post](https://timdettmers.com/2018/11/26/phd-applications/) (realistic and quite sobering).
@@ -41,10 +41,10 @@ As the fields of machine learning and NLP grow every year, the competition for t
 There was a time when I was looking at the newly-admitted PhD students here in the US, and it was common to see them with first-author publications in top conferences prior to their PhD.
 One needs only to look at [these tweets](https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw) from professors and admissions committee members during the Fall 2025 cycle to recognize how competitive the CS PhD applications have been.
 
-Although I had worked on NLP-adjacent projects at [Thinking Machines](https://thinkingmachin.es/) in the Philippines, I didn't have any academic NLP research experience back in 2021.
+Although I had some industry experience with NLP projects from my previous consulting work back in 2021, I lacked the academic research background that seemed expected of PhD applicants.
 Early on, I realized that pivoting from industry to academia would entail a lot of hard work.
-A part of me thought that maybe I should have just continued to a PhD right after my Masters.
-But in hindsight, my experience in the industry validated that (1) I still liked doing research and that (2) I could always go back to industry if academia didn't work out.
+A part of me thought that maybe I should have just continued to a PhD right after my Masters when the path seemed clearer.
+But my industry years helped confirm that I genuinely enjoyed research work.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/bike.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -54,14 +54,13 @@ But in hindsight, my experience in the industry validated that (1) I still liked
 _From left to right (--2021): Snippets of my life in Bonifacio Global City (BGC) a few weeks after my time in TM. A bike on display inside Coffee Project, some view of BGC, and a Japanese lantern in The Fort._
 {: style="text-align: center;"}
 
-After my time in consulting, I discovered that I still liked doing research, but transitioning would be challenging: it meant potentially relocating to another country, accepting a significant pay cut, and adjusting my life stages (e.g., getting married, starting a family) to align with a new career trajectory.
+I could already imagine the challenges in this transition: relocating to another country, accepting a significant pay cut, and adjusting my life stages (e.g., getting married, starting a family) to align with a new career trajectory.
 Looking back at 2021, I remember feeling overwhelmed by the self-imposed pressure to make everything fall perfectly into place.
 
 ### The long road to PhD applications
 
-My first break into NLP research was in [spaCy](https://spacy.io), when I co-led a paper (with Akos!) on [hash-embeddings](https://arxiv.org/abs/2212.09255).
-That experience opened up a lot of opportunities, like being able to collaborate with academic researchers.
-It also gave me the confidence to undertake my own independent work in Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
+While working at [Explosion](https://explosion.ai), I was fortunate to be exposed to NLP research early on by working on our very first [technical report](https://arxiv.org/abs/2212.09255) on hash embeddings.
+This experience gave me the confidence to undertake my own independent work in Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
 In addition, doing software engineering work on the [Prodigy annotation tool](https://prodigy.ai/) inspired my interest in researching data-centric approaches to NLP.
 
 <div style="display: flex; justify-content: center;">
@@ -72,10 +71,9 @@ In addition, doing software engineering work on the [Prodigy annotation tool](ht
 _From left to right (2021---2022): view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard._
 {: style="text-align: center;"}
 
-At Ai2, I was fortunate to be mentored by several good researchers as a pre-doc.
-Ai2 is a great place, and my experience there shaped my research interests and introduced me to several role models I aspire to emulate as I grow into this career.
-I was also lucky to be part of big collaborative efforts such as the [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) projects.
-I worked a lot on scaling our preference datasets, which resulted in significant performance gains in our models&mdash;a contribution I'm proud to have accomplished last year.
+My time at Ai2 as a pre-doc was incredibly formative. 
+Working alongside experienced researchers gave me a clearer picture of what academic research entailed and helped me identify the qualities I wanted to develop in myself as I grow into this career.
+Aside from doing independent work, I was also lucky to be part of large collaborative projects like [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/blog/olmo2) which gave me hands-on experience with frontier model post-training.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -87,8 +85,9 @@ _From left to right (2024): the Fremont library where I spent a lot of time writ
 
 I got lucky because of the people who took chances on me, which is why I developed a mantra over time: **people over projects, projects over publications.**
 I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash;I believe that every topic is equally interesting given the right people.
-During the four-year journey, I've met folks from different places such as at SEACrowd and Cohere Labs who were great collaborators and were interested in the topics I care about.
-I also met people who were equally interested in Filipino NLP, and I'm glad we made some projects together.
+During the four-year journey, I've been fortunate to collaborate with researchers from different places who shared my interests, particularly in multilingual NLP.
+<!-- During the four-year journey, I've met folks from different places such as at SEACrowd and Cohere Labs who were great collaborators and were interested in the topics I care about. -->
+<!-- I also met people who were equally interested in Filipino NLP, and I'm glad we made some projects together. -->
 Everyone I worked with made me feel welcome, and I hope I can be that person for another aspiring researcher in the future.
 
 > I've developed a mantra over time: people over projects, projects over publications.
@@ -173,7 +172,7 @@ There's definitely this fear of closing other doors and potential futures&mdash;
 It's a decision that will dictate the next four to six years, and maybe the rest of your academic career.
 I just tell myself during those times that this was a good problem to have.
 
-> Getting into a PhD becomes a life decision moreso than a career decision.
+> Getting into a PhD becomes a life decision more so than a career decision.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/cornell3.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -194,7 +193,7 @@ In addition, if you're interested in doing research on Tagalog and Filipino NLP 
 
 It's October, and my wife and I have been here at Cambridge for a month.
 There's a lot to say about Cambridge&mdash;the collegiate system, the traditions, the culture, and more.
-Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that we'll be here for a while.
+Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that I'll be here for a while.
 
 <!-- pictures of Cambridge! -->
 
