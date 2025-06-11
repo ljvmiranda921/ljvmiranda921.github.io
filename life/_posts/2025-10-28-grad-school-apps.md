@@ -88,8 +88,8 @@ _From left to right (2024): the Fremont library where I spent a lot of time writ
 I got lucky because of the people who took chances on me, which is why I developed a mantra over time: **people over projects, projects over publications.**
 I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash;I believe that every topic is equally interesting given the right people.
 During the four-year journey, I've met folks from different places such as at SEACrowd and Cohere Labs who were great collaborators and were interested in the topics I care about.
-I also met people who were equally interested in Filipino NLP and I'm glad we made some projects together.
-Everyone I worked with made me feel welcome, and I hope I can be that person to another aspiring researcher in the future.
+I also met people who were equally interested in Filipino NLP, and I'm glad we made some projects together.
+Everyone I worked with made me feel welcome, and I hope I can be that person for another aspiring researcher in the future.
 
 > I've developed a mantra over time: people over projects, projects over publications.
 
