@@ -7,6 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
+header-img: /assets/png/field-report-acl25/header.png
 tags: [nlp, acl, conference, research, natural language processing, ai, llm, reasoning]
 description: |
     Here is my field report from the ACL 2025 Conference in Vienna.
