@@ -51,9 +51,6 @@ Good research takes time, and I'm lucky to have great collaborators during these
 ## NLP research vibes and trends
 
 
-### Some deltas in my research beliefs
-
-
 
 ## Miscellaneous
 
