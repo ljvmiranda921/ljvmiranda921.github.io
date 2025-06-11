@@ -16,7 +16,7 @@ description: |
 ---
 
 <span class="firstcharacter">B</span>ack in 2021, I decided to embark on a PhD program and pursue an academic research career.
-I knew I wanted to do research and had a strong feeling I'll enjoy mentorship and teaching.
+I knew I wanted to do research and had a strong feeling I'll enjoy academia.
 However, it took me _four years_ to finally apply.
 _What happened, and what took me so long?_
 In this blog post, I want to reflect on the past four years&mdash;spanning multiple countries, jobs, and experiences.
@@ -188,10 +188,8 @@ Although choosing a PhD program seems like a cerebral choice that entails a lot 
 Attuning myself to my [*desires*](https://godinallthings.com/2013/09/02/desire/) and praying over them helped a lot. 
 One thing I've learned during this time is that **I can never make this decision with absolute certainty.**
 There will always be doubt, and I should welcome that.
-Doubt is also a blessing because it invites faith and mystery.[^2]
 
 > I've learned that I can never make this decision [of choosing a PhD program] with absolute certainty.
-> Doubt is also a blessing because it invites faith and mystery.
 
 Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements!
 In addition, if you're interested to do research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out and I'm happy to mentor you!
@@ -215,4 +213,3 @@ _Padayon!_
 ### Footnotes
 
 [^1]: There are many people in Ai2 who helped me of course: Valentina, Faeze, Nathan, Kyle R., Sachin, Shashank, Harsh, Ashish, Hannah and Noah (and much more)! It does take a village. I'm also thankful to Pradeep, Hanna, and Yizhong who drafted my recommendation letters!
-[^2]: I think that Cardinal Lawrence's (Ralph Fiennes) [speech in *Conclave*](https://www.youtube.com/watch?v=oEg8bQXY7Sk) encapsulates this idea of doubt and certainty. Really good movie! I think I made my decision to go to Cambridge a day after watching this movie.
