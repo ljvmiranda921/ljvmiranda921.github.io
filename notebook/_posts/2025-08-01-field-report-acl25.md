@@ -9,6 +9,7 @@ author: "LJ MIRANDA"
 published: true
 tags: [nlp, acl, conference, research, natural language processing, ai, llm, reasoning]
 description: |
-  The rise of LLMs is forcing us to rethink Filipino NLP. But there's still a ton of work to do&mdash;just not the stuff you might think. Here's my take on what's worth doing, what's a waste of time, and where Filipino NLP research should be heading.
+    Here is my field report from the ACL 2025 Conference in Vienna.
+    I learned a lot about X, got excited about Y, and had lots of fun all throughout!
 excerpt: |
 ---
