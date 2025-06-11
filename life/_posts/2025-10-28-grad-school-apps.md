@@ -59,10 +59,10 @@ Looking back to 2021, I remember feeling overwhelmed by the self-imposed pressur
 
 ### The long road to PhD applications
 
-My first break into NLP research was in [spaCy](https://spacy.io), when Matt, Ines, and Sofie supported me in my research aspirations, which resulted in co-leading (with Akos!) our [hash-embeddings technical report](https://arxiv.org/abs/2212.09255).
+My first break into NLP research was in [spaCy](https://spacy.io), when I co-led a paper (with Akos!) on [hash-embeddings](https://arxiv.org/abs/2212.09255).
 That experience opened up a lot of opportunities, like being able to collaborate with academic researchers.
 It also gave me the confidence to undertake my own independent work for Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
-In addition, working with Magda and Vincent on incorporating LLMs in the [Prodigy annotation tool](https://prodigy.ai/) inspired my interest in researching data-centric approaches to NLP.
+In addition, doing software engineering work for the [Prodigy annotation tool](https://prodigy.ai/) inspired my interest in researching data-centric approaches to NLP.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/skyscraper.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -72,11 +72,10 @@ In addition, working with Magda and Vincent on incorporating LLMs in the [Prodig
 _From left to right (2021---2022): view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard._
 {: style="text-align: center;"}
 
-At AI2, I was fortunate to be mentored by Pradeep, Yanai, and Yizhong.[^1]
-My experience at AI2 shaped my research interests and solidified what type of researcher I want to be: earnest and competent.
-I still remember when we were unable to submit our first project in time for a conference due to unexpected results, yet they remained supportive as we went back to the drawing board.
-We then reframed the project and it became a better paper than before!
-Later, they also trusted me to deliver the preference scaling aspect of the [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) projects, which resulted in significant performance gains in our models&mdash; a contribution I'm proud to have accomplished last year.
+At Ai2, I was fortunate to be mentored by several good researchers as a pre-doc.
+Ai2 is great place, and my experience there shaped my research interests and introduced me to several role models I aspire to emulate as I grow into this career.
+I was also lucky to be part of big collaborative efforts such as the [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) projects.
+I worked a lot on scaling our preference datasets which resulted in significant performance gains in our models&mdash; a contribution I'm proud to have accomplished last year.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
