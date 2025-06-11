@@ -16,12 +16,12 @@ description: |
 ---
 
 <span class="firstcharacter">B</span>ack in 2021, I decided to embark on a PhD program and pursue an academic research career.
-I knew I wanted to do research and had a strong feeling I'll enjoy academia.
+I knew I wanted to do research and had a strong feeling I'd enjoy academia.
 However, it took me _four years_ to finally apply.
 _What happened, and what took me so long?_
 In this blog post, I want to reflect on the past four years&mdash;spanning multiple countries, jobs, and experiences.
 The path was long and unconventional.
-That journey is finally over, and now I'm preparing myself on the cusp of another one.
+That journey is finally over, and now I'm preparing myself for the cusp of another one.
 
 This is not a "How to apply to grad school" blog post, but perhaps you'll find some nuggets of wisdom along the way.
 If you want an actual guide, I recommend reading John Boaz Lee's [guide](https://drive.google.com/file/d/1N5ETwBh9dyLpxGRKIA9LXXJ_Jy44i1TP/view) (more Filipino context) or Tim Dettmer's [blog post](https://timdettmers.com/2018/11/26/phd-applications/) (realistic and quite sobering).
@@ -37,9 +37,9 @@ _All photos you'll see below were taken by a Gameboy Camera. I realized when wri
 
 ### Prelude: the reality of CS grad school applications
 
-As the fields of machine learning and NLP grow every year, the competition for top PhD programs has become increasingly competitive.
-There was a time when I was looking at the newly-admitted PhD students here in the US, and it's common to see them with first-author publications in top conferences prior to their PhD.
-One just need to look at [these tweets](https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw) from professors and admissions committee members during the Fall 2025 cycle in order to recognize how competitive the CS PhD Applications have been.
+As the fields of machine learning and NLP grow every year, the competition for top PhD programs has become increasingly fierce.
+There was a time when I was looking at the newly-admitted PhD students here in the US, and it was common to see them with first-author publications in top conferences prior to their PhD.
+One needs only to look at [these tweets](https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw) from professors and admissions committee members during the Fall 2025 cycle to recognize how competitive the CS PhD applications have been.
 
 Although I had worked on NLP-adjacent projects at [Thinking Machines](https://thinkingmachin.es/) in the Philippines, I didn't have any academic NLP research experience back in 2021.
 Early on, I realized that pivoting from industry to academia would entail a lot of hard work.
@@ -201,7 +201,7 @@ Things still look unfamiliar, but I'm taking my time to let the place reveal its
 I'm happy to close this chapter that lasted for four years.
 I'm thankful to all the people who helped me along the way, as I've learned a lot about myself and who I wanted to be.
 The path was long and winding, but I'm happy we made it.
-The next few years will be equally exciting, but I just want to linger in this moment, that in-between as you turn the page to another chapter.
+The next few years will be equally exciting, but I just want to linger in this moment&mdash;that in-between space as you turn the page to another chapter.
 _Padayon!_
 
 <!-- colored matriculation picture!! -->
