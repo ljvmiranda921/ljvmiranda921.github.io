@@ -149,7 +149,7 @@ This means that I had to let go of other opportunities while waiting for funding
 ### Choosing PhD programs
 
 One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
-This is especially true for someone like me in my early 30s: a PhD program can take 4-6 years, usually pays low, and will coincide the time when I might want to start a family.
+This is especially true for someone like me in my early 30s: a PhD program can take 4-6 years, pays low, and will coincide the time when I might want to start a family.
 Making this decision in my thirties is different if I made this decision during my twenties.
 Getting into a PhD becomes a life decision moreso than a career decision.
 
@@ -169,8 +169,8 @@ This is just one of the many considerations, alongside research fit and potentia
 A lot has been written on how to choose PhD programs (my favorite was [Tim Dettmer's post](https://timdettmers.com/2022/03/13/how-to-choose-your-grad-school)). 
 In general, this is a good problem to have: several professors have taken a bet on you, and it's your turn to assess which program you see yourself in.
 During one of my visit days, another prospective student told me that "choosing between offers is hard because now it's *real*."
-There's definitely this fear of closing other doors and potential futures, perhaps due to loss aversion.
-It's a decision that will dictate the next four to six years, and maybe the rest of your academic career&mdash; no pressure!
+There's definitely this fear of closing other doors and potential futures, what if you made the wrong choice?
+It's a decision that will dictate the next four to six years, and maybe the rest of your academic career.
 I just tell myself during those times that this is a good problem to have.
 
 > Getting into a PhD becomes a life decision moreso than a career decision.
@@ -183,14 +183,11 @@ I just tell myself during those times that this is a good problem to have.
 _Photos during my PhD visit days in NYC._
 {: style="text-align: center;"}
 
-Although choosing a PhD program seems like a cerebral choice that entails a lot of calculus, a large part of my decision-making involved a lot of [spiritual discernment](https://www.ignatianspirituality.com/making-good-decisions/an-approach-to-good-choices/an-ignatian-framework-for-making-a-decision/).
+Although choosing a PhD program seems like a cerebral choice that entails a lot of calculus, a large part of my decision-making involved a lot of [discernment](https://www.ignatianspirituality.com/making-good-decisions/an-approach-to-good-choices/an-ignatian-framework-for-making-a-decision/).
 Attuning myself to my [*desires*](https://godinallthings.com/2013/09/02/desire/) and praying over them helped a lot. 
 One thing I've learned during this time is that **I can never make this decision with absolute certainty.**
-There will always be doubt, and I should welcome that.
-
-> I've learned that I can never make this decision [of choosing a PhD program] with absolute certainty.
-
-Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements!
+Doubt will always be present, and I should welcome that.
+Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements.
 In addition, if you're interested to do research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out and I'm happy to mentor you!
 
 ### Final thoughts
@@ -209,6 +206,6 @@ _Padayon!_
 
 <!-- colored matriculation picture!! -->
 
-### Footnotes
+<!-- ### Footnotes
 
-[^1]: There are many people in Ai2 who helped me of course: Valentina, Faeze, Nathan, Kyle R., Sachin, Shashank, Harsh, Ashish, Hannah and Noah (and much more)! It does take a village. I'm also thankful to Pradeep, Hanna, and Yizhong who drafted my recommendation letters!
+[^1]: There are many people in Ai2 who helped me of course: Valentina, Faeze, Nathan, Kyle R., Sachin, Shashank, Harsh, Ashish, Hannah and Noah (and much more)! It does take a village. I'm also super thankful to Pradeep, Hanna, and Yizhong who drafted my recommendation letters! -->
