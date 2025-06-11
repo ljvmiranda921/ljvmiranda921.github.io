@@ -64,7 +64,7 @@ Good research takes time, and I'm lucky to have great collaborators during these
 
 Attending ACL 2025 is a great way to close my pre-PhD years and start my new journey as a PhD student.
 As my first NLP conference, ACL gave me a good first impression of the community at large.
-Perhaps I've been lucky with the people I've talked to, but everyone is warm, friendly, and welcoming.
+Perhaps I've been lucky with the people I've talked to, but everyone was warm, friendly, and welcoming.
 Good vibes all throughout, no notes.
 
 Also, I kinda like writing these field reports.
