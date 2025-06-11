@@ -65,7 +65,6 @@ As my first NLP conference, ACL gave me a good first impression of the community
 Perhaps I've been lucky with the people I've talked to, but everyone was warm, friendly, and welcoming.
 Good vibes all throughout, no notes.
 
-Also, I kinda like writing these field reports.
-It's a good way for me to synthesize things I've learned during the conference, and hopefully it's a good way for non-attendees to get an inside look into these academic research events.
+Also, I enjoyed writing this field report: it's a good way for me to synthesize things I've learned during the conference, and hopefully it's a good way for non-attendees to get an inside look into these academic research events.
 I admit I haven't been writing in this blog recently (although in general, I've written way more during the past two years), so this might be a good way to fill-in those spaces during the year.
 Hoping to write more field reports in the future!
