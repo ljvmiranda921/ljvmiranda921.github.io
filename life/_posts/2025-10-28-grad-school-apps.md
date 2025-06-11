@@ -35,7 +35,7 @@ I also got accepted to universities in the US and Canada, so this admissions cyc
 
 _All photos you'll see below were taken by a Gameboy Camera. I realized when writing this blog post that my camera captured all events in the past four years. For more photos, check out my [gallery](/gallery)._
 
-### Prelude: the reality of CS grad school applications
+## The reality of CS grad school applications
 
 As the fields of machine learning and NLP grow every year, the competition for top PhD programs has become increasingly fierce.
 There was a time when I was looking at the newly-admitted PhD students here in the US, and it was common to see them with first-author publications in top conferences prior to their PhD.
@@ -57,7 +57,7 @@ _From left to right (--2021): Snippets of my life in Bonifacio Global City (BGC)
 I could already imagine the challenges in this transition: relocating to another country, accepting a significant pay cut, and adjusting my life stages (e.g., getting married, starting a family) to align with a new career trajectory.
 Looking back at 2021, I remember feeling overwhelmed by the self-imposed pressure to make everything fall perfectly into place.
 
-### The long road to PhD applications
+## The long road to PhD applications
 
 While working at [Explosion](https://explosion.ai), I was fortunate to be exposed to NLP research early on by working on our very first [technical report](https://arxiv.org/abs/2212.09255) on hash embeddings.
 This experience gave me the confidence to undertake my own independent work in Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
@@ -104,7 +104,7 @@ My Masters professor, [Jinglu Hu](https://nclab.w.waseda.jp/jinglu/personal.html
 He was happy to write me a recommendation letter, and I'm more than happy that he wrote it&mdash;it felt like things had gone full circle.
 I have fond memories of Waseda back in 2016, and that time was formative in my career.
 
-### On the admissions cycle
+## On the admissions cycle
 
 The admissions cycle spanned three months, from December to February, with the earliest deadline on December 4.
 Because I also had to prepare for my wedding in December, I tried to finish all applications and essays by November.
@@ -145,7 +145,7 @@ This is unlike in the US or Canada (MILA) where a PhD offer already means a full
 Funding decisions for Cambridge often happens in March and April (sometimes extending to August!).
 This means that I had to let go of other opportunities while waiting for funding&mdash; it was a pretty anxious time. -->
 
-### Choosing PhD programs
+## On choosing PhD programs
 
 One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
 This is especially true for someone like me in their early 30s: a PhD program can take 4-6 years, pays poorly, and will coincide with the time when I might want to start a family.
@@ -189,7 +189,7 @@ Doubt will always be present, and I should welcome that.
 Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements.
 In addition, if you're interested in doing research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out, and I'm happy to mentor you!
 
-### Final thoughts
+## Final thoughts
 
 It's October, and my wife and I have been here at Cambridge for a month.
 There's a lot to say about Cambridge&mdash;the collegiate system, the traditions, the culture, and more.
@@ -203,8 +203,9 @@ The path was long and winding, but I'm happy we made it.
 The next few years will be equally exciting, but I just want to linger in this moment&mdash;that in-between space as you turn the page to another chapter.
 _Padayon!_
 
+
 <!-- colored matriculation picture!! -->
 
 <!-- ### Footnotes
 
-[^1]: There are many people in Ai2 who helped me of course: Valentina, Faeze, Nathan, Kyle R., Sachin, Shashank, Harsh, Ashish, Hannah and Noah (and much more)! It does take a village. I'm also super thankful to Pradeep, Hanna, and Yizhong who drafted my recommendation letters! -->
+[^1]: There are many people in Ai2 who helped me of course: Yanai, Valentina, Faeze, Nathan, Kyle R., Sachin, Shashank, Harsh, Ashish, Hannah and Noah (and much more)! It does take a village. I'm also super thankful to Pradeep, Hanna, and Yizhong who drafted my recommendation letters! -->
