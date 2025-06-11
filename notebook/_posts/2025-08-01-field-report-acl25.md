@@ -18,7 +18,7 @@ excerpt: |
 <span class="firstcharacter">I</span> had an incredible time at the [ACL 2025 Conference](https://2025.aclweb.org/) in Vienna.
 ACL is one of the top conferences in NLP, with researchers presenting a wide range of work from computational linguistics to frontier large language models.
 This was also the very first NLP conference I attended.
-Although I had published in these venues before, I never had a chance to attend in person.
+Although I had published in *CL venues before, I never had the chance to attend in person.
 Attending ACL was also a great way to immerse myself in the broader NLP community before starting my Ph.D.
 
 <!-- pictures of vienna and the place baby! -->
