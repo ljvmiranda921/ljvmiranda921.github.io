@@ -55,3 +55,16 @@ Good research takes time, and I'm lucky to have great collaborators during these
 ## Miscellaneous
 
 * **I attended the SEACrowd Birds-of-a-Feather (BoF) session!** Finally, I've met my long-time collaborators.
+
+
+## Final thoughts
+
+Attending ACL 2025 is a great way to close my pre-PhD years and start my new journey as a PhD student.
+As my first NLP conference, ACL gave me a good first impression of the community at large.
+Perhaps I've been lucky with the people I've talked to, but everyone is warm, friendly, and welcoming.
+Good vibes all throughout, no notes.
+
+Also, I kinda like writing these field reports.
+It's a good way for me to synthesize things I've learned during the conference, and hopefully it's a good way for non-attendees to get an inside look into these academic research events.
+I admit I haven't been writing in this blog recently (although in general, I've written way more during the past two years), so this might be a good way to fill-in those spaces during the year.
+Hoping to write more field reports in the future!
