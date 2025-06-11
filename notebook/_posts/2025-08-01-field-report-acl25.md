@@ -25,8 +25,8 @@ Attending ACL was also a great way to immerse myself in the broader NLP communit
 
 ## Works I presented during the conference
 
-I had four papers accepted in ACL Main, three of which I was the first or co-first author on.
-This seems like a big feat, but these works were completed at different times&mdash; it's just that the timing led them to be published simultaneously:
+Of course, some self-promotion: I had four papers accepted in ACL Main, three of which I was the first or co-first author on.
+This seems like a big feat, but these works were completed at different times&mdash;it's just that the timing led them to be published simultaneously:
 
 - [Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback](https://arxiv.org/abs/2410.19133)<br>TLDR: We find that some preference instances are better annotated by humans than by language models (LMs). We use that information to train a hybrid preference router (HyPER) that allocates instances to either humans or LMs.
 - [M-RewardBench: Evaluating Reward Models in Multilingual Settings.](https://arxiv.org/abs/2410.15522)<br>TLDR: We introduce a new benchmark for evaluating reward models (RMs) in 23 diverse languages. By evaluating several RMs on M-RewardBench, we uncovered signficant gaps in RM performance between English and non-English languages.
@@ -54,3 +54,4 @@ Good research takes time, and I'm lucky to have great collaborators during these
 
 ## Miscellaneous
 
+* **I attended the SEACrowd Birds-of-a-Feather (BoF) session!** Finally, I've met my long-time collaborators.
