@@ -44,7 +44,7 @@ One needs only to look at [these tweets](https://twitter.com/ShirleyYXWu/status/
 Although I had some industry experience with NLP projects from my previous consulting work back in 2021, I lacked the academic research background that seemed expected of PhD applicants.
 Early on, I realized that pivoting from industry to academia would entail a lot of hard work.
 A part of me thought that maybe I should have just continued to a PhD right after my Masters when the path seemed clearer.
-But my industry years helped confirm that I genuinely enjoyed research work.
+But my industry years helped confirm that I genuinely enjoyed research work!
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/bike.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -74,6 +74,8 @@ _From left to right (2021---2022): view from my condo when I was working from ho
 My time at Ai2 as a pre-doc was incredibly formative. 
 Working alongside experienced researchers gave me a clearer picture of what academic research entailed and helped me identify the qualities I wanted to develop in myself as I grow into this career.
 I was also lucky to be part of large collaborative projects like [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/blog/olmo2) which gave me hands-on experience with frontier model post-training.
+Working at Ai2 gave me a good baseline of what good research looks like.
+In addition, there's really something in the air here in the US that made me more ambitious and driven&mdash; I hope to bring these qualities wherever I go.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
