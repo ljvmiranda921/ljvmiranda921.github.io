@@ -37,6 +37,10 @@ And a big collab project from SEACrowd:
 
 - [Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia](https://arxiv.org/abs/2503.07920)<br>TLDR: We present SEA-VL, one of the largest open-source initiatives to develop high-quality and culturally-relevant data for SEA languages. We also highlight representation gaps in SEA, especially for vision-language models.
 
+As I've said, these were all completed at different times.
+In fact, HyPER was a reject from ICLR and my involvement in UD-NewsCrawl started way back in 2023 (data collection started in 2021).
+Good research takes time, and I'm lucky to have great collaborators during these long periods of hard work.
+
 ## Interesting papers
 
 
