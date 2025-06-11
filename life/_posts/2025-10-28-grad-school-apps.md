@@ -74,7 +74,7 @@ _From left to right (2021---2022): view from my condo when I was working from ho
 My time at Ai2 as a pre-doc was incredibly formative. 
 Working alongside experienced researchers gave me a clearer picture of what academic research entailed and helped me identify the qualities I wanted to develop in myself as I grow into this career.
 I was also lucky to be part of large collaborative projects like [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/blog/olmo2) which gave me hands-on experience with frontier model post-training.
-Working at Ai2 gave me a good baseline of what good research looks like.
+Working at Ai2 gave me a baseline of what high-quality research looks like.
 In addition, there's really something in the air here in the US that made me more ambitious and driven&mdash; I hope to bring these qualities wherever I go.
 
 <div style="display: flex; justify-content: center;">
