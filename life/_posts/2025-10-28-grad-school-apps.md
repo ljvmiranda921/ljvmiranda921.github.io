@@ -41,10 +41,10 @@ As the fields of machine learning and NLP grow every year, the competition for t
 There was a time when I was looking at the newly-admitted PhD students here in the US, and it's common to see them with first-author publications in top conferences prior to their PhD.
 One just need to look at [these tweets](https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw) from professors and admissions committee members during the Fall 2025 cycle in order to recognize how competitive the CS PhD Applications have been.
 
-Although I have worked on NLP-adjacent projects at [Thinking Machines](https://thinkingmachin.es/) in the Philippines, I didn't have any academic NLP research experience back in 2021.
-Early on, I realized that pivoting from industry to academia will entail a lot of hard work.
-A part of me thought that maybe I should have just continued to PhD right after my Masters.
-But in hindsight, my experience in the industry validated that (1) I still like doing research and that (2) I can always go back to industry if academia didn't pan out.
+Although I had worked on NLP-adjacent projects at [Thinking Machines](https://thinkingmachin.es/) in the Philippines, I didn't have any academic NLP research experience back in 2021.
+Early on, I realized that pivoting from industry to academia would entail a lot of hard work.
+A part of me thought that maybe I should have just continued to a PhD right after my Masters.
+But in hindsight, my experience in the industry validated that (1) I still liked doing research and that (2) I could always go back to industry if academia didn't work out.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/bike.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -54,15 +54,15 @@ But in hindsight, my experience in the industry validated that (1) I still like 
 _From left to right (--2021): Snippets of my life in Bonifacio Global City (BGC) a few weeks after my time in TM. A bike on display inside Coffee Project, some view of BGC, and a Japanese lantern in The Fort._
 {: style="text-align: center;"}
 
-After my time in consulting, I discovered that I still like doing research, but transitioning will be challenging: it meant potentially relocating to another country, accepting a significant pay cut, and adjusting my life stages (e.g., getting married, growing a family) to align with a new career trajectory.
-Looking back to 2021, I remember feeling overwhelmed by the self-imposed pressure to make everything fall perfectly into place.
+After my time in consulting, I discovered that I still liked doing research, but transitioning would be challenging: it meant potentially relocating to another country, accepting a significant pay cut, and adjusting my life stages (e.g., getting married, starting a family) to align with a new career trajectory.
+Looking back at 2021, I remember feeling overwhelmed by the self-imposed pressure to make everything fall perfectly into place.
 
 ### The long road to PhD applications
 
 My first break into NLP research was in [spaCy](https://spacy.io), when I co-led a paper (with Akos!) on [hash-embeddings](https://arxiv.org/abs/2212.09255).
 That experience opened up a lot of opportunities, like being able to collaborate with academic researchers.
-It also gave me the confidence to undertake my own independent work for Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
-In addition, doing software engineering work for the [Prodigy annotation tool](https://prodigy.ai/) inspired my interest in researching data-centric approaches to NLP.
+It also gave me the confidence to undertake my own independent work in Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
+In addition, doing software engineering work on the [Prodigy annotation tool](https://prodigy.ai/) inspired my interest in researching data-centric approaches to NLP.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/skyscraper.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -73,9 +73,9 @@ _From left to right (2021---2022): view from my condo when I was working from ho
 {: style="text-align: center;"}
 
 At Ai2, I was fortunate to be mentored by several good researchers as a pre-doc.
-Ai2 is great place, and my experience there shaped my research interests and introduced me to several role models I aspire to emulate as I grow into this career.
+Ai2 is a great place, and my experience there shaped my research interests and introduced me to several role models I aspire to emulate as I grow into this career.
 I was also lucky to be part of big collaborative efforts such as the [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) projects.
-I worked a lot on scaling our preference datasets which resulted in significant performance gains in our models&mdash; a contribution I'm proud to have accomplished last year.
+I worked a lot on scaling our preference datasets, which resulted in significant performance gains in our models&mdash;a contribution I'm proud to have accomplished last year.
 
 <div style="display: flex; justify-content: center;">
 <img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
@@ -85,10 +85,10 @@ I worked a lot on scaling our preference datasets which resulted in significant 
 _From left to right (2024): the Fremont library where I spent a lot of time writing papers and doing PhD apps, view of the Aurora bridge on the way to the office, the Ai2 logo in the office._
 {: style="text-align: center;"}
 
-I got lucky because of the people who took chances on me, that's why I developed a mantra over time: **people over projects, projects over publications.**
-I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash; I believe that every topic is equally interesting given the right people.
-During the four-year journey, I've met folks from different places such as in SEACrowd and Cohere Labs who were great collaborators and interested in the topics I care about.
-I also met people who are equally interested in Filipino NLP and I'm glad we made some projects together.
+I got lucky because of the people who took chances on me, which is why I developed a mantra over time: **people over projects, projects over publications.**
+I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash;I believe that every topic is equally interesting given the right people.
+During the four-year journey, I've met folks from different places such as at SEACrowd and Cohere Labs who were great collaborators and were interested in the topics I care about.
+I also met people who were equally interested in Filipino NLP and I'm glad we made some projects together.
 Everyone I worked with made me feel welcome, and I hope I can be that person to another aspiring researcher in the future.
 
 > I've developed a mantra over time: people over projects, projects over publications.
