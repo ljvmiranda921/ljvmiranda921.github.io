@@ -25,11 +25,10 @@ Before his PhD, he has over seven years of industry experience in consulting, op
 Outside of work, he dabbles in <a href="https://ljvmiranda921.github.io/gallery">photography</a> and <a href="https://ljvmiranda921.itch.io">game development</a>.
 </p>
 
-
 ## Contact
 
 **Lester James V. Miranda**  
-Cambridge, UK  
+Churchill College, Cambridge, UK  
 Email: ljvmiranda [at] gmail [dot] com  
 [Curriculum Vitae (PDF)](https://storage.googleapis.com/ljvmiranda/cv.pdf)
 
