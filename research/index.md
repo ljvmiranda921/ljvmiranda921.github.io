@@ -56,7 +56,7 @@ Within this theme, I also care a lot about **improving the state of Filipino NLP
 This involves building resources for training and evaluation.
 I also write a lot about Filipino NLP in this blog.
 
-- [The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project]()
+- [The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project](https://arxiv.org/abs/2505.20428)
   <br>_ACL '25 Main_
   <br>Angelina A. Aquino\*, <b>Lester James V. Miranda\*</b>, Elsie Marie T. Or\*
   <br>[[Dataset](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317)]
