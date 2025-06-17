@@ -22,6 +22,10 @@ title: News
 </style>
 
 <div class="news-item">
+<p><span class="date">**Aug 2025**</span>: I'm proud to introduce [FilBench](), a [comprehensive LLM benchmark](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) for Filipino! Accepted at EMNLP Main. I also share some thoughts in [this blog post]().</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**May 2025**</span>: Excited to share that I have three first & co-first author papers accepted at [ACL Main](https://2025.aclweb.org/): [HyPER](https://arxiv.org/abs/2410.19133), [M-RewardBench](https://arxiv.org/abs/2410.15522), and [UD-NewsCrawl](https://arxiv.org/abs/2505.20428). A large collab project, [SEA-VL](https://arxiv.org/abs/2503.07920), also got into Main!</p>
 </div>
 
@@ -45,9 +49,9 @@ title: News
 <p><span class="date">**Aug 2024**</span>: 🏆 Our work on evaluating reward models in multilingual settings won Silver Prize in [Cohere for AI's Aya Expedition](https://cohere.com/blog/empowering-others-to-explore-the-next-frontier-expedition-aya)!</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Jul 2024**</span>: I gave a [guest lecture](/notebook/2024/07/02/talk-dlsu/) at DLSU about building Filipino NLP resources. Thanks to Dr. Charibeth Cheng for inviting me!</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**Mar 2024**</span>: [Universal NER](https://arxiv.org/abs/2311.09122) was accepted to NAACL 2024. I hope to still work on linguistic aspects of NLP in the future!</p>
