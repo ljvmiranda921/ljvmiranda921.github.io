@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "The missing pieces in Filipino NLP in the age of LLMs"
+title: "Desiderata for Filipino NLP in the Age of LLMs"
 date: 2024-12-17
 category: notebook
 comments: true
