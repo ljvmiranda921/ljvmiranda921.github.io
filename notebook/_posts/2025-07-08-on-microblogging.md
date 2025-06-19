@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Sometimes you just want to scream into the void---on why I now like microblogging"
+title: "Microblogging and why sometimes I prefer yapping into the void"
 date: 2025-07-08
 category: notebook
 comments: true
