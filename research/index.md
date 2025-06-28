@@ -45,7 +45,7 @@ I'm motivated to pursue research that ensures that the next generation of state-
 - [M-RewardBench: Evaluating Reward Models in Multilingual Settings](https://arxiv.org/abs/2410.15522)
   <br>_ACL '25 Main_
   <br>Srishti Gureja\*, <b>Lester James V. Miranda\*</b>, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee.
-  <br>[[Code](https://github.com/for-ai/aya_rm_multilingual)] [[Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7)] [[Slides](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link)] [[Poster](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link)] [[Video]()]
+  <br>[[Code](https://github.com/for-ai/aya_rm_multilingual)] [[Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7)] [[Slides](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link)] [[Poster](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link)] [[Video](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)]
 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://aclanthology.org/2024.emnlp-main.296/)
   <br>_EMNLP '24 Main_
