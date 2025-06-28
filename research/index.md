@@ -56,6 +56,11 @@ Within this theme, I also care a lot about **improving the state of Filipino NLP
 This involves building resources for training and evaluation.
 I also write a lot about Filipino NLP in this blog.
 
+- [FilBench: Can LLMs Generate and Understand Filipino?]()
+  <br>_EMNLP '25 Main_
+  <br><b>Lester James V. Miranda\*</b>, Elyanah Aco\*, Conner Manuel\*, Jan Christian Blaise Cruz, Joseph Marvin Imperial
+  <br>[[Leaderboard]()] [[Code]()]
+
 - [The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project](https://arxiv.org/abs/2505.20428)
   <br>_ACL '25 Main_
   <br>Angelina A. Aquino\*, <b>Lester James V. Miranda\*</b>, Elsie Marie T. Or\*
