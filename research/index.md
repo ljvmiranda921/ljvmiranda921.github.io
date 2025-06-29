@@ -59,7 +59,7 @@ I also write a lot about Filipino NLP in this blog.
 - [The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project](https://arxiv.org/abs/2505.20428)
   <br>_ACL '25 Main_
   <br>Angelina A. Aquino\*, <b>Lester James V. Miranda\*</b>, Elsie Marie T. Or\*
-  <br>[[Dataset](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317)] [[Slides]()] [[Poster](https://drive.google.com/file/d/16ONq_xmRrUgvALirWEwX0BpZnn1OtqwH/view?usp=drive_link)] [[Video]()]
+  <br>[[Dataset](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317)] [[Slides]()] [[Poster](https://drive.google.com/file/d/16ONq_xmRrUgvALirWEwX0BpZnn1OtqwH/view?usp=drive_link)] [[Video](https://youtu.be/W4cONaL_otI?si=DgfmF0_7zkOmI_ma)]
 
 <!-- - [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://aclanthology.org/2024.naacl-long.243/)
   <br>_NAACL '24 Main_
