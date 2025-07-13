@@ -16,8 +16,8 @@
 }
 
 #profilepic {
-    border-radius: 50%;
-    width: 200;
-    height: 200;
-    text-align: center;
+  border-radius: 0;
+  width: 250px;
+  height: 250px;
+  text-align: center;
 }
