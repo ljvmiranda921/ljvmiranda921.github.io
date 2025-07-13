@@ -18,16 +18,17 @@
     href="https://ljvmiranda921.github.io">production page.</a> Enjoy (?) </p>
     {% endif %}
 
-    {% include header.html %}
+    <div class="paper-container">
+      {% include header.html %}
 
+      <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </main>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
-    {% include footer.html %}
+      {% include footer.html %}
+    </div>
 
   </body>
 

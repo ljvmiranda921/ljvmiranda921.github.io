@@ -1,0 +1,195 @@
+/* Tufte-style margin footnotes OUTSIDE the paper */
+
+/* Hide the traditional footnotes section */
+.footnotes {
+  display: none;
+}
+
+/* Style the footnote reference numbers */
+.footnote {
+  color: #a00000;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  cursor: help;
+}
+
+.footnote:hover {
+  text-decoration: underline;
+}
+
+/* Number styling in content */
+sup .footnote {
+  font-size: 0.75rem;
+  vertical-align: super;
+  padding: 0.1rem 0.3rem;
+  background-color: rgba(160, 0, 0, 0.1);
+  margin-left: 0.1rem;
+}
+
+/* Sidenotes positioned OUTSIDE the paper container */
+.sidenote {
+  position: absolute;
+  width: 200px;
+  font-family: "Berkeley Mono", monospace;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 50;
+  margin-top: -1rem;
+}
+
+.sidenote-number {
+  color: #a00000;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Center the paper and create space for sidenotes */
+@media screen and (min-width: 1200px) {
+  .paper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+}
+
+/* Alternative positioning for left side if preferred */
+.sidenote.left {
+  left: 20px;
+}
+
+/* Mobile behavior - hidden by default, show on click */
+@media screen and (max-width: 1200px) {
+  body {
+    margin-right: 0;
+  }
+  
+  .sidenote {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    width: auto;
+    max-width: calc(100vw - 40px);
+    background-color: rgba(255, 255, 248, 0.98);
+    border: 2px solid #a00000;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    font-family: "Berkeley Mono", monospace;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #333;
+  }
+  
+  .sidenote.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  .sidenote-number {
+    background-color: #a00000;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-right: 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Close button for mobile */
+  .sidenote-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #a00000;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    font-family: "Berkeley Mono", monospace;
+  }
+  
+  .sidenote-close:hover {
+    color: #600000;
+  }
+  
+  /* Overlay for mobile */
+  .sidenote-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .sidenote-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Make footnote links more prominent on mobile */
+  .footnote {
+    background-color: rgba(160, 0, 0, 0.15);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #a00000;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .footnote:hover, .footnote:active {
+    background-color: rgba(160, 0, 0, 0.25);
+    text-decoration: none;
+  }
+}
+
+/* Hide close button on desktop */
+.sidenote-close {
+  display: none;
+}
+
+/* Connected line effect (optional) */
+.sidenote::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  width: 18px;
+  height: 1px;
+  background-color: rgba(160, 0, 0, 0.3);
+  z-index: -1;
+}
+
+@media screen and (max-width: 1200px) {
+  .sidenote::before {
+    display: none;
+  }
+  
+  /* Show close button only on mobile */
+  .sidenote-close {
+    display: block;
+  }
+}

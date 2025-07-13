@@ -102,7 +102,6 @@ helpful to ensure that my fork is up-to-date with the codebase.
 Hope you learned something new today!
 
 
-### Footnotes
 
 [^1]: 
 

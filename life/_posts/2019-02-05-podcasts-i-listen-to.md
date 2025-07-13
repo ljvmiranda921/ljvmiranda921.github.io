@@ -101,7 +101,6 @@ Non-tech podcasts:
     probably dedicate another post for that.
 
 
-### Footnotes
 
 [^1]: Based on Donald Rumsfeld's quote: "There are known knowns. There are things we know that we know. There are known unknowns. That is to say, there are things that we now know we don't know. But there are also unknown unknowns. There are things we do not know we don't know". There's also a [good paper](https://academic.oup.com/jxb/article/60/3/712/453685) that maps this into the experience of scientific inquiry.
 [^2]: He also has another podcast with Brian Okken called [Python Bytes](https://pythonbytes.fm/). It's a weekly show that keeps you up-to-date with Python news and headlines.  
