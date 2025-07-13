@@ -71,10 +71,10 @@ In addition, doing software engineering work on the [Prodigy annotation tool](ht
 _From left to right (2021---2022): view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard._
 {: style="text-align: center;"}
 
-My time at Ai2 as a pre-doc was incredibly formative. 
+My time at [Ai2](https://allenai.org) as a pre-doc was incredibly formative. 
 Working alongside experienced researchers gave me a clearer picture of what academic research entailed and helped me identify the qualities I wanted to develop in myself as I grow into this career.
 I was also lucky to be part of large collaborative projects like [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/blog/olmo2) which gave me hands-on experience with frontier model post-training.
-Working at Ai2 gave me a baseline of what high-quality research looks like.
+Working at Ai2 gave me a baseline of what high-quality research looks like.[^1]
 In addition, there's really something in the air here in the US that made me more ambitious and driven&mdash; I hope to bring these qualities wherever I go.
 
 <div style="display: flex; justify-content: center;">
@@ -88,8 +88,6 @@ _From left to right (2024): the Fremont library where I spent a lot of time writ
 I got lucky because of the people who took chances on me, which is why I developed a mantra over time: **people over projects, projects over publications.**
 I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash;I believe that every topic is equally interesting given the right people.
 During the four-year journey, I've been fortunate to collaborate with researchers from different places who shared my interests, particularly in multilingual NLP.
-<!-- During the four-year journey, I've met folks from different places such as at SEACrowd and Cohere Labs who were great collaborators and were interested in the topics I care about. -->
-<!-- I also met people who were equally interested in Filipino NLP, and I'm glad we made some projects together. -->
 Everyone I worked with made me feel welcome, and I hope I can be that person for another aspiring researcher in the future.
 
 > I've developed a mantra over time: people over projects, projects over publications.
@@ -141,12 +139,6 @@ I had a mix of interview formats during this cycle: a research presentation, a s
 The last two weeks of January and the early weeks of February were the most intense, as they involved a lot of waiting and uncertainty.
 I tried to keep myself busy, focusing on work and my current research projects&mdash; those were the longest two months I had ever experienced.
 
-<!-- Another thing to note is that in Cambridge, acceptance to the program doesn't mean funding is guaranteed.
-From what I understand, after your potential supervisor accepts you, they will forward your application to a funding committee, which then makes a separate decision to which scholarship you'll obtain.
-This is unlike in the US or Canada (MILA) where a PhD offer already means a fully-funded PhD position.
-Funding decisions for Cambridge often happens in March and April (sometimes extending to August!).
-This means that I had to let go of other opportunities while waiting for funding&mdash; it was a pretty anxious time. -->
-
 ## On choosing PhD programs
 
 One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
@@ -194,7 +186,7 @@ In addition, if you're interested in doing research on Tagalog and Filipino NLP 
 ## Final thoughts
 
 It's October, and my wife and I have been here at Cambridge for a month.
-There's a lot to say about Cambridge&mdash;the collegiate system, the traditions, the culture, and more.
+There's a lot to say about Cambridge&mdash;the collegiate system[^2], the traditions, the culture, and more.
 Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that we'll be here for a while.
 
 <!-- pictures of Cambridge! -->
@@ -208,6 +200,7 @@ _Padayon!_
 
 <!-- colored matriculation picture!! -->
 
-<!-- ### Footnotes
 
-[^1]: There are many people in Ai2 who helped me of course: Yanai, Valentina, Faeze, Nathan, Kyle R., Sachin, Shashank, Harsh, Ashish, Hannah and Noah (and much more)! It does take a village. I'm also super thankful to Pradeep, Hanna, and Yizhong who drafted my recommendation letters! -->
+[^1]: There are many people in Ai2 who helped me of course: Yanai, Valentina, Faeze, Nathan, Kyle R., Sachin, Shashank, Harsh, Ashish, Hannah and Noah (and much more)! It does take a village. I'm also super thankful to Pradeep, Hanna, and Yizhong who drafted my recommendation letters!
+
+[^2]: It's an interesting system: all students also apply to colleges that are akin to "houses" in Harry Potter. I got into [Churchill](https://www.chu.cam.ac.uk/) which focuses on STEM and has the best (according to my research) accommodation.
