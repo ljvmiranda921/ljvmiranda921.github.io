@@ -1,10 +1,24 @@
 /**
+ * Paper container for lifted effect
+ */
+.paper-container {
+  background-color: $background-color;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  margin: $spacing-unit auto;
+  max-width: $content-width;
+}
+
+/**
  * Site header
  */
 .site-header {
   border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
+  background-color: $background-color;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -108,6 +122,9 @@
 .site-footer {
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  background-color: $background-color;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 .footer-heading {
@@ -176,7 +193,23 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: 0;
+  background-color: $background-color;
+}
+
+.wrapper {
+  background-color: $background-color;
+  padding: $spacing-unit;
+  margin: 0 auto;
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding: $spacing-unit / 2;
+  }
 }
 
 .page-heading {
