@@ -1,0 +1,102 @@
+/* Tufte-style margin footnotes OUTSIDE the paper */
+
+/* Hide the traditional footnotes section */
+.footnotes {
+  display: none;
+}
+
+/* Style the footnote reference numbers */
+.footnote {
+  color: #a00000;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  cursor: help;
+}
+
+.footnote:hover {
+  text-decoration: underline;
+}
+
+/* Number styling in content */
+sup .footnote {
+  font-size: 0.75rem;
+  vertical-align: super;
+  padding: 0.1rem 0.3rem;
+  background-color: rgba(160, 0, 0, 0.1);
+  margin-left: 0.1rem;
+}
+
+/* Sidenotes positioned OUTSIDE the paper container */
+.sidenote {
+  position: absolute;
+  width: 200px;
+  font-family: "Berkeley Mono", monospace;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 50;
+  margin-top: -1rem;
+}
+
+.sidenote-number {
+  color: #a00000;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Center the paper and create space for sidenotes */
+@media screen and (min-width: 1200px) {
+  .paper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+}
+
+/* Alternative positioning for left side if preferred */
+.sidenote.left {
+  left: 20px;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 1200px) {
+  body {
+    margin-right: 0;
+  }
+  
+  .sidenote {
+    position: static;
+    width: auto;
+    background-color: #f8f8f8;
+    border-left: 4px solid #a00000;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: block;
+    left: auto;
+    box-shadow: none;
+  }
+}
+
+/* Connected line effect (optional) */
+.sidenote::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  width: 18px;
+  height: 1px;
+  background-color: rgba(160, 0, 0, 0.3);
+  z-index: -1;
+}
+
+@media screen and (max-width: 1200px) {
+  .sidenote::before {
+    display: none;
+  }
+}
