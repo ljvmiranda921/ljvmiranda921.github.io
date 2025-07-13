@@ -186,7 +186,7 @@ In addition, if you're interested in doing research on Tagalog and Filipino NLP 
 ## Final thoughts
 
 It's October, and my wife and I have been here at Cambridge for a month.
-There's a lot to say about Cambridge&mdash;the collegiate system[^2], the traditions, the culture, and more.
+There's a lot to say about Cambridge&mdash;the collegiate system,[^2] the traditions, the culture, and more.
 Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that we'll be here for a while.
 
 <!-- pictures of Cambridge! -->
