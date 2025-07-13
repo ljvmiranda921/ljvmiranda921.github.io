@@ -613,7 +613,6 @@ by commenting below!
 * 08-12-2021: Replace the [Lenna](https://en.wikipedia.org/wiki/Lenna#criticism) example with a picture of a cat. 
 * 08-09-2021: Update title from "Taming transformers" to "The Illustrated" as suggested by a friend.
 
-## Footnotes
 
 [^1]: You might see VQGAN-CLIP being written as CLIP-VQGAN, CLIP+VQGAN, or VQGAN+CLIP. The order doesn't matter and the dash symbol isn't an operation. They're all the same thing.
 [^2]: It may not be how we perceive the world around us, but it may be how we *sense* it. Note that our eyes are composed of [*cone cells*](https://en.wikipedia.org/wiki/Cone_cell) that respond differently to different wavelengths. We can treat these cones analogous to a pixel's RGB channels.

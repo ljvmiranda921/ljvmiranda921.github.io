@@ -322,7 +322,6 @@ If you like this, you'll enjoy:
 )
 
 
-### Footnotes
 
 [^1]: I'm using the term Platform loosely here. It's not *platform* as Platform-as-a-Service, rather *platform* as a [group of technologies](https://www.techopedia.com/definition/3411/platform-computing). To avoid confusion, I'll indicate PaaS when I meant PaaS.
 [^2]: You might not always need k8s, a managed solution is often enough. I included this because it's good to have representative sample from the non-ML software side.
