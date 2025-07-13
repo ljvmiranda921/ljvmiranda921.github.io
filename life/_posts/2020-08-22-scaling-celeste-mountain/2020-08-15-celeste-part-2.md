@@ -415,7 +415,6 @@ more and appreciate the beauty of Celeste.
     underscores the feeling of grief.
 
 
-### Footnotes
 
 [^1]: A bit off-topic, but this learning, *constraints conceive creativity* made me drawn to pixel art. In Pixel Art, you're mostly working on a small canvass, and it "forces" you to creatively represent small details in low-resolution.
 [^2]: I took Clifton's StrengthsFinder test a few months ago, and my Top 2 Strength is [Strategic](https://www.gallup.com/cliftonstrengths/en/252350/strategic-theme.aspx). It is expressed as someone who "create alternative ways to proceed and think in terms of options." It feels validating to see it expressed that way! 

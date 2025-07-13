@@ -444,4 +444,3 @@ I hope you enjoyed reading this blog post as much as I enjoyed writing it. If
 you have any questions, feel free to post a comment below.  
 
 
-### Footnotes

@@ -249,7 +249,6 @@ If you like this, you'll enjoy:
 )
 
 
-### Footnotes
 
 [^1]: I admit that there's some level of survivorship bias here. 
 [^2]: I'm well aware that I simplified these two personas (hopefully not to the point of caricature), for the roles inside a data science team differs from one company to the other.

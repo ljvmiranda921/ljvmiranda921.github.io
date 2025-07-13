@@ -216,7 +216,6 @@ reads the build status as a PubSubMessage and applies the appropriate logic
 depending on the result. The final product is a continually updating status
 badge for our specific project and branch that we can use in our READMEs!
 
-### Footnotes
 
 [^1]: I chose to write in Javascript because I want to use this project as an opportunity to learn the language.
 [^2]: If your repository is in [Cloud Source Repositories](https://cloud.google.com/source-repositories/), you need to use `buildResource.source.repoSource` to access the repository and branch respectively (`repoName`, `branchName`). 
