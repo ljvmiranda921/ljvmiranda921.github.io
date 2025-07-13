@@ -166,6 +166,11 @@ sup .footnote {
   }
 }
 
+/* Hide close button on desktop */
+.sidenote-close {
+  display: none;
+}
+
 /* Connected line effect (optional) */
 .sidenote::before {
   content: '';
@@ -181,5 +186,10 @@ sup .footnote {
 @media screen and (max-width: 1200px) {
   .sidenote::before {
     display: none;
+  }
+  
+  /* Show close button only on mobile */
+  .sidenote-close {
+    display: block;
   }
 }
