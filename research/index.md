@@ -50,7 +50,7 @@ I'm motivated to pursue research that ensures that the next generation of state-
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://aclanthology.org/2024.emnlp-main.296/)
   <br>_EMNLP '24 Main_
   <br>Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <b>Lester James Miranda\*</b>, and 50+ other authors _(&lowast;: major contributor)_.
-  <br>[<i class="fas fa-globe research-icon"></i>](https://seacrowd.github.io/seacrowd-catalogue) [<i class="fab fa-github research-icon"></i>](https://github.com/SEACrowd/seacrowd-datahub)
+  <br>[<i class="fab fa-github research-icon"></i>](https://github.com/SEACrowd/seacrowd-datahub) [<i class="fas fa-globe research-icon"></i>](https://seacrowd.github.io/seacrowd-catalogue)
 
 Within this theme, I also care a lot about **improving the state of Filipino NLP** and representing my native language.
 This involves building resources for training and evaluation.
@@ -74,4 +74,4 @@ I also write a lot about Filipino NLP in this blog.
 - [Developing a Named Entity Recognition Dataset for Tagalog](https://aclanthology.org/2023.sealp-1.2/)
   <br>_Southeast Asian Language Processing (SEALP) Workshop @ IJCNLP-AACL '23_
   <br> <b>Lester James V. Miranda</b>
-  <br> [<i class="fab fa-github research-icon"></i>](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark) [<i class="fas fa-database research-icon"></i>](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner) [<i class="fas fa-play research-icon"></i>](https://www.youtube.com/watch?v=WAJ8IEIHuiM) [<i class="fas fa-file-powerpoint research-icon"></i>](https://drive.google.com/file/d/1QVbW7Myou6U6cSqrlz5p_35Sl__008kG/view?usp=drive_link)
+  <br> [<i class="fab fa-github research-icon"></i>](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark) [<i class="fas fa-database research-icon"></i>](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner) [<i class="fas fa-file-powerpoint research-icon"></i>](https://drive.google.com/file/d/1QVbW7Myou6U6cSqrlz5p_35Sl__008kG/view?usp=drive_link) [<i class="fas fa-play research-icon"></i>](https://www.youtube.com/watch?v=WAJ8IEIHuiM)
