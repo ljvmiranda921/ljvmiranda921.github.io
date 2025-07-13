@@ -1,7 +1,7 @@
 /* Research page icon styles */
 .research-icon {
   transition: all 0.2s ease-in-out;
-  color: black !important;
+  color: #666666 !important;
   margin-right: 8px;
 }
 
