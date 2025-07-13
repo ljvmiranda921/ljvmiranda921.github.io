@@ -3,10 +3,13 @@
  */
 .paper-container {
   background-color: $background-color;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.05);
-  border-radius: 3px;
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
   margin: $spacing-unit auto;
   max-width: $content-width;
+  position: relative;
 }
 
 /**
@@ -17,8 +20,6 @@
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
   background-color: $background-color;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -123,8 +124,6 @@
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
   background-color: $background-color;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
 }
 
 .footer-heading {

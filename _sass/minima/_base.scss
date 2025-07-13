@@ -17,6 +17,13 @@
    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
    color: $text-color;
    background-color: $page-background;
+   background-image: 
+     radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+     radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+     linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
+     linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%);
+   background-size: 40px 40px, 20px 20px, 80px 80px, 80px 80px;
+   background-position: 0 0, 10px 10px, 0 0, 40px 40px;
    -webkit-text-size-adjust: 100%;
    -webkit-font-feature-settings: "kern" 1;
       -moz-font-feature-settings: "kern" 1;
