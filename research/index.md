@@ -30,12 +30,12 @@ I've explored these questions in the context of acquiring post-training data by 
 - [**Hy**brid **P**ref**er**ences: Learning to Route Instances for Human vs. AI Feedback](https://arxiv.org/abs/2410.19133)
   <br>_ACL '25 Main_
   <br><b>Lester James V. Miranda\*</b>, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi.
-  <br>[[Code](https://github.com/allenai/hybrid-preferences)] [[Dataset](https://huggingface.co/datasets/allenai/multipref)] [[Slides](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing)] [[Poster](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link)] [[Video](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)]
+  <br>[<i class="fab fa-github research-icon"></i>](https://github.com/allenai/hybrid-preferences) [<i class="fas fa-database research-icon"></i>](https://huggingface.co/datasets/allenai/multipref) [<i class="fas fa-file-powerpoint research-icon"></i>](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing) [<i class="fas fa-image research-icon"></i>](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link) [<i class="fas fa-play research-icon"></i>](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)
 
 - [T&uuml;lu 3: Exploring Frontiers in Open Language Model Post-Training](https://arxiv.org/abs/2411.15124)
   <br>_COLM '25_
   <br>Nathan Lambert\*, Jacob Morrison\*, Valentina Pyatkin\*, Shenyi Huang\*, Hamish Ivison\*, Faeze Brahman\*, <b>Lester James V. Miranda\*</b>, Alisa Liu, Nouha Dziri, Xinxi Lyu, Yuling Gu, Saumya Malik, Victoria Graf, Jena D. Hwang, Jiangjiang Yang, Ronan Le Bras, Oyvind Tajford, Chris Wilhelm, Luca Soldiani, Noah A. Smith, Yizhong Wang, Pradeep Dasigi, Hannaneh Hajishirzi _(&lowast;: core contributor)_.
-  <br>[[Models](https://huggingface.co/collections/allenai/tulu-3-models-673b8e0dc3512e30e7dc54f5)] [[Datasets](https://huggingface.co/collections/allenai/tulu-3-datasets-673b8df14442393f7213f372)] [[Website](https://allenai.org/tulu)]
+  <br>[<i class="fas fa-robot research-icon"></i>](https://huggingface.co/collections/allenai/tulu-3-models-673b8e0dc3512e30e7dc54f5) [<i class="fas fa-database research-icon"></i>](https://huggingface.co/collections/allenai/tulu-3-datasets-673b8df14442393f7213f372) [<i class="fas fa-globe research-icon"></i>](https://allenai.org/tulu)
 
 ## Resources for multilingual and equitable NLP
 
@@ -45,12 +45,12 @@ I'm motivated to pursue research that ensures that the next generation of state-
 - [M-RewardBench: Evaluating Reward Models in Multilingual Settings](https://arxiv.org/abs/2410.15522)
   <br>_ACL '25 Main_
   <br>Srishti Gureja\*, <b>Lester James V. Miranda\*</b>, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee.
-  <br>[[Code](https://github.com/for-ai/aya_rm_multilingual)] [[Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7)] [[Slides](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link)] [[Poster](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link)] [[Video](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)]
+  <br>[<i class="fab fa-github research-icon"></i>](https://github.com/for-ai/aya_rm_multilingual) [<i class="fas fa-database research-icon"></i>](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7) [<i class="fas fa-file-powerpoint research-icon"></i>](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link) [<i class="fas fa-image research-icon"></i>](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link) [<i class="fas fa-play research-icon"></i>](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)
 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://aclanthology.org/2024.emnlp-main.296/)
   <br>_EMNLP '24 Main_
   <br>Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <b>Lester James Miranda\*</b>, and 50+ other authors _(&lowast;: major contributor)_.
-  <br>[[Catalogue](https://seacrowd.github.io/seacrowd-catalogue)] [[Code](https://github.com/SEACrowd/seacrowd-datahub)]
+  <br>[<i class="fab fa-github research-icon"></i>](https://github.com/SEACrowd/seacrowd-datahub) [<i class="fas fa-globe research-icon"></i>](https://seacrowd.github.io/seacrowd-catalogue)
 
 Within this theme, I also care a lot about **improving the state of Filipino NLP** and representing my native language.
 This involves building resources for training and evaluation.
@@ -64,7 +64,7 @@ I also write a lot about Filipino NLP in this blog.
 - [The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project](https://arxiv.org/abs/2505.20428)
   <br>_ACL '25 Main_
   <br>Angelina A. Aquino\*, <b>Lester James V. Miranda\*</b>, Elsie Marie T. Or\*
-  <br>[[Dataset](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317)] [[Slides]()] [[Poster](https://drive.google.com/file/d/16ONq_xmRrUgvALirWEwX0BpZnn1OtqwH/view?usp=drive_link)] [[Video](https://youtu.be/W4cONaL_otI?si=DgfmF0_7zkOmI_ma)]
+  <br>[<i class="fas fa-database research-icon"></i>](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317) [<i class="fas fa-file-powerpoint research-icon"></i>]() [<i class="fas fa-image research-icon"></i>](https://drive.google.com/file/d/16ONq_xmRrUgvALirWEwX0BpZnn1OtqwH/view?usp=drive_link) [<i class="fas fa-play research-icon"></i>](https://youtu.be/W4cONaL_otI?si=DgfmF0_7zkOmI_ma)
 
 <!-- - [Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark](https://aclanthology.org/2024.naacl-long.243/)
   <br>_NAACL '24 Main_
@@ -74,9 +74,9 @@ I also write a lot about Filipino NLP in this blog.
 - [calamanCy: a Tagalog Natural Language Processing Toolkit](https://aclanthology.org/2023.nlposs-1.1/)
   <br>_NLP Open-Source Software (NLP-OSS) Workshop @ EMNLP '23_
   <br> <b>Lester James V. Miranda</b>
-  <br> [[Code](https://github.com/ljvmiranda921/calamanCy)] [[Poster](https://drive.google.com/file/d/1Q_-4Lf9ZL9ZCYS5aWPhRnCfHPhGwlBp6/view?usp=drive_link)] [[Video](https://youtu.be/2fbzs1KbFTQ?si=_vKEY11Z1Jzuaxeu)]
+  <br> [<i class="fab fa-github research-icon"></i>](https://github.com/ljvmiranda921/calamanCy) [<i class="fas fa-image research-icon"></i>](https://drive.google.com/file/d/1Q_-4Lf9ZL9ZCYS5aWPhRnCfHPhGwlBp6/view?usp=drive_link) [<i class="fas fa-play research-icon"></i>](https://youtu.be/2fbzs1KbFTQ?si=_vKEY11Z1Jzuaxeu)
 
 - [Developing a Named Entity Recognition Dataset for Tagalog](https://aclanthology.org/2023.sealp-1.2/)
   <br>_Southeast Asian Language Processing (SEALP) Workshop @ IJCNLP-AACL '23_
   <br> <b>Lester James V. Miranda</b>
-  <br> [[Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark)] [[Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner)] [[Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)] [[Slides](https://drive.google.com/file/d/1QVbW7Myou6U6cSqrlz5p_35Sl__008kG/view?usp=drive_link)]
+  <br> [<i class="fab fa-github research-icon"></i>](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark) [<i class="fas fa-database research-icon"></i>](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner) [<i class="fas fa-file-powerpoint research-icon"></i>](https://drive.google.com/file/d/1QVbW7Myou6U6cSqrlz5p_35Sl__008kG/view?usp=drive_link) [<i class="fas fa-play research-icon"></i>](https://www.youtube.com/watch?v=WAJ8IEIHuiM)
