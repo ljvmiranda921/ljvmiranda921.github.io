@@ -385,7 +385,6 @@ at reading this, but I hope . . . that he never stops building, earning, and pla
 * <a id="popova2013unhappy">Popova, Maria.</a> "Albert Camus on Happiness, Unhappiness, and Our Self-Imposed Prisons", *Brain Pickings*, 2013. Available: [https://www.brainpickings.org/2013/11/07/albert-camus-notebooks-happiness/](https://www.brainpickings.org/2013/11/07/albert-camus-notebooks-happiness/). [Accessed May 17 2021]
 
 
-### Footnotes
 
 [^1]: I like Shawn Wang's idea of [Learning in Public](https://www.swyx.io/learn-in-public/). I encourage everyone to read that. 
 [^2]: It's already been a year and I can't see the COVID situation in the Philippines getting better.

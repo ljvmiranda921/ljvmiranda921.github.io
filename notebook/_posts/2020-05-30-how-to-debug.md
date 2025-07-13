@@ -147,7 +147,6 @@ P.S. Here's the full Pixel Art GIF!
 ![](/assets/png/how-to-debug/Masterfile.gif)
 
 
-### Footnotes
 
 [^1]: I think of tacit knowledge as know-how that is not explicitly defined&mdash; like riding a bike.
 [^2]: Yes, I've been learning pixel art for the past month! 

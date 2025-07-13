@@ -311,7 +311,6 @@ machine somewhere&mdash; waiting for its next opportunity to emerge.
     framework and I learned a lot as I went through the project.
 
 
-### Footnotes
 
 [^1]: The name "seagull" came from the first letters of Conway's Game of Life: C, G, o, and L. Reading them together, "CGoL", sounds like said bird.
 [^2]: I still have a lot to learn about API design, for I usually approach it with "gut feel" + techniques I liked from other libraries (e.g. scikit-learn's fit-predict loop). Sometimes I run the risk of overabstracting, but yeah, it's fun to build worlds upon worlds.

@@ -446,4 +446,3 @@ Accountability, and Transparency.*
 towards NLU: On Meaning, Form, and Understanding in the Age of Data. *Annual
 Meeting of the Association for Computational Linguistics.*
 
-### Footnotes
