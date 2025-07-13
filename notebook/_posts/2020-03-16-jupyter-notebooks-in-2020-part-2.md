@@ -470,7 +470,6 @@ notebooks in a technology-management perspective, my wishlist for the Jupyter
 Notebook ecosystem, and a lookahead into the future of Jupyter Notebooks.
 
 
-### Footnotes
 
 [^1]: Generating plots and charts, quick-and-dirty exploratory data analysis (EDA), inspecting a dataset, training models, etc. 
 [^2]: There's another breed of data professionals: machine learning engineers (MLE) or research engineers. They're either researchers who had intermediate (or advanced) software engineering skills or engineers who are venturing into ML/AI.  

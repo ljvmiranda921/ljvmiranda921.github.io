@@ -398,7 +398,6 @@ repository](https://github.com/ljvmiranda921/ud-tagalog-spacy).
     Grammar. *University of California Press*, 1983.
 
 
-### Footnotes
 
 
 [^1]:

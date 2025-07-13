@@ -251,7 +251,6 @@ luck!
 * 03-04-2020: Update and flesh-out the conclusion and why it clicked
 
 
-### Footnotes
 
 [^1]: Kudos to the Kubernetes Documentation team for following a similar pattern in one of their [tutorials!](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
 [^2]: Note that whenever we say "I want X," we're referring to a Docker image. Thus, if I say "I want Redis," we're providing Kubernetes a [Docker image of Redis](https://hub.docker.com/_/redis/).

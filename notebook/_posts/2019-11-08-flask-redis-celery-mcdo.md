@@ -302,7 +302,6 @@ missed in this Distill!
 * 04-22-2020: This blogpost was featured on [Hacker News](https://news.ycombinator.com/item?id=22901857)! Thanks to [Feross](https://feross.org/) for posting it, and for everyone who found this post helpful.
 
 
-### Footnotes
 
 [^1]: ELI5: Explain like I'm five. There's a [subreddit](https://www.reddit.com/r/explainlikeimfive/) on it!
 [^2]: *Ate* means older sister while *Kuya* means older brother in Filipino. For those who are not from the Philippines, we usually call everyone (even our fastfood service crews) as older brothers and sisters.

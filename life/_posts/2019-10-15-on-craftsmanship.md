@@ -230,7 +230,6 @@ correct.
 * 03-01-2020: Add some Splash photos
 * 10-15-2019: Update some grammar mistakes
 
-### Footnotes
 
 [^1]: Seeing this [video of a man making soba](https://www.youtube.com/watch?v=V3zFiwa8fKs) circulating in the internet motivated me to finish this post. It brought back memories of my experience when I was in Japan.
 [^2]: Of course, he followed this with a chapter called "The Woes of the Craft," which is equally true.
