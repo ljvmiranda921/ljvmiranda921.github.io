@@ -66,7 +66,7 @@ Good research takes time, and I'm lucky to have great collaborators during these
 * **Met with some Pinoy NLP researchers.** It is nice to meetup with some folks from the 
     Asian Institute of Management in the Philippines&mdash;they wrote an industry-track paper on examining the reliability of LLMs in clinical note generation.
     Blaise (PhD-ing in MBZUAI) and Anton (from SEACrowd) were also there.
-    I also met another Ateneo org-mate, Jane, who is now doing her PhD in Radboud University in the Netherlands.
+    I also met another Ateneo org-mate, Jane, who is now doing her PhD at Radboud University in the Netherlands.
     In general, it's nice to see Filipinos publishing in these top NLP conferences.
 
 
