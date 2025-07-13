@@ -237,7 +237,6 @@ working on another geospatial tool,
 project success!
 
 
-## Footnotes
 
 [^1]: 
 

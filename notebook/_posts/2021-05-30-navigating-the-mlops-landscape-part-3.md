@@ -312,7 +312,6 @@ If you like this, you'll enjoy:
 * [How to use Jupyter Notebooks in 2020 (Part 1: the data science
     landscape)](/notebook/2020/03/06/jupyter-notebooks-in-2020)
 
-### Footnotes
 
 [^1]: I don't advocate using Kubernetes on every project. Sometimes you can do away with serverless options provided by your cloud provider (less debt). However, it may be important to build capabilities on this tech as you grow.
 [^2]: Of course, Teachables isn't a machine learning platform. However, I imagine that the user-experience can be as seamless as this one in the future. At that point, it will even go beyond the standard lifecycle researchers and software engineers experience.

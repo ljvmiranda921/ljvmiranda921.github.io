@@ -154,7 +154,6 @@ I believe the three research directions I described above can both increase the 
 I admit that I haven't done enough for Filipino NLP this year[^2] and this blog post serves not just as a research statement but **also a commitment to improve my involvement in this language.**
 I have some ideas (the ideas in this blog post are just a small part of it), so if you want to help out, [feel free to reach out](mailto:ljvmiranda@gmail.com)!
 
-### Footnotes
 
 [^1]: The Cebuano Wikipedia is the second-largest Wikipedia in terms of number of articles. Although this appears impressive, its size is due to an article-generating bot called [Lsjbot](https://en.wikipedia.org/wiki/Lsjbot) rather than a dedicated group of Wikipedia volunteers. Unfortunately, the articles in Cebuano Wikipedia are unnatural and do not reflect how the language is actually used by native speakers.
 [^2]: This year we published [SEACrowd](https://aclanthology.org/2024.emnlp-main.296/), [Universal NER](https://aclanthology.org/2024.naacl-long.243/), and the [largest Tagalog UD Treebank](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317), but most of these efforts started back in 2023.

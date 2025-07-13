@@ -471,7 +471,6 @@ probably do this again in the future, but I'll definitely lower my scope.
 - 08-17-2021: This post was featured in [DVC's newsletter!](https://dvc.org/blog/august-21-dvc-heartbeat)
 
 
-## Footnotes
 
 [^1]: HARK-ing, refers to the research practice of hypothesizing after the results are known. Norbert Kerr defined it as "presenting a post hoc hypothesis in the introduction of a research report as if it were an a priori hypothesis"
 [^2]: Examples of labelling tools: [Prodigy](https://prodi.gy/), [Snorkel](https://snorkel.ai/), [Label Studio](https://labelstud.io/). Examples of data-versioning and tracking (lineage) tools: [MLFlow](https://mlflow.org/), [DVC](https://dvc.org/), [Pachyderm](https://www.pachyderm.com/), and [Neptune.ai](https://neptune.ai). 

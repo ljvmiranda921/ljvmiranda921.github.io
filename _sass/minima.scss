@@ -16,6 +16,7 @@ $spacing-unit:     30px !default;
 
 $text-color:       #111 !default;
 $background-color: #fffff8 !default;
+$page-background:  #d0d0d0 !default;
 $brand-color:      #a00000 !default;
 
 $grey-color:       #828282 !default;
@@ -55,5 +56,6 @@ $on-laptop:        800px !default;
   "css/better-gist-styles.css",
   "css/frontpage.css",
   "css/dropcap.css",
-  "css/spoiler.css"
+  "css/spoiler.css",
+  "css/tufte-footnotes.css"
 ;

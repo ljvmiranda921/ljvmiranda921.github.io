@@ -316,4 +316,3 @@ It's not yet the exciting part. In a later blog post, I will talk about FSTs, an
 extension of this concept. With FSTs, we can do morphological parsing, a highly
 relevant NLP task nowadays.
 
-### Footnotes

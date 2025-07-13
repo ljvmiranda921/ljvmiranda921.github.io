@@ -177,7 +177,6 @@ season.
     structure of real-time, arbitrary neural artistic stylization network". In:
     *arXiv:1705.06830[cs.CV]*
 
-### Footnotes
 
 [^1]: You can even see the remnants of our exploratory replication work in the repository. Perhaps you can replicate it by yourself!
 [^2]: This step simply involves getting the word vector for the query string and the Quick, Draw! classes, and computing the cosine similarity for each.
