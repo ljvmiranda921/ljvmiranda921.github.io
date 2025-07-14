@@ -193,3 +193,12 @@ sup .footnote {
     display: block;
   }
 }
+
+/* JavaScript will handle sidenote positioning to prevent overlaps */
+/* This ensures sidenotes don't overlap each other on desktop */
+@media screen and (min-width: 1200px) {
+  .sidenote {
+    /* Position will be dynamically adjusted by JavaScript */
+    transition: top 0.3s ease;
+  }
+}
