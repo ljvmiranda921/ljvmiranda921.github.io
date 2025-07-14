@@ -38,7 +38,7 @@ sup .footnote {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 0.75rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 4px 4px 0 #bbb;
   z-index: 50;
   margin-top: -1rem;
 }
@@ -82,7 +82,7 @@ sup .footnote {
     border-radius: 8px;
     padding: 1rem;
     margin: 0;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 0 #bbb;
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
