@@ -3,10 +3,7 @@
  */
 .paper-container {
   background-color: $background-color;
-  box-shadow:
-    0 8px 16px rgba(0, 0, 0, 0.15),
-    0 2px 4px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 4px 4px 0 #bbb;
   margin: $spacing-unit auto;
   max-width: $content-width;
   position: relative;
@@ -16,7 +13,6 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 0.8;
   background-color: $background-color;
