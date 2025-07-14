@@ -14,13 +14,9 @@
     left: 6px;
     width: 100%;
     height: 100%;
-    background: repeating-linear-gradient(
-      45deg,
-      #666,
-      #666 1px,
-      transparent 1px,
-      transparent 3px
-    );
+    background: 
+      radial-gradient(circle at center, #666 1px, transparent 1px);
+    background-size: 4px 4px;
     z-index: -1;
   }
 }
@@ -29,7 +25,6 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 0.8;
   background-color: $background-color;
