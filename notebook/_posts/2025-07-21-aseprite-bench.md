@@ -20,13 +20,24 @@ I wonder if I can incorporate LLMs into my workflow?
 
 <!--Aseprite screenshot-->
 
-In this blog post, I tested several LLMs with function-calling capabilities on the following task: I instructed them to create a sprite sheet of a swordsman performing a certain move. Here's the complete prompt:
+In this blog post, I tested LLMs with tool-calling capabilities on the following tasks: 
+
+* **Task 1: Draw a swordsman**: an easy task that generates a static image.
+
+> Draw me a pixel art of a swordsman.
+
+* **Task 2: Draw a swordsman performing a slashing sequence**: a harder task.
 
 > Draw a 4-frame spritesheet showing a swordsman performing a sword slash attack sequence, with each frame capturing a different stage of the slashing motion from windup to follow-through.
 
-This experiment was actually inspired by Simon Willison's [talk](https://www.youtube.com/live/z4zXicOAF28?si=qcQ4qz8PeNEID5uF&t=5086) (and [blog post](https://simonwillison.net/tags/svg/)) in the AI Engineer World's fair.
-Creating sprite sheets is a common use-case for pixel art tools as it serves as a foundation for movement and animation.
-Personally, I did this experiment to improve my understanding of the model context protocol (MCP) and function-calling LLMs!
+The characters in Task 1 and Task 2 don't have to be the same.
+Task 2 is interesting because creating sprite sheets is a common use-case in game dev.
+I also think it's challenging for LLMs because it requires understanding of sequence: each frame must logically follow the previous one to create a believable animation. 
+Unlike generating a single image, sprite sheets demand consistency in character design, progression, and timing. 
+So an LLM should not only call tools correctly, but also reason about animation.
+
+Here's the human baseline (or my attempt) from the game [*Abyss*](https://ljvmiranda921.itch.io/abyss):
+
 
 ## Building aseprite-mcp
 
