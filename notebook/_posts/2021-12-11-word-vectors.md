@@ -668,7 +668,6 @@ this for better or for worse: we can train "domain-specific" language models to
 or release models in the wild that are inherently biased. Real-world NLP isn't
 as easy as figuring out cats and dogs.
 
-### Footnotes
 
 [^1]: 
 

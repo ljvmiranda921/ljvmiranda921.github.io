@@ -1,0 +1,16 @@
+/* Research page icon styles */
+.research-icon {
+  transition: all 0.2s ease-in-out;
+  color: #666666 !important;
+  margin-right: 8px;
+}
+
+.research-icon:hover {
+  color: #a00000 !important; /* Using the brand color from minima.scss */
+  transform: scale(1.1);
+}
+
+/* Remove underline from icon links */
+a .research-icon {
+  text-decoration: none;
+}

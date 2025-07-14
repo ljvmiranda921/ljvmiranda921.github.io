@@ -54,6 +54,5 @@ an easy and no-ops way of blogging, use other providers such as Medium or
 Wordpress. But, if you find joy in building things and making things work, then
 Github pages is definitely the best solution for you!
 
-### Footnotes
 [^1]: Of course, the source code is available [on Github](https://github.com/ljvmiranda921/ljvmiranda921.github.io)
 [^2]: I solved this problem by integrating Travis-CI in my workflow. Whenever the checks on the `master` passed, it automatically deploys the **locally-generated files** to `gh-pages`, and is deployed to the website.

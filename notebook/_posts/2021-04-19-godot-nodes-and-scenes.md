@@ -287,7 +287,6 @@ Let me know your thoughts and questions in the comments below!
 * 04-19-2021: Update some grammar and usage issues
 
 
-### Footnotes
 
 [^1]: I'm currently learning iconography and a particular style of coloring in pixel art&mdash; so please be nice! Trying to move away from the standard PICO-8 palette that I'm used to. Thanks a lot to OpenGameArt for providing some useful references, and the [Comfort44s](https://lospec.com/palette-list/comfort44s) palette for the colors!
 [^2]: Of course, it's not as simple as that. We still need to wire-up the parts properly and write the logic on how these things work together. I decided not to talk about it because it may be outside the scope of my topic.
