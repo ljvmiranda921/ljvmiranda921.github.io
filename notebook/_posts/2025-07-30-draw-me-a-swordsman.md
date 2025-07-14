@@ -38,6 +38,13 @@ So an LLM should not only call tools correctly, but also reason about animation.
 
 Here's the human baseline (or my attempt) from the game [*Abyss*](https://ljvmiranda921.itch.io/abyss):
 
+<!-- human baseline -->
+
+I evaluated each LLM's output using two criteria, each scored from 1 to 3:
+
+- **Correctness**: Did the LLM follow the instructions accurately?
+- **Creativity**: How original or artistic was the LLM's approach?
+
 
 ## Building aseprite-mcp
 
