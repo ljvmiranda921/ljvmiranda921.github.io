@@ -20,6 +20,11 @@
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 0.8;
   background-color: $background-color;
+  padding: 0 calc(#{$spacing-unit} * 1.2);
+
+  @include media-query($on-palm) {
+    padding: 0 calc(#{$spacing-unit} * 0.25);
+  }
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -124,8 +129,12 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
-  padding: calc(#{$spacing-unit} * 0.5) 0;
+  padding: $spacing-unit calc(#{$spacing-unit} * 1.2);
   background-color: $background-color;
+
+  @include media-query($on-palm) {
+    padding: calc(#{$spacing-unit} * 0.5) calc(#{$spacing-unit} * 0.25);
+  }
 }
 
 .footer-heading {
