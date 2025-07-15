@@ -16,7 +16,7 @@
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 0.8;
   background-color: $background-color;
-  padding: 0 calc(#{$spacing-unit} * 1.2);
+  padding: 0 calc(#{$spacing-unit} * 1.5);
 
   @include media-query($on-palm) {
     padding: 0 calc(#{$spacing-unit} * 0.25);
@@ -125,7 +125,7 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit calc(#{$spacing-unit} * 1.2);
+  padding: $spacing-unit calc(#{$spacing-unit} * 1.5);
   background-color: $background-color;
 
   @include media-query($on-palm) {
@@ -206,7 +206,7 @@
 
 .wrapper {
   background-color: $background-color;
-  padding: $spacing-unit;
+  padding: $spacing-unit calc(#{$spacing-unit} * 1.5);
   // padding: $spacing-unit calc(#{$spacing-unit} * 0.9);
   margin: 0 auto;
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
