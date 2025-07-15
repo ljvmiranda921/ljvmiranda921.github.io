@@ -194,10 +194,10 @@ I'm happy to close this chapter that lasted for four years.
 I'm thankful to all the people who helped me along the way, as I've learned a lot about myself and who I wanted to be.
 The path was long and winding, but I'm happy we made it.
 The next few years will be equally exciting, but I just want to linger in this moment&mdash;that in-between space as you turn the page to another chapter.
-_Padayon!_
+If you've reached this part, dear reader, thank you for reading!
 
 <!-- colored matriculation picture!! -->
 
 [^1]: There are many people in Ai2 who helped me of course: Yanai, Valentina, Faeze, Nathan, Kyle R., Sachin, Shashank, Harsh, Ashish, Hannah and Noah (and much more)! It does take a village. I'm also super thankful to Pradeep, Hanna, and Yizhong who drafted my recommendation letters!
-[^2]: I am also very lucky that my research area at Cambridge is in Multilingual NLP. This aligns neatly with my research interests and experience. I also hope that any advancements or techniques I discover in my main research project transfer to my life project of improving the state of Filipino NLP.
+[^2]: I am also very lucky that my research area at Cambridge is in Multilingual NLP. This aligns neatly with my research interests and experience. I also hope that any advancements or techniques I discover in my PhD research transfer to my life project of improving the state of Filipino NLP.
 [^3]: It's an interesting system: all students also apply to colleges that are akin to "houses" in Harry Potter. I got into [Churchill](https://www.chu.cam.ac.uk/) which focuses on STEM and has the best (according to my research) accommodation.
