@@ -108,22 +108,50 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const paperRect = paperContainer.getBoundingClientRect();
         const paperTop = window.scrollY + paperRect.top;
+        const sidenotes = paperContainer.querySelectorAll('.sidenote');
+        const positions = [];
         
+        // First pass: calculate preferred positions
         footnoteLinks.forEach(function(link, index) {
-            const sidenote = paperContainer.querySelectorAll('.sidenote')[index];
+            const sidenote = sidenotes[index];
             if (sidenote) {
                 const linkRect = link.getBoundingClientRect();
                 const linkTop = linkRect.top + window.scrollY;
                 
                 // Position relative to paper container
                 const relativeTop = linkTop - paperTop;
+                const preferredTop = relativeTop - 10;
                 
-                // Position to the right of the paper with some spacing
-                sidenote.style.position = 'absolute';
-                sidenote.style.left = `calc(100% + 20px)`;
-                sidenote.style.top = `${relativeTop - 10}px`;
+                positions.push({
+                    sidenote: sidenote,
+                    preferredTop: preferredTop,
+                    actualTop: preferredTop,
+                    index: index
+                });
             }
         });
+        
+        // Second pass: resolve overlaps
+        positions.sort((a, b) => a.preferredTop - b.preferredTop);
+        
+        for (let i = 0; i < positions.length; i++) {
+            const current = positions[i];
+            
+            // Check for overlap with previous sidenotes
+            for (let j = 0; j < i; j++) {
+                const previous = positions[j];
+                const previousBottom = previous.actualTop + previous.sidenote.offsetHeight + 10; // 10px gap
+                
+                if (current.actualTop < previousBottom) {
+                    current.actualTop = previousBottom;
+                }
+            }
+            
+            // Apply positioning
+            current.sidenote.style.position = 'absolute';
+            current.sidenote.style.left = `calc(100% + 20px)`;
+            current.sidenote.style.top = `${current.actualTop}px`;
+        }
     }
     
     // Initial positioning
@@ -133,7 +161,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let ticking = false;
     function requestUpdate() {
         if (!ticking) {
-            requestAnimationFrame(updatePositions);
+            requestAnimationFrame(function() {
+                updatePositions();
+                ticking = false;
+            });
             ticking = true;
         }
     }
