@@ -71,7 +71,7 @@ In addition, doing software engineering work on the [Prodigy annotation tool](ht
 _From left to right (2021---2022): view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard._
 {: style="text-align: center;"}
 
-My time at [Ai2](https://allenai.org) as a pre-doc was incredibly formative. 
+My time at [Ai2](https://allenai.org) as a pre-doc was incredibly formative.
 Working alongside experienced researchers gave me a clearer picture of what academic research entailed and helped me identify the qualities I wanted to develop in myself as I grow into this career.
 I was also lucky to be part of large collaborative projects like [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/blog/olmo2) which gave me hands-on experience with frontier model post-training.
 Working at Ai2 gave me a baseline of what high-quality research looks like.[^1]
@@ -133,7 +133,6 @@ Don't make my mistake and keep in mind that fee waivers exist and most universit
 _From left to right (2024-2025): The PhD applications forced me to think whether I want to stay in the US or move again abroad. Some snippets of my life (from left to right): a bike in Roosevelt Island, my apartment at Phinney, a US flag in Grand Central Station._
 {: style="text-align: center;"}
 
-
 By January, I started receiving interview invites.
 I had a mix of interview formats during this cycle: a research presentation, a short 15-20 minute informal chat, and a formal interview.
 The last two weeks of January and the early weeks of February were the most intense, as they involved a lot of waiting and uncertainty.
@@ -154,14 +153,14 @@ Getting into a PhD becomes a life decision more so than a career decision.
 _From left to right (early 2022 and 2023): coffee shop where my wife and I talked about our plans, my room during a Holy Week retreat in Sacred Heart, our engagement ring._
 {: style="text-align: center;"}
 
-Perhaps this is also the reason why some aspects that may be seen as disadvantages in a PhD program became *positives* for me. 
+Perhaps this is also the reason why some aspects that may be seen as disadvantages in a PhD program became _positives_ for me.
 For example, there's a commonly held view that longer programs (6 years, as in the case of US PhDs) will give you more time for research, making you more productive, and, hence, more competitive by the time you graduate.
 However, when I consider other factors outside of my career (e.g., starting a family, stability), shorter 4-year programs become more attractive.
-This is just one of the many considerations, alongside research fit and potential opportunities after graduation.
+This is just one of the many considerations, alongside research fit[^2] and potential opportunities after graduation.
 
-A lot has been written on how to choose PhD programs (my favorite was [Tim Dettmer's post](https://timdettmers.com/2022/03/13/how-to-choose-your-grad-school)). 
+A lot has been written on how to choose PhD programs (my favorite was [Tim Dettmer's post](https://timdettmers.com/2022/03/13/how-to-choose-your-grad-school)).
 In general, this is a good problem to have: several professors have taken a bet on you, and it's your turn to assess which program you see yourself in.
-During one of my visit days, another prospective student told me that "choosing between offers is hard because now it's *real*."
+During one of my visit days, another prospective student told me that "choosing between offers is hard because now it's _real_."
 There's definitely this fear of closing other doors and potential futures&mdash;what if you made the wrong choice?
 It's a decision that will dictate the next four to six years, and maybe the rest of your academic career.
 I just tell myself during those times that this was a good problem to have.
@@ -177,7 +176,7 @@ _Photos during my PhD visit days in NYC._
 {: style="text-align: center;"}
 
 Although choosing a PhD program seems like a cerebral choice that entails a lot of calculus, a large part of my decision-making involved a lot of [discernment](https://www.ignatianspirituality.com/making-good-decisions/an-approach-to-good-choices/an-ignatian-framework-for-making-a-decision/).
-Attuning myself to my [*desires*](https://godinallthings.com/2013/09/02/desire/) and praying over them helped a lot. 
+Attuning myself to my [_desires_](https://godinallthings.com/2013/09/02/desire/) and praying over them helped a lot.
 One thing I've learned during this time is that **I can never make this decision with absolute certainty.**
 Doubt will always be present, and I should welcome that.
 Now that I'm past the hump of PhD applications, I'd like to give back: if you're a Filipino NLP researcher applying for a postgraduate degree abroad, I will help review your research statements.
@@ -186,7 +185,7 @@ In addition, if you're interested in doing research on Tagalog and Filipino NLP 
 ## Final thoughts
 
 It's October, and my wife and I have been here at Cambridge for a month.
-There's a lot to say about Cambridge&mdash;the collegiate system,[^2] the traditions, the culture, and more.
+There's a lot to say about Cambridge&mdash;the collegiate system,[^3] the traditions, the culture, and more.
 Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that we'll be here for a while.
 
 <!-- pictures of Cambridge! -->
@@ -197,10 +196,8 @@ The path was long and winding, but I'm happy we made it.
 The next few years will be equally exciting, but I just want to linger in this moment&mdash;that in-between space as you turn the page to another chapter.
 _Padayon!_
 
-
 <!-- colored matriculation picture!! -->
 
-
 [^1]: There are many people in Ai2 who helped me of course: Yanai, Valentina, Faeze, Nathan, Kyle R., Sachin, Shashank, Harsh, Ashish, Hannah and Noah (and much more)! It does take a village. I'm also super thankful to Pradeep, Hanna, and Yizhong who drafted my recommendation letters!
-
-[^2]: It's an interesting system: all students also apply to colleges that are akin to "houses" in Harry Potter. I got into [Churchill](https://www.chu.cam.ac.uk/) which focuses on STEM and has the best (according to my research) accommodation.
+[^2]: I am also very lucky that my research area at Cambridge is in Multilingual NLP. This aligns neatly with my research interests and experience. I also hope that any advancements or techniques I discover in my main research project transfer to my life project of improving the state of Filipino NLP.
+[^3]: It's an interesting system: all students also apply to colleges that are akin to "houses" in Harry Potter. I got into [Churchill](https://www.chu.cam.ac.uk/) which focuses on STEM and has the best (according to my research) accommodation.
