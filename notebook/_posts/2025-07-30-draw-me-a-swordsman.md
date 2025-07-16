@@ -51,12 +51,40 @@ I evaluated each LLM's output using two criteria, each scored from 1 to 3:
 This project is also a way to wrap my head around the development workflow for MCPs and LLM agents.
 I like framing this set-up similar to reinforcement learning: we instruct an **Agent** (in this case an LLM) to interact with the **Environment** (standardized via MCP) in order to accomplish a task, as shown in the diagram below:
 
-<!-- insert diagram -->
-
 ![](/assets/png/draw-me-a-swordsman/testbed.svg){:width="800px"}  
 _In the tool-calling paradigm, we instruct an Agent to interact with the Environment in order to accomplish a task. The Agent can be implemented via the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) or natively in [Claude Desktop](https://modelcontextprotocol.io/quickstart/user), while the Environment is an MCP server that calls Aseprite commands._
 {: style="text-align: center;"}
 
+### LLM Agent
+
+### MCP Server Environment
+
 ## Results
+
+#### Claude Sonnet
+
+| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| --------------------------- | ---------------------------------------------------------- |
+| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+
+#### GPT-4
+
+| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| --------------------------- | ---------------------------------------------------------- |
+| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+
+#### Llama-3.1-Instruct 70B
+
+| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| --------------------------- | ---------------------------------------------------------- |
+| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+
+#### Qwen 2.5 Instruct 72B
+
+| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| --------------------------- | ---------------------------------------------------------- |
+| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+
+## Thoughts
 
 ## Other cool LLM with pixel art tools
