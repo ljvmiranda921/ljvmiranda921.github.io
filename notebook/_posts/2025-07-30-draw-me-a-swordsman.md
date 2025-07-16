@@ -37,16 +37,16 @@ Unlike generating a single image, sprite sheets demand consistency in character 
 So an LLM should not only call tools correctly, but also reason about animation.
 Here's the human baseline (or my attempt) from the game [_Abyss_](https://ljvmiranda921.itch.io/abyss):
 
-| Task 1             | Task 2             |
-| ------------------ | ------------------ |
-| ![Task 1 Image](#) | ![Task 2 Image](#) |
+| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| --------------------------- | ---------------------------------------------------------- |
+| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
 I evaluated each LLM's output using two criteria, each scored from 1 to 3:
 
 - **Correctness**: Did the LLM follow the instructions accurately?
 - **Creativity**: How original or artistic was the LLM's approach?
 
-## Building the LLM agent testbed
+## The LLM agent testbed
 
 This project is also a way to wrap my head around the development workflow for MCPs and LLM agents.
 I like framing this set-up similar to reinforcement learning: we instruct an **Agent** (in this case an LLM) to interact with the **Environment** (standardized via MCP) in order to accomplish a task, as shown in the diagram below:
