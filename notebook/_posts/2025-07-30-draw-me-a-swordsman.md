@@ -85,6 +85,10 @@ _In the tool-calling paradigm, we instruct an Agent to interact with the Environ
 | --------------------------- | ---------------------------------------------------------- |
 | ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
-## Thoughts
+## Discussion
 
-## Other cool LLM with pixel art tools
+## Final thoughts
+
+**Other cool LLM with pixel art tools**
+
+- **Stuff 1**: hi
