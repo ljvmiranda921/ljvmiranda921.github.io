@@ -53,7 +53,7 @@ I like framing this set-up similar to reinforcement learning: we instruct an **A
 
 <!-- insert diagram -->
 
-![](/assets/png/draw-me-a-swordsman/testbed.svg){:width="700px"}  
+![](/assets/png/draw-me-a-swordsman/testbed.svg){:width="800px"}  
 _In the tool-calling paradigm, we instruct an Agent to interact with the Environment in order to accomplish a task. The Agent can be implemented via the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) or natively in [Claude Desktop](https://modelcontextprotocol.io/quickstart/user), while the Environment is an MCP server that calls Aseprite commands._
 {: style="text-align: center;"}
 
