@@ -222,7 +222,3 @@ Instead of going broad, it went deep to a particular use-case (i.e., coding and 
 I don't have an idea as to how Claude Code was trained, but I imagine that the folks at Anthropic also designed complex test-cases related to software development.
 
 ## Final thoughts
-
-**Other cool LLM with pixel art tools**
-
-- **Stuff 1**: hi
