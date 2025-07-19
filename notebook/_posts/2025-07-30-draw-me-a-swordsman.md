@@ -55,17 +55,46 @@ I like framing this set-up similar to reinforcement learning: we instruct an **A
 _In the tool-calling paradigm, we instruct an Agent to interact with the Environment in order to accomplish a task. The Agent can be implemented via the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) or natively in [Claude Desktop](https://modelcontextprotocol.io/quickstart/user), while the Environment is an MCP server that calls Aseprite commands._
 {: style="text-align: center;"}
 
+### MCP Server Environment
+
+
 ### LLM Agent
 
 The **Agent** has access to tools that interact with the execution environment in order to accomplish a task.
 We use language models like GPT-4.1 or Clade Sonnet 4, some of which were trained for tool-use, as agents.
-Models with tool-use capabilities can output function calls based on a set of tools found in its context or system prompt.
-These function calls are then parsed by an intermediary layer such as the MCP server and then passed down to the execution environment.
+Models with tool-use capabilities can output function calls based on the tools present in their system prompt.
+These function calls are then parsed by an intermediary layer such as an MCP server and then passed down to the execution environment.
+
+I used the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) to build the Aseprite agent.
+The implementation is quite straightforward: I just need to create an instance of an `Agent` class and let it interact with the execution environment (`mcp_servers=[server]`).
+For open-weight models, I host them as an [OpenAI-compatible vLLM server](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) and pass the server URL to a [LiteLLM proxy](https://docs.litellm.ai/docs/providers/openai_compatible) when instantiating the `Agent` class.
 
 
-I used the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) to build an Aseprite agent.
+```python
+async with mcp_server as server:
+    with trace(workflow_name=workflow_name):
+      if "model" in openai_models:
+        model = model_name
+      else:
+        # Use Litellm
+        model = LitellmModel(
+            model="hosted_vllm/" + model_name,
+            base_url=agent_url,
+            api_key=api_key,
+        )
+        
+      agent = Agent(
+          name="Assistant",
+          instructions=system_prompt,
+          model=model,
+          mcp_servers=[server],
+      )
 
-### MCP Server Environment
+      result = await Runner.run(starting_agent=agent, input=request)
+```
+
+When an `Agent` is instantiated, it now contains information on what model it's using (`model`), its `system_prompt`, and the `mcp_servers` it is connected to. 
+To initiate an interaction between the `Agent` and the MCP server, we simply pass the agent to a `Runner` class with our actual request as `input` (i.e., "Draw me a swordsman...").
 
 ## Results
 
