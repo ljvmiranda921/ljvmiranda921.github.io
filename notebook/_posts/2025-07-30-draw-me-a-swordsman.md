@@ -59,6 +59,13 @@ _In the tool-calling paradigm, we instruct an Agent to interact with the Environ
 
 ### MCP Server Environment
 
+The **Environment** receives commands from the Agent, executes them, and provides some feedback that the agent can use for its next action.
+Recently, Anthropic has released the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) which provides a standardized interface to expose how any given environment can be interacted upon by the Agent.
+I usually think of MCP as a standardized set of affordances for the Agent.
+
+For this project, I used the Aseprite MCP implementation from [divii/aseprite-mcp](https://github.com/diivi/aseprite-mcp) with some slight modifications and bug fixes.
+The Aseprite MCP server exposes the following tools:
+
 ### LLM Agent
 
 The **Agent** has access to tools that interact with the execution environment in order to accomplish a task.
