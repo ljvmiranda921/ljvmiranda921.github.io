@@ -59,9 +59,9 @@ _In the tool-calling paradigm, we instruct an Agent to interact with the Environ
 
 ### MCP Server Environment
 
-The **Environment** receives commands from the Agent, executes them, and provides some feedback that the agent can use for its next action.
-Recently, Anthropic has released the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) which provides a common interface to expose how any given environment can be interacted upon by the Agent.
-I usually think of MCP as a standardized set of affordances for the Agent.
+The **Environment** receives commands from the Agent, executes them, and provides feedback that the agent can use for its next action.
+Recently, Anthropic released the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction), which provides a common interface for how agents can interact with any given environment.
+I think of MCP as a standardized set of affordances for the Agent.
 
 For this project, I used the Aseprite MCP implementation from [divii/aseprite-mcp](https://github.com/diivi/aseprite-mcp) with some slight modifications and bug fixes.
 The Aseprite MCP server exposes the following tools:
@@ -107,10 +107,10 @@ You can find the full implementation of the Aseprite MCP server in [this reposit
 
 ### LLM Agent
 
-The **Agent** has access to tools that interact with the execution environment in order to accomplish a task.
-We use language models like GPT-4.1 or Clade Sonnet 4, some of which were trained for tool-use, as agents.
-Models with tool-use capabilities can output function calls based on the tools present in their system prompt.
-These function calls are then parsed by an intermediary layer such as an MCP server and then passed down to the execution environment.
+The **Agent** has access to tools that interact with the execution environment to accomplish a task.
+We use language models like GPT-4.1 or Claude Sonnet 4&mdash;some of which were trained for tool-use&mdash;as agents.
+Models with tool-use capabilities can output function calls based on the tools in their system prompt.
+These function calls are parsed by an intermediary layer (such as an MCP server) and passed to the execution environment.
 
 I used the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) to build the Aseprite agent.
 The implementation is quite straightforward: I just need to create an instance of an `Agent` class and let it interact with the execution environment (`mcp_servers=[server]`).
@@ -139,8 +139,8 @@ async with mcp_server as server:
       result = await Runner.run(starting_agent=agent, input=request)
 ```
 
-When an `Agent` is instantiated, it now contains information about the `model` it is using, its `system_prompt`, and the `mcp_servers` it is connected to.
-I had to experiment a bit on what the system prompt looks like, in the end, using the prompt below gave me the most decent results:
+When an `Agent` is instantiated, it contains information about the `model` it's using, its `system_prompt`, and the `mcp_servers` it's connected to.
+I experimented with different system prompts&mdash;the one below gave me the best results:
 
 > You are a creative and artistic function-calling agent that can use pixel art
 > tools to perform a drawing task. You have a good knowledge of color, form, and
