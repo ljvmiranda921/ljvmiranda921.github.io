@@ -200,7 +200,15 @@ Perhaps this is the reason why the resulting artworks look blocky and basic comp
 From a **developer's perspective**, choosing which tools to expose and their task granularity (e.g., drawing pixels -> drawing shapes) is an important aspect of MCP server design.
 Most models will just work within the constraints of the tools you provided, so figuring out which tool will give you the right amount of leverage from a "very-smart-assistant" is paramount.
 
-###
+From a **modelling perspective**, it might be interesting to endow models with the capability to create their own tools or to assess the quality of the tools provided to them.
+I've actually seen this in Claude Code, where it tries to write a Python script to perform a more complicated task.
+There's a lot of long-horizon tasks that makes this research area quite exciting!
+
+### Not all tasks or use-cases require a tool-calling LLM
+
+When I started this project, I was excited about the prospect of having a language model interact with a program I've been using.
+Now, I realized that _maybe_, drawing pixel art is not the best use-case for a tool-calling LLM.
+Creating an MCP server requires a lot of time investment, and I could've just obtained some inspiration from an image generation model or Pinterest and drew the swordsman myself.
 
 ## Final thoughts
 
