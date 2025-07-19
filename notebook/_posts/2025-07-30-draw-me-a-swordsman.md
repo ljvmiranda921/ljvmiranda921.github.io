@@ -217,6 +217,10 @@ From a **researcher's perspective**, I think it's also time to assess whether th
 Some of these were scraped from GitHub or other API repositories, but the affordance of these APIs are very different from how tools are actually used.
 For example, the `draw_pixel` function from my MCP server might be a valid test-case, but it does not truly reflect the complexity and sequential nature of a tool-calling task.
 
+Perhaps this is also the reason why Claude Code has worked so well and gained a lot of traction in the developer community.
+Instead of going broad, it went deep to a particular use-case (i.e., coding and development) and started optimizing that.
+I don't have an idea as to how Claude Code was trained, but I imagine that the folks at Anthropic also designed complex test-cases related to software development.
+
 ## Final thoughts
 
 **Other cool LLM with pixel art tools**
