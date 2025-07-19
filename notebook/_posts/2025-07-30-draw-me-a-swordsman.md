@@ -35,7 +35,7 @@ Task 2 is interesting because creating sprite sheets is a common use-case in gam
 I also think it's challenging for LLMs because it requires understanding of sequence: each frame must logically follow the previous one to create a believable animation.
 Unlike generating a single image, sprite sheets demand consistency in character design, progression, and timing.
 So an LLM should not only call tools correctly, but also reason about animation.
-Here's the human baseline (or my attempt) from the game [_Abyss_](https://ljvmiranda921.itch.io/abyss):
+Here's a human baseline from a [game](https://ljvmiranda921.itch.io/abyss) I made a few years ago:
 
 | Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
@@ -60,7 +60,7 @@ _In the tool-calling paradigm, we instruct an Agent to interact with the Environ
 ### MCP Server Environment
 
 The **Environment** receives commands from the Agent, executes them, and provides some feedback that the agent can use for its next action.
-Recently, Anthropic has released the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) which provides a standardized interface to expose how any given environment can be interacted upon by the Agent.
+Recently, Anthropic has released the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) which provides a common interface to expose how any given environment can be interacted upon by the Agent.
 I usually think of MCP as a standardized set of affordances for the Agent.
 
 For this project, I used the Aseprite MCP implementation from [divii/aseprite-mcp](https://github.com/diivi/aseprite-mcp) with some slight modifications and bug fixes.
@@ -101,6 +101,9 @@ async def draw_pixels(filename: Path, pixels: list[dict[str, Any]]) -> str:
     execute_lua_command(script)
     ...
 ```
+
+Then, the function `execute_lua_command` calls the `aseprite` executable and passes the Lua script to the `--script` argument.
+You can find the full implementation of the Aseprite MCP server in [this repository](https://github.com/ljvmiranda921/scratch/tree/master/2025-07-11-aseprite-mcp/aseprite_mcp).
 
 ### LLM Agent
 
