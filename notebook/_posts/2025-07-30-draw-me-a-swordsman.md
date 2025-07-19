@@ -46,6 +46,8 @@ I evaluated each LLM's output using two criteria, each scored from 1 to 3:
 - **Correctness**: Did the LLM follow the instructions accurately?
 - **Creativity**: How original or artistic was the LLM's approach?
 
+**You can find the full code [on GitHub](https://github.com/ljvmiranda921/scratch/tree/master/2025-07-11-aseprite-mcp)**
+
 ## The LLM agent testbed
 
 This project is also a way to wrap my head around the development workflow for MCPs and LLM agents.
@@ -101,7 +103,7 @@ movement.  Your output must always be saved as an image file in the PNG format.
 If you encounter an error, find a way to resolve it using other available tools.
 ```
 
-To initiate an interaction between the `Agent` and the MCP server, we simply pass the agent to a `Runner` class with our actual request as `input` (i.e., "Draw me a swordsman...").
+To initiate an interaction between the `Agent` and the MCP server, we simply pass the agent to a `Runner` class with our actual request as `input`.
 
 ## Results
 
