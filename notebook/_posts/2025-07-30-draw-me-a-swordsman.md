@@ -195,26 +195,23 @@ The Aseprite MCP server exposes basic primitives&mdash;from drawing a single pix
 In reality, pixel artists use many other Aseprite features: color pickers, multiple onion frames for animations, and more.
 This might explain why the resulting artworks look blocky and basic compared to human-created art.
 
-From a **developer's perspective**, choosing which tools to expose and their granularity (e.g., drawing pixels &rarr; drawing shapes) is crucial for MCP server design.
+From a developer's perspective, choosing **which tools to expose and their granularity** (e.g., drawing pixels &rarr; drawing shapes) is crucial for MCP server design.
 Most models work within the constraints of provided tools, so determining which tools to build gives you the right leverage from a "very-smart-assistant."
-
-From a **researcher's perspective**, it would be interesting to endow models with the capability to create their own tools or assess tool quality.
+From a researcher's perspective, it would be interesting to endow models with the capability to create their own tools or assess tool quality.
 I've seen this in Claude Code, where it writes Python scripts to perform complex tasks.
-There are many long-horizon tasks that make this research area exciting!
+There are many long-horizon tasks that make this area exciting!
 
 ### Not all tasks or use-cases require a tool-calling LLM
 
 When I started this project, I was excited about having a language model interact with a program I've been using.
 Now I realize that drawing pixel art might not be the best use-case for a tool-calling LLM.
 Creating an MCP server requires significant time investment&mdash;I could have just drawn inspiration from an image generation model or Pinterest and created the swordsman myself.
-
 Better Aseprite MCP use-cases might include asking an AI assistant to export drawings into Godot-compatible spritesheets, recolor artwork with different palettes, or correct pixel dimensions for isometric art.
 There are many possibilities for augmenting human workflows with tool-use LLMs.
 
-From a **researcher's perspective**, it's worth assessing whether domains and use-cases in famous benchmarks like BFCL truly reflect how tool-calling LLMs are used.
+From a researcher's perspective, it's worth **assessing whether domains and use-cases in famous benchmarks like BFCL truly reflect how tool-calling LLMs are used.**
 Many of these were scraped from GitHub or API repositories, but these APIs' affordances differ greatly from actual tool usage.
 For example, the `draw_pixel` function from my MCP server might be a valid test case, but it doesn't reflect the complexity and sequential nature of real tool-calling tasks.
-
 Perhaps this explains why Claude Code has worked so well and gained traction in the developer community.
 Instead of going broad, it went deep into a particular use-case&mdash;software development&mdash;and optimized for that.[^1]
 
