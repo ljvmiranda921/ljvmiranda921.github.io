@@ -57,7 +57,6 @@ _In the tool-calling paradigm, we instruct an Agent to interact with the Environ
 
 ### MCP Server Environment
 
-
 ### LLM Agent
 
 The **Agent** has access to tools that interact with the execution environment in order to accomplish a task.
@@ -68,7 +67,6 @@ These function calls are then parsed by an intermediary layer such as an MCP ser
 I used the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) to build the Aseprite agent.
 The implementation is quite straightforward: I just need to create an instance of an `Agent` class and let it interact with the execution environment (`mcp_servers=[server]`).
 For open-weight models, I host them as an [OpenAI-compatible vLLM server](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) and pass the server URL to a [LiteLLM proxy](https://docs.litellm.ai/docs/providers/openai_compatible) when instantiating the `Agent` class.
-
 
 ```python
 async with mcp_server as server:
@@ -82,7 +80,7 @@ async with mcp_server as server:
             base_url=agent_url,
             api_key=api_key,
         )
-        
+
       agent = Agent(
           name="Assistant",
           instructions=system_prompt,
@@ -93,7 +91,16 @@ async with mcp_server as server:
       result = await Runner.run(starting_agent=agent, input=request)
 ```
 
-When an `Agent` is instantiated, it now contains information on what model it's using (`model`), its `system_prompt`, and the `mcp_servers` it is connected to. 
+When an `Agent` is instantiated, it now contains information about the `model` it is using, its `system_prompt`, and the `mcp_servers` it is connected to.
+I had to experiment a bit on what the system prompt looks like, in the end, using the prompt below gave me the most decent results:
+
+```
+You are a creative and artistic function-calling agent that can use pixel art
+tools to perform a drawing task. You have a good knowledge of color, form, and
+movement.  Your output must always be saved as an image file in the PNG format.
+If you encounter an error, find a way to resolve it using other available tools.
+```
+
 To initiate an interaction between the `Agent` and the MCP server, we simply pass the agent to a `Runner` class with our actual request as `input` (i.e., "Draw me a swordsman...").
 
 ## Results
@@ -110,7 +117,6 @@ To initiate an interaction between the `Agent` and the MCP server, we simply pas
 | --------------------------- | ---------------------------------------------------------- |
 | ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
-
 #### Claude Opus
 
 | Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
@@ -123,14 +129,13 @@ To initiate an interaction between the `Agent` and the MCP server, we simply pas
 | --------------------------- | ---------------------------------------------------------- |
 | ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
-
-#### Llama-3.1-Instruct 70B
+#### Qwen 3 32B
 
 | Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
 | ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
-#### Qwen 2.5 Instruct 72B
+#### Llama-3.1-Instruct 70B
 
 | Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
