@@ -185,17 +185,22 @@ To initiate an interaction between the `Agent` and the MCP server, we simply pas
 
 ## Discussion
 
-Recently, I've been researching how to endow models with tool-use capabilities.
+Recently, I've been conducting research on endowing models with tool-use capabilities.
 I've been too deep into the modelling side, and it's interesting to see and address some of my knowledge gaps from a developer's perspective.
-I'd like to share some of my learnings here:
+I'd like to share some of my learnings below.
 
-- **Function-calling models are heavily constrained by the tools available to them.**
-  The Aseprite MCP server exposes some basic primitives from drawing a single pixel to basic shapes.
-  In reality, pixel artists use different features from Aseprite such as a color picker, multiple onion frames for animations, and more.
-  Perhaps this is the reason why the resulting artworks look blocky and basic compared to those created by human artists.
+### Models are constrained by the tools available to them
 
-  From a **developer's perspective**, choosing which tools to expose and their task granularity (e.g., drawing pixels -> drawing shapes) is an important aspect of MCP server design.
-  Most models will just work within the constraints of the tools you provided,
+> _"Give me a lever long enough and a fulcrum on which to place it, and I shall move the world."_
+
+The Aseprite MCP server exposes some basic primitives from drawing a single pixel to basic shapes.
+In reality, pixel artists use different features from Aseprite such as a color picker, multiple onion frames for animations, and more.
+Perhaps this is the reason why the resulting artworks look blocky and basic compared to those created by human artists.
+
+From a **developer's perspective**, choosing which tools to expose and their task granularity (e.g., drawing pixels -> drawing shapes) is an important aspect of MCP server design.
+Most models will just work within the constraints of the tools you provided, so figuring out which tool will give you the right amount of leverage from a "very-smart-assistant" is paramount.
+
+###
 
 ## Final thoughts
 
