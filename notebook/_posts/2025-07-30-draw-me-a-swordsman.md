@@ -34,7 +34,7 @@ The characters in Task 1 and Task 2 don't have to be the same.
 Task 2 is interesting because creating sprite sheets is a common use-case in game dev.
 I also think it's challenging for LLMs because it requires understanding of sequence: each frame must logically follow the previous one to create a believable animation.
 Unlike generating a single image, sprite sheets demand consistency in character design, progression, and timing.
-So an LLM should not only call tools correctly, but also reason about animation.
+
 Here's a human baseline from a [game](https://ljvmiranda921.itch.io/abyss) I made a few years ago:
 
 | Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
@@ -142,12 +142,10 @@ async with mcp_server as server:
 When an `Agent` is instantiated, it now contains information about the `model` it is using, its `system_prompt`, and the `mcp_servers` it is connected to.
 I had to experiment a bit on what the system prompt looks like, in the end, using the prompt below gave me the most decent results:
 
-```
-You are a creative and artistic function-calling agent that can use pixel art
-tools to perform a drawing task. You have a good knowledge of color, form, and
-movement.  Your output must always be saved as an image file in the PNG format.
-If you encounter an error, find a way to resolve it using other available tools.
-```
+> You are a creative and artistic function-calling agent that can use pixel art
+> tools to perform a drawing task. You have a good knowledge of color, form, and
+> movement.  Your output must always be saved as an image file in the PNG format.
+> If you encounter an error, find a way to resolve it using other available tools.
 
 To initiate an interaction between the `Agent` and the MCP server, we simply pass the agent to a `Runner` class with our actual request as `input`.
 
@@ -218,9 +216,14 @@ Some of these were scraped from GitHub or other API repositories, but the afford
 For example, the `draw_pixel` function from my MCP server might be a valid test-case, but it does not truly reflect the complexity and sequential nature of a tool-calling task.
 
 Perhaps this is also the reason why Claude Code has worked so well and gained a lot of traction in the developer community.
-Instead of going broad, it went deep to a particular use-case (i.e., coding and development) and started optimizing that.[^1]
-I don't have an idea as to how Claude Code was trained, but I imagine that the folks at Anthropic also designed complex test-cases related to software development.
+Instead of going broad, it went deep to a particular use-case (i.e., software development) and started optimizing that.[^1]
 
 ## Final thoughts
+
+In this blog post, I learned a lot about developer tooling for Agents by letting function-calling LLMs interact with Aseprite.
+The results were quite mixed: Claude Opus 4 seems to generate the most creative pixel art while following my instructions.
+I was also surprised that models like GPT-4 aren't that creative.
+This exercise also revealed interesting avenues for further work.
+Specifically, I'm 
 
 [^1]: Maybe instead of focusing on a domain (e.g. coding, general chat, graphic design) when developing and evaluating models, we focus on a certain profession or occupation (i.e., software developer, executive assistant, designer).
