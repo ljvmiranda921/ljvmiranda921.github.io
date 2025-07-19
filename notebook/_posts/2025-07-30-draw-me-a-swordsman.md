@@ -66,6 +66,19 @@ I usually think of MCP as a standardized set of affordances for the Agent.
 For this project, I used the Aseprite MCP implementation from [divii/aseprite-mcp](https://github.com/diivi/aseprite-mcp) with some slight modifications and bug fixes.
 The Aseprite MCP server exposes the following tools:
 
+| Tool Name          | Description                                                                  |
+| ------------------ | ---------------------------------------------------------------------------- |
+| **create_canvas**  | Create a new Aseprite canvas with specific dimensions                        |
+| **add_layer**      | Add a new layer to an existing Aseprite file with a specified layer name     |
+| **add_frame**      | Add a new frame to an existing Aseprite file for animation purposes          |
+| **draw_pixels**    | Draw individual pixels on the canvas with coordinates and hex colors         |
+| **draw_line**      | Draw a line between two points with customizable color and thickness         |
+| **draw_rectangle** | Draw a rectangle with specified position, dimensions, color, and fill        |
+| **fill_area**      | Fill an area with color using a paint bucket tool from a starting coordinate |
+| **draw_circle**    | Draw a circle with specified center point, radius, color, and optional fill  |
+| **export_sprite**  | Export the Aseprite file to other formats like PNG, GIF, JPG, etc.           |
+| **preview_image**  | Read and display an image file as base64 data for preview purposes           |
+
 ### LLM Agent
 
 The **Agent** has access to tools that interact with the execution environment in order to accomplish a task.
