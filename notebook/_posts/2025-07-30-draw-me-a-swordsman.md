@@ -198,7 +198,7 @@ In reality, pixel artists use different features from Aseprite such as a color p
 Perhaps this is the reason why the resulting artworks look blocky and basic compared to those created by human artists.
 
 From a **developer's perspective**, choosing which tools to expose and their task granularity (e.g., drawing pixels -> drawing shapes) is an important aspect of MCP server design.
-Most models will just work within the constraints of the tools you provided, so figuring out which tool will give you the right amount of leverage from a "very-smart-assistant" is paramount.
+Most models will just work within the constraints of the tools you provided, so figuring out which tool to write will give you the right amount of leverage from a "very-smart-assistant" is paramount.
 
 From a **researcher's perspective**, it might be interesting to endow models with the capability to create their own tools or to assess the quality of the tools provided to them.
 I've actually seen this in Claude Code, where it tries to write a Python script to perform a more complicated task.
@@ -212,6 +212,10 @@ Creating an MCP server requires a lot of time investment, and I could've just ob
 
 An Aseprite MCP use-case might be to ask an AI assistant to export my drawings into a Godot-compatible spritesheet, recolor my current drawing into a different color palette, or correct the pixel dimensions of all objects in an isometric art.
 There are a lot of possibilities that involve augmenting the human workflow, especially for tool-use LLMs.
+
+From a **researcher's perspective**, I think it's also time to assess whether the domains and use-cases in famous benchmarks like BFCL truly reflect how most tool-calling LLMs are used.
+Some of these were scraped from GitHub or other API repositories, but the affordance of these APIs are very different from how tools are actually used.
+For example, the `draw_pixel` function from my MCP server might be a valid test-case, but it does not truly reflect the complexity and sequential nature of a tool-calling task.
 
 ## Final thoughts
 
