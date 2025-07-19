@@ -61,13 +61,25 @@ _In the tool-calling paradigm, we instruct an Agent to interact with the Environ
 
 ## Results
 
+#### Claude Opus
+
+| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| --------------------------- | ---------------------------------------------------------- |
+| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+
 #### Claude Sonnet
 
 | Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
 | ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
-#### GPT-4
+#### GPT-4.1
+
+| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| --------------------------- | ---------------------------------------------------------- |
+| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+
+#### GPT-4o
 
 | Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
