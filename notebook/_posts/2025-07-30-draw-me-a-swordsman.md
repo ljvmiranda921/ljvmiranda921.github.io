@@ -184,51 +184,51 @@ To initiate an interaction between the `Agent` and the MCP server, we simply pas
 ## Discussion
 
 Recently, I've been conducting research on endowing models with tool-use capabilities.
-I've been too deep into the modelling side, and it's interesting to see and address some of my knowledge gaps from a developer's perspective.
-I'd like to share some of my learnings below.
+I've been deep in the modeling side, so it's interesting to see and address some knowledge gaps from a developer's perspective.
+Here are some of my learnings:
 
 ### Models are constrained by the tools available to them
 
 > _"Give me a lever long enough and a fulcrum on which to place it, and I shall move the world."_
 
-The Aseprite MCP server exposes some basic primitives from drawing a single pixel to basic shapes.
-In reality, pixel artists use different features from Aseprite such as a color picker, multiple onion frames for animations, and more.
-Perhaps this is the reason why the resulting artworks look blocky and basic compared to those created by human artists.
+The Aseprite MCP server exposes basic primitives&mdash;from drawing a single pixel to basic shapes.
+In reality, pixel artists use many other Aseprite features: color pickers, multiple onion frames for animations, and more.
+This might explain why the resulting artworks look blocky and basic compared to human-created art.
 
-From a **developer's perspective**, choosing which tools to expose and their task granularity (e.g., drawing pixels -> drawing shapes) is an important aspect of MCP server design.
-Most models will just work within the constraints of the tools you provided, so figuring out which tool to write will give you the right amount of leverage from a "very-smart-assistant" is paramount.
+From a **developer's perspective**, choosing which tools to expose and their granularity (e.g., drawing pixels &rarr; drawing shapes) is crucial for MCP server design.
+Most models work within the constraints of provided tools, so determining which tools to build gives you the right leverage from a "very-smart-assistant."
 
-From a **researcher's perspective**, it might be interesting to endow models with the capability to create their own tools or to assess the quality of the tools provided to them.
-I've actually seen this in Claude Code, where it tries to write a Python script to perform a more complicated task.
-There's a lot of long-horizon tasks that makes this research area quite exciting!
+From a **researcher's perspective**, it would be interesting to endow models with the capability to create their own tools or assess tool quality.
+I've seen this in Claude Code, where it writes Python scripts to perform complex tasks.
+There are many long-horizon tasks that make this research area exciting!
 
 ### Not all tasks or use-cases require a tool-calling LLM
 
-When I started this project, I was excited about the prospect of having a language model interact with a program I've been using.
-Now, I realized that _maybe_, drawing pixel art is not the best use-case for a tool-calling LLM.
-Creating an MCP server requires a lot of time investment, and I could've just obtained some inspiration from an image generation model or Pinterest and drew the swordsman myself.
+When I started this project, I was excited about having a language model interact with a program I've been using.
+Now I realize that drawing pixel art might not be the best use-case for a tool-calling LLM.
+Creating an MCP server requires significant time investment&mdash;I could have just drawn inspiration from an image generation model or Pinterest and created the swordsman myself.
 
-An Aseprite MCP use-case might be to ask an AI assistant to export my drawings into a Godot-compatible spritesheet, recolor my current drawing into a different color palette, or correct the pixel dimensions of all objects in an isometric art.
-There are a lot of possibilities that involve augmenting the human workflow, especially for tool-use LLMs.
+Better Aseprite MCP use-cases might include asking an AI assistant to export drawings into Godot-compatible spritesheets, recolor artwork with different palettes, or correct pixel dimensions for isometric art.
+There are many possibilities for augmenting human workflows with tool-use LLMs.
 
-From a **researcher's perspective**, I think it's also time to assess whether the domains and use-cases in famous benchmarks like BFCL truly reflect how most tool-calling LLMs are used.
-Some of these were scraped from GitHub or other API repositories, but the affordance of these APIs are very different from how tools are actually used.
-For example, the `draw_pixel` function from my MCP server might be a valid test-case, but it does not truly reflect the complexity and sequential nature of a tool-calling task.
+From a **researcher's perspective**, it's worth assessing whether domains and use-cases in famous benchmarks like BFCL truly reflect how tool-calling LLMs are used.
+Many of these were scraped from GitHub or API repositories, but these APIs' affordances differ greatly from actual tool usage.
+For example, the `draw_pixel` function from my MCP server might be a valid test case, but it doesn't reflect the complexity and sequential nature of real tool-calling tasks.
 
-Perhaps this is also the reason why Claude Code has worked so well and gained a lot of traction in the developer community.
-Instead of going broad, it went deep to a particular use-case (i.e., software development) and started optimizing that.[^1]
+Perhaps this explains why Claude Code has worked so well and gained traction in the developer community.
+Instead of going broad, it went deep into a particular use-case&mdash;software development&mdash;and optimized for that.[^1]
 
 ## Final thoughts
 
-In this blog post, I learned a lot about developer tooling for Agents by letting function-calling LLMs interact with Aseprite.
-The results were quite mixed: Claude Opus 4 seems to generate the most creative pixel art while following my instructions.
-I was also surprised that models like GPT-4 aren't that creative.
-This exercise also revealed interesting avenues for further work.
-Specifically, I'm curious how we can endow LLMs that capability to create their own tools when necessary. 
-I'm also interested in evaluation, especially on more complex and domain-specific tasks.
-Finally, I'm glad that I'm starting to understand why MCP (or a general protocol for LLM interaction) is important.
-Writing an MCP server feels more convenient than doing all of these as REST endpoints.
-It's still too early to say, but I hope that MCP becomes more prevalent in the future.
+In this blog post, I learned about developer tooling for agents by having function-calling LLMs interact with Aseprite.
+The results were mixed: Claude Opus 4 generated the most creative pixel art while following instructions.
+I was surprised that models like GPT-4 weren't very creative.
+This exercise revealed interesting avenues for future work.
+I'm curious about endowing LLMs with the capability to create their own tools when necessary.
+I'm also interested in evaluation, especially for complex and domain-specific tasks.
+Finally, I'm starting to understand why MCP&mdash;or a general protocol for LLM interaction&mdash;is important.
+Writing an MCP server feels more convenient than building REST endpoints.
+It's still early, but I hope MCP becomes more prevalent in the future.
 
 
 [^1]: Maybe instead of focusing on a domain (e.g. coding, general chat, graphic design) when developing and evaluating models, we focus on a certain profession or occupation (i.e., software developer, executive assistant, designer).
