@@ -183,12 +183,6 @@ To initiate an interaction between the `Agent` and the MCP server, we simply pas
 | --------------------------- | ---------------------------------------------------------- |
 | ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
-#### Llama-3.1-Instruct 70B
-
-| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
-| --------------------------- | ---------------------------------------------------------- |
-| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
-
 ## Discussion
 
 ## Final thoughts
