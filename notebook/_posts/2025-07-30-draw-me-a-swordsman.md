@@ -57,9 +57,30 @@ _In the tool-calling paradigm, we instruct an Agent to interact with the Environ
 
 ### LLM Agent
 
+The **Agent** has access to tools that interact with the execution environment in order to accomplish a task.
+We use language models like GPT-4.1 or Clade Sonnet 4, some of which were trained for tool-use, as agents.
+Models with tool-use capabilities can output function calls based on a set of tools found in its context or system prompt.
+These function calls are then parsed by an intermediary layer such as the MCP server and then passed down to the execution environment.
+
+
+I used the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) to build an Aseprite agent.
+
 ### MCP Server Environment
 
 ## Results
+
+#### GPT-4o
+
+| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| --------------------------- | ---------------------------------------------------------- |
+| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+
+#### GPT-4.1
+
+| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| --------------------------- | ---------------------------------------------------------- |
+| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+
 
 #### Claude Opus
 
@@ -73,17 +94,6 @@ _In the tool-calling paradigm, we instruct an Agent to interact with the Environ
 | --------------------------- | ---------------------------------------------------------- |
 | ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
-#### GPT-4.1
-
-| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
-| --------------------------- | ---------------------------------------------------------- |
-| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
-
-#### GPT-4o
-
-| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
-| --------------------------- | ---------------------------------------------------------- |
-| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
 #### Llama-3.1-Instruct 70B
 
