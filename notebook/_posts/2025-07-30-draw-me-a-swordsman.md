@@ -224,6 +224,11 @@ In this blog post, I learned a lot about developer tooling for Agents by letting
 The results were quite mixed: Claude Opus 4 seems to generate the most creative pixel art while following my instructions.
 I was also surprised that models like GPT-4 aren't that creative.
 This exercise also revealed interesting avenues for further work.
-Specifically, I'm 
+Specifically, I'm curious how we can endow LLMs that capability to create their own tools when necessary. 
+I'm also interested in evaluation, especially on more complex and domain-specific tasks.
+Finally, I'm glad that I'm starting to understand why MCP (or a general protocol for LLM interaction) is important.
+Writing an MCP server feels more convenient than doing all of these as REST endpoints.
+It's still too early to say, but I hope that MCP becomes more prevalent in the future.
+
 
 [^1]: Maybe instead of focusing on a domain (e.g. coding, general chat, graphic design) when developing and evaluating models, we focus on a certain profession or occupation (i.e., software developer, executive assistant, designer).
