@@ -79,6 +79,29 @@ The Aseprite MCP server exposes the following tools:
 | **export_sprite**  | Export the Aseprite file to other formats like PNG, GIF, JPG, etc.           |
 | **preview_image**  | Read and display an image file as base64 data for preview purposes           |
 
+Under the hood, these tools are Lua commands that are sent to the `aseprite` executable.
+For example, the `draw_pixels` tool call is simply a series of `img:putPixel` commands for drawing pixels:
+
+```python
+@mcp.tool()
+async def draw_pixels(filename: Path, pixels: list[dict[str, Any]]) -> str:
+    ...
+    for pixel in pixels:
+      x, y = pixel.get("x", 0), pixel.get("y", 0)
+      color = pixel.get("color", "#000000")
+      # Convert hex to RGB
+      color = color.lstrip("#")
+      r, g, b = int(color[0:2], 16), int(color[2:4], 16), int(color[4:6], 16)
+
+      script += f"""
+      img:putPixel({x}, {y}, Color({r}, {g}, {b}, 255))
+      """
+
+    # Submit the script to Aseprite
+    execute_lua_command(script)
+    ...
+```
+
 ### LLM Agent
 
 The **Agent** has access to tools that interact with the execution environment in order to accomplish a task.
