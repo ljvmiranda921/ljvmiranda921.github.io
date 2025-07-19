@@ -48,7 +48,7 @@ I evaluated each LLM's output using two criteria, each scored from 1 to 3:
 
 **You can find the full code [on GitHub](https://github.com/ljvmiranda921/scratch/tree/master/2025-07-11-aseprite-mcp)**
 
-## The LLM agent testbed
+## Setting up the Agent-Environment Interaction
 
 This project also helped me understand the development workflow for MCPs and LLM agents.
 I like framing this setup similar to reinforcement learning: we instruct an **Agent** (an LLM) to interact with the **Environment** (standardized via MCP) to accomplish a task, as shown in the diagram below:
@@ -105,7 +105,7 @@ async def draw_pixels(filename: Path, pixels: list[dict[str, Any]]) -> str:
 Then, the function `execute_lua_command` calls the `aseprite` executable and passes the Lua script to the `--script` argument.
 You can find the full implementation of the Aseprite MCP server in [this repository](https://github.com/ljvmiranda921/scratch/tree/master/2025-07-11-aseprite-mcp/aseprite_mcp).
 
-### LLM Agent
+### Large Language Model Agent
 
 The **Agent** has access to tools that interact with the execution environment to accomplish a task.
 We use language models like GPT-4.1 or Claude Sonnet 4&mdash;some of which were trained for tool-use&mdash;as agents.
@@ -119,16 +119,7 @@ For open-weight models, I host them as an [OpenAI-compatible vLLM server](https:
 ```python
 async with mcp_server as server:
     with trace(workflow_name=workflow_name):
-      if "model" in openai_models:
-        model = model_name
-      else:
-        # Use Litellm
-        model = LitellmModel(
-            model="hosted_vllm/" + model_name,
-            base_url=agent_url,
-            api_key=api_key,
-        )
-
+      model = get_model(model_name)
       agent = Agent(
           name="Assistant",
           instructions=system_prompt,
@@ -136,7 +127,10 @@ async with mcp_server as server:
           mcp_servers=[server],
       )
 
-      result = await Runner.run(starting_agent=agent, input=request)
+      result = await Runner.run(
+        starting_agent=agent, 
+        input=request,
+      )
 ```
 
 When an `Agent` is instantiated, it contains information about the `model` it's using, its `system_prompt`, and the `mcp_servers` it's connected to.
