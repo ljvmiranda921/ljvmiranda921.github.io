@@ -192,7 +192,15 @@ This is a good and earnest try.
 | --------------------------- | ---------------------------------------------------------- |
 | <img src="/assets/png/draw-me-a-swordsman/gpt-4.1_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/gpt-4.1_spritesheet.png" alt="task 2 image" width="500"/> |
 
+GPT-4.1 shows a marked improvement over GPT-4o.
+The Task 1 swordsman is much more recognizable&mdash;there's a clear humanoid figure with distinct head, body, and limbs, but no well-defined sword.
+The proportions are reasonable and it actually looks like a character you might find in a classic pixel art game.
+For Task 2, while the character design remains consistent across frames, the animation sequence doesn't quite work.
+The "sword" ends up looking more like a gun being held horizontally, and there's no clear slashing motion or arc.
+It's a decent attempt at maintaining character consistency, but fails to capture the essence of a sword attack.
 
+**Task 1** - Creativity (2/3), Correctness (1/3)  
+**Task 2** - Creativity (1/3), Correctness (1/3)
 
 #### Claude Sonnet 4
 
@@ -200,12 +208,33 @@ This is a good and earnest try.
 | --------------------------- | ---------------------------------------------------------- |
 | <img src="/assets/png/draw-me-a-swordsman/claude-sonnet_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/claude-sonnet_spritesheet.png" alt="task 2 image" width="500"/> |
 
+Claude Sonnet 4 is getting there but isn't quite the most polished.
+The Task 1 swordsman does look like a proper pixel art character&mdash;you can make out the basic humanoid form and it has that classic retro game aesthetic.
+It's recognizable as a swordsman even if the details aren't super crisp.
+
+Task 2 is where things get weird: while there's definitely a slash motion happening across the frames, the character completely loses all sense of body proportions.
+The figure becomes distorted and inconsistent, though you can still trace the sword movement from windup to strike.
+It's like the model understood the motion but forgot about maintaining the character's form.
+
+**Task 1** - Creativity (2/3), Correctness (3/3)  
+**Task 2** - Creativity (1/3), Correctness (2/3)
+
 
 #### Claude Opus 4
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
 | <img src="/assets/png/draw-me-a-swordsman/claude-opus_simple.png" alt="task 1 image" width="100"/> | <img src="/assets/png/draw-me-a-swordsman/claude-opus_spritesheet.png" alt="task 2 image" width="550"/> |
+
+Claude Opus 4 produces solid results across both tasks.
+The Task 1 swordsman shows good creativity with a distinctive character design&mdash;clear head, body, and sword, though the proportions could be more refined.
+What's particularly interesting is that **Opus seems to have developed a consistent character concept**: even across different prompts, it drew essentially the same swordsman design.
+
+Task 2 delivers a proper slash sequence where you can follow the sword's motion from windup to strike, and the character maintains its form throughout the animation.
+It's a competent spritesheet that demonstrates understanding of both animation principles and character consistency.
+
+**Task 1** - Creativity (3/3), Correctness (2/3)  
+**Task 2** - Creativity (2/3), Correctness (3/3)
 
 
 ## Discussion
