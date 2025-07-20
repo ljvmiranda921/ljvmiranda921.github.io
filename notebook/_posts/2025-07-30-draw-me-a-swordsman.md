@@ -36,11 +36,11 @@ Task 2 is particularly interesting because creating sprite sheets is a common us
 It's also challenging for LLMs since it requires sequential understanding: each frame must logically follow the previous one to create believable animation.
 Unlike generating a single image, sprite sheets demand consistency in character design, progression, and timing.
 
-Here's a human baseline from a [game](https://ljvmiranda921.itch.io/abyss) I made a few years ago:
+Here's a **human baseline** from a [game](https://ljvmiranda921.itch.io/abyss) I made a few years ago:
 
-| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+| <img src="/assets/png/draw-me-a-swordsman/human_simple.png" alt="task 1 image" width="100"/> | <img src="/assets/png/draw-me-a-swordsman/human_spritesheet.png" alt="task 2 image" width="550"/> |
 
 I evaluated each LLM's output using two criteria, each scored from 1 to 3:
 
@@ -146,35 +146,37 @@ To initiate an interaction between the `Agent` and the MCP server, we simply pas
 
 ## Results
 
+#### Qwen 3 32B
+
+| Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| --------------------------- | ---------------------------------------------------------- |
+| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+
 #### GPT-4o
 
-| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
 | ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
 #### GPT-4.1
 
-| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
 | ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
-#### Claude Opus
+#### Claude Sonnet 4
 
-| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+| Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
 | ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
-#### Claude Sonnet
 
-| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
+#### Claude Opus 4
+
+| Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+| <img src="/assets/png/draw-me-a-swordsman/claude-opus_simple.png" alt="task 1 image" width="100"/> | <img src="/assets/png/draw-me-a-swordsman/claude-opus_spritesheet.png" alt="task 2 image" width="550"/> |
 
-#### Qwen 3 32B
-
-| Task 1: Draw me a swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
-| --------------------------- | ---------------------------------------------------------- |
-| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
 
 ## Discussion
 
