@@ -41,7 +41,7 @@ Here's a **human baseline** from a [game](https://ljvmiranda921.itch.io/abyss) I
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| <img src="/assets/png/draw-me-a-swordsman/human_simple.png" alt="task 1 image" width="100"/> | <img src="/assets/png/draw-me-a-swordsman/human_spritesheet.png" alt="task 2 image" width="550"/> |
+| <img src="/assets/png/draw-me-a-swordsman/human_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/human_spritesheet.png" alt="task 2 image" width="500"/> |
 
 I evaluated each LLM's output using two criteria, each scored from 0 to 3:
 
@@ -227,7 +227,7 @@ It's like the model understood the motion but forgot about maintaining the chara
 | <img src="/assets/png/draw-me-a-swordsman/claude-opus_simple.png" alt="task 1 image" width="100"/> | <img src="/assets/png/draw-me-a-swordsman/claude-opus_spritesheet.png" alt="task 2 image" width="550"/> |
 
 Claude Opus 4 produces solid results across both tasks.
-The Task 1 swordsman shows good creativity with a distinctive character design&mdash;clear head, body, and sword, though the proportions could be more refined.
+The Task 1 swordsman shows good creativity with a distinctive character design&mdash;clear head, body, and sword, though the sword shape could be more refined.
 What's particularly interesting is that **Opus seems to have developed a consistent character concept**: even across different prompts, it drew essentially the same swordsman design.
 
 Task 2 delivers a proper slash sequence where you can follow the sword's motion from windup to strike, and the character maintains its form throughout the animation.
