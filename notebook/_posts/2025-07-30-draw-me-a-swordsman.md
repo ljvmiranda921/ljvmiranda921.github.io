@@ -43,7 +43,7 @@ Here's a **human baseline** from a [game](https://ljvmiranda921.itch.io/abyss) I
 | --------------------------- | ---------------------------------------------------------- |
 | <img src="/assets/png/draw-me-a-swordsman/human_simple.png" alt="task 1 image" width="100"/> | <img src="/assets/png/draw-me-a-swordsman/human_spritesheet.png" alt="task 2 image" width="550"/> |
 
-I evaluated each LLM's output using two criteria, each scored from 1 to 3:
+I evaluated each LLM's output using two criteria, each scored from 0 to 3:
 
 - **Correctness**: Did the LLM follow the instructions accurately?
 - **Creativity**: How original or artistic was the LLM's approach?
@@ -183,7 +183,6 @@ The Task 2 spritesheet shows promise: there's clear movement from one sprite to 
 However, it seems like GPT-4o has taken a lot of creative liberties in designing the swordsman, as the blue blob is hard to identify by itself.
 This is a good and earnest try.
 
-
 **Task 1** - Creativity (1/3), Correctness (1/3)  
 **Task 2** - Creativity (0/3), Correctness (1/3)
 
@@ -192,6 +191,8 @@ This is a good and earnest try.
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
 | <img src="/assets/png/draw-me-a-swordsman/gpt-4.1_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/gpt-4.1_spritesheet.png" alt="task 2 image" width="500"/> |
+
+
 
 #### Claude Sonnet 4
 
