@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "'Draw me a swordsman': Can tool-calling LLMs draw pixel art?"
-date: 2025-07-30
+date: 2025-07-20
 category: notebook
 comments: true
 author: "LJ MIRANDA"
