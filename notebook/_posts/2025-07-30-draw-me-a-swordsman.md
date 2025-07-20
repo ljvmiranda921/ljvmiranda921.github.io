@@ -147,11 +147,19 @@ To initiate an interaction between the `Agent` and the MCP server, we simply pas
 
 ## Results
 
+Below are the results of several models on the simple swordsman and spritesheet tasks.
+The figures you see below are the best of three agent-env interactions based on the correctness and creativity criteria.
+
+
 #### Qwen 3 32B
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
 | <img src="/assets/png/draw-me-a-swordsman/qwen3-32b_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/qwen3-32b_spritesheet.png" alt="task 2 image" width="500"/> |
+
+Qwen3 didn't do a nice job here.
+
+
 
 #### GPT-4o
 
