@@ -1,13 +1,11 @@
 ---
 layout: page
-title: About
+title: Hi friends!
 description: About page of Lj Miranda - Blog
 permalink: /about/
 ---
 
-Hi friends! My name is Lj Miranda, and welcome to my website!
-
-I [build things](https://github.com/ljvmiranda921).
+My name is Lj Miranda, and welcome to my website. Thanks for being here :)
 
 I started this site to tell the story of my tech journey. I believe in
 **technology that is open, enabling, and life-giving**. I aspire to usher that
