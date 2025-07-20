@@ -11,6 +11,7 @@ tags: [pixel art, aseprite, llm, nlp, tool-calling, mcp]
 description: |
   Just a fun weekend experiment on model-context protocol (MCP): I asked several tool-calling LLMs to draw a 4-frame spritesheet of a swordsman performing a slash attack using an Aseprite MCP I built. The results were interesting!
 excerpt: |
+  Just a fun weekend experiment on model-context protocol (MCP): I asked several tool-calling LLMs to draw a 4-frame spritesheet of a swordsman performing a slash attack using an Aseprite MCP I built. The results were interesting!
 ---
 
 <span class="firstcharacter">R</span>ecently, we've witnessed language models become increasingly adept at using real-world tools through their function-calling capabilities.
