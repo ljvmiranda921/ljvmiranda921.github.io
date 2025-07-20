@@ -48,6 +48,8 @@ I evaluated each LLM's output using two criteria, each scored from 0 to 3:
 - **Correctness**: Did the LLM follow the instructions accurately?
 - **Creativity**: How original or artistic was the LLM's approach?
 
+To get a single representative score, I compute the average of correctness and creativity for each task, then average those two task scores together&mdash;a benchmark I'll now dub as **SwordsBench score**!
+
 **You can find the full code [on GitHub](https://github.com/ljvmiranda921/scratch/tree/master/2025-07-11-aseprite-mcp)**
 
 ## Setting up the Agent-Environment Interaction
@@ -151,7 +153,7 @@ Below are the results of several models on the simple swordsman and spritesheet 
 The figures below show the best of three agent-environment interactions, selected based on correctness and creativity criteria.
 
 
-#### Qwen 3 32B
+#### Qwen 3 32B (SwordsBench: 0.25)
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
@@ -170,7 +172,7 @@ I'm sorry Qwen, but this is a skill issue (minus points for the attitude too).
 **Task 1** - Creativity (0/3), Correctness (1/3)  
 **Task 2** - Creativity (0/3), Correctness (0/3)
 
-#### GPT-4o
+#### GPT-4o (SwordsBench: 0.75)
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
@@ -186,7 +188,7 @@ This is a good and earnest try.
 **Task 1** - Creativity (1/3), Correctness (1/3)  
 **Task 2** - Creativity (0/3), Correctness (1/3)
 
-#### GPT-4.1
+#### GPT-4.1 (SwordsBench: 1.25)
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
@@ -202,7 +204,7 @@ It's a decent attempt at maintaining character consistency, but fails to capture
 **Task 1** - Creativity (2/3), Correctness (1/3)  
 **Task 2** - Creativity (1/3), Correctness (1/3)
 
-#### Claude Sonnet 4
+#### Claude Sonnet 4 (SwordsBench: 2.0)
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
@@ -220,7 +222,7 @@ It's like the model understood the motion but forgot about maintaining the chara
 **Task 2** - Creativity (1/3), Correctness (2/3)
 
 
-#### Claude Opus 4
+#### Claude Opus 4 (SwordsBench: 2.5)
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
