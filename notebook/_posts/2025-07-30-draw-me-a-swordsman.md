@@ -165,17 +165,27 @@ In general, **using tools with reasoning resulted in better looking figures**, b
 
 Funny enough, when I read the reasoning trajectories, it seems that Qwen 3 likes blaming the tools.
 It will say something akin to: "the `draw_line` tool doesn't work, so I have no way to perform this task" (it actually works).
-I'm sorry Qwen, but this is a skill issue.
+I'm sorry Qwen, but this is a skill issue (minus points for the attitude too).
 
 **Task 1** - Creativity (0/3), Correctness (1/3)  
 **Task 2** - Creativity (0/3), Correctness (0/3)
-
 
 #### GPT-4o
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
 | <img src="/assets/png/draw-me-a-swordsman/gpt-4o_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/gpt-4o_spritesheet.png" alt="task 2 image" width="500"/> |
+
+I kinda see what GPT-4o is trying to achieve here.
+The Task 1 drawing can definitely be a swordsman if I squint hard enough.
+There is a semblance of a sword, but the body itself is missing or difficult to fathom.
+I also appreciate the spritesheet in Task 2: there is movement from one sprite to another and the blue "swordsman" looks consistent!
+However, it seems like GPT-4o has taken a lot of creative liberties in designing the swordsman, as the blue blob is hard to identify by itself.
+This is a good and earnest try.
+
+
+**Task 1** - Creativity (1/3), Correctness (1/3)  
+**Task 2** - Creativity (0/3), Correctness (1/3)
 
 #### GPT-4.1
 
