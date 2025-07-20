@@ -158,7 +158,17 @@ The figures you see below are the best of three agent-env interactions based on 
 | <img src="/assets/png/draw-me-a-swordsman/qwen3-32b_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/qwen3-32b_spritesheet.png" alt="task 2 image" width="500"/> |
 
 Qwen3 didn't do a nice job here.
+I can see the attempt to draw a swordsman in Task 1: the brown circle is the head, the cyan rectangle is the body, and the grey rectangle is the sword.
+However, the Task 2 drawing is abysmal and didn't result into anything interesting.
+I actually ran Qwen 3 with both reasoning turned on and off.
+In general, **using tools with reasoning resulted in better looking figures**, but took quite long to finish.
 
+Funny enough, when I read the reasoning trajectories, it seems that Qwen 3 likes blaming the tools.
+It will say something akin to: "the `draw_line` tool doesn't work, so I have no way to perform this task" (it actually works).
+I'm sorry Qwen, but this is a skill issue.
+
+**Task 1** - Creativity (0/3), Correctness (1/3)  
+**Task 2** - Creativity (0/3), Correctness (0/3)
 
 
 #### GPT-4o
