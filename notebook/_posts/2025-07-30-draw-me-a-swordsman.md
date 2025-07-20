@@ -151,13 +151,13 @@ To initiate an interaction between the `Agent` and the MCP server, we simply pas
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+| <img src="/assets/png/draw-me-a-swordsman/qwen3-32b_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/qwen3-32b_spritesheet.png" alt="task 2 image" width="500"/> |
 
 #### GPT-4o
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+| <img src="/assets/png/draw-me-a-swordsman/gpt-4o_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/gpt-4o_spritesheet.png" alt="task 2 image" width="500"/> |
 
 #### GPT-4.1
 
