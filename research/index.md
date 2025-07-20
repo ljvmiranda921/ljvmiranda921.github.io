@@ -59,7 +59,7 @@ I also write a lot about Filipino NLP in this blog.
 - [FilBench: Can LLMs Generate and Understand Filipino?]()
   <br>_EMNLP '25 Main_
   <br><b>Lester James V. Miranda\*</b>, Elyanah Aco\*, Conner Manuel\*, Jan Christian Blaise Cruz, Joseph Marvin Imperial
-  <br>[[Leaderboard]()] [[Code]()]
+  <br>[<i class="fab fa-github research-icon"></i>](https://github.com/filbench/filbench-eval) [<i class="fas fa-globe research-icon"></i>](https://huggingface.co/UD-Filipino)
 
 - [The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project](https://arxiv.org/abs/2505.20428)
   <br>_ACL '25 Main_
