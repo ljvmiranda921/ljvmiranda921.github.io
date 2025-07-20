@@ -7,7 +7,8 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-tags: [pixel art, aseprite, llm, nlp, tool-calling, mcp]
+tags: [pixel art, aseprite, llm, nlp, tool-calling, mcp, claude, gpt]
+header-img: /assets/png/draw-me-a-swordsman/header.png
 description: |
   Just a fun weekend experiment on model-context protocol (MCP): I asked several tool-calling LLMs to draw a 4-frame spritesheet of a swordsman performing a slash attack using an Aseprite MCP I built. The results were interesting!
 excerpt: |
@@ -162,13 +163,13 @@ To initiate an interaction between the `Agent` and the MCP server, we simply pas
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+| <img src="/assets/png/draw-me-a-swordsman/gpt-4.1_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/gpt-4.1_spritesheet.png" alt="task 2 image" width="500"/> |
 
 #### Claude Sonnet 4
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| ![Task 1 Image](#)          | ![Task 2 Image](#)                                         |
+| <img src="/assets/png/draw-me-a-swordsman/claude-sonnet_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/claude-sonnet_spritesheet.png" alt="task 2 image" width="500"/> |
 
 
 #### Claude Opus 4
