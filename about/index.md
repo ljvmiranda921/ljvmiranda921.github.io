@@ -25,6 +25,12 @@ Before his PhD, he has over seven years of industry experience in consulting, op
 Outside of work, he dabbles in <a href="https://ljvmiranda921.github.io/gallery">photography</a> and <a href="https://ljvmiranda921.itch.io">game development</a>.
 </p>
 
+## External Links
+
+- <i class="fab fa-itch-io"></i> [Game Dev](https://ljvmiranda921.itch.io): games I developed using Godot and PICO-8.
+- <i class="fas fa-camera"></i> [Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery): photos taken using a Game Boy Camera.
+- <i class="fab fa-twitter"></i> [Micro Blog](https://ljvmiranda.micro.blog): micro-blog for "today I learned" (TIL) posts and tweets.
+
 ## Contact
 
 **Lester James V. Miranda**  
