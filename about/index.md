@@ -26,7 +26,7 @@ maintain notable open-source libraries such as spaCy and Pyswarms. He dabbles
 in game development during his free time.
 </p>
 
-## Other links
+## External Links
 
 - [Game Dev](https://ljvmiranda921.itch.io): games I developed using Godot and PICO-8.
 - [Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery): photos taken using a Game Boy Camera.
