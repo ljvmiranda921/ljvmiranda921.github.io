@@ -148,7 +148,7 @@ To initiate an interaction between the `Agent` and the MCP server, we simply pas
 ## Results
 
 Below are the results of several models on the simple swordsman and spritesheet tasks.
-The figures you see below are the best of three agent-env interactions based on the correctness and creativity criteria.
+The figures below show the best of three agent-environment interactions, selected based on correctness and creativity criteria.
 
 
 #### Qwen 3 32B
@@ -157,11 +157,11 @@ The figures you see below are the best of three agent-env interactions based on 
 | --------------------------- | ---------------------------------------------------------- |
 | <img src="/assets/png/draw-me-a-swordsman/qwen3-32b_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/qwen3-32b_spritesheet.png" alt="task 2 image" width="500"/> |
 
-Qwen3 didn't do a nice job here.
+Qwen3 performed poorly on both tasks.
 I can see the attempt to draw a swordsman in Task 1: the brown circle is the head, the cyan rectangle is the body, and the grey rectangle is the sword.
-However, the Task 2 drawing is abysmal and didn't result into anything interesting.
+However, the Task 2 drawing is poor and doesn't produce anything recognizable.
 I actually ran Qwen 3 with both reasoning turned on and off.
-In general, **using tools with reasoning resulted in better looking figures**, but took quite long to finish.
+Generally, **using tools with reasoning resulted in better-looking figures**, though it took much longer to complete.
 
 Funny enough, when I read the reasoning trajectories, it seems that Qwen 3 likes blaming the tools.
 It will say something akin to: "the `draw_line` tool doesn't work, so I have no way to perform this task" (it actually works).
@@ -176,10 +176,10 @@ I'm sorry Qwen, but this is a skill issue (minus points for the attitude too).
 | --------------------------- | ---------------------------------------------------------- |
 | <img src="/assets/png/draw-me-a-swordsman/gpt-4o_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/gpt-4o_spritesheet.png" alt="task 2 image" width="500"/> |
 
-I kinda see what GPT-4o is trying to achieve here.
+GPT-4o's intent is clearer than Qwen3's output.
 The Task 1 drawing can definitely be a swordsman if I squint hard enough.
-There is a semblance of a sword, but the body itself is missing or difficult to fathom.
-I also appreciate the spritesheet in Task 2: there is movement from one sprite to another and the blue "swordsman" looks consistent!
+There's a recognizable sword shape, but the body is either missing or unclear.
+The Task 2 spritesheet shows promise: there's clear movement from one sprite to another, and the blue "swordsman" maintains consistency across frames.
 However, it seems like GPT-4o has taken a lot of creative liberties in designing the swordsman, as the blue blob is hard to identify by itself.
 This is a good and earnest try.
 
