@@ -26,7 +26,7 @@ title: News
 </div>
 
 <div class="news-item">
-<p><span class="date">**May 2025**</span>: Excited to share that I have three first & co-first author papers accepted at [ACL Main](https://2025.aclweb.org/): [HyPER](https://arxiv.org/abs/2410.19133), [M-RewardBench](https://arxiv.org/abs/2410.15522), and [UD-NewsCrawl](https://arxiv.org/abs/2505.20428). A large collab project, [SEA-VL](https://arxiv.org/abs/2503.07920), also got into Main!</p>
+<p><span class="date">**May 2025**</span>: Excited to share that I have three first & co-first author papers accepted at [ACL Main](https://2025.aclweb.org/): [HyPER](https://aclanthology.org/2025.acl-long.355/), [M-RewardBench](https://aclanthology.org/2025.acl-long.3/), and [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/). A large collab project, [SEA-VL](https://aclanthology.org/2025.acl-long.916/), also got into Main!</p>
 </div>
 
 <div class="news-item">

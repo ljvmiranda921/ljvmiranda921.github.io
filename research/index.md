@@ -27,7 +27,7 @@ I'm happy to discuss research and collaborate! -->
 What constitutes high-quality data? And how can we efficiently and scalably collect them?
 I've explored these questions in the context of acquiring post-training data by examining human factors in preference annotation such as in HyPER, and devising new techniques in data synthesis and generation as seen in T&uuml;lu 3.
 
-- [**Hy**brid **P**ref**er**ences: Learning to Route Instances for Human vs. AI Feedback](https://arxiv.org/abs/2410.19133)
+- [**Hy**brid **P**ref**er**ences: Learning to Route Instances for Human vs. AI Feedback](https://aclanthology.org/2025.acl-long.355/)
   <br>_ACL '25 Main_
   <br><b>Lester James V. Miranda\*</b>, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi.
   <br>[<i class="fab fa-github research-icon"></i>](https://github.com/allenai/hybrid-preferences) [<i class="fas fa-database research-icon"></i>](https://huggingface.co/datasets/allenai/multipref) [<i class="fas fa-file-powerpoint research-icon"></i>](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing) [<i class="fas fa-image research-icon"></i>](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link) [<i class="fas fa-play research-icon"></i>](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)
@@ -42,7 +42,7 @@ I've explored these questions in the context of acquiring post-training data by 
 No language should be left behind, especially in data.
 I'm motivated to pursue research that ensures that the next generation of state-of-the-art LLMs cater to languages beyond English; by improving training data quality and building faithful multilingual benchmarks.
 
-- [M-RewardBench: Evaluating Reward Models in Multilingual Settings](https://arxiv.org/abs/2410.15522)
+- [M-RewardBench: Evaluating Reward Models in Multilingual Settings](https://aclanthology.org/2025.acl-long.3/)
   <br>_ACL '25 Main_
   <br>Srishti Gureja\*, <b>Lester James V. Miranda\*</b>, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee.
   <br>[<i class="fab fa-github research-icon"></i>](https://github.com/for-ai/aya_rm_multilingual) [<i class="fas fa-database research-icon"></i>](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7) [<i class="fas fa-file-powerpoint research-icon"></i>](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link) [<i class="fas fa-image research-icon"></i>](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link) [<i class="fas fa-play research-icon"></i>](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)
@@ -61,7 +61,7 @@ I also write a lot about Filipino NLP in this blog.
   <br><b>Lester James V. Miranda\*</b>, Elyanah Aco\*, Conner Manuel\*, Jan Christian Blaise Cruz, Joseph Marvin Imperial
   <br>[<i class="fab fa-github research-icon"></i>](https://github.com/filbench/filbench-eval) [<i class="fas fa-globe research-icon"></i>](https://huggingface.co/UD-Filipino)
 
-- [The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project](https://arxiv.org/abs/2505.20428)
+- [The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project](https://aclanthology.org/2025.acl-long.357/)
   <br>_ACL '25 Main_
   <br>Angelina A. Aquino\*, <b>Lester James V. Miranda\*</b>, Elsie Marie T. Or\*
   <br>[<i class="fas fa-database research-icon"></i>](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317) [<i class="fas fa-file-powerpoint research-icon"></i>]() [<i class="fas fa-image research-icon"></i>](https://drive.google.com/file/d/16ONq_xmRrUgvALirWEwX0BpZnn1OtqwH/view?usp=drive_link) [<i class="fas fa-play research-icon"></i>](https://youtu.be/W4cONaL_otI?si=DgfmF0_7zkOmI_ma)
