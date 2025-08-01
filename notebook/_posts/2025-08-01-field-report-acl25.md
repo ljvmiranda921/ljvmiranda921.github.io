@@ -57,11 +57,13 @@ Good research takes time, and I'm lucky to have great collaborators during these
 
 ## My favorite papers
 
-<!-- top five papers -->
+- [Language Models Resist Alignment: Evidence from Data Compression](https://aclanthology.org/2025.acl-long.1141/)
 
-<!-- three honorable mentions??? -->
+- [Building Better: Avoiding Pitfalls in Developing Language Resources when Data is Scarce](https://aclanthology.org/2025.acl-long.435/)
 
-## NLP research vibes and trends
+- [Can External Validation Tools Improve Annotation Quality for LLM-as-a-Judge?](https://aclanthology.org/2025.acl-long.779/)
+
+- [A Perspective on LLM Data Generation with Few-shot Examples: from Intent to Kubernetes Manifest _(Industry Track)_](https://aclanthology.org/2025.acl-industry.27/)
 
 ## Miscellaneous
 
