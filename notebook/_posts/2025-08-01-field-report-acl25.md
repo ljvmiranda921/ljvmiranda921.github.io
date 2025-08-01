@@ -96,8 +96,8 @@ Good vibes all throughout, no notes.
 
 Also, I enjoyed writing this field report: it's a good exercise for me to synthesize things I've learned during the conference, and hopefully it's informative for non-attendees to get an inside look into these academic research events.
 I admit I haven't been writing in this blog recently (although in general, I've written way more during the past two years), so this might be another way to fill-in those spaces during the year.
-
 Hoping to write more field reports in the future!
+_And finally, some photos of my post-conference trip:_
 
 ![](/assets/png/field-report-acl25/places.png){:width="800px"}
 {: style="text-align: center;"}
