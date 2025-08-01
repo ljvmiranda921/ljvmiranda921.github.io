@@ -65,21 +65,25 @@ Good research takes time, and I'm lucky to have great collaborators during these
 
 ## Miscellaneous
 
-<!-- collage of photos -->
+![](/assets/png/field-report-acl25/socials.png){:width="720px"}
+{: style="text-align: center;"}
 
 - **I attended the SEACrowd Birds-of-a-Feather (BoF) session!** Finally, I've met my long-time collaborators.
   I've been involved with the SEACrowd group during their initial project, so it's nice to meet Holy and Samuel in person.
   During the BoF, we talked about what is "enough" for Southeast Asian NLP, what's missing (it's always money), and what are our current successes.
   I honestly look forward to SEACrowd events.
-  I traveled to ACL alone, so being with some folks I know gave me a feeling of having a _home base_.
+  I traveled to ACL alone, so being with some familiar faces gave me a feeling of having a _home base_ in a sea of strangers.
 
-- **Met with some Pinoy NLP researchers.** It is nice to meetup with some folks from the
-  Asian Institute of Management in the Philippines&mdash;they wrote an industry-track paper on examining the reliability of LLMs in clinical note generation.
-  Blaise (PhD-ing in MBZUAI) and Anton (from SEACrowd) were also there.
-  I also met another Ateneo org-mate, Jane, who is now doing her PhD at Radboud University in the Netherlands.
-  In general, it's nice to see Filipinos publishing in these top NLP conferences.
+- **Met with some Pinoy NLP researchers.** I'm also glad to see Filipinos publishing in these top NLP conferences.
+  I met with some folks from the Asian Institute of Management (Sir Chris, Japer, K-Ann), SEACrowd (Blaise and Anton), AI Singapore (Railey), and Radboud University (Jane).
+  Data science in the Philippines is a small world: each of us were connected in one way or another (either we're from the same high school, college, job, etc.).
+  I was very happy to see Pinoys and almost shouted _Uy pilipins!_ upon meeting them.
 
-- **Poster presentations**
+- **Thank you for the water, kind stranger!** During the second day of the conference, I was presenting two posters at the same time! It was quite intense as I jump from one work to another.
+  Add Vienna's summer heat and I was definitely sweaty and haggard.
+  Suddenly, a kind stranger offered me some water and I felt refreshed and energized.
+  It was a nice gesture and now a core memory of my conference experience.
+  I wasn't able to catch their name, but if you're reading this: thank you for the water, kind stranger!
 
 ## Final thoughts
 
@@ -92,3 +96,6 @@ Also, I enjoyed writing this field report: it's a good exercise for me to synthe
 I admit I haven't been writing in this blog recently (although in general, I've written way more during the past two years), so this might be another way to fill-in those spaces during the year.
 
 Hoping to write more field reports in the future!
+
+![](/assets/png/field-report-acl25/places.png){:width="800px"}
+{: style="text-align: center;"}
