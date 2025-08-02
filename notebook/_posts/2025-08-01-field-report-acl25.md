@@ -48,20 +48,32 @@ And a big collab project from SEACrowd:
 - [Crowdsource, Crawl, or Generate? Creating SEA-VL, a Multicultural Vision-Language Dataset for Southeast Asia](https://arxiv.org/abs/2503.07920)<br>TLDR: We present SEA-VL, one of the largest open-source initiatives to develop high-quality and culturally-relevant data for SEA languages. We also highlight representation gaps in SEA, especially for vision-language models.
 
 _Really, four papers?!_ This seems like a big feat, but these works were completed at different times&mdash;it's just that the timing led them to be published simultaneously.
-In fact, HyPER was a reject from ICLR and my involvement in UD-NewsCrawl started way back in 2023.
+In fact, HyPER was a reject from ICLR that we further refined, and my involvement in UD-NewsCrawl started way back in 2023.
 Good research takes time, and I'm lucky to have great collaborators during these long periods of work.
 
 ## Papers that piqued my attention
 
-- [Language Models Resist Alignment: Evidence from Data Compression](https://aclanthology.org/2025.acl-long.1141/). It's one of the best papers of ACL and presents a physics-inspired view of post-training behaviour.
+I enjoyed going through the poster presentations during the conference.
+Since I was presenting, I wasn't able to attend most of the Main posters.
+However, I had a great time talking to other researchers in the other sessions!
+
+- [Language Models Resist Alignment: Evidence from Data Compression](https://aclanthology.org/2025.acl-long.1141/): It's one of the best papers of ACL and presents a physics-inspired view of post-training behaviour.
   According to the paper, post-trained LMs exhibit some kind of _elasticity_, where it reverts back to its behaviour distribution during pretraining when finetuned further.
   The rest of the work is an analysis of this elasticity, where they found that it positively correlates with increased model size and expansion of pre-training data.
 
-- [Building Better: Avoiding Pitfalls in Developing Language Resources when Data is Scarce](https://aclanthology.org/2025.acl-long.435/). A good paper that examines the patterns in language resource development form a survey of several NLP practitioners.
+- [Building Better: Avoiding Pitfalls in Developing Language Resources when Data is Scarce](https://aclanthology.org/2025.acl-long.435/): A good paper that examines the patterns in language resource development form a survey of several NLP practitioners.
   It also highlights some potential systemic issues with large-scale community efforts such as credit attribution.
   I find this paper thought-provoking as it looks into the _meta_ of language resource development and reveals issues that we tend to take for granted.
 
-- [Can External Validation Tools Improve Annotation Quality for LLM-as-a-Judge?](https://aclanthology.org/2025.acl-long.779/). This is
+- [Can External Validation Tools Improve Annotation Quality for LLM-as-a-Judge?](https://aclanthology.org/2025.acl-long.779/): This is an interesting paper that examines how tools can improve annotation quality in LLM-as-a-judge scenarios.
+  I've been working in finetuning LMs for tool-use at Ai2, and I'm very curious of its applications in some of the domains I care about.
+  There is good empirical evidence for using tools during annotation, and I'm excited to see where else we can apply this framework.
+
+Honorable mentions:
+
+- [A Perspective on LLM Data Generation with Few-shot Examples: from Intent to Kubernetes Manifest](https://aclanthology.org/2025.acl-industry.27/): fun industry-track paper that solves the problem of writing annoying Kubernetes configs! Tickled the software engineer in me.
+- [PLAY2PROMPT: Zero-shot Tool Instruction Optimization for LLM Agents via Tool Play](https://aclanthology.org/2025.findings-acl.1347/): an interesting framework for refining tool instructions. Might be useful for improving the quality of synthetic tool-use data.
+- [Automatic Transmission for LLM Tiers: Optimizing Cost and Accuracy in Large Language Models](https://aclanthology.org/2025.findings-acl.873/): a good addition to the literature of LLM routing. Can even be useful for some LLM-as-a-judge applications.
 
 ## Miscellaneous
 
@@ -69,7 +81,7 @@ Good research takes time, and I'm lucky to have great collaborators during these
 {: style="text-align: center;"}
 
 - **I attended the SEACrowd Birds-of-a-Feather (BoF) session!** Finally, I've met my long-time collaborators.
-  I've been involved with the SEACrowd group during their initial project, so it's nice to meet Holy and Samuel in person.
+  I've been involved with the SEACrowd group during their initial project, so it's nice to meet Holy, Samuel, and Aji in person.
   During the BoF, we talked about what is "enough" for Southeast Asian NLP, what's missing (it's always money), and what are our current successes.
   I honestly look forward to SEACrowd events.
   I traveled to ACL alone, so being with some familiar faces gave me a feeling of having a _home base_ in a sea of strangers.
