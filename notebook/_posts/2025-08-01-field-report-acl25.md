@@ -31,11 +31,7 @@ This was also the very first NLP conference I attended.
 Although I had published in \*CL venues before, I never had the chance to attend in person.
 Attending ACL was also a great way to immerse myself in the broader NLP community before starting my Ph.D.
 
-<!-- pictures of vienna and the place baby! -->
-
 ## Works I presented during the conference
-
-<!-- collage of photos of YOU with your posters! -->
 
 ![](/assets/png/field-report-acl25/presentations.png){:width="720px"}
 {: style="text-align: center;"}
@@ -55,15 +51,17 @@ _Really, four papers?!_ This seems like a big feat, but these works were complet
 In fact, HyPER was a reject from ICLR and my involvement in UD-NewsCrawl started way back in 2023.
 Good research takes time, and I'm lucky to have great collaborators during these long periods of work.
 
-## My favorite papers
+## Papers that piqued my attention
 
-- [Language Models Resist Alignment: Evidence from Data Compression](https://aclanthology.org/2025.acl-long.1141/)
+- [Language Models Resist Alignment: Evidence from Data Compression](https://aclanthology.org/2025.acl-long.1141/). It's one of the best papers of ACL and presents a physics-inspired view of post-training behaviour.
+  According to the paper, post-trained LMs exhibit some kind of _elasticity_, where it reverts back to its behaviour distribution during pretraining when finetuned further.
+  The rest of the work is an analysis of this elasticity, where they found that it positively correlates with increased model size and expansion of pre-training data.
 
-- [Building Better: Avoiding Pitfalls in Developing Language Resources when Data is Scarce](https://aclanthology.org/2025.acl-long.435/)
+- [Building Better: Avoiding Pitfalls in Developing Language Resources when Data is Scarce](https://aclanthology.org/2025.acl-long.435/). A good paper that examines the patterns in language resource development form a survey of several NLP practitioners.
+  It also highlights some potential systemic issues with large-scale community efforts such as credit attribution.
+  I find this paper thought-provoking as it looks into the _meta_ of language resource development and reveals issues that we tend to take for granted.
 
-- [Can External Validation Tools Improve Annotation Quality for LLM-as-a-Judge?](https://aclanthology.org/2025.acl-long.779/)
-
-- [A Perspective on LLM Data Generation with Few-shot Examples: from Intent to Kubernetes Manifest _(Industry Track)_](https://aclanthology.org/2025.acl-industry.27/)
+- [Can External Validation Tools Improve Annotation Quality for LLM-as-a-Judge?](https://aclanthology.org/2025.acl-long.779/). This is
 
 ## Miscellaneous
 
