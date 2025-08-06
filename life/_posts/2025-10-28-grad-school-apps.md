@@ -41,7 +41,7 @@ As the fields of machine learning and NLP grow every year, the competition for t
 There was a time when I was looking at the newly-admitted PhD students here in the US, and it was common to see them with first-author publications in top conferences prior to their PhD.
 One needs only to look at [these tweets](https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw) from professors and admissions committee members during the Fall 2025 cycle to recognize how competitive the CS PhD applications have been.
 
-Although I had some industry experience with NLP projects from my previous consulting work back in 2021, I lacked the academic research background that seemed expected of PhD applicants.
+Despite my NLP industry experience, I lacked the academic research backround expected from PhD applicants.
 Early on, I realized that pivoting from industry to academia would entail a lot of hard work.
 A part of me thought that maybe I should have just continued to a PhD right after my Masters when the path seemed clearer.
 But my industry years helped confirm that I genuinely enjoyed research work!
