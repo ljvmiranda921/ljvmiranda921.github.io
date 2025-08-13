@@ -24,6 +24,40 @@ layout: default
     {{ content }}
   </div>
 
+  <!-- Previous/Next Navigation -->
+  {% if page.previous or page.next %}
+  <div class="post-navigation" style="margin: 2rem 0; padding: 1rem; border-top: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="flex: 1;">
+        {% if page.previous %}
+          <a href="{{ page.previous.url | relative_url }}" style="text-decoration: none; color: #666;">
+            <strong>← Previous:</strong> 
+            {% assign prev_title = page.previous.title %}
+            {% if prev_title.size > 50 %}
+              {{ prev_title | truncate: 50 }}
+            {% else %}
+              {{ prev_title }}
+            {% endif %}
+          </a>
+        {% endif %}
+      </div>
+      <div style="flex: 1; text-align: right;">
+        {% if page.next %}
+          <a href="{{ page.next.url | relative_url }}" style="text-decoration: none; color: #666;">
+            <strong>Next:</strong> 
+            {% assign next_title = page.next.title %}
+            {% if next_title.size > 50 %}
+              {{ next_title | truncate: 50 }}
+            {% else %}
+              {{ next_title }}
+            {% endif %}
+            <strong> →</strong>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
 
   <!--
 {% if jekyll.environment == "production" %}
