@@ -33,7 +33,7 @@ Outside of work, he enjoys <a href="https://ljvmiranda921.github.io/gallery">pho
 
 **Lester James V. Miranda**  
 Churchill College, Cambridge, UK  
-Email: ljvmiranda [at] gmail [dot] com  
+Email: `ljvm2.cam.ac.uk`  
 [Curriculum Vitae (PDF)](https://storage.googleapis.com/ljvmiranda/cv.pdf)
 
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ljvmiranda921" data-color="#828282" data-emoji=""  data-font="Lato" data-text="Buy me a coffee" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
