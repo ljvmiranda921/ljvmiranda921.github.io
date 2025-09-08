@@ -7,15 +7,16 @@ permalink: /about/
 
 My name is Lj Miranda, and welcome to my website. Thanks for being here :)
 
-I am a PhD Student at the [Language Technology Laboratory](https://ltl.mmll.cam.ac.uk/) at the University of Cambridge.
+I am a PhD student at the [Language Technology Laboratory](https://ltl.mmll.cam.ac.uk/) at the University of Cambridge.
 My [research](/research) broadly examines how we can leverage data to train language models that are equitable, useful, and multilingual.
 I also have a special interest in improving the state of Filipino NLP.
 
 My work has been [published](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en) in several top-tier conferences such as ACL, EMNLP, and NAACL.
-In addition, I also served as a reviewer in various NLP and machine learning conferences and journals.
+In addition, I have also served as a reviewer for various NLP and machine learning conferences and journals.
 
 Previously, I spent time as a predoctoral researcher at the [Allen Institute for AI (Ai2)](https://allenai.org/) in Seattle. 
 I also worked as an open-source developer at [spaCy](https://spacy.io/) and as a [consultant in the Philippines](https://thinkingmachin.es/).
+Prior to working on NLP, I was a bioinformatics researcher studying protein function prediction.
 
 Thanks again for stopping by!
 If you're interested in reaching out, send me an [email](mailto:ljvm2@cam.ac.uk).
