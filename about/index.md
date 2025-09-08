@@ -7,21 +7,37 @@ permalink: /about/
 
 My name is Lj Miranda, and welcome to my website. Thanks for being here :)
 
-I started this site to tell the story of my tech journey. I believe in
-**technology that is open, enabling, and life-giving**. I aspire to usher that
-potential&mdash;even for just a tiny bit. But, there is still a long way to go,
-and this site records my progress.
+I am a PhD Student at the [Language Technology Laboratory](https://ltl.mmll.cam.ac.uk/) at the University of Cambridge.
+My [research](/research) broadly examines how we can leverage data to train language models that are equitable, useful, and multilingual.
+I also have a special interest in improving the state of Filipino NLP.
 
-Here, you'll find some of my **thoughts, works, and notes** on software
-development, machine learning, and research. I hope you'll spend a nice time
-here, so go grab yourself a coffee and feel free to look around!
+My work has been [published](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en) in several top-tier conferences such as ACL, EMNLP, and NAACL.
+In addition, I also served as a reviewer in various NLP and machine learning conferences and journals.
+
+Previously, I spent time as a predoctoral researcher at the [Allen Institute for Artificial Intelligence (Ai2)](https://allenai.org/) in Seattle. 
+I also worked as an open-source developer at [spaCy](https://spacy.io/) and as a [consultant in the Philippines](https://thinkingmachin.es/).
+
+Thanks again for stopping by!
+If you're interested in reaching out, send me an [email](mailto:ljvm2@cam.ac.uk).
 
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
-<b>Short background</b><br>
+<b>Short Background</b><br>
 Lj is a PhD student at the University of Cambridge, <a href="https://ltl.mmll.cam.ac.uk/">working on multilingual and equitable NLP</a>.
 Before his studies, he has over seven years of industry experience in consulting, open-source software development, and research, including work as a predoctoral researcher at the <a href="https://allenai.org">Allen Institute for AI</a> and an engineer working on spaCy and Prodigy at <a href="https://explosion.ai">Explosion</a>.
 Outside of work, he enjoys <a href="https://ljvmiranda921.github.io/gallery">photography</a> and <a href="https://ljvmiranda921.itch.io">game development</a>.
 </p>
+
+## This Blog
+
+I started this site to tell the story of my tech journey. I believe in
+**technology that is open, enabling, and life-giving**. I aspire to usher that
+potential&mdash;even for just a tiny bit. But, there is still a long way to go,
+and this site records my progress.
+Here, you'll find some of my **thoughts, works, and notes** on software
+development, machine learning, and research. I hope you'll spend a nice time
+here, so go grab yourself a coffee and feel free to look around!
+
+
 
 ## External Links
 
