@@ -14,7 +14,7 @@ I also have a special interest in improving the state of Filipino NLP.
 My work has been [published](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en) in several top-tier conferences such as ACL, EMNLP, and NAACL.
 In addition, I also served as a reviewer in various NLP and machine learning conferences and journals.
 
-Previously, I spent time as a predoctoral researcher at the [Allen Institute for Artificial Intelligence (Ai2)](https://allenai.org/) in Seattle. 
+Previously, I spent time as a predoctoral researcher at the [Allen Institute for AI (Ai2)](https://allenai.org/) in Seattle. 
 I also worked as an open-source developer at [spaCy](https://spacy.io/) and as a [consultant in the Philippines](https://thinkingmachin.es/).
 
 Thanks again for stopping by!
