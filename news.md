@@ -38,11 +38,11 @@ title: News
 </div>
 
 <div class="news-item">
-<p><span class="date">**Oct 2024**</span>: Our paper on routing preference instances to human or LM annotators, [Hybrid Preferences](https://arxiv.org/abs/2410.19133), is now available. This is the first work I co-led (with Yizhong Wang) at Ai2!</p>
+<p><span class="date">**Oct 2024**</span>: Our paper on routing preference instances to human or LM annotators, [Hybrid Preferences](https://aclanthology.org/2025.acl-long.355/), is now available. This is the first work I co-led (with Yizhong Wang) at Ai2!</p>
 </div>
 
 <div class="news-item">
-<p><span class="date">**Oct 2024**</span>: Our paper on evaluating reward models in multilingual settings, [M-RewardBench](https://arxiv.org/abs/2410.15522), is now available. This was a fun collab with folks from Cohere for AI!</p>
+<p><span class="date">**Oct 2024**</span>: Our paper on evaluating reward models in multilingual settings, [M-RewardBench](https://aclanthology.org/2025.acl-long.3/), is now available. This was a fun collab with folks from Cohere for AI!</p>
 </div>
 
 <!-- <div class="news-item">
