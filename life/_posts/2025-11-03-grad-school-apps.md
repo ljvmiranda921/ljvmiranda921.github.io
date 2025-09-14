@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Reflections of a Pinoy applying to CS PhD programs abroad"
-date: 2025-10-28
+date: 2025-11-03
 category: life
 comments: true
 author: "LJ MIRANDA"
@@ -37,11 +37,11 @@ _All photos you'll see below were taken by a Gameboy Camera. I realized when wri
 
 ## The reality of CS grad school applications
 
-As the fields of machine learning and NLP grow every year, the competition for top PhD programs has become increasingly fierce.
+Application for PhD programs, especially for machine learning and NLP, has become increasingly competitive.
 There was a time when I was looking at the newly-admitted PhD students here in the US, and it was common to see them with first-author publications in top conferences prior to their PhD.
 One needs only to look at [these tweets](https://twitter.com/ShirleyYXWu/status/1876033230186615251?ref_src=twsrc%5Etfw) from professors and admissions committee members during the Fall 2025 cycle to recognize how competitive the CS PhD applications have been.
 
-Despite my NLP industry experience, I lacked the academic research backround expected from PhD applicants.
+Despite my NLP industry experience, I don't have the academic research backround expected from PhD applicants.
 Early on, I realized that pivoting from industry to academia would entail a lot of hard work.
 A part of me thought that maybe I should have just continued to a PhD right after my Masters when the path seemed clearer.
 But my industry years helped confirm that I genuinely enjoyed research work!
@@ -184,7 +184,7 @@ In addition, if you're interested in doing research on Tagalog and Filipino NLP 
 
 ## Final thoughts
 
-It's October, and my wife and I have been here at Cambridge for a month.
+It's November, and my wife and I have been here at Cambridge for a month.
 There's a lot to say about Cambridge&mdash;the collegiate system,[^3] the traditions, the culture, and more.
 Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that we'll be here for a while.
 
