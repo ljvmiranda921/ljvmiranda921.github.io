@@ -1,13 +1,11 @@
 ---
 layout: page
-title: About
+title: Hi friends!
 description: About page of Lj Miranda - Blog
 permalink: /about/
 ---
 
-Hi friends! My name is Lj Miranda, and welcome to my website!
-
-I [build things](https://github.com/ljvmiranda921).
+My name is Lj Miranda, and welcome to my website. Thanks for being here :)
 
 I started this site to tell the story of my tech journey. I believe in
 **technology that is open, enabling, and life-giving**. I aspire to usher that
@@ -26,11 +24,11 @@ maintain notable open-source libraries such as spaCy and Pyswarms. He dabbles
 in game development during his free time.
 </p>
 
-## Other links
+## External Links
 
-- [Game Dev](https://ljvmiranda921.itch.io): games I developed using Godot and PICO-8.
-- [Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery): photos taken using a Game Boy Camera.
-- [Micro Blog](https://ljvmiranda.micro.blog): micro-blog for "today I learned" (TIL) posts and tweets.
+- <i class="fab fa-itch-io"></i> [Game Dev](https://ljvmiranda921.itch.io): games I developed using Godot and PICO-8.
+- <i class="fas fa-camera"></i> [Game Boy Camera Photos](https://ljvmiranda921.github.io/gallery): photos taken using a Game Boy Camera.
+- <i class="fab fa-twitter"></i> [Micro Blog](https://ljvmiranda.micro.blog): micro-blog for "today I learned" (TIL) posts and tweets.
 
 ## Contact
 
