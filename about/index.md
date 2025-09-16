@@ -50,6 +50,7 @@ here, so go grab yourself a coffee and feel free to look around!
 
 **Lester James V. Miranda**  
 Churchill College, Cambridge, UK  
+Faculty of Modern and Medieval Languages and Linguistics  
 Email: ljvm2 [at] cam [dot] ac [dot] uk    
 [Curriculum Vitae (PDF)](https://storage.googleapis.com/ljvmiranda/cv.pdf)
 
