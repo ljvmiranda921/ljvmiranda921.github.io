@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**Oct 2025**</span>: ⭐ I'm starting my PhD at the [University of Cambridge - Language Technology Lab](https://ltl.mmll.cam.ac.uk/) and will be supervised by [Anna Korhonen](https://sites.google.com/site/annakorhonen/).</p>
+<p><span class="date">**Oct 2025**</span>: I'm starting my PhD at the [University of Cambridge - Language Technology Lab](https://ltl.mmll.cam.ac.uk/) and will be supervised by [Anna Korhonen](https://sites.google.com/site/annakorhonen/).</p>
 </div>
 
 <div class="news-item">
