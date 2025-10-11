@@ -5,22 +5,15 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-<!-- 【[🎓 Google Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en)】
-【[📚 Semantic Scholar](https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871)】 -->
-
 My field is in natural language processing and machine learning.
 I'm broadly interested in **building language technologies that are equitable and useful, through data.**
 I believe that a careful and systematic understanding of data&mdash; from its collection to its downstream influence on training&mdash; is crucial to build general-purpose language models.
 
 The following are the research themes I am interested in, along with some representative publications.
-<!-- I am eager to explore these themes individually or at their intersection. -->
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
-Finally, you can also check my [**Google Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) for a complete and up-to-date list.
+You can also check my [**Google Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) for a complete and up-to-date list.
 
 _Keywords: data-centric AI, multilinguality, resources & evaluation_
-
-<!-- If you are interested in these types of work, then do not hesitate to [reach out](mailto:ljvmiranda@gmail.com).
-I'm happy to discuss research and collaborate! -->
 
 ## Collecting high-quality data for LM training
 

@@ -22,6 +22,10 @@ title: News
 </style>
 
 <div class="news-item">
+<p><span class="date">**Oct 2025**</span>: I'm starting my PhD at the [University of Cambridge - Language Technology Lab](https://ltl.mmll.cam.ac.uk/) and will be advised by [Anna Korhonen](https://sites.google.com/site/annakorhonen/).</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**Aug 2025**</span>: I'm proud to introduce [FilBench](https://arxiv.org/abs/2508.03523), a [comprehensive LLM benchmark](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) for Filipino! Accepted at EMNLP 2025 Main. I also share some thoughts in [this blog post](/projects/2025/08/21/filbench/).</p>
 </div>
 
@@ -34,16 +38,16 @@ title: News
 </div>
 
 <div class="news-item">
-<p><span class="date">**Oct 2024**</span>: Our paper on routing preference instances to human or LM annotators, [Hybrid Preferences](https://arxiv.org/abs/2410.19133), is now available. This is the first work I co-led (with Yizhong Wang) at Ai2!</p>
+<p><span class="date">**Oct 2024**</span>: Our paper on routing preference instances to human or LM annotators, [Hybrid Preferences](https://aclanthology.org/2025.acl-long.355/), is now available. This is the first work I co-led (with Yizhong Wang) at Ai2!</p>
 </div>
 
 <div class="news-item">
-<p><span class="date">**Oct 2024**</span>: Our paper on evaluating reward models in multilingual settings, [M-RewardBench](https://arxiv.org/abs/2410.15522), is now available. This was a fun collab with folks from Cohere for AI!</p>
+<p><span class="date">**Oct 2024**</span>: Our paper on evaluating reward models in multilingual settings, [M-RewardBench](https://aclanthology.org/2025.acl-long.3/), is now available. This was a fun collab with folks from Cohere for AI!</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Sep 2024**</span>: My cross-institutional collabs, [Consent in Crisis](https://arxiv.org/abs/2407.14933) and [SEACrowd](https://arxiv.org/abs/2406.10118), were accepted to NeurIPS D&B and EMNLP 2024, respectively.</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**Aug 2024**</span>: 🏆 Our work on evaluating reward models in multilingual settings won Silver Prize in [Cohere for AI's Aya Expedition](https://cohere.com/blog/empowering-others-to-explore-the-next-frontier-expedition-aya)!</p>
