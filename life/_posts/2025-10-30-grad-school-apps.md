@@ -204,7 +204,7 @@ I'm thankful to all the people who helped me along the way, as I've learned a lo
 The path was long and winding, but I'm happy we made it.
 The next few years will be equally exciting, but I just want to linger in this moment&mdash;that in-between space as you turn the page to another chapter.
 
-Now that I'm past the hump of PhD applications, I'd like to give back: if you're interested in doing research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out, and I'm happy to mentor you!
+Now that I'm past the hump of PhD applications, I'd like to give back: if you're interested in doing research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out, and I'm happy to mentor you! I can also review research statements, but I'm not an expert!
 
 If you've reached this part, dear reader, thank you for reading. Here I am in my matriculation gown!
 
