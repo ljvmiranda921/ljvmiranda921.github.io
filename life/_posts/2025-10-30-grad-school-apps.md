@@ -120,7 +120,7 @@ The holiday season also brought a reflective mood, with fewer people around and 
 _From left to right (2024-2025): snapshots during the admissions season: writing essays in the Fremont library or in Cafe Ladro, buying food from PCC._
 {: style="text-align: center;"}
 
-I applied to 9 programs, and they're actually quite expensive!
+I applied to 7 programs, and they're actually quite expensive!
 I missed some of the fee waiver deadlines because I was busy, so I had to shell out $1,350 to $1,500 for application fees.
 In addition, some universities require official TOEFL scores, so you also have to pay TOEFL fees in order to send your test results to those universities (~$35).
 Don't make my mistake and keep in mind that fee waivers exist and most universities are generous, especially for international students, but just note that grad school apps can be very expensive.
@@ -140,7 +140,7 @@ I tried to keep myself busy, focusing on work and my current research projects&m
 
 ## On choosing PhD programs
 
-One of the hardest challenges in entering a PhD is **balancing your career aspirations and future life plans.**
+One of the hardest challenges in entering a PhD is balancing your career aspirations and future life plans.
 This is especially true for someone like me in their early 30s: a PhD program can take 4-6 years, pays lower than your typical software engineering job, and will coincide with the time when I might want to start a family.
 Making this decision in my thirties is different from if I had made this decision during my twenties.
 Getting into a PhD becomes a life decision more so than a career decision.
@@ -160,7 +160,7 @@ A lot has been written on how to choose PhD programs. My favorite was [Tim Dettm
 Based on his blog, I think I went with the Stability perspective.
 During ACL, I met several folks from Cambridge (although from different departments), and they seem genuinely happy.
 Interestingly, during the conference, I met an old friend of mine from spaCy and just realized that he was also from Cambridge!
-In addition, despite political changes in the UK, it's also one of the few countries where I can be with my wife.
+In addition, UK is one of the few countries where my wife can stay with me and work.
 PhD years are long and gritty, and having a rock to lean on is important.
 
 > Getting into a PhD becomes a life decision more so than a career decision.
@@ -184,6 +184,11 @@ Doubt will always be present, and I should welcome that.
 It's almost November, and my wife and I have been here at Cambridge for almost a month.
 There's a lot to say about Cambridge&mdash;the collegiate system,[^2] the traditions, the culture, and more.
 Things still look unfamiliar, but I'm taking my time to let the place reveal itself to me, knowing that we'll be here for a while.
+It's also encouraging to see that Cambridge has a strong support for mature students like me.
+I've met PhDs who also started at the same age as I did, some have even brought their kids!
+It's very different from my previous campus tour experience, where most incoming PhDs were fresh from undergrad.
+In some way, I don't feel alone and different, and that's important.
+
 
 <!-- pictures of Cambridge! -->
 <div style="display: flex; justify-content: center;">
@@ -201,7 +206,7 @@ The next few years will be equally exciting, but I just want to linger in this m
 
 Now that I'm past the hump of PhD applications, I'd like to give back: if you're interested in doing research on Tagalog and Filipino NLP with the intention to publish, feel free to reach out, and I'm happy to mentor you!
 
-If you've reached this part, dear reader, thank you for reading. Here's me in my matriculation gown!
+If you've reached this part, dear reader, thank you for reading. Here I am in my matriculation gown!
 
 ![](/assets/png/grad-school/matriculation.jpg){:width="400px"}
 {: style="text-align: center;"}
