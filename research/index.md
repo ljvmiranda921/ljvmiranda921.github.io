@@ -49,7 +49,7 @@ Within this theme, I also care a lot about **improving the state of Filipino NLP
 This involves building resources for training and evaluation.
 I also write a lot about Filipino NLP in this blog.
 
-- [FilBench: Can LLMs Generate and Understand Filipino?](https://arxiv.org/abs/2508.03523)
+- [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
   <br>_EMNLP '25 Main_
   <br><b>Lester James V. Miranda\*</b>, Elyanah Aco\*, Conner Manuel\*, Jan Christian Blaise Cruz, Joseph Marvin Imperial
   <br>[Code](https://github.com/filbench/filbench-eval) / [Website](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard)
