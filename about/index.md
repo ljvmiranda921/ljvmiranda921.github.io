@@ -38,6 +38,8 @@ Here, you'll find some of my **thoughts, works, and notes** on software
 development, machine learning, and research. I hope you'll spend a nice time
 here, so go grab yourself a coffee and feel free to look around!
 
+**License**: The content on this website is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0). 
+You are free to share and adapt the material, provided you give appropriate credit.
 
 
 ## External Links
