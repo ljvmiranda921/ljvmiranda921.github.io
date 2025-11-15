@@ -46,10 +46,10 @@ I'm motivated to pursue research that ensures that the next generation of state-
   <br>[Code](https://github.com/SEACrowd/seacrowd-datahub) / [Website](https://seacrowd.github.io/seacrowd-catalogue)
 
 Within this theme, I also care a lot about **improving the state of Filipino NLP** and representing my native language.
-This involves building resources for training and evaluation.
+This involves developing benchmark datasets such as [FilBench](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25 Main), linguistic resources such as [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/) (ACL '25 Main) and [TLUnified-NER](https://aclanthology.org/2023.sealp-1.2) (SEALP '23), and open-source libraries like [calamanCy](https://aclanthology.org/2023.nlposs-1.1/) (NLP-OSS '23).
 I also write a lot about Filipino NLP in this blog.
 
-- [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
+<!-- - [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
   <br>_EMNLP '25 Main_
   <br><b>Lester James V. Miranda\*</b>, Elyanah Aco\*, Conner Manuel\*, Jan Christian Blaise Cruz, Joseph Marvin Imperial
   <br>[Code](https://github.com/filbench/filbench-eval) / [Website](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard)
@@ -64,7 +64,7 @@ I also write a lot about Filipino NLP in this blog.
   <br>Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek &Scaron;uppa, Hila Gonen, Joseph Marvin Imperial, B&ouml;rje F. Karlsson, Peiqin Lin, Nikola Ljube&scaron;ic&#769;, <b>LJ Miranda</b>, Barbara Plank, Arij Riabi, Yuval Pinter
   <br> [[Dataset](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GQ8HDL)] [[Website](https://www.universalner.org/)] -->
 
-- [calamanCy: a Tagalog Natural Language Processing Toolkit](https://aclanthology.org/2023.nlposs-1.1/)
+<!-- - [calamanCy: a Tagalog Natural Language Processing Toolkit](https://aclanthology.org/2023.nlposs-1.1/)
   <br>_NLP Open-Source Software (NLP-OSS) Workshop @ EMNLP '23_
   <br> <b>Lester James V. Miranda</b>
   <br> [Code](https://github.com/ljvmiranda921/calamanCy) / [Poster](https://drive.google.com/file/d/1Q_-4Lf9ZL9ZCYS5aWPhRnCfHPhGwlBp6/view?usp=drive_link) / [Video](https://youtu.be/2fbzs1KbFTQ?si=_vKEY11Z1Jzuaxeu)
@@ -72,4 +72,4 @@ I also write a lot about Filipino NLP in this blog.
 - [Developing a Named Entity Recognition Dataset for Tagalog](https://aclanthology.org/2023.sealp-1.2/)
   <br>_Southeast Asian Language Processing (SEALP) Workshop @ IJCNLP-AACL '23_
   <br> <b>Lester James V. Miranda</b>
-  <br> [Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark) / [Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner) / [Slides](https://drive.google.com/file/d/1QVbW7Myou6U6cSqrlz5p_35Sl__008kG/view?usp=drive_link) / [Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)
+  <br> [Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark) / [Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner) / [Slides](https://drive.google.com/file/d/1QVbW7Myou6U6cSqrlz5p_35Sl__008kG/view?usp=drive_link) / [Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM) --> 
