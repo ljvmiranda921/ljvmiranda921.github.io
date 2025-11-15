@@ -46,7 +46,7 @@ I'm motivated to pursue research that ensures that the next generation of state-
   <br>[Code](https://github.com/SEACrowd/seacrowd-datahub) / [Website](https://seacrowd.github.io/seacrowd-catalogue)
 
 Within this theme, I also care a lot about **improving the state of Filipino NLP** and representing my native language.
-This involves developing benchmark datasets such as [FilBench](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25 Main), linguistic resources such as [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/) (ACL '25 Main) and [TLUnified-NER](https://aclanthology.org/2023.sealp-1.2) (SEALP '23), and open-source libraries like [calamanCy](https://aclanthology.org/2023.nlposs-1.1/) (NLP-OSS '23).
+This involves developing benchmark datasets such as [FilBench](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25 Main), building linguistic resources such as [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/) (ACL '25 Main) and [TLUnified-NER](https://aclanthology.org/2023.sealp-1.2) (SEALP '23), and creating open-source libraries like [calamanCy](https://aclanthology.org/2023.nlposs-1.1/) (NLP-OSS '23).
 I also write a lot about Filipino NLP in this blog.
 
 <!-- - [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
