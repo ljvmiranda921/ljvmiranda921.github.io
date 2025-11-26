@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "On-policy distillation on a budget"
+title: "Playing around Tinker's API: long-context distillation for Tagalog MT just from a grammar book"
 date: 2025-12-30
 category: notebook
 comments: true
@@ -13,11 +13,12 @@ tags:
     distillation,
     on-policy,
     natural language processing,
+    tinker,
+    thinking machines,
     llm,
-
   ]
 description: |
-  Just playing around on-policy distillation using quantized models using llamacpp on an M4.
-  I just want to know if (a) it's doable and (b) what's the most quantized model that can produce a decent LLM.
+  During the holidays, I played around Thinking Machines' Tinker API to check whether I can teach a model to do Tagalog machine translation just using a grammar book. 
+  Read on to find out more!
 excerpt: |
 ---
