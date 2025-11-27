@@ -7,6 +7,7 @@ category: projects
 comments: true
 author: "LJ MIRANDA"
 published: true
+filipino_nlp: true
 tags: [nlp, language technology, natural language processing, tagalog, low resource, spacy, machine learning]
 header-img: /assets/png/calamancy/header.png
 description: |
