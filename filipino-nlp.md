@@ -14,3 +14,16 @@ It's like being alone in a grocery aisle and spotting a cereal box on the floorâ
 
 This sense of responsibility grew and shaped into what it is today. I'm also glad to know that I'm not alone: there are several researchers and practitioners who are also passionate about improving the state of Filipino NLP. We had our first success with [FilBench](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25 Main), demonstrating that a scrappy grassroots team can do amazing research. There's so much more to come, and I'm excited to see what more we can achieve.
 
+## Blog posts
+
+{% assign filipino_posts = site.posts | where: "filipino_nlp", true | sort: "date" | reverse %}
+{% assign posts_by_year = filipino_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+{% for year_group in posts_by_year %}
+### {{ year_group.name }}
+
+{% for post in year_group.items %}
+- [{{ post.title }}]({{ post.url }}) ({{ post.date | date: "%B %-d, %Y" }})
+{% endfor %}
+
+{% endfor %}
