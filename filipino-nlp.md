@@ -14,7 +14,21 @@ It's like being alone in a grocery aisle and spotting a cereal box on the floorâ
 
 This sense of responsibility grew and shaped into what it is today. I'm also glad to know that I'm not alone: there are several researchers and practitioners who are also passionate about improving the state of Filipino NLP. We had our first success with [FilBench](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25 Main), demonstrating that a scrappy grassroots team can do amazing research. There's so much more to come, and I'm excited to see what more we can achieve.
 
-## Research papers
+## Writings
+
+{% assign filipino_posts = site.posts | where: "filipino_nlp", true | sort: "date" | reverse %}
+{% assign posts_by_year = filipino_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+{% for year_group in posts_by_year %}
+### {{ year_group.name }}
+
+{% for post in year_group.items -%}
+- [{{ post.title }}]({{ post.url }}) ({{ post.date | date: "%B %-d, %Y" }})
+{% endfor -%}
+
+{% endfor %}
+
+## Research
 
 - [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
   <br>_EMNLP '25 Main_
@@ -45,17 +59,3 @@ This sense of responsibility grew and shaped into what it is today. I'm also gla
   <br>_Southeast Asian Language Processing (SEALP) Workshop @ IJCNLP-AACL '23_
   <br>**Lester James V. Miranda**
   <br>[Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark) / [Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner) / [Slides](https://drive.google.com/file/d/1QVbW7Myou6U6cSqrlz5p_35Sl__008kG/view?usp=drive_link) / [Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)
-
-## Writings
-
-{% assign filipino_posts = site.posts | where: "filipino_nlp", true | sort: "date" | reverse %}
-{% assign posts_by_year = filipino_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-
-{% for year_group in posts_by_year %}
-### {{ year_group.name }}
-
-{% for post in year_group.items %}
-- [{{ post.title }}]({{ post.url }}) ({{ post.date | date: "%B %-d, %Y" }})
-{% endfor %}
-
-{% endfor %}
