@@ -7,6 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
+filipino_nlp: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
 header-img: /assets/png/calamancy-annotation/header.png
 description: |

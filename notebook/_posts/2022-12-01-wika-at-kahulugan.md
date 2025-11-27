@@ -7,6 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
+filipino_nlp: true
 tags: [nlp, linguistics, semantics, pragmatics]
 description: |
     Nakapaloob sa sanaysay na ito ang aking mga pagmumuni patungkol sa relasyon

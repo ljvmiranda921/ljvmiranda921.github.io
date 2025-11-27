@@ -7,6 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
+filipino_nlp: true
 header-img: /assets/png/tagalog-ner-embeddings/header.png
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
 description: |

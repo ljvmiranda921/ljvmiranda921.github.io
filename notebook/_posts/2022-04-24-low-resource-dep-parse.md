@@ -7,17 +7,18 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
+filipino_nlp: true
 tags: [natural language processing, dependency parsing, nlp, low-resource, machine learning]
 header-img: /assets/png/dep-parsing/header.png
 description: |
     Let me tell you about the amazing world of dependency parsing, especially
     for a low-resource language like Tagalog. Unlike English, Tagalog has a
-    limited amount of labeled data, and presents a unique challenge to NLP. 
+    limited amount of labeled data, and presents a unique challenge to NLP.
     How do we solve this? Read on to find out more.
 excerpt: |
     Let me tell you about the amazing world of dependency parsing, especially
     for a low-resource language like Tagalog. Unlike English, Tagalog has a
-    limited amount of labeled data, and presents a unique challenge to NLP. 
+    limited amount of labeled data, and presents a unique challenge to NLP.
     How do we solve this? Read on to find out more.
 ---
 

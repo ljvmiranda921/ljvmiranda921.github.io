@@ -7,6 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
+filipino_nlp: true
 header-img: /assets/png/filipino-llm/header.png
 tags: [tagalog, filipino, nlp, llm]
 description: |
