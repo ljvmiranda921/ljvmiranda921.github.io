@@ -32,6 +32,12 @@ This sense of responsibility grew and shaped into what it is today. I'm also gla
 .filipino-nlp-column h2 {
   margin-top: 0;
 }
+
+.filipino-nlp-column h3 {
+  font-size: 1.3rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
+}
 </style>
 
 <div class="filipino-nlp-grid">
