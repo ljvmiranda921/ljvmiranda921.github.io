@@ -1,18 +1,41 @@
 ---
-title: Filipino NLP Collection  
+title: 🇵🇭 Filipino NLP Collection
 layout: page
 description: A collection of all my writings in Filipino NLP 
 permalink: /filipino-nlp/
 tags: [filipino nlp, philippines, llm, natural language processing, filbench, large language models]
 ---
 
-This collection contains all my writings on Filipino NLP.
+This collection contains all my works on Filipino NLP.
 
 My initial motivation to work on Filipino NLP was quite modest: I was the only Filipino on the [spaCy](https://spacy.io) team, and I thought it would be nice to represent and add Tagalog language support to the library. No one else was going to work on it, so why not me?
 
 It's like being alone in a grocery aisle and spotting a cereal box on the floor—you're the only person there, you're capable, so why not just pick it up?
 
 This sense of responsibility grew and shaped into what it is today. I'm also glad to know that I'm not alone: there are several researchers and practitioners who are also passionate about improving the state of Filipino NLP. We had our first success with [FilBench](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25 Main), demonstrating that a scrappy grassroots team can do amazing research. There's so much more to come, and I'm excited to see what more we can achieve.
+
+<style>
+.filipino-nlp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .filipino-nlp-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.filipino-nlp-column h2 {
+  margin-top: 0;
+}
+</style>
+
+<div class="filipino-nlp-grid">
+<div class="filipino-nlp-column" markdown="1">
 
 ## Writings
 
@@ -27,6 +50,9 @@ This sense of responsibility grew and shaped into what it is today. I'm also gla
 {% endfor -%}
 
 {% endfor %}
+
+</div>
+<div class="filipino-nlp-column" markdown="1">
 
 ## Research
 
@@ -59,3 +85,6 @@ This sense of responsibility grew and shaped into what it is today. I'm also gla
   <br>_Southeast Asian Language Processing (SEALP) Workshop @ IJCNLP-AACL '23_
   <br>**Lester James V. Miranda**
   <br>[Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark) / [Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner) / [Slides](https://drive.google.com/file/d/1QVbW7Myou6U6cSqrlz5p_35Sl__008kG/view?usp=drive_link) / [Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM)
+
+</div>
+</div>
