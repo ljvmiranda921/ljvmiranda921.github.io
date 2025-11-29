@@ -20,6 +20,11 @@ _Keywords: data-centric AI, multilinguality, resources & evaluation_
 What constitutes high-quality data? And how can we efficiently and scalably collect them?
 I've explored these questions in the context of acquiring post-training data by examining human factors in preference annotation such as in HyPER, and devising new techniques in data synthesis and generation as seen in T&uuml;lu 3.
 
+- [Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation]()
+  <br>_EMNLP '26 Main_
+  <br><b>Lester James V. Miranda</b>, Songbo Hu, Roi Reichart, Anna Korhonen.
+  <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Models and Datasets](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) 
+
 - [**Hy**brid **P**ref**er**ences: Learning to Route Instances for Human vs. AI Feedback](https://aclanthology.org/2025.acl-long.355/)
   <br>_ACL '25 Main_
   <br><b>Lester James V. Miranda\*</b>, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi.
