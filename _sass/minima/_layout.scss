@@ -63,14 +63,9 @@
   }
 
   @include media-query($on-palm) {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: $spacing-unit / 2;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
-    text-align: right;
+    float: right;
+    position: relative;
+    margin-top: 8px;
 
     label[for="nav-trigger"] {
       display: block;
@@ -103,6 +98,15 @@
     input:checked~.trigger {
       display: block;
       padding-bottom: 5px;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: $background-color;
+      border: 1px solid $grey-color-light;
+      border-radius: 5px;
+      text-align: right;
+      margin-top: 5px;
+      z-index: 1;
     }
 
     .page-link {
