@@ -35,6 +35,11 @@ I've explored these questions in the context of acquiring post-training data by 
 No language should be left behind, especially in data.
 I'm motivated to pursue research that ensures that the next generation of state-of-the-art LLMs cater to languages beyond English; by improving training data quality and building faithful multilingual benchmarks.
 
+- [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
+  <br>_EMNLP '25 Main_
+  <br><b>Lester James V. Miranda\*</b>, Elyanah Aco\*, Conner Manuel\*, Jan Christian Blaise Cruz, Joseph Marvin Imperial
+  <br>[Code](https://github.com/filbench/filbench-eval) / [Website](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard)
+
 - [M-RewardBench: Evaluating Reward Models in Multilingual Settings](https://aclanthology.org/2025.acl-long.3/)
   <br>_ACL '25 Main_
   <br>Srishti Gureja\*, <b>Lester James V. Miranda\*</b>, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee.
