@@ -15,10 +15,12 @@ You can also check my [**Google Scholar**](https://scholar.google.co.jp/citation
 
 _Keywords: data-centric AI, multilinguality, resources & evaluation_
 
-## Collecting high-quality data for LM training
+## Data-centric NLP
 
-What constitutes high-quality data? And how can we efficiently and scalably collect them?
-I've explored these questions in the context of acquiring post-training data by examining human factors in preference annotation such as in HyPER, and devising new techniques in data synthesis and generation as seen in T&uuml;lu 3.
+I'm excited about creative and resourceful ways (in Tagalog, ma-diskarte) to obtain high-quality and cost-effective data resources in the presence of extreme constraints.
+This might involve selectively choosing data for human annotation (HyPER) or generating data via LLMs (T&uuml;lu 3, Polyglot Teachers).
+<!-- What constitutes high-quality data? And how can we efficiently and scalably collect them?
+I've explored these questions in the context of acquiring post-training data by examining human factors in preference annotation such as in HyPER, and devising new techniques in data synthesis and generation as seen in T&uuml;lu 3. -->
 
 - [Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation]()
   <br>_EMNLP '26 Main_
@@ -35,7 +37,7 @@ I've explored these questions in the context of acquiring post-training data by 
   <br>Nathan Lambert\*, Jacob Morrison\*, Valentina Pyatkin\*, Shenyi Huang\*, Hamish Ivison\*, Faeze Brahman\*, <b>Lester James V. Miranda\*</b>, Alisa Liu, Nouha Dziri, Xinxi Lyu, Yuling Gu, Saumya Malik, Victoria Graf, Jena D. Hwang, Jiangjiang Yang, Ronan Le Bras, Oyvind Tajford, Chris Wilhelm, Luca Soldiani, Noah A. Smith, Yizhong Wang, Pradeep Dasigi, Hannaneh Hajishirzi _(&lowast;: core contributor)_.
   <br>[Models](https://huggingface.co/collections/allenai/tulu-3-models-673b8e0dc3512e30e7dc54f5) / [Datasets](https://huggingface.co/collections/allenai/tulu-3-datasets-673b8df14442393f7213f372) / [Website](https://allenai.org/tulu)
 
-## Resources for multilingual and equitable NLP
+## Advancing the Global Access Frontier
 
 No language should be left behind, especially in data.
 I'm motivated to pursue research that ensures that the next generation of state-of-the-art LLMs cater to languages beyond English; by improving training data quality and building faithful multilingual benchmarks.
