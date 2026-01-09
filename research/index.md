@@ -17,8 +17,8 @@ _Keywords: data-centric AI, multilinguality, resources & evaluation_
 
 ## Data-centric NLP
 
-I'm excited about creative and resourceful ways (in Tagalog, ma-diskarte) to obtain high-quality and cost-effective data resources in the presence of extreme constraints.
-This might involve selectively choosing data for human annotation (HyPER) or generating data via LLMs (T&uuml;lu 3, Polyglot Teachers).
+I'm excited about creative and resourceful ways (in Tagalog, ma-[diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) to obtain high-quality and cost-effective data resources in the presence of extreme constraints.
+This might involve selectively choosing data for human annotation [HyPER] or generating data via LLMs [T&uuml;lu 3, Polyglot Teachers].
 <!-- What constitutes high-quality data? And how can we efficiently and scalably collect them?
 I've explored these questions in the context of acquiring post-training data by examining human factors in preference annotation such as in HyPER, and devising new techniques in data synthesis and generation as seen in T&uuml;lu 3. -->
 
