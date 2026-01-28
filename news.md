@@ -22,6 +22,10 @@ title: News
 </style>
 
 <div class="news-item">
+<p><span class="date">**Dec 2025**</span>: So excited to see the release of [OLMo 3](https://arxiv.org/pdf/2512.13961)! My small contribution was on creating the tool-use SFT mix during my last few months as a pre-doc.</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**Oct 2025**</span>: I'm starting my PhD at the [University of Cambridge - Language Technology Lab](https://ltl.mmll.cam.ac.uk/) and will be advised by [Anna Korhonen](https://sites.google.com/site/annakorhonen/).</p>
 </div>
 
@@ -41,9 +45,9 @@ title: News
 <p><span class="date">**Oct 2024**</span>: Our paper on routing preference instances to human or LM annotators, [Hybrid Preferences](https://aclanthology.org/2025.acl-long.355/), is now available. This is the first work I co-led (with Yizhong Wang) at Ai2!</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Oct 2024**</span>: Our paper on evaluating reward models in multilingual settings, [M-RewardBench](https://aclanthology.org/2025.acl-long.3/), is now available. This was a fun collab with folks from Cohere for AI!</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**Sep 2024**</span>: My cross-institutional collabs, [Consent in Crisis](https://arxiv.org/abs/2407.14933) and [SEACrowd](https://arxiv.org/abs/2406.10118), were accepted to NeurIPS D&B and EMNLP 2024, respectively.</p>
