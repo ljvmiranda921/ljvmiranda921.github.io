@@ -24,7 +24,7 @@ I've explored these questions in the context of acquiring post-training data by 
 
 - [Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation]()
   <br>_EMNLP '26 Main_
-  <br><b>Lester James V. Miranda</b>, Songbo Hu, Roi Reichart, Anna Korhonen.
+  <br><b>Lester James V. Miranda</b>, Ivan Vuli&#263;, Anna Korhonen.
   <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Models and Datasets](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) 
 
 - [**Hy**brid **P**ref**er**ences: Learning to Route Instances for Human vs. AI Feedback](https://aclanthology.org/2025.acl-long.355/)
