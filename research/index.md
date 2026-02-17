@@ -25,7 +25,7 @@ This involves synthetic data generation [PG-Score, T&uuml;lu3] or cost-efficient
 I've explored these questions in the context of acquiring post-training data by examining human factors in preference annotation such as in HyPER, and devising new techniques in data synthesis and generation as seen in T&uuml;lu 3. -->
 
 - [Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation]()
-  <br>_Preprint_
+  <br>_Preprint '26_
   <br><b>Lester James V. Miranda</b>, Ivan Vuli&#263;, Anna Korhonen.
   <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Collection](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) / [Slides]() / [Poster]() / [Video]()
 
@@ -41,8 +41,14 @@ I've explored these questions in the context of acquiring post-training data by 
 
 ## Advancing the Global Access Frontier
 
-No language should be left behind, especially in data.
-I'm motivated to pursue research that ensures that the next generation of state-of-the-art LLMs cater to languages beyond English; by improving training data quality and building faithful multilingual benchmarks.
+Equitable language model development requires improving capabilities while expanding access.
+I'm motivated to pursue research that ensures that the next generation of state-of-the-art LLMs cater to the needs of communities in the Global South.
+
+- [Advancing the Global Access Frontier: Language Model Deployment as a Problem of Access]()
+  <br>_Preprint '26_
+  <br><b>Lester James V. Miranda</b>, Roi Reichart, Anna Korhonen
+  <br>[Slides]() / [Video]()
+
 
 - [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
   <br>_EMNLP '25 Main_
