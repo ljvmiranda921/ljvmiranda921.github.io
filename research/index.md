@@ -25,7 +25,7 @@ This involves synthetic data generation [PG-Score, T&uuml;lu3] or cost-efficient
 I've explored these questions in the context of acquiring post-training data by examining human factors in preference annotation such as in HyPER, and devising new techniques in data synthesis and generation as seen in T&uuml;lu 3. -->
 
 - [Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation]()
-  <br>_EMNLP '26 Main_
+  <br>_Preprint_
   <br><b>Lester James V. Miranda</b>, Ivan Vuli&#263;, Anna Korhonen.
   <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Collection](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) / [Slides]() / [Poster]() / [Video]()
 
