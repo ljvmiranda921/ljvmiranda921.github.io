@@ -44,6 +44,7 @@ I've explored these questions in the context of acquiring post-training data by 
 <!-- Equitable language model development requires improving capabilities while expanding access. -->
 My research aims to ensure that next-generation large language models serve the needs of communities in the Global South.
 I created a conceptual framework [GA Frontier] that frames deployment as a problem of access along several constraints: data, infrastructure, and readiness.
+I do research that attempts to relax these constraints.
 
 - [Advancing the Global Access Frontier: Language Model Deployment as a Problem of Access]()
   <br>_Preprint '26_
