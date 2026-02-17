@@ -17,15 +17,17 @@ _Keywords: data-centric AI, multilinguality, resources & evaluation_
 
 ## Data-centric NLP
 
-I'm excited about creative and resourceful ways (in Tagalog, ma-[diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) to obtain high-quality and cost-effective data resources in the presence of extreme constraints.
-This might involve selectively choosing data for human annotation [HyPER] or generating data via LLMs [T&uuml;lu 3, Polyglot Teachers].
+One of the key unlocks for equitable NLP is access to high quality training signals. 
+My research aims to discover creative, resourceful, or in Tagalog, ma-*diskarte* ways we can obtain these signals in the face of extreme constraints.
+This involves synthetic data generation [PG-Score, T&uuml;lu3] or cost-efficient annotation [HyPER].
+
 <!-- What constitutes high-quality data? And how can we efficiently and scalably collect them?
 I've explored these questions in the context of acquiring post-training data by examining human factors in preference annotation such as in HyPER, and devising new techniques in data synthesis and generation as seen in T&uuml;lu 3. -->
 
 - [Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation]()
   <br>_EMNLP '26 Main_
   <br><b>Lester James V. Miranda</b>, Ivan Vuli&#263;, Anna Korhonen.
-  <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Models and Datasets](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) 
+  <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Collection](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) / [Slides]() / [Poster]() / [Video]()
 
 - [**Hy**brid **P**ref**er**ences: Learning to Route Instances for Human vs. AI Feedback](https://aclanthology.org/2025.acl-long.355/)
   <br>_ACL '25 Main_
@@ -52,16 +54,19 @@ I'm motivated to pursue research that ensures that the next generation of state-
   <br>Srishti Gureja\*, <b>Lester James V. Miranda\*</b>, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee.
   <br>[Code](https://github.com/for-ai/aya_rm_multilingual) / [Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7) / [Slides](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link) / [Poster](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link) / [Video](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)
 
+Within this theme, I also care a lot about [**improving the state of Filipino NLP**](/filipino-nlp) and representing my native language.
+This involves developing benchmark datasets such as [FilBench-Eval](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25 Main), building linguistic resources such as [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/) (ACL '25 Main) and [TLUnified-NER](https://aclanthology.org/2023.sealp-1.2) (SEALP '23), and creating open-source libraries like [calamanCy](https://aclanthology.org/2023.nlposs-1.1/) (NLP-OSS '23).
+I also write a lot about [Filipino NLP](/filipino-nlp) in this blog and organize researchers on collaborative projects through the [FilBench collective](https://filbench.github.io).
+
+<!-- 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://aclanthology.org/2024.emnlp-main.296/)
   <br>_EMNLP '24 Main_
   <br>Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <b>Lester James Miranda\*</b>, and 50+ other authors _(&lowast;: major contributor)_.
   <br>[Code](https://github.com/SEACrowd/seacrowd-datahub) / [Website](https://seacrowd.github.io/seacrowd-catalogue)
 
-Within this theme, I also care a lot about [**improving the state of Filipino NLP**](/filipino-nlp) and representing my native language.
-This involves developing benchmark datasets such as [FilBench-Eval](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25 Main), building linguistic resources such as [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/) (ACL '25 Main) and [TLUnified-NER](https://aclanthology.org/2023.sealp-1.2) (SEALP '23), and creating open-source libraries like [calamanCy](https://aclanthology.org/2023.nlposs-1.1/) (NLP-OSS '23).
-I also write a lot about [Filipino NLP](/filipino-nlp) in this blog and organize researchers on collaborative projects through the [FilBench collective](https://filbench.github.io).
 
-<!-- - [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
+
+- [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
   <br>_EMNLP '25 Main_
   <br><b>Lester James V. Miranda\*</b>, Elyanah Aco\*, Conner Manuel\*, Jan Christian Blaise Cruz, Joseph Marvin Imperial
   <br>[Code](https://github.com/filbench/filbench-eval) / [Website](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard)
