@@ -18,7 +18,7 @@ _Keywords: data-centric AI, multilinguality, resources & evaluation_
 ## Data-centric NLP
 
 One of the key unlocks for equitable NLP is access to high quality training signals. 
-My research aims to discover creative, resourceful, or in Tagalog, ma-*diskarte* ways we can obtain these signals in the face of extreme constraints.
+My research aims to find resourceful, creative&mdash;or as we say in Tagalog, ma-*diskarte*&mdash;ways to obtain these signals despite extreme constraints.
 This involves synthetic data generation [PG-Score, T&uuml;lu3] or cost-efficient annotation [HyPER].
 
 <!-- What constitutes high-quality data? And how can we efficiently and scalably collect them?
