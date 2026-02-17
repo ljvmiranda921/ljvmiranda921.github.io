@@ -42,7 +42,8 @@ I've explored these questions in the context of acquiring post-training data by 
 ## Advancing the Global Access Frontier
 
 Equitable language model development requires improving capabilities while expanding access.
-I'm motivated to pursue research that ensures that the next generation of state-of-the-art LLMs cater to the needs of communities in the Global South.
+My research aims to ensure that next-generation large language models serve the needs of communities in the Global South.
+I propose a conceptual framework [Global Access Frontier] that reframes deployment as capacity-enabling than welfare-focused.
 
 - [Advancing the Global Access Frontier: Language Model Deployment as a Problem of Access]()
   <br>_Preprint '26_
