@@ -8,8 +8,8 @@ permalink: /research/
 My field is in natural language processing and machine learning.
 I'm broadly interested in **building equitable and useful language technologies**.
 Early in my PhD, I developed a [conceptual framework]() that frames equitable language model development as a problem of access, which is then constrained along Data, Infrastructure, and Readiness.
-I do research that aims to relax these three, although nowadays I'm currently interested in Data.
-Specifically, on creative ways to obtain training signals under extreme constraints.
+I do research that aims to relax these three, although nowadays I'm currently interested in data:
+specifically, on creative (or as we say in Tagalog, ma-diskarte) ways to obtain training signals under extreme resource constraints.
 
 Below is a selection of work that reflects my current research interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
