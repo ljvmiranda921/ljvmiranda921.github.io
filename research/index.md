@@ -1,17 +1,20 @@
 ---
 layout: page
-title: Research Work
+title: Research
 description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
 My field is in natural language processing and machine learning.
+I'm broadly interested in **building equitable and useful language technologies**.
+Early in my PhD, I developed a [conceptual framework]() that frames equitable language model development as a problem of access, which is then constrained along data, infrastructure, and readiness.
+
 I'm broadly interested in **building language technologies that are equitable and useful, through data.**
 I believe that a careful and systematic understanding of data&mdash; from its collection to its downstream influence on training&mdash; is crucial to build general-purpose language models.
-
-The following are the research themes I am interested in, along with some representative publications.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
-You can also check my [**Google Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) for a complete and up-to-date list.
+You can also check my [**Google Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) for a complete list.
+
+<!-- The following are the research themes I am interested in, along with some representative publications. -->
 
 _Keywords: data-centric AI, multilinguality, resources & evaluation_
 
