@@ -21,9 +21,6 @@ One of the key unlocks for equitable NLP is access to high quality training sign
 My research aims to find resourceful, creative&mdash;or as we say in Tagalog, ma-*diskarte*&mdash;ways to obtain these signals despite extreme constraints.
 This involves synthetic data generation [PG-Score, T&uuml;lu3] or cost-efficient annotation [HyPER].
 
-<!-- What constitutes high-quality data? And how can we efficiently and scalably collect them?
-I've explored these questions in the context of acquiring post-training data by examining human factors in preference annotation such as in HyPER, and devising new techniques in data synthesis and generation as seen in T&uuml;lu 3. -->
-
 - [Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation]()
   <br>_Preprint '26_
   <br><b>Lester James V. Miranda</b>, Ivan Vuli&#263;, Anna Korhonen
