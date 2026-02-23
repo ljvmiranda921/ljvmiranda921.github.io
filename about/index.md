@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hi friends!
+title: About
 description: About page of Lj Miranda - Blog
 permalink: /about/
 ---
