@@ -6,14 +6,16 @@ permalink: /research/
 ---
 
 My field is in natural language processing and machine learning.
-I'm broadly interested in **building equitable and useful language technologies**.
+I'm broadly interested in **building equitable and useful language technologies** that serve the needs of the Global South.
+
 Early on in my PhD, I developed a [conceptual framework]() that frames equitable language model development as a problem of access, which is then constrained along Data, Infrastructure, and Readiness.
 I conduct research that aims to relax these three, although nowadays I'm currently interested in data:
 specifically, on creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to obtain training signals under extreme resource constraints.
 
-Below is a selection of work that reflects my current research interests.
+Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
 You can also check my [Google Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) or [Semantic Scholar](https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871) for a complete list.
+I'm also [open for collaborations](mailto:ljvm2@cam.ac.uk) and always excited about potential internships or research visits.
 
 <!-- The following are the research themes I am interested in, along with some representative publications. -->
 
@@ -35,7 +37,7 @@ _Keywords: data-centric AI, multilinguality, resources & evaluation_
   <br>[Code](https://github.com/for-ai/aya_rm_multilingual) / [Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7) / [Slides](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link) / [Poster](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link) / [Video](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)
 
 
-- [**Hy**brid **P**ref**er**ences: Learning to Route Instances for Human vs. AI Feedback](https://aclanthology.org/2025.acl-long.355/)
+- [Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback](https://aclanthology.org/2025.acl-long.355/)
   <br>_ACL '25 Main_
   <br><b>Lester James V. Miranda\*</b>, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
   <br>[Code](https://github.com/allenai/hybrid-preferences) / [Dataset](https://huggingface.co/datasets/allenai/multipref) / [Slides](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing) / [Poster](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link) / [Video](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)
