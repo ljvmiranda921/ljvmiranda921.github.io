@@ -32,20 +32,20 @@ _Keywords: data-centric AI, multilinguality, resources & evaluation_
   <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Collection](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) / [Slides]() / [Poster]() / [Video]()
 
 - [M-RewardBench: Evaluating Reward Models in Multilingual Settings](https://aclanthology.org/2025.acl-long.3/)
-  <br>_ACL '25 Main_
+  <br>_ACL '25_
   <br>Srishti Gureja\*, <b>Lester James V. Miranda\*</b>, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee
   <br>[Code](https://github.com/for-ai/aya_rm_multilingual) / [Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7) / [Slides](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link) / [Poster](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link) / [Video](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)
 
 
 - [Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback](https://aclanthology.org/2025.acl-long.355/)
-  <br>_ACL '25 Main_
+  <br>_ACL '25_
   <br><b>Lester James V. Miranda\*</b>, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
   <br>[Code](https://github.com/allenai/hybrid-preferences) / [Dataset](https://huggingface.co/datasets/allenai/multipref) / [Slides](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing) / [Poster](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link) / [Video](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)
 
 I also care a lot about [advancing Filipino NLP](/filipino-nlp) and representing my native language.
 This involves:
-- developing benchmarks such as [FilBench-Eval](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25 Main),
-- building resources such as [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/) (ACL '25 Main) and [TLUnified-NER](https://aclanthology.org/2023.sealp-1.2) (SEALP '23), and
+- developing benchmarks such as [FilBench-Eval](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25),
+- building resources such as [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/) (ACL '25) and [TLUnified-NER](https://aclanthology.org/2023.sealp-1.2) (SEALP '23), and
 - creating open-source tools like [calamanCy](https://aclanthology.org/2023.nlposs-1.1/) (NLP-OSS '23).
 
 I write a lot about Filipino NLP in this blog and organize researchers on collaborative projects through the [FilBench collective](https://filbench.github.io).
