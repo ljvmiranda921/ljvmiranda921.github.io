@@ -21,7 +21,7 @@ I'm also [open for collaborations](mailto:ljvm2@cam.ac.uk) and always excited ab
 
 _Keywords: data-centric AI, multilinguality, resources & evaluation_
 
-- [Advancing the Global Access Frontier: Language Model Deployment as a Problem of Access]()
+- [The Global Access Frontier of Language AI]()
   <br>_Preprint '26_
   <br><b>Lester James V. Miranda</b>, Roi Reichart, Anna Korhonen
   <br>[Slides]() / [Video]()
