@@ -42,13 +42,13 @@ _Keywords: data-centric AI, multilinguality, resources & evaluation_
   <br><b>Lester James V. Miranda\*</b>, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
   <br>[Code](https://github.com/allenai/hybrid-preferences) / [Dataset](https://huggingface.co/datasets/allenai/multipref) / [Slides](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing) / [Poster](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link) / [Video](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)
 
-I also care a lot about [advancing Filipino NLP](/filipino-nlp) and representing my native language.
+I also care a lot about advancing Filipino NLP and representing my native language.
 This involves:
 - developing benchmarks such as [FilBench-Eval](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25),
 - building resources such as [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/) (ACL '25) and [TLUnified-NER](https://aclanthology.org/2023.sealp-1.2) (SEALP '23), and
 - creating open-source tools like [calamanCy](https://aclanthology.org/2023.nlposs-1.1/) (NLP-OSS '23).
 
-I write a lot about Filipino NLP in this blog and organize researchers on collaborative projects through the [FilBench collective](https://filbench.github.io).
+I [write a lot about Filipino NLP](/filipino-nlp) in this blog and organize researchers on collaborative projects through the [FilBench collective](https://filbench.github.io).
 
 <!-- ## Data-centric NLP
 
