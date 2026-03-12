@@ -6,7 +6,9 @@ permalink: /research/
 ---
 
 My field is in natural language processing and machine learning.
-I'm broadly interested in **building equitable and useful language technologies** through creative (or as we say in Tagalog, ma-diskarte) ways to obtain training signals under extreme constraints.
+I'm broadly interested in **building equitable and useful language technologies**. 
+One of the key unlocks for equitable NLP is access to high-quality training signals,
+and so I explore creative (or as we say in Tagalog, ma-diskarte) ways to obtain these signals under extreme constraints.
 
 Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
@@ -26,7 +28,6 @@ _Keywords: data-centric AI, multilinguality, resources & evaluation_
   <br>_ACL '25_
   <br>Srishti Gureja\*, <b>Lester James V. Miranda\*</b>, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee
   <br>[Code](https://github.com/for-ai/aya_rm_multilingual) / [Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7) / [Slides](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link) / [Poster](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link) / [Video](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)
-
 
 - [Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback](https://aclanthology.org/2025.acl-long.355/)
   <br>_ACL '25_
