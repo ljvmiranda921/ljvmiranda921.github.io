@@ -6,11 +6,7 @@ permalink: /research/
 ---
 
 My field is in natural language processing and machine learning.
-I'm broadly interested in **building equitable and useful language technologies** that serve the needs of the Global South.
-
-Early on in my PhD, I developed a [conceptual framework]() that frames equitable language model development as a problem of access, which is then constrained along Data, Infrastructure, and Readiness.
-I conduct research that aims to relax these three, although nowadays I'm currently interested in addressing data scarcity:
-specifically, on finding creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to obtain training signals under extreme resource constraints.
+I'm broadly interested in **building equitable and useful language technologies** through creative (or as we say in Tagalog, ma-diskarte) ways to obtain training signals under extreme constraints.
 
 Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
@@ -20,11 +16,6 @@ I'm also [open for collaborations](mailto:ljvm2@cam.ac.uk) and always excited ab
 <!-- The following are the research themes I am interested in, along with some representative publications. -->
 
 _Keywords: data-centric AI, multilinguality, resources & evaluation_
-
-- [The Global Access Frontier of Language AI]()
-  <br>_Preprint '26_
-  <br><b>Lester James V. Miranda</b>, Roi Reichart, Anna Korhonen
-  <br>[Slides]() / [Video]()
 
 - [Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation]()
   <br>_Preprint '26_
