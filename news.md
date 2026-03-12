@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**Jun 2026**</span>: Sharing my first PhD work, [Polyglot Teachers]! Here, I studied what makes a good teacher model for multilingual synthetic data generation. Excited to continue this line of work!</p>
+<p><span class="date">**Jun 2026**</span>: Sharing my first PhD work, [Polyglot Teachers]()! Here, I studied what makes a good teacher model for multilingual synthetic data generation. Excited to continue this line of work!</p>
 </div>
 
 <div class="news-item">
