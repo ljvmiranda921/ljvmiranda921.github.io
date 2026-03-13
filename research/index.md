@@ -17,7 +17,7 @@ I'm also [open for collaborations](mailto:ljvm2@cam.ac.uk) and always excited ab
 
 <!-- The following are the research themes I am interested in, along with some representative publications. -->
 
-_Keywords: data-centric AI, multilinguality, resources & evaluation_
+_Keywords: data-centric NLP, multilinguality, resources & evaluation_
 
 - [Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation]()
   <br>_Preprint '26_
