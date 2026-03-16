@@ -6,14 +6,21 @@ permalink: /research/
 ---
 
 My field is in natural language processing and machine learning.
-I'm broadly interested in **building cheap, fast, and specialized language models that can be deployed at the edge**.
-I believe that one of the key unlocks for this to happen is getting **access to high-quality training signals**,
-and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to obtain these signals under extreme constraints.
+I'm motivated to build equitable language technologies for the Global South.
+Specifically, I'm keen to develop methods for creating **cheap, fast, and specialized language models** that can be deployed at the edge.
+I believe that this is an effective way to reach communities who need these technologies the most.
+
+Method-wise, I'm particularly interested in the data side of things: curating data, synthesizing training signals for post-training, or evaluating data quality.
+Although I'm open to explore new things!
 
 Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
 You can also check my [Google Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) or [Semantic Scholar](https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871) for a complete list.
 I'm always excited for potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
+
+<!-- I believe that one of the key unlocks for this to happen is getting **access to high-quality training signals**,
+and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to obtain these signals under extreme constraints. -->
+
 
 <!-- The following are the research themes I am interested in, along with some representative publications. -->
 
