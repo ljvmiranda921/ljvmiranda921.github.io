@@ -19,7 +19,7 @@ I'm always excited about potential internships or research visits, so just [reac
 
 _Keywords: data-centric NLP, multilinguality, resources & evaluation_
 
-- [Multilinguality at the Edge]()
+- [A Survey of Multilinguality at the Edge]()
   <br>_Preprint '26_
   <br><b>Lester James V. Miranda</b>, Songbo Hu, Roi Reichart, Anna Korhonen
   <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Collection](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) 
