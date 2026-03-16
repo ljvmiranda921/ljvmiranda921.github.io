@@ -13,7 +13,7 @@ and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph
 Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
 You can also check my [Google Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) or [Semantic Scholar](https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871) for a complete list.
-I'm always excited about potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
+I'm always excited for potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
 
 <!-- The following are the research themes I am interested in, along with some representative publications. -->
 
