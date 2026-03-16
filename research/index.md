@@ -6,8 +6,8 @@ permalink: /research/
 ---
 
 My field is in natural language processing and machine learning.
-I'm broadly interested in **building equitable and useful language technologies**. 
-One of the key unlocks for equitable NLP is access to high-quality training signals,
+I'm broadly interested in **building cheap, fast, and useful language models that can be deployed at the edge**.
+I believe that one of the key unlocks for this to happen is getting access to high-quality training signals,
 and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to obtain these signals under extreme constraints.
 
 Below is a selection of work that reflects my current interests.
