@@ -6,12 +6,11 @@ permalink: /research/
 ---
 
 My field is in natural language processing and machine learning.
-I'm motivated to build equitable language technologies for the Global South.
-Specifically, I'm keen to develop methods for creating **cheap, fast, and specialized language models** that can be deployed at the edge.
-I believe that this is an effective way to reach communities who need these technologies the most.
+I explore how we can build equitable language technologies through **cheap, fast, and specialized language models that can be deployed at the edge**, i.e., nearest to the communities who need these technologies the most.
 
-Method-wise, I'm particularly interested in the data side of things: curating data, synthesizing training signals for post-training, or evaluating data quality.
-Although I'm open to explore new things!
+I have a soft preference for data as a lever to develop these types of models.
+I'm excited about techniques that involve creative (or in Tagalog, ma-diskarte) ways to extract high quality training signals given extreme constraints. 
+However, I'm open and excited to learn other ways of doing so!
 
 Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
