@@ -7,17 +7,22 @@ permalink: /research/
 
 My field is in natural language processing and machine learning.
 I'm broadly interested in **building cheap, fast, and useful language models that can be deployed at the edge**.
-I believe that one of the key unlocks for this to happen is getting access to high-quality training signals,
+I believe that one of the key unlocks for this to happen is getting **access to high-quality training signals**,
 and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to obtain these signals under extreme constraints.
 
 Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
 You can also check my [Google Scholar](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) or [Semantic Scholar](https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871) for a complete list.
-I'm [open for collaborations](mailto:ljvm2@cam.ac.uk) and always excited about potential internships or research visits.
+I'm always excited about potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
 
 <!-- The following are the research themes I am interested in, along with some representative publications. -->
 
 _Keywords: data-centric NLP, multilinguality, resources & evaluation_
+
+- [Multilinguality at the Edge]()
+  <br>_Preprint '26_
+  <br><b>Lester James V. Miranda</b>, Songbo Hu, Roi Reichart, Anna Korhonen
+  <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Collection](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) 
 
 - [Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation]()
   <br>_Preprint '26_
