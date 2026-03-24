@@ -45,7 +45,7 @@ _Keywords: data-centric NLP, multilinguality, resources & evaluation_
 
 - [**Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback**](https://aclanthology.org/2025.acl-long.355/)
   <br>_ACL '25 (work done as pre-doc at Ai2)_
-  <br><u>Lester James V. Miranda*</u>*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
+  <br><u>Lester James V. Miranda</u>*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
   <br>[Code](https://github.com/allenai/hybrid-preferences) / [Dataset](https://huggingface.co/datasets/allenai/multipref) / [Slides](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing) / [Poster](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link) / [Video](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)
 
 - [**M-RewardBench: Evaluating Reward Models in Multilingual Settings**](https://aclanthology.org/2025.acl-long.3/)
