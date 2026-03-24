@@ -5,11 +5,6 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-<div class="scholar-buttons">
-  <a href="https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en" class="scholar-btn">Google Scholar</a>
-  <a href="https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871" class="scholar-btn">Semantic Scholar</a>
-</div>
-
 My field is in natural language processing and machine learning.
 I explore how we can build equitable language technologies through **cheap, fast, and specialized language models that can be deployed at the edge**, i.e., nearest to the communities who need these technologies the most.
 
@@ -19,7 +14,7 @@ However, I'm open and excited to learn other ways of doing so!
 
 Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
-You can also check my profiles for a complete list.
+<!-- You can also check my profiles for a complete list. -->
 I'm always excited for potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
 
 <!-- I believe that one of the key unlocks for this to happen is getting **access to high-quality training signals**,
@@ -29,6 +24,12 @@ and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph
 <!-- The following are the research themes I am interested in, along with some representative publications. -->
 
 ## Selected Publications
+
+<div class="scholar-buttons">
+  <a href="https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en" class="scholar-btn">Google Scholar</a>
+  <a href="https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871" class="scholar-btn">Semantic Scholar</a>
+</div>
+
 
 _Keywords: data-centric NLP, multilinguality, resources & evaluation_
 
@@ -43,7 +44,7 @@ _Keywords: data-centric NLP, multilinguality, resources & evaluation_
   <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Website](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) 
 
 - [Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback](https://aclanthology.org/2025.acl-long.355/)
-  <br>_ACL '25_
+  <br>_ACL '25 (done as pre-doc at Ai2)_
   <br><b>Lester James V. Miranda\*</b>, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
   <br>[Code](https://github.com/allenai/hybrid-preferences) / [Dataset](https://huggingface.co/datasets/allenai/multipref) / [Slides](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing) / [Poster](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link) / [Video](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)
 
