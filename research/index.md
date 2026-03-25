@@ -38,11 +38,6 @@ _Keywords: data-centric NLP, multilinguality, resources & evaluation_
   <br><u>Lester James V. Miranda</u>, Ivan Vuli&#263;, and Anna Korhonen
   <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Dataset](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) / [Models]()
 
-- [**A Survey of Multilinguality at the Edge**](/a)
-  <br>_Preprint '26_
-  <br><u>Lester James V. Miranda</u>, Songbo Hu, Roi Reichart, and Anna Korhonen
-  <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Website](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) 
-
 - [**Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback**](https://aclanthology.org/2025.acl-long.355/)
   <br>_ACL '25 (work done as pre-doc at Ai2)_
   <br><u>Lester James V. Miranda</u>*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
