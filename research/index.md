@@ -33,10 +33,10 @@ and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph
 
 _Keywords: data-centric NLP, multilinguality, resources & evaluation_
 
-- [**Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation**](/a)
+- [**Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation**](/)
   <br>_Preprint '26_
   <br><u>Lester James V. Miranda</u>, Ivan Vuli&#263;, and Anna Korhonen
-  <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Dataset](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) / [Models]()
+  <br>[Code]() / [Dataset]() / [Models]()
 
 - [**Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback**](https://aclanthology.org/2025.acl-long.355/)
   <br>_ACL '25 (work done as pre-doc at Ai2)_

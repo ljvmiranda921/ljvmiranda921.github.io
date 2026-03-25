@@ -21,9 +21,9 @@ title: News
 } */
 </style>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Jun 2026**</span>: Sharing my first PhD work, [Polyglot Teachers]()! Here, I studied what makes a good teacher model for multilingual synthetic data generation. Excited to continue this line of work!</p>
-</div>
+</div> -->
 
 <div class="news-item">
 <p><span class="date">**Dec 2025**</span>: So excited to see the release of [OLMo 3](https://arxiv.org/pdf/2512.13961)! My small contribution was on creating the tool-use SFT mix during my last few months as a pre-doc.</p>
