@@ -293,3 +293,35 @@
     }
   }
 }
+
+/**
+ * Scholar buttons
+ */
+.scholar-buttons {
+  margin: 15px 0;
+  text-align: left;
+}
+
+a.scholar-btn,
+a.scholar-btn:visited {
+  display: inline-block;
+  padding: 3px 14px;
+  background-color: #d0d0d0;
+  color: #333 !important;
+  text-decoration: none !important;
+  font-family: "Berkeley Mono", monospace;
+  font-size: 14px;
+  border: 1px solid #aaa;
+  box-shadow: 4px 4px 0 #bbb;
+  margin-right: 8px;
+
+  &:hover {
+    background-color: #bbb;
+    color: #333 !important;
+  }
+
+  &:active {
+    box-shadow: 1px 1px 0 #bbb;
+    transform: translate(2px, 2px);
+  }
+}

@@ -1,60 +1,110 @@
 ---
 layout: page
-title: Research Work
+title: Research
 description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
 My field is in natural language processing and machine learning.
-I'm broadly interested in **building language technologies that are equitable and useful, through data.**
-I believe that a careful and systematic understanding of data&mdash; from its collection to its downstream influence on training&mdash; is crucial to build general-purpose language models.
+I explore how we can build equitable language technologies through **cheap, fast, and specialized language models that can be deployed at the edge**, i.e., nearest to the communities who need these technologies the most.
 
-The following are the research themes I am interested in, along with some representative publications.
+<!-- I have a soft preference for data as a lever to develop these types of models. -->
+I believe that good data is the foundation for building these models, especially when working with low-resource languages where data is scarce and quality matters most.
+I'm excited about techniques that involve creative (or in Tagalog, [ma-diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to extract high quality training signals given extreme constraints. 
+That said, I'm always open to learning new approaches!
+
+Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
-You can also check my [**Google Scholar**](https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en) for a complete and up-to-date list.
+<!-- You can also check my profiles for a complete list. -->
+I'm always excited for potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
 
-_Keywords: data-centric AI, multilinguality, resources & evaluation_
+<!-- I believe that one of the key unlocks for this to happen is getting **access to high-quality training signals**,
+and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to obtain these signals under extreme constraints. -->
 
-## Collecting high-quality data for LM training
 
-What constitutes high-quality data? And how can we efficiently and scalably collect them?
-I've explored these questions in the context of acquiring post-training data by examining human factors in preference annotation such as in HyPER, and devising new techniques in data synthesis and generation as seen in T&uuml;lu 3.
+<!-- The following are the research themes I am interested in, along with some representative publications. -->
+
+## Selected Publications
+
+<div class="scholar-buttons">
+  <a href="https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en" class="scholar-btn">Google Scholar</a>
+  <a href="https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871" class="scholar-btn">Semantic Scholar</a>
+</div>
+
+
+_Keywords: data-centric NLP, multilinguality, resources & evaluation_
+
+- [**Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation**](/)
+  <br>_Preprint '26_
+  <br><u>Lester James V. Miranda</u>, Ivan Vuli&#263;, and Anna Korhonen
+  <br>[Code]() / [Dataset]() / [Models]()
+
+- [**Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback**](https://aclanthology.org/2025.acl-long.355/)
+  <br>_ACL '25 (work done as pre-doc at Ai2)_
+  <br><u>Lester James V. Miranda</u>*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
+  <br>[Code](https://github.com/allenai/hybrid-preferences) / [Dataset](https://huggingface.co/datasets/allenai/multipref) / [Slides](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing) / [Poster](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link) / [Video](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)
+
+- [**M-RewardBench: Evaluating Reward Models in Multilingual Settings**](https://aclanthology.org/2025.acl-long.3/)
+  <br>_ACL '25 (work done as part of Expedition Aya w/ Cohere Labs)_
+  <br>Srishti Gureja\*, <u>Lester James V. Miranda</u>*, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee
+  <br>[Code](https://github.com/for-ai/aya_rm_multilingual) / [Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7) / [Slides](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link) / [Poster](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link) / [Video](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)
+
+I also care a lot about advancing Filipino NLP and representing my native language.
+This involves:
+- developing benchmarks such as [FilBench-Eval](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25),
+- building resources such as [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/) (ACL '25) and [TLUnified-NER](https://aclanthology.org/2023.sealp-1.2) (SEALP '23), and
+- creating open-source tools like [calamanCy](https://aclanthology.org/2023.nlposs-1.1/) (NLP-OSS '23).
+
+I [write a lot about Filipino NLP](/filipino-nlp) in this blog and organize researchers on collaborative projects through the [FilBench collective](https://filbench.github.io).
+
+<!-- ## Data-centric NLP
+
+One of the key unlocks for equitable NLP is access to high quality training signals. 
+My research aims to find resourceful, creative&mdash;or as we say in Tagalog, ma-*diskarte*&mdash;ways to obtain these signals despite extreme constraints.
+This involves synthetic data generation [PG-Score, T&uuml;lu3] or cost-efficient annotation [HyPER].
+
+- [Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation]()
+  <br>_Preprint '26_
+  <br><b>Lester James V. Miranda</b>, Ivan Vuli&#263;, Anna Korhonen
+  <br>[Code](https://github.com/cambridgeltl/polyglot-teachers) / [Collection](https://huggingface.co/datasets/edgeml-ltl/polyglot-teachers) / [Slides]() / [Poster]() / [Video]()
 
 - [**Hy**brid **P**ref**er**ences: Learning to Route Instances for Human vs. AI Feedback](https://aclanthology.org/2025.acl-long.355/)
   <br>_ACL '25 Main_
-  <br><b>Lester James V. Miranda\*</b>, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi.
+  <br><b>Lester James V. Miranda\*</b>, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
   <br>[Code](https://github.com/allenai/hybrid-preferences) / [Dataset](https://huggingface.co/datasets/allenai/multipref) / [Slides](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing) / [Poster](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link) / [Video](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)
 
 - [T&uuml;lu 3: Exploring Frontiers in Open Language Model Post-Training](https://arxiv.org/abs/2411.15124)
   <br>_COLM '25_
   <br>Nathan Lambert\*, Jacob Morrison\*, Valentina Pyatkin\*, Shenyi Huang\*, Hamish Ivison\*, Faeze Brahman\*, <b>Lester James V. Miranda\*</b>, Alisa Liu, Nouha Dziri, Xinxi Lyu, Yuling Gu, Saumya Malik, Victoria Graf, Jena D. Hwang, Jiangjiang Yang, Ronan Le Bras, Oyvind Tajford, Chris Wilhelm, Luca Soldiani, Noah A. Smith, Yizhong Wang, Pradeep Dasigi, Hannaneh Hajishirzi _(&lowast;: core contributor)_.
-  <br>[Models](https://huggingface.co/collections/allenai/tulu-3-models-673b8e0dc3512e30e7dc54f5) / [Datasets](https://huggingface.co/collections/allenai/tulu-3-datasets-673b8df14442393f7213f372) / [Website](https://allenai.org/tulu)
+  <br>[Models](https://huggingface.co/collections/allenai/tulu-3-models-673b8e0dc3512e30e7dc54f5) / [Datasets](https://huggingface.co/collections/allenai/tulu-3-datasets-673b8df14442393f7213f372) / [Website](https://allenai.org/tulu) -->
 
-## Resources for multilingual and equitable NLP
+<!-- ## Advancing the Global Access Frontier -->
 
-No language should be left behind, especially in data.
-I'm motivated to pursue research that ensures that the next generation of state-of-the-art LLMs cater to languages beyond English; by improving training data quality and building faithful multilingual benchmarks.
+<!-- Equitable language model development requires improving capabilities while expanding access. -->
+<!-- My research aims to ensure that next-generation large language models serve the needs of communities in the Global South.
+I created a conceptual framework [GA Frontier] that frames deployment as a problem of access along several constraints: data, infrastructure, and readiness.
+I do research that attempts to relax these constraints. -->
 
-- [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
+<!-- - [Advancing the Global Access Frontier: Language Model Deployment as a Problem of Access]()
+  <br>_Preprint '26_
+  <br><b>Lester James V. Miranda</b>, Roi Reichart, Anna Korhonen
+  <br>[Slides]() / [Video]() -->
+
+
+<!-- - [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
   <br>_EMNLP '25 Main_
   <br><b>Lester James V. Miranda\*</b>, Elyanah Aco\*, Conner Manuel\*, Jan Christian Blaise Cruz, Joseph Marvin Imperial
-  <br>[Code](https://github.com/filbench/filbench-eval) / [Website](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard)
+  <br>[Code](https://github.com/filbench/filbench-eval) / [Website](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) -->
 
-- [M-RewardBench: Evaluating Reward Models in Multilingual Settings](https://aclanthology.org/2025.acl-long.3/)
-  <br>_ACL '25 Main_
-  <br>Srishti Gureja\*, <b>Lester James V. Miranda\*</b>, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee.
-  <br>[Code](https://github.com/for-ai/aya_rm_multilingual) / [Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7) / [Slides](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link) / [Poster](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link) / [Video](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)
-
+<!-- 
 - [SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages](https://aclanthology.org/2024.emnlp-main.296/)
   <br>_EMNLP '24 Main_
   <br>Holy Lovenia\*, Rahmad Mahendra\*, Salsabil Maulana Akbar\*, <b>Lester James Miranda\*</b>, and 50+ other authors _(&lowast;: major contributor)_.
   <br>[Code](https://github.com/SEACrowd/seacrowd-datahub) / [Website](https://seacrowd.github.io/seacrowd-catalogue)
 
-Within this theme, I also care a lot about [**improving the state of Filipino NLP**](/filipino-nlp) and representing my native language.
-This involves developing benchmark datasets such as [FilBench-Eval](https://aclanthology.org/2025.emnlp-main.127/) (EMNLP '25 Main), building linguistic resources such as [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/) (ACL '25 Main) and [TLUnified-NER](https://aclanthology.org/2023.sealp-1.2) (SEALP '23), and creating open-source libraries like [calamanCy](https://aclanthology.org/2023.nlposs-1.1/) (NLP-OSS '23).
-I also write a lot about [Filipino NLP](/filipino-nlp) in this blog and organize researchers on collaborative projects through the [FilBench collective](https://filbench.github.io).
 
-<!-- - [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
+
+- [FilBench: Can LLMs Generate and Understand Filipino?](https://aclanthology.org/2025.emnlp-main.127/)
   <br>_EMNLP '25 Main_
   <br><b>Lester James V. Miranda\*</b>, Elyanah Aco\*, Conner Manuel\*, Jan Christian Blaise Cruz, Joseph Marvin Imperial
   <br>[Code](https://github.com/filbench/filbench-eval) / [Website](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard)
