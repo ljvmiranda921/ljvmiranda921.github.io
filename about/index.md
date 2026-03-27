@@ -8,7 +8,7 @@ permalink: /about/
 My name is Lj Miranda, and welcome to my website. Thanks for being here :)
 
 I am a PhD student at the [Language Technology Laboratory](https://ltl.mmll.cam.ac.uk/) at the University of Cambridge, where I'm working with [Anna Korhonen](https://sites.google.com/site/annakorhonen/).
-My [research](/research) broadly examines how we can leverage data to train language models that are equitable, useful, and multilingual.
+My [research](/research) broadly examines how we can build equitable language technologies through cheap, fast, and specialized language models that are deployed to edge, i.e., nearest to the communities that need these technologies the most.
 I also have a special interest in [improving the state of Filipino NLP](/filipino-nlp).
 
 My work has been [published](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en) in several top-tier conferences such as ACL, EMNLP, and NAACL.
