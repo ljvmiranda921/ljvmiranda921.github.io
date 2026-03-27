@@ -9,8 +9,8 @@ My field is in natural language processing and machine learning.
 I explore how we can build equitable language technologies through **cheap, fast, and specialized language models that can be deployed at the edge**, i.e., nearest to the communities who need these technologies the most.
 
 <!-- I have a soft preference for data as a lever to develop these types of models. -->
-I believe that good data is the foundation for building these models, especially when working with low-resource languages where data is scarce and quality matters most.
-I'm excited about techniques that involve creative (or in Tagalog, [ma-diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to extract high quality training signals given extreme constraints. 
+I believe that good data is the foundation for building these models, especially when working with low-resource languages where data is scarce and quality matters more.
+I'm excited about techniques that involve creative (or in Tagalog, [ma-diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to extract high quality signals given these extreme constraints. 
 That said, I'm always open to learning new approaches!
 
 Below is a selection of work that reflects my current interests.
