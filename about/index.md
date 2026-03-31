@@ -1,11 +1,11 @@
 ---
 layout: page
 title: About
-description: About page of Lj Miranda - Blog
+description: About page of Lj V. Miranda - Blog
 permalink: /about/
 ---
 
-My name is Lj Miranda, and welcome to my website. Thanks for being here :)
+My name is Lj V. Miranda, and welcome to my website. Thanks for being here :)
 
 I am a PhD student at the [Language Technology Laboratory](https://ltl.mmll.cam.ac.uk/) at the University of Cambridge, where I'm working with [Anna Korhonen](https://sites.google.com/site/annakorhonen/).
 My [research](/research) broadly examines how we can build equitable language technologies through cheap, fast, and specialized language models that are deployed to edge, i.e., nearest to the communities that need these technologies the most.
