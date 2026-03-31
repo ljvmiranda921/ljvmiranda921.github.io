@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn+SC&display=swap" rel="stylesheet">
 <style>
   @media screen and (min-width: 769px) {
     .column {
@@ -66,7 +67,7 @@ layout: default
   &nbsp;
   <div class="row">
     <div class="column" style="width:100%; float:left;">
-      <h2 style="font-size: 1.5em;">Recent Posts</h2>
+      <h2 style="font-size: 1.3em; font-family: 'Vollkorn SC', serif;">Recent posts</h2>
 
       <ul class="post-list">
         {% assign mainPosts = site.posts | where: 'type', 'post' %}
@@ -84,7 +85,7 @@ layout: default
     </div>
 
     <div class="column" style="width:100%; float:right;">
-      <h2 style="font-size: 1.5em;">What's New?</h2>
+      <h2 style="font-size: 1.3em; font-family: 'Vollkorn SC', serif;">What's new?</h2>
       <ul class="post-list">
         {% assign news_content = site.pages | where: "path", "news.md" | first %}
         {{ news_content.content | markdownify }}
