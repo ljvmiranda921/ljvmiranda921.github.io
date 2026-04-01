@@ -6,7 +6,7 @@ permalink: /research/
 ---
 
 My field is in natural language processing and machine learning.
-I explore how we can build equitable language technologies through **cheap, fast, and specialized language models that can be deployed at the edge**, i.e., nearest to the communities who need these technologies the most.
+I explore how we can build equitable language technologies through **cheap, small, and specialized language models that can be deployed at the edge**, i.e., nearest to the communities who need these technologies the most.
 
 <!-- I have a soft preference for data as a lever to develop these types of models. -->
 I believe that good data is the foundation for building these models, especially when working with low-resource languages where data is scarce and quality matters more.
