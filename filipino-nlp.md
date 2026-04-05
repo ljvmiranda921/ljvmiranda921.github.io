@@ -1,10 +1,12 @@
 ---
-title: 🇵🇭 Filipino NLP Collection
+title: Filipino NLP Collection
 layout: page
 description: A collection of all my writings in Filipino NLP 
 permalink: /filipino-nlp/
 tags: [filipino nlp, philippines, llm, natural language processing, filbench, large language models]
 ---
+
+**HuggingFace**: [ljvmiranda921/filipino-nlp](https://huggingface.co/collections/ljvmiranda921/filipino-nlp)
 
 This collection contains all my works on Filipino NLP.
 
