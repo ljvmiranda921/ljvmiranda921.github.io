@@ -37,7 +37,7 @@ _Keywords: data-centric NLP, multilinguality, resources & evaluation_
 - [**Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation**](/)
   <br>_Preprint '26_
   <br><u>Lester James V. Miranda</u>, Ivan Vuli&#263;, and Anna Korhonen
-  <br>[Code]() / [Dataset]() / [Models]()
+  <br>[Code](https://github.com/ljvmiranda921/polyglot-teachers) / [Dataset](https://huggingface.co/datasets/ljvmiranda921/PolyglotTeachers-SFT-Synth) / [Models](https://huggingface.co/collections/ljvmiranda921/evaluating-llms-for-multilingual-synthetic-data-generation)
 
 - [**Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback**](https://aclanthology.org/2025.acl-long.355/)
   <br>_ACL '25 (work done as pre-doc at Ai2)_
