@@ -15,7 +15,7 @@
   url: "https://aclanthology.org/2025.acl-long.355/"
   venue: "ACL '25 (work done as pre-doc at Ai2)"
   image: "/assets/png/research/hybrid-preferences.png"
-  authors: "<u>Lester James V. Miranda</u>*, Yizhong Wang*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi"
+  authors: '<u>Lester James V. Miranda</u><span class="eq">★</span>, Yizhong Wang<span class="eq">★</span>, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi'
   links:
     - label: Code
       url: "https://github.com/allenai/hybrid-preferences"
@@ -32,7 +32,7 @@
   url: "https://aclanthology.org/2025.acl-long.3/"
   venue: "ACL '25 (work done as part of Expedition Aya w/ Cohere Labs)"
   image: "/assets/png/research/m-rewardbench.png"
-  authors: "Srishti Gureja*, <u>Lester James V. Miranda</u>*, Shayekh bin Islam*, Rishabh Maheshwary*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee"
+  authors: 'Srishti Gureja<span class="eq">★</span>, <u>Lester James V. Miranda</u><span class="eq">★</span>, Shayekh bin Islam<span class="eq">★</span>, Rishabh Maheshwary<span class="eq">★</span>, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee'
   links:
     - label: Code
       url: "https://github.com/for-ai/aya_rm_multilingual"
