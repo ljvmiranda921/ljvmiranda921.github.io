@@ -1,0 +1,13 @@
+{% for pub in site.data.publications %}
+<div class="pub-entry">
+<div class="pub-img">
+<img src="{{ pub.image }}" alt="{{ pub.title }}">
+</div>
+<div class="pub-details">
+<a href="{{ pub.url }}"><strong>{{ pub.title }}</strong></a>
+<br><em>{{ pub.venue }}</em>
+<br>{{ pub.authors }}
+<br>{% for link in pub.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} / {% endunless %}{% endfor %}
+</div>
+</div>
+{% endfor %}

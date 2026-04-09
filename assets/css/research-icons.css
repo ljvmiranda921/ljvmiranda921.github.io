@@ -1,3 +1,45 @@
+/* Publication entry layout */
+.pub-entry {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+
+.pub-entry + .pub-entry {
+  margin-top: 0;
+}
+
+.pub-img {
+  flex-shrink: 0;
+  width: 220px;
+  max-height: 200px;
+}
+
+.pub-img img {
+  width: 100%;
+  height: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border: none;
+}
+
+.pub-img p,
+.pub-details p {
+  margin: 0;
+}
+
+.pub-details {
+  flex: 1;
+  min-width: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .pub-img {
+    display: none;
+  }
+}
+
 /* Research page icon styles */
 .research-icon {
   transition: all 0.2s ease-in-out;

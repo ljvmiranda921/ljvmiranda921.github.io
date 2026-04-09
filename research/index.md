@@ -34,20 +34,7 @@ and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph
 
 _Keywords: data-centric NLP, multilinguality, resources & evaluation_
 
-- [**Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation**](/)
-  <br>_Preprint '26_
-  <br><u>Lester James V. Miranda</u>, Ivan Vuli&#263;, and Anna Korhonen
-  <br>[Code](https://github.com/ljvmiranda921/polyglot-teachers) / [Dataset](https://huggingface.co/datasets/ljvmiranda921/PolyglotTeachers-SFT-Synth) / [Models](https://huggingface.co/collections/ljvmiranda921/evaluating-llms-for-multilingual-synthetic-data-generation)
-
-- [**Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback**](https://aclanthology.org/2025.acl-long.355/)
-  <br>_ACL '25 (work done as pre-doc at Ai2)_
-  <br><u>Lester James V. Miranda</u>*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
-  <br>[Code](https://github.com/allenai/hybrid-preferences) / [Dataset](https://huggingface.co/datasets/allenai/multipref) / [Slides](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing) / [Poster](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link) / [Video](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)
-
-- [**M-RewardBench: Evaluating Reward Models in Multilingual Settings**](https://aclanthology.org/2025.acl-long.3/)
-  <br>_ACL '25 (work done as part of Expedition Aya w/ Cohere Labs)_
-  <br>Srishti Gureja\*, <u>Lester James V. Miranda</u>*, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee
-  <br>[Code](https://github.com/for-ai/aya_rm_multilingual) / [Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7) / [Slides](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link) / [Poster](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link) / [Video](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)
+{% include publications.html %}
 
 I also care a lot about advancing Filipino NLP and representing my native language.
 This involves:
