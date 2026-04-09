@@ -34,20 +34,41 @@ and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph
 
 _Keywords: data-centric NLP, multilinguality, resources & evaluation_
 
-- [**Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation**](/)
-  <br>_Preprint '26_
-  <br><u>Lester James V. Miranda</u>, Ivan Vuli&#263;, and Anna Korhonen
-  <br>[Code](https://github.com/ljvmiranda921/polyglot-teachers) / [Dataset](https://huggingface.co/datasets/ljvmiranda921/PolyglotTeachers-SFT-Synth) / [Models](https://huggingface.co/collections/ljvmiranda921/evaluating-llms-for-multilingual-synthetic-data-generation)
+<div class="pub-entry">
+<div class="pub-img">
+<img src="/assets/png/research/polyglot-teachers.png" alt="Polyglot Teachers">
+</div>
+<div class="pub-details">
+<a href="/"><strong>Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation</strong></a>
+<br><em>Preprint '26</em>
+<br><u>Lester James V. Miranda</u>, Ivan Vuli&#263;, and Anna Korhonen
+<br><a href="https://github.com/ljvmiranda921/polyglot-teachers">Code</a> / <a href="https://huggingface.co/datasets/ljvmiranda921/PolyglotTeachers-SFT-Synth">Dataset</a> / <a href="https://huggingface.co/collections/ljvmiranda921/evaluating-llms-for-multilingual-synthetic-data-generation">Models</a>
+</div>
+</div>
 
-- [**Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback**](https://aclanthology.org/2025.acl-long.355/)
-  <br>_ACL '25 (work done as pre-doc at Ai2)_
-  <br><u>Lester James V. Miranda</u>*, Yizhong Wang\*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
-  <br>[Code](https://github.com/allenai/hybrid-preferences) / [Dataset](https://huggingface.co/datasets/allenai/multipref) / [Slides](https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing) / [Poster](https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link) / [Video](https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9)
+<div class="pub-entry">
+<div class="pub-img">
+<img src="/assets/png/research/hybrid-preferences.png" alt="Hybrid Preferences">
+</div>
+<div class="pub-details">
+<a href="https://aclanthology.org/2025.acl-long.355/"><strong>Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback</strong></a>
+<br><em>ACL '25 (work done as pre-doc at Ai2)</em>
+<br><u>Lester James V. Miranda</u>*, Yizhong Wang*, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi
+<br><a href="https://github.com/allenai/hybrid-preferences">Code</a> / <a href="https://huggingface.co/datasets/allenai/multipref">Dataset</a> / <a href="https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing">Slides</a> / <a href="https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link">Poster</a> / <a href="https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9">Video</a>
+</div>
+</div>
 
-- [**M-RewardBench: Evaluating Reward Models in Multilingual Settings**](https://aclanthology.org/2025.acl-long.3/)
-  <br>_ACL '25 (work done as part of Expedition Aya w/ Cohere Labs)_
-  <br>Srishti Gureja\*, <u>Lester James V. Miranda</u>*, Shayekh bin Islam\*, Rishabh Maheshwary\*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee
-  <br>[Code](https://github.com/for-ai/aya_rm_multilingual) / [Dataset](https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7) / [Slides](https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link) / [Poster](https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link) / [Video](https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11)
+<div class="pub-entry">
+<div class="pub-img">
+<img src="/assets/png/research/m-rewardbench.png" alt="M-RewardBench">
+</div>
+<div class="pub-details">
+<a href="https://aclanthology.org/2025.acl-long.3/"><strong>M-RewardBench: Evaluating Reward Models in Multilingual Settings</strong></a>
+<br><em>ACL '25 (work done as part of Expedition Aya w/ Cohere Labs)</em>
+<br>Srishti Gureja*, <u>Lester James V. Miranda</u>*, Shayekh bin Islam*, Rishabh Maheshwary*, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee
+<br><a href="https://github.com/for-ai/aya_rm_multilingual">Code</a> / <a href="https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7">Dataset</a> / <a href="https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link">Slides</a> / <a href="https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link">Poster</a> / <a href="https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11">Video</a>
+</div>
+</div>
 
 I also care a lot about advancing Filipino NLP and representing my native language.
 This involves:

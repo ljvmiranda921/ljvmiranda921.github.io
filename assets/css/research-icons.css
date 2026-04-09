@@ -2,18 +2,27 @@
 .pub-entry {
   display: flex;
   gap: 16px;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
   align-items: flex-start;
+}
+
+.pub-entry + .pub-entry {
+  margin-top: 0;
 }
 
 .pub-img {
   flex-shrink: 0;
-  width: 150px;
+  width: 200px;
 }
 
 .pub-img img {
   width: 100%;
-  border: 1px solid #ddd;
+  border: none;
+}
+
+.pub-img p,
+.pub-details p {
+  margin: 0;
 }
 
 .pub-details {
@@ -22,12 +31,8 @@
 }
 
 @media screen and (max-width: 600px) {
-  .pub-entry {
-    flex-direction: column;
-  }
   .pub-img {
-    width: 100%;
-    max-width: 200px;
+    display: none;
   }
 }
 
