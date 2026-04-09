@@ -1,3 +1,14 @@
+- title: "Multilinguality at the Edge: Developing Language Models for the Global South"
+  url: "/"
+  venue: "Preprint '26"
+  image: "/assets/png/research/multilinguality-at-the-edge.png"
+  authors: "<u>Lester James V. Miranda</u>, Songbo Hu, Roi Reichart, and Anna Korhonen"
+  links:
+    - label: Code
+      url: "https://github.com/ljvmiranda921/multilinguality-at-the-edge"
+    - label: Dataset
+      url: "/"
+
 - title: "Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation"
   url: "/"
   venue: "Preprint '26"
