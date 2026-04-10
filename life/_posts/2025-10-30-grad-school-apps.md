@@ -47,9 +47,9 @@ A part of me thought that maybe I should have just continued to a PhD right afte
 But my industry years helped confirm that I genuinely enjoyed research work!
 
 <div style="display: flex; justify-content: center;">
-<img src="/assets/png/grad-school/bike.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/bgc.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/lantern.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/bike.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/bgc.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/lantern.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 </div>
 _From left to right (--2021): Snippets of my life in Bonifacio Global City (BGC) a few weeks after my time in TM. A bike on display inside Coffee Project, some view of BGC, and a Japanese lantern in The Fort._
 {: style="text-align: center;"}
@@ -64,9 +64,9 @@ This experience gave me the confidence to undertake my own independent work in T
 In addition, doing software engineering work on the [Prodigy annotation tool](https://prodigy.ai/) inspired my interest in researching data-centric approaches to NLP.
 
 <div style="display: flex; justify-content: center;">
-<img src="/assets/png/grad-school/skyscraper.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/berlin.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/remote.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/skyscraper.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/berlin.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/remote.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 </div>
 _From left to right (2021---2022): view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard._
 {: style="text-align: center;"}
@@ -78,9 +78,9 @@ Working at Ai2 gave me a baseline of what high-quality research looks like.[^1]
 In addition, there's really something in the air back in the US that made me more ambitious and driven&mdash; I hope to bring these qualities wherever I go.
 
 <div style="display: flex; justify-content: center;">
-<img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/aurora.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/ai2.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/library.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/aurora.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/ai2.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 </div>
 _From left to right (2024): the Fremont library where I spent a lot of time writing papers and doing PhD apps, view of the Aurora bridge on the way to the office, the Ai2 logo in the office._
 {: style="text-align: center;"}
@@ -93,9 +93,9 @@ Everyone I worked with made me feel welcome, and I hope I can be that person for
 > I've developed a mantra over time: people over projects, projects over publications.
 
 <div style="display: flex; justify-content: center;">
-<img src="/assets/png/grad-school/fremont.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/pottery.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/market.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/fremont.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/pottery.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/market.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 </div>
 _From left to right (2024): snippets of my life in Seattle including the Fremont artwork, the pottery studio at Yu Tang Ceramics, and the Farmer's Market in downtown._
 {: style="text-align: center;"}
@@ -113,9 +113,9 @@ The holiday season also brought a reflective mood, with fewer people around and 
 
 <!-- add pictures of fremont library, pho place in fremont, cafe ladro -->
 <div style="display: flex; justify-content: center;">
-<img src="/assets/png/grad-school/fremont2.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/ladro3.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/pcc.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/fremont2.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/ladro3.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/pcc.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 </div>
 _From left to right (2024-2025): snapshots during the admissions season: writing essays in the Fremont library or in Cafe Ladro, buying food from PCC._
 {: style="text-align: center;"}
@@ -126,9 +126,9 @@ In addition, some universities require official TOEFL scores, so you also have t
 Don't make my mistake and keep in mind that fee waivers exist and most universities are generous, especially for international students, but just note that grad school apps can be very expensive.
 
 <div style="display: flex; justify-content: center;">
-<img src="/assets/png/grad-school/bike2.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/phinney.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/usa.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/bike2.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/phinney.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/usa.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 </div>
 _From left to right (2024-2025): The PhD applications forced me to think whether I want to stay in the US or move again abroad. Some snippets of my life (from left to right): a bike in Roosevelt Island, my apartment at Phinney, a US flag in Grand Central Station._
 {: style="text-align: center;"}
@@ -146,9 +146,9 @@ Making this decision in my thirties is different from if I had made this decisio
 Getting into a PhD becomes a life decision more so than a career decision.
 
 <div style="display: flex; justify-content: center;">
-<img src="/assets/png/grad-school/cbtl.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/retreat.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/ring.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/cbtl.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/retreat.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/ring.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 </div>
 _From left to right (early 2022 and 2023): coffee shop where my wife and I talked about our plans, my room during a Holy Week retreat in Sacred Heart, our engagement ring._
 {: style="text-align: center;"}
@@ -166,9 +166,9 @@ PhD years are long and gritty, and having a rock to lean on is important.
 > Getting into a PhD becomes a life decision more so than a career decision.
 
 <div style="display: flex; justify-content: center;">
-<img src="/assets/png/grad-school/cornell3.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/sage_hall.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/nyc.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/cornell3.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/sage_hall.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/nyc.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 </div>
 _Photos during my PhD visit days in NYC._
 {: style="text-align: center;"}
@@ -192,9 +192,9 @@ In some way, I don't feel alone and different, and that's important.
 
 <!-- pictures of Cambridge! -->
 <div style="display: flex; justify-content: center;">
-<img src="/assets/png/grad-school/churchill.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/cambridge_ul.png" width="220" style="border: 2px solid black; margin: 0 5px;">
-<img src="/assets/png/grad-school/uk_phonebooth.png" width="220" style="border: 2px solid black; margin: 0 5px;">
+<img src="/assets/png/grad-school/churchill.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/cambridge_ul.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
+<img src="/assets/png/grad-school/uk_phonebooth.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 </div>
 _From left to right: Churchill College (a modern college in Cambridge with brutalist architecture), the University Library, a phonebooth repurposed into a library book deposit._
 {: style="text-align: center;"}
