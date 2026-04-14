@@ -10,7 +10,7 @@
       url: "/"
 
 - title: "Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation"
-  url: "/"
+  url: "https://arxiv.org/abs/2604.11290"
   venue: "Preprint '26"
   image: "/assets/png/research/polyglot-teachers.png"
   authors: "<u>Lester James V. Miranda</u>, Ivan Vulić, and Anna Korhonen"
