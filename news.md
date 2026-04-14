@@ -21,9 +21,9 @@ title: News
 } */
 </style>
 
-<!-- <div class="news-item">
-<p><span class="date">**Jun 2026**</span>: Sharing my first PhD work, [Polyglot Teachers]()! Here, I studied what makes a good teacher model for multilingual synthetic data generation. Excited to continue this line of work!</p>
-</div> -->
+<div class="news-item">
+<p><span class="date">**Apr 2026**</span>: Sharing my first PhD work, [Polyglot Teachers](https://arxiv.org/abs/2604.11290)! Here, I studied what makes a good teacher model for generating multilingual data. I'm excited to continue this research agenda on multilingual synthetic data generation!</p>
+</div>
 
 <div class="news-item">
 <p><span class="date">**Dec 2025**</span>: So excited to see the release of [OLMo 3](https://arxiv.org/pdf/2512.13961)! My small contribution was on creating the tool-use SFT mix during my last few months as a pre-doc.</p>
@@ -45,9 +45,9 @@ title: News
 <p><span class="date">**Nov 2024**</span>: Happy to have been part of the exciting [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) releases! My primary contribution is scaling-up our preference data using a synthetic on-policy pipeline that led to improvements in our DPO models.</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Oct 2024**</span>: Our paper on routing preference instances to human or LM annotators, [Hybrid Preferences](https://aclanthology.org/2025.acl-long.355/), is now available. This is the first work I co-led (with Yizhong Wang) at Ai2!</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**Oct 2024**</span>: Our paper on evaluating reward models in multilingual settings, [M-RewardBench](https://aclanthology.org/2025.acl-long.3/), is now available. This was a fun collab with folks from Cohere for AI!</p>
