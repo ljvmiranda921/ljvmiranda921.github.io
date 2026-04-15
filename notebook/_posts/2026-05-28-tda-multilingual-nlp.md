@@ -22,3 +22,10 @@ description: |
     multilingual synthetic data.
 excerpt: |
 ---
+
+<span class="firstcharacter">F</span>or the past few months, I've been exploring how we can obtain high-quality multilingual data at scale.
+A common approach is to collect this data from native human speakers, giving us **natural data**, but this process is quite costly and time-consuming.
+Another option is to generate from language models (LMs), giving us what we call **synthetic data**.
+In my latest work, I evaluated which models are good at generating multilingual data&mdash; it's quite empirical and rigorous.
+However, 
+
