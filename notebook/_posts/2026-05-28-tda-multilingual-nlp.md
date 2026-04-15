@@ -28,5 +28,7 @@ A common approach is to collect this data from native human speakers, giving us 
 Another option is to generate from language models (LMs), giving us what we call **synthetic data**.
 In my latest work, I evaluated which models are good at generating multilingual data&mdash; it's quite empirical and rigorous.
 However, I want to take this a bit further: is there a fundamental *shape* for natural data? And how close are current synthetic datasets to it?
-I find this interesting because 
+I find this interesting because it has a lot of potential applications such as guided data generation or measuring the quality of synthetic data.
+
+Luckily, 
 
