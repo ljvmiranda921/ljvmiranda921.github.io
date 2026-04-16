@@ -32,5 +32,20 @@ I find this interesting because it has a lot of potential applications such as g
 
 Luckily, we can glean some insights from the field of [topological data analysis (TDA)](https://en.wikipedia.org/wiki/Topological_data_analysis).
 This field gives us several tools and ways-of-thinking to understand the *shape* of data---I'll talk more about these as we go along.
-In this blog post, I w
+In this blog post, I will apply these tools to analyze multilingual instruction-tuning data.
+
+## Dataset 
+
+
+
+## Analyses
+
+### RQ:  
+
+**Background**
+
+**Setup**
+
+
+**Finding**
 
