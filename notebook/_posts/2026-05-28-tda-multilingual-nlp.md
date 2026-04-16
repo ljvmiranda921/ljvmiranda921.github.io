@@ -31,8 +31,10 @@ However, I want to take this a bit further: is there a fundamental *shape* for n
 I find this interesting because it has a lot of potential applications such as guided data generation or measuring the quality of synthetic data.
 
 Luckily, we can glean some insights from the field of [topological data analysis (TDA)](https://en.wikipedia.org/wiki/Topological_data_analysis).
-This field gives us several tools and ways-of-thinking to understand the *shape* of data---I'll talk more about these as we go along.
-In this blog post, I will apply these tools to analyze multilingual instruction-tuning data.
+TDA is largely influenced by topology and geometric learning, with the goal of understanding the structure of data.
+One of my favorite introductory readings to the field (and also my main reference for this blogpost) is [Chazal and Michel (2021)](https://arxiv.org/pdf/1710.04019)'s work.
+More importantly, this field gives us several tools and ways-of-thinking to understand the *shape* of data---I'll talk more about these as we go along.
+In this blog post, I will apply these tools to analyze multilingual data, both synthetic and natural.
 
 ## Dataset 
 
