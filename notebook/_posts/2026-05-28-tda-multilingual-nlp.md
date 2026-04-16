@@ -59,6 +59,7 @@ Please correct me in the comments below if that is the case.
 
 ### RQ1: Does synthetic data have a simpler shape than natural data?
 
+One of the key findings in Polyglot Teachers is that prompt and response diversity matters a lot for instruction tuning.
 <!-- what's the motivation? -->
 
 **Background**
