@@ -57,12 +57,31 @@ Please correct me in the comments below if that is the case.
 
 ## Analyses
 
-### RQ:  
+### RQ1: Does synthetic data have a simpler shape than natural data?
+
+
 
 **Background**
 
 **Setup**
 
+**Finding**
+
+
+### RQ2: Which synthesis strategy produces data topologically closest to natural data?
+
+
+**Background**
+
+**Setup**
 
 **Finding**
 
+
+### RQ3: What does data look like locally?
+
+**Background**
+
+**Setup**
+
+**Finding**
