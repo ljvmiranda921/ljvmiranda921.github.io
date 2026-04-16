@@ -63,7 +63,7 @@ Please correct me in the comments below if that is the case.
 
 One of the key findings in Polyglot Teachers is that there are intrinsic qualites in a synthetic dataset that dictate whether a strong model can be trained from it.
 Some key characteristics include the diversity in prompts or the length of the response.
-In this section, I want to examine if (1) TDA allows us to glean over the "shape" of these datasets and (2) whether there is a difference in shape between synthetic and natural data.
+In this section, I want to examine how TDA reveals these differences in qualities in terms of the "shape" of synthetic and natural data.
 
 **Background**
 
