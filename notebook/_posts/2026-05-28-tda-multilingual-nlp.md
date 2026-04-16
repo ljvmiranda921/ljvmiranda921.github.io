@@ -30,5 +30,5 @@ In my recent work, [Polyglot Teachers](https://arxiv.org/abs/2604.11290), I eval
 However, I want to take this a bit further: is there a fundamental *shape* for natural data? And how close are current synthetic datasets to it?
 I find this interesting because it has a lot of potential applications such as guided data generation or measuring the quality of synthetic data.
 
-Luckily, 
+Luckily, we can glean some insights from the field of topological data analysis (TDA)
 
