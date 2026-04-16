@@ -59,7 +59,7 @@ Please correct me in the comments below if that is the case.
 
 ### RQ1: Does synthetic data have a simpler shape than natural data?
 
-
+<!-- what's the motivation? -->
 
 **Background**
 
@@ -71,6 +71,8 @@ Please correct me in the comments below if that is the case.
 ### RQ2: Which synthesis strategy produces data topologically closest to natural data?
 
 
+<!-- what's the motivation? -->
+
 **Background**
 
 **Setup**
@@ -79,6 +81,8 @@ Please correct me in the comments below if that is the case.
 
 
 ### RQ3: What does data look like locally?
+
+<!-- what's the motivation? -->
 
 **Background**
 
