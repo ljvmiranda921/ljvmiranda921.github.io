@@ -53,7 +53,7 @@ This dataset contains human-LM interactions "in-the-wild" across several languag
 
 <br />
 In the next section, the format will look like this: I'll present a research question, talk a bit about the TDA tool I'm going to use, apply that tool, and then interpret the results.
-Also, note that this blog post contains my initial explorations on TDA.
+Also, note that this blog post contains my initial explorations on TDA, I'm in no way an expert.
 I tried my best to verify what I write here but there's a possibility that some of my interpretations (or methodologies) are wrong. 
 Please correct me in the comments below if that is the case.
 
