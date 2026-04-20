@@ -9,7 +9,7 @@
     - label: Dataset
       url: "https://huggingface.co/datasets/ljvmiranda921/PolyglotTeachers-SFT-Synth"
     - label: Models
-      url: "https://huggingface.co/collections/ljvmiranda921/evaluating-llms-for-multilingual-synthetic-data-generation"
+      url: "https://huggingface.co/collections/ljvmiranda921/polyglot-teachers"
 
 - title: "Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback"
   url: "https://aclanthology.org/2025.acl-long.355/"
