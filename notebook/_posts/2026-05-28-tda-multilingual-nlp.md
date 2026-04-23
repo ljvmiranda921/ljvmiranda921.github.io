@@ -84,7 +84,7 @@ In this section, I want to examine how TDA reveals these differences in qualitie
 **Finding**
 
 
-### RQ3: What does data look like locally?
+### RQ3: What local regions of natural data are missed by synthetic data?
 
 <!-- what's the motivation? -->
 
