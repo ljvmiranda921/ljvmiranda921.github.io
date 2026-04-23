@@ -36,7 +36,12 @@ One of my favorite introductory readings to the field (and also my main referenc
 More importantly, this field gives us several tools and ways-of-thinking to understand the *shape* of data---I'll talk more about these as we go along.
 In this blog post, I will apply these tools to analyze multilingual data, both synthetic and natural.
 
-## Dataset 
+## Background
+
+### TDA Tools
+
+
+### Dataset
 
 In this work, we're going to use the [PolyglotTeachers-SFT-Synth](https://huggingface.co/datasets/ljvmiranda921/PolyglotTeachers-SFT-Synth) **synthetic dataset** from my recent paper.
 It contains instruction-tuning pairs for six languages, Arabic, Czech, German, Spanish, Indonesian, Japanese, and Tagalog, using different data generation methods (generate from exemplars, translate from English to target language, respond in target language).
@@ -52,7 +57,7 @@ This dataset contains human-LM interactions "in-the-wild" across several languag
 ></iframe>
 
 <br />
-In the next section, the format will look like this: I'll present a research question, talk a bit about the TDA tool I'm going to use, apply that tool, and then interpret the results.
+In the next section, the format will look like this: I'll present a research question, apply a TDA tool, and then interpret the results.
 Also, note that this blog post contains my initial explorations on TDA, I'm in no way an expert.
 I tried my best to verify what I write here but there's a possibility that some of my interpretations (or methodologies) are wrong. 
 Please correct me in the comments below if that is the case.
