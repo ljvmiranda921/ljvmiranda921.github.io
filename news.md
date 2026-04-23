@@ -34,7 +34,7 @@ title: News
 </div>
 
 <div class="news-item">
-<p><span class="date">**Aug 2025**</span>: I'm proud to introduce [FilBench](https://arxiv.org/abs/2508.03523), a [comprehensive LLM benchmark](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) for Filipino! Accepted at EMNLP 2025 Main. I also share some thoughts in [this blog post](/projects/2025/08/21/filbench/).</p>
+<p><span class="date">**Aug 2025**</span>: I'm proud to introduce [FilBench](https://aclanthology.org/2025.emnlp-main.127/), a [comprehensive LLM benchmark](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) for Filipino! Accepted at EMNLP 2025 Main. I also share some thoughts in [this blog post](/projects/2025/08/21/filbench/).</p>
 </div>
 
 <div class="news-item">
