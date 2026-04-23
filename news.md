@@ -22,6 +22,10 @@ title: News
 </style>
 
 <div class="news-item">
+<p><span class="date">**May 2026**</span>: Proud to release our [survey on multilingual edge models](). If you know me, you know I care a lot about AI in the Global South, I'd like to continue doing these types of sociotechnical research, so reach out if you wanna chat!</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**Apr 2026**</span>: Sharing my first PhD work, [Polyglot Teachers](https://arxiv.org/abs/2604.11290)! Here, I studied what makes a good teacher model for generating multilingual data. I'm excited to continue this research agenda on multilingual synthetic data generation!</p>
 </div>
 
@@ -34,16 +38,16 @@ title: News
 </div>
 
 <div class="news-item">
-<p><span class="date">**Aug 2025**</span>: I'm proud to introduce [FilBench](https://arxiv.org/abs/2508.03523), a [comprehensive LLM benchmark](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) for Filipino! Accepted at EMNLP 2025 Main. I also share some thoughts in [this blog post](/projects/2025/08/21/filbench/).</p>
+<p><span class="date">**Aug 2025**</span>: I'm proud to introduce [FilBench](https://aclanthology.org/2025.emnlp-main.127/), a [comprehensive LLM benchmark](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) for Filipino! Accepted at EMNLP 2025 Main. I also share some thoughts in [this blog post](/projects/2025/08/21/filbench/).</p>
 </div>
 
 <div class="news-item">
 <p><span class="date">**May 2025**</span>: Excited to share that I have three first & co-first author papers accepted at [ACL Main](https://2025.aclweb.org/): [HyPER](https://aclanthology.org/2025.acl-long.355/), [M-RewardBench](https://aclanthology.org/2025.acl-long.3/), and [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/). A large collab project, [SEA-VL](https://aclanthology.org/2025.acl-long.916/), also got into Main!</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Nov 2024**</span>: Happy to have been part of the exciting [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) releases! My primary contribution is scaling-up our preference data using a synthetic on-policy pipeline that led to improvements in our DPO models.</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**Oct 2024**</span>: Our paper on routing preference instances to human or LM annotators, [Hybrid Preferences](https://aclanthology.org/2025.acl-long.355/), is now available. This is the first work I co-led (with Yizhong Wang) at Ai2!</p>
