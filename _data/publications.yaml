@@ -6,8 +6,8 @@
   links:
     - label: Code
       url: "https://github.com/ljvmiranda921/multilinguality-at-the-edge"
-    - label: Dataset
-      url: "/"
+    - label: Website
+      url: ""
 
 - title: "Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation"
   url: "https://arxiv.org/abs/2604.11290"
