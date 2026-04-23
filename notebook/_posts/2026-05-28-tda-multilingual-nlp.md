@@ -61,7 +61,7 @@ Please correct me in the comments below if that is the case.
 
 ### RQ1: Is there a difference in shape between synthetic and natural data? 
 
-One of the key findings in Polyglot Teachers is that there are intrinsic qualites in a synthetic dataset that dictate whether a strong model can be trained from it.
+One of the key findings in Polyglot Teachers is that **there are intrinsic qualites in a synthetic dataset that dictate whether a strong model can be trained from it.**
 Some key characteristics include the diversity in prompts or the length of the response.
 In this section, I want to examine how TDA reveals these differences in qualities in terms of the "shape" of synthetic and natural data.
 
