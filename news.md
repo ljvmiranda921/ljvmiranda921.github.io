@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**May 2026**</span>: Proud to release our [survey on multilingual edge models](https://arxiv.org/abs/2604.21637). If you know me, you know I care a lot about AI in the Global South, I'd like to continue doing these types of sociotechnical research, so reach out if you wanna chat!</p>
+<p><span class="date">**May 2026**</span>: Proud to release our [survey on multilingual edge models](https://arxiv.org/abs/2604.21637) (check the [website](/multilinguality-at-the-edge/)!). If you know me, I care a lot about AI in the Global South, I'd like to continue doing these types of sociotechnical research, so reach out if you wanna chat!</p>
 </div>
 
 <div class="news-item">
