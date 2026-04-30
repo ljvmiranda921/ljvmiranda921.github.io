@@ -77,7 +77,7 @@ By sweeping through this sequence, some structural patterns will appear, stick a
 Those that persist across a wide range of the sequence are the robust features we care about.
 
 ![](/assets/png/tda-multilingual-nlp/filtration.gif){:width="720px"}  
-_A filtration on points sampled from a noisy circle. As the distance threshold grows, nearby points get linked into edges and triangles; the loop appears, persists across a wide range of thresholds, and eventually fills in. Its long lifetime is what marks it as real structure._
+_Filtrations on three datasets. As epsilon, i.e.,  a hyperparameter that governs the distance below which two points get linked, grows, different structural patterns emerge: one loop in the circle, two components that eventually merge in the clusters, and two loops sharing a connection._
 {: style="text-align: center;"}
 
 The output of this tool is a persistence diagram:
