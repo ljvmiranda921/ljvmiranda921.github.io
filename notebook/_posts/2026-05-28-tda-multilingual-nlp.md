@@ -26,8 +26,9 @@ excerpt: |
 <span class="firstcharacter">F</span>or the past few months, I've been exploring how we can obtain high-quality multilingual data at scale.
 A common approach is to collect this data from native human speakers, giving us **natural data**, but this process is quite costly and time-consuming.
 Another option is to generate from language models (LMs), giving us what we call **synthetic data**.
-In my recent work, [Polyglot Teachers](https://arxiv.org/abs/2604.11290), I evaluated which models are good at generating multilingual data&mdash;the analysis there is quite empirical and rigorous.
-However, I want to take this a bit further: is there a fundamental *shape* to natural data? And how close are current synthetic datasets to it?
+In my recent work, [Polyglot Teachers](https://arxiv.org/abs/2604.11290), I evaluated which models are good at generating multilingual data.
+Although I was able to show characteristics of a good teacher in an empirical and systematic manner, I believe it's equally interesting if we can see differences in data by looking at its shape or structure.
+And so, I want to take this a bit further: is there a fundamental *shape* to natural data? And how close are current synthetic datasets to it?
 I find this interesting because it has a lot of potential applications such as guided data generation or measuring the quality of synthetic data.
 
 Luckily, we can glean some insights from the field of [topological data analysis (TDA)](https://en.wikipedia.org/wiki/Topological_data_analysis).
