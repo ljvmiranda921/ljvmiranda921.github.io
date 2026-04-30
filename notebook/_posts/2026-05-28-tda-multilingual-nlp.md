@@ -26,13 +26,13 @@ excerpt: |
 <span class="firstcharacter">F</span>or the past few months, I've been exploring how we can obtain high-quality multilingual data at scale.
 A common approach is to collect this data from native human speakers, giving us **natural data**, but this process is quite costly and time-consuming.
 Another option is to generate from language models (LMs), giving us what we call **synthetic data**.
-In my recent work, [Polyglot Teachers](https://arxiv.org/abs/2604.11290), I evaluated which models are good at generating multilingual data&mdash; it's quite empirical and rigorous.
-However, I want to take this a bit further: is there a fundamental *shape* for natural data? And how close are current synthetic datasets to it?
+In my recent work, [Polyglot Teachers](https://arxiv.org/abs/2604.11290), I evaluated which models are good at generating multilingual data&mdash;the analysis there is quite empirical and rigorous.
+However, I want to take this a bit further: is there a fundamental *shape* to natural data? And how close are current synthetic datasets to it?
 I find this interesting because it has a lot of potential applications such as guided data generation or measuring the quality of synthetic data.
 
 Luckily, we can glean some insights from the field of [topological data analysis (TDA)](https://en.wikipedia.org/wiki/Topological_data_analysis).
 TDA is largely influenced by topology and geometric learning, with the goal of understanding the structure of data.
-One of my favorite introductory readings to the field (and also my main reference for this blogpost) is [Chazal and Michel (2021)](https://arxiv.org/pdf/1710.04019)'s work.
+One of my favorite introductory readings on the field (and also my main reference for this blog post) is [Chazal and Michel (2021)](https://arxiv.org/pdf/1710.04019)'s work.
 More importantly, this field gives us several tools and ways-of-thinking to understand the *shape* of data---I'll talk more about these as we go along.
 In this blog post, I will apply these tools to analyze multilingual data, both synthetic and natural.
 
@@ -40,20 +40,20 @@ In this blog post, I will apply these tools to analyze multilingual data, both s
 
 ### Topological Data Analysis 
 
-A typical approach for understanding the *shape* of a dataset is by embedding text into a set of vectors, and then performing dimensionality reduction / clustering to visualize and intuit how each instance is organized.
-For the purposes of this blog post, we call this class of methods as *geometric*.
-A geometric approach is nice and I've been using it since I started working on NLP, but I noticed a lot of limitations from this pipeline:
+A typical approach to understanding the *shape* of a dataset is to embed text into a set of vectors, and then perform dimensionality reduction / clustering to visualize and intuit how each instance is organized.
+For the purposes of this blog post, we call this class of methods *geometric*.
+A geometric approach is nice and I've been using it since I started working on NLP, but I noticed a lot of limitations of this pipeline:
 
 1. **Clustering tends to obscure dataset organization** by forcing the embedding space into separate groups. Some documents, especially those with long token counts, can have overlapping topics and meaning---clustering doesn't reveal these properties. 
 
-2. **Dimensionality reduction is lossy.** A common setup is to reduce a, say, 768-dim vector into two dimensions using t-SNE or UMAP. The intuition for these approaches is that if two points are in 768-dims, they'll likely be neighbors in 2-dims. Ideally, we want to get richer signal from a dataset's global structure.
+2. **Dimensionality reduction is lossy.** A common setup is to reduce a, say, 768-dim vector to two dimensions using t-SNE or UMAP. The intuition for these approaches is that if two points are neighbors in 768-dims, they'll likely be neighbors in 2-dims. Ideally, we want to get richer signal from a dataset's global structure.
 
-3. **Geometric methods are sensitive to data and hyperparameter settings.** One of my biggest sources of headache when using t-SNE or clustering is on how sensitive they are to its settings such as the embedding model or number of clusters. Sometimes, I find myself adjusting these hyperparameters until the map "looks pretty" and it doesn't feel scientific.
+3. **Geometric methods are sensitive to data and hyperparameter settings.** One of my biggest sources of headache when using t-SNE or clustering is how sensitive they are to their settings such as the embedding model or number of clusters. Sometimes, I find myself adjusting these hyperparameters until the map "looks pretty" and it doesn't feel scientific.
 
 **Topological data analysis (TDA)** is an application of topology, which is a branch of mathematics concerned with properties of spaces that are preserved under deformations (see the [classic mug and doughnut example](https://www.youtube.com/watch?v=9NlqYr6-TpA)).
-I find it appealing because it promises better understanding of a dataset's global structures.
-It has been applied in several high-complexity fields such as biological or time-series data.
-More importantly, TDA addresses the limitations from the text processing methods mentioned above:
+I find it appealing because it promises a better understanding of a dataset's global structures.
+It has been applied to several high-complexity domains such as biological or time-series data.
+More importantly, TDA addresses the limitations of the geometric methods mentioned above:
 
 ![](/assets/png/tda-multilingual-nlp/cup_to_donut.png){:width="720px"}  
 _The classic example to demonstrate the intuition in topology is that a mug and a doughnut are of the same shape: both have exactly one hole, and one can be bent into the other without tearing or gluing._
@@ -69,7 +69,7 @@ In this blog post, I want to focus on two major analysis tools in TDA: Persisten
 
 <!-- todo -->
 
-* **Persistent Homology:** is a tool to find global structures that are invariant, i.e., they remain stable under continuous deformations. *Deformations* in the data space
+* **Persistent Homology** is a tool to find global structures that are invariant, i.e., they remain stable under continuous deformations. *Deformations* in the data space
 
 * **Mapper Algorithm:**
 
@@ -79,7 +79,7 @@ A typical TDA pipeline still involves converting text into vector embeddings, bu
 ### Dataset
 
 In this blog post, we're going to use the [PolyglotTeachers-SFT-Synth](https://huggingface.co/datasets/ljvmiranda921/PolyglotTeachers-SFT-Synth) **synthetic dataset** from my recent paper.
-It contains instruction-tuning pairs for six languages, Arabic, Czech, German, Spanish, Indonesian, Japanese, and Tagalog, using different data generation methods (generate from exemplars, translate from English to target language, respond in target language).
+It contains instruction-tuning pairs for seven languages: Arabic, Czech, German, Spanish, Indonesian, Japanese, and Tagalog, using different data generation methods (generate from exemplars, translate from English to target language, respond in target language).
 In the current version of this dataset, the texts were generated by Gemma 3 27B Instruct.
 For the **natural dataset** comparison, I'm going to sample from [WildChat](https://huggingface.co/datasets/allenai/WildChat). 
 This dataset contains human-LM interactions "in-the-wild" across several languages.
@@ -94,7 +94,7 @@ This dataset contains human-LM interactions "in-the-wild" across several languag
 <br />
 <p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
 In the next section, the format will look like this: I'll present a research question, apply a TDA tool, and then interpret the results.
-Also, note that this blog post contains my initial explorations on TDA, I'm in no way an expert.
+Also, note that this blog post contains my initial explorations on TDA&mdash;I'm in no way an expert.
 I tried my best to verify what I write here but there's a possibility that some of my interpretations (or methodologies) are wrong.
 Please correct me in the comments below if that is the case.
 You can find the source code for my experiments in [ljvmiranda921/scratch (2026-04-15-topological-data-analysis)]().
@@ -104,8 +104,8 @@ You can find the source code for my experiments in [ljvmiranda921/scratch (2026-
 
 ### RQ1: Is there a difference in shape between synthetic and natural data? 
 
-One of the key findings in Polyglot Teachers is that **there are intrinsic qualites in a synthetic dataset that dictate whether a strong model can be trained from it.**
-Some key characteristics include the diversity in prompts or the length of the response.
+One of the key findings in Polyglot Teachers is that **there are intrinsic qualities in a synthetic dataset that dictate whether a strong model can be trained from it.**
+Some key characteristics include the diversity in prompts and the length of the response.
 In this section, I want to examine how TDA reveals these differences in qualities in terms of the "shape" of synthetic and natural data.
 
 **Background**
