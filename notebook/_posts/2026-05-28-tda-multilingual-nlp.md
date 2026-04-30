@@ -65,15 +65,24 @@ _The classic example to demonstrate the intuition in topology is that a mug and 
 | Dimensionality reduction (t-SNE, UMAP) is lossy and emphasizes local neighborhoods at the expense of global structure. | TDA computes topological invariants directly in the original high-dimensional space, preserving global signal. |
 | Results are highly sensitive to hyperparameters (embedding model, perplexity, number of clusters), making analyses feel ad hoc. | Persistent homology tracks features across all scales and is provably stable under small perturbations of the input, so findings are less hyperparameter-dependent. |
 
-In this blog post, I want to focus on two major analysis tools in TDA: Persistent Homology and the Mapper algorithm. At a glance:
-
-<!-- todo -->
-
-* **Persistent Homology:** a tool for finding structural patterns in the data that are robust, i.e., they don't disappear when the data is slightly perturbed by noise or by resampling. It does so by a process called **filtration**, which involves gradually connecting nearby data points and tracking which structural patterns appear, how long they stick around, and when they disappear.
+In this blog post, I want to focus on two major analysis tools in TDA: Persistent Homology and the Mapper algorithm. 
+Let me describe them in brief.
 
 
+#### Persistent Homology
 
-* **Mapper Algorithm:**
+**Persistent Homology** is a tool for finding structural patterns in the data that are robust, i.e., they don't disappear when the data is slightly perturbed by noise or by resampling. 
+It does so using a *filtration*: a sequence of connected shapes obtained by gradually linking nearby data points. 
+
+By sweeping through this sequence, some structural patterns will appear, stick around, and disappear. 
+Those that persist across a wide range of the sequence are the robust features we care about.
+
+The output of this tool is a persistence diagram:
+
+#### Mapper Algorithm
+
+
+#### Typical TDA Pipeline
 
 A typical TDA pipeline still involves converting text into vector embeddings, but instead of using t-SNE or UMAP, we obtain topological features using the tools mentioned above.
 
