@@ -41,21 +41,25 @@ In this blog post, I will apply these tools to analyze multilingual data, both s
 ### Topological Data Analysis 
 
 A typical approach for understanding the *shape* of a dataset is by embedding text into a set of vectors, and then performing dimensionality reduction / clustering to visualize and intuit how each instance is organized.
-This approach is nice and I've been using it since I started working on NLP, but I noticed a lot of limitations from this pipeline:
+For the purposes of this blog post, we call this class of methods as *geometric*.
+A geometric approach is nice and I've been using it since I started working on NLP, but I noticed a lot of limitations from this pipeline:
 
 1. **Clustering tends to obscure dataset organization** by forcing the embedding space into separate groups. Some documents, especially those with long token counts, can have overlapping topics and meaning---clustering doesn't reveal these properties. 
 
 2. **Dimensionality reduction is lossy.** A common setup is to reduce a, say, 768-dim vector into two dimensions using t-SNE or UMAP. The intuition for these approaches is that if two points are in 768-dims, they'll likely be neighbors in 2-dims. Ideally, we want to get richer signal from a dataset's global structure.
 
-3. **The methods mentioned above are sensitive to data and hyperparameter settings.** One of my biggest sources of headache when using t-SNE or clustering is on how sensitive they are to its settings such as the embedding model or number of clusters. Sometimes, I find myself adjusting these hyperparameters until the map "looks pretty" and it doesn't feel scientific.
+3. **Geometric methods are sensitive to data and hyperparameter settings.** One of my biggest sources of headache when using t-SNE or clustering is on how sensitive they are to its settings such as the embedding model or number of clusters. Sometimes, I find myself adjusting these hyperparameters until the map "looks pretty" and it doesn't feel scientific.
 
 **Topological data analysis (TDA)** is an application of topology, which is a branch of mathematics concerned with properties of spaces that are preserved under deformations (see the [classic mug and doughnut example](https://www.youtube.com/watch?v=9NlqYr6-TpA)).
 I find it appealing because it promises better understanding of a dataset's global structures.
 It has been applied in several high-complexity fields such as biological or time-series data.
 More importantly, TDA addresses the limitations from the text processing methods mentioned above:
 
-
-
+| Limitation of geometric methods | How TDA addresses it |
+|---|---|
+| Clustering forces the embedding space into discrete groups, obscuring overlapping topics and continuous structure. | TDA captures continuous, multi-scale structure (connected components, loops, voids) without committing to a fixed partition of the data. |
+| Dimensionality reduction (t-SNE, UMAP) is lossy and emphasizes local neighborhoods at the expense of global structure. | TDA computes topological invariants directly in the original high-dimensional space, preserving global signal. |
+| Results are highly sensitive to hyperparameters (embedding model, perplexity, number of clusters), making analyses feel ad hoc. | Persistent homology tracks features across all scales and is provably stable under small perturbations of the input, so findings are less hyperparameter-dependent. |
 
 In this blog post, I want to focus on two major analysis tools in TDA: Persistent Homology and the Mapper algorithm. At a glance:
 
