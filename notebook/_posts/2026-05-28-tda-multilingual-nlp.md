@@ -55,7 +55,13 @@ It has been applied in several high-complexity fields such as biological or time
 More importantly, TDA addresses the limitations from the text processing methods mentioned above:
 
 
-In this blog post, I want to focus on two major analysis tools in TDA: Persistent Homology and the Mapper algorithm.
+In this blog post, I want to focus on two major analysis tools in TDA: Persistent Homology and the Mapper algorithm. At a glance:
+
+* **Persistent Homology:** 
+
+* **Mapper Algorithm:**
+
+A typical TDA pipeline still involves converting text into vector embeddings, but instead of using t-SNE or UMAP, we obtain topological features using the tools mentioned above.
 
 
 ### Dataset
