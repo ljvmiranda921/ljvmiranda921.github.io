@@ -40,12 +40,15 @@ In this blog post, I will apply these tools to analyze multilingual data, both s
 
 ### Topological Data Analysis (TDA)
 
-TDA is an application of topology, which is a branch of mathematics concerned with properties of spaces that are preserved under continuous deformations (see the [classic mug and doughnut example](https://www.youtube.com/watch?v=9NlqYr6-TpA)).
-
 A typical approach for understanding the *shape* of a dataset is by embedding text into a set of vectors, and then performing dimensionality reduction / clustering to visualize and intuit how each instance is organized.
 This approach is nice and I've been using it since I started working on NLP, but I noticed a lot of limitations from this pipeline:
 
-- Clustering tends to obscure organization of a dataset by forcing the embedding space into separate groups. 
+1. **Clustering tends to obscure dataset organization** by forcing the embedding space into separate groups. Some documents, especially those with long token counts, can have overlapping topics and meaning---clustering doesn't reveal these properties. 
+
+2. **Dimensionality reduction is lossy.** A common setup is to reduce a, say, 768-dim vector into two dimensions using t-SNE or UMAP. The intuition for these approaches is that if two points are in 768-dims, they'll likely be neighbors in 2-dims. Ideally, we want to get richer signal from a dataset's global structure.
+
+TDA is an application of topology, which is a branch of mathematics concerned with properties of spaces that are preserved under continuous deformations (see the [classic mug and doughnut example](https://www.youtube.com/watch?v=9NlqYr6-TpA)).
+
 
 ### Dataset
 
