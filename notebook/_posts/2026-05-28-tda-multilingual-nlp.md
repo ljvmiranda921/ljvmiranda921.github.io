@@ -77,8 +77,17 @@ By sweeping through this sequence, some structural patterns will appear, stick a
 Those that persist across a wide range of the sequence are the robust features we care about.
 
 ![](/assets/png/tda-multilingual-nlp/filtration.gif){:width="720px"}  
-_Filtrations on three datasets. As epsilon, i.e.,  a hyperparameter that governs the distance below which two points get linked, grows, different structural patterns emerge: one loop in the circle, two components that eventually merge in the clusters, and two loops sharing a connection._
 {: style="text-align: center;"}
+
+The GIF above shows three filtrations side by side. 
+Each panel starts with a set of points (imagine these as text embeddings, where each dot is a document) arranged in a different configuration. 
+The parameter $$\epsilon$$ is a distance threshold: any two points closer than $$\epsilon$$ get linked by an edge, and any three mutually linked points get filled in as a triangle. 
+As $$\epsilon$$ grows, each example reveals its own structure.
+From the left, we see
+one loop in the circle, 
+two groups that merge in the clusters, 
+and two loops joined at a shared region in the Figure 8. 
+The features that persist across a wide range of $$\epsilon$$ are the structural patterns we care about. 
 
 The output of this tool is a persistence diagram:
 
