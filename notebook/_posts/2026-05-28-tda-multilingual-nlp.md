@@ -91,6 +91,7 @@ In the next section, the format will look like this: I'll present a research que
 Also, note that this blog post contains my initial explorations on TDA, I'm in no way an expert.
 I tried my best to verify what I write here but there's a possibility that some of my interpretations (or methodologies) are wrong.
 Please correct me in the comments below if that is the case.
+You can find the source code for my experiments in [ljvmiranda921/scratch (2026-04-15-topological-data-analysis)]().
 </p>
 
 ## Analyses
