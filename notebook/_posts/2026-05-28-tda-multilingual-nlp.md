@@ -38,8 +38,9 @@ In this blog post, I will apply these tools to analyze multilingual data, both s
 
 ## Background
 
-### TDA Tools
+### Topological Data Analysis (TDA)
 
+TDA is an application of topology, which is a branch of mathematics concerned with properties of spaces that are preserved under continuous deformations (see the [classic mug and doughnut example](https://www.youtube.com/watch?v=9NlqYr6-TpA)).
 
 ### Dataset
 
