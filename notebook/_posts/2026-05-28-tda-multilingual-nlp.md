@@ -67,6 +67,8 @@ _The classic example to demonstrate the intuition in topology is that a mug and 
 
 In this blog post, I want to focus on two major analysis tools in TDA: Persistent Homology and the Mapper algorithm. At a glance:
 
+<!-- todo -->
+
 * **Persistent Homology:** 
 
 * **Mapper Algorithm:**
