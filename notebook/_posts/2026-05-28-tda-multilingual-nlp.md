@@ -88,7 +88,9 @@ one loop in the circle,
 two groups that merge in the clusters, 
 and two loops joined at a shared region in the Figure-8. 
 
-The output of a Persistent Homology analysis is a persistence diagram.
+Performing Persistent Homology results in several artifacts such as a persistence diagram, a persistence image, and a persistence landscape.
+I won't go through them here in detail, but I'd direct you to this [wonderful introduction](https://patricknicolas.substack.com/p/understanding-data-through-persistence?utm_source=profile&utm_medium=reader2) by Patrick Nicolas.
+Later on, I'll also show the same artifacts when running on my own synthetic datasets.
 
 #### Mapper Algorithm
 
