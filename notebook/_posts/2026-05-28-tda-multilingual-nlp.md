@@ -43,7 +43,9 @@ In this blog post, I will apply these tools to analyze multilingual data, both s
 TDA is an application of topology, which is a branch of mathematics concerned with properties of spaces that are preserved under continuous deformations (see the [classic mug and doughnut example](https://www.youtube.com/watch?v=9NlqYr6-TpA)).
 
 A typical approach for understanding the *shape* of a dataset is by embedding text into a set of vectors, and then performing dimensionality reduction / clustering to visualize and intuit how each instance is organized.
-This approach is nice and I've been using it 
+This approach is nice and I've been using it since I started working on NLP, but it has some limitations:
+
+
 
 ### Dataset
 
