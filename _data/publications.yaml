@@ -1,14 +1,3 @@
-- title: "Multilinguality at the Edge: Developing Language Models for the Global South"
-  url: "https://arxiv.org/abs/2604.21637"
-  venue: "Preprint '26"
-  image: "/assets/png/research/multilinguality-at-the-edge.png"
-  authors: "<u>Lester James V. Miranda</u>, Songbo Hu, Roi Reichart, and Anna Korhonen"
-  links:
-    - label: Code
-      url: "https://github.com/ljvmiranda921/multilinguality-at-the-edge"
-    - label: Website
-      url: "https://ljvmiranda921.github.io/multilinguality-at-the-edge/"
-
 - title: "Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation"
   url: "https://arxiv.org/abs/2604.11290"
   venue: "Preprint '26"
@@ -21,6 +10,17 @@
       url: "https://huggingface.co/datasets/ljvmiranda921/PolyglotTeachers-SFT-Synth"
     - label: Models
       url: "https://huggingface.co/collections/ljvmiranda921/polyglot-teachers"
+
+- title: "Multilinguality at the Edge: Developing Language Models for the Global South"
+  url: "https://arxiv.org/abs/2604.21637"
+  venue: "Preprint '26"
+  image: "/assets/png/research/multilinguality-at-the-edge.png"
+  authors: "<u>Lester James V. Miranda</u>, Songbo Hu, Roi Reichart, and Anna Korhonen"
+  links:
+    - label: Code
+      url: "https://github.com/ljvmiranda921/multilinguality-at-the-edge"
+    - label: Website
+      url: "https://ljvmiranda921.github.io/multilinguality-at-the-edge/"
 
 - title: "Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback"
   url: "https://aclanthology.org/2025.acl-long.355/"
