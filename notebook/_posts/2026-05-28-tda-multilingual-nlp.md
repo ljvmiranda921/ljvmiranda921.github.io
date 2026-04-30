@@ -72,7 +72,7 @@ Let me describe them in brief.
 #### Persistent Homology
 
 **Persistent Homology** is a technique for finding structural patterns in the data that are robust, i.e., they don't disappear when the data is slightly perturbed by noise or by resampling. 
-It does so using a *filtration* (see Figure below): a sequence of connected shapes obtained by gradually linking nearby data points. 
+It does so using a *filtration*: a sequence of connected shapes obtained by gradually linking nearby data points. 
 By sweeping through this sequence, some structural patterns will appear, stick around, and disappear. 
 Those that persist across a wide range of the sequence are the robust features we care about.
 
@@ -86,10 +86,9 @@ As $$\epsilon$$ grows, each example reveals its own structure.
 From the left, we see
 one loop in the circle, 
 two groups that merge in the clusters, 
-and two loops joined at a shared region in the Figure 8. 
-The features that persist across a wide range of $$\epsilon$$ are the structural patterns we care about. 
+and two loops joined at a shared region in the Figure-8. 
 
-The output of this tool is a persistence diagram:
+The output of a Persistent Homology analysis is a persistence diagram.
 
 #### Mapper Algorithm
 
