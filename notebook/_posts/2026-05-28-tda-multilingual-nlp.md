@@ -69,7 +69,9 @@ In this blog post, I want to focus on two major analysis tools in TDA: Persisten
 
 <!-- todo -->
 
-* **Persistent Homology** is a tool to find global structures that are invariant, i.e., they remain stable under continuous deformations. *Deformations* in the data space
+* **Persistent Homology:** a tool for finding structural patterns in the data that are robust, i.e., they don't disappear when the data is slightly perturbed by noise or by resampling. It does so by a process called **filtration**, which involves gradually connecting nearby data points and tracking which structural patterns appear, how long they stick around, and when they disappear.
+
+
 
 * **Mapper Algorithm:**
 
