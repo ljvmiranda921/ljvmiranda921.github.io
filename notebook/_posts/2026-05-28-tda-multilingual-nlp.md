@@ -61,7 +61,7 @@ _The classic example to demonstrate the intuition in topology is that a mug and 
 
 | Limitation of geometric methods | How TDA addresses it |
 |---|---|
-| Clustering forces the embedding space into discrete groups, obscuring overlapping topics and continuous structure. | TDA captures continuous, multi-scale structure (connected components, loops, voids) without committing to a fixed partition of the data. |
+| Clustering forces the embedding space into discrete groups, obscuring overlapping topics and continuous structure. | TDA captures continuous global structure without committing to a fixed partition of the data. |
 | Dimensionality reduction (t-SNE, UMAP) is lossy and emphasizes local neighborhoods at the expense of global structure. | TDA computes topological invariants directly in the original high-dimensional space, preserving global signal. |
 | Results are highly sensitive to hyperparameters (embedding model, perplexity, number of clusters), making analyses feel ad hoc. | Persistent homology tracks features across all scales and is provably stable under small perturbations of the input, so findings are less hyperparameter-dependent. |
 
