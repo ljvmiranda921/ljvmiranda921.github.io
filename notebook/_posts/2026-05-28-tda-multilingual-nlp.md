@@ -73,9 +73,12 @@ Let me describe them in brief.
 
 **Persistent Homology** is a tool for finding structural patterns in the data that are robust, i.e., they don't disappear when the data is slightly perturbed by noise or by resampling. 
 It does so using a *filtration*: a sequence of connected shapes obtained by gradually linking nearby data points. 
-
 By sweeping through this sequence, some structural patterns will appear, stick around, and disappear. 
 Those that persist across a wide range of the sequence are the robust features we care about.
+
+![](/assets/png/tda-multilingual-nlp/filtration.gif){:width="720px"}  
+_A filtration on points sampled from a noisy circle. As the distance threshold grows, nearby points get linked into edges and triangles; the loop appears, persists across a wide range of thresholds, and eventually fills in. Its long lifetime is what marks it as real structure._
+{: style="text-align: center;"}
 
 The output of this tool is a persistence diagram:
 
