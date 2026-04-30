@@ -72,7 +72,7 @@ Let me describe them in brief.
 #### Persistent Homology
 
 **Persistent Homology** is a tool for finding structural patterns in the data that are robust, i.e., they don't disappear when the data is slightly perturbed by noise or by resampling. 
-It does so using a *filtration*: a sequence of connected shapes obtained by gradually linking nearby data points. 
+It does so using a *filtration* (see Figure below): a sequence of connected shapes obtained by gradually linking nearby data points. 
 By sweeping through this sequence, some structural patterns will appear, stick around, and disappear. 
 Those that persist across a wide range of the sequence are the robust features we care about.
 
