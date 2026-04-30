@@ -55,6 +55,10 @@ I find it appealing because it promises better understanding of a dataset's glob
 It has been applied in several high-complexity fields such as biological or time-series data.
 More importantly, TDA addresses the limitations from the text processing methods mentioned above:
 
+![](/assets/png/tda-multilingual-nlp/cup_to_donut.png){:width="720px"}  
+_The classic example to demonstrate the intuition in topology is that a mug and a doughnut are of the same shape: both have exactly one hole, and one can be bent into the other without tearing or gluing._
+{: style="text-align: center;"}
+
 | Limitation of geometric methods | How TDA addresses it |
 |---|---|
 | Clustering forces the embedding space into discrete groups, obscuring overlapping topics and continuous structure. | TDA captures continuous, multi-scale structure (connected components, loops, voids) without committing to a fixed partition of the data. |
