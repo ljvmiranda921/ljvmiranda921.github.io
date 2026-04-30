@@ -47,6 +47,8 @@ This approach is nice and I've been using it since I started working on NLP, but
 
 2. **Dimensionality reduction is lossy.** A common setup is to reduce a, say, 768-dim vector into two dimensions using t-SNE or UMAP. The intuition for these approaches is that if two points are in 768-dims, they'll likely be neighbors in 2-dims. Ideally, we want to get richer signal from a dataset's global structure.
 
+3. **The methods mentioned above are sensitive to data and hyperparameter settings.** One of my biggest sources of headache when using t-SNE or clustering is on how sensitive they are to its settings such as the embedding model or number of clusters. Sometimes, I find myself adjusting these hyperparameters until the map "looks pretty" and it doesn't feel scientific.
+
 TDA is an application of topology, which is a branch of mathematics concerned with properties of spaces that are preserved under continuous deformations (see the [classic mug and doughnut example](https://www.youtube.com/watch?v=9NlqYr6-TpA)).
 
 
