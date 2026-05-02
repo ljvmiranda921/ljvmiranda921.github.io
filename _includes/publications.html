@@ -1,4 +1,13 @@
-{% for pub in site.data.publications %}
+{% assign grouped = site.data.publications | group_by: "category" %}
+{% for group in grouped %}
+{% if group.name != "" %}
+<h3 class="pub-category">{{ group.name }}</h3>
+{% assign cat_def = site.data.pub_categories | where: "name", group.name | first %}
+{% if cat_def.description and cat_def.description != "" %}
+<p class="pub-category-desc">{{ cat_def.description }}</p>
+{% endif %}
+{% endif %}
+{% for pub in group.items %}
 <div class="pub-entry">
 <div class="pub-img">
 <img src="{{ pub.image }}" alt="{{ pub.title }}">
@@ -10,4 +19,5 @@
 <br>{% for link in pub.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} / {% endunless %}{% endfor %}
 </div>
 </div>
+{% endfor %}
 {% endfor %}
