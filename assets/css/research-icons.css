@@ -39,6 +39,16 @@
   vertical-align: super;
 }
 
+.pub-category-desc {
+  font-style: italic;
+  font-size: 0.9375em;
+  color: #828282;
+  background-color: #f0f0e8;
+  border-left: 4px solid #e8e8e8;
+  padding: 10px 16px;
+  margin: 8px 0 20px 0;
+}
+
 @media screen and (max-width: 600px) {
   .pub-img {
     display: none;
