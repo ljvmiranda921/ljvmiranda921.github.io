@@ -103,12 +103,12 @@ The Mapper Algorithm consists of the following steps:
 
 1. **Filtering**: we apply a *lens function* to highlight a specific aspect of interest in a high-dimensional dataset. What the lens function does is define a coordinate system to partition the data. 
 2. **Covering**: after filtering, we obtain a *codomain*, which is the projected version of the high dimensional dataset via the lens function.
-This codomain is then partitioned into $$r$$
-
+This codomain is then partitioned into $$r$$ intervals, forming a grid of *hypercubes*. Here, $$r$$ is a hyperparameter where higher values reveal local structure.
+3. **Clustering**: now for each hypercube, Mapper identifies the subset in the original high-dimensional space and applies a clustering algorithm. This cluster then corresponds to a node in the Mapper graph. If a data point appears in several clusters, then the nodes in the Mapper graph are connected by an edge. This means that an edge reflects shared membership across clusters, allowing Mapper to summarize data as a graph.
 
 
 One thing I've learned is that the design space of Mapper is quite broad, from the choice of the lens function to the type of clustering algorithm.
-I haven't really looked into how to make principled choices for Mapper but I'll rely on some recommendations from [Rair et al. (2025)'s paper](https://aclanthology.org/2025.emnlp-main.426.pdf).
+I haven't really looked into how to make principled choices for Mapper but I'll rely on some recommendations from [Rair et al. (2025)'s paper](https://aclanthology.org/2025.emnlp-main.426.pdf) with some notes from [Madukpe et al.'s (2025)](https://arxiv.org/abs/2504.09042) work.
 
 
 
