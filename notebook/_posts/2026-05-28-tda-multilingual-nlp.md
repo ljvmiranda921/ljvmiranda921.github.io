@@ -33,7 +33,7 @@ I find this interesting because it has a lot of potential applications such as g
 
 Luckily, we can glean some insights from the field of [topological data analysis (TDA)](https://en.wikipedia.org/wiki/Topological_data_analysis).
 TDA is largely influenced by topology and geometric learning, with the goal of understanding the structure of data.
-One of my favorite introductory readings on the field (and also my main reference for this blog post) is [Chazal and Michel (2021)](https://arxiv.org/pdf/1710.04019)'s work.
+One of my favorite introductory readings on the field (and also my main reference for this blog post) is [Chazal and Michel (2021)](https://arxiv.org/pdf/1710.04019)'s work and Raphael Tinarrage's [summer course](https://raphaeltinarrage.github.io/EMAp.html).
 More importantly, this field gives us several tools and ways-of-thinking to understand the *shape* of data---I'll talk more about these as we go along.
 In this blog post, I will apply these tools to analyze multilingual data, both synthetic and natural.
 
