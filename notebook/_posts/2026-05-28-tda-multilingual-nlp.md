@@ -97,6 +97,12 @@ Later on, I'll also show the same artifacts when running on my own synthetic dat
 
 <!-- https://aclanthology.org/2025.emnlp-main.426/ -->
 
+If Persistent Homology gives us a set of interpretable features, the Mapper Algorithm on the other hand gives us a projection based on a graph-based summary of high-dimensional data.
+The loose analogue for this in geometry is dimensionality reduction algorithms like PCA.
+The Mapper algorithm
+
+
+
 #### Typical TDA Pipeline
 
 A typical TDA pipeline still involves converting text into vector embeddings, but instead of using t-SNE or UMAP, we obtain topological features using the tools mentioned above.
