@@ -101,7 +101,10 @@ If Persistent Homology gives us a set of interpretable features, the Mapper Algo
 The loose analogue for this in geometry is dimensionality reduction algorithms like PCA.
 The Mapper Algorithm consists of the following steps:
 
-1. **Filtering**: we apply a lens function to highlight a specific aspect of interest in a high-dimensional dataset. What the lens function does is define a coordinate system to partition the data. 
+1. **Filtering**: we apply a *lens function* to highlight a specific aspect of interest in a high-dimensional dataset. What the lens function does is define a coordinate system to partition the data. 
+2. **Covering**: after filtering, we obtain a *codomain*, which is the projected version of the high dimensional dataset via the lens function.
+This codomain is then partitioned into $$r$$
+
 
 
 One thing I've learned is that the design space of Mapper is quite broad, from the choice of the lens function to the type of clustering algorithm.
