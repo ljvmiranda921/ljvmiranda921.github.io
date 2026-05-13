@@ -99,7 +99,16 @@ Later on, I'll also show the same artifacts when running on my own synthetic dat
 
 If Persistent Homology gives us a set of interpretable features, the Mapper Algorithm on the other hand gives us a projection based on a graph-based summary of high-dimensional data.
 The loose analogue for this in geometry is dimensionality reduction algorithms like PCA.
-The Mapper algorithm
+The Mapper Algorithm consists of the following steps:
+
+1. **Filtering**: we apply a lens function to highlight a specific aspect of interest in a high-dimensional dataset. What the lens function does is define a coordinate system to partition the data. 
+
+
+One thing I've learned is that the design space of Mapper is quite broad, from the choice of the lens function to the type of clustering algorithm.
+I haven't really looked into how to make principled choices for Mapper but I'll rely on some recommendations from [Rair et al. (2025)'s paper](https://aclanthology.org/2025.emnlp-main.426.pdf).
+
+
+
 
 
 
