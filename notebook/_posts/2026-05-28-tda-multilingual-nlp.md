@@ -95,6 +95,7 @@ Later on, I'll also show the same artifacts when running on my own synthetic dat
 
 #### Mapper Algorithm
 
+<!-- https://aclanthology.org/2025.emnlp-main.426/ -->
 
 #### Typical TDA Pipeline
 
