@@ -111,13 +111,13 @@ One thing I've learned is that the design space of Mapper is quite broad, from t
 I haven't really looked into how to make principled choices for Mapper but I'll rely on some recommendations from [Rair et al. (2025)'s paper](https://aclanthology.org/2025.emnlp-main.426.pdf) with some notes from [Madukpe et al.'s (2025)](https://arxiv.org/abs/2504.09042) work.
 
 
+#### Tools for TDA
 
+I find that
 
+<!-- #### Typical TDA Pipeline
 
-
-#### Typical TDA Pipeline
-
-A typical TDA pipeline still involves converting text into vector embeddings, but instead of using t-SNE or UMAP, we obtain topological features using the tools mentioned above.
+A typical TDA pipeline still involves converting text into vector embeddings, but instead of using t-SNE or UMAP, we obtain topological features using the tools mentioned above. -->
 
 
 ### Dataset
