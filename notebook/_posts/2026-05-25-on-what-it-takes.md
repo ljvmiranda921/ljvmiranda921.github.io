@@ -53,8 +53,10 @@ and various paintings and ornaments.
 This later on became the jeepney or jeep, which is now our cultural icon and the current mode of transportation today.
 I really like the imagery of the jeepney to symbolize diskarte because my dad used to own and drive one (my wife also help wrote the standard for the modern jeepney!), and I learned how to read by reading handpainted jeepney signs. 
 
-Diskarte is difficult to translate in English, because it can mean many things: resourcefulness, ingenuity, creative thinking, etc. There is this nice paper that talked about this at length, and I encourage anyone to read it! 
+Diskarte is difficult to translate in English, because it can mean many things: resourcefulness, ingenuity, creative thinking, etc. 
+There is this nice paper that talked about this at length, and I encourage anyone to read it! 
 Personally, I see diskarte as the ability to achieve a goal under extreme constraints.
+
 
 
 
