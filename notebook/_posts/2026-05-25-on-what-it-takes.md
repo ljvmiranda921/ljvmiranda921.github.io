@@ -41,7 +41,8 @@ Let me explain them in the following sections.
 [^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my [blog post](/projects/2025/08/21/filbench/), check the [leaderboard](https://huggingface.co/spaces/filbench/filbench-leaderboard), or read the [paper](https://aclanthology.org/2025.emnlp-main.127/)!
 
 
-## Diskarte
+## Diskarte - how can we build language technologies with low compute and limited data resources?
+
 
 
 

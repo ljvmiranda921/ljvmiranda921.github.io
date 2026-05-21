@@ -271,6 +271,7 @@
 
   h2 {
     @include relative-font-size(2);
+    line-height: 1.2;
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.75);
