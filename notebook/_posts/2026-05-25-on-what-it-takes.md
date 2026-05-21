@@ -37,8 +37,8 @@ Let me explain them in the following sections.
 > We can build Filipino-centric LLMs and contribute world-class language technologies because we have the 
 > unique qualities to do so: Diskarte, Sipag at Tiyaga, and Bayanihan. The challenge then is to create an environment that allows these qualities to flourish.
 
-The slides below are taken from the closing remarks of my talk (about 75% of the talk is on FilBench), but the text doesn't map to them one-to-one.
-Just think of this blog post as an extended version of those closing slides.
+<!-- The slides below are taken from the closing remarks of my talk (about 75% of the talk is on FilBench), but the text doesn't map to them one-to-one.
+Just think of this blog post as an extended version of those closing slides. -->
 
 
 
@@ -47,7 +47,15 @@ Just think of this blog post as an extended version of those closing slides.
 
 ## Diskarte - how can we build with low compute and limited data resources?
 
-After World War 2, 
+After World War 2, several US Army Willys MB Trucks were left in the Philippines as American troops left the country.
+There was a shortage of public transportation due to the destruction of infrastructure, and so, we began stripping down these trucks and altered them to add metal roofs, 
+and various paintings and ornaments.
+This later on became the jeepney or jeep, which is now our cultural icon and the current mode of transportation today.
+I really like the imagery of the jeepney to symbolize diskarte because my dad used to own and drive one (my wife also help wrote the standard for the modern jeepney!), and I learned how to read by reading handpainted jeepney signs. 
+
+Diskarte is difficult to translate in English, because it can mean many things: resourcefulness, ingenuity, creative thinking, etc. There is this nice paper that talked about this at length, and I encourage anyone to read it! 
+Personally, I see diskarte as the ability to achieve a goal under extreme constraints.
+
 
 
 ## Sipag at Tiyaga - how can we support open-ended and highly-experimental activities?
