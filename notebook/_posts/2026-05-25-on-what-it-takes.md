@@ -43,7 +43,7 @@ Let me explain them in the following sections.
 
 ## Diskarte - how can we build with low compute and limited data resources?
 
-
+After World War 2, 
 
 
 ## Sipag at Tiyaga
