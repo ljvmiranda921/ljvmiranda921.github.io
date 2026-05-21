@@ -38,4 +38,4 @@ Let me explain them in the following sections.
 > unique qualities to do so: Diskarte, Sipag at Tiyaga, and Bayanihan.
 
 
-[^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my blog post, check the leaderboard, or read the paper!
+[^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my [blog post](/projects/2025/08/21/filbench/), check the [leaderboard](https://huggingface.co/spaces/filbench/filbench-leaderboard), or read the [paper](https://aclanthology.org/2025.emnlp-main.127/)!
