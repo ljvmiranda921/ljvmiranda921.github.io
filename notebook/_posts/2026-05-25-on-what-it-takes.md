@@ -118,5 +118,10 @@ What I'm trying to say is that there is talent here willing to do the hard parts
 ## Bayanihan - collective action to achieve a goal
 
 I always find the imagery of bayanihan inspiring.
-It's now uncommon today due to most houses being made of concrete, but the spirit of bayanihan still lives.
-I remember back in high school when we had Brigada Eskwela and gathered together to clean classrooms, or even the disaster relief packages we assembled for victims of typhoon Yolanda back in college.
+It's now uncommon today due to most houses being made of concrete, but the spirit of bayanihan still lives:
+I remember back in high school when we had Brigada Eskwela and gathered together (my classmates, teachers, and even parents) to clean classrooms, or even the disaster relief packages we assembled for victims of typhoon Yolanda back in college.
+I'd like to think that this is possible in the context of LLM development.
+
+<div style="text-align: center;">
+  <img src="/assets/images/on-what-it-takes/bayanihan.png" style="border: 1px solid black; padding: 10px; width: 600px">
+</div>
