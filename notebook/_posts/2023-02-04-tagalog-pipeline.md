@@ -10,7 +10,7 @@ published: true
 filipino_nlp: true
 highlight: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
-header-img: /assets/png/tagalog-gold-standard/header.png
+header-img: /assets/images/tagalog-pipeline/header.png
 description: |
     In the age of big data and large language models, building NLP pipelines for
     Tagalog is still difficult. In this blog post, I'll report my progress on
@@ -107,7 +107,7 @@ cognitive load of labeling and focus more on correcting the model's outputs
 rather than doing it from scratch. The figure below illustrates the workflow I'm
 following:
 
-![](/assets/png/tagalog-gold-standard/silver_standard_framework.png){:width="650px"}  
+![](/assets/images/tagalog-pipeline/silver_standard_framework.png){:width="650px"}  
 {:style="text-align: center;"}
 
 > By bootstrapping the annotations, we reduce the cognitive load of labeling
@@ -121,7 +121,7 @@ set](https://huggingface.co/datasets/wikiann/viewer/tl/validation) have glaring
 errors:
 
 <div style="position:relative; overflow: hidden; width;100%; padding-top: 10.25%">
-<iframe src="/assets/png/tagalog-gold-standard/wikiann_error.html" height="100" width="720" style="border:1px solid #ddd;border-radius:10px;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%"></iframe>
+<iframe src="/assets/images/tagalog-pipeline/wikiann_error.html" height="100" width="720" style="border:1px solid #ddd;border-radius:10px;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%"></iframe>
 </div>
 <br/>
 
@@ -131,7 +131,7 @@ errors:
 
 
 <div style="position:relative; overflow: hidden; width;100%; padding-top: 10.25%">
-<iframe src="/assets/png/tagalog-gold-standard/wikiann_error2.html" height="100" width="720" style="border:1px solid #ddd;border-radius:10px;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%"></iframe>
+<iframe src="/assets/images/tagalog-pipeline/wikiann_error2.html" height="100" width="720" style="border:1px solid #ddd;border-radius:10px;position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%"></iframe>
 </div>
 <br/>
 
@@ -167,7 +167,7 @@ predict entities for TLUnified. Then, I will correct the predictions using
 [Prodigy](https://prodi.gy), an annotation software, to produce gold-standard
 annotations. Piece of cake, right?
 
-![](/assets/png/tagalog-gold-standard/framework_applied.png){:width="650px"}  
+![](/assets/images/tagalog-pipeline/framework_applied.png){:width="650px"}  
 {:style="text-align: center;"}
 
 However, *labeling thousands of samples is not the hardest part.* As the sole
@@ -273,7 +273,7 @@ Then, we will use word vectors as additional features for training our
 statistical model (*Baseline + fastText*). Lastly, we will use pretraining to
 initialize the weights of our components (*Baseline + fastText + pretraining*). 
 
-![](/assets/png/tagalog-gold-standard/word_vector_design.png){:width="550px"}  
+![](/assets/images/tagalog-pipeline/word_vector_design.png){:width="550px"}  
 {:style="text-align: center;"}
 
 Next, I will measure the performance of a monolingual and multilingual language
@@ -290,7 +290,7 @@ the representation layer to achieve higher accuracy:
 {:style="text-align: center;"}
 
 
-![](/assets/png/tagalog-gold-standard/drop_in.png){:width="650px"}  
+![](/assets/images/tagalog-pipeline/drop_in.png){:width="650px"}  
 {:style="text-align: center;"}
 
 Again, I want to use what I learned from these experiments to set up a training
@@ -396,10 +396,10 @@ unrelated terms. Here I'm using the vectors from fastText and floret, both train
 with TLUnified:
 
 
-![](/assets/png/tagalog-gold-standard/demo_1.svg){:width="650px"}  
+![](/assets/images/tagalog-pipeline/demo_1.svg){:width="650px"}  
 {:style="text-align: center;"}
 
-![](/assets/png/tagalog-gold-standard/demo_2.svg){:width="650px"}  
+![](/assets/images/tagalog-pipeline/demo_2.svg){:width="650px"}  
 {:style="text-align: center;"}
 
 
@@ -556,7 +556,7 @@ vectors with pretraining, while the latter takes advantage of the
 evaluation to wrap things up. For now I'll be calling them `tl_tlunified_lg` and
 `tl_tlunified_trf` to be consistent with spaCy's model naming convention:
 
-![](/assets/png/tagalog-gold-standard/test_pipeline.png){:width="700px"}  
+![](/assets/images/tagalog-pipeline/test_pipeline.png){:width="700px"}  
 {:style="text-align: center;"}
 
 Let's evaluate their performance on the test set:
@@ -634,7 +634,7 @@ word vector-based model is still competitive.
 To summarize the process above, we have this figure below. I hope that this simplifies
 the whole procedure on building an NLP pipeline:
 
-![](/assets/png/tagalog-gold-standard/process.png){:width="650px"}  
+![](/assets/images/tagalog-pipeline/process.png){:width="650px"}  
 {:style="text-align: center;"}
 
 ### <a id="next-steps"></a> Next steps [&crarr;](#toc)

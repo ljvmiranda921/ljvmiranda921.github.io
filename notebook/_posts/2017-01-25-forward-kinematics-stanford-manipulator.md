@@ -143,7 +143,7 @@ x-y and x-z coordinates.
 $$\theta_{1}$$ = -90, $$\theta_{2}$$ = 90, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$\theta_{5}$$ = 25, $$\theta_{6}$$ = 90
 
 
-![Simulation 1](/assets/png/robosim/fkine01.gif)  
+![Simulation 1](/assets/images/forward-kinematics-stanford-manipulator/fkine01.gif)  
 __Figure 1a:__ _Forward Kinematics Simulation_
 {: style="text-align: center;"}
 ![Top and Side View](https://i.imgur.com/uxf2xKtl.png){:height="274px" width="560px"}  
@@ -156,7 +156,7 @@ $$\theta_{1}$$ = 180, $$\theta_{2}$$ = 0, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$
 
 
 
-![Simulation 2](/assets/png/robosim/fkine02.gif)  
+![Simulation 2](/assets/images/forward-kinematics-stanford-manipulator/fkine02.gif)  
 __Figure 2a:__ _Forward Kinematics Simulation_
 {: style="text-align: center;"}
 
@@ -170,7 +170,7 @@ __Figure 2b:__ _Top (left) and side (right) views of the manipulator's end-pose_
 $$\theta_{1}$$ = 90, $$\theta_{2}$$ = -45, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$\theta_{5}$$ = -25, $$\theta_{6}$$ = 45
 
 
-![Simulation 3](/assets/png/robosim/fkine03.gif)  
+![Simulation 3](/assets/images/forward-kinematics-stanford-manipulator/fkine03.gif)  
 __Figure 3a:__ _Forward Kinematics Simulation_
 {: style="text-align: center;"}
 

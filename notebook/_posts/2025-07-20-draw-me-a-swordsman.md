@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [pixel art, aseprite, llm, nlp, tool-calling, mcp, claude, gpt]
-header-img: /assets/png/draw-me-a-swordsman/header.png
+header-img: /assets/images/draw-me-a-swordsman/header.png
 description: |
   Just a fun weekend experiment on model-context protocol (MCP): I asked several tool-calling LLMs to draw a 4-frame spritesheet of a swordsman performing a slash attack using an Aseprite MCP I built. The results were interesting!
 excerpt: |
@@ -41,7 +41,7 @@ Here's a **human baseline** from a [game](https://ljvmiranda921.itch.io/abyss) I
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| <img src="/assets/png/draw-me-a-swordsman/human_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/human_spritesheet.png" alt="task 2 image" width="500"/> |
+| <img src="/assets/images/draw-me-a-swordsman/human_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/images/draw-me-a-swordsman/human_spritesheet.png" alt="task 2 image" width="500"/> |
 
 I evaluated each LLM's output using two criteria, each scored from 0 to 3:
 
@@ -57,7 +57,7 @@ To get a single representative score, I compute the average of correctness and c
 This project also helped me understand the development workflow for MCPs and LLM agents.
 I like framing this setup similar to reinforcement learning: we instruct an **Agent** (an LLM) to interact with the **Environment** (standardized via MCP) to accomplish a task, as shown in the diagram below:
 
-![](/assets/png/draw-me-a-swordsman/testbed.svg){:width="800px"}  
+![](/assets/images/draw-me-a-swordsman/testbed.svg){:width="800px"}  
 _In the tool-calling paradigm, we instruct an Agent to interact with the Environment in order to accomplish a task. The Agent can be implemented via the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) or natively in [Claude Desktop](https://modelcontextprotocol.io/quickstart/user), while the Environment is an MCP server that calls Aseprite commands._
 {: style="text-align: center;"}
 
@@ -157,7 +157,7 @@ The figures below show the best of three agent-environment interactions, selecte
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| <img src="/assets/png/draw-me-a-swordsman/qwen3-32b_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/qwen3-32b_spritesheet.png" alt="task 2 image" width="500"/> |
+| <img src="/assets/images/draw-me-a-swordsman/qwen3-32b_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/images/draw-me-a-swordsman/qwen3-32b_spritesheet.png" alt="task 2 image" width="500"/> |
 
 Qwen3 performed poorly on both tasks.
 I can see the attempt to draw a swordsman in Task 1: the brown circle is the head, the cyan rectangle is the body, and the grey rectangle is the sword.
@@ -176,7 +176,7 @@ I'm sorry Qwen, but this is a skill issue (minus points for the attitude too).
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| <img src="/assets/png/draw-me-a-swordsman/gpt-4o_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/gpt-4o_spritesheet.png" alt="task 2 image" width="500"/> |
+| <img src="/assets/images/draw-me-a-swordsman/gpt-4o_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/images/draw-me-a-swordsman/gpt-4o_spritesheet.png" alt="task 2 image" width="500"/> |
 
 GPT-4o's intent is clearer than Qwen3's output.
 The Task 1 drawing can definitely be a swordsman if I squint hard enough.
@@ -192,7 +192,7 @@ This is a good and earnest try.
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| <img src="/assets/png/draw-me-a-swordsman/gpt-4.1_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/gpt-4.1_spritesheet.png" alt="task 2 image" width="500"/> |
+| <img src="/assets/images/draw-me-a-swordsman/gpt-4.1_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/images/draw-me-a-swordsman/gpt-4.1_spritesheet.png" alt="task 2 image" width="500"/> |
 
 GPT-4.1 shows a marked improvement over GPT-4o.
 The Task 1 swordsman is much more recognizable&mdash;there's a clear humanoid figure with distinct head, body, and limbs, but no well-defined sword.
@@ -208,7 +208,7 @@ It's a decent attempt at maintaining character consistency, but fails to capture
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| <img src="/assets/png/draw-me-a-swordsman/claude-sonnet_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/png/draw-me-a-swordsman/claude-sonnet_spritesheet.png" alt="task 2 image" width="500"/> |
+| <img src="/assets/images/draw-me-a-swordsman/claude-sonnet_simple.png" alt="task 1 image" width="80"/> | <img src="/assets/images/draw-me-a-swordsman/claude-sonnet_spritesheet.png" alt="task 2 image" width="500"/> |
 
 Claude Sonnet 4 is getting there but isn't quite the most polished.
 The Task 1 swordsman does look like a proper pixel art character&mdash;you can make out the basic humanoid form and it has that classic retro game aesthetic.
@@ -226,7 +226,7 @@ It's like the model understood the motion but forgot about maintaining the chara
 
 | Task 1: Swordsman | Task 2: Draw a 4-frame spritesheet of a sword slash attack |
 | --------------------------- | ---------------------------------------------------------- |
-| <img src="/assets/png/draw-me-a-swordsman/claude-opus_simple.png" alt="task 1 image" width="100"/> | <img src="/assets/png/draw-me-a-swordsman/claude-opus_spritesheet.png" alt="task 2 image" width="550"/> |
+| <img src="/assets/images/draw-me-a-swordsman/claude-opus_simple.png" alt="task 1 image" width="100"/> | <img src="/assets/images/draw-me-a-swordsman/claude-opus_spritesheet.png" alt="task 2 image" width="550"/> |
 
 Claude Opus 4 produces solid results across both tasks.
 The Task 1 swordsman shows good creativity with a distinctive character design&mdash;clear head, body, and sword, though the sword shape could be more refined.

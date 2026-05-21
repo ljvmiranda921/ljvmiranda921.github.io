@@ -7,7 +7,7 @@ category: notebook
 comments: true
 highlight: true
 author: "LJ MIRANDA"
-header-img: /assets/png/data-science-swe/2_modularization.png
+header-img: /assets/images/data-science-swe/2_modularization.png
 tags: [software development, python, software engineering, data science,
 machine learning, research, academia, deep learning, jupyter notebooks]
 description: |
@@ -24,7 +24,7 @@ excerpt: |
 Hello! You're here because I rambled on how you can improve your software
 skills as a researcher. Maybe our conversation went this way:
 
-![](/assets/png/data-science-swe/talking_to_others.png){:width="380px"}  
+![](/assets/images/data-science-swe/talking_to_others.png){:width="380px"}  
 {: style="text-align: center;"}
 
 <span class="firstcharacter">Y</span>ou get it already...the field is quite huge and there are many ways to get
@@ -101,7 +101,7 @@ software engineering:
     version-control, software design, web paradigms, dependency management, and
     so on. 
 
-    ![](/assets/png/data-science-swe/ml_architecture.png){:width="400px"}  
+    ![](/assets/images/data-science-swe/ml_architecture.png){:width="400px"}  
     <br>**Figure**: A very simplistic system architecture 
     {: style="text-align: center;"}
 
@@ -111,7 +111,7 @@ software engineering:
     concept drift, and more. I even imagine it as two cycles syncing together:
 
 
-    ![](/assets/png/data-science-swe/ml_lifecycle.png){:width="600px"}  
+    ![](/assets/images/data-science-swe/ml_lifecycle.png){:width="600px"}  
     <br>**Figure**: Machine Learning Lifecycle
     {: style="text-align: center;"}
 
@@ -131,7 +131,7 @@ software engineering:
     you'll learn while building an ML Service enables you to do more things!
 
 
-    ![](/assets/png/data-science-swe/new_tools.png){:width="400px"}  
+    ![](/assets/images/data-science-swe/new_tools.png){:width="400px"}  
     <br>**Figure**: Three years ago with my first dip in software eng'g 
     {: style="text-align: center;"}
 
@@ -159,7 +159,7 @@ leading to an ML Service, with resources that once helped me along the way
     Git-hosting server&mdash;Github, Gitlab, etc.&mdash; and enjoy the
     full-suite of the Git experience!
 
-    ![](/assets/png/data-science-swe/1_tools.png){:width="450px"}  
+    ![](/assets/images/data-science-swe/1_tools.png){:width="450px"}  
     <br>**Figure**: Little by little we add new tools to your toolbox 
     {: style="text-align: center;"}
 
@@ -198,7 +198,7 @@ leading to an ML Service, with resources that once helped me along the way
     to migrate our scripts into modules. That means pure Python `.py` files,
     properly directed directories, and well-defined dependencies.
 
-    ![](/assets/png/data-science-swe/2_modularization.png){:width="450px"}  
+    ![](/assets/images/data-science-swe/2_modularization.png){:width="450px"}  
     {: style="text-align: center;"}
 
     Key Activities:
@@ -261,7 +261,7 @@ leading to an ML Service, with resources that once helped me along the way
     for other users (computers or humans), to talk to our machine learning
     app.
 
-    ![](/assets/png/data-science-swe/3_api.png){:width="550px"}  
+    ![](/assets/images/data-science-swe/3_api.png){:width="550px"}  
     {: style="text-align: center;"}
 
     Key Activities:
@@ -314,7 +314,7 @@ leading to an ML Service, with resources that once helped me along the way
     with all its dependencies using [Docker](https://www.docker.com/resources/what-container). 
 
 
-    ![](/assets/png/data-science-swe/4_docker.png){:width="550px"}  
+    ![](/assets/images/data-science-swe/4_docker.png){:width="550px"}  
     {: style="text-align: center;"}
 
     Docker images are built using a [Dockerfile](https://docs.docker.com/engine/reference/builder/#:~:text=A%20Dockerfile%20is%20a%20text,command%2Dline%20instructions%20in%20succession.)&mdash; think of it as a recipe.
@@ -392,7 +392,7 @@ leading to an ML Service, with resources that once helped me along the way
     *server in the Cloud*!
 
 
-    ![](/assets/png/data-science-swe/5_deploy.png){:width="300px"}  
+    ![](/assets/images/data-science-swe/5_deploy.png){:width="300px"}  
     {: style="text-align: center;"}
 
 
@@ -447,7 +447,7 @@ collaborate with software engineers in your team. If you're an academic
 researcher, you can probably see how these software practices can be used to
 improve your research workflow. Congratulations!
 
-![](/assets/png/data-science-swe/conclusion.png){:width="550px"}  
+![](/assets/images/data-science-swe/conclusion.png){:width="550px"}  
 {: style="text-align: center;"}
 
 Obviously, this is not a weekend project. Some of these might take time, and

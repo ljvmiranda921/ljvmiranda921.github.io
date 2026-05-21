@@ -23,7 +23,7 @@ For the past three years, I've been using Disqus to manage discussions in my
 site. However, a few days ago, I've noticed that it **added intrusive ads** in
 my blog posts:
 
-![](/assets/png/utterances/disqus_ads.png){:width="480px"}  
+![](/assets/images/migrating-from-disqus-to-utterances/disqus_ads.png){:width="480px"}  
 **Figure:** These ads are very off-putting. Bad move, Disqus.
 {: style="text-align: center;"}
 
@@ -54,7 +54,7 @@ comments into Utterances:
    Jekyll blog repository; I just opted not to because I use mine for project
    management and ideation purposes.
 
-    ![](/assets/png/utterances/utterances_repo.png){:width="480px"}  
+    ![](/assets/images/migrating-from-disqus-to-utterances/utterances_repo.png){:width="480px"}  
     **Figure:** I created a dedicated repo for my blog comments
     {: style="text-align: center;"}
 
@@ -95,7 +95,7 @@ at this step. For those who are doing the migration, we're not done yet!
    your registered account with the XML format of all comments in your site.
 
 
-    ![](/assets/png/utterances/community_page.png){:width="720px"}  
+    ![](/assets/images/migrating-from-disqus-to-utterances/community_page.png){:width="720px"}  
     {: style="text-align: center;"}
 
 
@@ -167,7 +167,7 @@ as a value for the `GITHUB_PERSONAL_ACCESS_TOKEN` environment variable.
 path is valid, and that Issues are created. At the same time, you can also
 check your dedicated Utterances repo and see your Issue tab filling up!
 
-![](/assets/png/utterances/issues.png){:width="720px"}  
+![](/assets/images/migrating-from-disqus-to-utterances/issues.png){:width="720px"}  
 {: style="text-align: center;"}
 
 Once the process is done, then you've successfully migrated from Disqus to

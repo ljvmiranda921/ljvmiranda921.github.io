@@ -176,7 +176,7 @@ defined above (via the [SpanRuler](https://spacy.io/api/spanruler)), then the
 process looks like this:
 
 <!-- illustration -->
-![](/assets/png/rules-based/setup.png){:width="700px"}
+![](/assets/images/rules-based-rules/setup.png){:width="700px"}
 {: style="text-align: center;"}
 
 

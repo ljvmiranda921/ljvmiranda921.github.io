@@ -38,7 +38,7 @@ its neighbor south-east Asian nations.
 ### Access to electricity over time
 
 
-![Access to electricity over time](/assets/png/eda-energy/output_6_1.png)
+![Access to electricity over time](/assets/images/energy-use-in-the-philippines/output_6_1.png)
 
 
 The chart above shows the population's access to electricity over a period of
@@ -54,7 +54,7 @@ in the previous years.
 
 ### SEA Comparison
 
-![SEA Comparison](/assets/png/eda-energy/output_9_1.png)
+![SEA Comparison](/assets/images/energy-use-in-the-philippines/output_9_1.png)
 
 One can observe that both Philippines and Indonesia started out similarly in
 the 90s, yet because of the steepness of Indonesia's slope in the chart, it
@@ -88,10 +88,10 @@ climate change.
 
 ### Energy Mix in the Philippines
 
-![Energy Mix in the Philippines-1](/assets/png/eda-energy/output_13_1.png)
+![Energy Mix in the Philippines-1](/assets/images/energy-use-in-the-philippines/output_13_1.png)
 
 
-![Energy Mix in the Philippines-2](/assets/png/eda-energy/output_14_1.png)
+![Energy Mix in the Philippines-2](/assets/images/energy-use-in-the-philippines/output_14_1.png)
 
 It is evident that the country is still reliant to fossil fuels as a main
 source of energy. Hydroelectric easily caught up and is a stable source to
@@ -114,7 +114,7 @@ use of fossil fuels and the adoption of renewable energy through time.
 #### Fossil Fuel Use
 
 
-![Fossil Fuel Use](/assets/png/eda-energy/output_18_0.png)
+![Fossil Fuel Use](/assets/images/energy-use-in-the-philippines/output_18_0.png)
 
 
 The use of fossil fuel in the energy mix is shown in the figure above. It is
@@ -128,7 +128,7 @@ Myanmar, where fossil fuel constitutes 20 to 40% of the energy mix.
 
 #### Renewable Energy Adoption
 
-![Renewable Energy Adoption](/assets/png/eda-energy/output_21_1.png)
+![Renewable Energy Adoption](/assets/images/energy-use-in-the-philippines/output_21_1.png)
 
 The figure above shows the renewable energy adoption of different SEA
 countries over time. It is interesting to note that the Philippines is
@@ -145,7 +145,7 @@ greenhouse gases.
 
 ### Electric power consumption over time
 
-![Electric Power Consumption over time](/assets/png/eda-energy/output_25_1.png)
+![Electric Power Consumption over time](/assets/images/energy-use-in-the-philippines/output_25_1.png)
 
 It can be observed from the chart above that the power consumption in the
 country has increased from about 200 kWh to 700 kWh over time. It is expected
@@ -155,7 +155,7 @@ our electricity use.
 
 ### Consumption footprint
 
-![Consumption footprint](/assets/png/eda-energy/output_28_1.png)
+![Consumption footprint](/assets/images/energy-use-in-the-philippines/output_28_1.png)
 
 These unprecedented effects are what we often call as our consumption foot-
 print, for it leaves traces in nature that we may not expect. This section

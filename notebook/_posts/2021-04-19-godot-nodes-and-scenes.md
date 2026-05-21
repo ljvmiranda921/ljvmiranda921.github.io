@@ -6,7 +6,7 @@ date: 2021-04-19
 category: notebook
 comments: true
 author: "LJ MIRANDA"
-header-img: /assets/png/godot-cooking/HeaderImage.png
+header-img: /assets/images/godot-nodes-and-scenes/HeaderImage.png
 tags: [godot, game development, open source, nodes, scenes, tutorial, cooking]
 description: |
     Getting around these concepts was my first barrier in learning Godot. Let
@@ -44,12 +44,12 @@ butter in a pan (non-exhaustive)[^1]:
 
 <!-- stylized image of these ingredients in a square box -->
 <!-- forms a stylized image of pesto sauce above it -->
-![](/assets/png/godot-cooking/Blog_PestoSauc.png){:width="640px"}  
+![](/assets/images/godot-nodes-and-scenes/Blog_PestoSauc.png){:width="640px"}  
 {: style="text-align: center;"}
 
 The same goes for cooked pasta and chicken-cuts:
 
-![](/assets/png/godot-cooking/Blog_ChxPasta.png){:width="640px"}  
+![](/assets/images/godot-nodes-and-scenes/Blog_ChxPasta.png){:width="640px"}  
 {: style="text-align: center;"}
 
 So, the process of making chicken pesto can be thought of as **iteratively
@@ -58,7 +58,7 @@ combining one ingredient over the other**. We start with *primary* ingredients
 chicken-cuts, pasta). Then, we arrange the latter for the final dish:
 
 <!-- the picture of the hierarchy -->
-![](/assets/png/godot-cooking/Mockup.png){:width="640px"}  
+![](/assets/images/godot-nodes-and-scenes/Mockup.png){:width="640px"}  
 {: style="text-align: center;"}
 
 
@@ -112,7 +112,7 @@ The list is by no means exhaustive. By combining the three together, we have pro
 We can then make more of these, assemble them with one another, and build a game!
 
 <!-- the picture of the hierarchy -->
-![](/assets/png/godot-cooking/Blog_GameMake.png){:width="640px"}  
+![](/assets/images/godot-nodes-and-scenes/Blog_GameMake.png){:width="640px"}  
 {: style="text-align: center;"}
 
 This level of expressiveness makes Godot's Node and Scene system powerful. We
@@ -130,7 +130,7 @@ games, one Scene with multiple Nodes may be enough. Larger games may require
 better scene organization.
 
 <!-- hierarchy stir-fried veggies -->
-![](/assets/png/godot-cooking/Blog_VeggieStirFry.png){:width="640px"}  
+![](/assets/images/godot-nodes-and-scenes/Blog_VeggieStirFry.png){:width="640px"}  
 {: style="text-align: center;"}
 
 *If we can also use Nodes for hierarchy, then what is the incentive for using
@@ -147,7 +147,7 @@ for a Grilled Chicken Pesto Sandwich, then I just take them out again and
 combine them with other ingredients (in this case, bread and cheese).
 
 <!-- the picture of the hierarchy: chicken pesto sandwich -->
-![](/assets/png/godot-cooking/Blog_Reusability.png){:width="640px"}  
+![](/assets/images/godot-nodes-and-scenes/Blog_Reusability.png){:width="640px"}  
 {: style="text-align: center;"}
 
 "Storing them in the fridge" and "taking them out again" is a key advantage
@@ -166,7 +166,7 @@ areas of the game. We can implement this by creating a Strawberry template, and
 placing it on different areas of the map.
 
 <!-- a picture of reusability -->
-![](/assets/png/godot-cooking/Blog_GameReuse.png){:width="640px"}  
+![](/assets/images/godot-nodes-and-scenes/Blog_GameReuse.png){:width="640px"}  
 {: style="text-align: center;"}
 
 

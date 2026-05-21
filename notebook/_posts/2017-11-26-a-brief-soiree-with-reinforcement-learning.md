@@ -36,7 +36,7 @@ learning model so that it outputs an action&mdash;i.e., move left or right
 of using only *the Python standard library*, so usual matrix dependencies
 such as `numpy` are forbidden.
 
-![Demo](/assets/png/pfn2017rl/cartpole.gif)  
+![Demo](/assets/images/a-brief-soiree-with-reinforcement-learning/cartpole.gif)  
 __Figure:__ _Cartpole simulation from OpenAI Gym._  
 _We'll be using a simpler one provided by Preferred Networks_
 {: style="text-align: center;"}
@@ -60,7 +60,7 @@ episode consists of resetting the environment and balancing the cartpole
 until it drops or the 500th timestep is reached. For the PFN task, success is
 achieved when the pole is balanced for 95 out of 100 episodes.
 
-![Cartpole Environment](/assets/png/pfn2017rl/env.png){:width="480px"}  
+![Cartpole Environment](/assets/images/a-brief-soiree-with-reinforcement-learning/env.png){:width="480px"}  
 __Figure:__ _The Cartpole Environment._  
 _Given an action, the environment updates its internal state and outputs a new state._  
 _(For now, we're only considering fully-observed systems)_  
@@ -90,7 +90,7 @@ explicitly parametrized. We can then frame the policy in the following
 distribution: $$\pi_{\theta}(\mathbf{a}_{t} | \mathbf{o}_{t})$$. Where
 $$\theta$$ corresponds to the parameters that governs the policy $$\pi$$.
 
-![Linear Model](/assets/png/pfn2017rl/lm.png){:width="480px"}  
+![Linear Model](/assets/images/a-brief-soiree-with-reinforcement-learning/lm.png){:width="480px"}  
 __Figure:__ _The Linear Model._  
 _The linear model generates an action based on the observation._  
 _In this task, the model is explicitly parameterized_  
@@ -122,7 +122,7 @@ effective way to search for a good set of parameters by updating our current
 $$\theta$$ with the mean of the elite parameters generated from a noisy
 version of $$\theta$$: $$\theta_{i} = \theta + \epsilon_{i}$$.
 
-![Cross Entropy Method](/assets/png/pfn2017rl/cem.png){:width="480px"}  
+![Cross Entropy Method](/assets/images/a-brief-soiree-with-reinforcement-learning/cem.png){:width="480px"}  
 __Figure:__ _Cross-entropy Method for updating the parameters._  
 {: style="text-align: center;"}
 
@@ -169,7 +169,7 @@ cross-entropy method.
 
 ## Implementation
 
-![API Implementation](/assets/png/pfn2017rl/api.png){:width="480px"}  
+![API Implementation](/assets/images/a-brief-soiree-with-reinforcement-learning/api.png){:width="480px"}  
 __Figure:__ _Software Implementation of the RL model_  
 {: style="text-align: center;"}
 
@@ -261,7 +261,7 @@ command-line arguments is demonstrated below:
 ./cartpole.out "python3 agent.py -e 5 -s 100"
 ```
 
-![Demo](/assets/png/pfn2017rl/pfn-demo.gif)
+![Demo](/assets/images/a-brief-soiree-with-reinforcement-learning/pfn-demo.gif)
 
 ## Analysis
 
@@ -287,7 +287,7 @@ cross-entropy method has helped hasten convergence. In effect, we can see
 that a small number of samples (e.g. 25), causes multiple dips during
 training.
 
-![Examining the N hyperparameter](/assets/png/pfn2017rl/n_val_demo.png)  
+![Examining the N hyperparameter](/assets/images/a-brief-soiree-with-reinforcement-learning/n_val_demo.png)  
 __Figure:__ _When the number of noisy samples is increased,_  
 _the model converges faster. A low value tends to have several dips during training_  
 {: style="text-align: center;"}
@@ -305,7 +305,7 @@ count of $$N \times p$$, the convergence of the model hastens. Interestingly,
 very high values of $$p$$ tend to hurt model convergence as seen in the
 Figure below:
 
-![Examining the p hyperparameter](/assets/png/pfn2017rl/p_val_demo.png)  
+![Examining the p hyperparameter](/assets/images/a-brief-soiree-with-reinforcement-learning/p_val_demo.png)  
 __Figure:__ _When the number of elite samples is decreased,_  
 _the model converges faster. Interestingly, higher numbers didn't converge well_  
 {: style="text-align: center;"}
@@ -324,7 +324,7 @@ higher timesteps tend to have a relatively slower convergence, with 750 and
 with `500` timesteps, most model variants have a uniform behaviour after
 convergence.
 
-![Adjusting the step size](/assets/png/pfn2017rl/z_val_demo.png)  
+![Adjusting the step size](/assets/images/a-brief-soiree-with-reinforcement-learning/z_val_demo.png)  
 __Figure:__ _Adjusting the model's number of timesteps_  
 {: style="text-align: center;"}
 

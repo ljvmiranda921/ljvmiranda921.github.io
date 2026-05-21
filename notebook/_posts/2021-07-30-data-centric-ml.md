@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [machine learning, andrew ng, data centric, active learning, semi-supervised learning, weak supervision, prodigy, snorkel]
-header-img: /assets/png/data-centric/header.png
+header-img: /assets/images/data-centric-ml/header.png
 description: |
     Data-centric machine learning shifts the focus from fiddling model
     hyperparameters to ensuring quality data across all. This post is a
@@ -89,7 +89,7 @@ domain-expert and (2) their data[set]. It is possible that one exists without th
 other, that's why it's important to **optimize on what you have.** If both exist,
 then we can think of their relationship as *symbiotic*:
 
-![](/assets/png/data-centric/domain_expert_data.png){:width="460px"}
+![](/assets/images/data-centric-ml/domain_expert_data.png){:width="460px"}
 {: style="text-align: center;"}
 
 Domain experts collect data, and in turn, data inform the expert ([Gennatas,
@@ -119,7 +119,7 @@ representing the domain-expertise available for the problem, and the y-axis
 representing the amount of unlabeled data available. I also went ahead and
 plotted techniques that fall under each region:
 
-![](/assets/png/data-centric/data_centric_framework.png){:width="640px"}  
+![](/assets/images/data-centric-ml/data_centric_framework.png){:width="640px"}  
 __Figure:__ Putting data-centric machine learning into context.
 {: style="text-align: center;"}
 
@@ -174,7 +174,7 @@ language processing (NLP) tasks, moreso if the dataset isn't similar to any of
 the benchmark ones.
 
 
-![](/assets/png/data-centric/framework_left.png){:width="640px"}  
+![](/assets/images/data-centric-ml/framework_left.png){:width="640px"}  
 {: style="text-align: center;"}
 
 First, we'll look into three model-based approaches: transfer learning,
@@ -262,7 +262,7 @@ This approach may not always be scalable, especially at the sight of new data.
 However, because the rules are explicit, it is possible to justify and explain
 the system's outcome.
 
-![](/assets/png/data-centric/framework_right.png){:width="640px"}  
+![](/assets/images/data-centric-ml/framework_right.png){:width="640px"}  
 {: style="text-align: center;"}
 
 Here, you'll see **how a domain expert can contribute to crucial parts of the

@@ -100,7 +100,7 @@ __Table 1:__ _Parameters used in DE Implementation_
 Here, I swept over different values of $$m$$ and $$c$$ in order to find good
 values for my final model.
 
-![Cmatrix for DE params](/assets/png/nn/cmatrix2.png){:width="320px"}       
+![Cmatrix for DE params](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/cmatrix2.png){:width="320px"}       
 __Figure 2:__ _Heat Map for testing the mutation and recombination parameters_
 {: style="text-align: center;"}
 

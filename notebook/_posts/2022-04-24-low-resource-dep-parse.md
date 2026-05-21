@@ -9,7 +9,7 @@ author: "LJ MIRANDA"
 published: true
 filipino_nlp: true
 tags: [natural language processing, dependency parsing, nlp, low-resource, machine learning]
-header-img: /assets/png/dep-parsing/header.png
+header-img: /assets/images/low-resource-dep-parse/header.png
 description: |
     Let me tell you about the amazing world of dependency parsing, especially
     for a low-resource language like Tagalog. Unlike English, Tagalog has a
@@ -33,7 +33,7 @@ head is usually the most important word, while the dependents exist just to
 modify it. Take this sentence, *"That girl is my sister,"* for example:
 
 <!-- example sentence: displaCy -->
-![](/assets/png/dep-parsing/dep_example.svg){:width="800px"}
+![](/assets/images/low-resource-dep-parse/dep_example.svg){:width="800px"}
 {:style="text-align: center;"}
 
 - Each arrow represents the dependencies between words and how they're related,
@@ -165,7 +165,7 @@ highly recommend looking at the [developer
 docs](https://github.com/explosion/spaCy/blob/master/extra/DEVELOPER_DOCS/Listeners.md).
 
 <!-- show this image: https://spacy.io/models#design-cnn -->
-![](/assets/png/dep-parsing/spacy_pipeline.svg){:width="800px"}
+![](/assets/images/low-resource-dep-parse/spacy_pipeline.svg){:width="800px"}
 **Figure**: spaCy pipeline design (Source: spaCy website)
 {:style="text-align: center;"}
 
@@ -196,13 +196,13 @@ from spacy import displacy
 displacy.render(doc, style="dep")  # https://localhost:5000
 ```
 
-![](/assets/png/dep-parsing/trg_example_00.svg){:width="800px"}
+![](/assets/images/low-resource-dep-parse/trg_example_00.svg){:width="800px"}
 *(transl.)* Have you eaten?
 {:style="text-align: center;"}
 
 Let's try it out to other sentences outside the training set):
 
-![](/assets/png/dep-parsing/trg_example_01.svg){:width="800px"}
+![](/assets/images/low-resource-dep-parse/trg_example_01.svg){:width="800px"}
 *(transl.)*: You don't have to ask me anymore.
 {:style="text-align: center;"}
 
@@ -210,8 +210,8 @@ It checks out! And note that we're just using a small number of sentences
 (almost a hundred) to train this parser. Of course, we're not in candy land,
 and there are a few sentences where our parser doesn't perform well:
 
-![](/assets/png/dep-parsing/trg_example_02a.svg){:width="800px"}
-![](/assets/png/dep-parsing/trg_example_02b.svg){:width="800px"}
+![](/assets/images/low-resource-dep-parse/trg_example_02a.svg){:width="800px"}
+![](/assets/images/low-resource-dep-parse/trg_example_02b.svg){:width="800px"}
 *(transl.)*: Look into my eyes, can't you see?
 {:style="text-align: center;"}
 

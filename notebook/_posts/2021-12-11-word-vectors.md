@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [nlp, word vectors, spacy, machine learning]
-header-img: /assets/png/word-vectors/header.png
+header-img: /assets/images/word-vectors/header.png
 description: |
     Ever wondered how those numbers in Word2Vec and Fasttext were produced? In
     this blogpost, we'll create our own set of word vectors! 
@@ -23,7 +23,7 @@ computer to understand them. Of course, you can't just arbitrarily assign
 numbers into words!
 
 <!-- fun figure of cats and dogs with numbered indices -->
-![](/assets/png/word-vectors/some_arbitrary_numbers.png){:width="520px"}
+![](/assets/images/word-vectors/some_arbitrary_numbers.png){:width="520px"}
 {:style="text-align: center;"}
 
 We need to satisfy two conditions: first, is that these numbers should have
@@ -31,21 +31,21 @@ some meaning, or **semantics**. Second, is that we should **encode** meaning
 into a numerical representation. If we're in the realm of numbers, a common way
 to show meaning is to see how far one number is from another:
 
-![](/assets/png/word-vectors/dope.png){:width="500px"}
+![](/assets/images/word-vectors/dope.png){:width="500px"}
 {:style="text-align: center;"}
 
 The hope is, words can also be represented as such. In the case of animals, 
 one trait, or **feature**, that we can encode is its *leggedness.* Let's plot
 our animals on a number line depending on the number of their legs:
 
-![](/assets/png/word-vectors/leggedness.png){:width="560px"}
+![](/assets/images/word-vectors/leggedness.png){:width="560px"}
 {:style="text-align: center;"}
 
 That's not yet informative, all the animals were stacked on top of each other.
 Perhaps we can add another feature, how about *tameness*? Let's create another
 axis and place our animals across them:
 
-![](/assets/png/word-vectors/tameness.png){:width="500px"}
+![](/assets/images/word-vectors/tameness.png){:width="500px"}
 {:style="text-align: center;"}
 
 What we just did is that  we came up with features and encoded them into our
@@ -92,7 +92,7 @@ process is as follows:
 
 <!-- insert image of the process -->
 
-![](/assets/png/word-vectors/process.png){:width="720px"}
+![](/assets/images/word-vectors/process.png){:width="720px"}
 {:style="text-align: center;"}
 
 ### <a id="corpus"></a> 0. Preliminary: the text corpus 📚
@@ -265,7 +265,7 @@ as the **center word** and the latter as the **context word**.
 
 <!-- a few image illustration of a sentence and center + context -->
 
-![](/assets/png/word-vectors/context.png){:width="520px"}  
+![](/assets/images/word-vectors/context.png){:width="520px"}  
 __Figure__: Demonstration of center and context words. Note that we skip
 "a" and "is" because they're stopwords. The `clean_text` function should've
 removed them at this point.
@@ -278,7 +278,7 @@ example. We don't know what it means in isolation, but in a sentence, its
 meaning becomes crystal clear:
 
 <!-- a few image illustrate of bat as animal and bat as baseball bat -->
-![](/assets/png/word-vectors/bat.png){:width="720px"}
+![](/assets/images/word-vectors/bat.png){:width="720px"}
 {:style="text-align: center;"}
 
 We can stretch this further: do you know the meaning of the words *frumious*,
@@ -373,7 +373,7 @@ although I prefer sorting them alphabetically. To encode a word, we simply write
 `1` in the column where it is located and write `0` elsewhere:
 
 <!-- illustration of one-hot encoding -->
-![](/assets/png/word-vectors/one_hot.png){:width="720px"}
+![](/assets/images/word-vectors/one_hot.png){:width="720px"}
 {:style="text-align: center;"}
 
 So for our corpus with a vocabulary size of 10, we create a table with ten columns. 
@@ -424,7 +424,7 @@ zeroes and ones as probabilities:
 ```
 
 <!-- add illustration -->
-![](/assets/png/word-vectors/one_hot_probs.png){:width="720px"}  
+![](/assets/images/word-vectors/one_hot_probs.png){:width="720px"}  
 __Figure__: Vectors can also be interpreted as a probability distribution
 over the vocabulary. This means that in one-hot encoding, a value of 1 may also
 mean a highly-probable event.  
@@ -515,7 +515,7 @@ To train a model, we will **use the center words as our input, and the context
 words as our labels**. We will build a neural network of size 10-2-10 with a
 softmax layer in its output:
 
-![](/assets/png/word-vectors/nn.png){:width="720px"}
+![](/assets/images/word-vectors/nn.png){:width="720px"}
 {:style="text-align: center;"}
 
 - **Input layer (size 10)**: we set our input layer to the size of our vocabulary.
@@ -620,7 +620,7 @@ into a more suitable dimension.**
 > dimension.
 
 
-![](/assets/png/word-vectors/lookup_table.png){:width="720px"}
+![](/assets/images/word-vectors/lookup_table.png){:width="720px"}
 __Figure__: Our weight matrix, coupled with the one-hot encoded input, acts as a lookup table.
 {:style="text-align: center;"}
 

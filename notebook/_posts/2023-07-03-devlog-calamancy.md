@@ -9,7 +9,7 @@ author: "LJ MIRANDA"
 published: true
 filipino_nlp: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
-header-img: /assets/png/calamancy-annotation/header.png
+header-img: /assets/images/devlog-calamancy/header.png
 description: |
     A development log on the calamanCy project and the Tagalog NLP pipeline. The tl;dr: we just finished
     re-annotating the dataset. I also want to share my learnings during the annotation process.
@@ -41,7 +41,7 @@ In fact, the final diagram in my [February blog post](https://ljvmiranda921.gith
 We don't just annotate a thousand examples until we're tired and call it a day. 
 Instead, **annotation is iterative**:
 
-![](/assets/png/calamancy-annotation/iterative-process.png){:width="700px"}
+![](/assets/images/devlog-calamancy/iterative-process.png){:width="700px"}
 {: style="text-align: center;"}
 
 Nils Reiter's [blog post](https://sharedtasksinthedh.github.io/2017/10/01/howto-annotation/) has been my annotation bible for the past few months.
@@ -108,7 +108,7 @@ These numbers don't factor in our corrections.
 I'm just computing the metrics per batch as I receive them.
 
 
-![](/assets/png/calamancy-annotation/visualization.svg){:width="600px"}
+![](/assets/images/devlog-calamancy/visualization.svg){:width="600px"}
 {: style="text-align: center;"}
 
 

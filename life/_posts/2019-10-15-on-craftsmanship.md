@@ -65,7 +65,7 @@ I was so entranced watching him: he seemed to retain the same vigor and
 enthusiasm of making soba from years of experience. I was also confused: "How
 can you do one thing all your life and not be bored by it?"
 
-![](/assets/png/life/soba.png){:width="700px"}
+![](/assets/images/my-year-in-commits/soba.png){:width="700px"}
 {: style="text-align: center;"}
 
 > *"How can you do one thing for all your life and not be bored by it?"*
@@ -134,7 +134,7 @@ a job where I have lesser freedom to the projects I'll take. Starting out in
 open-source has been vital in internalizing the idea that software can be
 treated as a craft.
 
-![](/assets/png/life/craftsman.png){:width="700px"}
+![](/assets/images/my-year-in-commits/craftsman.png){:width="700px"}
 {: style="text-align: center;"}
 
 > With software, the dark terminal has become my canvas and the blinking cursor

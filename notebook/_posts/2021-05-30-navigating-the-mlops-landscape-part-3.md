@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-header-img: /assets/png/mlops-shop/header_part_03.png
+header-img: /assets/images/navigating-the-mlops-landscape/header_part_03.png
 tags: [machine learning, ml, mlops, software engineering, ml engineering, mle, data science, data engineering, mlops tools]
 description: |
     In Part Three of "Navigating the MLOps tooling landscape," I'll talk about
@@ -29,7 +29,7 @@ landscape by clustering them into four quadrants, each based on the nature of th
 artifacts and scope in the ML lifecycle. By doing so, we arrived at the
 following graph:
 
-![](/assets/png/mlops-shop/ml-landscape-all.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/ml-landscape-all.png){:width="640px"}  
 {: style="text-align: center;"}
 
 Here, I'll talk about strategies for integrating these tools into our
@@ -53,13 +53,13 @@ startups, and frameworks that I've seen while I answer three key questions:
 * [**What do I recommend?**](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3): I'll list down some
     decision frameworks I recommend based from experience and research.
 
-![](/assets/png/mlops-shop/banner_00.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/banner_00.png){:width="640px"}  
 {: style="text-align: center;"}
 
 
 ## What do I recommend?
 
-![](/assets/png/mlops-shop/banner_03.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/banner_03.png){:width="640px"}  
 {: style="text-align: center;"}
 
 ### Thoughtworks' Technology Radar
@@ -73,7 +73,7 @@ encourage you to read it, especially if you're a senior engineer or an IT lead.
 
 He breaks the radar down into four rings&mdash; Adopt, Trial, Assess, Hold:
 
-![](/assets/png/mlops-shop/tech_radar.png){:width="350px"}  
+![](/assets/images/navigating-the-mlops-landscape/tech_radar.png){:width="350px"}  
 *As you move towards the center, the need for adoption becomes stronger.*
 {: style="text-align: center;"}
 
@@ -109,7 +109,7 @@ framework for the MLOps landscape.
 To cut to the case, here's my opinion on how to best adopt the MLOps landscape:
 
 
-![](/assets/png/mlops-shop/tech_radar_landscape.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/tech_radar_landscape.png){:width="640px"}  
 {: style="text-align: center;"}
 
 <!-- initial observations -->
@@ -292,7 +292,7 @@ time here and learned something new. Feel free to drop a comment below if you
 think that I misrepresented some of the tools above. There's too much, and
 honestly it's really hard to keep up. Until next time!
 
-![](/assets/png/mlops-shop/finale.png){:width="480px"}  
+![](/assets/images/navigating-the-mlops-landscape/finale.png){:width="480px"}  
 {: style="text-align: center;"}
 
 ### Changelog

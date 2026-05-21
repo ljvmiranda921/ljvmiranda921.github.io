@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 tags: [software development, debugging, python, software engineering, life]
-header-img: /assets/png/how-to-debug/Blog-TitleCard.png
+header-img: /assets/images/how-to-debug/Blog-TitleCard.png
 description: |
     It seems that any software engineer is expected to know how to debug.
     However, there's not much material or structured framework on how to
@@ -47,7 +47,7 @@ it to you through Pixel Art[^2]!
 
 ## Code R.E.D.: my mental framework for debugging
 
-![](/assets/png/how-to-debug/Blog-TitleCard.png)
+![](/assets/images/how-to-debug/Blog-TitleCard.png)
 
 
 The color red hints at urgency, just like those movie scenes where enemy aliens
@@ -60,7 +60,7 @@ to practice: it sounds nice, and on theme with my Space Force pixel art!
 
 ### R is for Reproduce
 
-![](/assets/png/how-to-debug/Blog-CodeRED-Reproduce.gif)
+![](/assets/images/how-to-debug/Blog-CodeRED-Reproduce.gif)
 
 One of my first steps in debugging is to reproduce the bug in a controlled
 environment. I do this in order to confirm that the bug exists, and to isolate
@@ -79,7 +79,7 @@ I reproduce bugs by ensuring that I accomplish the following in my project:
 
 ### E is for Execute
 
-![](/assets/png/how-to-debug/Blog-CodeRED-Execute.gif)
+![](/assets/images/how-to-debug/Blog-CodeRED-Execute.gif)
 
 When I was still starting out, I immediately jump into this step and brute
 force my way into the debugging process. As I squashed more bugs in my career,
@@ -104,7 +104,7 @@ the test suite:
 ### D is for Document
 
 
-![](/assets/png/how-to-debug/Blog-CodeRED-Document.gif)
+![](/assets/images/how-to-debug/Blog-CodeRED-Document.gif)
 
 Documentation is one of the most important and forgotten parts of
 debugging&mdash;I know because I'm guilty! There are plenty of  benefits in
@@ -144,7 +144,7 @@ attempts in pixel art, follow me on my Twitter art account,
 
 P.S. Here's the full Pixel Art GIF!
 
-![](/assets/png/how-to-debug/Masterfile.gif)
+![](/assets/images/how-to-debug/Masterfile.gif)
 
 
 

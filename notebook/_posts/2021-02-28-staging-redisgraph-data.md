@@ -34,7 +34,7 @@ However, I realized that there's a better way to solve this:
 > the sink (*staging*). We only ingest on *staging*. Once successful, we simply
 > copy the contents of *staging* to *main*.
 
-![](/assets/png/redisgraph/redisgraph.gif)
+![](/assets/images/staging-redisgraph-data/redisgraph.gif)
 
 Yup, the oldest trick in the book. It solved my headaches because:
 

@@ -6,7 +6,7 @@ date: 2021-09-21
 category: life
 comments: true
 author: "LJ MIRANDA"
-header-img: /assets/png/flourishing/header.png
+header-img: /assets/images/build-earn-play/header.png
 summary: "A perfect time to revisit my values on career, happiness, and growth"
 excerpt: |
     A perfect time to revisit my values on career, happiness, and growth.
@@ -32,7 +32,7 @@ actions, habits, and decisions. It reminds me of this graph from my control
 systems days:
 
 <!-- graph from controls systems days -->
-![](/assets/png/flourishing/steady_state.png){:width="420px"}  
+![](/assets/images/build-earn-play/steady_state.png){:width="420px"}  
 {: style="text-align: center;"}
 
 When a change is introduced in a system, its response oscillates for some
@@ -48,7 +48,7 @@ arrived at the following:
 > building?," "am I playing?," and "am I earning?"
 
 <!-- venn diagram -->
-![](/assets/png/flourishing/venn_diagram.png){:width="420px"}  
+![](/assets/images/build-earn-play/venn_diagram.png){:width="420px"}  
 *Building, playing, and earning.* 
 {: style="text-align: center;"}
 
@@ -76,7 +76,7 @@ come to see the world through its lens. Building something tangible sometimes
 speaks to our primal desire to outlive ourselves.
 
 
-![](/assets/png/flourishing/build.png){:width="640px"}  
+![](/assets/images/build-earn-play/build.png){:width="640px"}  
 {: style="text-align: center;"}
 
 Right now, software is my medium. It has the capacity to make significant and
@@ -104,7 +104,7 @@ far.
 Philippines during the height of the COVID pandemic sucks,[^2] and I got lucky to
 have the financial cushion brought by my previous software development job.
 
-![](/assets/png/flourishing/earn.png){:width="620px"}  
+![](/assets/images/build-earn-play/earn.png){:width="620px"}  
 {: style="text-align: center;"}
 
 I'd like to think that I have a healthy relationship with money. I try not to
@@ -140,7 +140,7 @@ the process for granted. Although I like achievements, too much fixation on
 output without the space for creativity and variety will inevitably tire me
 out.
 
-![](/assets/png/flourishing/play.png){:width="640px"}  
+![](/assets/images/build-earn-play/play.png){:width="640px"}  
 {: style="text-align: center;"}
 
 
@@ -182,7 +182,7 @@ example of "what if your hobby becomes your job?" However, there's often a risk
 of falling out of love from your hobbies because your livelihood is attached to
 your creative output.
 
-![](/assets/png/flourishing/build_earn.png){:width="620px"}  
+![](/assets/images/build-earn-play/build_earn.png){:width="620px"}  
 {: style="text-align: center;"}
 
 Oftentimes, a day job is like this: I get to *build* and *earn*. I'm definitely
@@ -206,7 +206,7 @@ open-source, then there's *playing* in the form of freedom and the variety of
 topics you can work on.[^8]
 
 
-![](/assets/png/flourishing/build_play.png){:width="640px"}  
+![](/assets/images/build-earn-play/build_play.png){:width="640px"}  
 {: style="text-align: center;"}
 
 I'm a bit biased because my best experiences came from these moments. Perhaps
@@ -235,7 +235,7 @@ energy.
 I always imagine this as working on things that are lucrative, yet doesn't involve creation. 
 Moreover, the prospecting and betting aspects of *play* become more apparent.
 
-![](/assets/png/flourishing/earn_play.png){:width="620px"}  
+![](/assets/images/build-earn-play/earn_play.png){:width="620px"}  
 {: style="text-align: center;"}
 
 In my opinion, investing on crypto falls under this category: you don't
@@ -320,7 +320,7 @@ build-earn-play score. You're free to set the scale and the thresholds where
 things may be considered critical. Sometimes, our life-stage forces us to
 prioritize one pillar over the other. 
 
-![](/assets/png/flourishing/napkin_math.png){:width="640px"}  
+![](/assets/images/build-earn-play/napkin_math.png){:width="640px"}  
 {: style="text-align: center;"}
 
 In the end, it's up to you if the values you've arrived at is enough for you to

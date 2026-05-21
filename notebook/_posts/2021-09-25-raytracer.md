@@ -32,16 +32,16 @@ normals, Snell's law, etc.).  The code was written in C++, but I opted to write
 it in [Typescript](https://www.typescriptlang.org/) as a learning practice. The
 best part is that you get a nice output in the end:
 
-![](/assets/png/raytracer/highres_showcase.png)
+![](/assets/images/raytracer/highres_showcase.png)
 
 
 The teaching style was bottom-up. We started by writing the basic building blocks,
 then slowly inched our way up to new features and materials. For example,
 here I rendered some colors to form a sphere:
 
-![](/assets/png/raytracer/ch01_hello_world.ppm.png){:height="140px"}
-![](/assets/png/raytracer/ch04_white_blue_gradient.ppm.png){:width="250px"}
-![](/assets/png/raytracer/ch05_red_sphere.ppm.png){:width="250px"}
+![](/assets/images/raytracer/ch01_hello_world.ppm.png){:height="140px"}
+![](/assets/images/raytracer/ch04_white_blue_gradient.ppm.png){:width="250px"}
+![](/assets/images/raytracer/ch05_red_sphere.ppm.png){:width="250px"}
 {: style="text-align: center;"}
 
 Then little by little, we added simple ray computations and surface normals. The
@@ -49,9 +49,9 @@ idea was to create an imaginary ray, and simulate it by hitting a particular
 object.  Depending on the object's material, a ray computation was done. You do
 it for as many times until you fill the whole image.
 
-![](/assets/png/raytracer/ch06_front_back_forces.ppm.png){:width="225px"}
-![](/assets/png/raytracer/ch06_surface_normal.ppm.png){:width="225px"}
-![](/assets/png/raytracer/ch07_antialiasing.ppm.png){:width="225px"}
+![](/assets/images/raytracer/ch06_front_back_forces.ppm.png){:width="225px"}
+![](/assets/images/raytracer/ch06_surface_normal.ppm.png){:width="225px"}
+![](/assets/images/raytracer/ch07_antialiasing.ppm.png){:width="225px"}
 {: style="text-align: center;"}
 
 We then took some time to generalize that ray-sphere interaction, and use that
@@ -59,12 +59,12 @@ as a blueprint for different materials. As it turns out, each material has its
 own ray computation, governed by how easy it is for light to reflect and refract
 on its surface&mdash; cool stuff.
 
-![](/assets/png/raytracer/ch08_matte_with_correction.ppm.png){:width="225px"}
-![](/assets/png/raytracer/ch09_metal_fuzz.ppm.png){:width="225px"}
-![](/assets/png/raytracer/ch09_metal_material.ppm.png){:width="225px"}
-![](/assets/png/raytracer/ch10_a_hollow_glass_sphere.ppm.png){:width="225px"}
-![](/assets/png/raytracer/ch10_glass_always_refracts.ppm.png){:width="225px"}
-![](/assets/png/raytracer/ch10_glass_sometimes_refracts.ppm.png){:width="225px"}
+![](/assets/images/raytracer/ch08_matte_with_correction.ppm.png){:width="225px"}
+![](/assets/images/raytracer/ch09_metal_fuzz.ppm.png){:width="225px"}
+![](/assets/images/raytracer/ch09_metal_material.ppm.png){:width="225px"}
+![](/assets/images/raytracer/ch10_a_hollow_glass_sphere.ppm.png){:width="225px"}
+![](/assets/images/raytracer/ch10_glass_always_refracts.ppm.png){:width="225px"}
+![](/assets/images/raytracer/ch10_glass_sometimes_refracts.ppm.png){:width="225px"}
 {: style="text-align: center;"}
 
 And that's it! It was a fun experience: I like the idea of learning something

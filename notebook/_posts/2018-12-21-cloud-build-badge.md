@@ -27,7 +27,7 @@ nice to create one for Cloud Build? In this post, I'll be talking about how to
 add badges to your Google Cloud Builds. The full architecture would look like
 this:
 
-![Full Architecture](/assets/png/tuts/build-badge-out.png)
+![Full Architecture](/assets/images/cloud-build-badge/build-badge-out.png)
 
 Then, we'll follow the steps below:
 1. [Create SVG files for your badges then store to Cloud Storage](#step-1-create-svg-files-for-badge-templates) 

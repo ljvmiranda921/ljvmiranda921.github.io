@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-header-img: /assets/png/talk-unc-charlotte/header.png
+header-img: /assets/images/talk-unc-charlotte/header.png
 tags: [argument mining, fake news, llm, evaluation, annotation, prodigy, ai, large language models]
 description: |
     A few weeks ago, I held a guest lecture at University of North Carolina
@@ -49,10 +49,10 @@ A common approach is to treat it as an NLP pipeline composed of different tasks 
 Today, we will only focus on **claim detection**, the first step in an automated fact-checking pipeline.
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide05.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide06.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide07.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide08.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide05.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide06.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide07.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide08.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
 </div>
 
 Detecting claims is usually a dual problem: you'd also want to find the premises that support it.
@@ -61,8 +61,8 @@ Applying NLP to this domain is often called **argument mining.**
 For this talk, I want to introduce two argument mining sub-tasks: (1) first, we want to highlight the claim and premise given a text (*claim & premise extraction*), and then, (2) we want to determine if a text supports, opposes, or is neutral to a certain topic (*stance detection*).
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide11.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide13.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide11.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide13.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
 </div>
 
 So, our general approach is to reframe these two sub-tasks as NLP tasks.
@@ -76,7 +76,7 @@ And it is an important muscle to train.
 In computer science, we often learn about the *divide and conquer* algorithm, and this is a good application of that approach to a more fuzzy and, admittedly, complex problem.
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide15.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
+  <img src="/assets/images/talk-unc-charlotte/slide15.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
 </div>
 
 As we already know, training NLP models such as a span or text categorizer requires a lot of data. 
@@ -91,8 +91,8 @@ LLMs, as advanced as they are, still fall in between.
 They're not fully manual but also not fully automated because writing a prompt still requires tuning and domain expertise.
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/traditional.png" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide18.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/traditional.png" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide18.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
 </div>
 
 But why are we still interested in LLMs? 
@@ -100,7 +100,7 @@ It's because LLMs provide something that most semi-automated methods can't: a mo
 Let me put this in a Venn diagram&mdash; and for each space in this diagram, I'll talk about how LLMs can specifically help in our annotation workflows.
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide21.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
+  <img src="/assets/images/talk-unc-charlotte/slide21.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
 </div>
 
 ### Bootstrapping in a human-in-the-loop workflow
@@ -111,8 +111,8 @@ LLMs differ because they were pretrained on web-scale data, giving it enough cap
 So, how good is an LLM annotator?
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide24.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide25.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide24.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide25.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
 </div>
 
 To test this question, I worked on a portion of the UKP Sentential Argument Mining corpus ([Stab et al., 2018](https://aclanthology.org/D18-1402/)). 
@@ -124,8 +124,8 @@ In addition, I also found myself annotating faster (and more correctly) when cor
 The latter finding is important because correcting annotations induces less cognitive load and human effort ([Li et al., 2023](https://aclanthology.org/2023.emnlp-main.92/), [Zhang et al., 2023](https://arxiv.org/abs/2311.04345)).
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide27.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide28.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide27.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide28.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
 </div>
 
 So, if LLMs can already provide competitive annotations, is our problem solved?
@@ -142,7 +142,7 @@ Back then, you'd need to train separate supervised models to achieve multi-task 
 I want to use an LLM's flexibility to enhance the annotation experience.
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide30.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
+  <img src="/assets/images/talk-unc-charlotte/slide30.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
 </div>
 
 This time, I want to introduce two workflows. 
@@ -152,8 +152,8 @@ I'll let it identify the claims and premises, then pre-annotate an answer, and t
 This exercise aims to explore creative ways we can harness LLMs.
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide31.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide34.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide31.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide34.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
 </div>
 
 The process is similar to the first section, but I prompt for auxiliary information instead of prompting for the direct labels.
@@ -164,10 +164,10 @@ On the other hand, the prompt on the right is a chain-of-thought prompt ([Wei et
 Here, we induce an LLM to perform a series of reasoning tasks to arrive at a final answer.
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide32.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide35.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide33.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide37.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide32.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide35.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide33.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide37.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
 </div>
 
 The good thing about [Prodigy](https://prodigy.ai) is that you can easily incorporate this extra information in your annotation UI.
@@ -186,7 +186,7 @@ These guidelines aim to reduce uncertainty about the phenomenon we are annotatin
 We can even think of these as prompts for humans!
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide39.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
+  <img src="/assets/images/talk-unc-charlotte/slide39.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
 </div>
 
 This time, I want to focus on a simple task: determine whether a statement is an argument. 
@@ -194,7 +194,7 @@ It sounds easy because it's "just" a binary classification task.
 However, after looking through various argument mining papers and their annotation guidelines, I realized that they each have their definition of what makes an argument!
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide40.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
+  <img src="/assets/images/talk-unc-charlotte/slide40.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
 </div>
 
 So, this got me thinking: what if we include the annotation guideline in the prompt?
@@ -204,8 +204,8 @@ Langchain calls this a ["refine chain"](https://js.langchain.com/docs/modules/ch
 As an aside, I've opted into using [minichain](https://github.com/srush/MiniChain) in my recent projects as it is more lightweight and enough for my needs.
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide41.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
-  <img src="/assets/png/talk-unc-charlotte/slide42.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide41.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
+  <img src="/assets/images/talk-unc-charlotte/slide42.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
 </div>
 
 Including an annotation guideline in the prompt resulted in worse results&mdash;surprising. 
@@ -216,7 +216,7 @@ Maybe the refine strategy is not the best, or maybe I should've processed the te
 An LLM's prompt sensitivity is still an open problem.
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide44.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
+  <img src="/assets/images/talk-unc-charlotte/slide44.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
 </div>
 
 But I learned one thing: we can use LLMs as a "first pass" when iterating over our annotation guidelines.
@@ -235,7 +235,7 @@ On the other hand, **descriptive** annotation aims to capture the whole diversit
 You'd usually find this in subjective tasks like hate speech detection or human preference collection.
 
 <div style="text-align: center;">
-  <img src="/assets/png/talk-unc-charlotte/slide48.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
+  <img src="/assets/images/talk-unc-charlotte/slide48.jpg" style="border: 1px solid black; padding: 10px; width: 700px">
 </div>
 
 LLMs are pretty good at prescriptive annotation tasks.

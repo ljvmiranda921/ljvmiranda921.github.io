@@ -8,7 +8,7 @@ comments: true
 highlight: true
 author: "LJ MIRANDA"
 published: true
-header-img: /assets/png/dpt/header.png
+header-img: /assets/images/document-processing-framework/header.png
 tags: [spacy, machine learning, prodigy, huggingface, rpa, document processing, transformers]
 description: |
     Document processing may not be the hottest problem of the century, but it
@@ -83,7 +83,7 @@ question, answer, and other relevant information.
 > understanding.
 
 <!-- FUNSD sample -->
-![](/assets/png/dpt/funsd.png){:width="600px", style="padding:10px"}  
+![](/assets/images/document-processing-framework/funsd.png){:width="600px", style="padding:10px"}  
 __Figure__: An example of the FUNSD dataset by Guillaume et al.
 {:style="text-align: center;"}
 
@@ -93,7 +93,7 @@ document processing workflow:
 
 
 <!-- solution diagram using framework words -->
-![](/assets/png/dpt/dp_design_principles.png){:width="600px", style="padding:10px"}  
+![](/assets/images/document-processing-framework/dp_design_principles.png){:width="600px", style="padding:10px"}  
 __Figure__: Document processing solution design principles
 {:style="text-align: center;"}
 
@@ -106,7 +106,7 @@ principles above into Prodigy recipes, I can come up with the following figure:
 
 
 <!-- solution diagram using Prodigy recipes -->
-![](/assets/png/dpt/dp_design_prodigy.png){:width="600px", style="padding:10px"}  
+![](/assets/images/document-processing-framework/dp_design_prodigy.png){:width="600px", style="padding:10px"}  
 __Figure__: Document processing solution design principles as Prodigy recipes
 {:style="text-align: center;"}
 
@@ -130,7 +130,7 @@ recipe. Given a directory of images, we can draw bounding boxes or freeform
 polygons to label specific regions. For FUNSD, it looks like this:
 
 <!-- insert FUNSD sample in Prodigy -->
-![](/assets/png/dpt/prodigy_funsd.png){:width="500px" style="padding:10px"}  
+![](/assets/images/document-processing-framework/prodigy_funsd.png){:width="500px" style="padding:10px"}  
 __Figure:__ The `image.manual` annotation interface in Prodigy.
 {:style="text-align: center;"}
 
@@ -169,7 +169,7 @@ information. For a given document, it embeds not only the word and image
 themselves, but also their positions. Then, it learns the interactions across
 them using multiple pre-training objectives. 
 
-![](/assets/png/dpt/layoutlmv3.png){:width="700px" style="padding:10px"}  
+![](/assets/images/document-processing-framework/layoutlmv3.png){:width="700px" style="padding:10px"}  
 __Figure:__ The LayoutLMv3 model learns from both textual and visual information and learns the interactions between them 
 {:style="text-align: center;"}
 
@@ -206,7 +206,7 @@ entity recognition allows us to create gold-standard data by correcting a
 model's suggestions.  We will be implementing a similar recipe for images,
 namely, with the `image.correct` recipe.
 
-![](/assets/png/dpt/prodigy_correct.gif){:width="500px" style="padding:10px"}  
+![](/assets/images/document-processing-framework/prodigy_correct.gif){:width="500px" style="padding:10px"}  
 __Figure:__ Using the `image.correct` custom recipe, we can correct the model annotations before saving it to the database
 {:style="text-align: center;"}
 
@@ -218,11 +218,11 @@ inference on a finite set of data, convert it to [Prodigy's data
 format](https://prodi.gy/docs/api-interfaces#image_manual), and use the built-in
 `image.manual` recipe for correction. 
 
-![](/assets/png/dpt/image_correct_stream.png){:width="700px" style="padding:10px"}  
+![](/assets/images/document-processing-framework/image_correct_stream.png){:width="700px" style="padding:10px"}  
 __Figure:__ Streaming approach for correction. Model performs inference for every single image in the stream
 {:style="text-align: center;"}
 
-![](/assets/png/dpt/image_correct_batch.png){:width="700px" style="padding:10px"}  
+![](/assets/images/document-processing-framework/image_correct_batch.png){:width="700px" style="padding:10px"}  
 __Figure:__ Batch approach for correction. Model performs batch inference, then we convert the annotations into
 the Prodigy format then pass it on to the `image.manual` recipe.
 {:style="text-align: center;"}

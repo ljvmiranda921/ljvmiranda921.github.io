@@ -16,26 +16,26 @@ to another. Here, I used the neural style transfer technique to learn the
 artistic style of various Filipino paintings. Painters range from Amorsolo to
 Manansala, and other modern artists such as Zobel. Enjoy!
 
-![Communities](/assets/png/neural-style/communities.png){:width="560px"}   
+![Communities](/assets/images/experiments-with-neural-style-transfer/communities.png){:width="560px"}   
 __Figure 1:__ _Vicente Manansala's style in Communities was applied in a photo of the Manila Skyline._
 {: style="text-align: center;"}
 
-![Fruit Gatherer](/assets/png/neural-style/fruit-gatherer.png){:width="560px"}   
+![Fruit Gatherer](/assets/images/experiments-with-neural-style-transfer/fruit-gatherer.png){:width="560px"}   
 __Figure 2:__ _Probably one of my favorites. Manansala's brush strokes applied to the facade of his alma mater._
 {: style="text-align: center;"}
 
-![Rivers](/assets/png/neural-style/rivers.png){:width="560px"}   
+![Rivers](/assets/images/experiments-with-neural-style-transfer/rivers.png){:width="560px"}   
 __Figure 3:__ _Fernando Zobel's work as implemented into one of the buildings in Ateneo._
 {: style="text-align: center;"}
 
-![Sarimanok](/assets/png/neural-style/sarimanok.png){:width="560px"}   
+![Sarimanok](/assets/images/experiments-with-neural-style-transfer/sarimanok.png){:width="560px"}   
 __Figure 4:__ _The work Sarimanok, aptly transfered to a pair of fighting cocks._
 {: style="text-align: center;"}
 
 Here is also Ateneo's Church of the Gesu, rendered in Van Gogh's Starry
 Night. What beauty!
 
-![Starry Night](/assets/png/neural-style/starry-night.png){:width="560px"}   
+![Starry Night](/assets/images/experiments-with-neural-style-transfer/starry-night.png){:width="560px"}   
 __Figure 5:__ _Van Gogh's starry night in Church of the Gesu._
 {: style="text-align: center;"}
 

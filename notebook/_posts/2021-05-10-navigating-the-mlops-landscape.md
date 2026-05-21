@@ -8,7 +8,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-header-img: /assets/png/mlops-shop/header_part_01.png
+header-img: /assets/images/navigating-the-mlops-landscape/header_part_01.png
 tags: [machine learning, ml, mlops, software engineering, ml engineering, mle, data science, data engineering, mlops tools]
 description: |
     It's hard to keep up with the MLOps landscape! In this three-part series,
@@ -34,7 +34,7 @@ better way to productionize ML. The major cloud platforms are taking a stab on
 it too. Now, I face the opposite problem: **there are too many options, and it's
 difficult to choose!**
 
-![](/assets/png/mlops-shop/mlops-landscape.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/mlops-landscape.png){:width="640px"}  
 **Figure**: It's hard to shop when you're presented with too many options
 (source: [MLReef](https://about.mlreef.com/blog/global-mlops-and-ml-tools-landscape))
 {: style="text-align: center;"}
@@ -59,7 +59,7 @@ startups, and frameworks that I've seen while I answer three key questions:
     decision frameworks I recommend based from experience and research. *(Will be published on May 30)*
 
 
-![](/assets/png/mlops-shop/banner_00.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/banner_00.png){:width="640px"}  
 {: style="text-align: center;"}
 
 Note that I won't be reviewing each and every tool in existence! Instead, I'll
@@ -85,7 +85,7 @@ categorized with brief descriptions and price points. If you don't know
 what you want, the menu is going to be overwhelming&mdash;simply an effect of the
 [paradox of choice](https://en.wikipedia.org/wiki/The_Paradox_of_Choice).
 
-![](/assets/png/mlops-shop/paradox_of_choice.jpg){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/paradox_of_choice.jpg){:width="640px"}  
 Paradox of choice: look at this menu, and look at the MLOps landscape above
 {: style="text-align: center;"}
 
@@ -112,7 +112,7 @@ Hopefully, this series can be that waiter for the MLOps ecosystem.
 
 ## Who or what will benefit?
 
-![](/assets/png/mlops-shop/banner_01.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/banner_01.png){:width="640px"}  
 {: style="text-align: center;"}
 
 To set the stage, I want to discuss the use-cases MLOps can solve and the roles
@@ -162,7 +162,7 @@ Each person may have a different way of defining and describing its processes,
 but I always imagine it as **two cycles looping together**:
 
 <!-- two cycles coming together -->
-![](/assets/png/mlops-shop/ml-lifecycle.png){:width="680px"}  
+![](/assets/images/navigating-the-mlops-landscape/ml-lifecycle.png){:width="680px"}  
 {: style="text-align: center;"}
 
 > I always imagine the machine learning process as two cycles looping together

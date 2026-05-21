@@ -10,14 +10,14 @@ description: |
     In the final chapter of this series, I'll close off with a short synthesis,
     a reflection, and a postscript on how Celeste has changed my view on gaming
     in general.
-header-img: /assets/png/celeste/strawberry.jpg
+header-img: /assets/images/celeste/strawberry.jpg
 excerpt: |
     In the final chapter of this series, I'll close off with a short synthesis,
     a reflection, and a postscript on how Celeste has changed my view on gaming
     in general.
 ---
 
-![](/assets/png/celeste/strawberry.jpg){:width="560px"}  
+![](/assets/images/celeste/strawberry.jpg){:width="560px"}  
 {: style="text-align: center;"}
 
 
@@ -55,7 +55,7 @@ careers, or something as simple as a difficult platformer. Celeste was able to
 strip down a rage-inducing game genre and package it into something
 encouraging: *"whatever mountain you're climbing, you can do this."*
 
-![](/assets/png/celeste/you_can_do_this.jpg){:width="560px"}  
+![](/assets/images/celeste/you_can_do_this.jpg){:width="560px"}  
 {: style="text-align: center;"}
 
 > Whatever mountain you're climbing, you can do this
@@ -74,7 +74,7 @@ failing, and trying again. Its ending is fundamentally hopeful&mdash; we see
 Madeline and Badeline working it out together, and we finally see her on the
 Summit, getting some peace of mind.
 
-![](/assets/png/celeste/summit.jpg){:width="560px"}
+![](/assets/images/celeste/summit.jpg){:width="560px"}
 {: style="text-align: center;"}
 
 > Celeste is brilliant because it was able to tell a relevant, powerful, and kind
