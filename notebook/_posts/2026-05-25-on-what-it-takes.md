@@ -48,13 +48,13 @@ Just think of this blog post as an extended version of those closing slides. -->
 ## Diskarte - how can we build with low compute and limited data resources?
 
 After World War 2, several US Army Willys MB Trucks were left in the Philippines as American troops left the country.
-There was a shortage of public transportation due to the destruction of infrastructure, and so, we began stripping down these trucks and altered them to add metal roofs, 
+There was a shortage of public transportation due to the destruction of infrastructure, and so, we began stripping down these trucks and altering them to add metal roofs, 
 and various paintings and ornaments.
 This later on became the jeepney or jeep, which is now our cultural icon and the current mode of transportation today.
-I really like the imagery of the jeepney to symbolize diskarte because my dad used to own and drive one (my wife also help wrote the standard for the modern jeepney!), and I learned how to read by reading handpainted jeepney signs. 
+I really like the imagery of the jeepney to symbolize diskarte because my dad used to own and drive one (my wife also helped write the standard for the modern jeepney!), and I learned how to read by reading handpainted jeepney signs. 
 
-Diskarte is difficult to translate in English, because it can mean many things: resourcefulness, ingenuity, creative thinking, etc. 
-There is this nice paper that talked about this at length, and I encourage anyone to read it! 
+Diskarte is difficult to translate into English because it can mean many things: resourcefulness, ingenuity, creative thinking, etc. 
+There is this nice paper that talks about this at length, and I encourage anyone to read it! 
 Personally, I see diskarte as the ability to achieve a goal under extreme constraints.
 
 
