@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 filipino_nlp: true
-header-img: /assets/png/filipino-llm/header.png
+header-img: /assets/images/filipino-llm/header.png
 tags: [tagalog, filipino, nlp, llm]
 description: |
     I was invited to give a talk at Analytics & AI Association of the Philippines (AAP) on FilBench, and in general, building Filipino LLMs. This blog post covers some of my thoughts on this topic.
@@ -41,7 +41,7 @@ Let me explain them in the following sections.
 Just think of this blog post as an extended version of those closing slides. -->
 
 <div style="text-align: center;">
-  <img src="/assets/png/on-what-it-takes/summary.png" style="border: 1px solid black; padding: 10px; width: 700px">
+  <img src="/assets/images/on-what-it-takes/summary.png" style="border: 1px solid black; padding: 10px; width: 700px">
 </div>
 
 
@@ -59,7 +59,7 @@ There is this nice [paper](https://www.pap.ph/assets/files/journals/defining-dis
 Personally, I see diskarte as the ability to achieve a goal under extreme constraints.
 
 <div style="text-align: center;">
-  <img src="/assets/png/on-what-it-takes/diskarte.png" style="border: 1px solid black; padding: 10px; width: 700px">
+  <img src="/assets/images/on-what-it-takes/diskarte.png" style="border: 1px solid black; padding: 10px; width: 700px">
 </div>
 
 [^2]: I really like the imagery of the jeepney to symbolize diskarte because my dad used to own and drive one, and I learned how to read by reading handpainted jeepney signs. 
