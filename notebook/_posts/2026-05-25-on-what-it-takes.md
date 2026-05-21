@@ -40,6 +40,9 @@ Let me explain them in the following sections.
 <!-- The slides below are taken from the closing remarks of my talk (about 75% of the talk is on FilBench), but the text doesn't map to them one-to-one.
 Just think of this blog post as an extended version of those closing slides. -->
 
+<div style="text-align: center;">
+  <img src="/assets/png/on-what-it-takes/summary.png" style="border: 1px solid black; padding: 10px; width: 700px">
+</div>
 
 
 [^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my [blog post](/projects/2025/08/21/filbench/), check the [leaderboard](https://huggingface.co/spaces/filbench/filbench-leaderboard), or read the [paper](https://aclanthology.org/2025.emnlp-main.127/)!
@@ -67,6 +70,7 @@ I argue that a good way to proceed is similar to how we approached the jeepney: 
 Simply importing Silicon Valley approaches is not enough.
 I wrote about this at length in a recent survey paper, but one approach I'm exploring is careful synthetic data generation to fill the lack of training data.
 Synthetic data is now a common approach in training frontier language models, but I believe we can strip this down, add some ornaments and adjustments, in order for it to work on low-resource languages.
+I encourage you to read the survey paper, as I mention potential paths for improvement such as creating task-specific small language models, deploying models at the edge, and improving a model's capability through a robust set of harnesses. 
 
 
 
