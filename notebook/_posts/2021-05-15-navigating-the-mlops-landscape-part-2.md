@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-header-img: /assets/png/mlops-shop/header_part_02.png
+header-img: /assets/images/navigating-the-mlops-landscape/header_part_02.png
 tags: [machine learning, ml, mlops, software engineering, ml engineering, mle, data science, data engineering, mlops tools]
 description: |
     In Part Two of "Navigating the MLOps tooling landscape," I'll deep-dive into the
@@ -32,7 +32,7 @@ Upon closer inspection, their interaction can be modeled similarly to the machin
 learning lifecycle, which consists of two loops interlocked together:
 
 <!-- two cycles coming together -->
-![](/assets/png/mlops-shop/ml-lifecycle.png){:width="680px"}  
+![](/assets/images/navigating-the-mlops-landscape/ml-lifecycle.png){:width="680px"}  
 {: style="text-align: center;"}
 
 **The ML lifecycle will serve as our lens in navigating the MLOps landscape.** As
@@ -63,13 +63,13 @@ startups, and frameworks that I've seen while I answer three key questions:
 * [**What do I recommend?**](/notebook/2021/05/30/navigating-the-mlops-landscape-part-3): I'll list down some
     decision frameworks I recommend based from experience and research.
 
-![](/assets/png/mlops-shop/banner_00.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/banner_00.png){:width="640px"}  
 {: style="text-align: center;"}
 
 
 ## What do you want?
 
-![](/assets/png/mlops-shop/banner_02.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/banner_02.png){:width="640px"}  
 {: style="text-align: center;"}
 
 In this section, we will survey the landscape of MLOps tools, and see how we
@@ -86,13 +86,13 @@ landmarks. Based on the ML lifecycle, we can determine if a tool is:
 
 Together, we can combine them into a graph like this:
 
-![](/assets/png/mlops-shop/ml-landscape-setup.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/ml-landscape-setup.png){:width="640px"}  
 {: style="text-align: center;"}
 
 Notice that we "decomposed" the ML lifecycle into two axes. I'll go ahead and
 name each quadrant based on which axis it falls into:
 
-![](/assets/png/mlops-shop/ml-landscape-quads.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/ml-landscape-quads.png){:width="640px"}  
 {: style="text-align: center;"}
 
 I describe the top quadrants as **platforms**[^1]. They usually provide an
@@ -121,7 +121,7 @@ in my day-job, or something that just piqued my interest from the news.
 The first quadrant involves tools that serve the whole ML lifecycle, especially
 in the creation of data products such as web apps, dashboards, and more. 
 
-![](/assets/png/mlops-shop/ml-landscape-cloud-platforms.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/ml-landscape-cloud-platforms.png){:width="640px"}  
 {: style="text-align: center;"}
 
 As we go *left*, the tools generalize to any kind of software artifact, and as
@@ -151,7 +151,7 @@ to three, I tend to consider them as all-in-one platforms.
 As you move *right*, the artifacts produced tend to specialize on ML models,
 and as you move *up*, the number of supported ML processes increases.
 
-![](/assets/png/mlops-shop/ml-landscape-ml-platforms.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/ml-landscape-ml-platforms.png){:width="640px"}  
 {: style="text-align: center;"}
 
 One common pattern is that these tools tend to think of the ML lifecycle as
@@ -194,7 +194,7 @@ group all single-component tools together. For example,
 [Prodigy](https://prodi.gy/) and [Optuna](https://optuna.org/) affect
 data annotation and hyperparameter optimization respectively.
 
-![](/assets/png/mlops-shop/ml-landscape-specialized-ml.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/ml-landscape-specialized-ml.png){:width="640px"}  
 {: style="text-align: center;"}
 
 As we move *right*, the tools usually affect models, and as we move *left*,
@@ -222,7 +222,7 @@ involves productization includes them. As you go left, the tools will cater
 more and more to producing software artifacts. As you go right, they become
 more data-centric.
 
-![](/assets/png/mlops-shop/ml-landscape-specialized-swe.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/ml-landscape-specialized-swe.png){:width="640px"}  
 {: style="text-align: center;"}
 
 Git, Docker, and Kubernetes (k8s) are no-brainers in this space. However, I still
@@ -244,13 +244,13 @@ may be obvious due to our framework, but I see no reason not to point it out.
    diagonal can be thought of as orchestrators. They stitch multiple tasks
    together into a coherent workflow. **As we go right, the tasks evolve from
    being generic to ML-specific.**
-    ![](/assets/png/mlops-shop/orchestrators.png){:width="640px"}  
+    ![](/assets/images/navigating-the-mlops-landscape/orchestrators.png){:width="640px"}  
     {: style="text-align: center;"}
 2. *From building software to building models*: this is a bit obvious but as we
    move downwards from left to right, **the tools in the diagonal shift their
    focus into producing an ML model.** Most orgs stay at the left end, adopting
    tools at the right to cater to their researchers.
-    ![](/assets/png/mlops-shop/builders.png){:width="640px"}  
+    ![](/assets/images/navigating-the-mlops-landscape/builders.png){:width="640px"}  
     {: style="text-align: center;"}
 
 We'll go back to this diagonal in the next section, but I can allude to the
@@ -266,7 +266,7 @@ axes: (1) if their artifacts are software or model focused, and (2) if they
 affect a part or the entire ML lifecycle. Given this framework, we got
 the graph as shown below:
 
-![](/assets/png/mlops-shop/ml-landscape-all.png){:width="640px"}  
+![](/assets/images/navigating-the-mlops-landscape/ml-landscape-all.png){:width="640px"}  
 {: style="text-align: center;"}
 
 We then categorized each quadrant as cloud platforms, ML platforms, standard

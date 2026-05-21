@@ -35,7 +35,7 @@ naiintindihan ng kanyang kausap lalo na kung ang panunuyang ito ay nakasulat
 lamang sa papel. Siguro kasi wala na yung konteksto&mdash; tono, postura,
 ekspresyon&mdash; kung binabasa lang yung nais niya.
 
-![](/assets/png/wika/shallan.jpg){:width="500px" style="padding:10px"}  
+![](/assets/images/wika-at-kahulugan/shallan.jpg){:width="500px" style="padding:10px"}  
 __Fig__: Si Shallan Davar sa seryeng *Stormlight Archives* ni Brandon Sanderson.
 {:style="text-align: center;"}
 
@@ -82,7 +82,7 @@ Karaniwan lamang ito dahil umiiral sa lugar, panahon, at tradisyon ang wika
 natin. Intensyon ang mahalagang sangkap ng kahulugang kumakatawan. Madalas ang
 intensyong ito ay lagpas pa sa wika.
 
-![](/assets/png/wika/actor_interlocutor_model.png){:width="600px" style="padding:10px"}  
+![](/assets/images/wika-at-kahulugan/actor_interlocutor_model.png){:width="600px" style="padding:10px"}  
 __Fig:__ Proseso ng komunikasyon.
 {:style="text-align: center;"}
 
@@ -132,7 +132,7 @@ joint*. Kapag sinabi mo sa akin na binaba ka ng dyip sa *PeePeePooPoo*, hindi
 kita maiintindihan, dahil ang kahulugan ng salita ay kumakatawan sa mga
 parte ng meron. 
 
-![](/assets/png/wika/espana.jpg){:width="500px" style="padding:10px"}  
+![](/assets/images/wika-at-kahulugan/espana.jpg){:width="500px" style="padding:10px"}  
 {:style="text-align: center;"}
 
 Muli, mayroon tayong (1) kahulugang tekstuwal na galing sa semantikang ugnayan
@@ -145,7 +145,7 @@ ang iba pang salita tulad ng `at`, `sa`, `ng` at `ang`. Nagkataon lang na
 depende sa tekstuwal na kahulugan ang karamihan sa mga naglaganap na istatistikang
 modelo ngayon.
 
-![](/assets/png/wika/theory.png){:width="500px" style="padding:10px"}  
+![](/assets/images/wika-at-kahulugan/theory.png){:width="500px" style="padding:10px"}  
 {:style="text-align: center;"}
 
 Sana kahit papaano, nabigyang linaw ko ang dalawang uri ng kahulugan. May

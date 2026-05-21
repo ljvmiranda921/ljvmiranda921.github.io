@@ -58,7 +58,7 @@ find the *most stable* configuration. That is, the config with the highest
 number of adjacent H molecules (corresponds to the configuration with the
 lowest energy).
 
-![overview](/assets/png/gym-lattice/overview.png){:width="560px"}
+![overview](/assets/images/gym-lattice/overview.png){:width="560px"}
 {: style="text-align: center;"}
 
 We start with an initial molecule (as per the example above, it's H), and
@@ -73,7 +73,7 @@ this game:
 - Placing a molecule on an occupied space is penalized.
 - Trapping yourself and failing to finish the task incurs heavy penalty.
 
-![rules](/assets/png/gym-lattice/rules.png){:width="720px"}
+![rules](/assets/images/gym-lattice/rules.png){:width="720px"}
 {: style="text-align: center;"}
 
 As you can see, the HP Lattice model is a very simple abstraction of actual
@@ -119,7 +119,7 @@ book that I referenced below. For a more *leisurely* yet informative read,
 check out this great post from [Thomas
 Simonini](https://medium.freecodecamp.org/an-introduction-to-reinforcement-learning-4339519de419).
 
-![rl_problem](/assets/png/gym-lattice/rl_problem.png){:width="480px"}
+![rl_problem](/assets/images/gym-lattice/rl_problem.png){:width="480px"}
 {: style="text-align: center;"}
 
 ### Reinforcement Learning + Protein Folding
@@ -147,7 +147,7 @@ E(\mathcal{C}) = \sum_{i,j} I(i,j) \quad\text{where}\\
     \end{cases}
 $$
 
-![pfold_as_rl](/assets/png/gym-lattice/pfold_as_rl.png){:width="480px"}
+![pfold_as_rl](/assets/images/gym-lattice/pfold_as_rl.png){:width="480px"}
 {: style="text-align: center;"}
 
 For RL practitioners, it is obvious that the sign of the reward is a bit
@@ -241,9 +241,9 @@ Of course, at each step, you can call `render()` to see what the lattice looks
 like in your console:
 
 
-![demo1](/assets/png/gym-lattice/demo1.png){:width="120px"}
-![demo2](/assets/png/gym-lattice/demo2.png){:width="120px"}
-![demo3](/assets/png/gym-lattice/demo3.png){:width="120px"}
+![demo1](/assets/images/gym-lattice/demo1.png){:width="120px"}
+![demo2](/assets/images/gym-lattice/demo2.png){:width="120px"}
+![demo3](/assets/images/gym-lattice/demo3.png){:width="120px"}
 {: style="text-align: center;"}
 
 ### Last Notes

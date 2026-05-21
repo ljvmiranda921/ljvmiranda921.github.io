@@ -7,7 +7,7 @@ category: life
 comments: true
 author: "LJ MIRANDA"
 summary: "My analog tools for thought"
-header-img: /assets/png/pen-and-paper/notes_revealed.jpg
+header-img: /assets/images/pen-and-paper/notes_revealed.jpg
 excerpt: |
     With the world inundated with productivity apps, it feels nice to return to
     the tried and tested pen-and-paper methods.  In this blog post, I'll share
@@ -63,7 +63,7 @@ quicksand](https://twitter.com/kevinbaker/status/1433167944243159045?s=20&t=oNGb
 It hampers me from doing actual work.
 
 <!-- picture of midori -->
-![](/assets/png/pen-and-paper/blank_ntbk.jpg){:width="800px", style="padding:10px"}  
+![](/assets/images/pen-and-paper/blank_ntbk.jpg){:width="800px", style="padding:10px"}  
 *My work notebook (Midori Notebook A5).*
 {:style="text-align: center;"}
 
@@ -100,7 +100,7 @@ coupled with the convenience of note-taking apps, makes it easier to collect
 rather than synthesize.
 
 <!-- picture of your webbie notebooks  -->
-![](/assets/png/pen-and-paper/webbies.jpg){:width="800px", style="padding:10px"}  
+![](/assets/images/pen-and-paper/webbies.jpg){:width="800px", style="padding:10px"}  
 *My notebooks for journalling since 2018 (Rhodia Webnotebooks).*
 {:style="text-align: center;"}
 
@@ -119,7 +119,7 @@ hand, note-taking apps usually force me to think line by line. It's not bad, but
 it misses out on several affordances that pen and paper provides. 
 
 <!-- picture of midori with blank page -->
-![](/assets/png/pen-and-paper/blank.jpg){:width="800px", style="padding:10px"}  
+![](/assets/images/pen-and-paper/blank.jpg){:width="800px", style="padding:10px"}  
 *I like writing on blank paper (pen and ink: Lamy 2000 and Aurora Black).*
 {:style="text-align: center;"}
 
@@ -133,7 +133,7 @@ the small corrections, marginalia, and scribbles representing the unrefined
 parts of my thought process.
 
 <!-- picture of your actual notes -->
-![](/assets/png/pen-and-paper/notes_revealed.jpg){:width="800px", style="padding:10px"}  
+![](/assets/images/pen-and-paper/notes_revealed.jpg){:width="800px", style="padding:10px"}  
 *I'm the only one who can read my penmanship.*
 {:style="text-align: center;"}
 
@@ -155,7 +155,7 @@ stress me out, and I opt for the inks I love and enjoy. My notes contain
 streaming information, after all.
 
 <!-- picture of your fountain pen collection -->
-![](/assets/png/pen-and-paper/pens.jpg){:width="800px", style="padding:10px"}  
+![](/assets/images/pen-and-paper/pens.jpg){:width="800px", style="padding:10px"}  
 *My pens through the years (from left to right: Lamy 2000, TWSBI ECO, Pilot Metropolitan).*
 {:style="text-align: center;"}
 

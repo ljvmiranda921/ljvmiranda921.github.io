@@ -56,7 +56,7 @@ White provided a base set of primitives using circles and lines in his
 that as the drawing system. In this case, we even tried genetic algorithms to
 optimize the drawing (he only used random walks):
 
-![Perception](/assets/png/christmais/perception.png){:width="560px"}  
+![Perception](/assets/images/christmais/perception.png){:width="560px"}  
 __Figure:__ _Initial ML system that we designed based on Tom White's work. Instead
 of using random walks, we decided to use genetic algorithms for optimization_
 {: style="text-align: center;"}
@@ -117,7 +117,7 @@ The sequence-to-sequence variational autoencoder Sketch-RNN (Ha and Eck,
 [2017](#ha2017sketchrnn)) seems perfect for the job, so I decided to incorporate
 that in the system.
 
-![VAE](/assets/png/christmais/vae.png){:width="560px"}  
+![VAE](/assets/images/christmais/vae.png){:width="560px"}  
 __Figure:__ _Drawing system but using the VAE. Instead of using lines and
 circles directly as primitives, we chose to use the Quick, Draw! dataset_
 {: style="text-align: center;"}
@@ -129,7 +129,7 @@ further&mdash;are more straightforward. We used the GloVe word embedding model
 to map[^2] any input string into one of the trained Quick, Draw classes, and used
 Arbitrary Neural Style Transfer[^3] (Ghiasi, et al., [2017](#ghiasi2017exploring)) to add more artistic styling to the resulting drawings.
 
-![Pipeline](/assets/png/christmais/pipeline.png){:width="560px"}  
+![Pipeline](/assets/images/christmais/pipeline.png){:width="560px"}  
 __Figure:__ _Final pipeline for the ChristmAIs project_
 {: style="text-align: center;"}
 

@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [rlhf, preference data, llm, shp, openai, berkeley-nest]
-header-img: /assets/png/contrast-pairs/header.png
+header-img: /assets/images/contrast-pairs/header.png
 description: |
   Can we spot differences between preference pairs just by looking at their word embeddings? 
   In this blog post, I want to share my findings from examining lexical distances between chosen and rejected responses in preference datasets.
@@ -55,7 +55,7 @@ Then, I embedded them using [sentence-transformers/all-MiniLM-L6-v2](https://hug
 Finally, for each row, I computed the distance ($$\mathbf{d}$$) between the chosen and rejected vectors.
 The figure below illustrates this process.
 
-![](/assets/png/contrast-pairs/process.png){:width="700px"}
+![](/assets/images/contrast-pairs/process.png){:width="700px"}
 {: style="text-align: center;"}
 
 To compute the distances, I used the cosine distance from [`scipy`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cosine.html).
@@ -90,7 +90,7 @@ I'm unfamiliar with how exactly they prompted the LLM, but does that mean their 
 On the other hand, Nectar's completions were a combination of LLM outputs (GPT-4, GPT-3.5-turbo, GPT-3.5-turbo-instruct, LLaMa-2-7B-chat, and Mistral-7B-Instruct) alongside other existing datasets.
 Because Nectar formats its preferences in terms of ranking, the chosen and rejected pairs here represent the top and bottom choices.
 
-<iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_hist_plot.html"></iframe>
+<iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/images/contrast-pairs/distance_hist_plot.html"></iframe>
 
 Other datasets have distributions that I expected.
 For example, OpenAI's summarization dataset should still have closer preference pairs because of the task's inherent nature.
@@ -103,7 +103,7 @@ Next, I looked into how Elo ranking corresponds to the cosine distance of the te
 Preference datasets like OpenAI's Summarization, SHP, and Berkeley-Nest's Nectar represent their preferences as individual matchups, allowing us to compute the Elo rating of individual completions.
 Then, we can order these ratings to achieve a rank of completions from most preferable to least.
 
-![](/assets/png/contrast-pairs/elo_ranking.png){:width="720px"}
+![](/assets/images/contrast-pairs/elo_ranking.png){:width="720px"}
 {: style="text-align: center;"}
 
 However, OpenAI's Summarization and SHP have unequal number of ranks per prompt $$\mathbf{x}$$.
@@ -113,9 +113,9 @@ This allowed me to compute the distance from the first and second choices until 
 Then, I plotted these distances in a histogram (I only retained the curve so that the charts look cleaner) as seen below:
 
 <div style="text-align:center">
-<iframe width="360" height="600" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_openai___summarize_from_feedback.html"></iframe>
-<iframe width="360" height="600" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_stanford___SHP.html"></iframe>
-<iframe width="720" height="500" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_rank_plot_berkeley-nest___Nectar_fine.html"></iframe>
+<iframe width="360" height="600" frameborder="0" scrolling="no" src="/assets/images/contrast-pairs/distance_rank_plot_openai___summarize_from_feedback.html"></iframe>
+<iframe width="360" height="600" frameborder="0" scrolling="no" src="/assets/images/contrast-pairs/distance_rank_plot_stanford___SHP.html"></iframe>
+<iframe width="720" height="500" frameborder="0" scrolling="no" src="/assets/images/contrast-pairs/distance_rank_plot_berkeley-nest___Nectar_fine.html"></iframe>
 </div>
 
 The cosine distances from the **OpenAI Summarization** preference dataset follow a certain pattern:
@@ -152,7 +152,7 @@ Unlike other preference datasets that uses matchups, HelpSteer uses scores from 
 Here, I simply sorted the texts with their score, and designated the chosen text as the first one on the list (whatever Python's sort function made it to be), and the rejected text as the last element.
 You can see the figure below:
 
-<iframe width="720" height="550" frameborder="0" scrolling="no" src="/assets/png/contrast-pairs/distance_helpsteer_plot.html"></iframe>
+<iframe width="720" height="550" frameborder="0" scrolling="no" src="/assets/images/contrast-pairs/distance_helpsteer_plot.html"></iframe>
 
 I think that there's still a lot that can be done on this angle.
 One way is to format the data in terms of individual matchups.

@@ -5,7 +5,7 @@ date: 2020-03-31
 category: projects
 comments: true
 author: "LJ MIRANDA"
-header-img: /assets/png/cellular-sprites/cellular_sprites_header.png
+header-img: /assets/images/cellular-sprites/cellular_sprites_header.png
 tags: [jupyter notebooks, streamlit, procedural generation, streamlit, seagull, cellular automata, pixel art, 8-bit, sprites]
 description: |
     Some reflections on emergence and identity as I generate cute
@@ -27,7 +27,7 @@ common goal. It may be particles in a swarm algorithm, or contributors in
 open-source projects. Independent as they were, the sum total of their actions
 give way to a recognizable whole. 
 
-![](/assets/png/cellular-sprites/pso.gif){:width="300px"}
+![](/assets/images/cellular-sprites/pso.gif){:width="300px"}
 <br>**Figure**: Particle swarm finding the optimal solution
 {: style="text-align: center;"}
 
@@ -73,7 +73,7 @@ how cellular automata is done. To achieve this, it's important to think of
 automaton, *run* the simulation, etc. These action words are then manifested
 through Seagull's API.
 
-![](/assets/png/cellular-sprites/seagull.gif){:width="400px"}
+![](/assets/images/cellular-sprites/seagull.gif){:width="400px"}
 <br>**Figure**: Three Pulsar lifeforms using the python library Seagull
 {: style="text-align: center;"}
 
@@ -126,9 +126,9 @@ have a distinct feel upon them, and the mirroring technique allows the
 generated sprites to look more convincing.
 
 
-![](/assets/png/cellular-sprites/identicon.png){:width="200px"}
-![](/assets/png/cellular-sprites/space_invaders_procedural.png){:width="200px"}
-![](/assets/png/cellular-sprites/procedural_pixel_generator.png){:width="200px"}
+![](/assets/images/cellular-sprites/identicon.png){:width="200px"}
+![](/assets/images/cellular-sprites/space_invaders_procedural.png){:width="200px"}
+![](/assets/images/cellular-sprites/procedural_pixel_generator.png){:width="200px"}
 <br>**Figure**: Some of my inspirations in Procedural Sprite generation
 {: style="text-align: center;"}
 
@@ -143,7 +143,7 @@ grayscale version (or one of matplotlib's colormaps), but the image looked
 flat. I also tried to manually add colors, but it didn't stick that much:
 
 <!-- show black and white image, show colormap image -->
-![](/assets/png/cellular-sprites/mono.png){:width="500px"}
+![](/assets/images/cellular-sprites/mono.png){:width="500px"}
 <br>**Figure**: Initial iterations of creating monochrome sprites using one
 colormap
 {: style="text-align: center;"}
@@ -155,8 +155,8 @@ on a brute-force approach: for each cell in the matrix, I look around its
 neighbors, and paint them black if they are near the edge. The resulting
 sprites look better visually: 
 
-![](/assets/png/cellular-sprites/sample_0.png){:width="300px"}
-![](/assets/png/cellular-sprites/sample_1.png){:width="300px"}
+![](/assets/images/cellular-sprites/sample_0.png){:width="300px"}
+![](/assets/images/cellular-sprites/sample_1.png){:width="300px"}
 {: style="text-align: center;"}
 
 There were some parameters that need some tweaking. For example, I ensured that
@@ -171,8 +171,8 @@ whereas a high extinction rate creates mosquito-like thinner sprites. I
 exposed these parameters so as to introduce variability in the application.
 
 <!-- show too high extinction, too high survival -->
-![](/assets/png/cellular-sprites/high_stasis.png){:width="300px"}
-![](/assets/png/cellular-sprites/high_extinction.png){:width="300px"}
+![](/assets/images/cellular-sprites/high_stasis.png){:width="300px"}
+![](/assets/images/cellular-sprites/high_extinction.png){:width="300px"}
 <br>**Figure**: Sprites with high survival rate (left), and high extinction
 (right)
 {: style="text-align: center;"}
@@ -186,10 +186,10 @@ dimension to its look. The effect looks more apparent if the color scheme is
 comprised of different colors:
 
 <!-- show sprites with gradient (totally diff colors!) -->
-![](/assets/png/cellular-sprites/gradient_0.png){:width="100px"}
-![](/assets/png/cellular-sprites/gradient_1.png){:width="100px"}
-![](/assets/png/cellular-sprites/gradient_2.png){:width="100px"}
-![](/assets/png/cellular-sprites/gradient_3.png){:width="100px"}
+![](/assets/images/cellular-sprites/gradient_0.png){:width="100px"}
+![](/assets/images/cellular-sprites/gradient_1.png){:width="100px"}
+![](/assets/images/cellular-sprites/gradient_2.png){:width="100px"}
+![](/assets/images/cellular-sprites/gradient_3.png){:width="100px"}
 <br>**Figure**: Gradients added depth to the sprites' colors
 {: style="text-align: center;"}
 
@@ -221,7 +221,7 @@ borne out of emergence. This, in my opinion, creates a level of conflict: since
 you defined the initial conditions, is the system truly random?
 
 
-![](/assets/png/cellular-sprites/identity.gif){:width="500px"}
+![](/assets/images/cellular-sprites/identity.gif){:width="500px"}
 <br>**Figure**: Each string produces a unique sprite
 {: style="text-align: center;"}
 
@@ -274,7 +274,7 @@ addition, [Ron Gilbert](https://en.wikipedia.org/wiki/Ron_Gilbert), the creator
 of the famous pixel-art indie [Thimbleweed Park](https://thimbleweedpark.com/),
 featured my work in his [blog](https://grumpygamer.com/sprites_as_a_service).
 
-![](/assets/png/cellular-sprites/infinite_sprites.gif){:width="500px"}
+![](/assets/images/cellular-sprites/infinite_sprites.gif){:width="500px"}
 <br>**Figure**: Daniel Jackson's Infinite Sprites!
 {: style="text-align: center;"}
 

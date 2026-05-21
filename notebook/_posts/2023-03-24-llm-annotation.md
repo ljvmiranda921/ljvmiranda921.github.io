@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [nlp, llm, data annotation, prodigy, natural language processing, chatgpt, gpt-j, gpt-3]
-header-img: /assets/png/argument-mining/header.png
+header-img: /assets/images/llm-annotation/header.png
 description: |
     In this blog post, I want to demonstrate how we can leverage large language
     models like GPT-3 as a viable affordance to reduce a human annotator's
@@ -91,7 +91,7 @@ predictions on a held-out test set as shown in the figure below:
 
 [^1]: You can check the configuration file I used for this project in [this Github repository](https://github.com/ljvmiranda921/scratch/tree/master/2023-02-16-ukp-argmin).
 
-![](/assets/png/argument-mining/supervised.png){:width="650px"}  
+![](/assets/images/llm-annotation/supervised.png){:width="650px"}  
 {:style="text-align: center;"}
 
 <!-- talk about the prompt for zero-shot -->
@@ -100,7 +100,7 @@ sets and include test set examples into the prompt. Then, I send this prompt to
 GPT-3 and parse the results. Finally, I treat whatever it returns as its
 predictions and compare them with the gold-standard test data. 
 
-![](/assets/png/argument-mining/zeroshot.png){:width="500px"}  
+![](/assets/images/llm-annotation/zeroshot.png){:width="500px"}  
 {:style="text-align: center;"}
 
 I formatted the prompt like this:
@@ -178,7 +178,7 @@ particular text as such. I'd like to think of these affordances as different lev
 of reliance over GPT-3's capabilities:
 
 
-![](/assets/png/argument-mining/reliance.png){:width="720px"}  
+![](/assets/images/llm-annotation/reliance.png){:width="720px"}  
 {:style="text-align: center;"}
 
 > I noticed that I become more inattentive as I use affordances that
@@ -213,7 +213,7 @@ prompt GPT-3 to identify them for each text as a span labeling task. Then, we
 (2) pass this information into our annotation tool and label as usual, except
 that the relevant spans are now highlighted:
 
-![](/assets/png/argument-mining/highlights.png){:width="600px"}  
+![](/assets/images/llm-annotation/highlights.png){:width="600px"}  
 {:style="text-align: center;"}
 
 For GPT-3, the prompt goes like this:
@@ -252,7 +252,7 @@ a new corpus that I can load using Prodigy's built-in
 of this set-up, the spans are highlighted in the UI as shown below:
 
 
-![](/assets/png/argument-mining/prodigy_highlight_examples.png){:width="800px"}  
+![](/assets/images/llm-annotation/prodigy_highlight_examples.png){:width="800px"}  
 {:style="text-align: center;"}
 
 This set-up allows annotators to take advantage of relevant spans as they decide
@@ -297,7 +297,7 @@ each premise and determine if they are in favor, against, or irrelevant to the
 claim.[^4] From there, we can start classifying the text amongst our three
 labels. This "reasoning pipeline" is shown in the figure below:
 
-![](/assets/png/argument-mining/chain_of_thought.png){:width="600px"}  
+![](/assets/images/llm-annotation/chain_of_thought.png){:width="600px"}  
 {:style="text-align: center;"}
 
 [^4]:
@@ -366,7 +366,7 @@ free to open the images in another tab). Here, we see GPT-3's explanation
 alongside its suggestion:
 
 
-![](/assets/png/argument-mining/cot_examples.png){:width="800px"}  
+![](/assets/images/llm-annotation/cot_examples.png){:width="800px"}  
 {:style="text-align: center;"}
 
 Ideally, annotators can refer to GPT-3's explanation to confirm or correct a
@@ -386,7 +386,7 @@ potential affordances to improve the annotation process. We categorized these
 affordances based from their reliance on LLMs&mdash; manual, directed, and
 dependent.
 
-![](/assets/png/argument-mining/reliance.png){:width="720px"}  
+![](/assets/images/llm-annotation/reliance.png){:width="720px"}  
 {:style="text-align: center;"}
 
 A *directed* approach uses an LLM to provide supplementary information that a

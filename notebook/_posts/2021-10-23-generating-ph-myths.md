@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-header-img: /assets/png/ph-clip/header.png
+header-img: /assets/images/generating-ph-myths/header.png
 tags: [machine learning, clip, clip vqgan, open ai, trese, halloween, scary,
 generative art, generative, procgen, procedural generation]
 description: |
@@ -26,7 +26,7 @@ creatures into life.
 
 > Words turn into images, bringing these creatures into life.
 
-![](/assets/png/ph-clip/trese.jpg){:width="640px"}  
+![](/assets/images/generating-ph-myths/trese.jpg){:width="640px"}  
 __Figure:__ Comics like *Trese* also captured our imagination on Philippine folklore   
 *(image from Trese / Visual Print Enterprises)*
 {: style="text-align: center;"}
@@ -67,7 +67,7 @@ works best on desktop!
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
-<img src="/assets/png/ph-clip/nuno_sa_punso.png" width="360">
+<img src="/assets/images/generating-ph-myths/nuno_sa_punso.png" width="360">
 </div>
 </div>
 
@@ -86,7 +86,7 @@ works best on desktop!
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
-<img src="/assets/png/ph-clip/tiktik.png" width="360">
+<img src="/assets/images/generating-ph-myths/tiktik.png" width="360">
 </div>
 </div>
 
@@ -105,7 +105,7 @@ works best on desktop!
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
-<img src="/assets/png/ph-clip/kapre.png" width="360">
+<img src="/assets/images/generating-ph-myths/kapre.png" width="360">
 </div>
 </div>
 
@@ -125,7 +125,7 @@ works best on desktop!
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
-<img src="/assets/png/ph-clip/tikbalang.png" width="360">
+<img src="/assets/images/generating-ph-myths/tikbalang.png" width="360">
 </div>
 </div>
 
@@ -144,7 +144,7 @@ works best on desktop!
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
-<img src="/assets/png/ph-clip/manananggal.png" width="360">
+<img src="/assets/images/generating-ph-myths/manananggal.png" width="360">
 </div>
 </div>
 
@@ -163,7 +163,7 @@ works best on desktop!
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
-<img src="/assets/png/ph-clip/mantiw.png" width="360">
+<img src="/assets/images/generating-ph-myths/mantiw.png" width="360">
 </div>
 </div>
 
@@ -181,7 +181,7 @@ works best on desktop!
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
-<img src="/assets/png/ph-clip/tiyanak.png" width="360">
+<img src="/assets/images/generating-ph-myths/tiyanak.png" width="360">
 </div>
 </div>
 
@@ -199,7 +199,7 @@ works best on desktop!
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
-<img src="/assets/png/ph-clip/sigbin.png" width="360">
+<img src="/assets/images/generating-ph-myths/sigbin.png" width="360">
 </div>
 </div>
 
@@ -218,7 +218,7 @@ works best on desktop!
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
-<img src="/assets/png/ph-clip/santelmo.png" width="360">
+<img src="/assets/images/generating-ph-myths/santelmo.png" width="360">
 </div>
 </div>
 
@@ -237,7 +237,7 @@ works best on desktop!
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
-<img src="/assets/png/ph-clip/bakunawa.png" width="360">
+<img src="/assets/images/generating-ph-myths/bakunawa.png" width="360">
 </div>
 </div>
 

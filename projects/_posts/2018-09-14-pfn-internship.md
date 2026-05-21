@@ -50,7 +50,7 @@ ChainerRL is a reinforcement learning framework built on-top of Chainer (think
 Tensorflow or Pytorch). It contains an extensive API that allows you to define
 your agent, its policy, the environment, and the overall training routine:
 
-![overview](/assets/png/pfn2018intern/chainerrl-overview.png){:width="640px"}  
+![overview](/assets/images/pfn-internship/chainerrl-overview.png){:width="640px"}  
 __Figure:__ _ChainerRL is a feature-rich reinforcement learning framework_
 {: style="text-align: center;"}
 
@@ -60,7 +60,7 @@ with the training environment. There's a variety of policies and agents
 included in the library, you just need to import them and set their
 hyperparameters. Its basic usage can be summarized in a diagram:
 
-![usage](/assets/png/pfn2018intern/chainerrl-basic-usage.png){:width="520px"}  
+![usage](/assets/images/pfn-internship/chainerrl-basic-usage.png){:width="520px"}  
 __Figure:__ _Basic usage of ChainerRL_
 {: style="text-align: center;"}
 
@@ -75,7 +75,7 @@ interaction simply ends. Here's a simple Markov diagram explaining this process
 is the reward): 
 
 
-![episodic](/assets/png/pfn2018intern/chainerrl-episodic.png){:width="360px"}  
+![episodic](/assets/images/pfn-internship/chainerrl-episodic.png){:width="360px"}  
 __Figure:__ _Episodic training scheme, the usual way we do RL_
 {: style="text-align: center;"}
 
@@ -100,7 +100,7 @@ parallelization. There are two main differences in this method:
   done.
 * The environment is reset right away when proceeding into the next episode.
 
-![continuous](/assets/png/pfn2018intern/chainerrl-continuous.png){:width="480px"}  
+![continuous](/assets/images/pfn-internship/chainerrl-continuous.png){:width="480px"}  
 __Figure:__ _Continuous training scheme to support parallelization_
 {: style="text-align: center;"}
 
@@ -125,7 +125,7 @@ synchronous updates in order to maximize compute in a processing unit
 (CPU/GPU)**. This is known as PPO-style parallelization (Schulman et al.,
 [2017](#schulman2017ppo)).
 
-![parallel](/assets/png/pfn2018intern/parallel-env-stepping.png){:width="720px"}
+![parallel](/assets/images/pfn-internship/parallel-env-stepping.png){:width="720px"}
 __Figure:__ _PPO-style parallelization. Perform an update after a
 certain number of timesteps_
 {: style="text-align: center;"}
@@ -153,10 +153,10 @@ simulators perform an update at different episodes. As long as it fulfills the
 required number of transitions, then we're good to update. A nice analogy for
 this parallelization scheme is the following (inspired by my favorite anime):
 
-![instances](/assets/png/pfn2018intern/naruto-01.gif){:width="240px"
+![instances](/assets/images/pfn-internship/naruto-01.gif){:width="240px"
 height="140px"}
-![train](/assets/png/pfn2018intern/naruto-02.jpeg){:width="240px"}
-![learn](/assets/png/pfn2018intern/naruto-03.png){:width="240px"}  
+![train](/assets/images/pfn-internship/naruto-02.jpeg){:width="240px"}
+![learn](/assets/images/pfn-internship/naruto-03.png){:width="240px"}  
 __Figure:__ _Parallelization in Naruto: (1) create multiple simulators, (2)
 then train them (sync/async), in order to (3) learn the task at less time_
 {: style="text-align: center;"}
@@ -197,7 +197,7 @@ number of transitions), we simply flush the older contents as time passes. With
 this technique, it's easier to share data between two API calls without
 the risk of losing information.
 
-![accummulator](/assets/png/pfn2018intern/chainerrl-accummulator.png){:width="640px"}  
+![accummulator](/assets/images/pfn-internship/chainerrl-accummulator.png){:width="640px"}  
 __Figure:__ _Accumulator data structure for passing data between two API calls_
 {: style="text-align: center;"}
 
@@ -213,7 +213,7 @@ throughout the library. In the ChainerRL API, the size of the deque is treated
 as a hyperparameter. A simple diagram is shown below: 
 
 
-![fifo](/assets/png/pfn2018intern/chainerrl-fifo.png){:width="720px"}  
+![fifo](/assets/images/pfn-internship/chainerrl-fifo.png){:width="720px"}  
 __Figure:__ _Deque data structure to report a reward stream's moving average_
 {: style="text-align: center;"}
 

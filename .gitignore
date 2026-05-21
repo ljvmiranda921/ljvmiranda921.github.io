@@ -21,3 +21,4 @@ tmp/*
 
 *:Zone.Identifier
 *dropbox.attrs
+.claude/

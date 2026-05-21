@@ -41,7 +41,7 @@ loop](https://pico-8.fandom.com/wiki/GameLoop). I see this to be akin to the
 [model-view-controller (MVC) pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) in software design (with the addition of
 `_init()`)
 
-![](/assets/png/pico8-move/MVC.gif){:width="320px"}  
+![](/assets/images/pico8-offset/MVC.gif){:width="320px"}  
 {: style="text-align: center;"}
 
 
@@ -119,7 +119,7 @@ pointers.
 First, let's introduce our sprite character, Picollino! The imagery of
 the word evokes a derpy tomato so we'll stick with that:
 
-![](/assets/png/pico8-move/Picollino.gif){:width="200px"}  
+![](/assets/images/pico8-offset/Picollino.gif){:width="200px"}  
 {: style="text-align: center;"}
 
 Picollino's movement will follow the style of an overworld adventure game
@@ -228,7 +228,7 @@ function draw_game()
 end
 ```
 
-<p align="center"><iframe src="/assets/png/pico8-move/basic_movement.html" title="description" height="500" width="500" display="block"></iframe></p>
+<p align="center"><iframe src="/assets/images/pico8-offset/basic_movement.html" title="description" height="500" width="500" display="block"></iframe></p>
 <p align="center">Basic four-directional movement. Press the arrow keys!</p>
 
 
@@ -279,7 +279,7 @@ look like walking. Instead, we want to traverse the $$x$$ axis in small
 increments, i.e. $$24, 24.8, 25.6, 26.4, \ldots$$, until it reaches its
 destination.
 
-![](/assets/png/pico8-move/OffsetCompare.gif){:width="400px"}  
+![](/assets/images/pico8-offset/OffsetCompare.gif){:width="400px"}  
 {: style="text-align: center;"}
 
 We accomplish this by defining an offset that will incrementally move the
@@ -424,17 +424,17 @@ draw the new position plus offset that starts from `-8` (i.e., the previous
 position) until it reaches `0` (i.e., the new/current position). Let's look at
 the sprite movement, observe that it's much smoother now!
 
-![](/assets/png/pico8-move/OffsetCompare.gif){:width="400px"}  
+![](/assets/images/pico8-offset/OffsetCompare.gif){:width="400px"}  
 {: style="text-align: center;"}
 
-<p align="center"><iframe src="/assets/png/pico8-move/offset_movement.html" title="description" height="500" width="500" display="block"></iframe></p>
+<p align="center"><iframe src="/assets/images/pico8-offset/offset_movement.html" title="description" height="500" width="500" display="block"></iframe></p>
 <p align="center">Basic four-directional movement with offset. Press the arrow keys!</p>
 
 ### Sprite animation
 
 Let's just do a simple animation for Picollino:
 
-![](/assets/png/pico8-move/AnimationSeq.png){:width="400px"}  
+![](/assets/images/pico8-offset/AnimationSeq.png){:width="400px"}  
 {: style="text-align: center;"}
 
 
@@ -545,7 +545,7 @@ end
 
 *Et voilà!* We now have input buffering! Feel the difference:
 
-<p align="center"><iframe src="/assets/png/pico8-move/inputbuffer.html" title="description" height="500" width="500" display="block"></iframe></p>
+<p align="center"><iframe src="/assets/images/pico8-offset/inputbuffer.html" title="description" height="500" width="500" display="block"></iframe></p>
 <p align="center">Basic four-directional movement with offset and input-buffering. Press the arrow keys!</p>
 
 ## Conclusion

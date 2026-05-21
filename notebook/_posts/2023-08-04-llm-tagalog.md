@@ -9,7 +9,7 @@ author: "LJ MIRANDA"
 published: true
 filipino_nlp: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
-header-img: /assets/png/calamancy-llm/header.png
+header-img: /assets/images/llm-tagalog/header.png
 description: |
     Large language models showed promise on structured prediction tasks like named entity recognition and text categorization.
     But how well do they perform when presented with Tagalog text?
@@ -131,7 +131,7 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/01
 The graph below shows a better visual of our results.
 The grey bars represent our large language models while the red bars represent the supervised ones.
 
-![](/assets/png/calamancy-llm/results.svg){:width="700px"}
+![](/assets/images/llm-tagalog/results.svg){:width="700px"}
 {: style="text-align: center;"}
 
 

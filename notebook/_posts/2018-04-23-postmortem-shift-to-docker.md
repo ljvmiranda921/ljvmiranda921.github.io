@@ -26,7 +26,7 @@ website's header (look up!).
 Just for fun, I set-up a cron job to build my CV every week. However, for the
 past few weeks, I've been receiving some weird build failures:
 
-![Diagram](/assets/png/tuts/build_failures.png){:width="560px"}  
+![Diagram](/assets/images/postmortem-shift-to-docker/build_failures.png){:width="560px"}  
 __Figure:__ _Yup, I've been ignoring this problem for the past two months_
 {: style="text-align: center;"}
 
@@ -53,7 +53,7 @@ Going through the job log, I found a connection error that causes a
 failure whenever TexLive or some package is downloaded by Travis-CI straight
 from the TUG file server (ftp://tug.org).
 
-![Diagram](/assets/png/tuts/joblogs.png){:width="720px"}  
+![Diagram](/assets/images/postmortem-shift-to-docker/joblogs.png){:width="720px"}  
 __Figure:__ _Downloading avantgar succeeds but bookman fails. Very unreliable._
 {: style="text-align: center;"}
 
@@ -163,7 +163,7 @@ to compile my `.bib` file but as it turns out, **biber is not installed in
 the blang/latex:ubuntu** image. Took me three long hours to finally figure
 that out:
 
-![Diagram](/assets/png/tuts/threehours.png){:width="560px"}  
+![Diagram](/assets/images/postmortem-shift-to-docker/threehours.png){:width="560px"}  
 __Figure:__ _This is the programmer's way of saying "Never give up"_
 {: style="text-align: center;"}
 
@@ -190,7 +190,7 @@ compatible with Ubuntu 14.04 and without updating my `tlsetup.sh` (which I
 deleted) script. Furthermore, it gave me a sense of comfort and
 accomplishment when I started seeing something like this:
 
-![Diagram](/assets/png/tuts/results1.png){:width="560px"}  
+![Diagram](/assets/images/postmortem-shift-to-docker/results1.png){:width="560px"}  
 __Figure:__ _Those green bars gave me a good sigh of relief_
 {: style="text-align: center;"}
 
@@ -199,7 +199,7 @@ a build time history for my `thesis-manuscript`. Unlike my `cv` project, I
 started this one with continuous integration in mind, so all builds use the
 traditional Docker-less solution (then the Docker-solution afterwards).
 
-![Diagram](/assets/png/tuts/build_times.png){:width="720px"}  
+![Diagram](/assets/images/postmortem-shift-to-docker/build_times.png){:width="720px"}  
 __Figure:__ _Good start. For the last three builds, I have consistently reduced the build time with a Docker-based solution_
 {: style="text-align: center;"}
 

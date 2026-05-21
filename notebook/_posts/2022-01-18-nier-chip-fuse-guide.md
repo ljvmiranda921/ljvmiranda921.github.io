@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-header-img: /assets/png/plugin-chips/fusing.jpg
+header-img: /assets/images/nier-chip-fuse-guide/fusing.jpg
 tags: [gaming, nier automata, guides, plugin chips]
 description: |
     Ok, this post is a little bit off-brand, but I must write this one down.
@@ -52,7 +52,7 @@ that each Chip has a numerical *Cost* (`[4]`, `[21]`, `[13]`) and *Level* (`+1`,
 while the latter talks about its value.
 
 <!-- plugin chips -->
-![](/assets/png/plugin-chips/chips.jpg){:width="520px}
+![](/assets/images/nier-chip-fuse-guide/chips.jpg){:width="520px}
 {:style="text-align: center;"}
 
 
@@ -88,7 +88,7 @@ You won't make any mistake here because the game UI will only show chips that
 you can fuse. However, most of your farming and trading activities will depend
 on this information. This is where the infamous table of values can become helpful.
 
-![](/assets/png/plugin-chips/fusing.jpg){:width="520px}
+![](/assets/images/nier-chip-fuse-guide/fusing.jpg){:width="520px}
 {:style="text-align: center;"}
 
 The table below (credits from [Sennzai](https://steamcommunity.com/id/sennzai))

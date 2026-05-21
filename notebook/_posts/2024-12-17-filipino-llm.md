@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 filipino_nlp: true
-header-img: /assets/png/filipino-llm/header.png
+header-img: /assets/images/filipino-llm/header.png
 tags: [tagalog, filipino, nlp, llm]
 description: |
   The rise of LLMs is forcing us to rethink Filipino NLP. But there's still a ton of work to do&mdash;just not the stuff you might think. Here's my take on what's worth doing, what's a waste of time, and where Filipino NLP research should be heading.
@@ -56,7 +56,7 @@ Most IFT data comes in question-answer pairs containing a _user instruction_, an
 
 For the next year or so, I believe there's a **more urgent need for Filipino IFT datasets.**
 
-![](/assets/png/filipino-llm/llm_training.png){:width="700px"}  
+![](/assets/images/filipino-llm/llm_training.png){:width="700px"}  
 _A simple language modelling pipeline (as seen in models like InstructGPT, Tulu 2, etc.).  
 Currently, we lack quality Filipino data for post-training._
 {: style="text-align: center;"}
@@ -123,7 +123,7 @@ They were able to rally a community of researchers from Southeast Asia (SEA) and
 Other examples include [Cohere for AI's Aya](https://share.hsforms.com/10OrjljwpQ52ILJA6ftENIwch5vw) and HuggingFace's [Data is Better Together](https://huggingface.co/data-is-better-together) projects.
 Right now, it's nice to see familiar Filipino faces participating in these communities, but **it would be nice if we can increase our involvement in these larger grassroots projects**.
 
-![](/assets/png/filipino-llm/seacrowd.jpg){:width="500px"}  
+![](/assets/images/filipino-llm/seacrowd.jpg){:width="500px"}  
 {: style="text-align: center;"}
 
 I strongly believe that we can achieve true impact in multilingual LLM research via a **participatory approach**.
@@ -136,7 +136,7 @@ This is important because human preferences, even in English, is still tricky du
 Things that may be harmless to some cultures might be harmful for us.
 I believe it is important for us, the Filipino research community, to have a say on how the next-generation of multilingual LLMs will be trained.
 
-![](/assets/png/filipino-llm/grassroots.jpg){:width="700px"}  
+![](/assets/images/filipino-llm/grassroots.jpg){:width="700px"}  
 {: style="text-align: center;"}
 
 ### Final thoughts: are we truly 'low-resource'?

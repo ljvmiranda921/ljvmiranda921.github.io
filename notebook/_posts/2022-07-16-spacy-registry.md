@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-header-img: /assets/png/registry/header.png
+header-img: /assets/images/spacy-registry/header.png
 tags: [spacy, internals, spancat, architecture, software design]
 description: |
     This blog post illustrates how spaCy's registry system works by walking through
@@ -188,7 +188,7 @@ fragmented spans. Its architecture looks like this:
 
 
 
-![](/assets/png/registry/init.png){:width="800px", style="padding:10px"}  
+![](/assets/images/spacy-registry/init.png){:width="800px", style="padding:10px"}  
 {:style="text-align: center;"}
 
 
@@ -294,7 +294,7 @@ parameters also require us to initialize other components, namely the
 `tok2vec`, `reducer`, and `scorer`. Let's start with `tok2vec`.
 
 
-![](/assets/png/registry/suggester.png){:width="800px", style="padding:10px"}  
+![](/assets/images/spacy-registry/suggester.png){:width="800px", style="padding:10px"}  
 {:style="text-align: center;"}
 
 
@@ -342,7 +342,7 @@ With this, we now have a `tok2vec` network to pass to the
 `spacy.SpanCategorizer.v1` model. The remaining parameters are the `reducer`
 and the `scorer`.
 
-![](/assets/png/registry/tok2vec.png){:width="800px", style="padding:10px"}  
+![](/assets/images/spacy-registry/tok2vec.png){:width="800px", style="padding:10px"}  
 {:style="text-align: center;"}
 
 We will follow the same process for the last two: we get the factories and then
@@ -366,7 +366,7 @@ model_factory = reg.get("architectures", "spacy.SpanCategorizer.v1")
 model = model_factory(tok2vec=tok2vec, reducer=reducer, scorer=scorer)
 ```
 
-![](/assets/png/registry/complete.png){:width="800px", style="padding:10px"}  
+![](/assets/images/spacy-registry/complete.png){:width="800px", style="padding:10px"}  
 {:style="text-align: center;"}
 
 ### Pipeline
