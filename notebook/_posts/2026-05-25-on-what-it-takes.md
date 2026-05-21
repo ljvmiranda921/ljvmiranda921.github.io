@@ -20,7 +20,7 @@ The purpose of the meetup was really to figure out (1) whether we can build a "P
 I had some experience building open language models back in my previous work, and my research on multilinguality is directly related, so I was able to share my thoughts and experiences.
 
 To preface: the answer to the question of "can we actually build Filipino-centric LLMs?" is definitely **YES**.
-The tools are open-source, some of the recipes are publicly available, and there's definitely a lot of talent.
+The tools are open-source, the [recipes](https://rlhfbook.com) are publicly available, and there's definitely a lot of talent.
 However, the challenges are two-fold:
 
 1. Building Filipino-centric LLMs **does not entail applying Silicon Valley approaches to our local contexts**. The capital difference is vast and the ecosystem is different. It's better to look into how our neighbors (geographically and economically) are doing it, such as Malaysia or Africa.
@@ -87,10 +87,18 @@ Synthetic data is now a common approach in training frontier language models, bu
 I encourage you to read the survey paper, as I mention potential paths for improvement such as creating task-specific small language models, deploying models at the edge, and improving a model's capabilities through a robust set of harnesses. 
 
 
+## Sipag at Tiyaga - supporting sustained effort through time
+
+There is a famous saying: "Pag may tiyaga, may nilaga."
+Perhaps the nearest English translation I can do is: "If the patience is true, you get a stew."[^3]
+I'd argue that most of the components in a language modeling recipe (especially if we just consider multilingual post-training) is more of a test of patience than sudden insight.&mdash;
+collecting enough data through large-scale annotation or data synthesis, 
+figuring out the right data mix across many ablations, 
+ensuring the evals are a good reflection of the capabilities we want&mdash;
+
+[^3]: The idea of course is that making a stew requires long cooking time where tough cuts of meat require hours of slow simmering to become tender.
 
 
-## Sipag at Tiyaga - supporting hardwork and long-horizon activities
 
 
-
-## Bayanihan - community-building and strong grassroots networks
+## Bayanihan 
