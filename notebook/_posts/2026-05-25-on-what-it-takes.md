@@ -116,3 +116,4 @@ And I've chatted with a few undergraduate thesis groups in UST and PUP (and I st
 What I'm trying to say is that there is talent here willing na mag-tiyaga and do the hard parts&mdash;it's just a matter of getting these efforts more coordinated and aligned.
 
 ## Bayanihan - collective action to achieve a goal
+
