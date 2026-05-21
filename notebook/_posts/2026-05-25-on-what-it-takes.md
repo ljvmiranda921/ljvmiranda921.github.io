@@ -73,7 +73,12 @@ This situation is even more pronounced for other Philippine languages.
 In addition, our compute situation (for both development and deployment) leaves a lot to be desired.
 We [lack the compute infrastructure](https://epoch.ai/data/gpu-clusters?view=map&tab=point&mapPointBubbleSize=log+Hardware+quantity) to train LLMs (Epoch AI Data on GPU Clusters, 2026), and our [internet and technology penetration lags behind that of our ASEAN neighbors](https://data.worldbank.org/indicator/IT.NET.USER.ZS?end=2024&locations=PH-TH-SG-MY-VN-LA-ID-KH-MM-BN-TL&start=1990&view=chart) (ITU Data based on the World Bank).
 
-<iframe src="https://data.worldbank.org/share/widget?indicators=IT.NET.USER.ZS&locations=PH-TH-SG-MY-VN-LA-ID-KH-MM-BN-TL" width='450' height='300' frameBorder='0' scrolling="no" ></iframe>
+<div style="float:right; width:320px; margin:0 0 10px 20px;">
+  <img src="/assets/images/on-what-it-takes/internet-penetration-asean.png" style="width: 100%;">
+  <p style="font-size: 0.8em; color: #555; text-align: center; margin-top: 6px; line-height: 1.35;">
+    <em>Individuals using the Internet (% of population), 1990–2024. The Philippines trails most ASEAN neighbors. Source: <a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS">World Bank / ITU (IT.NET.USER.ZS)</a>.</em>
+  </p>
+</div>
 
 I argue that the **best way to innovate is similar to how we approached the jeepney**: taking these innovations from the Global North and adapting them to our local contexts through ingenuity and resourcefulness.
 Simply importing Silicon Valley approaches is not enough.
