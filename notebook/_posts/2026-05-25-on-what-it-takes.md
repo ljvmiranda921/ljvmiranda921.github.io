@@ -117,3 +117,6 @@ What I'm trying to say is that there is talent here willing to do the hard parts
 
 ## Bayanihan - collective action to achieve a goal
 
+I always find the imagery of bayanihan inspiring.
+It's now uncommon today due to most houses being made of concrete, but the spirit of bayanihan still lives.
+I remember back in high school when we had Brigada Eskwela and gathered together to clean classrooms, or even the disaster relief packages we assembled for victims of typhoon Yolanda back in college.
