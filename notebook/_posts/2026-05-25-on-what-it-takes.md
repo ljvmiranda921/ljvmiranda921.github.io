@@ -68,7 +68,7 @@ We lack compute infrastructure to train LLMs and our internet and technology pen
 
 I argue that a good way to proceed is similar to how we approached the jeepney: taking these innovations and adapting them into our local contexts through ingenuity and resourcefulness.
 Simply importing Silicon Valley approaches is not enough.
-I wrote about this at length in a recent survey paper, but one approach I'm exploring is careful synthetic data generation to fill the lack of training data.
+I wrote about this at length in a recent survey paper, but one approach I'm currently exploring is careful synthetic data generation to fill the lack of training data.
 Synthetic data is now a common approach in training frontier language models, but I believe we can strip this down, add some ornaments and adjustments, in order for it to work on low-resource languages.
 I encourage you to read the survey paper, as I mention potential paths for improvement such as creating task-specific small language models, deploying models at the edge, and improving a model's capability through a robust set of harnesses. 
 
