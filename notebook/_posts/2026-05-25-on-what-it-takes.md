@@ -127,3 +127,4 @@ I'd like to think that this is possible in the context of LLM development.
 </div>
 
 I've written about this [last year](/notebook/2024/12/17/filipino-llm/), and I still believe in the capability of grassroots networks.
+Honestly, we tried it this year with [FilBench](https://filbench.github.io)
