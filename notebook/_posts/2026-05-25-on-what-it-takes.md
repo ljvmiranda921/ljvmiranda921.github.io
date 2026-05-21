@@ -34,14 +34,14 @@ The next step then is to provide an environment where these qualities will flour
 These qualities are: Diskarte, Sipag at Tiyaga, and Bayanihan.
 Let me explain them in the following sections.
 
-> We can build Filipino-centric LLMs and contribute world-class technologies because we have the 
-> unique qualities to do so: Diskarte, Sipag at Tiyaga, and Bayanihan.
+> We can build Filipino-centric LLMs and contribute world-class language technologies because we have the 
+> unique qualities to do so: Diskarte, Sipag at Tiyaga, and Bayanihan. The challenge then is to create an environment that allows these qualities to flourish.
 
 
 [^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my [blog post](/projects/2025/08/21/filbench/), check the [leaderboard](https://huggingface.co/spaces/filbench/filbench-leaderboard), or read the [paper](https://aclanthology.org/2025.emnlp-main.127/)!
 
 
-## Diskarte - how can we build language technologies with low compute and limited data resources?
+## Diskarte - how can we build with low compute and limited data resources?
 
 
 
