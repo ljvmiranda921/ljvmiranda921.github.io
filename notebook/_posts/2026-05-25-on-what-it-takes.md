@@ -48,32 +48,35 @@ Just think of this blog post as an extended version of those closing slides. -->
 [^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my [blog post](/projects/2025/08/21/filbench/), check the [leaderboard](https://huggingface.co/spaces/filbench/filbench-leaderboard), or read the [paper](https://aclanthology.org/2025.emnlp-main.127/)!
 
 
-## Diskarte - how can we build with low compute and limited data resources?
+## Diskarte - achieving a goal under extreme constraints
 
 After World War 2, several US Army Willys MB Trucks were left in the Philippines as American troops left the country.
 There was a shortage of public transportation due to the destruction of infrastructure, and so, we began stripping down these trucks and altering them to add metal roofs, 
 and various paintings and ornaments.
 This later on became the jeepney or jeep, which is now our cultural icon and the current mode of transportation today.[^2]
 Diskarte is difficult to translate into English because it can mean many things: resourcefulness, ingenuity, creative thinking, etc. 
-There is this nice paper that talks about this at length, and I encourage anyone to read it.
+There is this nice [paper](https://www.pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf) that talks about this at length, and I encourage anyone to read it.
 Personally, I see diskarte as the ability to achieve a goal under extreme constraints.
+
+<div style="text-align: center;">
+  <img src="/assets/png/on-what-it-takes/diskarte.png" style="border: 1px solid black; padding: 10px; width: 700px">
+</div>
 
 [^2]: I really like the imagery of the jeepney to symbolize diskarte because my dad used to own and drive one, and I learned how to read by reading handpainted jeepney signs. 
 
-Our NLP landscape is constrained in terms of both data and compute.
-Although there is a significant presence of Filipino speakers and it's well-represented in the internet: so few have transformed this resource into useful and high-quality datasets.
-This situation is even more pronounced in other Philippine languages.
+The Philippine NLP landscape is constrained in terms of both data and compute.
+Although there is a significant presence of Filipino speakers and the language is well-represented on the internet, few have transformed this resource into useful, high-quality datasets.
+This situation is even more pronounced for other Philippine languages.
 In addition, our compute situation (for both development and deployment) leaves a lot to be desired.
-We lack compute infrastructure to train LLMs and our internet and technology penetration is below our other ASEAN neighbors.
+We [lack the compute infrastructure](https://epoch.ai/data/gpu-clusters?view=map&tab=point&mapPointBubbleSize=log+Hardware+quantity) to train LLMs (Epoch AI Data on GPU Clusters, 2026), and our [internet and technology penetration lags behind that of our ASEAN neighbors](https://data.worldbank.org/indicator/IT.NET.USER.ZS?end=2024&locations=PH-TH-SG-MY-VN-LA-ID-KH-MM-BN-TL&start=1990&view=chart) (ITU Data based on the World Bank).
 
-I argue that a good way to proceed is similar to how we approached the jeepney: taking these innovations and adapting them into our local contexts through ingenuity and resourcefulness.
+<iframe src="https://data.worldbank.org/share/widget?indicators=IT.NET.USER.ZS&locations=PH-TH-SG-MY-VN-LA-ID-KH-MM-BN-TL" width='450' height='300' frameBorder='0' scrolling="no" ></iframe>
+
+I argue that the **best way to innovate is similar to how we approached the jeepney**: taking these innovations from the Global North and adapting them to our local contexts through ingenuity and resourcefulness.
 Simply importing Silicon Valley approaches is not enough.
-I wrote about this at length in a recent survey paper, but one approach I'm currently exploring is careful synthetic data generation to fill the lack of training data.
-Synthetic data is now a common approach in training frontier language models, but I believe we can strip this down, add some ornaments and adjustments, in order for it to work on low-resource languages.
-I encourage you to read the survey paper, as I mention potential paths for improvement such as creating task-specific small language models, deploying models at the edge, and improving a model's capability through a robust set of harnesses. 
-
-
-
+I wrote about this at length in a recent [survey paper](https://arxiv.org/abs/2604.21637), but one approach I'm currently exploring is careful synthetic data generation to address the lack of training data.
+Synthetic data is now a common approach in training frontier language models, but I believe we can strip it down and add some ornaments and adjustments to make it work for low-resource languages.
+I encourage you to read the survey paper, as I mention potential paths for improvement such as creating task-specific small language models, deploying models at the edge, and improving a model's capabilities through a robust set of harnesses. 
 
 
 
