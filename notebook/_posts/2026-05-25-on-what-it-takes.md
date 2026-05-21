@@ -96,6 +96,10 @@ How, then, can we support these types of activities?
 
 [^3]: The idea of course is that making a stew requires long cooking time where tough cuts of meat require hours of slow simmering to become tender.
 
+<div style="text-align: center;">
+  <img src="/assets/images/on-what-it-takes/tiyaga.png" style="border: 1px solid black; padding: 10px; width: 600px">
+</div>
+
 I'd like to propose two dimensions on how to support these activities: infrastructure and incentives.
 
 
