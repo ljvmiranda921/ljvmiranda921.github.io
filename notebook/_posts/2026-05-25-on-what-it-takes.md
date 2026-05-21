@@ -55,8 +55,13 @@ Diskarte is difficult to translate into English because it can mean many things:
 There is this nice paper that talks about this at length, and I encourage anyone to read it.
 Personally, I see diskarte as the ability to achieve a goal under extreme constraints.
 
-[^2]: I really like the imagery of the jeepney to symbolize diskarte because my dad used to own and drive one (my wife also helped write the standard for the modern jeepney!), and I learned how to read by reading handpainted jeepney signs. 
+[^2]: I really like the imagery of the jeepney to symbolize diskarte because my dad used to own and drive one, and I learned how to read by reading handpainted jeepney signs. 
 
+Our NLP landscape is constrained in terms of both data and compute.
+Although there is a significant presence of Filipino speakers and it's well-represented in the internet: so few have transformed this resource into useful and high-quality datasets.
+This situation is even more pronounced in other Philippine languages.
+In addition, our compute situation (for both development and deployment) leaves a lot to be desired.
+We lack compute infrastructure to train LLMs and our internet and technology penetration is below our other ASEAN neighbors.
 
 
 
