@@ -102,9 +102,12 @@ How, then, can we support these types of activities?
 
 I'd like to propose two dimensions on how to support these activities: infrastructure and incentives.
 Infrastructure here can take two forms: *compute* grants that give people room to experiment, and *governance* structures with a central decision-maker to keep efforts coordinated.
-An example of the latter case (and probably just a search skill-issue on my end): it is **quite difficult to find what is the canonical National AI strategy for the Philippines**.
+The first one is quite self-explanatory.
+But I think the second one is much more important.
+For example (and probably just a search skill-issue on my end): it is **quite difficult to find what is the canonical National AI strategy for the Philippines**.
 The [OECD AI Policy Navigator](https://oecd.ai/en/dashboards/policy-initiatives/national-ai-strategy-roadmap-20-naisr-20) and [UNESCO](https://www.unesco.org/ethics-ai/en/philippines) points to [NAISR v2](https://naisr.cair.ph/) which is from DTI, but the website says it was superseded by another Philippine AI Strategy Roadmap by DOST. 
 Now, the only DOST-related roadmap I can find is this [slide deck](https://pcieerd.dost.gov.ph/wp-content/uploads/2026/01/Artificial_Intelligence_Roadmap_Dec15.pdf), but that can't be it, right?
+
 
 
 
