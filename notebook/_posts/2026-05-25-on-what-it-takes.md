@@ -37,19 +37,16 @@ Let me explain them in the following sections.
 > We can build Filipino-centric LLMs and contribute world-class language technologies because we have the 
 > unique qualities to do so: Diskarte, Sipag at Tiyaga, and Bayanihan. The challenge then is to create an environment that allows these qualities to flourish.
 
-<!-- The slides below are taken from the closing remarks of my talk (about 75% of the talk is on FilBench), but the text doesn't map to them one-to-one.
-Just think of this blog post as an extended version of those closing slides. -->
-
 <div style="text-align: center;">
   <img src="/assets/images/on-what-it-takes/summary.png" style="border: 1px solid black; padding: 10px; width: 600px">
 </div>
 
+The slides below are taken from the closing remarks of my talk (about 75% of the talk is about FilBench), but the text doesn't map to them one-to-one.
+Just think of this blog post as an extended version of those closing slides.
+
 
 [^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my [blog post](/projects/2025/08/21/filbench/), check the [leaderboard](https://huggingface.co/spaces/filbench/filbench-leaderboard), or read the [paper](https://aclanthology.org/2025.emnlp-main.127/)!
 
-&nbsp;
-&nbsp;
-&nbsp;
 
 ## Diskarte - achieving a goal under extreme constraints
 
@@ -91,7 +88,7 @@ I encourage you to read the survey paper, as I mention potential paths for impro
 
 There is a famous saying: "Pag may tiyaga, may nilaga."
 Perhaps the nearest English translation I can do is: "If the patience is true, you get a stew."[^3]
-I'd argue that most components of a language modeling recipe (especially in multilingual post-training) are more a test of patience than of sudden insight: 
+I'd argue that most components of a language modeling recipe (especially in multilingual post-training) are more a test of patience than genius insight: 
 collecting enough data through large-scale annotation or synthesis, 
 figuring out the right data mix across many ablations, 
 and ensuring the evals faithfully reflect the capabilities we care about.
@@ -99,8 +96,7 @@ How, then, can we support these types of activities?
 
 [^3]: The idea of course is that making a stew requires long cooking time where tough cuts of meat require hours of slow simmering to become tender.
 
-First, it is important to think about incentives.
-Research and engineering takes time.
+I'd like to propose two dimensions on how to support these activities:  infrastructure and incentives.
 
 
 
