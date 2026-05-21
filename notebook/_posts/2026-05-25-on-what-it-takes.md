@@ -64,6 +64,9 @@ In addition, our compute situation (for both development and deployment) leaves 
 We lack compute infrastructure to train LLMs and our internet and technology penetration is below our other ASEAN neighbors.
 
 I argue that a good way to proceed is similar to how we approached the jeepney: taking these innovations and adapting them into our local contexts through ingenuity and resourcefulness.
+Simply importing Silicon Valley approaches is not enough.
+I wrote about this at length in a recent survey paper, but one approach I'm exploring is careful synthetic data generation to fill the lack of training data.
+Synthetic data is now a common approach in training frontier language models, but I believe we can strip this down, add some ornaments and adjustments, in order for it to work on low-resource languages.
 
 
 
