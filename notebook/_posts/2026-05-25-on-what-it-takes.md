@@ -108,7 +108,11 @@ For example (and probably just a search skill-issue on my end): it is **quite di
 The [OECD AI Policy Navigator](https://oecd.ai/en/dashboards/policy-initiatives/national-ai-strategy-roadmap-20-naisr-20) and [UNESCO](https://www.unesco.org/ethics-ai/en/philippines) points to [NAISR v2](https://naisr.cair.ph/) which is from DTI, but the website says it was superseded by another Philippine AI Strategy Roadmap by DOST. 
 Now, the only DOST-related roadmap I can find is this [slide deck](https://pcieerd.dost.gov.ph/wp-content/uploads/2026/01/Artificial_Intelligence_Roadmap_Dec15.pdf), but that can't be it, right?
 
-
+On the brighter side, I feel quite optimistic on some teams scattered through government and academia.
+For example, the E-CAIR folks by Ma'am Erika are building task-specific systems and I see some members even publishing in *CL and ICML!
+I've also met some folks from AIM in Vienna [last year in ACL](/notebook/2025/08/01/field-report-acl25/), so there's some good investment there.
+I've also chatted with some undergraduate thesis groups in UST and PUP (and I still receive some e-mails about [calamanCy](/projects/2023/08/01/calamancy/)) so there's definitely some groups in the fringes and a loose network somehow.
+What I'm trying to ssay is that there is some talent who's willing na mag-tiyaga and do the hard parts, it's just a matter of having these efforts more coordinated and aligned.
 
 
 
