@@ -47,6 +47,9 @@ Just think of this blog post as an extended version of those closing slides. -->
 
 [^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my [blog post](/projects/2025/08/21/filbench/), check the [leaderboard](https://huggingface.co/spaces/filbench/filbench-leaderboard), or read the [paper](https://aclanthology.org/2025.emnlp-main.127/)!
 
+&nbsp;
+&nbsp;
+&nbsp;
 
 ## Diskarte - achieving a goal under extreme constraints
 
@@ -81,8 +84,8 @@ I encourage you to read the survey paper, as I mention potential paths for impro
 
 
 
-## Sipag at Tiyaga - how can we support open-ended and highly-experimental activities?
+## Sipag at Tiyaga - supporting hardwork and long-horizon activities
 
 
 
-## Bayanihan - what type of partnerships should take place to enable innovation?
+## Bayanihan - community-building and strong grassroots networks
