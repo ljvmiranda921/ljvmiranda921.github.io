@@ -13,7 +13,7 @@ description: |
     evolved, and the tools around us begin to change&mdash; including Jupyter
     Notebooks. In this three-part series I'll review the Notebook ecosystem
     and talk about my workflow.
-header-img: /assets/png/jupyter2020/axis_with_jupyter_forces.png
+header-img: /assets/images/jupyter-notebooks-in-2020/axis_with_jupyter_forces.png
 excerpt: |
     Love it or hate it, they're here to stay. The field of data science has
     evolved, and the tools around us begin to change&mdash; including Jupyter
@@ -68,7 +68,7 @@ technical challenges. I see this change as two-fold: we now need to support
 both the (1) demand for productionizing analyses and experiments, and the (2)
 rapid adoption of the Cloud.
 
-![](/assets/png/jupyter2020/axis.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/axis.png){:width="480px"}  
 **Figure**: A simplified framework on how to think about the advancements in  
 the data science process for the past years
 {: style="text-align: center;"}
@@ -92,7 +92,7 @@ infrastructure when managing our workloads. However, the previous Jupyter
 Notebook ecosystem, as much as it is a staple in the data scientist toolbox,
 isn't meant for these changes:
 
-![](/assets/png/jupyter2020/axis_with_jupyter.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/axis_with_jupyter.png){:width="480px"}  
 **Figure**: The Notebooks we know only cover a small domain of the data science
 ecosystem
 {: style="text-align: center;"}
@@ -123,7 +123,7 @@ three forces:
     hypotheses under controlled environments. Software written for analysis
     should be easily reused for prod.
 
-![](/assets/png/jupyter2020/axis_with_jupyter_forces.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/axis_with_jupyter_forces.png){:width="480px"}  
 **Figure**: The growth of the Notebook ecosystem is driven by these forces
 {: style="text-align: center;"}
 

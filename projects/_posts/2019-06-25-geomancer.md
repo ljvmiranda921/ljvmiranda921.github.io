@@ -6,7 +6,7 @@ category: projects
 comments: true
 author: "LJ MIRANDA"
 tags: [geospatial data, geomancer, gis, data science, bigquery, gcp, google cloud]
-header-img: /assets/png/geomancer/header.jpg
+header-img: /assets/images/geomancer/header.jpg
 description: |
     Talking about an open-source project I did at work!
 excerpt: |
@@ -24,7 +24,7 @@ Manila at the [Asian Institute of Management](https://www.aim.edu/) about
 library that I helped build. So I figured it best to talk about the project
 through my slides and give a deeper context to some of the library's design.
 
-![](/assets/png/geomancer/title.jpg){:width="560px"}  
+![](/assets/images/geomancer/title.jpg){:width="560px"}  
 {: style="text-align: center;"}
 
 ## Why build Geomancer?
@@ -35,7 +35,7 @@ us with tasks like wealth estimation, building detection, and hub estimation.
 However, a significant prerequisite involves getting useful machine learning
 features to train statistical models.[^1]
 
-![](/assets/png/geomancer/single_coord.png){:width="560px"}  
+![](/assets/images/geomancer/single_coord.png){:width="560px"}  
 {: style="text-align: center;"}
 
 
@@ -48,13 +48,13 @@ Most require extensive knowledge of geospatial tools like
 work well at scale: workflows can be complicated and costly in compute and
 storage.
 
-![](/assets/png/geomancer/scale.png){:width="560px"}  
+![](/assets/images/geomancer/scale.png){:width="560px"}  
 {: style="text-align: center;"}
 
 [Geomancer](https://github.com/thinkingmachines/geomancer/) aims to bridge that gap by providing a Python library and a framework
 to set up a geospatial feature engineering system.
 
-![](/assets/png/geomancer/geomancer.png){:width="560px"}  
+![](/assets/images/geomancer/geomancer.png){:width="560px"}  
 {: style="text-align: center;"}
 
 ## What can Geomancer do?
@@ -70,7 +70,7 @@ to **create features declaratively**. These are the building blocks of the
 library. For example, a spell can be a distance to the nearest point of interest (POI), the number of
 POIs within a set length, and more!
 
-![](/assets/png/geomancer/features.png){:width="560px"}  
+![](/assets/images/geomancer/features.png){:width="560px"}  
 {: style="text-align: center;"}
 
 For example, we want to get the distance to the nearest embassy for several points. We first transform our list of coordinates into a Pandas DataFrame, then define a spell from the `DistanceToNearest` primitive. Finally, we pass the name of the POI, the data warehouse source (more on that later), and the name of the resulting feature:
@@ -105,7 +105,7 @@ You can also serialize features into a JSON file for **sharing and
 reproducibility**.
 
 
-![](/assets/png/geomancer/repro.png){:width="560px"}  
+![](/assets/images/geomancer/repro.png){:width="560px"}  
 {: style="text-align: center;"}
 
 Suppose after our analysis, we realized that the distance to primary
@@ -158,13 +158,13 @@ their storage and compute capabilities. Currently, the library has drivers for
 BigQuery, [PostGIS](https://postgis.net/), and
 [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/index).
 
-![](/assets/png/geomancer/dwh.png){:width="560px"}  
+![](/assets/images/geomancer/dwh.png){:width="560px"}  
 {: style="text-align: center;"}
 
 And that's it for the library portion of [Geomancer!](https://github.com/thinkingmachines/geomancer) You can install `geomancer` via `pip`, and start casting spells your way! In the next section, I'll discuss the framework's architecture and layout. 
 It's an interesting read if you want to know more how we set up [Geomancer](https://github.com/thinkingmachines/geomancer) in [Thinking Machines](https://thinkingmachin.es).
 
-![](/assets/png/geomancer/sample2.png){:width="720px"}  
+![](/assets/images/geomancer/sample2.png){:width="720px"}  
 {: style="text-align: center;"}
 
 ## Architecture
@@ -177,7 +177,7 @@ database query writer. The Python library allows us to abstract away the need to
 write complicated SQL queries and spend time setting up and configuring
 databases.
 
-![](/assets/png/geomancer/architecture.png){:width="720px"}  
+![](/assets/images/geomancer/architecture.png){:width="720px"}  
 {: style="text-align: center;"}
 
 Starting from left to right:

@@ -11,7 +11,7 @@ description: |
     the Jupyter Notebook ecosystem and how I incorporate them in my workflow.
     I'll talk about what I like (and don't like) about them, and how I use them
     in my day-to-day.
-header-img: /assets/png/jupyter2020/everything.png
+header-img: /assets/images/jupyter-notebooks-in-2020/everything.png
 excerpt: |
     In the second part of this series, I'd like to explore some of the tools in
     the Jupyter Notebook ecosystem and how I incorporate them in my workflow.
@@ -33,7 +33,7 @@ identified (1) two directions of ecosystem growth, i.e, cloud adoption and
 software production, and (2) three forces of change driving the evolution of
 our tools, especially in the Jupyter Notebook ecosystem:
 
-![](/assets/png/jupyter2020/axis_with_jupyter_forces.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/axis_with_jupyter_forces.png){:width="480px"}  
 **Figure**: The growth of the Notebook ecosystem is driven by these forces
 {: style="text-align: center;"}
 
@@ -70,7 +70,7 @@ you get started immediately. Remember: there's no perfect tool, just the right
 one for your use-case. In the proceeding sections, I'll talk about how I
 incorporate them in my daily workflow.
 
-![](/assets/png/jupyter2020/experiment_on_the_cloud.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/experiment_on_the_cloud.png){:width="480px"}  
 {: style="text-align: center;"}
 
 |  | Recommendation |
@@ -149,7 +149,7 @@ practice the developer workflow outside the context of software engineering.
 There are also some external tools that I included because they work best
 alongside notebooks!
 
-![](/assets/png/jupyter2020/support_dev_workflow.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/support_dev_workflow.png){:width="480px"}  
 {: style="text-align: center;"}
 
 |                     | In Jupyter-ecosystem           | External                   |
@@ -183,7 +183,7 @@ of [nbstripout](https://github.com/kynan/nbstripout) and
 [nbdime](https://github.com/jupyter/nbdime).
 
 
-![](/assets/png/jupyter2020/support_dev_workflow_00.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/support_dev_workflow_00.png){:width="480px"}  
 {: style="text-align: center;"}
 
 The command-line tool [nbstripout](https://github.com/kynan/nbstripout) **strips
@@ -234,7 +234,7 @@ Cloud Storage. Versioning is only done from its descriptive filename (usually
 probably write about it in the future! 
 
 
-![](/assets/png/jupyter2020/support_dev_workflow_01.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/support_dev_workflow_01.png){:width="480px"}  
 {: style="text-align: center;"}
 
 Lastly, I'd like to discuss [nbdev](https://www.fast.ai/2019/12/02/nbdev/). It
@@ -300,7 +300,7 @@ identify three spaces for this use-case:
     expressiveness (since we're using Python) to quickly analye petabyte-scale
     datasets.
 
-![](/assets/png/jupyter2020/prototype_to_prod.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/prototype_to_prod.png){:width="480px"}  
 {: style="text-align: center;"}
 
 
@@ -337,7 +337,7 @@ tasks&mdash;except maybe some output artifacts, and (2) **production
 notebooks** that are "papermill-ready," well-parametrized, and can be
 readily-inserted in a data pipeline.
 
-![](/assets/png/jupyter2020/notebook_types.png){:width="520px"}  
+![](/assets/images/jupyter-notebooks-in-2020/notebook_types.png){:width="520px"}  
 {: style="text-align: center;"}
 
 Papermill is useful for data scientists if they want to rerun multiple
@@ -393,7 +393,7 @@ This means that even if I start with some ad-hoc and dirty analyses, I always
 need to update them so that I (or other people) can rerun them seamlessly and
 understand my methods in the future. To illustrate:
 
-![](/assets/png/jupyter2020/notebook_principles_01.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/notebook_principles_01.png){:width="480px"}  
 {: style="text-align: center;"}
 
 Lastly, I also have a **threshold of modularization**, where I determine if
@@ -454,7 +454,7 @@ the Cloud, tools that support the developer workflow, and lastly, tools that
 transform notebooks from a vector of analysis into components of production.
 
 
-![](/assets/png/jupyter2020/everything.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/everything.png){:width="480px"}  
 {: style="text-align: center;"}
 
 We also briefly described the difference between exploratory notebooks and

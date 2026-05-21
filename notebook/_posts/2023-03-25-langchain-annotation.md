@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [langchain, nlp, llm, data annotation, prodigy, natural language processing, chatgpt, gpt-j, gpt-3]
-header-img: /assets/png/langchain/header.png
+header-img: /assets/images/langchain/header.png
 description: |
     As an extension of my previous post on using LLMs to annotate argument
     mining datasets, I want to explore how we can incorporate annotation
@@ -34,7 +34,7 @@ more context and examples.
 > hope that they can improve the annotation process by providing more context and
 > examples.
 
-![](/assets/png/langchain/setup.png){:width="600px"}  
+![](/assets/images/langchain/setup.png){:width="600px"}  
 {:style="text-align: center;"}
 
 In this blog post, I want to focus on <u>argumentative sentence detection</u>:
@@ -100,7 +100,7 @@ and the model does not fail at performing the task. The figure below provides an
 overview of this process:
 
 
-![](/assets/png/langchain/refine.png){:width="700px"}  
+![](/assets/images/langchain/refine.png){:width="700px"}  
 {:style="text-align: center;"}
 
 1. **Split the document into smaller chunks.** I used LangChain's built-in spaCy
@@ -180,11 +180,11 @@ guidelines. From a qualitative inspection, these results make sense because the 
 from these guidelines denote a more stringent criteria for accepting statements as
 arguments:
 
-![](/assets/png/langchain/shnarch.png){:width="800px"}  
+![](/assets/images/langchain/shnarch.png){:width="800px"}  
 __Figure:__ Portion of annotation guidelines from [Shnarch et al. (2018)](#shnarch2018unsupervised)
 {:style="text-align: center;"}
 
-![](/assets/png/langchain/levy.png){:width="800px"}  
+![](/assets/images/langchain/levy.png){:width="800px"}  
 __Figure:__ Portion of annotation guidelines from [Levy et al. (2018)](#levy2018towards)
 {:style="text-align: center;"}
 
@@ -226,8 +226,8 @@ annotation guidelines and compare them against one another. We take one
 guideline as reference, the rest as predictions, and compute the F1-score. We
 then arrive at the graph below:
 
-![](/assets/png/langchain/cats_macro_auc.png){:width="350px"}
-![](/assets/png/langchain/cats_macro_f.png){:width="350px"}
+![](/assets/images/langchain/cats_macro_auc.png){:width="350px"}
+![](/assets/images/langchain/cats_macro_f.png){:width="350px"}
 {:style="text-align: center;"}
 
 It's interesting that for all cases, the [Stab et al. (2018)](#stab2018ukp)

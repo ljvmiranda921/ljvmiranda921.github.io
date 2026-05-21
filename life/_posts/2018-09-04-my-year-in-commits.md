@@ -16,7 +16,7 @@ tags: [github, contributions, software development, life, commits]
 As someone who's been working closely with software for the past two years, I'd
 say in **git commits**:
 
-![github](/assets/png/life/my-life-in-commits.png){:width="720px"}
+![github](/assets/images/my-year-in-commits/my-life-in-commits.png){:width="720px"}
 {: style="text-align: center;"}
 
 For those who aren't familiar with version-control systems (VCS), a git commit is
@@ -54,7 +54,7 @@ First, let's have a brief tour of my life in commits. I've included my commit
 history from January 2017 and added some annotations on significant life events
 during the past year:
 
-![github](/assets/png/life/my-life-in-commits-annot.png){:width="720px"}
+![github](/assets/images/my-year-in-commits/my-life-in-commits-annot.png){:width="720px"}
 {: style="text-align: center;"}
 
 

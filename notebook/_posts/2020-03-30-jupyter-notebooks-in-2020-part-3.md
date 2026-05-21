@@ -11,7 +11,7 @@ description: |
     In the final part of this series, I'd like to share my reflections and
     wishlist on the Jupyter Notebook ecosystem. Before I end, I'd like to thank
     you all for reading through and accompanying me in this journey!
-header-img: /assets/png/jupyter2020/everything.png
+header-img: /assets/images/jupyter-notebooks-in-2020/everything.png
 excerpt: |
     In the final part of this series, I'd like to share my reflections and
     wishlist on the Jupyter Notebook ecosystem. Before I end, I'd like to thank
@@ -33,7 +33,7 @@ systems&mdash; and three forces of change that push the Jupyter ecosystem
 forward (as represented by the purple arrows):
 
 
-![](/assets/png/jupyter2020/axis_with_jupyter_forces.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/axis_with_jupyter_forces.png){:width="480px"}  
 {: style="text-align: center;"}
 
 
@@ -45,7 +45,7 @@ more emphasis on writing production data systems. Given that, in [Part
 Two](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2), we explored
 various tools and extensions that helped bridge the gap:
 
-![](/assets/png/jupyter2020/everything.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/everything.png){:width="480px"}  
 {: style="text-align: center;"}
 
 [Part Two](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2) is chock-full
@@ -55,7 +55,7 @@ modularization**](/notebook/2020/03/16/jupyter-notebooks-in-2020-part-2/#putting
 where it allows one to decide when to highly-optimize a software artifact:
 
 
-![](/assets/png/jupyter2020/notebook_principles_01.png){:width="480px"}  
+![](/assets/images/jupyter-notebooks-in-2020/notebook_principles_01.png){:width="480px"}  
 {: style="text-align: center;"}
 
 As we close this series off, I'd like to give a short reflection on Jupyter

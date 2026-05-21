@@ -12,7 +12,7 @@ description: |
     brilliant masterpiece, it developed in me a profound appreciation of games
     as a vehicle for creative expression. Read more about my journey in scaling
     Celeste Mountain in this three-part series.
-header-img: /assets/png/celeste/celeste_boxart.png
+header-img: /assets/images/celeste/celeste_boxart.png
 excerpt: |
     Celeste is one of the most memorable games I've played this year. A
     brilliant masterpiece, it developed in me a profound appreciation of games
@@ -21,7 +21,7 @@ excerpt: |
 ---
 
 
-![](/assets/png/celeste/celeste_boxart.png){:width="560px"}
+![](/assets/images/celeste/celeste_boxart.png){:width="560px"}
 {: style="text-align: center;"}
 
 <span class="firstcharacter">C</span>eleste is one of the most memorable games I've played this year. A

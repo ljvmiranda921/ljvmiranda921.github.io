@@ -36,7 +36,7 @@ Similar with the other exercise, the CIFAR-10 dataset is also being utilized.
 As a simple way of sanity-checking, we load and visualize a subset of this
 training example as shown below:
 
-![CIFAR Sample](/assets/png/cs231n-svm/output_4_0.png){:width="560px"}  
+![CIFAR Sample](/assets/images/multiclass-svm/output_4_0.png){:width="560px"}  
 __Figure 1:__ _Samples of the CIFAR-10 Dataset_
 {: style="text-align: center;"}
 
@@ -77,7 +77,7 @@ plt.show()
 
 Visualizing the mean image leads us to this figure
 
-![CIFAR Sample](/assets/png/cs231n-svm/output_7_1.png){:width="280px"}  
+![CIFAR Sample](/assets/images/multiclass-svm/output_7_1.png){:width="280px"}  
 __Figure 2:__ _Visualization of mean image_
 {: style="text-align: center;"}
 
@@ -280,7 +280,7 @@ self.W += -learning_rate * grad
 We can then train our SVM classifier using gradient descent and plot the loss
 with respect to the number of iterations.
 
-![CIFAR Sample](/assets/png/cs231n-svm/output_19_0.png){:width="360px"}  
+![CIFAR Sample](/assets/images/multiclass-svm/output_19_0.png){:width="360px"}  
 __Figure 3:__ _Cost History during SVM training_
 {: style="text-align: center;"}
 
@@ -318,7 +318,7 @@ regularization_strengths = [1e4, 2e4, 3e4, 4e4, 5e4, 6e4, 7e4, 8e4, 1e5]
 We can then visualize our values so that we can observe the behavior of our
 hyperparameters:
 
-![CIFAR Sample](/assets/png/cs231n-svm/output_22_0.png){:width="560px"}  
+![CIFAR Sample](/assets/images/multiclass-svm/output_22_0.png){:width="560px"}  
 __Figure 4:__ _Hyperparameter accuracies in the test and validation sets_
 {: style="text-align: center;"}
 
@@ -328,7 +328,7 @@ Using the best set of hyperparameters that we have, we can then visualize the
 learned weights for each class. These weights can serve as "templates" for
 our classifier when comparing to a test example.
 
-![CIFAR Sample](/assets/png/cs231n-svm/output_24_0.png){:width="560px"}  
+![CIFAR Sample](/assets/images/multiclass-svm/output_24_0.png){:width="560px"}  
 __Figure 5:__ _Visualization of learned weights for a subset of the classes in CIFAR-10_
 {: style="text-align: center;"}
 

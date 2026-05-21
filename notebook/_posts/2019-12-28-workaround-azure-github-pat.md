@@ -20,7 +20,7 @@ should be easy because they already have a
 [Task](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/github-release?view=azure-devops)
 for it, but I encountered this annoying error in my builds:
 
-![](/assets/png/workaround-azure/annoying_error.png){:width="520px"}
+![](/assets/images/workaround-azure-github-pat/annoying_error.png){:width="520px"}
 {: style="text-align: center;"}
 
 > Error: Invalid Github service connection scheme: Token. Only OAuth and Github personal access token connections are allowed. 
@@ -39,7 +39,7 @@ There is an
 [Issue](https://github.com/microsoft/azure-pipelines-tasks/issues/11558) for
 it, but it's been open for almost three months!
 
-![](/assets/png/workaround-azure/github_issue.png){:width="520px"}
+![](/assets/images/workaround-azure-github-pat/github_issue.png){:width="520px"}
 {: style="text-align: center;"}
 
 Luckily, the conversation thread discovered a workaround: **create the service
@@ -64,7 +64,7 @@ Some notes on my case:
 - I didn't need to change the token expiry. Since you're going to use
     this once, you're free to set it at a nearer date.
 
-![](/assets/png/workaround-azure/create_access_token.png){:width="520px"}
+![](/assets/images/workaround-azure-github-pat/create_access_token.png){:width="520px"}
 {: style="text-align: center;"}
 
 After creating the token you need to **prepare it for the request** by (1) [base64
@@ -74,7 +74,7 @@ it and (2) copy-pasting it in your request body. In my case, I just used
 former does step 1 automatically. For Postman, simply go to the "Authorization"
 tab and fill-in your Username and Password (the generated token)
 
-![](/assets/png/workaround-azure/params.png)
+![](/assets/images/workaround-azure-github-pat/params.png)
 {: style="text-align: center;"}
 
 Then, you can now **send a POST request** to this endpoint:
@@ -102,7 +102,7 @@ personalaccesstoken` and not `using Personal Access Token` or `using Github
 Access Token`. It's really weird.
 
 
-![](/assets/png/workaround-azure/verify.png)
+![](/assets/images/workaround-azure-github-pat/verify.png)
 {: style="text-align: center;"}
 
 Hope it helps!

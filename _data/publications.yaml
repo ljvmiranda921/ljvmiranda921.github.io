@@ -1,7 +1,7 @@
 - title: "Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation"
   url: "https://arxiv.org/abs/2604.11290"
   venue: "Preprint '26"
-  image: "/assets/png/research/polyglot-teachers.png"
+  image: "/assets/images/research/polyglot-teachers.png"
   authors: "<u>Lester James V. Miranda</u>, Ivan Vulić, and Anna Korhonen"
   links:
     - label: Code
@@ -14,7 +14,7 @@
 - title: "Multilinguality at the Edge: Developing Language Models for the Global South"
   url: "https://arxiv.org/abs/2604.21637"
   venue: "Preprint '26"
-  image: "/assets/png/research/multilinguality-at-the-edge.png"
+  image: "/assets/images/research/multilinguality-at-the-edge.png"
   authors: "<u>Lester James V. Miranda</u>, Songbo Hu, Roi Reichart, and Anna Korhonen"
   links:
     - label: Code
@@ -25,7 +25,7 @@
 - title: "Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback"
   url: "https://aclanthology.org/2025.acl-long.355/"
   venue: "ACL '25 (work done as pre-doc at Ai2)"
-  image: "/assets/png/research/hybrid-preferences.png"
+  image: "/assets/images/research/hybrid-preferences.png"
   authors: '<u>Lester James V. Miranda</u><span class="eq">★</span>, Yizhong Wang<span class="eq">★</span>, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi'
   links:
     - label: Code
@@ -42,7 +42,7 @@
 - title: "M-RewardBench: Evaluating Reward Models in Multilingual Settings"
   url: "https://aclanthology.org/2025.acl-long.3/"
   venue: "ACL '25 (work done as part of Expedition Aya w/ Cohere Labs)"
-  image: "/assets/png/research/m-rewardbench.png"
+  image: "/assets/images/research/m-rewardbench.png"
   authors: 'Srishti Gureja<span class="eq">★</span>, <u>Lester James V. Miranda</u><span class="eq">★</span>, Shayekh bin Islam<span class="eq">★</span>, Rishabh Maheshwary<span class="eq">★</span>, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee'
   links:
     - label: Code

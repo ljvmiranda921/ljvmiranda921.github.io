@@ -29,7 +29,7 @@ Javascript is given if you're doing web development), but I will provide some
 of the codes below. But first, in order to understand the bigger picture of
 what we'll do, take a look at the diagram below:
 
-![Diagram](/assets/png/tuts/canvasjstogui.png){:width="560px"}  
+![Diagram](/assets/images/make-canvasjs-chart-from-mysql-data/canvasjstogui.png){:width="560px"}  
 __Figure:__ _Task Diagram_
 {: style="text-align: center;"}
 

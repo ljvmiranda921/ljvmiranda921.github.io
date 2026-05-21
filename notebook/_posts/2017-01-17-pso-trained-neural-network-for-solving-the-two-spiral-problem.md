@@ -79,7 +79,7 @@ __Table 1:__ _Parameters used in PSO Implementation_
 Here, I swept over different values for the social and cognitive components,
 and came up with this matrix:
 
-![Cmatrix for PSO params](/assets/png/nn/cmatrix.png){:width="320px"}    
+![Cmatrix for PSO params](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/cmatrix.png){:width="320px"}    
 __Figure 2:__ _Heat map for testing the social and cognitive parameters_
 {: style="text-align: center;"}
 
@@ -99,11 +99,11 @@ graph of the cost is traced. One can then see the differences in their
 behavior by looking on the convergence of the "mean best" with respect to the
 personal and global bests.
 
-![PSO Run for c1](/assets/png/nn/pso_r_test1_zeroc1.gif){:height="250px" width="320px"} ![PSO Run c2](/assets/png/nn/pso_r_test2_zeroc2.gif){:height="250px" width="320px"}  
+![PSO Run for c1](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test1_zeroc1.gif){:height="250px" width="320px"} ![PSO Run c2](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test2_zeroc2.gif){:height="250px" width="320px"}  
 __Figure 2:__ _Swarm behavior at when it is fully social (left) and fully cognitive (right)_
 {: style="text-align: center;"}
 
-![PSO Run for c1](/assets/png/nn/pso_r_test1_zeroc1.png){:height="250px" width="320px"} ![PSO Run c2](/assets/png/nn/pso_r_test2_zeroc2.png){:height="250px" width="320px"}  
+![PSO Run for c1](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test1_zeroc1.png){:height="250px" width="320px"} ![PSO Run c2](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test2_zeroc2.png){:height="250px" width="320px"}  
 __Figure 3:__ _Graph of the cost per iteration_
 {: style="text-align: center;"}
 

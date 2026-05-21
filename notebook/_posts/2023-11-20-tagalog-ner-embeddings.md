@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 filipino_nlp: true
-header-img: /assets/png/tagalog-ner-embeddings/header.png
+header-img: /assets/images/tagalog-ner-embeddings/header.png
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]
 description: |
     Lately, I've been thinking a lot about visualizing datasets, and good
@@ -39,14 +39,14 @@ When you hover over each point, you'll see the span text, its label, and a porti
 Feel free to explore around using the visualization tools from Plotly.
 
 
-<iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/png/tagalog-ner-embeddings/fig_all_points.html"></iframe>
+<iframe width="720" height="540" frameborder="0" scrolling="no" src="/assets/images/tagalog-ner-embeddings/fig_all_points.html"></iframe>
 
 <div align="center">
 __Figure:__ t-SNE plot for all entity labels in [TLUnified-NER](https://huggingface.co/ljvmiranda921/tlunified-ner).
 </div>
 
 
-<img src="/assets/png/tagalog-ner-embeddings/confusion.png" align="right" height="300">
+<img src="/assets/images/tagalog-ner-embeddings/confusion.png" align="right" height="300">
 
 ### LOC and ORG superclusters
 
@@ -77,7 +77,7 @@ I also want to share interesting clusters from examining all labels.
 I'm literally just spitballing here: there's nothing methodical aside from inspecting a few clusters and checking their neighbors.
 With that in mind, take these observations with a grain of salt.
 
-<img src="/assets/png/tagalog-ner-embeddings/example_nograles.svg" align="right" height="300">
+<img src="/assets/images/tagalog-ner-embeddings/example_nograles.svg" align="right" height="300">
 
 **Political clusters are intriguing.**
 There are some interesting neighborhoods that intrigued me.
@@ -85,7 +85,7 @@ For example, the *Nograles* cluster is isolated from most PER entities.
 Its closest PER cluster is *Arroyo*, and the majority of its neighboring clusters include *Mindanao*, *MILF*, and some cities near *Davao*.
 My hunch is that most news stories in the corpus were written during a time when [Prospero Nograles's](https://en.wikipedia.org/wiki/Prospero_Nograles) involvement in Davao and the Arroyo administration is apparent (he was the Speaker of the House).
 
-<img src="/assets/png/tagalog-ner-embeddings/example_politics.svg" align="right" height="300">
+<img src="/assets/images/tagalog-ner-embeddings/example_politics.svg" align="right" height="300">
 
 Now, we're entering speculative territory but it's cool that you can *at least* draw political lines during the 2004-2010 administration.
 Of course, it's hard to draw these lines because unlike the US, the Philippines has a multi-party system.
@@ -94,7 +94,7 @@ If you're looking for something more rigorous, I suggest reading the work of [Rh
 This led me to ask: can we predict shifts in political alliances from words alone?
 I think it is an interesting exercise&mdash; and especially challenging&mdash; given that political parties in the Philippines are not really defined by their ideologies.
 
-<img src="/assets/png/tagalog-ner-embeddings/example_bias_muslim.svg" align="right" height="300">
+<img src="/assets/images/tagalog-ner-embeddings/example_bias_muslim.svg" align="right" height="300">
 
 **Biases exist.**
 I also noticed clusters that might potentially be sources of bias when training models from this dataset.
@@ -113,7 +113,7 @@ These classes are mutually exclusive, i.e., I automatically assign them based on
 
 ### PER embeddings
 
-<iframe width="400" height="500" frameborder="0" scrolling="no" src="/assets/png/tagalog-ner-embeddings/fig_per_label_PER.html" align="right"></iframe> 
+<iframe width="400" height="500" frameborder="0" scrolling="no" src="/assets/images/tagalog-ner-embeddings/fig_per_label_PER.html" align="right"></iframe> 
 
 Most PER entities were categorized as plain, and it is mostly expected.
 Although I find it interesting that there is a sizeable amount of names made up of initials such as FVR for [Fidel V. Ramos](https://en.wikipedia.org/wiki/Fidel_V._Ramos) or GMA for [Gloria Macapagal Arroyo](https://en.wikipedia.org/wiki/Gloria_Macapagal_Arroyo).
@@ -124,11 +124,11 @@ It is customary to use initials to refer to prominent figures, such as President
 I have only scratched the surface on these entities, so feel free to explore around the interactive plot!
 
 
-<img src="/assets/png/tagalog-ner-embeddings/example_ph_map.svg" align="right" height="300">
+<img src="/assets/images/tagalog-ner-embeddings/example_ph_map.svg" align="right" height="300">
 
 ### LOC embeddings
 
-<iframe width="400" height="500" frameborder="0" scrolling="no" src="/assets/png/tagalog-ner-embeddings/fig_per_label_LOC.html" align="right"></iframe> 
+<iframe width="400" height="500" frameborder="0" scrolling="no" src="/assets/images/tagalog-ner-embeddings/fig_per_label_LOC.html" align="right"></iframe> 
 
 It is cool that if you squint hard enough, you can see cities in the Philippines arranged in their geographical location&mdash;based on their embeddings alone.
 Of course, there are still inconsistencies: Manila is located at the rightmost portion whereas Bulacan appears in the middle.
@@ -144,7 +144,7 @@ Perhaps these co-occurences caused some of the "geographical separation" we see 
 Might be fun to explore in the future!
 
 
-<iframe width="400" height="500" frameborder="0" scrolling="no" src="/assets/png/tagalog-ner-embeddings/fig_per_label_ORG.html" align="right"></iframe> 
+<iframe width="400" height="500" frameborder="0" scrolling="no" src="/assets/images/tagalog-ner-embeddings/fig_per_label_ORG.html" align="right"></iframe> 
 
 ### ORG embeddings
 

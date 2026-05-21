@@ -167,11 +167,11 @@ the following: `c_1 = c_2 = 1.5`, `swarmSize = 20`, `w = 0.5`, and `epsilon =
 in a 3D coordinate system, and made it into a GIF. Moreover, the proceeding
 chart shows the cost history of a single run.
 
-![Inverse Kinematics Simulation](/assets/png/ikpso/swarmMovement.gif){:width="560px"}  
+![Inverse Kinematics Simulation](/assets/images/inverse-kinematics-pso/swarmMovement.gif){:width="560px"}  
 __Figure 1:__ _Inverse Kinematics Simulation_
 {: style="text-align: center;"}
 
-![Cost History](/assets/png/ikpso/costHistory.png){:width="560px"}  
+![Cost History](/assets/images/inverse-kinematics-pso/costHistory.png){:width="560px"}  
 __Figure 2:__ _Cost History_
 {: style="text-align: center;"}
 

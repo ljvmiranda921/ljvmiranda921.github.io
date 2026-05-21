@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [vqgan, machine learning, research, deep learning, neural network, clip vqgan]
-header-img: /assets/png/vqgan/ai_art_collage.png
+header-img: /assets/images/clip-vqgan/ai_art_collage.png
 description: |
     Here's a list of all VQGAN implementations I found on the internet.
 excerpt: |

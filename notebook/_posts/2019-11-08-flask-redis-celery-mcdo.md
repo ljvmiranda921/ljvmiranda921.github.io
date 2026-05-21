@@ -12,13 +12,13 @@ description: |
     Celery, and Redis work together. I realized it's best
     to explain it through a fun comic on buying McNuggets
     in Mcdonalds!
-header-img: /assets/png/flask-celery-redis/header.png
+header-img: /assets/images/flask-redis-celery-mcdo/header.png
 excerpt: "Understanding Flask, Celery, and Redis through Mcdonalds"
 ---
 
 A few weeks ago, someone at work asked me: 
 
-![](/assets/png/flask-celery-redis/scene_00.svg)
+![](/assets/images/flask-redis-celery-mcdo/scene_00.svg)
 
 *Good question, And below is a longer version of my quick explanation back
 then.* There's a wealth of resources and tutorials out there, but they mostly
@@ -56,7 +56,7 @@ office building.
 Both serve delicious McNuggets, but *man*, <u>I hate buying from the one near
 my apartment.</u> The reason? **The lines are too slow and long**. 
 
-![](/assets/png/flask-celery-redis/scene_01.svg)
+![](/assets/images/flask-redis-celery-mcdo/scene_01.svg)
 
 My usual order is a 6-pc.  Chicken McNuggets. They don't take a long time to
 prepare, but because there's only one person who takes my order and processes
@@ -64,7 +64,7 @@ it, my ordering time is affected by anyone who has lined-up before me. So if
 someone orders a ton (more food to prepare) during their turn, then I'm in for
 a waiting game.
 
-![](/assets/png/flask-celery-redis/scene_02.svg)
+![](/assets/images/flask-redis-celery-mcdo/scene_02.svg)
 
 > In the Mcdo near my apartment: I need to wait for everyone who lined-up
 > before me to finish and get their orders before I can start with mine.
@@ -72,7 +72,7 @@ a waiting game.
 **Now**, the Mcdo near our office has solved this problem with a nifty trick: 
 
 
-![](/assets/png/flask-celery-redis/scene_03.svg)
+![](/assets/images/flask-redis-celery-mcdo/scene_03.svg)
 
 First they take my order, but they don't process it in front of me right away.
 Instead, they give me a *reference number* so that I can check the status of
@@ -127,13 +127,13 @@ In the Mcdonalds near our office, there are three major components that are in p
     behind it. Think of it as a large, invisible table that stores whatever the
     LED screen displays.
 
-![](/assets/png/flask-celery-redis/cashier.svg)
+![](/assets/images/flask-redis-celery-mcdo/cashier.svg)
 
 All in all, we see that these components relate to one another via the
 illustration below:
 
 <!-- Insert illustration of the system architecture here -->
-![](/assets/png/flask-celery-redis/task_queue_01.svg){:width="520px"}
+![](/assets/images/flask-redis-celery-mcdo/task_queue_01.svg){:width="520px"}
 {: style="text-align: center;"}
 
 1. The customer talks to the cashier to place their order.
@@ -153,7 +153,7 @@ manner.
 
 ## Stepping-out of Mcdonalds
 
-![](/assets/png/flask-celery-redis/land_of_abstraction.svg){:width="360px"}
+![](/assets/images/flask-redis-celery-mcdo/land_of_abstraction.svg){:width="360px"}
 {: style="text-align: center;"}
 
 
@@ -161,7 +161,7 @@ Ok, so we're out of Mcdonalds. Let's stop thinking about cashiers and LED
 screens and start thinking in more abstract components. Here's the same task
 queue but from the Land of Abstraction:
 
-![](/assets/png/flask-celery-redis/task_queue_02.svg){:width="520px"}
+![](/assets/images/flask-redis-celery-mcdo/task_queue_02.svg){:width="520px"}
 {: style="text-align: center;"}
 
 
@@ -203,7 +203,7 @@ is web backend dev (on this case, put question marks)-->
 
 This should be simple now, so here's ye old switcheroo!
 
-![](/assets/png/flask-celery-redis/switcheroo.svg){:width="360px"}
+![](/assets/images/flask-redis-celery-mcdo/switcheroo.svg){:width="360px"}
 {: style="text-align: center;"}
 
 
@@ -219,7 +219,7 @@ task queue to their web backend counterpart. To see them in action, let's look a
 the illustration below:
 
 <!-- Insert illustration of the system architecture here -->
-![](/assets/png/flask-celery-redis/task_queue_03.svg){:width="520px"}
+![](/assets/images/flask-redis-celery-mcdo/task_queue_03.svg){:width="520px"}
 {: style="text-align: center;"}
 
 * **Flask Application**. This the web application that accepts requests
@@ -293,7 +293,7 @@ light on backend web development, please let me know of any concepts I've
 missed in this Distill!
 
 
-![](/assets/png/flask-celery-redis/something_new.svg){:width="420px"}
+![](/assets/images/flask-redis-celery-mcdo/something_new.svg){:width="420px"}
 {: style="text-align: center;"}
 
 #### Changelog

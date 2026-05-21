@@ -22,7 +22,7 @@ excerpt: |
 watching a [tutorial](https://www.youtube.com/watch?v=abrcJ9MpF60), then
 gave up and went to StackOverflow until I found this expression:
 
-![](/assets/png/finite-state-automata/email_regex.png)
+![](/assets/images/finite-state-automata/email_regex.png)
 
 I know better now that I can write regex for simple cases, but still, these
 patterns feel like sorcery. Little did I know that they'll be back to haunt me.
@@ -42,7 +42,7 @@ of natural language such as their morphology (word structure), syntax, and phono
     languages. You can check out the chart below to see how each concept relates
     to the other:
 
-    ![](/assets/png/finite-state-automata/concepts.png)
+    ![](/assets/images/finite-state-automata/concepts.png)
 
 
 
@@ -62,7 +62,7 @@ baaa!
 There's not much variety here. Fortunately for us, we can model the entirety of
 *Sheeptalk* with this simple regular expression, `baa+!`:
 
-![](/assets/png/finite-state-automata/sheeptalk_regex.png){:width="550px"}  
+![](/assets/images/finite-state-automata/sheeptalk_regex.png){:width="550px"}  
 {:style="text-align: center;"}
 
 As we'll see later, regex isn't just a metalanguage for searching and matching
@@ -80,7 +80,7 @@ states and their transitions.  We usually draw them as a directed graph, where
 the states are denoted by nodes, and transitions by their vertices. The FSA
 equivalent of *Sheeptalk* is seen below:
 
-![](/assets/png/finite-state-automata/sheeptalk_fsa.png){:width="500px"}  
+![](/assets/images/finite-state-automata/sheeptalk_fsa.png){:width="500px"}  
 {:style="text-align: center;"}
 
 <!-- describe it a bit: how many states? start state and end state -->
@@ -194,7 +194,7 @@ tape**) is an instance of the automaton's language. We do that
 through an algorithm called **D-RECOGNIZE** (short for "deterministic
 recognizer"). 
 
-![](/assets/png/finite-state-automata/fsa_process.gif){:width="800px"}  
+![](/assets/images/finite-state-automata/fsa_process.gif){:width="800px"}  
 {:style="text-align: center;"}
 
 D-RECOGNIZE takes an input tape and an FSA as its arguments and returns an
@@ -261,7 +261,7 @@ to ultimately "reject" it.
 Finite state automata is a good way to understand word structure or **morphology**.
 As a motivating example, consider the FSA below:
 
-![](/assets/png/finite-state-automata/english_morphology.png){:width="720px"}  
+![](/assets/images/finite-state-automata/english_morphology.png){:width="720px"}  
 {:style="text-align: center;"}
 
 Observe how the symbols in our finite state automaton aren't single characters.

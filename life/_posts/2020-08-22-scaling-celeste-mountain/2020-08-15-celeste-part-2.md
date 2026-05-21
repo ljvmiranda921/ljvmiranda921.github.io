@@ -10,7 +10,7 @@ description: |
     In the second part of this series, we'll look into how Celeste's gameplay
     and musical elements underscore its overall narrative. Here, we see how
     Celeste achieves harmony between its ludic and storytelling components.
-header-img: /assets/png/celeste/summit_climb.jpg
+header-img: /assets/images/celeste/summit_climb.jpg
 excerpt: |
     In the second part of this series, we'll look into how Celeste's gameplay
     and musical elements underscore its overall narrative. Here, we see how
@@ -18,7 +18,7 @@ excerpt: |
 ---
 
 
-![](/assets/png/celeste/summit_climb.jpg){:width="560px"}
+![](/assets/images/celeste/summit_climb.jpg){:width="560px"}
 {: style="text-align: center;"}
 
 > Celeste is one of the most memorable games I've played this year. A
@@ -62,7 +62,7 @@ Before we start, I'd like to talk about how difficult Celeste is! I mean, look
 at this screen:
 
 <!-- show a difficult screen from Chapter 3 -->
-![](/assets/png/celeste/difficult_screen.webp){:width="560px"}  
+![](/assets/images/celeste/difficult_screen.webp){:width="560px"}  
 **Dust Bunnies**: Players like me will encounter a difficulty spike in Chapter 3. On this screen, I'm not allowed to touch the black blobs. Moreover, touching a floor or wall once will generate new blobs, preventing me to backtrack.
 {: style="text-align: center;"}
 
@@ -103,7 +103,7 @@ think about things in the future. At first I thought of it as limiting and
 crippling, especially given the insurmountable Mountain called Life that I need
 to face.
 
-![](/assets/png/celeste/i_cannot_do_this.jpg){:width="560px"}  
+![](/assets/images/celeste/i_cannot_do_this.jpg){:width="560px"}  
 {: style="text-align: center;"}
 
 
@@ -120,7 +120,7 @@ Celeste's platforming puzzles, I know I can clear it given my limited moveset.
 Celeste is self-aware of its difficulty. A key giveaway is the death counter
 prominently shown at the end of each level, and some notes such as:
 
-![](/assets/png/celeste/be_proud_death_count.jpg){:width="560px"}  
+![](/assets/images/celeste/be_proud_death_count.jpg){:width="560px"}  
 **Be proud of your death count**: Celeste knows that it's hard, and yes you'll die a lot&mdash; but these small touches helped lighten the mood and shift my perspective
 {: style="text-align: center;"}
 
@@ -154,7 +154,7 @@ I see those spike-covered floors, moving dust-bunnies, and strong winds in one
 screen. However, because the game has patiently taught me its mechanics as I
 progress, I instead find them more manageable.
 
-![](/assets/png/celeste/celeste_mechanics_intense.webp){:width="560px"}  
+![](/assets/images/celeste/celeste_mechanics_intense.webp){:width="560px"}  
 {: style="text-align: center;"}
 
 In the end, Celeste's mechanics allows the player to experience Madeline's
@@ -173,7 +173,7 @@ this time it feels more doable&mdash; it's all because you failed, you learned,
 and you tried again. 
 
 
-![](/assets/png/celeste/summit_climb.jpg){:width="560px"}
+![](/assets/images/celeste/summit_climb.jpg){:width="560px"}
 {: style="text-align: center;"}
 
 
@@ -198,7 +198,7 @@ The first few minutes of the game introduce us to two recurring
 melodies: the sound of struggle in the [*Prologue*](https://musescore.com/deanshin/scores/5485243), and the main theme in [*First
 Steps*](https://musescore.com/deanshin/first-steps---celeste). 
 
-![](/assets/png/celeste/celeste_prologue.webp){:width="560px"}  
+![](/assets/images/celeste/celeste_prologue.webp){:width="560px"}  
 {: style="text-align: center;"}
 
 I'm hesitant to label *Prologue*'s melody as a motif because its callback only
@@ -207,7 +207,7 @@ in the middle of escaping a crumbling bridge. The fast tempo denotes the idea
 of the struggle, the intensity increases, then it ends with a falling sound.
 
 
-![](/assets/png/celeste/prologue_part_2.png){:width="560px"}  
+![](/assets/images/celeste/prologue_part_2.png){:width="560px"}  
 {: style="text-align: center;"}
 <p align="center">
 <iframe width="560" height="200" src="https://www.youtube.com/embed/Ctuo3ws3EKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
@@ -225,7 +225,7 @@ exact notes and descending tone ingrained the feeling of failure amidst the
 struggle. 
 
 
-![](/assets/png/celeste/celeste_prologue_bridge.webp){:width="560px"}  
+![](/assets/images/celeste/celeste_prologue_bridge.webp){:width="560px"}  
 **First blood**: My first death in the game came from this crumbling bridge 
 {: style="text-align: center;"}
 
@@ -236,9 +236,9 @@ throughout the game.
 The first level&mdash;and coincidentally its soundtrack, *First Steps*&mdash;
 introduces us to the main theme:
 
-![](/assets/png/celeste/sheet_first_steps_01.png){:width="560px"}  
-![](/assets/png/celeste/sheet_first_steps_02.png){:width="560px"}  
-![](/assets/png/celeste/sheet_first_steps_03.png){:width="560px"}  
+![](/assets/images/celeste/sheet_first_steps_01.png){:width="560px"}  
+![](/assets/images/celeste/sheet_first_steps_02.png){:width="560px"}  
+![](/assets/images/celeste/sheet_first_steps_03.png){:width="560px"}  
 {: style="text-align: center;"}
 <p align="center">
 <iframe width="560" height="200" src="https://www.youtube.com/embed/N8OHSXvneOE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
@@ -277,7 +277,7 @@ first song where Madeline's piano is played with another instrument). She is
 accompanied by a guitar, and they play her theme in a harmonious fashion.
 
 
-![](/assets/png/celeste/madeline_theo.gif){:width="560px"}  
+![](/assets/images/celeste/madeline_theo.gif){:width="560px"}  
 {: style="text-align: center;"}
 <p align="center">
 <iframe width="560" height="200" src="https://www.youtube.com/embed/__oZ-LYZ8pU?playlist=dTIeaqNXseY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
@@ -301,7 +301,7 @@ We also hear the synth, representing Badeline, throughout the game. It tries to
 overpower Madeline's theme (and her instrument), in a goth-like chiptune
 repertoire&mdash;perfectly apt for a boss battle.
 
-![](/assets/png/celeste/epic_chase_scene.webp){:width="560px"}  
+![](/assets/images/celeste/epic_chase_scene.webp){:width="560px"}  
 {: style="text-align: center;"}
 <p align="center">
 <iframe width="560" height="200" src="https://www.youtube.com/embed/b_oEDGONSc4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
@@ -335,7 +335,7 @@ seems to tell me: "Yes, this is going to be difficult, but this time around,
 you can do this." 
 
 
-![](/assets/png/celeste/celeste_ready_pink.gif){:width="560px"}  
+![](/assets/images/celeste/celeste_ready_pink.gif){:width="560px"}  
 {: style="text-align: center;"}
 <p align="center">
 <iframe width="560" height="200" src="https://www.youtube.com/embed/iDVM9KED46Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
@@ -363,7 +363,7 @@ a high-beat, perfect symphony of Madeline and Badeline's instruments&mdash;
 all combined to pack the perfect gameplay experience of a lifetime.
 
 
-![](/assets/png/celeste/celeste_summit_pixelart.jpg){:width="560px"}  
+![](/assets/images/celeste/celeste_summit_pixelart.jpg){:width="560px"}  
 {: style="text-align: center;"}
 
 

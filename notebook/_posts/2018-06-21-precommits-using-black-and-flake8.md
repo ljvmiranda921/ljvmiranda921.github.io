@@ -39,7 +39,7 @@ In this short post, I'll describe how I created a pre-commit pipeline in
 [pre-commit](https://github.com/pre-commit/pre-commit) Python framework. The
 entire pipeline looks like this:
 
-![Diagram](/assets/png/tuts/precommit_pipeline.png){:width="640px"}  
+![Diagram](/assets/images/precommits-using-black-and-flake8/precommit_pipeline.png){:width="640px"}  
 __Figure:__ _Pre-commit pipeline with `black` and `flake8` for checking my `.py` files_
 {: style="text-align: center;"}
 
@@ -159,14 +159,14 @@ page](https://pyswarms.readthedocs.io/en/development/contributing.html#get-start
 I explicitly mentioned to use pre-commits (or run flake8 and black on their code
 manually) before submitting a Pull Request.
 
-![Diagram](/assets/png/tuts/precommit_pipeline.png){:width="640px"}  
+![Diagram](/assets/images/precommits-using-black-and-flake8/precommit_pipeline.png){:width="640px"}  
 __Figure:__ _Pre-commit pipeline with `black` and `flake8` for checking my `.py` files_
 {: style="text-align: center;"}
 
 Now that we have a pre-commit framework set-up with black and flake8, let's see
 it in action! Here we'll see how black formats a Python file automagically: 
 
-![Diagram](/assets/png/tuts/precommit_demo.gif){:width="640px"}  
+![Diagram](/assets/images/precommits-using-black-and-flake8/precommit_demo.gif){:width="640px"}  
 __Figure:__ _Short demo on pre-commit hooks_
 {: style="text-align: center;"}
 

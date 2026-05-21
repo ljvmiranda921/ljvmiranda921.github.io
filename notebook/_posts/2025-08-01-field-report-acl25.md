@@ -7,7 +7,7 @@ category: notebook
 comments: true
 author: "LJ MIRANDA"
 published: true
-header-img: /assets/png/field-report-acl25/header.png
+header-img: /assets/images/field-report-acl25/header.png
 tags:
   [
     nlp,
@@ -33,7 +33,7 @@ Attending ACL was also a great way to immerse myself in the broader NLP communit
 
 ## Works I presented during the conference
 
-![](/assets/png/field-report-acl25/presentations.png){:width="720px"}
+![](/assets/images/field-report-acl25/presentations.png){:width="720px"}
 {: style="text-align: center;"}
 
 Self-promotion: I had four papers accepted in the ACL Main Proceedings, three of which I was the first or co-first author on (all in the Resources & Evaluation track):
@@ -77,7 +77,7 @@ Honorable mentions:
 
 ## Miscellaneous
 
-![](/assets/png/field-report-acl25/socials.png){:width="720px"}
+![](/assets/images/field-report-acl25/socials.png){:width="720px"}
 {: style="text-align: center;"}
 
 - **I attended the SEACrowd Birds-of-a-Feather (BoF) session!** Finally, I've met my long-time collaborators.
@@ -109,5 +109,5 @@ I admit I haven't been writing in this blog recently (although in general, I've 
 Hoping to write more field reports in the future!
 _And finally, some photos of my post-conference trip:_
 
-![](/assets/png/field-report-acl25/places.png){:width="800px"}
+![](/assets/images/field-report-acl25/places.png){:width="800px"}
 {: style="text-align: center;"}

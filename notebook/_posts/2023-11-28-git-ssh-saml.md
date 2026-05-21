@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 tags: [git, github, saml, sso, ssh, how to]
-header-img: /assets/png/headers-only/header-saml.png
+header-img: /assets/images/git-ssh-saml/header-saml.png
 description: |
     While cloning a repository from an organization, I encountered an SSH error that I've never seen before.
     It's something related to SAML SSO. I managed to solve it, so I'm documenting the steps here. Hope it helps you too!

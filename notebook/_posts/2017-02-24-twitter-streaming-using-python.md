@@ -44,7 +44,7 @@ If you don't have a [Twitter](https://twitter.com/) account, make one. Once
 you're done, head over to https://apps.twitter.com/ and "Create a New App."
 You will then see a similar form below:
 
-![Create New App Form](/assets/png/tuts/twitter/create.PNG){:width="560px"}  
+![Create New App Form](/assets/images/twitter-streaming-using-python/create.PNG){:width="560px"}  
 __Figure 1:__ _Create New Application Form_
 {: style="text-align: center;"}
 
