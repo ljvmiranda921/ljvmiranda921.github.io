@@ -113,7 +113,7 @@ On the brighter side, I feel quite optimistic about some of the teams scattered 
 For example, E-CAIR has built task-specific systems, and I've seen some of their members publishing in *CL and ICML!
 I also met some folks from AIM [last year in Vienna at ACL](/notebook/2025/08/01/field-report-acl25/), so there's good investment happening there too.
 And I've chatted with a few undergraduate thesis groups in UST and PUP (and I still get the occasional e-mail about [calamanCy](/projects/2023/08/01/calamancy/)), so there's clearly a loose network of groups working on the fringes.
-What I'm trying to say is that there is talent here willing na mag-tiyaga and do the hard parts&mdash;it's just a matter of getting these efforts more coordinated and aligned.
+What I'm trying to say is that there is talent here willing to do the hard parts&mdash;it's just a matter of getting these efforts more coordinated and aligned.
 
 ## Bayanihan - collective action to achieve a goal
 
