@@ -16,7 +16,7 @@ excerpt: |
 ---
 
 <span class="firstcharacter">L</span>ast Saturday, I gave a talk at the Analytics & AI Association of the Philippines (AAP) on the topic of Philippine language model evaluation, specifically on [FilBench](/projects/2025/08/21/filbench/).[^1]
-The purpose of the meetup was really to figure out if (1) we can build and (2) what it entails in building a "Philippine LLM."
+The purpose of the meetup was really to figure out (1) whether we can build a "Philippine LLM" and (2) what doing so would entail.
 I had some experience building open language models back in my previous work, and my research on multilinguality is directly related, so I was able to share my thoughts and experiences.
 
 To preface: the answer to the question of "can we actually build Filipino-centric LLMs?" is definitely **YES**.
@@ -25,9 +25,9 @@ However, the challenges are two-fold:
 
 1. Building Filipino-centric LLMs **does not entail applying Silicon Valley approaches to our local contexts**. The capital difference is vast and the ecosystem is different. It's better to look into how our neighbors (geographically and economically) are doing it, such as Malaysia or Africa.
 
-2. Figuring out real needs is paramount to **avoid this project in becoming a vanity training exercise.** If the use-case can be solved by the next ChatGPT or Claude release, then maybe it's not worth it to go deeper than the application layer. 
+2. Figuring out real needs is paramount to **prevent the project from becoming a vanity training exercise.** If the use-case can be solved by the next ChatGPT or Claude release, then maybe it's not worth going deeper than the application layer. 
 
-    Recently, there's a lot of talk about retaining ownership over the whole LM development pipeline, hence the proliferation of sovereign LLMs. It's a common motivation, but I'm not yet well-versed into this topic. The point is: are we buildling this to fulfill a business need? to include more Philippine languages? to own the LM development stack?
+    Recently, there's been a lot of talk about retaining ownership over the whole LM development pipeline, hence the proliferation of sovereign LLMs. It's a common motivation, but I'm not yet well-versed in this topic. The point is: are we building this to fulfill a business need? To include more Philippine languages? To own the LM development stack?
 
 So can we build Filipino-centric LLMs and contribute world-class technologies? My answer is **YES**, because we Filipinos have the unique qualities and values to do so.
 The next step then is to provide an environment where these qualities will flourish. 
@@ -35,7 +35,7 @@ These qualities are: Diskarte, Sipag at Tiyaga, and Bayanihan.
 Let me explain them in the following sections.
 
 > We can build Filipino-centric LLMs and contribute world-class technologies because we have the 
-> unique qualities to do so: diskarte, sipag at tiyaga, and bayanihan.
+> unique qualities to do so: Diskarte, Sipag at Tiyaga, and Bayanihan.
 
 
 [^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my blog post, check the leaderboard, or read the paper!
