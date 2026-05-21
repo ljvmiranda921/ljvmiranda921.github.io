@@ -81,14 +81,14 @@ We [lack the compute infrastructure](https://epoch.ai/data/gpu-clusters?view=map
 I argue that the **best way to innovate is similar to how we approached the jeepney**: taking these innovations from the Global North and adapting them to our local contexts through ingenuity and resourcefulness.
 Simply importing Silicon Valley approaches is not enough.
 I wrote about this at length in a recent [survey paper](https://arxiv.org/abs/2604.21637), but one approach I'm currently exploring is careful synthetic data generation to address the lack of training data.
-Synthetic data is now a common approach in training frontier language models, but I believe we can strip it down and add some ornaments and adjustments to make it work for low-resource languages.
+Synthetic data is now a common approach in training frontier language models, but I believe we can strip it down and, similar to the jeepney, add some ornaments / adjustments to make it work for low-resource languages.
 I encourage you to read the survey paper, as I mention potential paths for improvement such as creating task-specific small language models, deploying models at the edge, and improving a model's capabilities through a robust set of harnesses. 
 
 
 ## Sipag at Tiyaga - supporting sustained effort through time
 
 There is a famous saying: "Pag may tiyaga, may nilaga."
-Perhaps the nearest English translation I can do is: "If the patience is true, you get a stew."[^3]
+Perhaps the nearest English translation I can do is: "If the patience is true, you'll get a stew."[^3]
 I'd argue that most components of a language modeling recipe (especially in multilingual post-training) are more a test of patience than flashes of insight: 
 collecting enough data through large-scale annotation or synthesis, 
 figuring out the right data mix across many ablations, 
@@ -105,7 +105,7 @@ I'd like to propose two dimensions on how to support these activities: infrastru
 Infrastructure here can take two forms: *compute* grants that give people room to experiment, and *governance* structures with a central decision-maker to keep efforts coordinated.
 The first one is quite self-explanatory.
 But I think the second one is much more important.
-For example (and probably just a search skill-issue on my end): it is **quite difficult to find what is the canonical National AI strategy for the Philippines**.
+For example: it is **quite difficult to find what is the canonical National AI strategy for the Philippines**.
 The [OECD AI Policy Navigator](https://oecd.ai/en/dashboards/policy-initiatives/national-ai-strategy-roadmap-20-naisr-20) and [UNESCO](https://www.unesco.org/ethics-ai/en/philippines) points to [NAISR v2](https://naisr.cair.ph/) which is from DTI, but the website says it was superseded by another Philippine AI Strategy Roadmap by DOST. 
 Now, the only DOST-related roadmap I can find is this [slide deck](https://pcieerd.dost.gov.ph/wp-content/uploads/2026/01/Artificial_Intelligence_Roadmap_Dec15.pdf), but that can't be it, right?
 
