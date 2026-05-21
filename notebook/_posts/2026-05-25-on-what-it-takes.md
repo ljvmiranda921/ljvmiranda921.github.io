@@ -46,8 +46,8 @@ Let me explain them in the following sections.
 After World War 2, 
 
 
-## Sipag at Tiyaga
+## Sipag at Tiyaga - how can we support open-ended and highly-experimental activities?
 
 
 
-## Bayanihan
+## Bayanihan - what type of partnerships should take place to enable innovation?
