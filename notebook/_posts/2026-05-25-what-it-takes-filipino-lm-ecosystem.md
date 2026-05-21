@@ -15,7 +15,7 @@ description: |
 excerpt: |
 ---
 
-<span class="firstcharacter">L</span>ast Saturday, I gave a talk at the Analytics & AI Association of the Philippines (AAP) on the topic of Philippine language model evaluation, specifically on [FilBench](/projects/2025/08/21/filbench/).
+<span class="firstcharacter">L</span>ast Saturday, I gave a talk at the Analytics & AI Association of the Philippines (AAP) on the topic of Philippine language model evaluation, specifically on [FilBench](/projects/2025/08/21/filbench/).[^1]
 The purpose of the meetup was really to figure out if (1) we can build and (2) what it entails in building a "Philippine LLM."
 I had some experience building open language models back in my previous work, and my research on multilinguality is directly related, so I was able to share my thoughts and experiences.
 
@@ -38,3 +38,4 @@ Let me explain them in the following sections.
 > unique qualities to do so: diskarte, sipag at tiyaga, and bayanihan.
 
 
+[^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my blog post, check the leaderboard, or read the paper!
