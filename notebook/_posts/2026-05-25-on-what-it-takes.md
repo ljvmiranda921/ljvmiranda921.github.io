@@ -63,6 +63,10 @@ This situation is even more pronounced in other Philippine languages.
 In addition, our compute situation (for both development and deployment) leaves a lot to be desired.
 We lack compute infrastructure to train LLMs and our internet and technology penetration is below our other ASEAN neighbors.
 
+I argue that a good way to proceed is similar to how we approached the jeepney: taking these innovations and adapting them into our local contexts through ingenuity and resourcefulness.
+
+
+
 
 
 
