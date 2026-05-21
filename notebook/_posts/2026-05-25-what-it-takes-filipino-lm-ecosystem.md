@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "What it takes to build Filipino-Centric Language Models"
+title: "The Filipino qualities we need to build world-class language technologies"
 date: 2026-05-25
 category: notebook
 comments: true
