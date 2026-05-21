@@ -88,7 +88,7 @@ I encourage you to read the survey paper, as I mention potential paths for impro
 
 There is a famous saying: "Pag may tiyaga, may nilaga."
 Perhaps the nearest English translation I can do is: "If the patience is true, you get a stew."[^3]
-I'd argue that most components of a language modeling recipe (especially in multilingual post-training) are more a test of patience than genius insight: 
+I'd argue that most components of a language modeling recipe (especially in multilingual post-training) are more a test of patience than flashes of insight: 
 collecting enough data through large-scale annotation or synthesis, 
 figuring out the right data mix across many ablations, 
 and ensuring the evals faithfully reflect the capabilities we care about.
@@ -96,7 +96,8 @@ How, then, can we support these types of activities?
 
 [^3]: The idea of course is that making a stew requires long cooking time where tough cuts of meat require hours of slow simmering to become tender.
 
-I'd like to propose two dimensions on how to support these activities:  infrastructure and incentives.
+I'd like to propose two dimensions on how to support these activities: infrastructure and incentives.
+
 
 
 
