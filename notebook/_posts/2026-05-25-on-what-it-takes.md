@@ -168,7 +168,7 @@ So what are these qualities? In my opinion, they are:
 2. Sipag at Tiyaga (hard work and patience on long-horizon tasks)
 3. Bayanihan (uniting around a shared goal)
 
-I then walked through how each quality maps to a specific technological or governance challenge in building LLMs. 
+I then walked through specific challenges in building LLMs where each of these qualities shines. 
 Ultimately, I believe that to build Filipino-centric LMs, we need to create an environment where these qualities can flourish.
 
 I wrote more about my thoughts in a blog post (linked in the comments). Would love to discuss this further, just reach out :)  -->
