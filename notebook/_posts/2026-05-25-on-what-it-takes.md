@@ -167,7 +167,7 @@ The ball simply needs to get rolling.
 
 <!-- For LI:
 
-I was invited to give a talk at the AI & Analytics Association of the Philippines (AAP) about FilBench, our Filipino-centric LLM evaluation benchmark. The purpose of the meetup was actually to discuss what it takes to build a Filipino-centric language model.
+I gave a talk at the AI & Analytics Association of the Philippines (AAP) about FilBench, our Filipino-centric LLM evaluation benchmark. The purpose of the meetup was actually to discuss what it takes to build a Filipino-centric language model.
 
 I closed my talk with two major points: (1) we cannot simply import Silicon Valley approaches into our local context, we need to adapt them; and (2) the tools and recipes are already open-source, but what matters more is that we Filipinos possess the qualities to build world-class technologies.
 
