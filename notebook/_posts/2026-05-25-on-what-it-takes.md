@@ -65,6 +65,8 @@ Personally, I see diskarte as the ability to achieve a goal under extreme constr
 
 [^2]: I really like the imagery of the jeepney to symbolize diskarte because my dad used to own and drive one, and I learned how to read by reading handpainted jeepney signs. 
 
+> The best way to innovate is similar to how we approached the jeepney: taking these innovations from the Global North and adapting them to our local contexts through ingenuity and resourcefulness.
+
 I argue that the **best way to innovate is similar to how we approached the jeepney**: taking these innovations from the Global North and adapting them to our local contexts through ingenuity and resourcefulness.
 Simply importing Silicon Valley approaches is not enough.
 I wrote about this at length in a recent [survey paper](https://arxiv.org/abs/2604.21637), but one approach I'm currently exploring is careful synthetic data generation to address the lack of training data.
@@ -101,6 +103,8 @@ How, then, can we support these types of activities?
   <img src="/assets/images/on-what-it-takes/tiyaga.png" style="border: 1px solid black; padding: 10px; width: 600px">
 </div>
 
+> Most components of a language modeling recipe (especially in multilingual post-training) are more a test of patience than flashes of insight.
+
 On the brighter side, I feel quite optimistic about some of the teams scattered across government and academia.
 For example, E-CAIR has built task-specific systems, and I've seen some of their members publishing in *CL and ICML!
 I also met some folks from AIM [last year in Vienna at ACL](/notebook/2025/08/01/field-report-acl25/), so there's good investment happening there too.
@@ -126,6 +130,8 @@ I'd like to think that this is possible in the context of LLM development.
 <div style="text-align: center;">
   <img src="/assets/images/on-what-it-takes/bayanihan.png" style="border: 1px solid black; padding: 10px; width: 600px">
 </div>
+
+> For such a network to work, it has to be focused on a single objective, much like the imagery of bayanihan where the only goal is to move a house from one place to another.
 
 I wrote about this [last year](/notebook/2024/12/17/filipino-llm/), and I still believe in the capability of grassroots networks.
 We attempted to build a [small research network](https://filbench.github.io) earlier this year, and while it has been a slow start with a few hiccups along the way, I feel optimistic about what we can achieve next.
