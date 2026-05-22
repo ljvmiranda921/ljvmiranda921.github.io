@@ -127,7 +127,12 @@ I'd like to think that this is possible in the context of LLM development.
 </div>
 
 I've written about this [last year](/notebook/2024/12/17/filipino-llm/), and I still believe in the capability of grassroots networks.
-Honestly, we tried it this year with [FilBench](https://filbench.github.io)
+However, I believe that for this network to work, it has to be **focused on a single objective**, very much like the imagery of bayanihan where the goal is to move a house from one place to another.
+We attempted building a [small research network](https://filbench.github.io) early this year,  but it has been a slow start with a few hiccups along the way; nevertheless, I feel optimistic about what we can achieve next!
+Again, I want to stress that focusing on a single and measurable objective is important.
+The challenge with loose networks is that everyone has their own priorities and interests, and the effort diffuses.
+
+
 
 
 ## Final thoughts
