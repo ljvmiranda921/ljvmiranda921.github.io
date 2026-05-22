@@ -65,11 +65,11 @@ Personally, I see diskarte as the ability to achieve a goal under extreme constr
 
 [^2]: I really like the imagery of the jeepney to symbolize diskarte because my dad used to own and drive one, and I learned how to read by reading handpainted jeepney signs. 
 
-The Philippine NLP landscape is constrained in terms of both data and compute.
-Although there is a significant presence of Filipino speakers and the language is well-represented on the internet, few have transformed this resource into useful, high-quality datasets.
-This situation is even more pronounced for other Philippine languages.
-In addition, our compute situation (for both development and deployment) leaves a lot to be desired.
-We [lack the compute infrastructure](https://epoch.ai/data/gpu-clusters?view=map&tab=point&mapPointBubbleSize=log+Hardware+quantity) to train LLMs (Epoch AI Data on GPU Clusters, 2026), and our [internet and technology penetration lags behind that of our ASEAN neighbors](https://data.worldbank.org/indicator/IT.NET.USER.ZS?end=2024&locations=PH-TH-SG-MY-VN-LA-ID-KH-MM-BN-TL&start=1990&view=chart) (ITU Data based on the World Bank).
+I argue that the **best way to innovate is similar to how we approached the jeepney**: taking these innovations from the Global North and adapting them to our local contexts through ingenuity and resourcefulness.
+Simply importing Silicon Valley approaches is not enough.
+I wrote about this at length in a recent [survey paper](https://arxiv.org/abs/2604.21637), but one approach I'm currently exploring is careful synthetic data generation to address the lack of training data.
+Synthetic data is now a common approach in training frontier language models, but I believe we can strip it down and, similar to the jeepney, add some ornaments / adjustments to make it work for low-resource languages.
+I encourage you to read the survey paper, as I mention potential paths for improvement such as creating task-specific small language models, deploying models at the edge, and improving a model's capabilities through a robust set of harnesses. 
 
 <div style="float:right; width:320px; margin:0 0 10px 20px;">
   <img src="/assets/images/on-what-it-takes/internet-penetration-asean.png" style="width: 100%;">
@@ -78,11 +78,11 @@ We [lack the compute infrastructure](https://epoch.ai/data/gpu-clusters?view=map
   </p>
 </div>
 
-I argue that the **best way to innovate is similar to how we approached the jeepney**: taking these innovations from the Global North and adapting them to our local contexts through ingenuity and resourcefulness.
-Simply importing Silicon Valley approaches is not enough.
-I wrote about this at length in a recent [survey paper](https://arxiv.org/abs/2604.21637), but one approach I'm currently exploring is careful synthetic data generation to address the lack of training data.
-Synthetic data is now a common approach in training frontier language models, but I believe we can strip it down and, similar to the jeepney, add some ornaments / adjustments to make it work for low-resource languages.
-I encourage you to read the survey paper, as I mention potential paths for improvement such as creating task-specific small language models, deploying models at the edge, and improving a model's capabilities through a robust set of harnesses. 
+That said, the Philippine NLP landscape is constrained in terms of both data and compute.
+Although there is a significant presence of Filipino speakers and the language is well-represented on the internet, few have transformed this resource into useful, high-quality datasets.
+This situation is even more pronounced for other Philippine languages.
+In addition, our compute situation (for both development and deployment) leaves a lot to be desired.
+We [lack the compute infrastructure](https://epoch.ai/data/gpu-clusters?view=map&tab=point&mapPointBubbleSize=log+Hardware+quantity) to train LLMs (Epoch AI Data on GPU Clusters, 2026), and our [internet and technology penetration lags behind that of our ASEAN neighbors](https://data.worldbank.org/indicator/IT.NET.USER.ZS?end=2024&locations=PH-TH-SG-MY-VN-LA-ID-KH-MM-BN-TL&start=1990&view=chart) (ITU Data based on the World Bank).
 
 
 ## Sipag at Tiyaga - supporting sustained effort through time
@@ -101,19 +101,20 @@ How, then, can we support these types of activities?
   <img src="/assets/images/on-what-it-takes/tiyaga.png" style="border: 1px solid black; padding: 10px; width: 600px">
 </div>
 
-I'd like to propose two dimensions on how to support these activities: infrastructure and incentives.
-Infrastructure here can take two forms: *compute* grants that give people room to experiment, and *governance* structures with a central decision-maker to keep efforts coordinated.
-The first one is quite self-explanatory.
-But I think the second one is much more important.
-For example: it is **quite difficult to find what is the canonical National AI strategy for the Philippines**.
-The [OECD AI Policy Navigator](https://oecd.ai/en/dashboards/policy-initiatives/national-ai-strategy-roadmap-20-naisr-20) and [UNESCO](https://www.unesco.org/ethics-ai/en/philippines) points to [NAISR v2](https://naisr.cair.ph/) which is from DTI, but the website says it was superseded by another Philippine AI Strategy Roadmap by DOST. 
-Now, the only DOST-related roadmap I can find is this [slide deck](https://pcieerd.dost.gov.ph/wp-content/uploads/2026/01/Artificial_Intelligence_Roadmap_Dec15.pdf), but that can't be it, right?
-
 On the brighter side, I feel quite optimistic about some of the teams scattered across government and academia.
 For example, E-CAIR has built task-specific systems, and I've seen some of their members publishing in *CL and ICML!
 I also met some folks from AIM [last year in Vienna at ACL](/notebook/2025/08/01/field-report-acl25/), so there's good investment happening there too.
 And I've chatted with a few undergraduate thesis groups in UST and PUP (and I still get the occasional e-mail about [calamanCy](/projects/2023/08/01/calamancy/)), so there's clearly a loose network of groups working on the fringes.
 What I'm trying to say is that there is talent here willing to do the hard parts&mdash;it's just a matter of getting these efforts more coordinated and aligned.
+
+I'd like to propose two dimensions on how to support these activities: infrastructure and incentives.
+Infrastructure here can take two forms: *compute* grants that give people room to experiment, and *governance* structures with a central decision-maker to keep efforts coordinated.
+The first one is quite self-explanatory.
+But I think the second one is much more important.
+
+For example, it is **quite difficult to find what is the canonical National AI strategy for the Philippines**.
+The [OECD AI Policy Navigator](https://oecd.ai/en/dashboards/policy-initiatives/national-ai-strategy-roadmap-20-naisr-20) and [UNESCO](https://www.unesco.org/ethics-ai/en/philippines) points to [NAISR v2](https://naisr.cair.ph/) which is from DTI, but the website says it was superseded by another Philippine AI Strategy Roadmap by DOST. 
+Now, the only DOST-related roadmap I can find is this [slide deck](https://pcieerd.dost.gov.ph/wp-content/uploads/2026/01/Artificial_Intelligence_Roadmap_Dec15.pdf), but that can't be it, right?
 
 ## Bayanihan - collective action to achieve a goal
 
@@ -127,10 +128,11 @@ I'd like to think that this is possible in the context of LLM development.
 </div>
 
 I wrote about this [last year](/notebook/2024/12/17/filipino-llm/), and I still believe in the capability of grassroots networks.
-However, for such a network to work, it has to be **focused on a single objective**, much like the imagery of bayanihan where the only goal is to move a house from one place to another.
 We attempted to build a [small research network](https://filbench.github.io) earlier this year, and while it has been a slow start with a few hiccups along the way, I feel optimistic about what we can achieve next.
-Again, I want to stress that focusing on a single, measurable objective is important.
+
+However, for such a network to work, it has to be **focused on a single objective**, much like the imagery of bayanihan where the only goal is to move a house from one place to another.
 The challenge with loose networks is that everyone has their own priorities and interests, so the effort diffuses.
+Again, I want to stress that focusing on a single, measurable objective is important.
 In my opinion, the project should be well-scoped, short-term, and designed so that nodes can pitch in and make drive-by contributions whenever they want.
 I still have a lot to learn about managing these types of networks, so if you've done this before and would like to chat, please reach out!
 
