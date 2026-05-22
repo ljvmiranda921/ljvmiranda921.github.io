@@ -127,10 +127,22 @@ I'd like to think that this is possible in the context of LLM development.
 </div>
 
 I've written about this [last year](/notebook/2024/12/17/filipino-llm/), and I still believe in the capability of grassroots networks.
-However, I believe that for this network to work, it has to be **focused on a single objective**, very much like the imagery of bayanihan where the goal is to move a house from one place to another.
+However, I believe that for this network to work, it has to be **focused on a single objective**, very much like the imagery of bayanihan where the only goal is to move a house from one place to another.
 We attempted building a [small research network](https://filbench.github.io) early this year,  but it has been a slow start with a few hiccups along the way; nevertheless, I feel optimistic about what we can achieve next!
 Again, I want to stress that focusing on a single and measurable objective is important.
 The challenge with loose networks is that everyone has their own priorities and interests, and the effort diffuses.
+In my opinion, the project should be well-scoped, short-term, and designed in such a way that nodes can pitch-in and do drive-bby contributions whenever they want.
+I still have a lot to learn from managing these types of networks, so if you are someone who has done this before and would like to chat, please reach out! 
+
+If grassroots networks need to be multi-sectoral, there should be a way to align diverse and oftentimes conflicting incentives. 
+For example, in academia, there is a pressure in getting grants and publications (which means, say in computer science, publishing in top conferences and journals).
+Industry, on the other hand, might prefer engineering-heavy and context-specific deployments.
+As a PhD student, I find that Industry Tracks in conferences are a good avenue for these partnerships to happen: the student gets to work on a very specific project, and can even write a paper about it.
+Finally, the involvement of different sectors need not be as involved as it should be.
+It could be a donor-recipient setup where for example, the goverment provides the problem statement, the industry provides resources, and academia provides the scientirif rigour to achieve a goal.
+
+
+
 
 
 
