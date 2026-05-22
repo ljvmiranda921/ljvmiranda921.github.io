@@ -157,3 +157,18 @@ Finally, much of this work demands sustained experimentation, data ablations, an
 As I've said, the tools and recipes are publicly available, and I truly believe we have the qualities to make it work.
 The ball simply needs to get rolling.
 
+<!-- For LI:
+
+I was invited to give a talk at the AI & Analytics Association of the Philippines (AAP) about FilBench, our Filipino-centric LLM evaluation benchmark. The purpose of the meetup was actually to discuss what it takes to build a Filipino-centric language model.
+
+I closed my talk with two major points: (1) we cannot simply import Silicon Valley approaches into our local context, we need to adapt them; and (2) the tools and recipes are already open-source, but what matters more is that we Filipinos possess the qualities to build world-class technologies.
+
+So what are these qualities? In my opinion, they are:
+1. Diskarte (achieving goals under extreme constraints)
+2. Sipag at Tiyaga (hard work and patience on long-horizon tasks)
+3. Bayanihan (uniting around a shared goal)
+
+I then walked through how each quality maps to a specific technological or governance challenge in building LLMs. 
+Ultimately, I believe that to build Filipino-centric LMs, we need to create an environment where these qualities can flourish.
+
+I wrote more about my thoughts in a blog post (linked in the comments). Would love to discuss this further, just reach out :)  -->
