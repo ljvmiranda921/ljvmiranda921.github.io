@@ -141,10 +141,12 @@ As a PhD student, I find that Industry Tracks in conferences are a good avenue f
 Finally, the involvement across sectors doesn't have to be deep on all sides.
 It could be a donor-recipient setup where, for example, the government provides the problem statement, industry provides the resources, and academia provides the scientific rigor to achieve the goal.
 
-
-
-
-
-
-
 ## Final thoughts
+
+
+## Postscript 
+
+Kung tutuusin halos three years na pala akong wala sa Pilipinas. 
+Umuwi ako last year for two months, pero short-term lang yun.
+As someone na nakiki-update lang ng Philippine news sa Internet (flood scam, Senate hearings, ICC), ang daling isipin na: shet grabe, talo na naman tayo!
+
