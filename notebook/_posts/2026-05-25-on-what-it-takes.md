@@ -143,18 +143,17 @@ It could be a donor-recipient setup where, for example, the government provides 
 
 ## Final thoughts and reflections
 
-If we want to build Filipino-centric language models, we need to build it our way.
-This entails: 
-adapting innovations happening in other parts of the world in our own local contexts and constraints and not simply importing them *(diskarte)*, 
-creating governance and incentive structures that support long-horizon and experimental activities *(sipag at tiyaga)*,
-and building grassroots networks with a shared and well-scoped goal *(bayanihan)*.
+If we want to build Filipino-centric language models, we need to build them our way.
+This entails adapting innovations from other parts of the world to our local contexts and constraints rather than simply importing them *(diskarte)*,
+creating governance and incentive structures that support long-horizon, experimental work *(sipag at tiyaga)*,
+and building grassroots networks around a shared, well-scoped goal *(bayanihan)*.
 
-A more realistic sketch: I believe a good goal is to train Filipino-centric LMs that cover the country's major languages (Tagalog, Cebuano, Ilokano, Hiligaynon, Bikol, Kapampangan). 
-The most reasonable approach here is to post-train on a strong multilingual base model, then evaluate this LM on a new version of FilBench where all these languages are well represented.
-The first major constaint is data, so we need to find ways on how to obtain them either from scraping, native-speaker annotation, or synthetic data generation (this entails diskarte).
-The second major constraint is compute and money, so we need to establish partnerships from industry or organizations who are willing to fund its acquisition (this entails bayanihan).
-Finally, a lot of this work will require a lot of experimentation and data ablations, and people willing to support the work (*sipag at tiyaga*).
+To make this concrete: a good goal would be to train Filipino-centric LMs that cover the country's major languages (Tagalog, Cebuano, Ilokano, Hiligaynon, Bikol, Kapampangan).
+The most reasonable approach is to post-train on a strong multilingual base model, then evaluate on a new version of FilBench where all these languages are well-represented.
+The first major constraint is data, so we need to source it through scraping, native-speaker annotation, or synthetic data generation (*diskarte*).
+The second is compute and funding, which calls for partnerships with industry or organizations willing to underwrite them (*bayanihan*).
+Finally, much of this work demands sustained experimentation, data ablations, and people willing to see it through (*sipag at tiyaga*).
 
-As I've said, the tools and recipes are publicly available, and I truly believe that we have the qualities to make it work.
+As I've said, the tools and recipes are publicly available, and I truly believe we have the qualities to make it work.
 The ball simply needs to get rolling.
 
