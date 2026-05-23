@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "The Filipino qualities we need to build world-class language technologies"
-date: 2026-05-25
+date: 2026-05-23
 category: notebook
 comments: true
 author: "LJ MIRANDA"
