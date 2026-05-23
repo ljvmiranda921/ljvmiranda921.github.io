@@ -22,6 +22,10 @@ title: News
 </style>
 
 <div class="news-item">
+<p><span class="date">**May 2026**</span>: Gave a talk on [FilBench](https://huggingface.co/spaces/filbench/filbench-leaderboard) and on what it takes to build Filipino-centric LLMs. Here's [some notes](/notebook/2026/05/25/on-what-it-takes/) from my talk.</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**May 2026**</span>: Proud to release our [survey on multilingual edge models](https://arxiv.org/abs/2604.21637) (check the [website](/multilinguality-at-the-edge/)!). If you know me, I care a lot about AI in the Global South, I'd like to continue doing these types of sociotechnical research, so reach out if you wanna chat!</p>
 </div>
 
