@@ -8,7 +8,7 @@ comments: true
 author: "LJ MIRANDA"
 published: true
 filipino_nlp: true
-header-img: /assets/images/filipino-llm/header.png
+header-img: /assets/images/on-what-it-takes/header.png
 tags: [tagalog, filipino, nlp, llm]
 description: |
     I was invited to give a talk at Analytics & AI Association of the Philippines (AAP) on FilBench, and in general, building Filipino LLMs. This blog post covers some of my thoughts on this topic.
