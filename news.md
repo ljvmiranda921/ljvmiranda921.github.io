@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**May 2026**</span>: Gave a talk at the [Analytics and AI Association of the Philippines](https://www.aap.ph/) about [FilBench](https://huggingface.co/spaces/filbench/filbench-leaderboard) and on what it takes to build Filipino-centric LLMs. Here's [some notes](/notebook/2026/05/23/on-what-it-takes/) from my talk.</p>
+<p><span class="date">**May 2026**</span>: Gave a talk at the [Analytics and AI Association of the Philippines](https://www.aap.ph/) about [FilBench](/projects/2025/08/21/filbench/) and on what it takes to build Filipino-centric LLMs. Here's [some notes](/notebook/2026/05/23/on-what-it-takes/) from my talk.</p>
 </div>
 
 <div class="news-item">
