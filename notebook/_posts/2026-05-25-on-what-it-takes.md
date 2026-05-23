@@ -15,7 +15,7 @@ description: |
 excerpt: |
 ---
 
-<span class="firstcharacter">L</span>ast Saturday, I gave a talk at the Analytics & AI Association of the Philippines (AAP) on the topic of Philippine language model evaluation, specifically on [FilBench](/projects/2025/08/21/filbench/).[^1]
+<span class="firstcharacter">L</span>ast Saturday, I gave a talk at the [Analytics & AI Association of the Philippines (AAP)](https://www.aap.ph/) on the topic of Philippine language model evaluation, specifically on [FilBench](/projects/2025/08/21/filbench/).[^1]
 The purpose of the meetup was really to figure out (1) whether we can build a "Philippine LLM" and (2) what doing so would entail.
 I had some experience building open language models back in my previous work, and my research on multilinguality is directly related, so I was able to share my thoughts and experiences.
 
