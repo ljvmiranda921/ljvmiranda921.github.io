@@ -15,9 +15,9 @@ description: |
 excerpt: |
 ---
 
-<span class="firstcharacter">I</span> gave a talk at the [Analytics & AI Association of the Philippines (AAP)](https://www.aap.ph/) on the topic of Philippine language model evaluation, specifically on [FilBench](/projects/2025/08/21/filbench/).[^1]
+<span class="firstcharacter">I</span> gave a talk at the [Analytics & AI Association of the Philippines (AAP)](https://www.aap.ph/) on the topic of Philippine language model evaluation ([Slides](https://docs.google.com/presentation/d/1KOdSsFsk8io59bKRzwU-4u1iFNxDumlSNLQfUYgbTfU/edit?usp=sharing)), specifically on [FilBench](/projects/2025/08/21/filbench/).[^1]
 The purpose of the meetup was really to figure out (1) whether we can build a "Philippine LLM" and (2) what doing so would entail.
-I had some experience building open language models back in my previous work, and my research on multilinguality is directly related, so I was able to share my thoughts and experiences.
+I had some experience building open language models back in my previous work, and my research on multilinguality is directly related, so I was able to share my thoughts and experiences. 
 
 To preface: the answer to the question of "can we actually build Filipino-centric LLMs?" is definitely **YES**.
 The tools are open-source, the [recipes](https://rlhfbook.com) are publicly available, and there's definitely a lot of talent.
