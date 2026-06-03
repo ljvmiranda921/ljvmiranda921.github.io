@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**June 2026**</span>: I am part of the Scientific Committee of the [Philippine Team](https://ioaiph.org/) for the [International Olympiad for Artificial Intelligence](https://ioai-official.org/). I also gave a training lecture for NLP (see lecture materials). Go Team PH!</p>
+<p><span class="date">**Jun 2026**</span>: I am part of the Scientific Committee of the [Philippine Team](https://ioaiph.org/) for the [International Olympiad for Artificial Intelligence](https://ioai-official.org/). I also gave a training lecture for NLP (see [lecture materials]()). Go Team PH!</p>
 </div>
 
 <div class="news-item">
