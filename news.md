@@ -22,6 +22,10 @@ title: News
 </style>
 
 <div class="news-item">
+<p><span class="date">**June 2026**</span>: I am part of the Scientific Committee of the [Philippine Team](https://ioaiph.org/) for the [International Olympiad for Artificial Intelligence](https://ioai-official.org/). I also gave a training lecture for NLP (see lecture materials). Go Team PH!</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**May 2026**</span>: Gave a talk at the [Analytics and AI Association of the Philippines](https://www.aap.ph/) about [FilBench](/projects/2025/08/21/filbench/) and on what it takes to build Filipino-centric LLMs [(slides)](https://docs.google.com/presentation/d/1KOdSsFsk8io59bKRzwU-4u1iFNxDumlSNLQfUYgbTfU/edit?usp=sharing). Here's [some notes](/notebook/2026/05/23/on-what-it-takes/) from my talk.</p>
 </div>
 
@@ -41,13 +45,13 @@ title: News
 <p><span class="date">**Oct 2025**</span>: I'm starting my PhD at the [University of Cambridge - Language Technology Lab](https://ltl.mmll.cam.ac.uk/) and will be advised by [Anna Korhonen](https://sites.google.com/site/annakorhonen/).</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Aug 2025**</span>: I'm proud to introduce [FilBench](https://aclanthology.org/2025.emnlp-main.127/), a [comprehensive LLM benchmark](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) for Filipino! Accepted at EMNLP 2025 Main. I also share some thoughts in [this blog post](/projects/2025/08/21/filbench/).</p>
-</div>
+</div> -->
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**May 2025**</span>: Excited to share that I have three first & co-first author papers accepted at [ACL Main](https://2025.aclweb.org/): [HyPER](https://aclanthology.org/2025.acl-long.355/), [M-RewardBench](https://aclanthology.org/2025.acl-long.3/), and [UD-NewsCrawl](https://aclanthology.org/2025.acl-long.357/). A large collab project, [SEA-VL](https://aclanthology.org/2025.acl-long.916/), also got into Main!</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**Nov 2024**</span>: Happy to have been part of the exciting [T&uuml;lu 3](https://allenai.org/papers/tulu-3-report.pdf) and [OLMo 2](https://allenai.org/olmo) releases! My primary contribution is scaling-up our preference data using a synthetic on-policy pipeline that led to improvements in our DPO models.</p>
