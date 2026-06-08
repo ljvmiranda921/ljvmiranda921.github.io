@@ -38,7 +38,7 @@ title: News
 </div>
 
 <div class="news-item">
-<p><span class="date">**Dec 2025**</span>: So excited to see the release of [OLMo 3](https://arxiv.org/pdf/2512.13961)! My contribution was on creating the tool-use SFT mix during my last few months as a pre-doc. My experience here made excited in agentic tool-use!</p>
+<p><span class="date">**Dec 2025**</span>: So excited to see the release of [OLMo 3](https://arxiv.org/pdf/2512.13961)! My contribution was on creating the tool-use SFT mix during my last few months as a pre-doc. My experience here made me excited in agentic tool-use!</p>
 </div>
 
 <div class="news-item">
