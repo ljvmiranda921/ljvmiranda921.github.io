@@ -2,55 +2,64 @@
 layout: default
 ---
 
-<div class="home">
+<div class="landing">
 
-  <div class="divider">
-    <div class="left">
-      <img id="profilepic" width="200" height="200" src="assets/profile.jpg" alt="Profile">
-    </div>
-    <div class="right">
-      <p>Hi! I'm Jennifer, and welcome to my website!</p>
-      <p>
-        I am the founder of <a href="https://dotimplement.ai">.implement</a> and a <a href="https://the-turing-way.netlify.app/collaboration/research-infrastructure-roles/rse">research software engineer</a> 
-        and NLP researcher at <a href="https://www.ucl.ac.uk/">UCL</a> / <a href="https://www.uclhospitals.brc.nihr.ac.uk/clinical-research-informatics-unit"> UCLH BRC Clinical Research Informatics Unit</a>. 
-        I specialise in designing and implementing AI-driven solutions in healthcare.  
-      </p>
-      <p>
-        Previously, my experience ranged from working in computational neuroscience research to being one of the first two hires at a computer vision fitness tech startup.
-      </p>
-      <p>
-        I'm always open to interesting conversations and collaborations, so feel free to <a href="mailto:jenniferjiangkells@gmail.com">reach out</a>! 
-        For <a href="https://dotimplement.ai/services/">consulting</a> enquiries, email me at <a href="mailto:contact@dotimplement.ai">contact@dotimplement.ai</a>.
-      </p>
-    </div>
+  <div class="landing-sprig" aria-hidden="true">
+    <svg viewBox="0 0 220 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- main stem -->
+      <path class="sprig-stem" d="M150 296 C150 240 142 196 120 158 C100 124 92 86 110 40"/>
+      <!-- leaf pairs along the stem -->
+      <path class="sprig-leaf" d="M118 168 C92 150 64 150 44 168 C70 178 100 180 118 168 Z"/>
+      <path class="sprig-leaf" d="M132 196 C158 178 186 178 206 196 C180 206 150 208 132 196 Z"/>
+      <path class="sprig-leaf" d="M108 130 C84 110 58 108 38 124 C64 136 92 142 108 130 Z"/>
+      <path class="sprig-leaf" d="M120 96 C146 80 172 82 190 100 C166 110 138 110 120 96 Z"/>
+      <path class="sprig-leaf" d="M104 66 C84 44 60 38 40 50 C62 66 88 76 104 66 Z"/>
+      <!-- a small bud at the tip -->
+      <path class="sprig-bud" d="M110 40 C104 28 104 16 112 8 C120 16 120 28 114 40 Z"/>
+    </svg>
   </div>
 
+  <h1 class="landing-name">jennifer<br>jiang&#8209;kells</h1>
 
-<!--   
-  <div style="display:flex;justify-content:center;">
-    <iframe src="https://jenniferajiang.substack.com/embed" width="480" height="100"
-      style="border:0px solid #EEE; background:fffff8;" frameborder="0" scrolling="no"></iframe>
+  <div class="landing-body">
+    <dl class="landing-meta">
+      <dt>who</dt>
+      <dd>a founder &amp; engineer building open&#8209;source tools for AI in healthcare</dd>
+      <dt>now</dt>
+      <dd>founder of <a href="https://dotimplement.ai">.implement</a>, where I build &amp; maintain <a href="https://github.com/dotimplement/HealthChain">HealthChain</a></dd>
+      <dt>before</dt>
+      <dd>clinical NLP in the NHS &mdash; systems now in live use at two London hospitals</dd>
+      <dt>based</dt>
+      <dd>London, UK</dd>
+    </dl>
+
+    <nav class="landing-nav" aria-label="Primary">
+      <a href="/about/">about</a>
+      <a href="/blog/">writing</a>
+      <a href="/projects/">projects</a>
+      <a href="https://dotimplement.ai">.implement</a>
+    </nav>
   </div>
-  -->
 
-  <!-- &nbsp;
+  <p class="landing-prose">
+    I work at the seam between research and software, and I care most about making
+    AI in healthcare robust, transparent, and genuinely deployable. I'm always glad
+    of an interesting conversation or collaboration &mdash;
+    <a href="mailto:jenniferjiangkells@gmail.com">reach out</a>. For
+    <a href="https://dotimplement.ai/services/">consulting</a> enquiries, email
+    <a href="mailto:contact@dotimplement.ai">contact@dotimplement.ai</a>.
+  </p>
 
-  <hr>
+  <p class="landing-foot">
+    <a href="mailto:jenniferjiangkells@gmail.com">email</a>
+    <span>&middot;</span>
+    <a href="https://github.com/jenniferjiangkells">github</a>
+    <span>&middot;</span>
+    <a href="https://www.linkedin.com/in/jenniferjiangkells">linkedin</a>
+    <span>&middot;</span>
+    <a href="https://twitter.com/AgentRiver">twitter</a>
+    <span>&middot;</span>
+    <a href="/assets/Jennifer_Jiang_Kells_CV.pdf">cv</a>
+  </p>
 
-  &nbsp;
-
-  <h2>Recent Posts</h2>
-
-  <ul class="post-list">
-    {% assign mainPosts = site.posts | where: 'type', 'post' %}
-    {% for post in mainPosts limit:3 %}
-    <li>
-      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-      <span class="post-meta">{{ post.date | date: date_format }} &verbar; {{ post.category | capitalize }}</span>
-
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-      <p style="color:#828282">{{ post.description }}</p>
-    </li>
-    {% endfor %}
-  </ul>
-</div> -->
+</div>
