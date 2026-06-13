@@ -1,18 +1,26 @@
 ---
 layout: page
-title: Projects
-description: Projects
-permalink: /projects/
+title: Media
+description: Talks, panels, podcasts and press
+permalink: /media/
 ---
 
-A list of projects that I have lead, including personal projects, open-source software created under dotimplement, and software written as part of larger grant-funded research projects.
+A selection of talks, panels, podcasts, and press &mdash; mostly on building and
+deploying AI and NLP in healthcare, and on open-source tooling for it.
 
-<ul>
-  {% for post in site.categories.projects %}
-    <li>
-        <span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        <meta name="description" content="{{ post.summary | escape }}">
-        <meta name="keywords" content="{{ post.tags | join: ', ' | escape }}"/>
-    </li>
-  {% endfor %}
-</ul>
+## Talks &amp; panels
+
+- **HealthChain** &mdash; Google NHS AI Hackathon
+- **HealthChain** &mdash; NHS Python Open Source Community Conference
+
+## Podcasts
+
+- [In conversation with Ben Goldacre](https://codeforthought.buzzsprout.com/1326658/11317056-in-conversation-with-ben-goldacre) &mdash; Code for Thought
+
+## Press
+
+- Featured in the [TLDR AI](https://tldr.tech/ai) newsletter
+
+<!-- Add new entries above. Format suggestion:
+- **Title** — Event / Outlet, Location (Year) [optional link]
+-->
