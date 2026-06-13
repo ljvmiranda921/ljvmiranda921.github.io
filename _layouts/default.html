@@ -18,16 +18,20 @@
     href="https://jenniferjiangkells.github.io">production page.</a> Enjoy (?) </p>
     {% endif %}
 
+    {% unless page.layout == 'home' %}
     {% include header.html %}
+    {% endunless %}
 
 
-    <main class="page-content" aria-label="Content">
+    <main class="page-content{% if page.layout == 'home' %} page-content--home{% endif %}" aria-label="Content">
       <div class="wrapper">
         {{ content }}
       </div>
     </main>
 
+    {% unless page.layout == 'home' %}
     {% include footer.html %}
+    {% endunless %}
 
   </body>
 

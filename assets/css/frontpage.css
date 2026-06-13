@@ -1,23 +1,310 @@
-@media (min-width: 768px) {
-  .divider {
-    display: flex;
+/* =========================================================
+   About-page portrait
+   ========================================================= */
+.about-portrait {
+  float: right;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0.2rem 0 1.2rem 1.8rem;
+  shape-outside: circle();
+}
+
+@media (max-width: 600px) {
+  .about-portrait {
+    float: none;
+    display: block;
+    margin: 0 auto 1.5rem;
   }
 }
 
-.left {
-  flex: 0 0 40%;
-  text-align: center;
-  padding: 10px;
+/* =========================================================
+   Editorial landing page
+   Warm paper · Vollkorn italic · brick-red + teal botanical
+   ========================================================= */
+
+:root {
+  --paper: #fffff8;
+  --ink: #1a1a1a;
+  --red: #a00000;
+  --red-deep: #7a0000;
+  --teal: #2e6f63;
+  --muted: #6f6f68;
 }
 
-.right {
-  flex: 1;
-  padding: 10px;
+/* Override the default page padding only on the landing */
+.page-content.page-content--home {
+  padding: 0;
 }
 
-#profilepic {
-    border-radius: 50%;
-    width: 200;
-    height: 200;
-    text-align: center;
+.landing {
+  position: relative;
+  box-sizing: border-box;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 9vh, 6rem) 28px 4rem;
+  min-height: calc(100vh - 10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- the name as masthead ---- */
+.landing-name {
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--red);
+  text-transform: lowercase;
+  font-size: clamp(3rem, 9vw, 5.75rem);
+  line-height: 0.92;
+  letter-spacing: -0.012em;
+  margin: 0 0 2.2rem;
+}
+
+/* ---- meta + nav row ---- */
+.landing-body {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem 3rem;
+  align-items: start;
+  margin-bottom: 2.4rem;
+}
+
+.landing-meta {
+  display: grid;
+  grid-template-columns: 5.25em 1fr;
+  column-gap: 1.4em;
+  row-gap: 0.95em;
+  margin: 0;
+  max-width: 34em;
+}
+
+.landing-meta dt {
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--teal);
+  letter-spacing: 0.02em;
+  padding-top: 0.15em;
+}
+
+.landing-meta dd {
+  margin: 0;
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  font-size: 1.18rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+/* ---- stacked nav ---- */
+.landing-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 0.35rem;
+}
+
+.landing-nav a {
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: var(--red);
+  text-decoration: none;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.landing-nav a:hover {
+  color: var(--teal);
+  transform: translateX(-2px);
+}
+
+/* ---- closing prose ---- */
+.landing-prose {
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  font-size: 1.22rem;
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 36em;
+  margin: 0 0 2rem;
+}
+
+.landing-prose a {
+  color: var(--red);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(160, 0, 0, 0.28);
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+
+.landing-prose a:hover {
+  color: var(--red-deep);
+  border-bottom-color: var(--red);
+}
+
+/* ---- footer line ---- */
+.landing-foot {
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.landing-foot a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.landing-foot a:hover {
+  color: var(--red);
+}
+
+.landing-foot span {
+  margin: 0 0.5em;
+  color: rgba(46, 111, 99, 0.5);
+}
+
+/* ---- botanical sprig ---- */
+.landing-sprig {
+  position: absolute;
+  top: clamp(-1rem, 1vh, 1.5rem);
+  right: 18px;
+  width: clamp(110px, 18vw, 190px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.landing-sprig svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sprig-stem {
+  fill: none;
+  stroke: var(--teal);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+
+.sprig-leaf,
+.sprig-bud {
+  fill: var(--teal);
+  opacity: 0.82;
+}
+
+.sprig-bud {
+  opacity: 0.95;
+}
+
+/* =========================================================
+   Load choreography
+   ========================================================= */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes leafIn {
+  from { opacity: 0; }
+  to   { opacity: 0.82; }
+}
+
+@keyframes drawStem {
+  from { stroke-dashoffset: 380; }
+  to   { stroke-dashoffset: 0; }
+}
+
+.landing-name,
+.landing-body,
+.landing-prose,
+.landing-foot {
+  opacity: 0;
+  animation: riseIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.landing-name  { animation-delay: 0.05s; }
+.landing-body  { animation-delay: 0.30s; }
+.landing-prose { animation-delay: 0.48s; }
+.landing-foot  { animation-delay: 0.62s; }
+
+.sprig-stem {
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  animation: drawStem 1.5s ease-out 0.35s forwards;
+}
+
+.sprig-leaf,
+.sprig-bud {
+  opacity: 0;
+  animation: leafIn 0.6s ease-out forwards;
+}
+
+.sprig-leaf:nth-of-type(2) { animation-delay: 0.95s; }
+.sprig-leaf:nth-of-type(3) { animation-delay: 1.10s; }
+.sprig-leaf:nth-of-type(4) { animation-delay: 1.25s; }
+.sprig-leaf:nth-of-type(5) { animation-delay: 1.40s; }
+.sprig-leaf:nth-of-type(6) { animation-delay: 1.55s; }
+.sprig-bud                 { animation-delay: 1.70s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-name,
+  .landing-body,
+  .landing-prose,
+  .landing-foot { opacity: 1; animation: none; }
+  .sprig-stem { stroke-dashoffset: 0; animation: none; }
+  .sprig-leaf { opacity: 0.82; animation: none; }
+  .sprig-bud  { opacity: 0.95; animation: none; }
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 680px) {
+  .landing {
+    padding: 3rem 22px 3rem;
+    min-height: 0;
+  }
+
+  .landing-name {
+    margin-bottom: 1.8rem;
+  }
+
+  .landing-body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .landing-nav {
+    align-items: flex-start;
+    text-align: left;
+    flex-flow: row wrap;
+    gap: 0.4rem 1.4rem;
+  }
+
+  .landing-nav a:hover {
+    transform: none;
+  }
+
+  .landing-sprig {
+    width: 96px;
+    top: 0.5rem;
+    right: 8px;
+    opacity: 0.9;
+  }
+
+  .landing-foot {
+    line-height: 2;
+  }
 }
