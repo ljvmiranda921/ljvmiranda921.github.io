@@ -11,7 +11,7 @@ deploying AI and NLP in healthcare, and on open-source tooling for it.
 ## Talks &amp; panels
 
 - **Healing Through Collaboration: Open-Source Software in Surgical, Biomedical and AI Technologies** &mdash; speaker &amp; panelist, Hamlyn Symposium on Medical Robotics (HSMR 2025), London, June 2025
-- **Building healthcare-context aware applications with HealthChain** &mdash; NHS Python Open Source Community Conference (RPySoc), 2024
+- **[Building healthcare-context aware applications with HealthChain](https://youtu.be/_ZqlPsDUdSY)** &mdash; NHS RPySoc 2024, hosted by the NHS Open Analytics Community &middot; [slides](https://speakerdeck.com/jenniferjiangkells/building-healthcare-context-aware-applications-with-healthchain) &middot; [walkthrough](https://dotimplement.github.io/HealthChain/cookbook/cds_sandbox/)
 - **HealthChain** &mdash; Google NHS AI Hackathon
 
 ## Podcasts
