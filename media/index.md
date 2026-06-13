@@ -18,8 +18,8 @@ deploying AI and NLP in healthcare, and on open-source tooling for it.
 
 ## Conferences &amp; tutorials
 
-- **Tutorial** &mdash; HealTAC 2023 (Healthcare Text Analytics Conference), Manchester, June 2023
-- HealTAC 2024 (Healthcare Text Analytics Conference), Lancaster, June 2024
+- **MiADE: live demonstration &amp; code tutorial** &mdash; [HealTAC 2023](https://www.ucl.ac.uk/health-informatics/news/2023/jun/miade-healtac-2023) (Healthcare Text Analytics Conference), Manchester, June 2023
+- **Feasibility study of &lsquo;MiADE&rsquo; point of care natural language processing system: methodology and initial results** &mdash; [HealTAC 2024](https://healtac2024.github.io/programme/) (Healthcare Text Analytics Conference), Lancaster, June 2024
 
 ## Podcasts
 
