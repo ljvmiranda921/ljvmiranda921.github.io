@@ -24,6 +24,9 @@
    Warm paper · Vollkorn italic · brick-red + teal botanical
    ========================================================= */
 
+/* =========================================================
+   Theme colour system (single source of truth)
+   ========================================================= */
 :root {
   --paper: #fffff8;
   --ink: #1a1a1a;
@@ -31,6 +34,49 @@
   --red-deep: #7a0000;
   --teal: #2e6f63;
   --muted: #6f6f68;
+  --grey: #828282;
+  --border: #e4e2d6;
+  --rule-red: rgba(160, 0, 0, 0.28);
+  --rule-teal: rgba(46, 111, 99, 0.5);
+}
+
+html[data-theme="dark"] {
+  --paper: #17160f;
+  --ink: #e7e3d5;
+  --red: #e0674e;
+  --red-deep: #f08a72;
+  --teal: #79b6a6;
+  --muted: #9a9486;
+  --grey: #8f8a7d;
+  --border: #34322a;
+  --rule-red: rgba(224, 103, 78, 0.4);
+  --rule-teal: rgba(121, 182, 166, 0.45);
+}
+
+html,
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* =========================================================
+   In-text theme toggle (the "bright"/"dark" word)
+   ========================================================= */
+.theme-toggle {
+  font: inherit;
+  color: var(--teal);
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  border-bottom: 1px dotted var(--rule-teal);
+  transition: color 0.18s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--red);
 }
 
 /* Override the default page padding only on the landing */
@@ -149,7 +195,7 @@
 .landing-prose a {
   color: var(--red);
   text-decoration: none;
-  border-bottom: 1px solid rgba(160, 0, 0, 0.28);
+  border-bottom: 1px solid var(--rule-red);
   transition: border-color 0.18s ease, color 0.18s ease;
 }
 
@@ -179,7 +225,7 @@
 
 .landing-foot span {
   margin: 0 0.5em;
-  color: rgba(46, 111, 99, 0.5);
+  color: var(--rule-teal);
 }
 
 /* ---- botanical sprig ---- */

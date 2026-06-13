@@ -2,8 +2,8 @@
  * Site header
  */
 .site-header {
-  border-top: 3px solid $accent-color;
-  border-bottom: 1px solid $grey-color-light;
+  border-top: 3px solid var(--teal, #{$accent-color});
+  border-bottom: 1px solid var(--border, #{$grey-color-light});
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
@@ -23,11 +23,11 @@
 
   &,
   &:visited {
-    color: $brand-color;
+    color: var(--red, #{$brand-color});
   }
 
   &:hover {
-    color: $accent-color;
+    color: var(--teal, #{$accent-color});
     text-decoration: none;
   }
 }
@@ -47,11 +47,11 @@
   .page-link {
     font-family: "Vollkorn", serif;
     font-style: italic;
-    color: $text-color;
+    color: var(--ink, #{$text-color});
     line-height: $base-line-height;
 
     &:hover {
-      color: $brand-color;
+      color: var(--red, #{$brand-color});
       text-decoration: none;
     }
 
@@ -65,8 +65,8 @@
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
-    background-color: $background-color;
-    border: 1px solid $grey-color-light;
+    background-color: var(--paper, #{$background-color});
+    border: 1px solid var(--border, #{$grey-color-light});
     border-radius: 5px;
     text-align: right;
 
@@ -89,7 +89,7 @@
       text-align: center;
 
       > svg path {
-        fill: $grey-color-dark;
+        fill: var(--ink, #{$grey-color-dark});
       }
     }
 
@@ -121,7 +121,7 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid var(--border, #{$grey-color-light});
   padding: $spacing-unit 0;
 }
 
@@ -138,7 +138,7 @@
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
-  color: $grey-color;
+  color: var(--grey, #{$grey-color});
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
@@ -209,7 +209,7 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
+  color: var(--grey, #{$grey-color});
 }
 
 .post-link {

@@ -71,21 +71,32 @@ layout: default
     var el = document.getElementById('landing-clock');
     if (!el) return;
     var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    function themeWord() {
+      return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'bright';
+    }
     function tick() {
       var d = new Date();
       var h = d.getHours(), m = d.getMinutes();
       var ampm = h < 12 ? 'a.m.' : 'p.m.';
       var h12 = h % 12 || 12;
       var time = (h12 < 10 ? '0' : '') + h12 + ':' + (m < 10 ? '0' : '') + m + ampm;
-      var period, adj;
-      if (h < 5)       { period = 'night';     adj = 'still';  }
-      else if (h < 12) { period = 'morning';   adj = 'bright'; }
-      else if (h < 17) { period = 'afternoon'; adj = 'bright'; }
-      else if (h < 21) { period = 'evening';   adj = 'quiet';  }
-      else             { period = 'night';     adj = 'late';   }
-      el.innerHTML = "it's " + time + " on a " + adj +
+      var period;
+      if (h < 5)       { period = 'night';     }
+      else if (h < 12) { period = 'morning';   }
+      else if (h < 17) { period = 'afternoon'; }
+      else if (h < 21) { period = 'evening';   }
+      else             { period = 'night';     }
+      el.innerHTML = "it's " + time + " on a " +
+        "<button class=\"theme-toggle\" type=\"button\" aria-label=\"Toggle light or dark mode\">" + themeWord() + "</button>" +
         " <span class=\"when-mark\">❋</span> " + days[d.getDay()] + " " + period;
     }
+    el.addEventListener('click', function (e) {
+      if (!e.target.classList || !e.target.classList.contains('theme-toggle')) return;
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e2) {}
+      tick();
+    });
     tick();
     setInterval(tick, 15000);
   })();
