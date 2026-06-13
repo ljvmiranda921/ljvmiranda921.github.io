@@ -1,4 +1,71 @@
 /* =========================================================
+   Reading measure & rhythm for prose pages (About, Media…)
+   Nanum Myeongjo is a delicate high-contrast serif: it wants a
+   shorter line and looser leading than the minima defaults.
+   Scoped to .post-content so the landing (.wrapper) is untouched.
+   ========================================================= */
+.post-content {
+  max-width: 40rem;       /* ~65–70 characters */
+  line-height: 1.75;
+}
+
+.post-content > p,
+.post-content > ul,
+.post-content > ol {
+  margin-bottom: 1.25em;
+}
+
+.post-content li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+.post-content h2 {
+  margin-top: 2.4rem;
+  line-height: 1.25;
+}
+
+.post-content h3 {
+  margin-top: 1.7rem;
+  line-height: 1.3;
+}
+
+/* =========================================================
+   Media list — year column for easy scanning
+   ========================================================= */
+.media-list {
+  display: grid;
+  grid-template-columns: 3.25rem 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1.05rem;
+  margin: 0 0 1.6rem;
+}
+
+.media-list dt {
+  font-family: "Nanum Myeongjo", serif;
+  color: var(--teal);
+  font-size: 0.95rem;
+  padding-top: 0.3em;
+  font-variant-numeric: tabular-nums;
+}
+
+.media-list dd {
+  margin: 0;
+  line-height: 1.55;
+}
+
+@media (max-width: 600px) {
+  .media-list {
+    column-gap: 1rem;
+  }
+}
+
+.thought-back {
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+/* =========================================================
    About-page portrait
    ========================================================= */
 .about-portrait {
@@ -33,6 +100,9 @@
   --red: #a00000;
   --red-deep: #7a0000;
   --teal: #2e6f63;
+  --poppy: #e98a18;
+  --poppy-hi: #f3a02a;
+  --poppy-deep: #c2570c;
   --muted: #6f6f68;
   --grey: #828282;
   --border: #e4e2d6;
@@ -46,6 +116,9 @@ html[data-theme="dark"] {
   --red: #e0674e;
   --red-deep: #f08a72;
   --teal: #79b6a6;
+  --poppy: #f0962a;
+  --poppy-hi: #f7ab48;
+  --poppy-deep: #d96a1a;
   --muted: #9a9486;
   --grey: #8f8a7d;
   --border: #34322a;
@@ -103,14 +176,15 @@ body {
 
 /* ---- the name as masthead ---- */
 .landing-name {
-  font-family: "Vollkorn", serif;
+  font-family: "Junicode", "Vollkorn", serif;
   font-style: italic;
   font-weight: 500;
+  font-stretch: 90%;
   color: var(--red);
   text-transform: lowercase;
-  font-size: clamp(3rem, 9vw, 5.75rem);
-  line-height: 0.92;
-  letter-spacing: -0.012em;
+  font-size: clamp(3.2rem, 9.5vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: 0;
   margin: 0 0 2.2rem;
 }
 
@@ -167,10 +241,12 @@ body {
 }
 
 .landing-nav a {
-  font-family: "Vollkorn", serif;
+  font-family: "Junicode", "Vollkorn", serif;
   font-style: italic;
-  font-size: 1.5rem;
-  line-height: 1.1;
+  font-weight: 500;
+  font-stretch: 90%;
+  font-size: 1.6rem;
+  line-height: 1.15;
   color: var(--red);
   text-decoration: none;
   transition: color 0.18s ease, transform 0.18s ease;
@@ -251,14 +327,21 @@ body {
   stroke-linecap: round;
 }
 
-.sprig-leaf,
-.sprig-bud {
+.sprig-leaf {
   fill: var(--teal);
   opacity: 0.82;
 }
 
-.sprig-bud {
-  opacity: 0.95;
+.poppy-petal {
+  fill: var(--poppy);
+}
+
+.poppy-petal.poppy-front {
+  fill: var(--poppy-hi);
+}
+
+.poppy-center {
+  fill: var(--poppy-deep);
 }
 
 /* =========================================================
@@ -272,6 +355,11 @@ body {
 @keyframes leafIn {
   from { opacity: 0; }
   to   { opacity: 0.82; }
+}
+
+@keyframes poppyIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes drawStem {
@@ -298,8 +386,7 @@ body {
   animation: drawStem 1.5s ease-out 0.35s forwards;
 }
 
-.sprig-leaf,
-.sprig-bud {
+.sprig-leaf {
   opacity: 0;
   animation: leafIn 0.6s ease-out forwards;
 }
@@ -309,7 +396,18 @@ body {
 .sprig-leaf:nth-of-type(4) { animation-delay: 1.25s; }
 .sprig-leaf:nth-of-type(5) { animation-delay: 1.40s; }
 .sprig-leaf:nth-of-type(6) { animation-delay: 1.55s; }
-.sprig-bud                 { animation-delay: 1.70s; }
+
+.poppy-petal,
+.poppy-center {
+  opacity: 0;
+  animation: poppyIn 0.7s ease-out forwards;
+}
+
+.poppy-petal:nth-of-type(7)  { animation-delay: 1.70s; }
+.poppy-petal:nth-of-type(8)  { animation-delay: 1.78s; }
+.poppy-petal:nth-of-type(9)  { animation-delay: 1.86s; }
+.poppy-petal:nth-of-type(10) { animation-delay: 1.94s; }
+.poppy-center                { animation-delay: 2.02s; }
 
 @media (prefers-reduced-motion: reduce) {
   .landing-name,
@@ -318,7 +416,8 @@ body {
   .landing-foot { opacity: 1; animation: none; }
   .sprig-stem { stroke-dashoffset: 0; animation: none; }
   .sprig-leaf { opacity: 0.82; animation: none; }
-  .sprig-bud  { opacity: 0.95; animation: none; }
+  .poppy-petal,
+  .poppy-center { opacity: 1; animation: none; }
 }
 
 /* =========================================================

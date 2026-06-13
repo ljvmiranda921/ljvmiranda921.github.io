@@ -23,6 +23,19 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jenniferjiangkells.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 
+# Thoughts collection (informal on-site writing)
+collections:
+  thoughts:
+    output: true
+    permalink: /thoughts/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: thoughts
+    values:
+      layout: thought
+
 # Social settings
 social_sites:
   github: jenniferjiangkells
