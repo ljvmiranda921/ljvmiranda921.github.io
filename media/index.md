@@ -10,11 +10,11 @@ deploying AI and NLP in healthcare, and on open-source tooling for it.
 
 ## Talks &amp; panels
 
+- **Open Source in Innovation** &mdash; invited speaker &amp; panelist, The Turing Way Practitioners Hub, The Alan Turing Institute, May 2026
 - **Healing Through Collaboration: Open-Source Software in Surgical, Biomedical and AI Technologies** &mdash; speaker &amp; panelist, Hamlyn Symposium on Medical Robotics (HSMR 2025), London, June 2025
 - **[Open Innovation in Practice: Real-World Applications of Open Source AI](https://www.youtube.com/watch?v=L_ea5xylAhM)** &mdash; panelist, *Open Source, Ethics &amp; Innovation in AI*, BridgeAI (Innovate UK) at The Alan Turing Institute, November 2024
-- **Open Source in Innovation** &mdash; invited speaker &amp; panelist, The Turing Way Practitioners Hub, The Alan Turing Institute
 - **[Building healthcare-context aware applications with HealthChain](https://youtu.be/_ZqlPsDUdSY)** &mdash; NHS RPySoc 2024, hosted by the NHS Open Analytics Community &middot; [slides](https://speakerdeck.com/jenniferjiangkells/building-healthcare-context-aware-applications-with-healthchain) &middot; [walkthrough](https://dotimplement.github.io/HealthChain/cookbook/cds_sandbox/)
-- **HealthChain** &mdash; Google NHS AI Hackathon
+- **HealthChain** &mdash; Google NHS AI Hackathon, May 2024
 
 ## Podcasts
 
