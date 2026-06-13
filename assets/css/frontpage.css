@@ -100,6 +100,9 @@
   --red: #a00000;
   --red-deep: #7a0000;
   --teal: #2e6f63;
+  --poppy: #e98a18;
+  --poppy-hi: #f3a02a;
+  --poppy-deep: #c2570c;
   --muted: #6f6f68;
   --grey: #828282;
   --border: #e4e2d6;
@@ -113,6 +116,9 @@ html[data-theme="dark"] {
   --red: #e0674e;
   --red-deep: #f08a72;
   --teal: #79b6a6;
+  --poppy: #f0962a;
+  --poppy-hi: #f7ab48;
+  --poppy-deep: #d96a1a;
   --muted: #9a9486;
   --grey: #8f8a7d;
   --border: #34322a;
@@ -321,14 +327,21 @@ body {
   stroke-linecap: round;
 }
 
-.sprig-leaf,
-.sprig-bud {
+.sprig-leaf {
   fill: var(--teal);
   opacity: 0.82;
 }
 
-.sprig-bud {
-  opacity: 0.95;
+.poppy-petal {
+  fill: var(--poppy);
+}
+
+.poppy-petal.poppy-front {
+  fill: var(--poppy-hi);
+}
+
+.poppy-center {
+  fill: var(--poppy-deep);
 }
 
 /* =========================================================
@@ -342,6 +355,11 @@ body {
 @keyframes leafIn {
   from { opacity: 0; }
   to   { opacity: 0.82; }
+}
+
+@keyframes poppyIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes drawStem {
@@ -368,8 +386,7 @@ body {
   animation: drawStem 1.5s ease-out 0.35s forwards;
 }
 
-.sprig-leaf,
-.sprig-bud {
+.sprig-leaf {
   opacity: 0;
   animation: leafIn 0.6s ease-out forwards;
 }
@@ -379,7 +396,18 @@ body {
 .sprig-leaf:nth-of-type(4) { animation-delay: 1.25s; }
 .sprig-leaf:nth-of-type(5) { animation-delay: 1.40s; }
 .sprig-leaf:nth-of-type(6) { animation-delay: 1.55s; }
-.sprig-bud                 { animation-delay: 1.70s; }
+
+.poppy-petal,
+.poppy-center {
+  opacity: 0;
+  animation: poppyIn 0.7s ease-out forwards;
+}
+
+.poppy-petal:nth-of-type(7)  { animation-delay: 1.70s; }
+.poppy-petal:nth-of-type(8)  { animation-delay: 1.78s; }
+.poppy-petal:nth-of-type(9)  { animation-delay: 1.86s; }
+.poppy-petal:nth-of-type(10) { animation-delay: 1.94s; }
+.poppy-center                { animation-delay: 2.02s; }
 
 @media (prefers-reduced-motion: reduce) {
   .landing-name,
@@ -388,7 +416,8 @@ body {
   .landing-foot { opacity: 1; animation: none; }
   .sprig-stem { stroke-dashoffset: 0; animation: none; }
   .sprig-leaf { opacity: 0.82; animation: none; }
-  .sprig-bud  { opacity: 0.95; animation: none; }
+  .poppy-petal,
+  .poppy-center { opacity: 1; animation: none; }
 }
 
 /* =========================================================
