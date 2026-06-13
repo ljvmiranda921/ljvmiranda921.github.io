@@ -24,21 +24,19 @@ layout: default
   <div class="landing-body">
     <dl class="landing-meta">
       <dt>when</dt>
-      <dd>it's <span id="landing-clock">a quiet moment</span> in London</dd>
+      <dd><span id="landing-clock">it's a quiet hour of the day</span></dd>
       <dt>who</dt>
       <dd>a founder &amp; engineer building open&#8209;source tools for AI in healthcare</dd>
       <dt>now</dt>
       <dd>founder of <a href="https://dotimplement.ai">.implement</a>, where I build &amp; maintain <a href="https://github.com/dotimplement/HealthChain">HealthChain</a></dd>
       <dt>before</dt>
       <dd>clinical NLP in the NHS &mdash; systems now in live use at two London hospitals</dd>
-      <dt>based</dt>
-      <dd>London, UK</dd>
     </dl>
 
     <nav class="landing-nav" aria-label="Primary">
       <a href="/about/">about</a>
-      <a href="/blog/">writing</a>
-      <a href="/projects/">projects</a>
+      <a href="https://jenniferjiangkells.substack.com">writing</a>
+      <a href="/media/">media</a>
       <a href="https://dotimplement.ai">.implement</a>
     </nav>
   </div>
@@ -70,16 +68,33 @@ layout: default
   (function () {
     var el = document.getElementById('landing-clock');
     if (!el) return;
-    function tick() {
-      var now = new Date();
-      var time = new Intl.DateTimeFormat('en-GB', {
-        timeZone: 'Europe/London', hour: 'numeric', minute: '2-digit', hour12: true
-      }).format(now).toLowerCase();
-      var day = new Intl.DateTimeFormat('en-GB', {
-        timeZone: 'Europe/London', weekday: 'long'
-      }).format(now);
-      el.textContent = time + ' on a ' + day;
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    function themeWord() {
+      return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'bright';
     }
+    function tick() {
+      var d = new Date();
+      var h = d.getHours(), m = d.getMinutes();
+      var ampm = h < 12 ? 'a.m.' : 'p.m.';
+      var h12 = h % 12 || 12;
+      var time = (h12 < 10 ? '0' : '') + h12 + ':' + (m < 10 ? '0' : '') + m + ampm;
+      var period;
+      if (h < 5)       { period = 'night';     }
+      else if (h < 12) { period = 'morning';   }
+      else if (h < 17) { period = 'afternoon'; }
+      else if (h < 21) { period = 'evening';   }
+      else             { period = 'night';     }
+      el.innerHTML = "it's " + time + " on a " +
+        "<button class=\"theme-toggle\" type=\"button\" aria-label=\"Toggle light or dark mode\">" + themeWord() + "</button>" +
+        " <span class=\"when-mark\">❋</span> " + days[d.getDay()] + " " + period;
+    }
+    el.addEventListener('click', function (e) {
+      if (!e.target.classList || !e.target.classList.contains('theme-toggle')) return;
+      var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e2) {}
+      tick();
+    });
     tick();
     setInterval(tick, 15000);
   })();

@@ -15,8 +15,8 @@
   */
  body {
    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-   color: $text-color;
-   background-color: $background-color;
+   color: var(--ink, #{$text-color});
+   background-color: var(--paper, #{$background-color});
    -webkit-text-size-adjust: 100%;
    -webkit-font-feature-settings: "kern" 1;
       -moz-font-feature-settings: "kern" 1;
@@ -102,15 +102,15 @@
   * Links
   */
  a {
-   color: $brand-color;
+   color: var(--red, #{$brand-color});
    text-decoration: none;
- 
+
    &:visited {
-     color: darken($brand-color, 15%);
+     color: var(--red, #{$brand-color});
    }
- 
+
    &:hover {
-     color: $text-color;
+     color: var(--ink, #{$text-color});
      text-decoration: underline;
    }
  
@@ -128,8 +128,8 @@
   * Blockquotes
   */
  blockquote {
-   color: $grey-color;
-   border-left: 4px solid $grey-color-light;
+   color: var(--grey, #{$grey-color});
+   border-left: 4px solid var(--border, #{$grey-color-light});
    //padding-left: $spacing-unit / 2;
    font-style: italic;
    @include relative-font-size(1.125);
@@ -148,7 +148,7 @@
  pre,
  code {
    @include relative-font-size(0.9375);
-   border: 1px solid $grey-color-light;
+   border: 1px solid var(--border, #{$grey-color-light});
    border-radius: 3px;
    // background-color: #eef;
  }
