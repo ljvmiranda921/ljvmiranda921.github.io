@@ -1,4 +1,36 @@
 /* =========================================================
+   Reading measure & rhythm for prose pages (About, Media…)
+   Nanum Myeongjo is a delicate high-contrast serif: it wants a
+   shorter line and looser leading than the minima defaults.
+   Scoped to .post-content so the landing (.wrapper) is untouched.
+   ========================================================= */
+.post-content {
+  max-width: 40rem;       /* ~65–70 characters */
+  line-height: 1.75;
+}
+
+.post-content > p,
+.post-content > ul,
+.post-content > ol {
+  margin-bottom: 1.25em;
+}
+
+.post-content li {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+.post-content h2 {
+  margin-top: 2.4rem;
+  line-height: 1.25;
+}
+
+.post-content h3 {
+  margin-top: 1.7rem;
+  line-height: 1.3;
+}
+
+/* =========================================================
    About-page portrait
    ========================================================= */
 .about-portrait {
@@ -103,14 +135,15 @@ body {
 
 /* ---- the name as masthead ---- */
 .landing-name {
-  font-family: "Vollkorn", serif;
+  font-family: "Junicode", "Vollkorn", serif;
   font-style: italic;
   font-weight: 500;
+  font-stretch: 90%;
   color: var(--red);
   text-transform: lowercase;
-  font-size: clamp(3rem, 9vw, 5.75rem);
-  line-height: 0.92;
-  letter-spacing: -0.012em;
+  font-size: clamp(3.2rem, 9.5vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: 0;
   margin: 0 0 2.2rem;
 }
 
@@ -167,10 +200,12 @@ body {
 }
 
 .landing-nav a {
-  font-family: "Vollkorn", serif;
+  font-family: "Junicode", "Vollkorn", serif;
   font-style: italic;
-  font-size: 1.5rem;
-  line-height: 1.1;
+  font-weight: 500;
+  font-stretch: 90%;
+  font-size: 1.6rem;
+  line-height: 1.15;
   color: var(--red);
   text-decoration: none;
   transition: color 0.18s ease, transform 0.18s ease;
