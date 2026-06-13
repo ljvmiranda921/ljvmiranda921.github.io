@@ -10,8 +10,8 @@ deploying AI and NLP in healthcare, and on open-source tooling for it.
 
 ## Talks &amp; panels
 
+- **Building healthcare-context aware applications with HealthChain** &mdash; NHS Python Open Source Community Conference (RPySoc), 2024
 - **HealthChain** &mdash; Google NHS AI Hackathon
-- **HealthChain** &mdash; NHS Python Open Source Community Conference
 
 ## Podcasts
 
@@ -19,6 +19,7 @@ deploying AI and NLP in healthcare, and on open-source tooling for it.
 
 ## Press
 
+- [HealthChain: A New Open Source Integration with Epic](https://www.medplum.com/blog/healthchain) &mdash; Medplum
 - Featured in the [TLDR AI](https://tldr.tech/ai) newsletter
 
 <!-- Add new entries above. Format suggestion:
