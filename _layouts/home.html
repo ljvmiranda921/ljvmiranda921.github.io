@@ -23,6 +23,8 @@ layout: default
 
   <div class="landing-body">
     <dl class="landing-meta">
+      <dt>when</dt>
+      <dd>it's <span id="landing-clock">a quiet moment</span> in London</dd>
       <dt>who</dt>
       <dd>a founder &amp; engineer building open&#8209;source tools for AI in healthcare</dd>
       <dt>now</dt>
@@ -63,3 +65,22 @@ layout: default
   </p>
 
 </div>
+
+<script>
+  (function () {
+    var el = document.getElementById('landing-clock');
+    if (!el) return;
+    function tick() {
+      var now = new Date();
+      var time = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Europe/London', hour: 'numeric', minute: '2-digit', hour12: true
+      }).format(now).toLowerCase();
+      var day = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Europe/London', weekday: 'long'
+      }).format(now);
+      el.textContent = time + ' on a ' + day;
+    }
+    tick();
+    setInterval(tick, 15000);
+  })();
+</script>

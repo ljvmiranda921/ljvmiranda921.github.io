@@ -28,6 +28,17 @@
  
  
  /**
+  * Italics use Vollkorn — Nanum Myeongjo has no true italic, so this
+  * avoids the browser faking a slanted oblique.
+  */
+ em, i, cite, dfn, blockquote {
+   font-family: "Vollkorn", serif;
+   font-style: italic;
+ }
+
+
+
+ /**
   * Set `margin-bottom` to maintain vertical rhythm
   */
  h1, h2, h3, h4, h5, h6,
