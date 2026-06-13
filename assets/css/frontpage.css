@@ -87,21 +87,28 @@
 }
 
 .landing-meta dt {
-  font-family: "Vollkorn", serif;
-  font-style: italic;
-  font-size: 0.95rem;
+  font-family: "Nanum Myeongjo", serif;
+  font-style: normal;
+  font-size: 0.9rem;
   color: var(--teal);
   letter-spacing: 0.02em;
-  padding-top: 0.15em;
+  padding-top: 0.3em;
 }
 
 .landing-meta dd {
   margin: 0;
-  font-family: "Vollkorn", serif;
-  font-style: italic;
-  font-size: 1.18rem;
-  line-height: 1.4;
+  font-family: "Nanum Myeongjo", serif;
+  font-style: normal;
+  font-size: 1.1rem;
+  line-height: 1.5;
   color: var(--ink);
+}
+
+.when-mark {
+  color: var(--teal);
+  font-size: 0.85em;
+  vertical-align: 0.06em;
+  margin: 0 0.1em;
 }
 
 /* ---- stacked nav ---- */
@@ -130,12 +137,12 @@
 
 /* ---- closing prose ---- */
 .landing-prose {
-  font-family: "Vollkorn", serif;
-  font-style: italic;
-  font-size: 1.22rem;
-  line-height: 1.5;
+  font-family: "Nanum Myeongjo", serif;
+  font-style: normal;
+  font-size: 1.12rem;
+  line-height: 1.65;
   color: var(--ink);
-  max-width: 36em;
+  max-width: 38em;
   margin: 0 0 2rem;
 }
 
@@ -153,9 +160,9 @@
 
 /* ---- footer line ---- */
 .landing-foot {
-  font-family: "Vollkorn", serif;
-  font-style: italic;
-  font-size: 1rem;
+  font-family: "Nanum Myeongjo", serif;
+  font-style: normal;
+  font-size: 0.95rem;
   color: var(--muted);
   margin: 0;
 }

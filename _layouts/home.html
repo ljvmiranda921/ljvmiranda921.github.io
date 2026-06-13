@@ -24,7 +24,7 @@ layout: default
   <div class="landing-body">
     <dl class="landing-meta">
       <dt>when</dt>
-      <dd>it's <span id="landing-clock">a quiet moment</span> in London</dd>
+      <dd><span id="landing-clock">it's a quiet hour of the day</span></dd>
       <dt>who</dt>
       <dd>a founder &amp; engineer building open&#8209;source tools for AI in healthcare</dd>
       <dt>now</dt>
@@ -70,15 +70,21 @@ layout: default
   (function () {
     var el = document.getElementById('landing-clock');
     if (!el) return;
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     function tick() {
-      var now = new Date();
-      var time = new Intl.DateTimeFormat('en-GB', {
-        timeZone: 'Europe/London', hour: 'numeric', minute: '2-digit', hour12: true
-      }).format(now).toLowerCase();
-      var day = new Intl.DateTimeFormat('en-GB', {
-        timeZone: 'Europe/London', weekday: 'long'
-      }).format(now);
-      el.textContent = time + ' on a ' + day;
+      var d = new Date();
+      var h = d.getHours(), m = d.getMinutes();
+      var ampm = h < 12 ? 'a.m.' : 'p.m.';
+      var h12 = h % 12 || 12;
+      var time = (h12 < 10 ? '0' : '') + h12 + ':' + (m < 10 ? '0' : '') + m + ampm;
+      var period, adj;
+      if (h < 5)       { period = 'night';     adj = 'still';  }
+      else if (h < 12) { period = 'morning';   adj = 'bright'; }
+      else if (h < 17) { period = 'afternoon'; adj = 'bright'; }
+      else if (h < 21) { period = 'evening';   adj = 'quiet';  }
+      else             { period = 'night';     adj = 'late';   }
+      el.innerHTML = "it's " + time + " on a " + adj +
+        " <span class=\"when-mark\">❋</span> " + days[d.getDay()] + " " + period;
     }
     tick();
     setInterval(tick, 15000);
