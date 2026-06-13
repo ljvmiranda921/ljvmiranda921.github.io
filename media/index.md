@@ -16,6 +16,11 @@ deploying AI and NLP in healthcare, and on open-source tooling for it.
 - **[Building healthcare-context aware applications with HealthChain](https://youtu.be/_ZqlPsDUdSY)** &mdash; NHS RPySoc 2024, hosted by the NHS Open Analytics Community &middot; [slides](https://speakerdeck.com/jenniferjiangkells/building-healthcare-context-aware-applications-with-healthchain) &middot; [walkthrough](https://dotimplement.github.io/HealthChain/cookbook/cds_sandbox/)
 - **HealthChain** &mdash; Google NHS AI Hackathon, May 2024
 
+## Conferences &amp; tutorials
+
+- **Tutorial** &mdash; HealTAC 2023 (Healthcare Text Analytics Conference), Manchester, June 2023
+- HealTAC 2024 (Healthcare Text Analytics Conference), Lancaster, June 2024
+
 ## Podcasts
 
 - [In conversation with Ben Goldacre](https://codeforthought.buzzsprout.com/1326658/11317056-in-conversation-with-ben-goldacre) &mdash; Code for Thought
