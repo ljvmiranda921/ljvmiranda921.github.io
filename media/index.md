@@ -21,10 +21,6 @@ deploying AI and NLP in healthcare, and on open-source tooling for it.
 - **MiADE: live demonstration &amp; code tutorial** &mdash; [HealTAC 2023](https://www.ucl.ac.uk/health-informatics/news/2023/jun/miade-healtac-2023) (Healthcare Text Analytics Conference), Manchester, June 2023
 - **Feasibility study of &lsquo;MiADE&rsquo; point of care natural language processing system: methodology and initial results** &mdash; [HealTAC 2024](https://healtac2024.github.io/programme/) (Healthcare Text Analytics Conference), Lancaster, June 2024
 
-## Podcasts
-
-- [In conversation with Ben Goldacre](https://codeforthought.buzzsprout.com/1326658/11317056-in-conversation-with-ben-goldacre) &mdash; Code for Thought
-
 ## Press
 
 - [HealthChain: A New Open Source Integration with Epic](https://www.medplum.com/blog/healthchain) &mdash; Medplum
