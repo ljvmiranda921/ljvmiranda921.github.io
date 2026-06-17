@@ -22,6 +22,10 @@ title: News
 </style>
 
 <div class="news-item">
+<p><span class="date">**Jun 2026**</span>: I will be co-organizing the upcoming [Multilingual Representation Learning (MRL) Workshop](https://sigtyp.github.io/ws2026-mrl.html) and Shared Task. Join us and learn more about the shared task [in this link](https://mrlbenchmarks.github.io/).</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**Jun 2026**</span>: I am part of the Scientific Committee of the [Philippine Team](https://ioaiph.org/) for the [International Olympiad for Artificial Intelligence](https://ioai-official.org/). I also gave a training lecture for NLP (see [lecture materials](https://ljvmiranda921.github.io/ioaiph26-nlp/)). Go Team PH!</p>
 </div>
 
@@ -41,9 +45,9 @@ title: News
 <p><span class="date">**Dec 2025**</span>: So excited to see the release of [OLMo 3](https://arxiv.org/pdf/2512.13961)! My contribution was on creating the tool-use SFT mix during my last few months as a pre-doc. My experience here made me excited in agentic tool-use!</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Oct 2025**</span>: I'm starting my PhD at the [University of Cambridge - Language Technology Lab](https://ltl.mmll.cam.ac.uk/) and will be advised by [Anna Korhonen](https://sites.google.com/site/annakorhonen/).</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**Aug 2025**</span>: I'm proud to introduce [FilBench](https://aclanthology.org/2025.emnlp-main.127/), a [comprehensive LLM benchmark](https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard) for Filipino! Accepted at EMNLP 2025 Main. I also share some thoughts in [this blog post](/projects/2025/08/21/filbench/).</p>
