@@ -25,10 +25,11 @@
    background-size: 40px 40px, 20px 20px, 80px 80px, 80px 80px;
    background-position: 0 0, 10px 10px, 0 0, 40px 40px;
    -webkit-text-size-adjust: 100%;
-   -webkit-font-feature-settings: "kern" 1;
-      -moz-font-feature-settings: "kern" 1;
-        -o-font-feature-settings: "kern" 1;
-           font-feature-settings: "kern" 1;
+   -webkit-font-feature-settings: "kern" 1, "lnum" 1;
+      -moz-font-feature-settings: "kern" 1, "lnum" 1;
+        -o-font-feature-settings: "kern" 1, "lnum" 1;
+           font-feature-settings: "kern" 1, "lnum" 1;
+   font-variant-numeric: lining-nums;
    font-kerning: normal;
  }
  
@@ -90,8 +91,18 @@
   */
  h1, h2, h3, h4, h5, h6 {
    font-weight: $base-font-weight;
+   text-wrap: balance;
  }
- 
+
+ p, li {
+   text-wrap: pretty;
+ }
+
+ // Uniform, column-aligned figures inside tables
+ table {
+   font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1;
+ }
+
  
  
  /**
