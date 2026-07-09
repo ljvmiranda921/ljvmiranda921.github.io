@@ -27,11 +27,8 @@ and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph
 ## Selected Publications
 
 <div class="scholar-buttons">
-  <a href="https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en" class="scholar-btn">Google Scholar</a>
-  <a href="https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871" class="scholar-btn">Semantic Scholar</a>
+  <em>Profile links: <a href="https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en" class="scholar-btn">Google Scholar</a>, <a href="https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871" class="scholar-btn">Semantic Scholar</a></em>
 </div>
-
-
 _Keywords: data-centric NLP, multilinguality, resources & evaluation_
 
 {% include publications.html %}
