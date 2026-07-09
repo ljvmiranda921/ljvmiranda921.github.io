@@ -35,14 +35,14 @@ sup .footnote {
 .sidenote {
   position: absolute;
   width: 200px;
-  font-family: "Berkeley Mono", monospace;
-  font-size: 0.75rem;
-  line-height: 1.4;
+  font-family: "Vollkorn", serif;
+  font-size: 0.8rem;
+  line-height: 1.5;
   color: #333;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 0.75rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 4px 4px 0 #bbb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   z-index: 50;
   margin-top: -1rem;
 }
@@ -86,15 +86,15 @@ sup .footnote {
     border-radius: 8px;
     padding: 1rem;
     margin: 0;
-    box-shadow: 4px 4px 0 #bbb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
     transition: all 0.3s ease;
-    font-family: "Berkeley Mono", monospace;
+    font-family: "Vollkorn", serif;
     font-size: 0.85rem;
-    line-height: 1.4;
+    line-height: 1.5;
     color: #333;
   }
   
