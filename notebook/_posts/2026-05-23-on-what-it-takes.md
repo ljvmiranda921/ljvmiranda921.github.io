@@ -73,12 +73,10 @@ I wrote about this at length in a recent [survey paper](https://arxiv.org/abs/26
 Synthetic data is now a common approach in training frontier language models, but I believe we can strip it down and, similar to the jeepney, add some ornaments / adjustments to make it work for low-resource languages.
 I encourage you to read the survey paper, as I mention potential paths for improvement such as creating task-specific small language models, deploying models at the edge, and improving a model's capabilities through a robust set of harnesses. 
 
-<div style="float:right; width:320px; margin:0 0 10px 20px;">
-  <img src="/assets/images/on-what-it-takes/internet-penetration-asean.png" style="width: 100%;">
-  <p style="font-size: 0.8em; color: #555; text-align: center; margin-top: 6px; line-height: 1.35;">
-    <em>Individuals using the Internet (% of population), 1990–2024. The Philippines trails most ASEAN neighbors. Source: <a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS">World Bank / ITU (IT.NET.USER.ZS)</a>.</em>
-  </p>
-</div>
+{% include figure.html
+   src="/assets/images/on-what-it-takes/internet-penetration-asean.png"
+   width="420"
+   caption="Individuals using the Internet (% of population), 1990&ndash;2024. The Philippines trails most ASEAN neighbors. Source: [World Bank / ITU (IT.NET.USER.ZS)](https://data.worldbank.org/indicator/IT.NET.USER.ZS)." %}
 
 That said, the Philippine NLP landscape is constrained in terms of both data and compute.
 Although there is a significant presence of Filipino speakers and the language is well-represented on the internet, few have transformed this resource into useful, high-quality datasets.

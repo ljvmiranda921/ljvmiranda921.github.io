@@ -5,7 +5,7 @@ description: About page of Lj V. Miranda - Blog
 permalink: /about/
 ---
 
-My name is Lj V. Miranda, and welcome to my website. Thanks for being here :)
+My name is Lj V. Miranda, and welcome to my website! 
 
 I am a PhD student at the [Language Technology Laboratory](https://ltl.mmll.cam.ac.uk/) at the University of Cambridge, where I'm working with [Anna Korhonen](https://sites.google.com/site/annakorhonen/).
 My [research](/research) broadly examines how we can build equitable language technologies through cheap, small, and specialized language models that are deployed to edge, i.e., nearest to the communities that need these technologies the most.
@@ -57,6 +57,7 @@ Department of Theoretical and Applied Linguistics
 Churchill College, Cambridge, UK  
 Email: ljvm2 [at] cam [dot] ac [dot] uk    
 [Curriculum Vitae (PDF)](https://storage.googleapis.com/ljvmiranda/cv.pdf)
+{: style="text-align: left;"}
 
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="ljvmiranda921" data-color="#828282" data-emoji=""  data-font="Lato" data-text="Buy me a coffee" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
 
