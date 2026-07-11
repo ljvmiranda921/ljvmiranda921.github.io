@@ -164,13 +164,13 @@ annotation guideline is shown below:
 
 | Scores         | Stab et al. (2018) | Levy et al. (2018) | Shnarch et al. (2018)  |
 |----------------|-------------------:|--------------------:|-----------------------:
-| Micro F1-score | $$\mathbf{68.35}$$ |  $$60.08$$          | $$42.54$$             |
-| Macro F1-score | $$\mathbf{67.61}$$ |  $$53.71$$          | $$37.94$$             |
+| Micro F1-score | **68.35** |  60.08          | 42.54             |
+| Macro F1-score | **67.61** |  53.71          | 37.94             |
 
 | F1-score (per type)        | Stab et al. (2018) | Levy et al. (2018) | Shnarch et al. (2018)  |
 |----------------------------|-------------------:|-------------------:|------------------------:
-| No argument (`NoArgument`) | $$\mathbf{72.50}$$ | $$89.26$$          | $$54.83$$              |
-| Argument (`Argument`)      | $$\mathbf{62.71}$$ | $$36.54$$          | $$21.05$$              |
+| No argument (`NoArgument`) | **72.50** | 89.26          | 54.83              |
+| Argument (`Argument`)      | **62.71** | 36.54          | 21.05              |
 
 As expected, the performance of the [Stab et al., (2018)](#stab2018ukp)
 guideline is closest to the original annotations. It's also interesting how the
@@ -200,15 +200,15 @@ zero-shot predictions from my [previous blog post](/notebook/2023/03/28/llm-anno
 
 | Scores         | Zero-shot          | Supervised          | Stab et al. (2018)    |
 |----------------|-------------------:|--------------------:|-------------:
-| Micro F1-score | $$\mathbf{81.45}$$ |  $$79.88$$          | $$61.90$$   |
-| Macro F1-score | $$\mathbf{78.74}$$ |  $$77.52$$          | $$55.02$$   |
+| Micro F1-score | **81.45** |  79.88          | 61.90   |
+| Macro F1-score | **78.74** |  77.52          | 55.02   |
 
 
 | F1-score (per type)                      | Zero-shot           | Supervised | Stab, et al. (2018)  |
 |------------------------------------------|--------------------:|-----------:|-----------:
-| Supporting argument (`Argument_for`)     |  $$\mathbf{75.21}$$ | $$73.60$$  | $$48.74$$ |
-| No argument (`NoArgument`)               |  $$\mathbf{86.74}$$ | $$85.66$$  | $$72.50$$ |
-| Opposing argument (`Argument_against`)   |  $$\mathbf{74.26}$$ | $$73.30$$  | $$46.00$$ |
+| Supporting argument (`Argument_for`)     |  **75.21** | 73.60  | 48.74 |
+| No argument (`NoArgument`)               |  **86.74** | 85.66  | 72.50 |
+| Opposing argument (`Argument_against`)   |  **74.26** | 73.30  | 46.00 |
 
 It's an interesting negative result because it ran contrary to what I expected:
 *we already have the annotation guideline, isn't it supposed to work well?*

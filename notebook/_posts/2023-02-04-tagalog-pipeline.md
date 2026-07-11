@@ -226,9 +226,9 @@ project](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_cala
 
 | Tagalog Data    | Documents | Tokens | PER  | ORG  | LOC  |
 |-----------------|-----------|--------|------|------|------|
-| Training Set    | $$6252$$      | $$198588$$ | $$6418$$ | $$3121$$ | $$3296$$ |
-| Development Set | $$782$$      |  $$25007$$ |  $$793$$ |  $$392$$ |  $$409$$ |
-| Test Set        | $$782$$      |  $$25153$$ |  $$818$$  | $$423$$ |  $$438$$ |
+| Training Set    | 6252      | 198588 | 6418 | 3121 | 3296 |
+| Development Set | 782      |  25007 |  793 |  392 |  409 |
+| Test Set        | 782      |  25153 |  818  | 423 |  438 |
 
 **Table 2:** Dataset statistics for v1.0 of `tl_tlunified_gold` 
 {:style="text-align: center;"}
@@ -345,9 +345,9 @@ vectors and pretraining can improve F1-score** by at least 2pp.
 
 | Setup                                   | Precision                | Recall                    | F1-score                   |
 |-----------------------------------------|--------------------------|---------------------------|----------------------------|
-| Baseline                                | $$0.87\pm0.01$$          |  $$0.87\pm0.01$$          |  $$0.87\pm0.00$$           |
-| Baseline + fastText*                    | $$\mathbf{0.89\pm0.01}$$ |  $$0.86\pm0.01$$          |  $$0.88\pm0.00$$           |
-| Baseline + fastText* + pretraining      | $$\mathbf{0.89\pm0.01}$$ |  $$\mathbf{0.89\pm0.01}$$ |  $$\mathbf{0.89\pm0.00}$$  |
+| Baseline                                | 0.87±0.01          |  0.87±0.01          |  0.87±0.00           |
+| Baseline + fastText*                    | **0.89±0.01** |  0.86±0.01          |  0.88±0.00           |
+| Baseline + fastText* + pretraining      | **0.89±0.01** |  **0.89±0.01** |  **0.89±0.00**  |
 
 <p>* 714k keys and unique vectors. Vectors were sourced from the fastText website.</p>
 {:style="text-align: left; font-size: 14px;"}
@@ -381,9 +381,9 @@ in the table below:
 
 | Word Vectors                                  | Unique Vectors*     | Precision                | Recall                   | F1-score                 |
 |-----------------------------------------------|---------------------|--------------------------|--------------------------|--------------------------|
-| fastText (default: CommonCrawl + Wikipedia)   | $$714k$$            | $$\mathbf{0.89\pm0.01}$$ | $$0.86\pm0.01$$          | $$\mathbf{0.88\pm0.00}$$ |
-| fastText (TLUnified)                          | $$566k$$            | $$\mathbf{0.89\pm0.01}$$ | $$\mathbf{0.88\pm0.00}$$ | $$\mathbf{0.88\pm0.01}$$ |
-| floret (TLUnified)                            | $$\mathbf{200k}$$   | $$0.88\pm0.01$$          | $$\mathbf{0.88\pm0.01}$$ | $$\mathbf{0.88\pm0.00}$$ |
+| fastText (default: CommonCrawl + Wikipedia)   | 714k            | **0.89±0.01** | 0.86±0.01          | **0.88±0.00** |
+| fastText (TLUnified)                          | 566k            | **0.89±0.01** | **0.88±0.00** | **0.88±0.01** |
+| floret (TLUnified)                            | **200k**   | 0.88±0.01          | **0.88±0.01** | **0.88±0.00** |
 
 <p>* This time, we're talking about unique vectors, not keys. <a href="https://spacy.io/api/vectors#n_keys">Several keys can map to the same vectors</a>, and floret doesn't use the keys table.</p>
 {:style="text-align: left; font-size: 14px;"}
@@ -412,10 +412,10 @@ sizes of 100k, 50k, and 25k:
 
 | Unique Vectors  | Precision                | Recall                   | F1-score                 |
 |-----------------|--------------------------|--------------------------|--------------------------|
-| $$200k$$        | $$\mathbf{0.88\pm0.01}$$ | $$\mathbf{0.88\pm0.01}$$ | $$\mathbf{0.88\pm0.00}$$ |
-| $$100k$$        | $$\mathbf{0.88\pm0.00}$$ | $$0.87\pm0.00$$          | $$\mathbf{0.88\pm0.01}$$ |
-| $$50k$$         | $$0.86\pm0.01$$          | $$0.85\pm0.01$$          | $$0.85\pm0.00$$          |
-| $$25k$$         | $$0.82\pm0.02$$          | $$0.82\pm0.01$$          | $$0.81\pm0.00$$          |
+| 200k        | **0.88±0.01** | **0.88±0.01** | **0.88±0.00** |
+| 100k        | **0.88±0.00** | 0.87±0.00          | **0.88±0.01** |
+| 50k         | 0.86±0.01          | 0.85±0.01          | 0.85±0.00          |
+| 25k         | 0.82±0.02          | 0.82±0.01          | 0.81±0.00          |
 
 
 **Table 6:** `floret` vector performance on different vector table sizes. All
@@ -443,8 +443,8 @@ and the pretraining corpus to ensure that they won't affect the results:
 
 | Pretraining objective  | Precision                | Recall                    | F1-score                   |
 |------------------------|--------------------------|---------------------------|----------------------------|
-| `PretrainCharacters`   | $$0.89\pm0.01$$          |  $$\mathbf{0.89\pm0.01}$$ |  $$0.89\pm0.00$$           |
-| `PretrainVectors`      | $$\mathbf{0.90\pm0.01}$$ |  $$\mathbf{0.89\pm0.00}$$ |  $$\mathbf{0.90\pm0.00}$$  |
+| `PretrainCharacters`   | 0.89±0.01          |  **0.89±0.01** |  0.89±0.00           |
+| `PretrainVectors`      | **0.90±0.01** |  **0.89±0.00** |  **0.90±0.00**  |
 
 
 **Table 7:**  Performance comparison between different pretraining objectives (characters vs. vectors). Evaluated on the development set.
@@ -520,10 +520,10 @@ The results can be seen in the table below:
 
 | Language Model        | Precision                | Recall                   | F1-score                 |
 |-----------------------|--------------------------|--------------------------|--------------------------|
-| roberta-tagalog-large | $$\mathbf{0.91\pm0.01}$$ | $$\mathbf{0.91\pm0.02}$$ | $$\mathbf{0.91\pm0.01}$$ |
-| roberta-tagalog-base  | $$0.90\pm0.01$$          | $$0.89\pm0.01$$          | $$0.90\pm0.00$$          |
-| xlm-roberta-large     | $$0.88\pm0.00$$          | $$0.88\pm0.00$$          | $$0.89\pm0.01$$          |
-| xlm-roberta-base      | $$0.87\pm0.02$$          | $$0.87\pm0.01$$          | $$0.88\pm0.01$$          |
+| roberta-tagalog-large | **0.91±0.01** | **0.91±0.02** | **0.91±0.01** |
+| roberta-tagalog-base  | 0.90±0.01          | 0.89±0.01          | 0.90±0.00          |
+| xlm-roberta-large     | 0.88±0.00          | 0.88±0.00          | 0.89±0.01          |
+| xlm-roberta-base      | 0.87±0.02          | 0.87±0.01          | 0.88±0.01          |
 
 **Table 8:**  Performance comparison between a monolingual and multilingual language model. Evaluated on the development set.
 {:style="text-align: center;"}
@@ -563,9 +563,9 @@ Let's evaluate their performance on the test set:
 
 | Pipeline                 | Precision       | Recall          | F1-score        |
 |--------------------------|-----------------|-----------------|-----------------|
-| tl_tlunified_lg          | $$0.85\pm0.01$$ | $$0.86\pm0.02$$ | $$0.86\pm0.02$$ |
-| tl_tlunified_trf (base)  | $$0.87\pm0.02$$ | $$0.87\pm0.01$$ | $$0.87\pm0.01$$ |
-| tl_tlunified_trf (large) | $$0.89\pm0.01$$ | $$0.89\pm0.00$$ | $$0.90\pm0.02$$ |
+| tl_tlunified_lg          | 0.85±0.01 | 0.86±0.02 | 0.86±0.02 |
+| tl_tlunified_trf (base)  | 0.87±0.02 | 0.87±0.01 | 0.87±0.01 |
+| tl_tlunified_trf (large) | 0.89±0.01 | 0.89±0.00 | 0.90±0.02 |
 
 **Table 9:**  Performance comparison for the word vector and transformer-based
 pipelines. Evaluated on the test set.
@@ -576,9 +576,9 @@ pipelines (around 4pp). Let's see the per-entity results:
 
 | Pipeline                 | PER             | ORG             | LOC             |
 |--------------------------|-----------------|-----------------|-----------------|
-| tl_tlunified_lg          | $$0.88\pm0.02$$ | $$0.77\pm0.02$$ | $$0.86\pm0.00$$ |
-| tl_tlunified_trf (base)  | $$0.90\pm0.01$$ | $$0.80\pm0.02$$ | $$0.87\pm0.01$$ |
-| tl_tlunified_trf (large) | $$0.92\pm0.01$$ | $$0.81\pm0.02$$ | $$0.87\pm0.00$$ |
+| tl_tlunified_lg          | 0.88±0.02 | 0.77±0.02 | 0.86±0.00 |
+| tl_tlunified_trf (base)  | 0.90±0.01 | 0.80±0.02 | 0.87±0.01 |
+| tl_tlunified_trf (large) | 0.92±0.01 | 0.81±0.02 | 0.87±0.00 |
 
 **Table 10:**  F1-score comparison for the word vector and transformer-based
 pipelines (per-entity). Evaluated on the test set.
@@ -595,9 +595,9 @@ set has 784 documents.
 
 | Pipeline                 | Precision       | Recall          | F1-score        |
 |--------------------------|-----------------|-----------------|-----------------|
-| tl_tlunified_lg          | $$0.75\pm0.01$$ | $$0.83\pm0.02$$ | $$0.79\pm0.01$$ |
-| tl_tlunified_trf (base)  | $$0.85\pm0.00$$ | $$0.84\pm0.02$$ | $$0.84\pm0.02$$ |
-| tl_tlunified_trf (large) | $$0.88\pm0.02$$ | $$0.88\pm0.00$$ | $$0.88\pm0.00$$ |
+| tl_tlunified_lg          | 0.75±0.01 | 0.83±0.02 | 0.79±0.01 |
+| tl_tlunified_trf (base)  | 0.85±0.00 | 0.84±0.02 | 0.84±0.02 |
+| tl_tlunified_trf (large) | 0.88±0.02 | 0.88±0.00 | 0.88±0.00 |
 
 **Table 11:**  Performance comparison for the word vector and transformer-based
 pipelines. Evaluated on the unseen test set.

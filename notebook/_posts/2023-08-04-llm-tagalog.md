@@ -107,14 +107,14 @@ The table below reports the results (**Metrics:** <u>macro F1-score</u> for Deng
 
 | LLM                                 | Dengue           | Hatespeech       | TLUnified-NER    | 
 |-------------------------------------|------------------|------------------|------------------|
-| OpenAI (`gpt-4`)                    | $$\mathbf{62.04 (0.20)}$$ | $$45.74 (1.16)$$ | $$\mathbf{65.89 (0.44)}$$ | 
-| OpenAI (`gpt-3.5-turbo`)            | $$51.21 (0.38)$$ | $$\mathbf{73.90 (0.27)}$$ | $$53.05 (0.42)$$ | 
-| Anthropic (`claude-1`)              | $$35.85 (0.02)$$ | $$58.70 (0.03)$$ | $$58.88 (0.03)$$ | 
-| Cohere (`command`)                  | $$39.27 (0.64)$$ | $$16.38 (0.88)$$ | $$25.48 (0.11)$$ | 
-| Databricks (`dolly-v2-7b`)          | $$27.26 (0.40)$$ | $$32.30 (0.18)$$ | $$13.07 (0.14)$$ | 
-| TII (`falcon-7b`)                   | $$14.77 (0.35)$$ | $$33.00 (0.11)$$ | $$8.65  (0.04)$$ | 
-| Stability (`stablelm-base-alpha-7b`)| $$15.56 (0.08)$$ | $$32.17 (0.24)$$ | $$00.25 (0.03)$$ | 
-| OpenLM (`open_llama_7b`)            | $$15.24 (0.43)$$ | $$32.18 (0.73)$$ | $$15.09 (0.48)$$ | 
+| OpenAI (`gpt-4`)                    | **62.04 (0.20)** | 45.74 (1.16) | **65.89 (0.44)** | 
+| OpenAI (`gpt-3.5-turbo`)            | 51.21 (0.38) | **73.90 (0.27)** | 53.05 (0.42) | 
+| Anthropic (`claude-1`)              | 35.85 (0.02) | 58.70 (0.03) | 58.88 (0.03) | 
+| Cohere (`command`)                  | 39.27 (0.64) | 16.38 (0.88) | 25.48 (0.11) | 
+| Databricks (`dolly-v2-7b`)          | 27.26 (0.40) | 32.30 (0.18) | 13.07 (0.14) | 
+| TII (`falcon-7b`)                   | 14.77 (0.35) | 33.00 (0.11) | 8.65 (0.04) | 
+| Stability (`stablelm-base-alpha-7b`)| 15.56 (0.08) | 32.17 (0.24) | 00.25 (0.03) | 
+| OpenLM (`open_llama_7b`)            | 15.24 (0.43) | 32.18 (0.73) | 15.09 (0.48) | 
 
 For comparison, the table below shows the results for the word vector and [encoder-only](https://huggingface.co/learn/nlp-course/chapter1/5?fw=pt) transformer-based pipelines from [calamanCy](https://github.com/ljvmiranda921/calamanCy). 
 Both were trained using good old-fashioned supervised learning.
@@ -123,10 +123,10 @@ You can read more about these pipelines in [this blog post](/projects/2023/08/01
 
 | Pipeline                                                                                        | Dengue           | Hatespeech       | TLUnified-NER    |
 |-------------------------------------------------------------------------------------------------|------------------|------------------|------------------|
-| Large word-vector [(`tl_calamancy_lg`)](https://huggingface.co/ljvmiranda921/tl_calamancy_lg)   | $$68.42 (0.01)$$ | $$75.62 (0.02)$$ | $$88.90 (0.01)$$ | 
-| Transormer-based [(`tl_calamancy_trf`)](https://huggingface.co/ljvmiranda921/tl_calamancy_trf)  | $$72.45 (0.02)$$ | $$78.25 (0.06)$$ | $$90.34 (0.02)$$ | 
-| XLM-RoBERTa (`xlm-roberta-base`)                                                                | $$67.20 (0.01)$$ | $$77.57 (0.01)$$ | $$88.03 (0.03)$$  | 
-| Multilingual BERT (`bert-base-multilingual`)                                                    | $$71.07(0.04)$$  | $$76.40 (0.02)$$ | $$87.40 (0.02)$$  | 
+| Large word-vector [(`tl_calamancy_lg`)](https://huggingface.co/ljvmiranda921/tl_calamancy_lg)   | 68.42 (0.01) | 75.62 (0.02) | 88.90 (0.01) | 
+| Transormer-based [(`tl_calamancy_trf`)](https://huggingface.co/ljvmiranda921/tl_calamancy_trf)  | 72.45 (0.02) | 78.25 (0.06) | 90.34 (0.02) | 
+| XLM-RoBERTa (`xlm-roberta-base`)                                                                | 67.20 (0.01) | 77.57 (0.01) | 88.03 (0.03)  | 
+| Multilingual BERT (`bert-base-multilingual`)                                                    | 71.07(0.04)  | 76.40 (0.02) | 87.40 (0.02)  | 
 
 The graph below shows a better visual of our results.
 The grey bars represent our large language models while the red bars represent the supervised ones.

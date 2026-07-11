@@ -54,10 +54,10 @@ worry about OpenAI API costs.
 
 |                 | Tokens     | No argument     | Supporting | Opposing |
 |-----------------|-----------:|----------------:|-----------:|---------:|
-| Training set    | $$42589$$  | $$968$$         | $$414$$    | $$396$$  |
-| Development set | $$4899$$   | $$108$$         | $$46$$     | $$44$$   |
-| Test set        | $$13257$$  | $$270$$         | $$116$$    | $$111$$  |
-| **Total**       | $$60745$$  | $$1346$$        | $$576$$    | $$551$$  |
+| Training set    | 42589  | 968         | 414    | 396  |
+| Development set | 4899   | 108         | 46     | 44   |
+| Test set        | 13257  | 270         | 116    | 111  |
+| **Total**       | 60745  | 1346        | 576    | 551  |
 
 **Table:**  Dataset statistics for the `minimum wage` subset of the UKP Sentential Argument Mining corpus (Stab, et al., 2018).
 {:style="text-align: center;"}
@@ -136,15 +136,15 @@ below:
 
 | Scores         | Zero-shot          | Supervised          |
 |----------------|-------------------:|--------------------:|
-| Micro F1-score | $$\mathbf{81.45}$$ |  $$79.88$$          |
-| Macro F1-score | $$\mathbf{78.74}$$ |  $$77.52$$          |
+| Micro F1-score | **81.45** |  79.88          |
+| Macro F1-score | **78.74** |  77.52          |
 
 
 | F1-score (per type)                      | Zero-shot           | Supervised |
 |------------------------------------------|--------------------:|-----------:|
-| Supporting argument (`Argument_for`)     |  $$\mathbf{75.21}$$ | $$73.60$$  |
-| No argument (`NoArgument`)               |  $$\mathbf{86.74}$$ | $$85.66$$  |
-| Opposing argument (`Argument_against`)   |  $$\mathbf{74.26}$$ | $$73.30$$  |
+| Supporting argument (`Argument_for`)     |  **75.21** | 73.60  |
+| No argument (`NoArgument`)               |  **86.74** | 85.66  |
+| Opposing argument (`Argument_against`)   |  **74.26** | 73.30  |
 
 Interestingly, the zero-shot pipeline performs better than the supervised
 pipeline. For example, the Macro F1-score, which reports how well the two
