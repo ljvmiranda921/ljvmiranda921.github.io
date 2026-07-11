@@ -70,9 +70,15 @@
  }
 
  // Figures made with the figure.html include: centered image, LaTeX-style
- // caption with a small-caps lead-in (e.g. "Figure 1.") before the body
+ // caption with a small-caps lead-in. Figures auto-number via CSS counters
+ // (reset per .post-content); a manual title= in the include suppresses the
+ // auto number. width: fit-content locks the caption to the image width;
+ // the width: 0 / min-width: 100% pair stops long captions from widening
+ // the figure beyond the image.
  .post-figure {
-   margin: $spacing-unit 0;
+   margin: $spacing-unit auto;
+   width: fit-content;
+   max-width: 100%;
 
    img {
      display: block;
@@ -81,14 +87,21 @@
    }
 
    figcaption {
-     max-width: 85%;
-     margin: calc(#{$spacing-unit} / 3) auto 0;
+     width: 0;
+     min-width: 100%;
+     margin-top: calc(#{$spacing-unit} / 3);
      color: lighten($text-color, 27%);
 
-     .figure-title {
+     .figure-title,
+     &:not(:has(.figure-title))::before {
        font-variant-caps: small-caps;
        letter-spacing: 0.05em;
        color: $text-color;
+     }
+
+     &:not(:has(.figure-title))::before {
+       counter-increment: figure;
+       content: "Figure " counter(figure) ". ";
      }
    }
  }
@@ -191,16 +204,32 @@
  /**
   * Blockquotes
   */
+ // Book-style quotations: indentation and italics, no border chrome
  blockquote {
    color: $grey-color;
-   border-left: 4px solid $grey-color-light;
-   //padding-left: $spacing-unit / 2;
    font-style: italic;
-   @include relative-font-size(1.125);
-   padding-left: 40px;
- 
+   margin-left: $spacing-unit;
+   margin-right: $spacing-unit;
+
    > :last-child {
      margin-bottom: 0;
+   }
+
+   // Attribution footer from the quote.html include
+   footer {
+     text-align: right;
+     font-style: normal;
+     font-size: $small-font-size;
+     margin-top: calc(#{$spacing-unit} / 6);
+
+     .quote-author {
+       font-variant-caps: small-caps;
+       letter-spacing: 0.05em;
+     }
+
+     cite {
+       font-style: italic;
+     }
    }
  }
  
@@ -212,24 +241,14 @@
  pre,
  code {
    @include relative-font-size(0.875);
+ }
+
+ // Inline code stays \texttt-style: plain monospace, no box
+ pre {
    border: 1px solid $grey-color-light;
    border-radius: 3px;
-   // background-color: #eef;
- }
- 
- code {
-   padding: 1px 5px;
- }
- 
- pre {
    padding: 8px 12px;
    overflow-x: auto;
- 
-   > code {
-     border: 0;
-     padding-right: 0;
-     padding-left: 0;
-   }
  }
  
  
