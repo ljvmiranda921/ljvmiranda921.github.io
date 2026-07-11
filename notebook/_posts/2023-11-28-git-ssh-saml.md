@@ -32,7 +32,7 @@ ization-with-saml-single-sign-on/ for more information.
 ```
 
 
-# Step 1: Create an SSH key and upload it to your GitHub account
+## Step 1: Create an SSH key and upload it to your GitHub account
 
 First you need to generate your SSH key. 
 Sometimes, your organization will require you to generate a new one using your company email.
@@ -49,7 +49,7 @@ Go to your GitHub **Settings** > **SSH and GPG Keys** > **New SSH Key** (or head
 
 Write a semi-descriptive title (I usually put the organization name), set the **Key Type** as "Authentication Key," and copy the contents of the `id_25519.pub` in the **Key** field.
 
-# Step 2: Add your SSH key to the SSH agent's list
+## Step 2: Add your SSH key to the SSH agent's list
 
 First, test the connection by running:
 
