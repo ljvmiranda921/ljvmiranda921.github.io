@@ -265,12 +265,13 @@
 }
 
 .post-title {
-  @include relative-font-size(2.625);
-  letter-spacing: -0.015em;
-  line-height: 1;
+  @include relative-font-size(2.375);
+  font-family: "Vollkorn SC", serif;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
+    @include relative-font-size(2);
   }
 }
 
