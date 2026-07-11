@@ -103,7 +103,7 @@
  */
 .site-footer {
   // border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit calc(#{$spacing-unit} * 1.5);
+  padding: $spacing-unit 0;
   background-color: $background-color;
 
   @include media-query($on-palm) {
@@ -120,6 +120,22 @@
 .social-media-list {
   list-style: none;
   margin-left: 0;
+}
+
+.home-social {
+  a:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  a:hover .svg-icon {
+    fill: $brand-color;
+  }
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: $small-font-size;
+  color: $text-color;
 }
 
 .footer-col-wrapper {
