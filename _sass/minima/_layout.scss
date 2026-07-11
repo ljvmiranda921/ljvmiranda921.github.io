@@ -279,6 +279,12 @@
   margin-bottom: $spacing-unit;
   counter-reset: figure table; // for auto-numbered figure/table captions
 
+  // Bond headings to the section below: more space above, less below
+  h2, h3, h4 {
+    margin-top: $spacing-unit;
+    margin-bottom: calc(#{$spacing-unit} / 4);
+  }
+
   h2 {
     @include relative-font-size(1.5);
     line-height: 1.2;
