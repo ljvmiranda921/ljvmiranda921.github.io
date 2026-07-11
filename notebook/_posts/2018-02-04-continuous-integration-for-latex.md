@@ -31,7 +31,6 @@ Drobox. Our pipeline will look like this:
 {% include figure.html
    src="/assets/images/continuous-integration-for-latex/latex-ci.png"
    width="480"
-   title="Figure 1."
    alt="Diagram"
    caption="LaTeX with Continuous Integration and Deployment Workflow" %}
 

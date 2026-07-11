@@ -21,10 +21,11 @@ application.
 > [link](https://stories.thinkingmachin.es/ai-art-holiday-cards/) and the
 > open-source repository [here](https://github.com/thinkingmachines/christmais)
 
-![AI Holiday Cards](https://i.imgur.com/TFGRexp.jpg){:width="560px"}  
-__Figure:__ _Artworks produced by our AI-art generator.  
-Credits: [Thinking Machines Data Science](https://thinkingmachin.es/)_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/TFGRexp.jpg"
+   width="560"
+   alt="AI Holiday Cards"
+   caption="Artworks produced by our AI-art generator. Credits: [Thinking Machines Data Science](https://thinkingmachin.es/)" %}
 
 The whole pipeline can be summarized as the following:
 - Take an input string and find an object representation, 
@@ -44,11 +45,11 @@ on various ImageNet classes. So by using a combination of strokes, circles, and
 colors as its primitives, the perception engine should be able to draw any
 real-world object. 
 
-![Imgur](https://i.imgur.com/uglus41.jpg){:width="560px"}  
-__Figure:__ _Some objects from Tom White's Perception Engine: forklift, ruler,
-sewing machine.  
-Credits: [@dribnet](https://twitter.com/dribnet)_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/uglus41.jpg"
+   width="560"
+   alt="Imgur"
+   caption="Some objects from Tom White's Perception Engine: forklift, ruler, sewing machine. Credits: [@dribnet](https://twitter.com/dribnet)" %}
 
 They definitely look pretty, and it's something you want to showcase to people.
 White provided a base set of primitives using circles and lines in his
@@ -64,24 +65,21 @@ optimize the drawing (he only used random walks):
 
 We didn't have much luck. 
 
-![Trial1-1](https://i.imgur.com/JikBJYD.png){:width="150px"}
-![Trial1-2](https://i.imgur.com/fTVWgta.png){:width="150px"}
-![Trial1-3](https://i.imgur.com/P7lAdb0.png){:width="150px"}  
-__Figure:__ _First iteration of our tests. Yup, doesn't really look like it.    
-We tried changing the colors or adding new strokes, but to no effect_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/JikBJYD.png,https://i.imgur.com/fTVWgta.png,https://i.imgur.com/P7lAdb0.png"
+   width="150"
+   alt="Trial1-1"
+   caption="First iteration of our tests. Yup, doesn't really look like it. We tried changing the colors or adding new strokes, but to no effect" %}
 
 Then we tried to restrict everything into dark lines by removing the circles
 and other colors in the background. We thought that by training the "outlines,"
 we can get atleast some recognizable shapes:
 
-![Trial2-1](https://i.imgur.com/tt6xMXx.png){:width="150px"}
-![Trial2-2](https://i.imgur.com/ahmJvt2.png){:width="150px"}
-![Trial2-3](https://i.imgur.com/0ioAPxi.png){:width="150px"}  
-__Figure:__ _Second iteration of our tests. To be honest, this looks a bit
-of an improvement over the previous one, and I think that we're on to something
-here. However, we decided to scrap this idea due to time constraints_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/tt6xMXx.png,https://i.imgur.com/ahmJvt2.png,https://i.imgur.com/0ioAPxi.png"
+   width="150"
+   alt="Trial2-1"
+   caption="Second iteration of our tests. To be honest, this looks a bit of an improvement over the previous one, and I think that we're on to something here. However, we decided to scrap this idea due to time constraints" %}
 
 Perhaps one of the reasons why we weren't able to replicate his work is because
 there's not much information on how the whole system actually works. I guess
@@ -95,9 +93,11 @@ dataset](https://github.com/googlecreativelab/quickdraw-dataset) as primitives
 for our Drawing System. It's simply a set of drawings made by real players from
 the game [Quick, Draw!](https://quickdraw.withgoogle.com/)
 
-![Quick, Draw! Preview](https://i.imgur.com/zwM2tib.jpg){:width="560px"}   
-__Figure:__ _Some samples of the Quick, Draw! dataset_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/zwM2tib.jpg"
+   width="560"
+   alt="Quick, Draw! Preview"
+   caption="Some samples of the Quick, Draw! dataset" %}
 
 Thus, I just need to figure out how we can generate new images from that
 dataset. I can use individual strokes, but building it from scratch will take a
@@ -109,9 +109,11 @@ class in a single distribution, then samples from it. So for a set of "book"
 doodles, the generative model finds the distribution that perfectly fits (or
 represents) all of them, then creates new drawings based on that.
 
-![Generated books](https://i.imgur.com/V746am3.png){:width="560px"}  
-__Figure:__ _Generated "book" samples. These were not drawn by any human player_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/V746am3.png"
+   width="560"
+   alt="Generated books"
+   caption="Generated &ldquo;book&rdquo; samples. These were not drawn by any human player" %}
 
 
 The sequence-to-sequence variational autoencoder Sketch-RNN (Ha and Eck,

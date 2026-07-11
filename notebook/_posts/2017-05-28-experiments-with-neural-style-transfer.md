@@ -19,28 +19,24 @@ Manansala, and other modern artists such as Zobel. Enjoy!
 {% include figure.html
    src="/assets/images/experiments-with-neural-style-transfer/communities.png"
    width="560"
-   title="Figure 1."
    alt="Communities"
    caption="Vicente Manansala's style in Communities was applied in a photo of the Manila Skyline." %}
 
 {% include figure.html
    src="/assets/images/experiments-with-neural-style-transfer/fruit-gatherer.png"
    width="560"
-   title="Figure 2."
    alt="Fruit Gatherer"
    caption="Probably one of my favorites. Manansala's brush strokes applied to the facade of his alma mater." %}
 
 {% include figure.html
    src="/assets/images/experiments-with-neural-style-transfer/rivers.png"
    width="560"
-   title="Figure 3."
    alt="Rivers"
    caption="Fernando Zobel's work as implemented into one of the buildings in Ateneo." %}
 
 {% include figure.html
    src="/assets/images/experiments-with-neural-style-transfer/sarimanok.png"
    width="560"
-   title="Figure 4."
    alt="Sarimanok"
    caption="The work Sarimanok, aptly transfered to a pair of fighting cocks." %}
 
@@ -50,7 +46,6 @@ Night. What beauty!
 {% include figure.html
    src="/assets/images/experiments-with-neural-style-transfer/starry-night.png"
    width="560"
-   title="Figure 5."
    alt="Starry Night"
    caption="Van Gogh's starry night in Church of the Gesu." %}
 

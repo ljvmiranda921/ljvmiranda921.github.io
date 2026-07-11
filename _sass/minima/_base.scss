@@ -80,9 +80,15 @@
    width: fit-content;
    max-width: 100%;
 
+   .figure-images {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 8px;
+   }
+
    img {
      display: block;
-     margin: 0 auto;
      max-width: 100%;
    }
 

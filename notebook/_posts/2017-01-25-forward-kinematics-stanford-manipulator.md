@@ -145,12 +145,14 @@ $$\theta_{1}$$ = -90, $$\theta_{2}$$ = 90, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $
 
 {% include figure.html
    src="/assets/images/forward-kinematics-stanford-manipulator/fkine01.gif"
-   title="Figure 1a."
    alt="Simulation 1"
    caption="Forward Kinematics Simulation" %}
-![Top and Side View](https://i.imgur.com/uxf2xKtl.png){:height="274px" width="560px"}  
-__Figure 1b:__ _Top (left) and side (right) views of the manipulator's end-pose_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/uxf2xKtl.png"
+   width="560"
+   height="274"
+   alt="Top and Side View"
+   caption="Top (left) and side (right) views of the manipulator's end-pose" %}
 
 
 ### Simulation 2
@@ -160,13 +162,15 @@ $$\theta_{1}$$ = 180, $$\theta_{2}$$ = 0, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$
 
 {% include figure.html
    src="/assets/images/forward-kinematics-stanford-manipulator/fkine02.gif"
-   title="Figure 2a."
    alt="Simulation 2"
    caption="Forward Kinematics Simulation" %}
 
-![Top and Side View](https://i.imgur.com/AjVMtIGl.png){:height="274px" width="560px"}  
-__Figure 2b:__ _Top (left) and side (right) views of the manipulator's end-pose_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/AjVMtIGl.png"
+   width="560"
+   height="274"
+   alt="Top and Side View"
+   caption="Top (left) and side (right) views of the manipulator's end-pose" %}
 
 
 
@@ -176,13 +180,15 @@ $$\theta_{1}$$ = 90, $$\theta_{2}$$ = -45, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $
 
 {% include figure.html
    src="/assets/images/forward-kinematics-stanford-manipulator/fkine03.gif"
-   title="Figure 3a."
    alt="Simulation 3"
    caption="Forward Kinematics Simulation" %}
 
-![Top and Side View](https://i.imgur.com/StBp7rGl.png){:height="274px" width="560px"}  
-__Figure 3b:__ _Top (left) and side (right) views of the manipulator's end-pose_
-{: style="text-align: center;"}  
+{% include figure.html
+   src="https://i.imgur.com/StBp7rGl.png"
+   width="560"
+   height="274"
+   alt="Top and Side View"
+   caption="Top (left) and side (right) views of the manipulator's end-pose" %}
 
 ## Conclusion
 Solving for the end-tip position given the joint parameters (or doing forward

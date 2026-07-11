@@ -47,7 +47,6 @@ You will then see a similar form below:
 {% include figure.html
    src="/assets/images/twitter-streaming-using-python/create.PNG"
    width="560"
-   title="Figure 1."
    alt="Create New App Form"
    caption="Create New Application Form" %}
 

@@ -75,7 +75,6 @@ The neural network architecture can be seen below:
 {% include figure.html
    src="/assets/images/artificial-neural-networks/archi.png"
    width="420"
-   title="Figure 1."
    alt="Neural Network Architecture"
    caption="Articificial Neural Network Architecture" %}
 
@@ -264,7 +263,6 @@ is actually decreasing.
 {% include figure.html
    src="/assets/images/artificial-neural-networks/loss_hist.png"
    width="420"
-   title="Figure 2."
    alt="Loss history"
    caption="Plot of loss history on toy dataset" %}
 
@@ -296,7 +294,6 @@ and classification accuracy history, we see some troubling signs:
 {% include figure.html
    src="/assets/images/artificial-neural-networks/wrong.png"
    width="560"
-   title="Figure 3."
    alt="Loss history"
    caption="Plot of loss and classification accuracy on CIFAR-10" %}
 
@@ -311,7 +308,6 @@ the following:
 {% include figure.html
    src="/assets/images/artificial-neural-networks/bad_weights.png"
    width="560"
-   title="Figure 4."
    alt="NN Weights"
    caption="Visualization of ANN Weights using default parameters" %}
 
@@ -376,7 +372,6 @@ we visualize the learned weights, we can obtain the following figure:
 {% include figure.html
    src="/assets/images/artificial-neural-networks/good_weights.png"
    width="560"
-   title="Figure 5."
    alt="NN Weights"
    caption="Visualization of ANN Weights after tuning" %}
 

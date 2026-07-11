@@ -170,14 +170,12 @@ chart shows the cost history of a single run.
 {% include figure.html
    src="/assets/images/inverse-kinematics-pso/swarmMovement.gif"
    width="560"
-   title="Figure 1."
    alt="Inverse Kinematics Simulation"
    caption="Inverse Kinematics Simulation" %}
 
 {% include figure.html
    src="/assets/images/inverse-kinematics-pso/costHistory.png"
    width="560"
-   title="Figure 2."
    alt="Cost History"
    caption="Cost History" %}
 

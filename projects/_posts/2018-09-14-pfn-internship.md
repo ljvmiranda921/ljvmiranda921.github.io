@@ -164,11 +164,11 @@ this parallelization scheme is the following (inspired by my favorite anime):
 
 ![instances](/assets/images/pfn-internship/naruto-01.gif){:width="240px"
 height="140px"}
-![train](/assets/images/pfn-internship/naruto-02.jpeg){:width="240px"}
-![learn](/assets/images/pfn-internship/naruto-03.png){:width="240px"}  
-__Figure:__ _Parallelization in Naruto: (1) create multiple simulators, (2)
-then train them (sync/async), in order to (3) learn the task at less time_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/naruto-02.jpeg,/assets/images/pfn-internship/naruto-03.png"
+   width="240"
+   alt="train"
+   caption="Parallelization in Naruto: (1) create multiple simulators, (2) then train them (sync/async), in order to (3) learn the task at less time" %}
 
 1. First, we create multiple instances of our simulator (Naruto doing multiple
    shadow clones)
@@ -245,11 +245,11 @@ our algorithm (_Well except CartPole, it's like the MNIST of reinforcement
 learning_). I am using an Asynchronous Advantage Actor-Critic (A3C)
 algorithm with a size 200-200 multilayer perceptron (softmax output). 
 
-![CartPole-v1](https://i.imgur.com/37Pr9Rm.png){:width="320px"}
-![Pendulum-v0](https://i.imgur.com/ppeLL0x.png){:width="320px"}  
-__Figure:__ _Moving average of the reward for Gym Environments.  
-Notice that convergence is faster with a high number of simulators_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/37Pr9Rm.png,https://i.imgur.com/ppeLL0x.png"
+   width="320"
+   alt="CartPole-v1"
+   caption="Moving average of the reward for Gym Environments. Notice that convergence is faster with a high number of simulators" %}
 
 Here, we can see that training speed, in terms of environmental
 stepping, scales well with respect to the number of simulators. However, there
@@ -267,12 +267,11 @@ For this task, I used another A3C model with a fully-connected Gaussian policy
 (state-independent covariance). We tested on 200,000 steps for good measure (in
 fact, most papers use a million steps as baseline). The results are shown below
 
-![Hopper-v2](https://i.imgur.com/aezXER6.png){:width="320px"}
-![HalfCheetah-v2](https://i.imgur.com/SJDjPk7.png){:width="320px"}  
-![Reacher-v2](https://i.imgur.com/4FaUjxW.png){:width="320px"}   
-__Figure:__ _Moving average of the reward for MuJoCo Environments.  
-Notice that convergence is faster with a high number of simulators_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/aezXER6.png,https://i.imgur.com/SJDjPk7.png,https://i.imgur.com/4FaUjxW.png"
+   width="320"
+   alt="Hopper-v2"
+   caption="Moving average of the reward for MuJoCo Environments. Notice that convergence is faster with a high number of simulators" %}
 
 Same thing can be observed here as with the Gym environments: as we increase
 the number of parallel simulators, the convergence speed becomes faster.
@@ -280,11 +279,11 @@ Lastly, the GIFs below show what the final agent looks like after training.
 Remember that during evaluation, we don't need to show multiple
 agent-environment interactions since we're only updating one "master" model.
 
-![Hopper-v2](https://i.imgur.com/vshQdEq.gif){:width="240px"} 
-![HalfCheetah-v2](https://i.imgur.com/0EMydkG.gif){:width="240px"} 
-![Reacher-v2](https://i.imgur.com/bbYwW6D.gif){:width="240px"}   
-__Figure:__ _Simulation results for the final model for the three MuJoCo environments_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/vshQdEq.gif,https://i.imgur.com/0EMydkG.gif,https://i.imgur.com/bbYwW6D.gif"
+   width="240"
+   alt="Hopper-v2"
+   caption="Simulation results for the final model for the three MuJoCo environments" %}
 
 ## Conclusion
 

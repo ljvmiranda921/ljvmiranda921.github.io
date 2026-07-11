@@ -1,16 +1,24 @@
 {%- comment -%}
-Figure with a LaTeX-style caption: small-caps lead-in, then the body.
+Figure with a LaTeX-style caption: small-caps auto-numbered lead-in
+("Figure 1.") from a CSS counter, then the body.
 Usage:
 {% include figure.html
    src="/assets/images/foo/bar.png"
    width="800"
-   title="Figure 1."
    caption="Some *markdown* caption with [links](https://example.com)."
    alt="Alt text for the image" %}
-src and caption are required; width, title, and alt are optional.
+src and caption are required; width, height, title, and alt are optional.
+Pass title="Figure 3b." to override the auto number.
+Multiple images (one row, shared caption): src="/a.png,/b.png,/c.png"
 {%- endcomment -%}
+{%- assign figure_srcs = include.src | split: "," -%}
 <figure class="post-figure" markdown="0">
-  <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.title | default: 'figure' }}"{% if include.width %} width="{{ include.width }}"{% endif %}>
+  <div class="figure-images">
+    {%- for figure_src in figure_srcs -%}
+    {%- assign figure_src_stripped = figure_src | strip -%}
+    <img src="{% if figure_src_stripped contains '://' %}{{ figure_src_stripped }}{% else %}{{ figure_src_stripped | relative_url }}{% endif %}" alt="{{ include.alt | default: include.title | default: 'figure' }}"{% if include.width %} width="{{ include.width }}"{% endif %}{% if include.height %} height="{{ include.height }}"{% endif %}>
+    {%- endfor -%}
+  </div>
   <figcaption>
     {%- if include.title %}<span class="figure-title">{{ include.title }}</span> {% endif -%}
     {{- include.caption | markdownify | remove: '<p>' | remove: '</p>' -}}

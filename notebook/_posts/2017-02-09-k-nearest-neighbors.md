@@ -34,7 +34,6 @@ classes with 7 examples each.
 {% include figure.html
    src="/assets/images/k-nearest-neighbors/output_3_0.png"
    width="560"
-   title="Figure 1."
    alt="CIFAR Sample"
    caption="Samples of the CIFAR-10 Dataset" %}
 
@@ -168,7 +167,6 @@ high distance (more different images).
 {% include figure.html
    src="/assets/images/k-nearest-neighbors/output_9_0.png"
    width="560"
-   title="Figure 2."
    alt="Plot distance"
    caption="Visualization of the `dists` matrix" %}
 
@@ -248,7 +246,6 @@ of line plot with error bars:
 {% include figure.html
    src="/assets/images/k-nearest-neighbors/output_21_0.png"
    width="560"
-   title="Figure 3."
    alt="Cross validation"
    caption="Visualization of the cross-validation procedure with different k values" %}
 

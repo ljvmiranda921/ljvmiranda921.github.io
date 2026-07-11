@@ -17,9 +17,10 @@ used as the cost function. The two-spiral problem is a particularly difficult
 problem that requires separating two logistic spirals from one another (Lang
 and Witbrock, [1998](#lang1998learning)).
 
-![Two Spiral Problem](https://i.imgur.com/AB14SHCl.png)  
-__Figure 1:__ _Graph of the Two-Spiral Problem_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/AB14SHCl.png"
+   alt="Two Spiral Problem"
+   caption="Graph of the Two-Spiral Problem" %}
 
 ## Differential Evolution
 As a member of a class of different evolutionary algorithms, DE is a
@@ -103,7 +104,6 @@ values for my final model.
 {% include figure.html
    src="/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/cmatrix2.png"
    width="320"
-   title="Figure 2."
    alt="Cmatrix for DE params"
    caption="Heat Map for testing the mutation and recombination parameters" %}
 
@@ -130,9 +130,11 @@ the parameters.
 __Table 2:__ _Parameter Values for DE Implementation_
 {: style="text-align: center;"}
 
-![Generalization ability of DE](https://i.imgur.com/oEHj0Dhl.png){:width="640px"}  
-__Figure 3:__ _Generalization ability of the DE-trained Neural Network over the whole space_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/oEHj0Dhl.png"
+   width="640"
+   alt="Generalization ability of DE"
+   caption="Generalization ability of the DE-trained Neural Network over the whole space" %}
 
 
 ## Conclusion

@@ -39,7 +39,6 @@ training example as shown below:
 {% include figure.html
    src="/assets/images/multiclass-svm/output_4_0.png"
    width="560"
-   title="Figure 1."
    alt="CIFAR Sample"
    caption="Samples of the CIFAR-10 Dataset" %}
 
@@ -83,7 +82,6 @@ Visualizing the mean image leads us to this figure
 {% include figure.html
    src="/assets/images/multiclass-svm/output_7_1.png"
    width="280"
-   title="Figure 2."
    alt="CIFAR Sample"
    caption="Visualization of mean image" %}
 
@@ -289,7 +287,6 @@ with respect to the number of iterations.
 {% include figure.html
    src="/assets/images/multiclass-svm/output_19_0.png"
    width="360"
-   title="Figure 3."
    alt="CIFAR Sample"
    caption="Cost History during SVM training" %}
 
@@ -330,7 +327,6 @@ hyperparameters:
 {% include figure.html
    src="/assets/images/multiclass-svm/output_22_0.png"
    width="560"
-   title="Figure 4."
    alt="CIFAR Sample"
    caption="Hyperparameter accuracies in the test and validation sets" %}
 
@@ -343,7 +339,6 @@ our classifier when comparing to a test example.
 {% include figure.html
    src="/assets/images/multiclass-svm/output_24_0.png"
    width="560"
-   title="Figure 5."
    alt="CIFAR Sample"
    caption="Visualization of learned weights for a subset of the classes in CIFAR-10" %}
 

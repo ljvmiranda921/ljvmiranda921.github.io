@@ -19,9 +19,10 @@ difficult problem that requires separating two logistic spirals from one
 another (Lang
 and Witbrock, [1998](#lang1998learning)).
 
-![Two Spiral Problem](https://i.imgur.com/AB14SHCl.png)  
-__Figure 1:__ _Graph of the Two-Spiral Problem_
-{: style="text-align: center;"}  
+{% include figure.html
+   src="https://i.imgur.com/AB14SHCl.png"
+   alt="Two Spiral Problem"
+   caption="Graph of the Two-Spiral Problem" %}
 
 ## Particle Swarm Optimization
 
@@ -82,7 +83,6 @@ and came up with this matrix:
 {% include figure.html
    src="/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/cmatrix.png"
    width="320"
-   title="Figure 2."
    alt="Cmatrix for PSO params"
    caption="Heat map for testing the social and cognitive parameters" %}
 
@@ -102,13 +102,19 @@ graph of the cost is traced. One can then see the differences in their
 behavior by looking on the convergence of the "mean best" with respect to the
 personal and global bests.
 
-![PSO Run for c1](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test1_zeroc1.gif){:height="250px" width="320px"} ![PSO Run c2](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test2_zeroc2.gif){:height="250px" width="320px"}  
-__Figure 2:__ _Swarm behavior at when it is fully social (left) and fully cognitive (right)_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test1_zeroc1.gif,/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test2_zeroc2.gif"
+   width="320"
+   height="250"
+   alt="PSO Run for c1"
+   caption="Swarm behavior at when it is fully social (left) and fully cognitive (right)" %}
 
-![PSO Run for c1](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test1_zeroc1.png){:height="250px" width="320px"} ![PSO Run c2](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test2_zeroc2.png){:height="250px" width="320px"}  
-__Figure 3:__ _Graph of the cost per iteration_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test1_zeroc1.png,/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/pso_r_test2_zeroc2.png"
+   width="320"
+   height="250"
+   alt="PSO Run for c1"
+   caption="Graph of the cost per iteration" %}
 
 
 For a swarm that has no cognitive parameter, the particles tend to move to
@@ -139,9 +145,11 @@ __Table 2:__ _Parameter values for PSO Implementation_
 {: style="text-align: center;"}
 
 
-![Generalization ability of PSO](https://i.imgur.com/JtMGhr8l.png){:width="640px"}      
-__Figure 4:__ _Generalization ability of the PSO-trained Neural Network over the whole space_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/JtMGhr8l.png"
+   width="640"
+   alt="Generalization ability of PSO"
+   caption="Generalization ability of the PSO-trained Neural Network over the whole space" %}
 
 ## Conclusion
 
