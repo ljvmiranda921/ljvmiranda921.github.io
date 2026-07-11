@@ -112,6 +112,23 @@
    }
  }
 
+ // Caption for inline SVG/HTML figures that can't use the figure include;
+ // shares the figure counter so numbering interleaves in document order
+ .svg-caption {
+   font-size: $small-font-size;
+   color: lighten($text-color, 27%);
+   max-width: 85%;
+   margin: calc(#{$spacing-unit} / 3) auto $spacing-unit;
+
+   &::before {
+     counter-increment: figure;
+     content: "Figure " counter(figure) ". ";
+     font-variant-caps: small-caps;
+     letter-spacing: 0.05em;
+     color: $text-color;
+   }
+ }
+
  // Side-by-side image rows; scroll horizontally instead of stacking on
  // narrow screens. kramdown wraps the images in a <p> inside the div, so
  // the flex rules must apply there too.

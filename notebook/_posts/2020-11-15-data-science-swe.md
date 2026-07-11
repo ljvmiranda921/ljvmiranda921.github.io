@@ -101,9 +101,10 @@ software engineering:
     version-control, software design, web paradigms, dependency management, and
     so on. 
 
-    ![](/assets/images/data-science-swe/ml_architecture.png){:width="400px"}  
-    <br>**Figure**: A very simplistic system architecture 
-    {: style="text-align: center;"}
+    {% include figure.html
+       src="/assets/images/data-science-swe/ml_architecture.png"
+       width="400"
+       caption="A very simplistic system architecture" %}
 
 * **Increases familiarity with the ML workflow.** We're familiar with the ML
     experimentation workflow. In addition, there is also a productization
@@ -111,9 +112,10 @@ software engineering:
     concept drift, and more. I even imagine it as two cycles syncing together:
 
 
-    ![](/assets/images/data-science-swe/ml_lifecycle.png){:width="600px"}  
-    <br>**Figure**: Machine Learning Lifecycle
-    {: style="text-align: center;"}
+    {% include figure.html
+       src="/assets/images/data-science-swe/ml_lifecycle.png"
+       width="600"
+       caption="Machine Learning Lifecycle" %}
 
     Building an ML Service gives us a glimpse on how to productize models.
     We'll start to think about data versions and model dependencies. As a
@@ -131,9 +133,10 @@ software engineering:
     you'll learn while building an ML Service enables you to do more things!
 
 
-    ![](/assets/images/data-science-swe/new_tools.png){:width="400px"}  
-    <br>**Figure**: Three years ago with my first dip in software eng'g 
-    {: style="text-align: center;"}
+    {% include figure.html
+       src="/assets/images/data-science-swe/new_tools.png"
+       width="400"
+       caption="Three years ago with my first dip in software eng'g" %}
 
     As an academic, learning how to use Docker paves way for reproducibility.
     In addition, being more organized in writing code, in contrast to writing
@@ -159,9 +162,10 @@ leading to an ML Service, with resources that once helped me along the way
     Git-hosting server&mdash;Github, Gitlab, etc.&mdash; and enjoy the
     full-suite of the Git experience!
 
-    ![](/assets/images/data-science-swe/1_tools.png){:width="450px"}  
-    <br>**Figure**: Little by little we add new tools to your toolbox 
-    {: style="text-align: center;"}
+    {% include figure.html
+       src="/assets/images/data-science-swe/1_tools.png"
+       width="450"
+       caption="Little by little we add new tools to your toolbox" %}
 
     Key Activities:
 

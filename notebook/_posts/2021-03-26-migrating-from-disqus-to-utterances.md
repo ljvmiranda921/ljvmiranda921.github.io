@@ -55,9 +55,10 @@ comments into Utterances:
    Jekyll blog repository; I just opted not to because I use mine for project
    management and ideation purposes.
 
-    ![](/assets/images/migrating-from-disqus-to-utterances/utterances_repo.png){:width="480px"}  
-    **Figure:** I created a dedicated repo for my blog comments
-    {: style="text-align: center;"}
+    {% include figure.html
+       src="/assets/images/migrating-from-disqus-to-utterances/utterances_repo.png"
+       width="480"
+       caption="I created a dedicated repo for my blog comments" %}
 
 2. Next, install the [utterances Github
    app](https://github.com/apps/utterances) in said repo and configure it to
