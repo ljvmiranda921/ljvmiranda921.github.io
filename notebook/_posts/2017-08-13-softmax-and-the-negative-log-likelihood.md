@@ -45,9 +45,11 @@ Thus, given a three-class example below, the scores $$y_i$$ are computed from
 the forward propagation of the network. We then take the softmax and obtain
 the probabilities as shown:
 
-![Softmax computation](/assets/images/artificial-neural-networks/softmax.png){:width="640px"}  
-__Figure:__ _Softmax Computation for three classes_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/artificial-neural-networks/softmax.png"
+   width="640"
+   alt="Softmax computation"
+   caption="Softmax Computation for three classes" %}
 
 The output of the softmax describes the probability (or if you may, the
 confidence) of the neural network that a particular sample belongs to a
@@ -83,10 +85,11 @@ So if we are using the negative log-likelihood as our loss function, when
 does it become unhappy? And when does it become happy? Let's try to plot its
 range:
 
-![Negative log-likelihood](/assets/images/artificial-neural-networks/neg_log.png){:width="480px"}  
-__Figure:__ _The loss function reaches infinity when input   
-is 0, and reaches 0 when input is 1._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/artificial-neural-networks/neg_log.png"
+   width="480"
+   alt="Negative log-likelihood"
+   caption="The loss function reaches infinity when input is 0, and reaches 0 when input is 1." %}
 
 The negative log-likelihood becomes unhappy at smaller values, where it can
 reach infinite unhappiness (that's too sad), and becomes less unhappy at
@@ -95,10 +98,11 @@ classes, what's actually happening is that whenever the network assigns high
 confidence at the correct class, the unhappiness is low, but when the network
 assigns low confidence at the correct class, the unhappiness is high.
 
-![Negative log-likelihood](/assets/images/artificial-neural-networks/neg_log_demo.png){:width="720px"}  
-__Figure__ _When computing the loss, we can then see that higher   
-confidence at the correct class leads to lower loss and vice-versa._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/artificial-neural-networks/neg_log_demo.png"
+   width="720"
+   alt="Negative log-likelihood"
+   caption="When computing the loss, we can then see that higher confidence at the correct class leads to lower loss and vice-versa." %}
 
 ## Derivative of the Softmax
 

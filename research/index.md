@@ -33,6 +33,8 @@ _Keywords: data-centric NLP, multilinguality, resources & evaluation_
 
 {% include publications.html %}
 
+&nbsp;
+
 I have been involved in several open-model efforts such as [T&uuml;lu 3](https://arxiv.org/abs/2411.15124), [OLMo 2](https://arxiv.org/abs/2501.00656) (synthetic preferences for RLHF) and [OLMo 3](https://arxiv.org/abs/2512.13961) (synthetic tool-use trajectories for SFT) during my days as a pre-doc in Ai2. I also contributed datasets in the [SEACrowd project](https://aclanthology.org/2024.emnlp-main.296/) for Southeast Asian languages.
 
 Finally, I care a lot about advancing Filipino NLP and representing my native language.

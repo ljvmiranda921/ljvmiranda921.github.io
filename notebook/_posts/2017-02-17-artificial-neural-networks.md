@@ -72,9 +72,11 @@ examine the architecture of the neural net.
 ### <a name="architecture"></a> Architecture set-up
 The neural network architecture can be seen below:
 
-![Neural Network Architecture](/assets/images/artificial-neural-networks/archi.png){:width="420px"}  
-__Figure 1:__ _Articificial Neural Network Architecture_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/artificial-neural-networks/archi.png"
+   width="420"
+   alt="Neural Network Architecture"
+   caption="Articificial Neural Network Architecture" %}
 
 There are two layers in our neural network (note that the counting index
 starts with the first hidden layer up to the output layer). Moreover, the
@@ -258,9 +260,11 @@ We then test our neural network's training ability by checking if our loss is
 decreasing. What we will do is to plot our loss history, and verify that it
 is actually decreasing.
 
-![Loss history](/assets/images/artificial-neural-networks/loss_hist.png){:width="420px"}  
-__Figure 2:__ _Plot of loss history on toy dataset_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/artificial-neural-networks/loss_hist.png"
+   width="420"
+   alt="Loss history"
+   caption="Plot of loss history on toy dataset" %}
 
 It seems like our loss is decreasing and our errors are relatively low. This
 suggests that our functions are working well and our forward and backward
@@ -287,9 +291,11 @@ is not particularly good. Remember that our k-Nearest Neighbor classifier can
 actually perform relatively the same. In fact, if we plot our loss history
 and classification accuracy history, we see some troubling signs:
 
-![Loss history](/assets/images/artificial-neural-networks/wrong.png){:width="560px"}  
-__Figure 3:__ _Plot of loss and classification accuracy on CIFAR-10_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/artificial-neural-networks/wrong.png"
+   width="560"
+   alt="Loss history"
+   caption="Plot of loss and classification accuracy on CIFAR-10" %}
 
 As of now, we can see that our loss function is decreasing in a non-linear
 fashion. It looks weird and it may suggest a low learning rate. Moreover, we
@@ -299,9 +305,11 @@ and this may suggest that our model has very low capacity.
 We can also visualize the weights of our network, in this case, we arrive at
 the following:
 
-![NN Weights](/assets/images/artificial-neural-networks/bad_weights.png){:width="560px"}  
-__Figure 4:__ _Visualization of ANN Weights using default parameters_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/artificial-neural-networks/bad_weights.png"
+   width="560"
+   alt="NN Weights"
+   caption="Visualization of ANN Weights using default parameters" %}
 
 We can see from here that the network is learning a set of weights that are
 very similar to one another. One can see a lot of car classes in this
@@ -361,9 +369,11 @@ From here, we were able to ramp up our validation accuracy up to `0.497000`.
 This is particularly good compared to our SVM and Softmax Implementation. If
 we visualize the learned weights, we can obtain the following figure:
 
-![NN Weights](/assets/images/artificial-neural-networks/good_weights.png){:width="560px"}  
-__Figure 5:__ _Visualization of ANN Weights after tuning_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/artificial-neural-networks/good_weights.png"
+   width="560"
+   alt="NN Weights"
+   caption="Visualization of ANN Weights after tuning" %}
 
 We can then see that the weights are more heterogeneous. This can then
 accommodate more classes for a given set of inputs. Personally, what I like

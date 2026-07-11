@@ -1,0 +1,22 @@
+{%- comment -%}
+Attributed quotation, book-style: italic body, then a right-aligned footer
+with the author in small caps, the work in italics, and the year.
+Usage:
+{% include quote.html
+   text="The quotation body, *markdown* supported."
+   author="Edward Tufte"
+   work="The Visual Display of Quantitative Information"
+   year="1983" %}
+text is required; author, work, and year are optional.
+{%- endcomment -%}
+<blockquote markdown="0">
+  {{ include.text | markdownify }}
+  {%- if include.author or include.work or include.year -%}
+  <footer>
+    &mdash;&nbsp;
+    {%- if include.author %}<span class="quote-author">{{ include.author }}</span>{% endif -%}
+    {%- if include.work %}, <cite>{{ include.work }}</cite>{% endif -%}
+    {%- if include.year %}, {{ include.year }}{% endif -%}
+  </footer>
+  {%- endif -%}
+</blockquote>

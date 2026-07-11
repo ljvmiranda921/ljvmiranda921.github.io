@@ -46,13 +46,11 @@ Early on, I realized that pivoting from industry to academia would entail a lot 
 A part of me thought that maybe I should have just continued to a PhD right after my Masters when the path seemed clearer.
 But my industry years helped confirm that I genuinely enjoyed research work!
 
-<div class="img-row">
-<img src="/assets/images/grad-school-apps/bike.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/bgc.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/lantern.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-</div>
-_From left to right (--2021): Snippets of my life in Bonifacio Global City (BGC) a few weeks after my time in TM. A bike on display inside Coffee Project, some view of BGC, and a Japanese lantern in The Fort._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/grad-school-apps/bike.png,/assets/images/grad-school-apps/bgc.png,/assets/images/grad-school-apps/lantern.png"
+   width="220"
+   class="framed-grayscale"
+   caption="From left to right (--2021): Snippets of my life in Bonifacio Global City (BGC) a few weeks after my time in TM. A bike on display inside Coffee Project, some view of BGC, and a Japanese lantern in The Fort." %}
 
 I could already imagine the challenges in this transition: relocating to another country, accepting a significant pay cut, and adjusting my life stages (e.g., getting married, starting a family) to align with a new career trajectory.
 Looking back at 2021, I remember feeling overwhelmed by the self-imposed pressure to make everything fall perfectly into place.
@@ -63,13 +61,11 @@ While working at [Explosion](https://explosion.ai), I was fortunate to be expose
 This experience gave me the confidence to undertake my own independent work in Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
 In addition, doing software engineering work on the [Prodigy annotation tool](https://prodigy.ai/) inspired my interest in researching data-centric approaches to NLP.
 
-<div class="img-row">
-<img src="/assets/images/grad-school-apps/skyscraper.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/berlin.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/remote.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-</div>
-_From left to right (2021---2022): view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/grad-school-apps/skyscraper.png,/assets/images/grad-school-apps/berlin.png,/assets/images/grad-school-apps/remote.png"
+   width="220"
+   class="framed-grayscale"
+   caption="From left to right (2021---2022): view from my condo when I was working from home in McKinley Hill, the Brandenburg gate during the ExplosionAI meet-up at Berlin, my mechanical keyboard." %}
 
 My time at [Ai2](https://allenai.org) as a pre-doc was incredibly formative.
 Working alongside experienced researchers gave me a clearer picture of what academic research entailed and helped me identify the qualities I wanted to develop in myself as I grow into this career.
@@ -77,13 +73,11 @@ I was also lucky to be part of large collaborative projects like [T&uuml;lu 3](h
 Working at Ai2 gave me a baseline of what high-quality research looks like.[^1]
 In addition, there's really something in the air back in the US that made me more ambitious and driven&mdash; I hope to bring these qualities wherever I go.
 
-<div class="img-row">
-<img src="/assets/images/grad-school-apps/library.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/aurora.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/ai2.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-</div>
-_From left to right (2024): the Fremont library where I spent a lot of time writing papers and doing PhD apps, view of the Aurora bridge on the way to the office, the Ai2 logo in the office._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/grad-school-apps/library.png,/assets/images/grad-school-apps/aurora.png,/assets/images/grad-school-apps/ai2.png"
+   width="220"
+   class="framed-grayscale"
+   caption="From left to right (2024): the Fremont library where I spent a lot of time writing papers and doing PhD apps, view of the Aurora bridge on the way to the office, the Ai2 logo in the office." %}
 
 I got lucky because of the people who took chances on me, which is why I developed a mantra over time: **people over projects, projects over publications.**
 I prioritize finding people whom I'm excited and energized to work with over specific projects&mdash;I believe that every topic is equally interesting given the right people.
@@ -92,13 +86,11 @@ Everyone I worked with made me feel welcome, and I hope I can be that person for
 
 > I've developed a mantra over time: people over projects, projects over publications.
 
-<div class="img-row">
-<img src="/assets/images/grad-school-apps/fremont.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/pottery.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/market.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-</div>
-_From left to right (2024): snippets of my life in Seattle including the Fremont artwork, the pottery studio at Yu Tang Ceramics, and the Farmer's Market in downtown._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/grad-school-apps/fremont.png,/assets/images/grad-school-apps/pottery.png,/assets/images/grad-school-apps/market.png"
+   width="220"
+   class="framed-grayscale"
+   caption="From left to right (2024): snippets of my life in Seattle including the Fremont artwork, the pottery studio at Yu Tang Ceramics, and the Farmer's Market in downtown." %}
 
 My Masters professor, [Jinglu Hu](https://nclab.w.waseda.jp/jinglu/personal.html), also supported me all the way during my PhD applications.
 He was happy to write me a recommendation letter, and I'm more than happy that he wrote it&mdash;it felt like things had gone full circle.
@@ -112,26 +104,22 @@ I vividly recall arriving at the library as soon as it opened and remaining ther
 The holiday season also brought a reflective mood, with fewer people around and a quieter atmosphere, I was able to reflect on what type of research I wanted to pursue.
 
 <!-- add pictures of fremont library, pho place in fremont, cafe ladro -->
-<div class="img-row">
-<img src="/assets/images/grad-school-apps/fremont2.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/ladro3.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/pcc.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-</div>
-_From left to right (2024-2025): snapshots during the admissions season: writing essays in the Fremont library or in Cafe Ladro, buying food from PCC._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/grad-school-apps/fremont2.png,/assets/images/grad-school-apps/ladro3.png,/assets/images/grad-school-apps/pcc.png"
+   width="220"
+   class="framed-grayscale"
+   caption="From left to right (2024-2025): snapshots during the admissions season: writing essays in the Fremont library or in Cafe Ladro, buying food from PCC." %}
 
 I applied to 7 programs, and they're actually quite expensive!
 I missed some of the fee waiver deadlines because I was busy, so I had to shell out $1,350 to $1,500 for application fees.
 In addition, some universities require official TOEFL scores, so you also have to pay TOEFL fees in order to send your test results to those universities (~$35).
 Don't make my mistake and keep in mind that fee waivers exist and most universities are generous, especially for international students, but just note that grad school apps can be very expensive.
 
-<div class="img-row">
-<img src="/assets/images/grad-school-apps/bike2.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/phinney.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/usa.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-</div>
-_From left to right (2024-2025): The PhD applications forced me to think whether I want to stay in the US or move again abroad. Some snippets of my life (from left to right): a bike in Roosevelt Island, my apartment at Phinney, a US flag in Grand Central Station._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/grad-school-apps/bike2.png,/assets/images/grad-school-apps/phinney.png,/assets/images/grad-school-apps/usa.png"
+   width="220"
+   class="framed-grayscale"
+   caption="From left to right (2024-2025): The PhD applications forced me to think whether I want to stay in the US or move again abroad. Some snippets of my life (from left to right): a bike in Roosevelt Island, my apartment at Phinney, a US flag in Grand Central Station." %}
 
 By January, I started receiving interview invites.
 I had a mix of interview formats during this cycle: a research presentation, a short 15-20 minute informal chat, and a formal interview.
@@ -145,13 +133,11 @@ This is especially true for someone like me in their early 30s: a PhD program ca
 Making this decision in my thirties is different from if I had made this decision during my twenties.
 Getting into a PhD becomes a life decision more so than a career decision.
 
-<div class="img-row">
-<img src="/assets/images/grad-school-apps/cbtl.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/retreat.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/ring.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-</div>
-_From left to right (early 2022 and 2023): coffee shop where my wife and I talked about our plans, my room during a Holy Week retreat in Sacred Heart, our engagement ring._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/grad-school-apps/cbtl.png,/assets/images/grad-school-apps/retreat.png,/assets/images/grad-school-apps/ring.png"
+   width="220"
+   class="framed-grayscale"
+   caption="From left to right (early 2022 and 2023): coffee shop where my wife and I talked about our plans, my room during a Holy Week retreat in Sacred Heart, our engagement ring." %}
 
 I'd like to think that my industry years have matured me well enough to de-risk entering a PhD program.
 This factored into my choices: will I enjoy my research topic? will I be inspired by my environment? how old will I be after the PhD program and what life/career options will I have by then? 
@@ -165,13 +151,11 @@ PhD years are long and gritty, and having a rock to lean on is important.
 
 > Getting into a PhD becomes a life decision more so than a career decision.
 
-<div class="img-row">
-<img src="/assets/images/grad-school-apps/cornell3.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/sage_hall.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/nyc.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-</div>
-_Photos during my PhD visit days in NYC._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/grad-school-apps/cornell3.png,/assets/images/grad-school-apps/sage_hall.png,/assets/images/grad-school-apps/nyc.png"
+   width="220"
+   class="framed-grayscale"
+   caption="Photos during my PhD visit days in NYC." %}
 
 Although choosing a PhD program seems like a cerebral choice that entails a lot of calculus, a large part of my decision-making involved a lot of [discernment](https://www.ignatianspirituality.com/making-good-decisions/an-approach-to-good-choices/an-ignatian-framework-for-making-a-decision/).
 Attuning myself to my [_desires_](https://godinallthings.com/2013/09/02/desire/) and praying over them helped a lot.
@@ -191,13 +175,11 @@ In some way, I don't feel alone and different, and that's important.
 
 
 <!-- pictures of Cambridge! -->
-<div class="img-row">
-<img src="/assets/images/grad-school-apps/churchill.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/cambridge_ul.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-<img src="/assets/images/grad-school-apps/uk_phonebooth.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
-</div>
-_From left to right: Churchill College (a modern college in Cambridge with brutalist architecture), the University Library, a phonebooth repurposed into a library book deposit._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/grad-school-apps/churchill.png,/assets/images/grad-school-apps/cambridge_ul.png,/assets/images/grad-school-apps/uk_phonebooth.png"
+   width="220"
+   class="framed-grayscale"
+   caption="From left to right: Churchill College (a modern college in Cambridge with brutalist architecture), the University Library, a phonebooth repurposed into a library book deposit." %}
 
 I'm happy to close this chapter that lasted for four years.
 I'm thankful to all the people who helped me along the way, as I've learned a lot about myself and who I wanted to be.

@@ -1,0 +1,12 @@
+{%- comment -%}
+Caption for a table, placed ABOVE the table (LaTeX convention), with a
+small-caps auto-numbered lead-in ("Table 1.") from a CSS counter.
+Usage:
+{% include table-caption.html caption="Results on the held-out test set." %}
+
+| Model | F1 |
+| ----- | -- |
+...
+The output is a single line so it also works inside list items.
+{%- endcomment -%}
+<div class="table-caption" markdown="0">{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>

@@ -27,9 +27,10 @@ common goal. It may be particles in a swarm algorithm, or contributors in
 open-source projects. Independent as they were, the sum total of their actions
 give way to a recognizable whole. 
 
-![](/assets/images/cellular-sprites/pso.gif){:width="300px"}
-<br>**Figure**: Particle swarm finding the optimal solution
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/cellular-sprites/pso.gif"
+   width="300"
+   caption="Particle swarm finding the optimal solution" %}
 
 
 What piqued my interest is this idea of **emergence**, where new properties
@@ -73,9 +74,10 @@ how cellular automata is done. To achieve this, it's important to think of
 automaton, *run* the simulation, etc. These action words are then manifested
 through Seagull's API.
 
-![](/assets/images/cellular-sprites/seagull.gif){:width="400px"}
-<br>**Figure**: Three Pulsar lifeforms using the python library Seagull
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/cellular-sprites/seagull.gif"
+   width="400"
+   caption="Three Pulsar lifeforms using the python library Seagull" %}
 
 
 I'm satisfied with the API design for I can see how expressive and extensible
@@ -126,11 +128,10 @@ have a distinct feel upon them, and the mirroring technique allows the
 generated sprites to look more convincing.
 
 
-![](/assets/images/cellular-sprites/identicon.png){:width="200px"}
-![](/assets/images/cellular-sprites/space_invaders_procedural.png){:width="200px"}
-![](/assets/images/cellular-sprites/procedural_pixel_generator.png){:width="200px"}
-<br>**Figure**: Some of my inspirations in Procedural Sprite generation
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/cellular-sprites/identicon.png,/assets/images/cellular-sprites/space_invaders_procedural.png,/assets/images/cellular-sprites/procedural_pixel_generator.png"
+   width="200"
+   caption="Some of my inspirations in Procedural Sprite generation" %}
 
 Given that, the initial sprite algorithm is simple:
 1. Generate a 4x8 sprite
@@ -143,10 +144,10 @@ grayscale version (or one of matplotlib's colormaps), but the image looked
 flat. I also tried to manually add colors, but it didn't stick that much:
 
 <!-- show black and white image, show colormap image -->
-![](/assets/images/cellular-sprites/mono.png){:width="500px"}
-<br>**Figure**: Initial iterations of creating monochrome sprites using one
-colormap
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/cellular-sprites/mono.png"
+   width="500"
+   caption="Initial iterations of creating monochrome sprites using one colormap" %}
 
 Later on, I realized that adding a solid black outline makes the sprite stand
 out&mdash;it looks more appealing and recognizable. Making a solid outline sounds
@@ -171,11 +172,10 @@ whereas a high extinction rate creates mosquito-like thinner sprites. I
 exposed these parameters so as to introduce variability in the application.
 
 <!-- show too high extinction, too high survival -->
-![](/assets/images/cellular-sprites/high_stasis.png){:width="300px"}
-![](/assets/images/cellular-sprites/high_extinction.png){:width="300px"}
-<br>**Figure**: Sprites with high survival rate (left), and high extinction
-(right)
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/cellular-sprites/high_stasis.png,/assets/images/cellular-sprites/high_extinction.png"
+   width="300"
+   caption="Sprites with high survival rate (left), and high extinction (right)" %}
 
 
 Taking a step further, I decided to incorporate shading in the sprite's fill
@@ -186,12 +186,10 @@ dimension to its look. The effect looks more apparent if the color scheme is
 comprised of different colors:
 
 <!-- show sprites with gradient (totally diff colors!) -->
-![](/assets/images/cellular-sprites/gradient_0.png){:width="100px"}
-![](/assets/images/cellular-sprites/gradient_1.png){:width="100px"}
-![](/assets/images/cellular-sprites/gradient_2.png){:width="100px"}
-![](/assets/images/cellular-sprites/gradient_3.png){:width="100px"}
-<br>**Figure**: Gradients added depth to the sprites' colors
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/cellular-sprites/gradient_0.png,/assets/images/cellular-sprites/gradient_1.png,/assets/images/cellular-sprites/gradient_2.png,/assets/images/cellular-sprites/gradient_3.png"
+   width="100"
+   caption="Gradients added depth to the sprites' colors" %}
 
 Lastly, I used this opportunity to learn new tech. The initial version of my
 explorations (known as Cellular Sprites) was made in Streamlit. I arranged the
@@ -203,8 +201,7 @@ proof-of-concept, and I'm [proud of my output](https://cellular-sprites.herokuap
 <iframe src="https://cellular-sprites.herokuapp.com" style="height:450px;width:100%;border:none;overflow:hidden;">
   <p>Your browser does not support iframes.</p>
 </iframe>
-<br>**Figure**: You can try the Cellular Sprites streamlit app here.
-{: style="text-align: center;"}
+<div class="svg-caption" markdown="span">You can try the Cellular Sprites streamlit app here.</div>
 
 
 ### Emergence, determinism, and identity in Sprites-as-a-Service
@@ -221,9 +218,10 @@ borne out of emergence. This, in my opinion, creates a level of conflict: since
 you defined the initial conditions, is the system truly random?
 
 
-![](/assets/images/cellular-sprites/identity.gif){:width="500px"}
-<br>**Figure**: Each string produces a unique sprite
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/cellular-sprites/identity.gif"
+   width="500"
+   caption="Each string produces a unique sprite" %}
 
 This tug-of-war between randomness and determinism enthralled me. I can specify
 the seed, but at a certain point, I give everything to "chance." Is it truly
@@ -274,9 +272,10 @@ addition, [Ron Gilbert](https://en.wikipedia.org/wiki/Ron_Gilbert), the creator
 of the famous pixel-art indie [Thimbleweed Park](https://thimbleweedpark.com/),
 featured my work in his [blog](https://grumpygamer.com/sprites_as_a_service).
 
-![](/assets/images/cellular-sprites/infinite_sprites.gif){:width="500px"}
-<br>**Figure**: Daniel Jackson's Infinite Sprites!
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/cellular-sprites/infinite_sprites.gif"
+   width="500"
+   caption="Daniel Jackson's Infinite Sprites!" %}
 
 This is mostly it for Sprites-as-a-Service. I think I was able to explore what
 I wanted to explore, and build what I wanted to build. Good thing my Cloud

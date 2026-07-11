@@ -44,13 +44,17 @@ butter in a pan (non-exhaustive)[^1]:
 
 <!-- stylized image of these ingredients in a square box -->
 <!-- forms a stylized image of pesto sauce above it -->
-![](/assets/images/godot-nodes-and-scenes/Blog_PestoSauc.png){:width="640px"}  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/godot-nodes-and-scenes/Blog_PestoSauc.png"
+   width="640"
+   caption="Making pesto sauce by grouping basic ingredients together." %}
 
 The same goes for cooked pasta and chicken-cuts:
 
-![](/assets/images/godot-nodes-and-scenes/Blog_ChxPasta.png){:width="640px"}  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/godot-nodes-and-scenes/Blog_ChxPasta.png"
+   width="640"
+   caption="The same composability applies to cooked pasta and chicken-cuts." %}
 
 So, the process of making chicken pesto can be thought of as **iteratively
 combining one ingredient over the other**. We start with *primary* ingredients
@@ -58,8 +62,10 @@ combining one ingredient over the other**. We start with *primary* ingredients
 chicken-cuts, pasta). Then, we arrange the latter for the final dish:
 
 <!-- the picture of the hierarchy -->
-![](/assets/images/godot-nodes-and-scenes/Mockup.png){:width="640px"}  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/godot-nodes-and-scenes/Mockup.png"
+   width="640"
+   caption="Making chicken pesto by iteratively combining simple ingredients into complex ones." %}
 
 
 **Composability** is one of the core principles of Nodes and Scenes in Godot. Nodes can
@@ -112,8 +118,10 @@ The list is by no means exhaustive. By combining the three together, we have pro
 We can then make more of these, assemble them with one another, and build a game!
 
 <!-- the picture of the hierarchy -->
-![](/assets/images/godot-nodes-and-scenes/Blog_GameMake.png){:width="640px"}  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/godot-nodes-and-scenes/Blog_GameMake.png"
+   width="640"
+   caption="Combining the Character, Map, and Collectible Scenes to produce a Level." %}
 
 This level of expressiveness makes Godot's Node and Scene system powerful. We
 start from "low-level" primitives (Nodes), and assemble them into custom
@@ -130,8 +138,10 @@ games, one Scene with multiple Nodes may be enough. Larger games may require
 better scene organization.
 
 <!-- hierarchy stir-fried veggies -->
-![](/assets/images/godot-nodes-and-scenes/Blog_VeggieStirFry.png){:width="640px"}  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/godot-nodes-and-scenes/Blog_VeggieStirFry.png"
+   width="640"
+   caption="The Single-Scene Pattern is like making stir-fry: everything goes into one pan." %}
 
 *If we can also use Nodes for hierarchy, then what is the incentive for using
 Scenes?* The answer is reusability. In the next section, I'll discuss how we
@@ -147,8 +157,10 @@ for a Grilled Chicken Pesto Sandwich, then I just take them out again and
 combine them with other ingredients (in this case, bread and cheese).
 
 <!-- the picture of the hierarchy: chicken pesto sandwich -->
-![](/assets/images/godot-nodes-and-scenes/Blog_Reusability.png){:width="640px"}  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/godot-nodes-and-scenes/Blog_Reusability.png"
+   width="640"
+   caption="Reusing pesto sauce and chicken-cuts from the fridge for a Grilled Chicken Pesto Sandwich." %}
 
 "Storing them in the fridge" and "taking them out again" is a key advantage
 that Scenes have over Nodes. I refer to this as **reusability**.
@@ -166,8 +178,10 @@ areas of the game. We can implement this by creating a Strawberry template, and
 placing it on different areas of the map.
 
 <!-- a picture of reusability -->
-![](/assets/images/godot-nodes-and-scenes/Blog_GameReuse.png){:width="640px"}  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/godot-nodes-and-scenes/Blog_GameReuse.png"
+   width="640"
+   caption="Reusing a Strawberry template by instantiating it across different areas of the map." %}
 
 
 <p style="border:3px; border-style:solid; border-color:#FF0000; padding: 1em;">

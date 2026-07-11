@@ -16,14 +16,16 @@
  body {
    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
    color: $text-color;
-   background-color: $page-background;
-   background-image: 
-     radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
-     radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-     linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
-     linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%);
-   background-size: 40px 40px, 20px 20px, 80px 80px, 80px 80px;
-   background-position: 0 0, 10px 10px, 0 0, 40px 40px;
+   background-color: $background-color;
+   // Paper style: retro gray page background behind the "paper" card
+   // background-color: $page-background;
+   // background-image:
+   //   radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+   //   radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+   //   linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
+   //   linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%);
+   // background-size: 40px 40px, 20px 20px, 80px 80px, 80px 80px;
+   // background-position: 0 0, 10px 10px, 0 0, 40px 40px;
    -webkit-text-size-adjust: 100%;
    -webkit-font-feature-settings: "kern" 1, "lnum" 1;
       -moz-font-feature-settings: "kern" 1, "lnum" 1;
@@ -67,6 +69,109 @@
  
  figcaption {
    font-size: $small-font-size;
+ }
+
+ // Figures made with the figure.html include: centered image, LaTeX-style
+ // caption with a small-caps lead-in. Figures auto-number via CSS counters
+ // (reset per .post-content); a manual title= in the include suppresses the
+ // auto number. width: fit-content locks the caption to the image width;
+ // the width: 0 / min-width: 100% pair stops long captions from widening
+ // the figure beyond the image.
+ .post-figure {
+   margin: $spacing-unit auto;
+   width: fit-content;
+   max-width: 100%;
+
+   .figure-images {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 8px;
+   }
+
+   img {
+     display: block;
+     max-width: 100%;
+   }
+
+   figcaption {
+     width: 0;
+     min-width: 100%;
+     margin-top: calc(#{$spacing-unit} / 3);
+     color: lighten($text-color, 27%);
+
+     .figure-title,
+     &:not(:has(.figure-title))::before {
+       font-family: "Vollkorn SC", serif;
+       letter-spacing: 0.05em;
+       color: $text-color;
+     }
+
+     &:not(:has(.figure-title))::before {
+       counter-increment: figure;
+       content: "Figure " counter(figure) ". ";
+     }
+   }
+ }
+
+ // Bordered, dithered-photo look (e.g. Gameboy Camera-style photo strips).
+ // Strips stay side by side and scroll horizontally on narrow screens
+ // instead of wrapping; left-align when scrolling since a centered flex row
+ // clips its left edge unreachably when it overflows.
+ .post-figure.framed-grayscale {
+   img {
+     border: 2px solid black;
+     filter: grayscale(95%);
+     flex-shrink: 0;
+   }
+
+   .figure-images {
+     flex-wrap: nowrap;
+     overflow-x: auto;
+
+     @include media-query($on-laptop) {
+       justify-content: flex-start;
+     }
+   }
+ }
+
+ // Rounded corners for game screenshots and gifs
+ .post-figure.rounded img {
+   border-radius: 8px;
+ }
+
+ // Table captions sit ABOVE their table (LaTeX convention), same
+ // typography as figure captions, with their own counter
+ .table-caption {
+   font-size: $small-font-size;
+   color: lighten($text-color, 27%);
+   max-width: 85%;
+   margin: 0 auto calc(#{$spacing-unit} / 3);
+
+   &::before {
+     counter-increment: table;
+     content: "Table " counter(table) ". ";
+     font-family: "Vollkorn SC", serif;
+     letter-spacing: 0.05em;
+     color: $text-color;
+   }
+ }
+
+ // Caption for inline SVG/HTML figures that can't use the figure include;
+ // shares the figure counter so numbering interleaves in document order
+ .svg-caption {
+   font-size: $small-font-size;
+   color: lighten($text-color, 27%);
+   max-width: 85%;
+   margin: calc(#{$spacing-unit} / 3) auto $spacing-unit;
+
+   &::before {
+     counter-increment: figure;
+     content: "Figure " counter(figure) ". ";
+     font-family: "Vollkorn SC", serif;
+     letter-spacing: 0.05em;
+     color: $text-color;
+   }
  }
 
  // Side-by-side image rows; scroll horizontally instead of stacking on
@@ -123,6 +228,20 @@
    text-wrap: pretty;
  }
 
+ // Justified prose with hyphenation; needs lang="en" on <html> to work
+ p {
+   text-align: justify;
+   -webkit-hyphens: auto;
+   hyphens: auto;
+   hyphenate-limit-chars: 7 4 3;
+ }
+
+ // A justified single-image line start-aligns, so paragraphs holding only
+ // an image (kramdown wraps loose images in <p>) center instead
+ p:has(> img:only-child) {
+   text-align: center;
+ }
+
  // Uniform, column-aligned figures inside tables
  table {
    font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1;
@@ -159,45 +278,122 @@
  /**
   * Blockquotes
   */
+ // Book-style quotations: indentation and italics, no border chrome
  blockquote {
    color: $grey-color;
-   border-left: 4px solid $grey-color-light;
-   //padding-left: $spacing-unit / 2;
    font-style: italic;
-   @include relative-font-size(1.125);
-   padding-left: 40px;
- 
+   margin-left: $spacing-unit;
+   margin-right: $spacing-unit;
+
    > :last-child {
      margin-bottom: 0;
+   }
+
+   // Attribution footer from the quote.html include
+   footer {
+     text-align: right;
+     font-style: normal;
+     font-size: $small-font-size;
+     margin-top: calc(#{$spacing-unit} / 6);
+
+     .quote-author {
+       font-family: "Vollkorn SC", serif;
+       letter-spacing: 0.05em;
+     }
+
+     cite {
+       font-style: italic;
+     }
    }
  }
  
  
  
  /**
+  * Details/summary, proportional-web style: framed by rules, italic
+  * summary label, no disclosure triangle
+  */
+ details {
+   margin: $spacing-unit 0;
+   border-top: 1px solid $text-color;
+   border-bottom: 1px solid $text-color;
+   padding: calc(#{$spacing-unit} / 2) 0;
+
+   > :last-child {
+     margin-bottom: 0;
+   }
+ }
+
+ summary {
+   font-style: italic;
+   cursor: pointer;
+
+   &::marker {
+     content: "";
+   }
+ }
+
+ details[open] summary {
+   margin-bottom: calc(#{$spacing-unit} / 2);
+ }
+
+
+
+ /**
+  * Horizontal rules: ornament instead of a line (U+2767, rotated floral
+  * heart bullet), following Bringhurst-style ornamentation
+  */
+ hr {
+   position: relative;
+   display: block;
+   height: 2rem;
+   margin: $spacing-unit auto;
+   border: none;
+   color: $text-color;
+
+   // The line
+   &::before {
+     content: "";
+     display: block;
+     position: absolute;
+     top: 50%;
+     left: 0;
+     width: 100%;
+     height: 0;
+     border-top: 1px solid $text-color;
+   }
+
+   // The ornament, knocking out the line behind it
+   &::after {
+     display: inline-block;
+     content: "\2767";
+     position: absolute;
+     top: 0;
+     left: calc(50% - 1ch);
+     width: 2ch;
+     text-align: center;
+     font-size: 2rem;
+     line-height: 2rem;
+     background: $background-color;
+   }
+ }
+
+
+
+ /**
   * Code formatting
   */
  pre,
  code {
-   @include relative-font-size(0.9375);
+   @include relative-font-size(0.875);
+ }
+
+ // Inline code stays \texttt-style: plain monospace, no box
+ pre {
    border: 1px solid $grey-color-light;
    border-radius: 3px;
-   // background-color: #eef;
- }
- 
- code {
-   padding: 1px 5px;
- }
- 
- pre {
    padding: 8px 12px;
    overflow-x: auto;
- 
-   > code {
-     border: 0;
-     padding-right: 0;
-     padding-left: 0;
-   }
  }
  
  
@@ -269,8 +465,7 @@ table {
 
   tbody tr {
     &:last-child {
-      border-bottom: 3px solid darken($grey-color-light, 4%);
-      border-bottom-color: darken($grey-color-light, 12%);
+      border-bottom: 1.5px solid $text-color;
     }
   }
 
@@ -281,10 +476,10 @@ table {
 
   th {
     //    background-color: lighten($grey-color-light, 3%);
-    border-top: 3px solid darken($grey-color-light, 4%);
-    border-top-color: darken($grey-color-light, 12%);
-    border-bottom: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    border-top: 1.5px solid $text-color;
+    border-bottom: 0.75px solid $text-color;
+    font-family: "Vollkorn SC", serif;
+    letter-spacing: 0.05em;
   }
 
   // td {

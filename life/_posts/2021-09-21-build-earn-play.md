@@ -48,9 +48,10 @@ arrived at the following:
 > building?," "am I playing?," and "am I earning?"
 
 <!-- venn diagram -->
-![](/assets/images/build-earn-play/venn_diagram.png){:width="420px"}  
-*Building, playing, and earning.* 
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/build-earn-play/venn_diagram.png"
+   width="420"
+   caption="Building, playing, and earning." %}
 
 In this blogpost, **I'll talk about my personal framework** based on these
 pillars, and how they guide my decisions&mdash; both in career and life. I am

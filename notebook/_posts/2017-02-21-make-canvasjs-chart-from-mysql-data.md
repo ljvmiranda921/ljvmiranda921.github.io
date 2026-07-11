@@ -29,9 +29,11 @@ Javascript is given if you're doing web development), but I will provide some
 of the codes below. But first, in order to understand the bigger picture of
 what we'll do, take a look at the diagram below:
 
-![Diagram](/assets/images/make-canvasjs-chart-from-mysql-data/canvasjstogui.png){:width="560px"}  
-__Figure:__ _Task Diagram_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/make-canvasjs-chart-from-mysql-data/canvasjstogui.png"
+   width="560"
+   alt="Diagram"
+   caption="Task Diagram" %}
 
 Let me first explain what we'll do one-by-one:
 1. From our server, we will invoke an `AJAX` request, typically a `getJSON()` command in order to access the PHP service that gets the data from our MySQL database.

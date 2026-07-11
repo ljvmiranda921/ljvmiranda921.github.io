@@ -73,9 +73,10 @@ encourage you to read it, especially if you're a senior engineer or an IT lead.
 
 He breaks the radar down into four rings&mdash; Adopt, Trial, Assess, Hold:
 
-![](/assets/images/navigating-the-mlops-landscape/tech_radar.png){:width="350px"}  
-*As you move towards the center, the need for adoption becomes stronger.*
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/navigating-the-mlops-landscape/tech_radar.png"
+   width="350"
+   caption="As you move towards the center, the need for adoption becomes stronger." %}
 
 Below is a table that describes the appropriate strategy for each ring, and
 example initiatives that can be done:

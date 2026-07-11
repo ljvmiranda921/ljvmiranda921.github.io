@@ -36,9 +36,11 @@ Similar with the other exercise, the CIFAR-10 dataset is also being utilized.
 As a simple way of sanity-checking, we load and visualize a subset of this
 training example as shown below:
 
-![CIFAR Sample](/assets/images/multiclass-svm/output_4_0.png){:width="560px"}  
-__Figure 1:__ _Samples of the CIFAR-10 Dataset_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/multiclass-svm/output_4_0.png"
+   width="560"
+   alt="CIFAR Sample"
+   caption="Samples of the CIFAR-10 Dataset" %}
 
 ### Splitting and reshaping the data
 
@@ -77,9 +79,11 @@ plt.show()
 
 Visualizing the mean image leads us to this figure
 
-![CIFAR Sample](/assets/images/multiclass-svm/output_7_1.png){:width="280px"}  
-__Figure 2:__ _Visualization of mean image_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/multiclass-svm/output_7_1.png"
+   width="280"
+   alt="CIFAR Sample"
+   caption="Visualization of mean image" %}
 
 We then subtract this mean image from our training and test data.
 Furthermore, we also append our bias matrix (made up of ones) so that our
@@ -280,9 +284,11 @@ self.W += -learning_rate * grad
 We can then train our SVM classifier using gradient descent and plot the loss
 with respect to the number of iterations.
 
-![CIFAR Sample](/assets/images/multiclass-svm/output_19_0.png){:width="360px"}  
-__Figure 3:__ _Cost History during SVM training_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/multiclass-svm/output_19_0.png"
+   width="360"
+   alt="CIFAR Sample"
+   caption="Cost History during SVM training" %}
 
 We see that the curve is smooth (due to regularization), and is descending.
 We can then infer that our SVM and cost implementations are correct.
@@ -318,9 +324,11 @@ regularization_strengths = [1e4, 2e4, 3e4, 4e4, 5e4, 6e4, 7e4, 8e4, 1e5]
 We can then visualize our values so that we can observe the behavior of our
 hyperparameters:
 
-![CIFAR Sample](/assets/images/multiclass-svm/output_22_0.png){:width="560px"}  
-__Figure 4:__ _Hyperparameter accuracies in the test and validation sets_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/multiclass-svm/output_22_0.png"
+   width="560"
+   alt="CIFAR Sample"
+   caption="Hyperparameter accuracies in the test and validation sets" %}
 
 ## Results
 
@@ -328,9 +336,11 @@ Using the best set of hyperparameters that we have, we can then visualize the
 learned weights for each class. These weights can serve as "templates" for
 our classifier when comparing to a test example.
 
-![CIFAR Sample](/assets/images/multiclass-svm/output_24_0.png){:width="560px"}  
-__Figure 5:__ _Visualization of learned weights for a subset of the classes in CIFAR-10_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/multiclass-svm/output_24_0.png"
+   width="560"
+   alt="CIFAR Sample"
+   caption="Visualization of learned weights for a subset of the classes in CIFAR-10" %}
 
 Above, we can see how some classes, such as the `ship` and `plane` class,
 have pretty similar templates. This can be attributed to the fact that the

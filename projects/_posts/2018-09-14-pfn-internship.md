@@ -50,9 +50,11 @@ ChainerRL is a reinforcement learning framework built on-top of Chainer (think
 Tensorflow or Pytorch). It contains an extensive API that allows you to define
 your agent, its policy, the environment, and the overall training routine:
 
-![overview](/assets/images/pfn-internship/chainerrl-overview.png){:width="640px"}  
-__Figure:__ _ChainerRL is a feature-rich reinforcement learning framework_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-overview.png"
+   width="640"
+   alt="overview"
+   caption="ChainerRL is a feature-rich reinforcement learning framework" %}
 
 It is convenient to use ChainerRL: simply (1) create a model and an optimizer,
 (2) pass them into an instance of your agent, and (3) have your agent interact
@@ -60,9 +62,11 @@ with the training environment. There's a variety of policies and agents
 included in the library, you just need to import them and set their
 hyperparameters. Its basic usage can be summarized in a diagram:
 
-![usage](/assets/images/pfn-internship/chainerrl-basic-usage.png){:width="520px"}  
-__Figure:__ _Basic usage of ChainerRL_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-basic-usage.png"
+   width="520"
+   alt="usage"
+   caption="Basic usage of ChainerRL" %}
 
 > If your interest was piqued with what I just mentioned, feel free to go over
 > this short "Getting Started into ChainerRL" notebook to experience all of its
@@ -75,9 +79,11 @@ interaction simply ends. Here's a simple Markov diagram explaining this process
 is the reward): 
 
 
-![episodic](/assets/images/pfn-internship/chainerrl-episodic.png){:width="360px"}  
-__Figure:__ _Episodic training scheme, the usual way we do RL_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-episodic.png"
+   width="360"
+   alt="episodic"
+   caption="Episodic training scheme, the usual way we do RL" %}
 
 Given a state $$S_t$$, we take an action $$A_{t}$$ to produce the next state
 $$S_{t+1}$$. We do this for a number of timesteps until the environment signals
@@ -100,9 +106,11 @@ parallelization. There are two main differences in this method:
   done.
 * The environment is reset right away when proceeding into the next episode.
 
-![continuous](/assets/images/pfn-internship/chainerrl-continuous.png){:width="480px"}  
-__Figure:__ _Continuous training scheme to support parallelization_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-continuous.png"
+   width="480"
+   alt="continuous"
+   caption="Continuous training scheme to support parallelization" %}
 
 The main consequence of these changes is that the agent still considers the
 last state (if done) when transitioning into the next episode. This enables
@@ -125,10 +133,11 @@ synchronous updates in order to maximize compute in a processing unit
 (CPU/GPU)**. This is known as PPO-style parallelization (Schulman et al.,
 [2017](#schulman2017ppo)).
 
-![parallel](/assets/images/pfn-internship/parallel-env-stepping.png){:width="720px"}
-__Figure:__ _PPO-style parallelization. Perform an update after a
-certain number of timesteps_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/parallel-env-stepping.png"
+   width="720"
+   alt="parallel"
+   caption="PPO-style parallelization. Perform an update after a certain number of timesteps" %}
 
 What happens is that we let our $$N$$ simulators run for a certain number
 of batch timesteps $$T$$, then after some number of transitions $$NT$$, we
@@ -155,11 +164,11 @@ this parallelization scheme is the following (inspired by my favorite anime):
 
 ![instances](/assets/images/pfn-internship/naruto-01.gif){:width="240px"
 height="140px"}
-![train](/assets/images/pfn-internship/naruto-02.jpeg){:width="240px"}
-![learn](/assets/images/pfn-internship/naruto-03.png){:width="240px"}  
-__Figure:__ _Parallelization in Naruto: (1) create multiple simulators, (2)
-then train them (sync/async), in order to (3) learn the task at less time_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/naruto-02.jpeg,/assets/images/pfn-internship/naruto-03.png"
+   width="240"
+   alt="train"
+   caption="Parallelization in Naruto: (1) create multiple simulators, (2) then train them (sync/async), in order to (3) learn the task at less time" %}
 
 1. First, we create multiple instances of our simulator (Naruto doing multiple
    shadow clones)
@@ -197,9 +206,11 @@ number of transitions), we simply flush the older contents as time passes. With
 this technique, it's easier to share data between two API calls without
 the risk of losing information.
 
-![accummulator](/assets/images/pfn-internship/chainerrl-accummulator.png){:width="640px"}  
-__Figure:__ _Accumulator data structure for passing data between two API calls_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-accummulator.png"
+   width="640"
+   alt="accummulator"
+   caption="Accumulator data structure for passing data between two API calls" %}
 
 ### Reporting the reward's moving average
 
@@ -213,9 +224,11 @@ throughout the library. In the ChainerRL API, the size of the deque is treated
 as a hyperparameter. A simple diagram is shown below: 
 
 
-![fifo](/assets/images/pfn-internship/chainerrl-fifo.png){:width="720px"}  
-__Figure:__ _Deque data structure to report a reward stream's moving average_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-fifo.png"
+   width="720"
+   alt="fifo"
+   caption="Deque data structure to report a reward stream's moving average" %}
 
 
 ## <a id="results"></a> Simulation Results
@@ -232,11 +245,11 @@ our algorithm (_Well except CartPole, it's like the MNIST of reinforcement
 learning_). I am using an Asynchronous Advantage Actor-Critic (A3C)
 algorithm with a size 200-200 multilayer perceptron (softmax output). 
 
-![CartPole-v1](https://i.imgur.com/37Pr9Rm.png){:width="320px"}
-![Pendulum-v0](https://i.imgur.com/ppeLL0x.png){:width="320px"}  
-__Figure:__ _Moving average of the reward for Gym Environments.  
-Notice that convergence is faster with a high number of simulators_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/37Pr9Rm.png,https://i.imgur.com/ppeLL0x.png"
+   width="320"
+   alt="CartPole-v1"
+   caption="Moving average of the reward for Gym Environments. Notice that convergence is faster with a high number of simulators" %}
 
 Here, we can see that training speed, in terms of environmental
 stepping, scales well with respect to the number of simulators. However, there
@@ -254,12 +267,11 @@ For this task, I used another A3C model with a fully-connected Gaussian policy
 (state-independent covariance). We tested on 200,000 steps for good measure (in
 fact, most papers use a million steps as baseline). The results are shown below
 
-![Hopper-v2](https://i.imgur.com/aezXER6.png){:width="320px"}
-![HalfCheetah-v2](https://i.imgur.com/SJDjPk7.png){:width="320px"}  
-![Reacher-v2](https://i.imgur.com/4FaUjxW.png){:width="320px"}   
-__Figure:__ _Moving average of the reward for MuJoCo Environments.  
-Notice that convergence is faster with a high number of simulators_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/aezXER6.png,https://i.imgur.com/SJDjPk7.png,https://i.imgur.com/4FaUjxW.png"
+   width="320"
+   alt="Hopper-v2"
+   caption="Moving average of the reward for MuJoCo Environments. Notice that convergence is faster with a high number of simulators" %}
 
 Same thing can be observed here as with the Gym environments: as we increase
 the number of parallel simulators, the convergence speed becomes faster.
@@ -267,11 +279,11 @@ Lastly, the GIFs below show what the final agent looks like after training.
 Remember that during evaluation, we don't need to show multiple
 agent-environment interactions since we're only updating one "master" model.
 
-![Hopper-v2](https://i.imgur.com/vshQdEq.gif){:width="240px"} 
-![HalfCheetah-v2](https://i.imgur.com/0EMydkG.gif){:width="240px"} 
-![Reacher-v2](https://i.imgur.com/bbYwW6D.gif){:width="240px"}   
-__Figure:__ _Simulation results for the final model for the three MuJoCo environments_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/vshQdEq.gif,https://i.imgur.com/0EMydkG.gif,https://i.imgur.com/bbYwW6D.gif"
+   width="240"
+   alt="Hopper-v2"
+   caption="Simulation results for the final model for the three MuJoCo environments" %}
 
 ## Conclusion
 

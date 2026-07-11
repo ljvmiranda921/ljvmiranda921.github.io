@@ -42,9 +42,10 @@ and [all my dotfiles](https://github.com/ljvmiranda921/dotfiles) for
 bash worked out of the box. Also, you can choose any distro you want from the
 Microsoft Store! I'm pretty basic so I went with Ubuntu 20.04. 
 
-![](/assets/images/developing-on-windows/neofetch.png){:width="540px"}  
-__Figure__: *Windows Subsystem for Linux!*
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/developing-on-windows/neofetch.png"
+   width="540"
+   caption="Windows Subsystem for Linux!" %}
 
 
 I also installed **Visual Studio Code (VSCode)** since it can seamlessly open
@@ -57,11 +58,10 @@ went for the **Windows Terminal** (you can also find it in the Microsoft Store).
 It's an emulator where you can open PowerShell, Command Prompt, and Bash in
 multiple tabs! 
 
-![](/assets/images/developing-on-windows/multiple_tabs.png){:width="540px"}  
-__Figure__: *If you look at the top, then you can see that I can open Bash,
-PowerShell, and the Windows Command Prompt in just one place using Windows
-Terminal*
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/developing-on-windows/multiple_tabs.png"
+   width="540"
+   caption="If you look at the top, then you can see that I can open Bash, PowerShell, and the Windows Command Prompt in just one place using Windows Terminal" %}
 
 
 It's customizable too. You can [change the color
@@ -71,16 +71,18 @@ Dark](https://gist.github.com/davialexandre/1179070118b22d830739efee4721972d)
 and [Fira
 code](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode).[^2]
 
-![](/assets/images/developing-on-windows/settings.png){:width="540px"}  
-__Figure__: *You can update the font and color scheme in the Settings tab*
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/developing-on-windows/settings.png"
+   width="540"
+   caption="You can update the font and color scheme in the Settings tab" %}
 
 After a few tweaks, my terminal already looks like the one I've been accustomed
 to in my Linux machine.
 
-![](/assets/images/developing-on-windows/linux_setup.png){:width="540px"}  
-__Figure__: *With WSL2 and Windows Terminal, I was able to replicate my Linux setup*
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/developing-on-windows/linux_setup.png"
+   width="540"
+   caption="With WSL2 and Windows Terminal, I was able to replicate my Linux setup" %}
 
 Lastly, another thing I did is to set Bash as my default profile, and update
 the starting directory to `//wsl$/Ubuntu-20.04/home/$USER/`. So whenever I open
@@ -118,9 +120,10 @@ the value in the `PSVersion` key. On my machine, PowerShell 7.x is installed
 side-by-side with PowerShell 5.1. I am not sure if it's possible to upgrade 5.1
 to 7.X., so I opted to keep them separate.
 
-![](/assets/images/developing-on-windows/psversiontable.png){:width="540px"}  
-__Figure__: *After installing Powershell, calling `PSVersionTable` shows the 7.x version*
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/developing-on-windows/psversiontable.png"
+   width="540"
+   caption="After installing Powershell, calling `PSVersionTable` shows the 7.x version" %}
 
 Personally, it feels similar to the Python 2 to 3 conundrum. Sometimes it's
 okay to keep them both so as to not break anything in your system.
@@ -186,19 +189,20 @@ as it fits nicely to Gruvbox.
 oh-my-posh --init --shell pwsh --config ~\AppData\Local\Programs\oh-my-posh\themes\nu4a.omp.json | Invoke-Expression
 ```
 
-![](/assets/images/developing-on-windows/unpatched.png){:width="540px"}  
-__Figure__: *At first, some glyphs won't render properly. We'll fix that by installing a NerdFont-compatible typeface
-Most fonts were already patched, so you'll most likely find a patched version of your favorite font.*
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/developing-on-windows/unpatched.png"
+   width="540"
+   caption="At first, some glyphs won't render properly. We'll fix that by installing a NerdFont-compatible typeface Most fonts were already patched, so you'll most likely find a patched version of your favorite font." %}
 
 At first, the prompt looks weird because some glyphs didn't render properly. To
 fix that, I used the [patched version of Fira
 Code](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode)
 so that I have access to all icons and shapes.
 
-![](/assets/images/developing-on-windows/patched.png){:width="540px"}  
-__Figure__: *After installing the patched font, the powerline should now render properly.*
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/developing-on-windows/patched.png"
+   width="540"
+   caption="After installing the patched font, the powerline should now render properly." %}
 
 I decided to be more extra and installed Terminal Icons. This adds small and
 cute icons whenever you type `ls` and `dir`. I installed it by typing the
@@ -216,9 +220,10 @@ Import-Module -Name Terminal-Icons
 
 now it looks awesome!
 
-![](/assets/images/developing-on-windows/a_bit_extra.png){:width="540px"}  
-__Figure__: *I installed `Terminal-Icons` because I want to be more extra*
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/developing-on-windows/a_bit_extra.png"
+   width="540"
+   caption="I installed `Terminal-Icons` because I want to be more extra" %}
 
 ## <a id="powertoys"></a>Install Microsoft Powertoys for more control
 

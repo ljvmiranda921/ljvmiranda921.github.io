@@ -119,9 +119,11 @@ representing the domain-expertise available for the problem, and the y-axis
 representing the amount of unlabeled data available. I also went ahead and
 plotted techniques that fall under each region:
 
-![](/assets/images/data-centric-ml/data_centric_framework.png){:width="640px"}  
-__Figure:__ Putting data-centric machine learning into context.
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/data-centric-ml/data_centric_framework.png"
+   width="640"
+   caption="Putting data-centric machine learning into context."
+   alt="A quadrant chart contextualizing data-centric ML techniques" %}
 
 There's a lot of moving parts, so let me describe each region:
 

@@ -51,6 +51,8 @@ $$
 
 For the Stanford Arm, here are the DH Parameters:  
 
+{% include table-caption.html caption="DH Parameters for the Stanford Arm" %}
+
 | Joint |   Joint Angle   |   Link Offset   | Link Length | Link Twist |
 |:-----:|:--------------:|:---------:|:-----:|:----------:|
 | 1     | $$\theta_{1}$$ | $$d_{1}$$ |   0   |     -90    |
@@ -60,8 +62,6 @@ For the Stanford Arm, here are the DH Parameters:
 | 5     | $$\theta_{5}$$ |     0     |   0   |     90     |
 | 6     | $$\theta_{6}$$ | $$d_{6}$$ |   0   |      0     |  
 {: .table }
-__Table 1:__ _DH Parameters for the Stanford Arm_
-{: style="text-align: center;"}
 
 
 
@@ -76,6 +76,8 @@ $$
 
 They are then limited in terms of physical constraints, such that:
 
+{% include table-caption.html caption="Joint variable physical constraints" %}
+
 | Parameters   | Limitation |
 |:------------:|:----------:|
 | $$\theta_1$$ | [-180 180] |
@@ -85,8 +87,6 @@ They are then limited in terms of physical constraints, such that:
 | $$\theta_5$$ | [-25 25]   |
 | $$\theta_6$$ | [-180 180] |  
 {: .table}
-__Table 2:__ _Joint variable physical constraints_
-{: style="text-align: center;"}
 
 ### MATLAB Implementation  
 
@@ -143,12 +143,16 @@ x-y and x-z coordinates.
 $$\theta_{1}$$ = -90, $$\theta_{2}$$ = 90, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$\theta_{5}$$ = 25, $$\theta_{6}$$ = 90
 
 
-![Simulation 1](/assets/images/forward-kinematics-stanford-manipulator/fkine01.gif)  
-__Figure 1a:__ _Forward Kinematics Simulation_
-{: style="text-align: center;"}
-![Top and Side View](https://i.imgur.com/uxf2xKtl.png){:height="274px" width="560px"}  
-__Figure 1b:__ _Top (left) and side (right) views of the manipulator's end-pose_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/forward-kinematics-stanford-manipulator/fkine01.gif"
+   alt="Simulation 1"
+   caption="Forward Kinematics Simulation" %}
+{% include figure.html
+   src="https://i.imgur.com/uxf2xKtl.png"
+   width="560"
+   height="274"
+   alt="Top and Side View"
+   caption="Top (left) and side (right) views of the manipulator's end-pose" %}
 
 
 ### Simulation 2
@@ -156,13 +160,17 @@ $$\theta_{1}$$ = 180, $$\theta_{2}$$ = 0, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$
 
 
 
-![Simulation 2](/assets/images/forward-kinematics-stanford-manipulator/fkine02.gif)  
-__Figure 2a:__ _Forward Kinematics Simulation_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/forward-kinematics-stanford-manipulator/fkine02.gif"
+   alt="Simulation 2"
+   caption="Forward Kinematics Simulation" %}
 
-![Top and Side View](https://i.imgur.com/AjVMtIGl.png){:height="274px" width="560px"}  
-__Figure 2b:__ _Top (left) and side (right) views of the manipulator's end-pose_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/AjVMtIGl.png"
+   width="560"
+   height="274"
+   alt="Top and Side View"
+   caption="Top (left) and side (right) views of the manipulator's end-pose" %}
 
 
 
@@ -170,13 +178,17 @@ __Figure 2b:__ _Top (left) and side (right) views of the manipulator's end-pose_
 $$\theta_{1}$$ = 90, $$\theta_{2}$$ = -45, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$\theta_{5}$$ = -25, $$\theta_{6}$$ = 45
 
 
-![Simulation 3](/assets/images/forward-kinematics-stanford-manipulator/fkine03.gif)  
-__Figure 3a:__ _Forward Kinematics Simulation_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/forward-kinematics-stanford-manipulator/fkine03.gif"
+   alt="Simulation 3"
+   caption="Forward Kinematics Simulation" %}
 
-![Top and Side View](https://i.imgur.com/StBp7rGl.png){:height="274px" width="560px"}  
-__Figure 3b:__ _Top (left) and side (right) views of the manipulator's end-pose_
-{: style="text-align: center;"}  
+{% include figure.html
+   src="https://i.imgur.com/StBp7rGl.png"
+   width="560"
+   height="274"
+   alt="Top and Side View"
+   caption="Top (left) and side (right) views of the manipulator's end-pose" %}
 
 ## Conclusion
 Solving for the end-tip position given the joint parameters (or doing forward

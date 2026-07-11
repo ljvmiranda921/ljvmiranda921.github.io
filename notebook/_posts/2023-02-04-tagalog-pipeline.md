@@ -76,6 +76,8 @@ involve taking advantage of a high-resource language and transferring its
 capacity to a low-resource one. The table below outlines some techniques:
 
 
+{% include table-caption.html caption="List of techniques for low-resource NLP ([Mortensen](#mortensen), [Tsvetkov, 2017](#tsvetkov2017opportunities))." %}
+
 | Approach                        | Data*  | Prerequisites                                                                                                | Description                                                                               |
 |---------------------------------|----------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
 | Supervised learning             | High                 | Large amount of labeled data.                                                                                 | Train a model as usual using feature-label pairs.                                                   |
@@ -87,8 +89,6 @@ capacity to a low-resource one. The table below outlines some techniques:
 <p>* Data: amount of gold-labeled annotations required.</p>
 {:style="text-align: left; font-size: 14px;"}
 
-**Table 1:** List of techniques for low-resource NLP ([Mortensen](#mortensen), [Tsvetkov, 2017](#tsvetkov2017opportunities)).
-{:style="text-align: center;"}
 
 
 My work focuses on **supervised** and **few-shot learning**.  Because these
@@ -224,14 +224,14 @@ the preprocessing step by checking out the [GitHub repository of this
 project](https://github.com/ljvmiranda921/calamanCy/tree/master/datasets/tl_calamancy_gold_corpus). The table below shows some dataset statistics:
 
 
+{% include table-caption.html caption="Dataset statistics for v1.0 of `tl_tlunified_gold`" %}
+
 | Tagalog Data    | Documents | Tokens | PER  | ORG  | LOC  |
 |-----------------|-----------|--------|------|------|------|
 | Training Set    | 6252      | 198588 | 6418 | 3121 | 3296 |
 | Development Set | 782      |  25007 |  793 |  392 |  409 |
 | Test Set        | 782      |  25153 |  818  | 423 |  438 |
 
-**Table 2:** Dataset statistics for v1.0 of `tl_tlunified_gold` 
-{:style="text-align: center;"}
 
 ### <a id="benchmarked"></a> ...then benchmarked it with baseline NER approaches [&crarr;](#toc)
 
@@ -256,15 +256,14 @@ spaCy) can improve performance. Finally, I will investigate if
 can help push performance further:
 
 
+{% include table-caption.html caption="Experimental setup for word vectors. I will use the [default spaCy hyperparameters](https://spacy.io/usage/training#config) for all these experiments." %}
+
 | Approach            | Setup                            | Description                                                              |
 |---------------------|----------------------------------|--------------------------------------------------------------------------|
 | Supervised learning | Baseline                         | Train a NER model from scratch. No tricks, just the annotated data.      |
 | Supervised learning | Baseline + fastText              | Source fastText vectors for the downstream NER task.                     |
 | Supervised learning | Basline + fastText + pretraining | Pretrain spaCy's token-to-vector layer while sourcing fastText vectors.  |
 
-**Table 3:** Experimental setup for word vectors. I will use the [default spaCy
-hyperparameters](https://spacy.io/usage/training#config) for all these experiments.
-{:style="text-align: center;"}
 
 
 The figure below shows the default setup for our word vector pipeline. The
@@ -281,13 +280,13 @@ model. I'm using transformer models as a [drop-in
 replacement](https://spacy.io/usage/embeddings-transformers#transformers) for
 the representation layer to achieve higher accuracy:
 
+{% include table-caption.html caption="Experimental setup for language models" %}
+
 | Approach| Language Models       | Description                                                              |
 |---------|-----------------------|--------------------------------------------------------------------------|
 | Few-shot learning | [roberta-tagalog](https://huggingface.co/jcblaise/roberta-tagalog-large) | Monolingual experiment with a large RoBERTa model trained from TLUnified. I will be testing both `base` and `large` variants. |
 | Few-shot learning | [xlm-roberta](https://huggingface.co/xlm-roberta-large)      | Multilingual experiment with a large XLM-RoBERTa. Trained on 100 different languages. I will be testing both `base` and `large` variants. |
 
-**Table 4:** Experimental setup for language models
-{:style="text-align: center;"}
 
 
 ![](/assets/images/tagalog-pipeline/drop_in.png){:width="650px"}  
@@ -343,6 +342,8 @@ training scenarios. The results suggest **that using a combination of static
 vectors and pretraining can improve F1-score** by at least 2pp.
 
 
+{% include table-caption.html caption="Pipeline performance. Evaluated on the development set. Using *default hyperparameters." %}
+
 | Setup                                   | Precision                | Recall                    | F1-score                   |
 |-----------------------------------------|--------------------------|---------------------------|----------------------------|
 | Baseline                                | 0.87±0.01          |  0.87±0.01          |  0.87±0.00           |
@@ -352,9 +353,6 @@ vectors and pretraining can improve F1-score** by at least 2pp.
 <p>* 714k keys and unique vectors. Vectors were sourced from the fastText website.</p>
 {:style="text-align: left; font-size: 14px;"}
 
-**Table 5:** Pipeline performance. Evaluated on the development set. Using
-*default hyperparameters.
-{:style="text-align: center;"}
 
 It's also worth noting that the baseline result (87% F-score) where we trained a
 model without any static vectors nor pretrained weights performs well! Of
@@ -379,6 +377,8 @@ Lastly, I also removed the annotated texts from TLUnified during training to ens
 no overlaps will influence our benchmark results. These results can be seen
 in the table below:
 
+{% include table-caption.html caption="Even with a smaller vector table size, floret is competitive with the default fastText vectors. Evaluated on the development set." %}
+
 | Word Vectors                                  | Unique Vectors*     | Precision                | Recall                   | F1-score                 |
 |-----------------------------------------------|---------------------|--------------------------|--------------------------|--------------------------|
 | fastText (default: CommonCrawl + Wikipedia)   | 714k            | **0.89±0.01** | 0.86±0.01          | **0.88±0.00** |
@@ -388,8 +388,6 @@ in the table below:
 <p>* This time, we're talking about unique vectors, not keys. <a href="https://spacy.io/api/vectors#n_keys">Several keys can map to the same vectors</a>, and floret doesn't use the keys table.</p>
 {:style="text-align: left; font-size: 14px;"}
 
-**Table 6:** Even with a smaller vector table size, floret is competitive with the default fastText vectors. Evaluated on the development set.
-{:style="text-align: center;"}
 
 We can also inspect the cosine similarity of subword pairs between related and
 unrelated terms. Here I'm using the vectors from fastText and floret, both trained
@@ -410,6 +408,8 @@ is. In addition, this **efficiency gain has little to no performance penalty**,
 as seen in Table 6. So let's see what happens if I train floret with bucket
 sizes of 100k, 50k, and 25k: 
 
+{% include table-caption.html caption="`floret` vector performance on different vector table sizes. All *vectors were trained using TLUnified. Evaluated on the development set." %}
+
 | Unique Vectors  | Precision                | Recall                   | F1-score                 |
 |-----------------|--------------------------|--------------------------|--------------------------|
 | 200k        | **0.88±0.01** | **0.88±0.01** | **0.88±0.00** |
@@ -418,9 +418,6 @@ sizes of 100k, 50k, and 25k:
 | 25k         | 0.82±0.02          | 0.82±0.01          | 0.81±0.00          |
 
 
-**Table 6:** `floret` vector performance on different vector table sizes. All
-*vectors were trained using TLUnified. Evaluated on the development set.
-{:style="text-align: center;"}
 
 There was a slight degradation in performance when I adjusted the bucket size
 from $$200k$$ to $$25k$$. It's not as drastic as I expected, but it's
@@ -441,14 +438,14 @@ to the previous experiment, I also removed overlaps between the final dataset
 and the pretraining corpus to ensure that they won't affect the results:
 
 
+{% include table-caption.html caption="Performance comparison between different pretraining objectives (characters vs. vectors). Evaluated on the development set." %}
+
 | Pretraining objective  | Precision                | Recall                    | F1-score                   |
 |------------------------|--------------------------|---------------------------|----------------------------|
 | `PretrainCharacters`   | 0.89±0.01          |  **0.89±0.01** |  0.89±0.00           |
 | `PretrainVectors`      | **0.90±0.01** |  **0.89±0.00** |  **0.90±0.00**  |
 
 
-**Table 7:**  Performance comparison between different pretraining objectives (characters vs. vectors). Evaluated on the development set.
-{:style="text-align: center;"}
 
 The results suggest that there is no significant difference between the two.
 `PretrainVectors` has a slight edge on precision, but it's not apparent.
@@ -518,6 +515,8 @@ I finetuned these language models for three trials on different random seeds.
 The results can be seen in the table below:
 
 
+{% include table-caption.html caption="Performance comparison between a monolingual and multilingual language model. Evaluated on the development set." %}
+
 | Language Model        | Precision                | Recall                   | F1-score                 |
 |-----------------------|--------------------------|--------------------------|--------------------------|
 | roberta-tagalog-large | **0.91±0.01** | **0.91±0.02** | **0.91±0.01** |
@@ -525,8 +524,6 @@ The results can be seen in the table below:
 | xlm-roberta-large     | 0.88±0.00          | 0.88±0.00          | 0.89±0.01          |
 | xlm-roberta-base      | 0.87±0.02          | 0.87±0.01          | 0.88±0.01          |
 
-**Table 8:**  Performance comparison between a monolingual and multilingual language model. Evaluated on the development set.
-{:style="text-align: center;"}
 
 I didn't expect the two models to be on par with one another. In addition, the
 performance of our word vector pipeline (floret + pretraining) is competitive
@@ -561,18 +558,19 @@ evaluation to wrap things up. For now I'll be calling them `tl_tlunified_lg` and
 
 Let's evaluate their performance on the test set:
 
+{% include table-caption.html caption="Performance comparison for the word vector and transformer-based pipelines. Evaluated on the test set." %}
+
 | Pipeline                 | Precision       | Recall          | F1-score        |
 |--------------------------|-----------------|-----------------|-----------------|
 | tl_tlunified_lg          | 0.85±0.01 | 0.86±0.02 | 0.86±0.02 |
 | tl_tlunified_trf (base)  | 0.87±0.02 | 0.87±0.01 | 0.87±0.01 |
 | tl_tlunified_trf (large) | 0.89±0.01 | 0.89±0.00 | 0.90±0.02 |
 
-**Table 9:**  Performance comparison for the word vector and transformer-based
-pipelines. Evaluated on the test set.
-{:style="text-align: center;"}
 
 We can see a performance difference between the transformer and word vector
 pipelines (around 4pp). Let's see the per-entity results:
+
+{% include table-caption.html caption="F1-score comparison for the word vector and transformer-based pipelines (per-entity). Evaluated on the test set." %}
 
 | Pipeline                 | PER             | ORG             | LOC             |
 |--------------------------|-----------------|-----------------|-----------------|
@@ -580,9 +578,6 @@ pipelines (around 4pp). Let's see the per-entity results:
 | tl_tlunified_trf (base)  | 0.90±0.01 | 0.80±0.02 | 0.87±0.01 |
 | tl_tlunified_trf (large) | 0.92±0.01 | 0.81±0.02 | 0.87±0.00 |
 
-**Table 10:**  F1-score comparison for the word vector and transformer-based
-pipelines (per-entity). Evaluated on the test set.
-{:style="text-align: center;"}
 
 Lastly, let's look at our pipelines' performance on **unseen entities**. Here, we
 define an unseen test set that contains entities not seen by the model during
@@ -593,15 +588,14 @@ City" and "Lungsod ng Makati" will be treated as separate entities even if they
 point to the same location. For the gold-annotated TLUnified, our unseen test
 set has 784 documents. 
 
+{% include table-caption.html caption="Performance comparison for the word vector and transformer-based pipelines. Evaluated on the unseen test set." %}
+
 | Pipeline                 | Precision       | Recall          | F1-score        |
 |--------------------------|-----------------|-----------------|-----------------|
 | tl_tlunified_lg          | 0.75±0.01 | 0.83±0.02 | 0.79±0.01 |
 | tl_tlunified_trf (base)  | 0.85±0.00 | 0.84±0.02 | 0.84±0.02 |
 | tl_tlunified_trf (large) | 0.88±0.02 | 0.88±0.00 | 0.88±0.00 |
 
-**Table 11:**  Performance comparison for the word vector and transformer-based
-pipelines. Evaluated on the unseen test set.
-{:style="text-align: center;"}
 
 The scores are what we expect. All pipelines dropped their performance when they
 encountered previously unseen entities. However, note that the transformer

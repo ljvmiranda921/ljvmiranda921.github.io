@@ -21,12 +21,14 @@ Prior to working on NLP, I was a bioinformatics researcher studying protein func
 Thanks again for stopping by!
 If you're interested in reaching out, send me an [email](mailto:ljvm2@cam.ac.uk) or [book a call](https://calendar.app.google/5bbwr5HHsbSFaodu5).
 
-<p style="border:3px; border-style:solid; border-color:#a00000; padding: 1em;">
-<b>Short Background</b><br>
+<details markdown="0" open>
+<summary>Short Background</summary>
+<p>
 Lj is a PhD student at the University of Cambridge, <a href="https://ltl.mmll.cam.ac.uk/">working on multilingual and equitable NLP</a>.
 Before his studies, he has over seven years of industry experience in consulting, open-source software development, and research, including work as a predoctoral researcher at the <a href="https://allenai.org">Allen Institute for AI</a> and an engineer working on spaCy and Prodigy at <a href="https://explosion.ai">Explosion</a>.
 Outside of work, he enjoys <a href="https://ljvmiranda921.github.io/gallery">photography</a> and <a href="https://ljvmiranda921.itch.io">game development</a>.
 </p>
+</details>
 
 ## This Blog
 

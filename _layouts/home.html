@@ -23,34 +23,28 @@ layout: default
 
 <div class="home">
 
-  <div class="divider">
-    <div class="left">
-      <a href="https://ljvmiranda921.github.io/gallery/"><img id="profilepic" width="200" height="200"
-          src="assets/profile.jpg" alt="Profile"></a>
-    </div>
-    <div class="right">
-      <p>Hi! I'm Lj V. Miranda, and welcome to my website!</p>
-      <p>
-        I'm a PhD student at the University of Cambridge, researching
-        <a href="https://ltl.mmll.cam.ac.uk/">multilingual and equitable NLP</a>, where I'm advised by <a
-          href="https://sites.google.com/site/annakorhonen/">Anna Korhonen</a>.
-        In the past, I've worked as an engineer, consultant,
-          and
-          researcher (see my <a href="https://storage.googleapis.com/ljvmiranda/cv.pdf">CV</a>), mostly in the fields of NLP and AI.
-      </p>
-      <p>
-        I'm broadly interested in data-centric approaches to building language technologies at scale.
-        I also have a special interest in <a href="/filipino-nlp">improving the state of Filipino NLP</a>.
-        <!-- My research interests include efficient NLP, low-resource languages, and corpus linguistics. -->
-        I'm happy to discuss <a href="/research">research</a> and collaborate, so feel free to <a
-          href="https://calendar.app.google/5bbwr5HHsbSFaodu5">reach
-          out</a> and chat!
-      </p>
-      <!-- <p>
-        <i>I'm happy to discuss research, so feel free to <a href="mailto:ljvmiranda@gmail.com">reach out</a>!</i>
-      </p> -->
-    </div>
-  </div>
+  <p>Hi! I'm Lj V. Miranda, and welcome to my website!</p>
+  <p>
+    I'm a PhD student at the University of Cambridge, researching
+    <a href="https://ltl.mmll.cam.ac.uk/">multilingual and equitable NLP</a>, where I'm advised by <a
+      href="https://sites.google.com/site/annakorhonen/">Anna Korhonen</a>.
+    In the past, I've worked as an engineer, consultant,
+      and
+      researcher (see my <a href="https://storage.googleapis.com/ljvmiranda/cv.pdf">CV</a>), mostly in the fields of NLP and AI.
+  </p>
+  <p>
+    I'm broadly interested in data-centric approaches to building language technologies at scale.
+    I also have a special interest in <a href="/filipino-nlp">improving the state of Filipino NLP</a>.
+    I'm happy to discuss <a href="/research">research</a> and collaborate, so feel free to <a
+      href="https://calendar.app.google/5bbwr5HHsbSFaodu5">reach
+      out</a> and chat!
+  </p>
+
+  <p class="home-social">
+    <a href="https://github.com/{{ site.social_sites.github }}"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#github"></use></svg><span>GitHub</span></a>
+    <a href="https://scholar.google.com/citations?user={{ site.social_sites.scholar }}"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#scholar"></use></svg><span>Scholar</span></a>
+    <a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="/assets/icons.svg#rss"></use></svg><span>RSS</span></a>
+  </p>
 
 
   <!--
@@ -60,11 +54,8 @@ layout: default
   </div>
   -->
 
-  &nbsp;
-
   <hr>
 
-  &nbsp;
   <div class="row">
     <div class="column" style="width:100%; float:left;">
       <h2 style="font-size: 1.3em; font-family: 'Vollkorn SC', serif;">Recent posts</h2>

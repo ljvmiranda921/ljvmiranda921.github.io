@@ -26,10 +26,10 @@ creatures into life.
 
 > Words turn into images, bringing these creatures into life.
 
-![](/assets/images/generating-ph-myths/trese.jpg){:width="640px"}  
-__Figure:__ Comics like *Trese* also captured our imagination on Philippine folklore   
-*(image from Trese / Visual Print Enterprises)*
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/generating-ph-myths/trese.jpg"
+   width="640"
+   caption="Comics like *Trese* also captured our imagination on Philippine folklore *(image from Trese / Visual Print Enterprises)*" %}
 
 I wonder what will happen if we let a computer do the same. **If we provide a
 machine learning model with text descriptions of folk creatures, what images

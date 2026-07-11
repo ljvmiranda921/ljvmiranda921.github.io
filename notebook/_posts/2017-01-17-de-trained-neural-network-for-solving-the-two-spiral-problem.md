@@ -17,9 +17,10 @@ used as the cost function. The two-spiral problem is a particularly difficult
 problem that requires separating two logistic spirals from one another (Lang
 and Witbrock, [1998](#lang1998learning)).
 
-![Two Spiral Problem](https://i.imgur.com/AB14SHCl.png)  
-__Figure 1:__ _Graph of the Two-Spiral Problem_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/AB14SHCl.png"
+   alt="Two Spiral Problem"
+   caption="Graph of the Two-Spiral Problem" %}
 
 ## Differential Evolution
 As a member of a class of different evolutionary algorithms, DE is a
@@ -82,6 +83,8 @@ generation.
 
 ### Implementation Parameters  
 
+{% include table-caption.html caption="Parameters used in DE Implementation" %}
+
 |------------------+----------------------------------------------------------|
 | Parameter        | Description                                              |
 |------------------|----------------------------------------------------------|
@@ -92,17 +95,17 @@ generation.
 | `recombinationC` | Degree of recombination effect (exploitation parameter)  |
 |------------------+----------------------------------------------------------|  
 {: .table}
-__Table 1:__ _Parameters used in DE Implementation_
-{: style="text-align: center;"}
 
 
 ### Tuning the mutation and recombination parameters
 Here, I swept over different values of $$m$$ and $$c$$ in order to find good
 values for my final model.
 
-![Cmatrix for DE params](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/cmatrix2.png){:width="320px"}       
-__Figure 2:__ _Heat Map for testing the mutation and recombination parameters_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/cmatrix2.png"
+   width="320"
+   alt="Cmatrix for DE params"
+   caption="Heat Map for testing the mutation and recombination parameters" %}
 
 As shown, it may be better to use lower mutation values coupled with very low
 recombination values.
@@ -114,6 +117,8 @@ The best score that was achieved using this optimization algorithm is
 algorithm can attain. Moreover, the table below shows the values I set for
 the parameters.
 
+{% include table-caption.html caption="Parameter Values for DE Implementation" %}
+
 |------------------+----------------------------------------------------------|
 | Parameter        | Value                                                    |
 |------------------|----------------------------------------------------------|
@@ -124,12 +129,12 @@ the parameters.
 | `recombinationC` | 0.07                                                     |
 |------------------+----------------------------------------------------------|
 {: .table}
-__Table 2:__ _Parameter Values for DE Implementation_
-{: style="text-align: center;"}
 
-![Generalization ability of DE](https://i.imgur.com/oEHj0Dhl.png){:width="640px"}  
-__Figure 3:__ _Generalization ability of the DE-trained Neural Network over the whole space_
-{: style="text-align: center;"}
+{% include figure.html
+   src="https://i.imgur.com/oEHj0Dhl.png"
+   width="640"
+   alt="Generalization ability of DE"
+   caption="Generalization ability of the DE-trained Neural Network over the whole space" %}
 
 
 ## Conclusion

@@ -35,9 +35,10 @@ naiintindihan ng kanyang kausap lalo na kung ang panunuyang ito ay nakasulat
 lamang sa papel. Siguro kasi wala na yung konteksto&mdash; tono, postura,
 ekspresyon&mdash; kung binabasa lang yung nais niya.
 
-![](/assets/images/wika-at-kahulugan/shallan.jpg){:width="500px" style="padding:10px"}  
-__Fig__: Si Shallan Davar sa seryeng *Stormlight Archives* ni Brandon Sanderson.
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/wika-at-kahulugan/shallan.jpg"
+   width="500"
+   caption="Si Shallan Davar sa seryeng *Stormlight Archives* ni Brandon Sanderson." %}
 
 May mga ganito rin akong karanasan. Halimbawa, sa Reddit, kailangan kong
 maglagay ng "/s" upang linawin na hindi literal ang aking kumento. Pag may
@@ -82,9 +83,10 @@ Karaniwan lamang ito dahil umiiral sa lugar, panahon, at tradisyon ang wika
 natin. Intensyon ang mahalagang sangkap ng kahulugang kumakatawan. Madalas ang
 intensyong ito ay lagpas pa sa wika.
 
-![](/assets/images/wika-at-kahulugan/actor_interlocutor_model.png){:width="600px" style="padding:10px"}  
-__Fig:__ Proseso ng komunikasyon.
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/wika-at-kahulugan/actor_interlocutor_model.png"
+   width="600"
+   caption="Proseso ng komunikasyon." %}
 
 <!--
 Kung hihimayin natin ang interaksyong ito, ganito ang nangyayari *(A - Aktor,  K - Kausap)*:

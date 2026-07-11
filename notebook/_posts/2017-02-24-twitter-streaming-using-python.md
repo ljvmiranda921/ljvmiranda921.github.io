@@ -44,9 +44,11 @@ If you don't have a [Twitter](https://twitter.com/) account, make one. Once
 you're done, head over to https://apps.twitter.com/ and "Create a New App."
 You will then see a similar form below:
 
-![Create New App Form](/assets/images/twitter-streaming-using-python/create.PNG){:width="560px"}  
-__Figure 1:__ _Create New Application Form_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/twitter-streaming-using-python/create.PNG"
+   width="560"
+   alt="Create New App Form"
+   caption="Create New Application Form" %}
 
 For the Name field, simply write a name for your application. It can be
 "MyApp" or anything. In the Description field, you can write something about

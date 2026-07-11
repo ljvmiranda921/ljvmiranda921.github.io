@@ -2,9 +2,11 @@
  * Paper container for lifted effect
  */
 .paper-container {
-  background-color: $background-color;
-  box-shadow: 4px 4px 0 #bbb;
-  margin: $spacing-unit auto;
+  // Paper style: lifted cream card on the gray page background
+  // background-color: $background-color;
+  // box-shadow: 4px 4px 0 #bbb;
+  // margin: $spacing-unit auto;
+  margin: 0 auto;
   max-width: $content-width;
   position: relative;
 }
@@ -13,111 +15,84 @@
  * Site header
  */
 .site-header {
-  border-bottom: 1px solid $grey-color-light;
-  min-height: $spacing-unit * 0.8;
+  // border-bottom: 1px solid $grey-color-light;
   background-color: $background-color;
-  padding: 0 calc(#{$spacing-unit} * 1.5);
+  // the wrapper inside already provides vertical padding
+  padding: 0;
+}
 
-  @include media-query($on-palm) {
-    padding: 0 calc(#{$spacing-unit} * 0.25);
+// srcf-style identity block: clickable photo, then name, email, nav links
+.site-identity {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
   }
 
-  // Positioning context for the mobile navigation icon
-  position: relative;
+  p {
+    margin: 0.2em 0;
+  }
+
+  // Stack the photo above the text on small screens
+  @include media-query($on-palm) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
 }
 
 .site-title {
-  @include relative-font-size(1.625);
-  font-weight: 300;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  @include relative-font-size(1.8);
+  display: block;
+  line-height: 1.2;
   letter-spacing: -0.015em;
-  margin-bottom: 0;
-  float: left;
+  margin-bottom: 0.2em;
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: $text-color;
+  }
+
+  &:hover {
+    color: $brand-color;
+    text-decoration: none;
   }
 }
 
 .site-nav {
-  float: right;
-  line-height: $base-line-height * $base-font-size * 2.25;
+  margin-top: 0.2em;
+  color: $grey-color; // the &middot; separators
 
-  .nav-trigger {
-    display: none;
-  }
-
-  .menu-icon {
-    display: none;
+  // Keep the links on one line on phones; if they still wrap, balance
+  // the break instead of stranding the last link alone
+  @include media-query($on-palm) {
+    font-size: $small-font-size;
+    text-wrap: balance;
   }
 
   .page-link {
     color: $text-color;
-    line-height: $base-line-height;
 
-    // Gaps between nav items, but not on the last one
+    // Breathing room around the &middot; separators
+    &:not(:first-child) {
+      margin-left: 0.4em;
+    }
+
     &:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
-
-  @include media-query($on-palm) {
-    float: right;
-    position: relative;
-    margin-top: 8px;
-
-    label[for="nav-trigger"] {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 36px;
-      z-index: 2;
-      cursor: pointer;
+      margin-right: 0.4em;
     }
 
-    .menu-icon {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 26px;
-      line-height: 0;
-      padding-top: 10px;
-      text-align: center;
-
-      >svg path {
-        fill: $grey-color-dark;
-      }
-    }
-
-    input~.trigger {
-      clear: both;
-      display: none;
-    }
-
-    input:checked~.trigger {
-      display: block;
-      padding-bottom: 5px;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: $background-color;
-      border: 1px solid $grey-color-light;
-      border-radius: 5px;
-      text-align: right;
-      margin-top: 5px;
-      z-index: 1;
-    }
-
-    .page-link {
-      display: block;
-      padding: 5px 10px;
-
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-
-      margin-left: 20px;
+    &:hover {
+      color: $brand-color;
     }
   }
 }
@@ -128,9 +103,15 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit calc(#{$spacing-unit} * 1.5);
+  // border-top: 1px solid $grey-color-light;
+  // the wrapper inside already provides vertical padding, and the hr
+  // ornament carries its own margin
+  padding: 0;
   background-color: $background-color;
+
+  .wrapper {
+    padding-top: 0;
+  }
 
   @include media-query($on-palm) {
     padding: calc(#{$spacing-unit} * 0.5) calc(#{$spacing-unit} * 0.25);
@@ -146,6 +127,33 @@
 .social-media-list {
   list-style: none;
   margin-left: 0;
+}
+
+.home-social {
+  font-size: $small-font-size;
+
+  a {
+    color: $grey-color;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &:hover {
+      color: $brand-color;
+      text-decoration: none;
+
+      .svg-icon {
+        fill: $brand-color;
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: $small-font-size;
+  color: $text-color;
 }
 
 .footer-col-wrapper {
@@ -210,8 +218,8 @@
 
 .wrapper {
   background-color: $background-color;
-  padding: $spacing-unit calc(#{$spacing-unit} * 1.5);
-  // padding: $spacing-unit calc(#{$spacing-unit} * 0.9);
+  padding: $spacing-unit calc(#{$spacing-unit} * 2.5);
+  // padding: $spacing-unit calc(#{$spacing-unit} * 1.5);
   margin: 0 auto;
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -268,6 +276,7 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
+  counter-reset: figure table; // for auto-numbered figure/table captions
 
   h2 {
     @include relative-font-size(2);

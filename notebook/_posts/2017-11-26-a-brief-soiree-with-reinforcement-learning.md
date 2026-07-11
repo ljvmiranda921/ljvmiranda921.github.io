@@ -9,7 +9,6 @@ description: "Solving the Preferred Network's Cartpole Reinforcement Learning Ta
 math: true
 ---
 
-<a href="https://github.com/ljvmiranda921/pfn-rl-practice" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="m0,0 115,115 15,0 12,27 108,108 0,-250 z"/><path d="m128.3,109.0 c-14.5,-9.3 -9.3,-19.4 -9.3,-19.4 3,-6.9 1.5,-11 1.5,-11 -1.3,-6.6 2.9,-2.3 2.9,-2.3 3.9,4.6 2.1,11 2.1,11 -2.6,10.3 5.1,14.6 8.9,15.9" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="m115.0,115.0 c-0.1,0.1 3.7,1.5 4.8,0.4 l13.9,-13.8 c3.2,-2.4 6.2,-3.2 8.5,-3.0 -8.4,-10.6 -14.7,-24.2 1.6,-40.6 4.7,-4.6 10.2,-6.8 15.9,-7.0 0.6,-1.6 3.5,-7.4 11.7,-10.9 0,0 4.7,2.4 7.4,16.1 4.3,2.4 8.4,5.6 12.1,9.2 3.6,3.6 6.8,7.8 9.2,12.2 13.7,2.7 16.1,7.4 16.1,7.4 -3.5,8.2 -9.3,11.1 -10.9,11.7 -0.2,5.7 -2.4,11.2 -7.0,15.9 -16.4,16.3 -30.0,10.0 -40.6,1.6 0.2,2.3 -0.6,5.3 -3.0,8.5 l-13.8,13.9 c-1.1,1.1 0.3,4.9 0.4,4.8" fill="currentColor"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
 ![python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)
 [![Build Status](https://travis-ci.org/ljvmiranda921/pfn-rl-practice.svg?branch=master)](https://travis-ci.org/ljvmiranda921/pfn-rl-practice)
@@ -36,10 +35,10 @@ learning model so that it outputs an action&mdash;i.e., move left or right
 of using only *the Python standard library*, so usual matrix dependencies
 such as `numpy` are forbidden.
 
-![Demo](/assets/images/a-brief-soiree-with-reinforcement-learning/cartpole.gif)  
-__Figure:__ _Cartpole simulation from OpenAI Gym._  
-_We'll be using a simpler one provided by Preferred Networks_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/a-brief-soiree-with-reinforcement-learning/cartpole.gif"
+   alt="Demo"
+   caption="_Cartpole simulation from OpenAI Gym._ _We'll be using a simpler one provided by Preferred Networks_" %}
 
 I'll be talking about my project in the following order:
 
@@ -60,11 +59,11 @@ episode consists of resetting the environment and balancing the cartpole
 until it drops or the 500th timestep is reached. For the PFN task, success is
 achieved when the pole is balanced for 95 out of 100 episodes.
 
-![Cartpole Environment](/assets/images/a-brief-soiree-with-reinforcement-learning/env.png){:width="480px"}  
-__Figure:__ _The Cartpole Environment._  
-_Given an action, the environment updates its internal state and outputs a new state._  
-_(For now, we're only considering fully-observed systems)_  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/a-brief-soiree-with-reinforcement-learning/env.png"
+   width="480"
+   alt="Cartpole Environment"
+   caption="_The Cartpole Environment._ _Given an action, the environment updates its internal state and outputs a new state._ _(For now, we're only considering fully-observed systems)_" %}
 
 There are various signals that goes in and out the environment:
 
@@ -90,11 +89,11 @@ explicitly parametrized. We can then frame the policy in the following
 distribution: $$\pi_{\theta}(\mathbf{a}_{t} | \mathbf{o}_{t})$$. Where
 $$\theta$$ corresponds to the parameters that governs the policy $$\pi$$.
 
-![Linear Model](/assets/images/a-brief-soiree-with-reinforcement-learning/lm.png){:width="480px"}  
-__Figure:__ _The Linear Model._  
-_The linear model generates an action based on the observation._  
-_In this task, the model is explicitly parameterized_  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/a-brief-soiree-with-reinforcement-learning/lm.png"
+   width="480"
+   alt="Linear Model"
+   caption="_The Linear Model._ _The linear model generates an action based on the observation._ _In this task, the model is explicitly parameterized_" %}
 
 In the case of a linear policy, the action is determined by the **sign of the
 inner product** of the observation $$\mathbf{o}_{t}$$ and parameters
@@ -122,9 +121,11 @@ effective way to search for a good set of parameters by updating our current
 $$\theta$$ with the mean of the elite parameters generated from a noisy
 version of $$\theta$$: $$\theta_{i} = \theta + \epsilon_{i}$$.
 
-![Cross Entropy Method](/assets/images/a-brief-soiree-with-reinforcement-learning/cem.png){:width="480px"}  
-__Figure:__ _Cross-entropy Method for updating the parameters._  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/a-brief-soiree-with-reinforcement-learning/cem.png"
+   width="480"
+   alt="Cross Entropy Method"
+   caption="Cross-entropy Method for updating the parameters." %}
 
 The algorithm can be seen as follows:
 
@@ -169,9 +170,11 @@ cross-entropy method.
 
 ## Implementation
 
-![API Implementation](/assets/images/a-brief-soiree-with-reinforcement-learning/api.png){:width="480px"}  
-__Figure:__ _Software Implementation of the RL model_  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/a-brief-soiree-with-reinforcement-learning/api.png"
+   width="480"
+   alt="API Implementation"
+   caption="Software Implementation of the RL model" %}
 
 This figure shows how each component of the RL task interacts with one
 another in terms of object-oriented models. The code repository for this
@@ -287,10 +290,10 @@ cross-entropy method has helped hasten convergence. In effect, we can see
 that a small number of samples (e.g. 25), causes multiple dips during
 training.
 
-![Examining the N hyperparameter](/assets/images/a-brief-soiree-with-reinforcement-learning/n_val_demo.png)  
-__Figure:__ _When the number of noisy samples is increased,_  
-_the model converges faster. A low value tends to have several dips during training_  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/a-brief-soiree-with-reinforcement-learning/n_val_demo.png"
+   alt="Examining the N hyperparameter"
+   caption="_When the number of noisy samples is increased,_ _the model converges faster. A low value tends to have several dips during training_" %}
 
 Coming from an evolutionary computation background, I can imagine how $$N$$
 represents the number of "particles" or "population" of searchers in a
@@ -305,10 +308,10 @@ count of $$N \times p$$, the convergence of the model hastens. Interestingly,
 very high values of $$p$$ tend to hurt model convergence as seen in the
 Figure below:
 
-![Examining the p hyperparameter](/assets/images/a-brief-soiree-with-reinforcement-learning/p_val_demo.png)  
-__Figure:__ _When the number of elite samples is decreased,_  
-_the model converges faster. Interestingly, higher numbers didn't converge well_  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/a-brief-soiree-with-reinforcement-learning/p_val_demo.png"
+   alt="Examining the p hyperparameter"
+   caption="_When the number of elite samples is decreased,_ _the model converges faster. Interestingly, higher numbers didn't converge well_" %}
 
 I presume that the number of elites control the exploitation vs. exploration
 behavior of the model. Decreasing it focuses the distribution of top parameters
@@ -324,9 +327,10 @@ higher timesteps tend to have a relatively slower convergence, with 750 and
 with `500` timesteps, most model variants have a uniform behaviour after
 convergence.
 
-![Adjusting the step size](/assets/images/a-brief-soiree-with-reinforcement-learning/z_val_demo.png)  
-__Figure:__ _Adjusting the model's number of timesteps_  
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/a-brief-soiree-with-reinforcement-learning/z_val_demo.png"
+   alt="Adjusting the step size"
+   caption="Adjusting the model's number of timesteps" %}
 
 ## Final thoughts
 

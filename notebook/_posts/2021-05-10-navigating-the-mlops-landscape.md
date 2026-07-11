@@ -34,10 +34,10 @@ better way to productionize ML. The major cloud platforms are taking a stab on
 it too. Now, I face the opposite problem: **there are too many options, and it's
 difficult to choose!**
 
-![](/assets/images/navigating-the-mlops-landscape/mlops-landscape.png){:width="640px"}  
-**Figure**: It's hard to shop when you're presented with too many options
-(source: [MLReef](https://about.mlreef.com/blog/global-mlops-and-ml-tools-landscape))
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/navigating-the-mlops-landscape/mlops-landscape.png"
+   width="640"
+   caption="It's hard to shop when you're presented with too many options (source: [MLReef](https://about.mlreef.com/blog/global-mlops-and-ml-tools-landscape))" %}
 
 Welcome to MLOps, a very exciting field that marries software
 engineering and machine learning. There's an [academic
@@ -85,9 +85,10 @@ categorized with brief descriptions and price points. If you don't know
 what you want, the menu is going to be overwhelming&mdash;simply an effect of the
 [paradox of choice](https://en.wikipedia.org/wiki/The_Paradox_of_Choice).
 
-![](/assets/images/navigating-the-mlops-landscape/paradox_of_choice.jpg){:width="640px"}  
-Paradox of choice: look at this menu, and look at the MLOps landscape above
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/navigating-the-mlops-landscape/paradox_of_choice.jpg"
+   width="640"
+   caption="Paradox of choice: look at this menu, and look at the MLOps landscape above" %}
 
 In that situation, what I'd usually do is ask the waiter: "what's the
 bestseller?," "I want something light and cheap," "what's perfect for this hot

@@ -52,6 +52,8 @@ I am using a _6-DOF Stanford Manipulator_, with 5 revolute joints and 1
 prismatic joint. Furthermore, my constraints are similar as before, and it's
 shown in the table below:
 
+{% include table-caption.html caption="Joint variable physical constraints" %}
+
 | Parameters   | Lower Boundary        | Upper Boundary        |
 |:------------:|:---------------------:|:----------------------:
 | $$\theta_1$$ | $$-\pi$$              | $$\pi$$               |
@@ -61,8 +63,6 @@ shown in the table below:
 | $$\theta_5$$ | $$-\frac{5\pi}{36}$$  | $$\frac{5\pi}{36}$$  |
 | $$\theta_6$$ | $$-\pi$$              |  $$\pi$$              |
 {: .table }
-__Table 1:__ _Joint variable physical constraints_
-{: style="text-align: center;"}
 
 Now, if we're given with an _end-tip position_ (in this case, an $$xyz$$
 coordinate), we need to find the optimal parameters with the constraints
@@ -167,13 +167,17 @@ the following: `c_1 = c_2 = 1.5`, `swarmSize = 20`, `w = 0.5`, and `epsilon =
 in a 3D coordinate system, and made it into a GIF. Moreover, the proceeding
 chart shows the cost history of a single run.
 
-![Inverse Kinematics Simulation](/assets/images/inverse-kinematics-pso/swarmMovement.gif){:width="560px"}  
-__Figure 1:__ _Inverse Kinematics Simulation_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/inverse-kinematics-pso/swarmMovement.gif"
+   width="560"
+   alt="Inverse Kinematics Simulation"
+   caption="Inverse Kinematics Simulation" %}
 
-![Cost History](/assets/images/inverse-kinematics-pso/costHistory.png){:width="560px"}  
-__Figure 2:__ _Cost History_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/inverse-kinematics-pso/costHistory.png"
+   width="560"
+   alt="Cost History"
+   caption="Cost History" %}
 
 ### Execution Time
 

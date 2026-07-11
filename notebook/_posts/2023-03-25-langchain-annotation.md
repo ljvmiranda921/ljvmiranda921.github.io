@@ -180,13 +180,15 @@ guidelines. From a qualitative inspection, these results make sense because the 
 from these guidelines denote a more stringent criteria for accepting statements as
 arguments:
 
-![](/assets/images/langchain/shnarch.png){:width="800px"}  
-__Figure:__ Portion of annotation guidelines from [Shnarch et al. (2018)](#shnarch2018unsupervised)
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/langchain/shnarch.png"
+   width="800"
+   caption="Portion of annotation guidelines from [Shnarch et al. (2018)](#shnarch2018unsupervised)" %}
 
-![](/assets/images/langchain/levy.png){:width="800px"}  
-__Figure:__ Portion of annotation guidelines from [Levy et al. (2018)](#levy2018towards)
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/langchain/levy.png"
+   width="800"
+   caption="Portion of annotation guidelines from [Levy et al. (2018)](#levy2018towards)" %}
 
 It's still hard to say which *exact* statements from the guideline informed an
 LLM's decision. But because our prompting strategy refines the answer for each
