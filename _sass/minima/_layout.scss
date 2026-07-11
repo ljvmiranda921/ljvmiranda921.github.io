@@ -17,7 +17,8 @@
 .site-header {
   // border-bottom: 1px solid $grey-color-light;
   background-color: $background-color;
-  padding: $spacing-unit 0;
+  // the wrapper inside already provides vertical padding
+  padding: 0;
 }
 
 // srcf-style identity block: clickable photo, then name, email, nav links
@@ -103,8 +104,14 @@
  */
 .site-footer {
   // border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit 0;
+  // the wrapper inside already provides vertical padding, and the hr
+  // ornament carries its own margin
+  padding: 0;
   background-color: $background-color;
+
+  .wrapper {
+    padding-top: 0;
+  }
 
   @include media-query($on-palm) {
     padding: calc(#{$spacing-unit} * 0.5) calc(#{$spacing-unit} * 0.25);
