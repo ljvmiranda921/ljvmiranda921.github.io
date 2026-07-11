@@ -210,8 +210,8 @@
 
 .wrapper {
   background-color: $background-color;
-  padding: $spacing-unit calc(#{$spacing-unit} * 1.5);
-  // padding: $spacing-unit calc(#{$spacing-unit} * 0.9);
+  padding: $spacing-unit calc(#{$spacing-unit} * 2.5);
+  // padding: $spacing-unit calc(#{$spacing-unit} * 1.5);
   margin: 0 auto;
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));

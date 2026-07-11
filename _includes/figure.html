@@ -1,0 +1,18 @@
+{%- comment -%}
+Figure with a LaTeX-style caption: small-caps lead-in, then the body.
+Usage:
+{% include figure.html
+   src="/assets/images/foo/bar.png"
+   width="800"
+   title="Figure 1."
+   caption="Some *markdown* caption with [links](https://example.com)."
+   alt="Alt text for the image" %}
+src and caption are required; width, title, and alt are optional.
+{%- endcomment -%}
+<figure class="post-figure">
+  <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.title | default: 'figure' }}"{% if include.width %} width="{{ include.width }}"{% endif %}>
+  <figcaption>
+    {%- if include.title %}<span class="figure-title">{{ include.title }}</span> {% endif -%}
+    {{- include.caption | markdownify | remove: '<p>' | remove: '</p>' -}}
+  </figcaption>
+</figure>

@@ -69,6 +69,30 @@
    font-size: $small-font-size;
  }
 
+ // Figures made with the figure.html include: centered image, LaTeX-style
+ // caption with a small-caps lead-in (e.g. "Figure 1.") before the body
+ .post-figure {
+   margin: $spacing-unit 0;
+
+   img {
+     display: block;
+     margin: 0 auto;
+     max-width: 100%;
+   }
+
+   figcaption {
+     max-width: 85%;
+     margin: calc(#{$spacing-unit} / 3) auto 0;
+     color: lighten($text-color, 27%);
+
+     .figure-title {
+       font-variant-caps: small-caps;
+       letter-spacing: 0.05em;
+       color: $text-color;
+     }
+   }
+ }
+
  // Side-by-side image rows; scroll horizontally instead of stacking on
  // narrow screens. kramdown wraps the images in a <p> inside the div, so
  // the flex rules must apply there too.
@@ -121,6 +145,14 @@
  p, li,
  h1, h2, h3, h4, h5, h6 {
    text-wrap: pretty;
+ }
+
+ // Justified prose with hyphenation; needs lang="en" on <html> to work
+ p {
+   text-align: justify;
+   -webkit-hyphens: auto;
+   hyphens: auto;
+   hyphenate-limit-chars: 7 4 3;
  }
 
  // Uniform, column-aligned figures inside tables
@@ -179,7 +211,7 @@
   */
  pre,
  code {
-   @include relative-font-size(0.9375);
+   @include relative-font-size(0.875);
    border: 1px solid $grey-color-light;
    border-radius: 3px;
    // background-color: #eef;
