@@ -17,11 +17,11 @@
 .site-header {
   // border-bottom: 1px solid $grey-color-light;
   background-color: $background-color;
-  // the wrapper inside already provides vertical padding
+  // wrapper handles the vertical padding
   padding: 0;
 }
 
-// srcf-style identity block: clickable photo, then name, email, nav links
+// Photo + name + email + nav links
 .site-identity {
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@
     margin: 0.2em 0;
   }
 
-  // Stack the photo above the text on small screens
+  // Stack photo above text on mobile
   @include media-query($on-palm) {
     flex-direction: column;
     align-items: flex-start;
@@ -72,8 +72,7 @@
   margin-top: 0.2em;
   color: $grey-color; // the &middot; separators
 
-  // Keep the links on one line on phones; if they still wrap, balance
-  // the break instead of stranding the last link alone
+  // Fit links on one line on mobile; balance the wrap if not
   @include media-query($on-palm) {
     font-size: $small-font-size;
     text-wrap: balance;
@@ -82,7 +81,7 @@
   .page-link {
     color: $text-color;
 
-    // Breathing room around the &middot; separators
+    // Space around the dots
     &:not(:first-child) {
       margin-left: 0.4em;
     }
@@ -104,8 +103,7 @@
  */
 .site-footer {
   // border-top: 1px solid $grey-color-light;
-  // the wrapper inside already provides vertical padding, and the hr
-  // ornament carries its own margin
+  // wrapper handles the padding, hr has its own margin
   padding: 0;
   background-color: $background-color;
 
@@ -265,13 +263,15 @@
 }
 
 .post-title {
-  @include relative-font-size(2.375);
-  font-family: "Vollkorn SC", serif;
-  letter-spacing: 0.01em;
-  line-height: 1.1;
+  @include relative-font-size(2);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  // Sans display reads better slightly tightened
+  letter-spacing: -0.01em;
+  line-height: 1.15;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(2);
+    @include relative-font-size(1.75);
   }
 }
 

@@ -17,7 +17,7 @@
    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
    color: $text-color;
    background-color: $background-color;
-   // Paper style: retro gray page background behind the "paper" card
+   // Old retro gray paper background (disabled)
    // background-color: $page-background;
    // background-image:
    //   radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
@@ -71,12 +71,7 @@
    font-size: $small-font-size;
  }
 
- // Figures made with the figure.html include: centered image, LaTeX-style
- // caption with a small-caps lead-in. Figures auto-number via CSS counters
- // (reset per .post-content); a manual title= in the include suppresses the
- // auto number. width: fit-content locks the caption to the image width;
- // the width: 0 / min-width: 100% pair stops long captions from widening
- // the figure beyond the image.
+ // Figures from figure.html: centered image + auto-numbered caption
  .post-figure {
    margin: $spacing-unit auto;
    width: fit-content;
@@ -114,10 +109,7 @@
    }
  }
 
- // Bordered, dithered-photo look (e.g. Gameboy Camera-style photo strips).
- // Strips stay side by side and scroll horizontally on narrow screens
- // instead of wrapping; left-align when scrolling since a centered flex row
- // clips its left edge unreachably when it overflows.
+ // Gameboy Camera-style photo strips: framed, grayscale, scroll sideways
  .post-figure.framed-grayscale {
    img {
      border: 2px solid black;
@@ -140,8 +132,7 @@
    border-radius: 8px;
  }
 
- // Table captions sit ABOVE their table (LaTeX convention), same
- // typography as figure captions, with their own counter
+ // Table caption, above the table, auto-numbered like figures
  .table-caption {
    font-size: $small-font-size;
    color: lighten($text-color, 27%);
@@ -157,8 +148,7 @@
    }
  }
 
- // Caption for inline SVG/HTML figures that can't use the figure include;
- // shares the figure counter so numbering interleaves in document order
+ // Caption for inline SVG/iframe figures; shares the figure counter
  .svg-caption {
    font-size: $small-font-size;
    color: lighten($text-color, 27%);
@@ -174,9 +164,7 @@
    }
  }
 
- // Side-by-side image rows; scroll horizontally instead of stacking on
- // narrow screens. kramdown wraps the images in a <p> inside the div, so
- // the flex rules must apply there too.
+ // Side-by-side image rows that scroll sideways on narrow screens
  .img-row {
    overflow-x: auto;
 
@@ -220,7 +208,7 @@
   * Headings
   */
  h1, h2, h3, h4, h5, h6 {
-   font-weight: $base-font-weight;
+   font-weight: 500;
  }
 
  p, li,
@@ -228,7 +216,7 @@
    text-wrap: pretty;
  }
 
- // Justified prose with hyphenation; needs lang="en" on <html> to work
+ // Justify prose (needs lang="en" for hyphenation)
  p {
    text-align: justify;
    -webkit-hyphens: auto;
@@ -236,13 +224,12 @@
    hyphenate-limit-chars: 7 4 3;
  }
 
- // A justified single-image line start-aligns, so paragraphs holding only
- // an image (kramdown wraps loose images in <p>) center instead
+ // Center paragraphs that are just an image
  p:has(> img:only-child) {
    text-align: center;
  }
 
- // Uniform, column-aligned figures inside tables
+ // Tabular figures so table numbers line up in columns
  table {
    font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1;
  }
@@ -478,8 +465,8 @@ table {
     //    background-color: lighten($grey-color-light, 3%);
     border-top: 1.5px solid $text-color;
     border-bottom: 0.75px solid $text-color;
-    font-family: "Vollkorn SC", serif;
-    letter-spacing: 0.05em;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
   }
 
   // td {

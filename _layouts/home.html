@@ -68,7 +68,7 @@ layout: default
           <span class="post-meta" style="font-size: 0.9em;">{{ post.date | date: date_format }} &verbar; {{
             post.category | capitalize }}</span>
 
-          <h3 style="font-size: 1.2em;"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+          <h3 style="font-size: 1.2em; font-family: 'Vollkorn', serif;"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
           <p style="font-size: 0.9em;">{{ post.description }}</p>
         </li>
         {% endfor %}
