@@ -71,6 +71,13 @@
   margin-top: 0.2em;
   color: $grey-color; // the &middot; separators
 
+  // Keep the links on one line on phones; if they still wrap, balance
+  // the break instead of stranding the last link alone
+  @include media-query($on-palm) {
+    font-size: $small-font-size;
+    text-wrap: balance;
+  }
+
   .page-link {
     color: $text-color;
 
