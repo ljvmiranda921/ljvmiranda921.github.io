@@ -52,6 +52,8 @@ I am using a _6-DOF Stanford Manipulator_, with 5 revolute joints and 1
 prismatic joint. Furthermore, my constraints are similar as before, and it's
 shown in the table below:
 
+{% include table-caption.html caption="Joint variable physical constraints" %}
+
 | Parameters   | Lower Boundary        | Upper Boundary        |
 |:------------:|:---------------------:|:----------------------:
 | $$\theta_1$$ | $$-\pi$$              | $$\pi$$               |
@@ -61,8 +63,6 @@ shown in the table below:
 | $$\theta_5$$ | $$-\frac{5\pi}{36}$$  | $$\frac{5\pi}{36}$$  |
 | $$\theta_6$$ | $$-\pi$$              |  $$\pi$$              |
 {: .table }
-__Table 1:__ _Joint variable physical constraints_
-{: style="text-align: center;"}
 
 Now, if we're given with an _end-tip position_ (in this case, an $$xyz$$
 coordinate), we need to find the optimal parameters with the constraints

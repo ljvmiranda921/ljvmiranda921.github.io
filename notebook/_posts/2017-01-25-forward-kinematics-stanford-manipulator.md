@@ -51,6 +51,8 @@ $$
 
 For the Stanford Arm, here are the DH Parameters:  
 
+{% include table-caption.html caption="DH Parameters for the Stanford Arm" %}
+
 | Joint |   Joint Angle   |   Link Offset   | Link Length | Link Twist |
 |:-----:|:--------------:|:---------:|:-----:|:----------:|
 | 1     | $$\theta_{1}$$ | $$d_{1}$$ |   0   |     -90    |
@@ -60,8 +62,6 @@ For the Stanford Arm, here are the DH Parameters:
 | 5     | $$\theta_{5}$$ |     0     |   0   |     90     |
 | 6     | $$\theta_{6}$$ | $$d_{6}$$ |   0   |      0     |  
 {: .table }
-__Table 1:__ _DH Parameters for the Stanford Arm_
-{: style="text-align: center;"}
 
 
 
@@ -76,6 +76,8 @@ $$
 
 They are then limited in terms of physical constraints, such that:
 
+{% include table-caption.html caption="Joint variable physical constraints" %}
+
 | Parameters   | Limitation |
 |:------------:|:----------:|
 | $$\theta_1$$ | [-180 180] |
@@ -85,8 +87,6 @@ They are then limited in terms of physical constraints, such that:
 | $$\theta_5$$ | [-25 25]   |
 | $$\theta_6$$ | [-180 180] |  
 {: .table}
-__Table 2:__ _Joint variable physical constraints_
-{: style="text-align: center;"}
 
 ### MATLAB Implementation  
 

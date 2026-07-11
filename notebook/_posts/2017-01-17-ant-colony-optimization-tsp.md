@@ -78,6 +78,8 @@ __Figure 4:__ _ACO Simulation when pheromone evaporation is low_
 ## Results
 The best solution for ACO was __7548.9927__ _(the optimal solution achieved by current research so far is 7542.00)_ . It was obtained with the following parameters:
 
+{% include table-caption.html caption="ACO Parameters that was used in the implementation" %}
+
 |----------------------------------------+-------|
 | Parameter                              | Value |
 |----------------------------------------|-------|
@@ -88,8 +90,6 @@ The best solution for ACO was __7548.9927__ _(the optimal solution achieved by c
 | Short-Path Bias, $$\beta$$             | 200   |
 |----------------------------------------+-------|
 {: .table}
-__Table 1:__ _ACO Parameters that was used in the implementation_
-{: style="text-align: center;"}
 
 ![ACO Best](https://i.imgur.com/neFD3JDl.png)  
 __Figure 5:__ _ACO Best Solution_

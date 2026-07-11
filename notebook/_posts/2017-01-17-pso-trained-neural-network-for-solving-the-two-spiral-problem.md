@@ -59,6 +59,8 @@ capacity.
 
 ### Implementation Parameters
 
+{% include table-caption.html caption="Parameters used in PSO Implementation" %}
+
 |-----------------+----------------------------------------------------------|
 | Parameter       | Description                                              |
 |-----------------|----------------------------------------------------------|
@@ -70,8 +72,6 @@ capacity.
 | `inertiaWeight` | Inertia weight that controls the movement of particles.  |
 |-----------------+----------------------------------------------------------|  
 {: .table}
-__Table 1:__ _Parameters used in PSO Implementation_
-{: style="text-align: center;"}
 
 
 
@@ -130,6 +130,8 @@ The best score that was achieved using this optimization algorithm is
 algorithm can attain. Moreover, the table below shows the values I set for
 the parameters.
 
+{% include table-caption.html caption="Parameter values for PSO Implementation" %}
+
 |-----------------+----------------------------------------------------------|
 | Parameter       | Value                                                    |
 |-----------------|----------------------------------------------------------|
@@ -141,8 +143,6 @@ the parameters.
 | `inertiaWeight` | 0.7                                                      |
 |-----------------+----------------------------------------------------------|  
 {: .table}
-__Table 2:__ _Parameter values for PSO Implementation_
-{: style="text-align: center;"}
 
 
 {% include figure.html

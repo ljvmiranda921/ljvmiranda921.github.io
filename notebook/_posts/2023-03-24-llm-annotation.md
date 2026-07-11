@@ -52,6 +52,8 @@ worry about OpenAI API costs.
 
 <!-- dataset statistics -->
 
+{% include table-caption.html caption="Dataset statistics for the `minimum wage` subset of the UKP Sentential Argument Mining corpus (Stab, et al., 2018)." %}
+
 |                 | Tokens     | No argument     | Supporting | Opposing |
 |-----------------|-----------:|----------------:|-----------:|---------:|
 | Training set    | 42589  | 968         | 414    | 396  |
@@ -59,8 +61,6 @@ worry about OpenAI API costs.
 | Test set        | 13257  | 270         | 116    | 111  |
 | **Total**       | 60745  | 1346        | 576    | 551  |
 
-**Table:**  Dataset statistics for the `minimum wage` subset of the UKP Sentential Argument Mining corpus (Stab, et al., 2018).
-{:style="text-align: center;"}
 
 
 You can find the full project in this [Github

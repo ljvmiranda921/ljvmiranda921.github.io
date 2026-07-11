@@ -2,9 +2,11 @@
  * Paper container for lifted effect
  */
 .paper-container {
-  background-color: $background-color;
-  box-shadow: 4px 4px 0 #bbb;
-  margin: $spacing-unit auto;
+  // Paper style: lifted cream card on the gray page background
+  // background-color: $background-color;
+  // box-shadow: 4px 4px 0 #bbb;
+  // margin: $spacing-unit auto;
+  margin: 0 auto;
   max-width: $content-width;
   position: relative;
 }
@@ -268,7 +270,7 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
-  counter-reset: figure; // for auto-numbered .post-figure captions
+  counter-reset: figure table; // for auto-numbered figure/table captions
 
   h2 {
     @include relative-font-size(2);

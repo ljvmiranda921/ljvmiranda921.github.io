@@ -83,6 +83,8 @@ generation.
 
 ### Implementation Parameters  
 
+{% include table-caption.html caption="Parameters used in DE Implementation" %}
+
 |------------------+----------------------------------------------------------|
 | Parameter        | Description                                              |
 |------------------|----------------------------------------------------------|
@@ -93,8 +95,6 @@ generation.
 | `recombinationC` | Degree of recombination effect (exploitation parameter)  |
 |------------------+----------------------------------------------------------|  
 {: .table}
-__Table 1:__ _Parameters used in DE Implementation_
-{: style="text-align: center;"}
 
 
 ### Tuning the mutation and recombination parameters
@@ -117,6 +117,8 @@ The best score that was achieved using this optimization algorithm is
 algorithm can attain. Moreover, the table below shows the values I set for
 the parameters.
 
+{% include table-caption.html caption="Parameter Values for DE Implementation" %}
+
 |------------------+----------------------------------------------------------|
 | Parameter        | Value                                                    |
 |------------------|----------------------------------------------------------|
@@ -127,8 +129,6 @@ the parameters.
 | `recombinationC` | 0.07                                                     |
 |------------------+----------------------------------------------------------|
 {: .table}
-__Table 2:__ _Parameter Values for DE Implementation_
-{: style="text-align: center;"}
 
 {% include figure.html
    src="https://i.imgur.com/oEHj0Dhl.png"

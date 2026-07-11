@@ -16,14 +16,16 @@
  body {
    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
    color: $text-color;
-   background-color: $page-background;
-   background-image: 
-     radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
-     radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-     linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
-     linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%);
-   background-size: 40px 40px, 20px 20px, 80px 80px, 80px 80px;
-   background-position: 0 0, 10px 10px, 0 0, 40px 40px;
+   background-color: $background-color;
+   // Paper style: retro gray page background behind the "paper" card
+   // background-color: $page-background;
+   // background-image:
+   //   radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+   //   radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+   //   linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
+   //   linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%);
+   // background-size: 40px 40px, 20px 20px, 80px 80px, 80px 80px;
+   // background-position: 0 0, 10px 10px, 0 0, 40px 40px;
    -webkit-text-size-adjust: 100%;
    -webkit-font-feature-settings: "kern" 1, "lnum" 1;
       -moz-font-feature-settings: "kern" 1, "lnum" 1;
@@ -109,6 +111,23 @@
        counter-increment: figure;
        content: "Figure " counter(figure) ". ";
      }
+   }
+ }
+
+ // Table captions sit ABOVE their table (LaTeX convention), same
+ // typography as figure captions, with their own counter
+ .table-caption {
+   font-size: $small-font-size;
+   color: lighten($text-color, 27%);
+   max-width: 85%;
+   margin: 0 auto calc(#{$spacing-unit} / 3);
+
+   &::before {
+     counter-increment: table;
+     content: "Table " counter(table) ". ";
+     font-variant-caps: small-caps;
+     letter-spacing: 0.05em;
+     color: $text-color;
    }
  }
 
@@ -359,6 +378,8 @@ table {
     border-top-color: darken($grey-color-light, 12%);
     border-bottom: 1px solid darken($grey-color-light, 4%);
     border-bottom-color: darken($grey-color-light, 12%);
+    font-variant-caps: small-caps;
+    letter-spacing: 0.05em;
   }
 
   // td {
