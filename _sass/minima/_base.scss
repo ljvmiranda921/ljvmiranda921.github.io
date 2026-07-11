@@ -102,7 +102,7 @@
 
      .figure-title,
      &:not(:has(.figure-title))::before {
-       font-variant-caps: small-caps;
+       font-family: "Vollkorn SC", serif;
        letter-spacing: 0.05em;
        color: $text-color;
      }
@@ -125,7 +125,7 @@
    &::before {
      counter-increment: table;
      content: "Table " counter(table) ". ";
-     font-variant-caps: small-caps;
+     font-family: "Vollkorn SC", serif;
      letter-spacing: 0.05em;
      color: $text-color;
    }
@@ -142,7 +142,7 @@
    &::before {
      counter-increment: figure;
      content: "Figure " counter(figure) ". ";
-     font-variant-caps: small-caps;
+     font-family: "Vollkorn SC", serif;
      letter-spacing: 0.05em;
      color: $text-color;
    }
@@ -265,7 +265,7 @@
      margin-top: calc(#{$spacing-unit} / 6);
 
      .quote-author {
-       font-variant-caps: small-caps;
+       font-family: "Vollkorn SC", serif;
        letter-spacing: 0.05em;
      }
 
@@ -277,6 +277,24 @@
  
  
  
+ /**
+  * Horizontal rules: ornament instead of a line (U+2767, rotated floral
+  * heart bullet), following Bringhurst-style ornamentation
+  */
+ hr {
+   border: none;
+   margin: $spacing-unit auto;
+   text-align: center;
+
+   &::after {
+     content: "\2767";
+     color: $grey-color;
+     font-size: 1.25em;
+   }
+ }
+
+
+
  /**
   * Code formatting
   */
@@ -378,7 +396,7 @@ table {
     border-top-color: darken($grey-color-light, 12%);
     border-bottom: 1px solid darken($grey-color-light, 4%);
     border-bottom-color: darken($grey-color-light, 12%);
-    font-variant-caps: small-caps;
+    font-family: "Vollkorn SC", serif;
     letter-spacing: 0.05em;
   }
 
