@@ -1,163 +1,98 @@
-// Transform footnotes into Tufte-style sidenotes outside the paper
+// Transform kramdown footnotes into margin notes (Proportional Web style).
+// Wide viewports: notes sit in the right margin, aligned with their
+// reference, with JS-resolved overlaps. Narrow viewports: notes render
+// inline right after the paragraph that references them (styled with an
+// ornament in tufte-footnotes.css). Keep the 1340px breakpoint in sync
+// with the CSS.
 document.addEventListener('DOMContentLoaded', function() {
-    // Only run on post pages that have footnotes
     const footnoteSection = document.querySelector('.footnotes');
     if (!footnoteSection) return;
-    
+
     const footnoteLinks = document.querySelectorAll('a.footnote');
     const footnoteList = footnoteSection.querySelector('ol');
     const paperContainer = document.querySelector('.paper-container');
-    
+
     if (!footnoteList || footnoteLinks.length === 0 || !paperContainer) return;
-    
-    let currentVisibleSidenote = null;
-    let overlay = null;
-    
-    // Check if we're on mobile
-    function isMobile() {
-        return window.innerWidth <= 1200;
+
+    function isNarrow() {
+        return window.innerWidth < 1340;
     }
-    
-    // Create overlay for mobile
-    function createOverlay() {
-        if (!overlay) {
-            overlay = document.createElement('div');
-            overlay.className = 'sidenote-overlay';
-            document.body.appendChild(overlay);
-            
-            // Click overlay to close
-            overlay.addEventListener('click', closeMobileSidenote);
-        }
-        return overlay;
-    }
-    
-    // Close mobile sidenote
-    function closeMobileSidenote() {
-        if (currentVisibleSidenote) {
-            currentVisibleSidenote.classList.remove('visible');
-            if (overlay) overlay.classList.remove('visible');
-            currentVisibleSidenote = null;
-            
-            // Re-enable scrolling
-            document.body.style.overflow = '';
-        }
-    }
-    
-    // Show mobile sidenote
-    function showMobileSidenote(sidenote) {
-        closeMobileSidenote(); // Close any existing one
-        
-        currentVisibleSidenote = sidenote;
-        const overlayEl = createOverlay();
-        
-        // Disable scrolling
-        document.body.style.overflow = 'hidden';
-        
-        // Show overlay and sidenote
-        overlayEl.classList.add('visible');
-        sidenote.classList.add('visible');
-    }
-    
-    // Process each footnote
+
+    const sidenotes = [];
+
     footnoteLinks.forEach(function(link, index) {
-        const footnoteId = link.getAttribute('href').substring(1); // Remove #
+        const footnoteId = link.getAttribute('href').substring(1);
         const footnoteContent = document.getElementById(footnoteId);
-        
         if (!footnoteContent) return;
-        
-        // Get the footnote text (remove the back-reference link)
+
+        // Footnote text without the back-reference link
         const footnoteText = footnoteContent.cloneNode(true);
         const backRef = footnoteText.querySelector('.reversefootnote');
         if (backRef) backRef.remove();
-        
-        // Create sidenote element
-        const sidenote = document.createElement('div');
+
+        const sidenote = document.createElement('aside');
         sidenote.className = 'sidenote';
-        sidenote.innerHTML = `
-            <button class="sidenote-close" aria-label="Close footnote">×</button>
-            <span class="sidenote-number">${index + 1}</span>
-            ${footnoteText.innerHTML}
-        `;
-        
-        // Insert sidenote into the paper container (so it can be positioned relative to it)
-        paperContainer.appendChild(sidenote);
-        
-        // Add close button functionality
-        const closeBtn = sidenote.querySelector('.sidenote-close');
-        closeBtn.addEventListener('click', closeMobileSidenote);
-        
-        // Handle footnote link clicks
+        sidenote.innerHTML = footnoteText.innerHTML;
+
+        // Place the note after the block that references it, so the
+        // inline (narrow-viewport) presentation lands in reading order
+        const host = link.closest('p, li, blockquote, figcaption') || paperContainer;
+        host.insertAdjacentElement('afterend', sidenote);
+        sidenotes.push(sidenote);
+
+        // Clicking the reference brings the note into view
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            if (isMobile()) {
-                showMobileSidenote(sidenote);
-            } else {
-                // Desktop: smooth scroll to sidenote
-                sidenote.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+            sidenote.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
     });
-    
+
     // Hide the original footnotes section
     footnoteSection.style.display = 'none';
-    
-    // Position sidenotes function (desktop only)
+
     function updatePositions() {
-        if (isMobile()) return; // Don't position on mobile
-        
+        if (isNarrow()) {
+            // Inline flow: clear any absolute positioning from a resize
+            sidenotes.forEach(function(sidenote) {
+                sidenote.style.position = '';
+                sidenote.style.left = '';
+                sidenote.style.top = '';
+            });
+            return;
+        }
+
         const paperRect = paperContainer.getBoundingClientRect();
         const paperTop = window.scrollY + paperRect.top;
-        const sidenotes = paperContainer.querySelectorAll('.sidenote');
         const positions = [];
-        
-        // First pass: calculate preferred positions
+
         footnoteLinks.forEach(function(link, index) {
             const sidenote = sidenotes[index];
             if (sidenote) {
                 const linkRect = link.getBoundingClientRect();
                 const linkTop = linkRect.top + window.scrollY;
-                
-                // Position relative to paper container
-                const relativeTop = linkTop - paperTop;
-                const preferredTop = relativeTop - 10;
-                
-                positions.push({
-                    sidenote: sidenote,
-                    preferredTop: preferredTop,
-                    actualTop: preferredTop,
-                    index: index
-                });
+                const preferredTop = linkTop - paperTop - 10;
+                positions.push({ sidenote: sidenote, actualTop: preferredTop });
             }
         });
-        
-        // Second pass: resolve overlaps
-        positions.sort((a, b) => a.preferredTop - b.preferredTop);
-        
+
+        // Resolve overlaps top-down
+        positions.sort((a, b) => a.actualTop - b.actualTop);
         for (let i = 0; i < positions.length; i++) {
-            const current = positions[i];
-            
-            // Check for overlap with previous sidenotes
             for (let j = 0; j < i; j++) {
-                const previous = positions[j];
-                const previousBottom = previous.actualTop + previous.sidenote.offsetHeight + 10; // 10px gap
-                
-                if (current.actualTop < previousBottom) {
-                    current.actualTop = previousBottom;
+                const previousBottom = positions[j].actualTop +
+                    positions[j].sidenote.offsetHeight + 10;
+                if (positions[i].actualTop < previousBottom) {
+                    positions[i].actualTop = previousBottom;
                 }
             }
-            
-            // Apply positioning
-            current.sidenote.style.position = 'absolute';
-            current.sidenote.style.left = `calc(100% + 20px)`;
-            current.sidenote.style.top = `${current.actualTop}px`;
+            positions[i].sidenote.style.position = 'absolute';
+            positions[i].sidenote.style.left = 'calc(100% + 20px)';
+            positions[i].sidenote.style.top = `${positions[i].actualTop}px`;
         }
     }
-    
-    // Initial positioning
+
     updatePositions();
-    
-    // Update positions on scroll/resize
+
     let ticking = false;
     function requestUpdate() {
         if (!ticking) {
@@ -168,21 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             ticking = true;
         }
     }
-    
+
     window.addEventListener('scroll', requestUpdate);
-    window.addEventListener('resize', function() {
-        requestUpdate();
-        
-        // Close mobile sidenote if switching to desktop
-        if (!isMobile() && currentVisibleSidenote) {
-            closeMobileSidenote();
-        }
-    });
-    
-    // Handle escape key to close mobile sidenote
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && currentVisibleSidenote) {
-            closeMobileSidenote();
-        }
-    });
+    window.addEventListener('resize', requestUpdate);
 });

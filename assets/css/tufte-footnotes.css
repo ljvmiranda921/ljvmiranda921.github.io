@@ -53,11 +53,14 @@ sup .footnote {
   margin-right: 0.5ch;
 }
 
-.sidenote-number {
-  color: #a00000;
-  font-weight: bold;
-  font-size: 0.75rem;
-  margin-right: 0.35rem;
+/* kramdown wraps footnote text in <p>; keep it flowing after the ornament,
+   and ragged-right rather than justified */
+.sidenote p {
+  display: inline;
+  margin: 0;
+  text-align: left;
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 
 /* Wide viewports: notes move to the right margin; the JS sets
