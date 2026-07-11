@@ -201,8 +201,7 @@ proof-of-concept, and I'm [proud of my output](https://cellular-sprites.herokuap
 <iframe src="https://cellular-sprites.herokuapp.com" style="height:450px;width:100%;border:none;overflow:hidden;">
   <p>Your browser does not support iframes.</p>
 </iframe>
-<br>**Figure**: You can try the Cellular Sprites streamlit app here.
-{: style="text-align: center;"}
+<div class="svg-caption" markdown="span">You can try the Cellular Sprites streamlit app here.</div>
 
 
 ### Emergence, determinism, and identity in Sprites-as-a-Service
