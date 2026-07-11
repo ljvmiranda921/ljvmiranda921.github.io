@@ -86,7 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             positions[i].sidenote.style.position = 'absolute';
-            positions[i].sidenote.style.left = 'calc(100% + 20px)';
+            // The wrapper's side padding means the text ends ~75px inside
+            // the container, so a negative offset still clears the text
+            positions[i].sidenote.style.left = 'calc(100% - 15px)';
             positions[i].sidenote.style.top = `${positions[i].actualTop}px`;
         }
     }

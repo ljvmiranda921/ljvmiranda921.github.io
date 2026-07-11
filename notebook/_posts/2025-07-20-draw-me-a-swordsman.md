@@ -57,9 +57,10 @@ To get a single representative score, I compute the average of correctness and c
 This project also helped me understand the development workflow for MCPs and LLM agents.
 I like framing this setup similar to reinforcement learning: we instruct an **Agent** (an LLM) to interact with the **Environment** (standardized via MCP) to accomplish a task, as shown in the diagram below:
 
-![](/assets/images/draw-me-a-swordsman/testbed.svg){:width="800px"}  
-_In the tool-calling paradigm, we instruct an Agent to interact with the Environment in order to accomplish a task. The Agent can be implemented via the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) or natively in [Claude Desktop](https://modelcontextprotocol.io/quickstart/user), while the Environment is an MCP server that calls Aseprite commands._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/draw-me-a-swordsman/testbed.svg"
+   width="800"
+   caption="In the tool-calling paradigm, we instruct an Agent to interact with the Environment in order to accomplish a task. The Agent can be implemented via the [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/) or natively in [Claude Desktop](https://modelcontextprotocol.io/quickstart/user), while the Environment is an MCP server that calls Aseprite commands." %}
 
 ### MCP Server Environment
 

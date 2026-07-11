@@ -114,10 +114,30 @@
    }
  }
 
- // Bordered, dithered-photo look (e.g. Gameboy Camera-style photo strips)
- .post-figure.framed-grayscale img {
-   border: 2px solid black;
-   filter: grayscale(95%);
+ // Bordered, dithered-photo look (e.g. Gameboy Camera-style photo strips).
+ // Strips stay side by side and scroll horizontally on narrow screens
+ // instead of wrapping; left-align when scrolling since a centered flex row
+ // clips its left edge unreachably when it overflows.
+ .post-figure.framed-grayscale {
+   img {
+     border: 2px solid black;
+     filter: grayscale(95%);
+     flex-shrink: 0;
+   }
+
+   .figure-images {
+     flex-wrap: nowrap;
+     overflow-x: auto;
+
+     @include media-query($on-laptop) {
+       justify-content: flex-start;
+     }
+   }
+ }
+
+ // Rounded corners for game screenshots and gifs
+ .post-figure.rounded img {
+   border-radius: 8px;
  }
 
  // Table captions sit ABOVE their table (LaTeX convention), same

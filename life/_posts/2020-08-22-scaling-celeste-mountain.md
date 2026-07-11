@@ -21,8 +21,10 @@ excerpt: |
 ---
 
 
-![](/assets/images/celeste/celeste_boxart.png){:width="560px"}
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/celeste/celeste_boxart.png"
+   width="560"
+   caption="Box art for *Celeste*." %}
 
 <span class="firstcharacter">C</span>eleste is one of the most memorable games I've played this year. A
 brilliant masterpiece, it developed in me a profound appreciation of games

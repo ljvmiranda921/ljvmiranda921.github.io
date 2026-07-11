@@ -7,11 +7,12 @@ Usage:
    width="800"
    caption="Some *markdown* caption with [links](https://example.com)."
    alt="Alt text for the image" %}
-src and caption are required; width, height, title, alt, and class are
+src is required; caption, width, height, title, alt, and class are
 optional (class adds a modifier to the figure, e.g. "framed-grayscale").
+Without a caption the figure renders unnumbered.
 Pass title="Figure 3b." to override the auto number.
 Multiple images (one row, shared caption): src="/a.png,/b.png,/c.png"
 The output is a single line so the figure also works inside list items.
 {%- endcomment -%}
 {%- assign figure_srcs = include.src | split: "," -%}
-<figure class="post-figure{% if include.class %} {{ include.class }}{% endif %}" markdown="0"><div class="figure-images">{%- for figure_src in figure_srcs -%}{%- assign figure_src_stripped = figure_src | strip -%}<img src="{% if figure_src_stripped contains '://' %}{{ figure_src_stripped }}{% else %}{{ figure_src_stripped | relative_url }}{% endif %}" alt="{{ include.alt | default: include.title | default: 'figure' }}"{% if include.width %} width="{{ include.width }}"{% endif %}{% if include.height %} height="{{ include.height }}"{% endif %}>{%- endfor -%}</div><figcaption>{% if include.title %}<span class="figure-title">{{ include.title }}</span> {% endif %}{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' | strip }}</figcaption></figure>
+<figure class="post-figure{% if include.class %} {{ include.class }}{% endif %}" markdown="0"><div class="figure-images">{%- for figure_src in figure_srcs -%}{%- assign figure_src_stripped = figure_src | strip -%}<img src="{% if figure_src_stripped contains '://' %}{{ figure_src_stripped }}{% else %}{{ figure_src_stripped | relative_url }}{% endif %}" alt="{{ include.alt | default: include.title | default: 'figure' }}"{% if include.width %} width="{{ include.width }}"{% endif %}{% if include.height %} height="{{ include.height }}"{% endif %}>{%- endfor -%}</div>{% if include.caption or include.title %}<figcaption>{% if include.title %}<span class="figure-title">{{ include.title }}</span> {% endif %}{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' | strip }}</figcaption>{% endif %}</figure>
