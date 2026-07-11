@@ -310,6 +310,36 @@
  
  
  /**
+  * Details/summary, proportional-web style: framed by rules, italic
+  * summary label, no disclosure triangle
+  */
+ details {
+   margin: $spacing-unit 0;
+   border-top: 1px solid $text-color;
+   border-bottom: 1px solid $text-color;
+   padding: calc(#{$spacing-unit} / 2) 0;
+
+   > :last-child {
+     margin-bottom: 0;
+   }
+ }
+
+ summary {
+   font-style: italic;
+   cursor: pointer;
+
+   &::marker {
+     content: "";
+   }
+ }
+
+ details[open] summary {
+   margin-bottom: calc(#{$spacing-unit} / 2);
+ }
+
+
+
+ /**
   * Horizontal rules: ornament instead of a line (U+2767, rotated floral
   * heart bullet), following Bringhurst-style ornamentation
   */
@@ -435,8 +465,7 @@ table {
 
   tbody tr {
     &:last-child {
-      border-bottom: 3px solid darken($grey-color-light, 4%);
-      border-bottom-color: darken($grey-color-light, 12%);
+      border-bottom: 1.5px solid $text-color;
     }
   }
 
@@ -447,10 +476,8 @@ table {
 
   th {
     //    background-color: lighten($grey-color-light, 3%);
-    border-top: 3px solid darken($grey-color-light, 4%);
-    border-top-color: darken($grey-color-light, 12%);
-    border-bottom: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    border-top: 1.5px solid $text-color;
+    border-bottom: 0.75px solid $text-color;
     font-family: "Vollkorn SC", serif;
     letter-spacing: 0.05em;
   }
