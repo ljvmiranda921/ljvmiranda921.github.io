@@ -67,6 +67,30 @@
  figcaption {
    font-size: $small-font-size;
  }
+
+ // Side-by-side image rows; scroll horizontally instead of stacking on
+ // narrow screens. kramdown wraps the images in a <p> inside the div, so
+ // the flex rules must apply there too.
+ .img-row {
+   overflow-x: auto;
+
+   &,
+   p {
+     display: flex;
+     justify-content: center;
+   }
+
+   img {
+     flex-shrink: 0;
+   }
+
+   @include media-query($on-laptop) {
+     &,
+     p {
+       justify-content: flex-start;
+     }
+   }
+ }
  
  
  
@@ -91,11 +115,6 @@
   */
  h1, h2, h3, h4, h5, h6 {
    font-weight: $base-font-weight;
-   text-wrap: balance;
-
-   @include media-query($on-palm) {
-     text-wrap: pretty;
-   }
  }
 
  p, li {

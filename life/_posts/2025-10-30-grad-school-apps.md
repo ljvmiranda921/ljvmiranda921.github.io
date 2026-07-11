@@ -46,7 +46,7 @@ Early on, I realized that pivoting from industry to academia would entail a lot 
 A part of me thought that maybe I should have just continued to a PhD right after my Masters when the path seemed clearer.
 But my industry years helped confirm that I genuinely enjoyed research work!
 
-<div style="display: flex; justify-content: center;">
+<div class="img-row">
 <img src="/assets/images/grad-school-apps/bike.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/bgc.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/lantern.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
@@ -63,7 +63,7 @@ While working at [Explosion](https://explosion.ai), I was fortunate to be expose
 This experience gave me the confidence to undertake my own independent work in Tagalog NLP, which led to [calamanCy](https://aclanthology.org/2023.nlposs-1.1.pdf) and [TLUnified-NER](https://arxiv.org/abs/2311.07161).
 In addition, doing software engineering work on the [Prodigy annotation tool](https://prodigy.ai/) inspired my interest in researching data-centric approaches to NLP.
 
-<div style="display: flex; justify-content: center;">
+<div class="img-row">
 <img src="/assets/images/grad-school-apps/skyscraper.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/berlin.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/remote.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
@@ -77,7 +77,7 @@ I was also lucky to be part of large collaborative projects like [T&uuml;lu 3](h
 Working at Ai2 gave me a baseline of what high-quality research looks like.[^1]
 In addition, there's really something in the air back in the US that made me more ambitious and driven&mdash; I hope to bring these qualities wherever I go.
 
-<div style="display: flex; justify-content: center;">
+<div class="img-row">
 <img src="/assets/images/grad-school-apps/library.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/aurora.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/ai2.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
@@ -92,7 +92,7 @@ Everyone I worked with made me feel welcome, and I hope I can be that person for
 
 > I've developed a mantra over time: people over projects, projects over publications.
 
-<div style="display: flex; justify-content: center;">
+<div class="img-row">
 <img src="/assets/images/grad-school-apps/fremont.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/pottery.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/market.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
@@ -112,7 +112,7 @@ I vividly recall arriving at the library as soon as it opened and remaining ther
 The holiday season also brought a reflective mood, with fewer people around and a quieter atmosphere, I was able to reflect on what type of research I wanted to pursue.
 
 <!-- add pictures of fremont library, pho place in fremont, cafe ladro -->
-<div style="display: flex; justify-content: center;">
+<div class="img-row">
 <img src="/assets/images/grad-school-apps/fremont2.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/ladro3.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/pcc.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
@@ -125,7 +125,7 @@ I missed some of the fee waiver deadlines because I was busy, so I had to shell 
 In addition, some universities require official TOEFL scores, so you also have to pay TOEFL fees in order to send your test results to those universities (~$35).
 Don't make my mistake and keep in mind that fee waivers exist and most universities are generous, especially for international students, but just note that grad school apps can be very expensive.
 
-<div style="display: flex; justify-content: center;">
+<div class="img-row">
 <img src="/assets/images/grad-school-apps/bike2.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/phinney.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/usa.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
@@ -145,7 +145,7 @@ This is especially true for someone like me in their early 30s: a PhD program ca
 Making this decision in my thirties is different from if I had made this decision during my twenties.
 Getting into a PhD becomes a life decision more so than a career decision.
 
-<div style="display: flex; justify-content: center;">
+<div class="img-row">
 <img src="/assets/images/grad-school-apps/cbtl.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/retreat.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/ring.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
@@ -165,7 +165,7 @@ PhD years are long and gritty, and having a rock to lean on is important.
 
 > Getting into a PhD becomes a life decision more so than a career decision.
 
-<div style="display: flex; justify-content: center;">
+<div class="img-row">
 <img src="/assets/images/grad-school-apps/cornell3.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/sage_hall.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/nyc.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
@@ -191,7 +191,7 @@ In some way, I don't feel alone and different, and that's important.
 
 
 <!-- pictures of Cambridge! -->
-<div style="display: flex; justify-content: center;">
+<div class="img-row">
 <img src="/assets/images/grad-school-apps/churchill.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/cambridge_ul.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
 <img src="/assets/images/grad-school-apps/uk_phonebooth.png" width="220" style="border: 2px solid black; margin: 0 5px; filter: grayscale(95%);">
