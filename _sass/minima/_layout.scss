@@ -268,6 +268,7 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
+  counter-reset: figure; // for auto-numbered .post-figure captions
 
   h2 {
     @include relative-font-size(2);

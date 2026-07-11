@@ -34,11 +34,11 @@ trying to merge into `master`. Each circle represents a commit, and the commit
 history can be read from left to right:
 
 
-![Diagram](/assets/images/git-workflow/feature-branch.png){:width="480px"}  
-__Figure:__ _A simple example of feature branching. We will discuss how each
-merge policy (rebase or merge) affects our commit history. For now, assume that
-the commit hash is represented as a single letter_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/git-workflow/feature-branch.png"
+   width="480"
+   alt="Diagram"
+   caption="A simple example of feature branching. We will discuss how each merge policy (rebase or merge) affects our commit history. For now, assume that the commit hash is represented as a single letter" %}
 
 ## Merge policy for a verbose history
 
@@ -55,11 +55,11 @@ $ git merge feature # merge changes
 
 This will create a commit history that looks like this:
 
-![Diagram](/assets/images/git-workflow/merge.png){:width="480px"}  
-__Figure:__ _A merge policy creates a merge commit, then preserves the
-history of the created branches. This is a non-destructive
-option_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/git-workflow/merge.png"
+   width="480"
+   alt="Diagram"
+   caption="A merge policy creates a merge commit, then preserves the history of the created branches. This is a non-destructive option" %}
 
 Usually, what I do is merge upstream changes in `master` (while in the
 `feature` branch), then merge the changes in `feature` back to `master`.
@@ -131,11 +131,11 @@ it applies the changes from your feature branch to `master` but with a
 different commit hash. Because these commits are totally different (even if
 they propose the same change), you get a *nice-looking, linear commit history*:
 
-![Diagram](/assets/images/git-workflow/rebase.png){:width="480px"}  
-__Figure:__ _A rebase policy effectively changes your commits and rewrites your
-project history. In effect, you create a linear history in your `master`
-branch._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/git-workflow/rebase.png"
+   width="480"
+   alt="Diagram"
+   caption="A rebase policy effectively changes your commits and rewrites your project history. In effect, you create a linear history in your `master` branch." %}
 
 Assuming we are in `master`, we can merge using the rebase policy by following
 these steps:

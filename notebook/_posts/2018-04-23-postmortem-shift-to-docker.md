@@ -26,9 +26,11 @@ website's header (look up!).
 Just for fun, I set-up a cron job to build my CV every week. However, for the
 past few weeks, I've been receiving some weird build failures:
 
-![Diagram](/assets/images/postmortem-shift-to-docker/build_failures.png){:width="560px"}  
-__Figure:__ _Yup, I've been ignoring this problem for the past two months_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/postmortem-shift-to-docker/build_failures.png"
+   width="560"
+   alt="Diagram"
+   caption="Yup, I've been ignoring this problem for the past two months" %}
 
 As it turns out, my set-up script, `tlsetup.sh` is causing some problem. A
 short intro on `tlsetup.sh`: it's a small script I made that does a little
@@ -53,9 +55,11 @@ Going through the job log, I found a connection error that causes a
 failure whenever TexLive or some package is downloaded by Travis-CI straight
 from the TUG file server (ftp://tug.org).
 
-![Diagram](/assets/images/postmortem-shift-to-docker/joblogs.png){:width="720px"}  
-__Figure:__ _Downloading avantgar succeeds but bookman fails. Very unreliable._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/postmortem-shift-to-docker/joblogs.png"
+   width="720"
+   alt="Diagram"
+   caption="Downloading avantgar succeeds but bookman fails. Very unreliable." %}
 
 The result: an incomplete LaTeX environment and a failed LaTeX compilation.
 Looking closely at the image above, we can see that for a specific package,
@@ -163,9 +167,11 @@ to compile my `.bib` file but as it turns out, **biber is not installed in
 the blang/latex:ubuntu** image. Took me three long hours to finally figure
 that out:
 
-![Diagram](/assets/images/postmortem-shift-to-docker/threehours.png){:width="560px"}  
-__Figure:__ _This is the programmer's way of saying "Never give up"_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/postmortem-shift-to-docker/threehours.png"
+   width="560"
+   alt="Diagram"
+   caption="This is the programmer's way of saying &ldquo;Never give up&rdquo;" %}
 
 Good thing I came around this
 [issue](https://github.com/blang/latex-docker/issues/10) saying that **biber
@@ -190,18 +196,22 @@ compatible with Ubuntu 14.04 and without updating my `tlsetup.sh` (which I
 deleted) script. Furthermore, it gave me a sense of comfort and
 accomplishment when I started seeing something like this:
 
-![Diagram](/assets/images/postmortem-shift-to-docker/results1.png){:width="560px"}  
-__Figure:__ _Those green bars gave me a good sigh of relief_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/postmortem-shift-to-docker/results1.png"
+   width="560"
+   alt="Diagram"
+   caption="Those green bars gave me a good sigh of relief" %}
 
 It's also interesting that I have reduced the duration of my builds. Below is
 a build time history for my `thesis-manuscript`. Unlike my `cv` project, I
 started this one with continuous integration in mind, so all builds use the
 traditional Docker-less solution (then the Docker-solution afterwards).
 
-![Diagram](/assets/images/postmortem-shift-to-docker/build_times.png){:width="720px"}  
-__Figure:__ _Good start. For the last three builds, I have consistently reduced the build time with a Docker-based solution_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/postmortem-shift-to-docker/build_times.png"
+   width="720"
+   alt="Diagram"
+   caption="Good start. For the last three builds, I have consistently reduced the build time with a Docker-based solution" %}
 
 Of course, the scientist in me will say that we are only looking at three
 samples, so it's not enough basis for a strong conclusion. _Further testing

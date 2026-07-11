@@ -68,10 +68,10 @@ technical challenges. I see this change as two-fold: we now need to support
 both the (1) demand for productionizing analyses and experiments, and the (2)
 rapid adoption of the Cloud.
 
-![](/assets/images/jupyter-notebooks-in-2020/axis.png){:width="480px"}  
-**Figure**: A simplified framework on how to think about the advancements in  
-the data science process for the past years
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/jupyter-notebooks-in-2020/axis.png"
+   width="480"
+   caption="A simplified framework on how to think about the advancements in the data science process for the past years" %}
 
 First, **the need for production**, i.e., creation of data products or
 deploying experiment artifacts within the software engineering lifecycle, has
@@ -92,10 +92,10 @@ infrastructure when managing our workloads. However, the previous Jupyter
 Notebook ecosystem, as much as it is a staple in the data scientist toolbox,
 isn't meant for these changes:
 
-![](/assets/images/jupyter-notebooks-in-2020/axis_with_jupyter.png){:width="480px"}  
-**Figure**: The Notebooks we know only cover a small domain of the data science
-ecosystem
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/jupyter-notebooks-in-2020/axis_with_jupyter.png"
+   width="480"
+   caption="The Notebooks we know only cover a small domain of the data science ecosystem" %}
 
 As I've said, the Jupyter Notebook we've come to know isn't meant for these changes. 
 They're meant for exploration, not production. They're meant to run in a single
@@ -123,9 +123,10 @@ three forces:
     hypotheses under controlled environments. Software written for analysis
     should be easily reused for prod.
 
-![](/assets/images/jupyter-notebooks-in-2020/axis_with_jupyter_forces.png){:width="480px"}  
-**Figure**: The growth of the Notebook ecosystem is driven by these forces
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/jupyter-notebooks-in-2020/axis_with_jupyter_forces.png"
+   width="480"
+   caption="The growth of the Notebook ecosystem is driven by these forces" %}
 
 Growing towards a more Cloud-first environment means that we can perform
 Notebook-based tasks in machines more powerful than our own. For example,

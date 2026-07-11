@@ -31,9 +31,12 @@ created by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton. It contains
 We can visualize some examples in CIFAR-10, here we can see a sample of 10
 classes with 7 examples each.
 
-![CIFAR Sample](/assets/images/k-nearest-neighbors/output_3_0.png){:width="560px"}  
-__Figure 1:__ _Samples of the CIFAR-10 Dataset_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/k-nearest-neighbors/output_3_0.png"
+   width="560"
+   title="Figure 1."
+   alt="CIFAR Sample"
+   caption="Samples of the CIFAR-10 Dataset" %}
 
 As we can see, for each class, there are distinct images related to it. For
 example, the `car` class is represented by different car images, some of
@@ -162,9 +165,12 @@ examples and over 5000 training examples. Darker regions represent areas of
 low distance (more similar images) while lighter regions represent areas of
 high distance (more different images).
 
-![Plot distance](/assets/images/k-nearest-neighbors/output_9_0.png){:width="560px"}  
-__Figure 2:__ _Visualization of the `dists` matrix_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/k-nearest-neighbors/output_9_0.png"
+   width="560"
+   title="Figure 2."
+   alt="Plot distance"
+   caption="Visualization of the `dists` matrix" %}
 
 The distinctly visible rows (say, the dark rows in the 300 mark or the white
 rows in the 400 mark) represent test examples that are similar (or different)
@@ -239,9 +245,12 @@ In order to see how the value of k changes with respect to our cross
 validation set, we can visualize them in terms
 of line plot with error bars:
 
-![Cross validation](/assets/images/k-nearest-neighbors/output_21_0.png){:width="560px"}  
-__Figure 3:__ _Visualization of the cross-validation procedure with different k values_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/k-nearest-neighbors/output_21_0.png"
+   width="560"
+   title="Figure 3."
+   alt="Cross validation"
+   caption="Visualization of the cross-validation procedure with different k values" %}
 
 From now, we can choose a good k value. Let's take `k = 10`.
 

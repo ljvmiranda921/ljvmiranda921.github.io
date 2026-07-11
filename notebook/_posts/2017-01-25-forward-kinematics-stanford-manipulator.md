@@ -143,9 +143,11 @@ x-y and x-z coordinates.
 $$\theta_{1}$$ = -90, $$\theta_{2}$$ = 90, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$\theta_{5}$$ = 25, $$\theta_{6}$$ = 90
 
 
-![Simulation 1](/assets/images/forward-kinematics-stanford-manipulator/fkine01.gif)  
-__Figure 1a:__ _Forward Kinematics Simulation_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/forward-kinematics-stanford-manipulator/fkine01.gif"
+   title="Figure 1a."
+   alt="Simulation 1"
+   caption="Forward Kinematics Simulation" %}
 ![Top and Side View](https://i.imgur.com/uxf2xKtl.png){:height="274px" width="560px"}  
 __Figure 1b:__ _Top (left) and side (right) views of the manipulator's end-pose_
 {: style="text-align: center;"}
@@ -156,9 +158,11 @@ $$\theta_{1}$$ = 180, $$\theta_{2}$$ = 0, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$
 
 
 
-![Simulation 2](/assets/images/forward-kinematics-stanford-manipulator/fkine02.gif)  
-__Figure 2a:__ _Forward Kinematics Simulation_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/forward-kinematics-stanford-manipulator/fkine02.gif"
+   title="Figure 2a."
+   alt="Simulation 2"
+   caption="Forward Kinematics Simulation" %}
 
 ![Top and Side View](https://i.imgur.com/AjVMtIGl.png){:height="274px" width="560px"}  
 __Figure 2b:__ _Top (left) and side (right) views of the manipulator's end-pose_
@@ -170,9 +174,11 @@ __Figure 2b:__ _Top (left) and side (right) views of the manipulator's end-pose_
 $$\theta_{1}$$ = 90, $$\theta_{2}$$ = -45, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$\theta_{5}$$ = -25, $$\theta_{6}$$ = 45
 
 
-![Simulation 3](/assets/images/forward-kinematics-stanford-manipulator/fkine03.gif)  
-__Figure 3a:__ _Forward Kinematics Simulation_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/forward-kinematics-stanford-manipulator/fkine03.gif"
+   title="Figure 3a."
+   alt="Simulation 3"
+   caption="Forward Kinematics Simulation" %}
 
 ![Top and Side View](https://i.imgur.com/StBp7rGl.png){:height="274px" width="560px"}  
 __Figure 3b:__ _Top (left) and side (right) views of the manipulator's end-pose_

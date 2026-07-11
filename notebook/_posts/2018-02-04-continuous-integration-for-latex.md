@@ -28,9 +28,12 @@ Travis-CI will attempt to build your document. If the build is successful,
 the output (mostly the `.pdf` file) will be automatically uploaded to your
 Drobox. Our pipeline will look like this:
 
-![Diagram](/assets/images/continuous-integration-for-latex/latex-ci.png){:width="480px"}  
-__Figure 1:__ _LaTeX with Continuous Integration and Deployment Workflow_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/continuous-integration-for-latex/latex-ci.png"
+   width="480"
+   title="Figure 1."
+   alt="Diagram"
+   caption="LaTeX with Continuous Integration and Deployment Workflow" %}
 
 In order to make this tutorial straightforward, I'll assume that these 
 preliminary steps were already done:

@@ -265,11 +265,10 @@ as the **center word** and the latter as the **context word**.
 
 <!-- a few image illustration of a sentence and center + context -->
 
-![](/assets/images/word-vectors/context.png){:width="520px"}  
-__Figure__: Demonstration of center and context words. Note that we skip
-"a" and "is" because they're stopwords. The `clean_text` function should've
-removed them at this point.
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/word-vectors/context.png"
+   width="520"
+   caption="Demonstration of center and context words. Note that we skip &ldquo;a&rdquo; and &ldquo;is&rdquo; because they're stopwords. The `clean_text` function should've removed them at this point." %}
 
 > You shall know a word by the company it keeps - John Rupert Firth
 
@@ -424,12 +423,10 @@ zeroes and ones as probabilities:
 ```
 
 <!-- add illustration -->
-![](/assets/images/word-vectors/one_hot_probs.png){:width="720px"}  
-__Figure__: Vectors can also be interpreted as a probability distribution
-over the vocabulary. This means that in one-hot encoding, a value of 1 may also
-mean a highly-probable event.  
-_(Note: this is a highly-contrived example)_
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/word-vectors/one_hot_probs.png"
+   width="720"
+   caption="Vectors can also be interpreted as a probability distribution over the vocabulary. This means that in one-hot encoding, a value of 1 may also mean a highly-probable event. _(Note: this is a highly-contrived example)_" %}
 
 > One advantage of one-hot encoding is that it allows us to interpret the
 > encoded vector as a probability distribution over our vocabulary.
@@ -620,9 +617,10 @@ into a more suitable dimension.**
 > dimension.
 
 
-![](/assets/images/word-vectors/lookup_table.png){:width="720px"}
-__Figure__: Our weight matrix, coupled with the one-hot encoded input, acts as a lookup table.
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/word-vectors/lookup_table.png"
+   width="720"
+   caption="Our weight matrix, coupled with the one-hot encoded input, acts as a lookup table." %}
 
 
 And this is definitely what we want. One-hot encoded vectors are sparse and

@@ -50,9 +50,11 @@ ChainerRL is a reinforcement learning framework built on-top of Chainer (think
 Tensorflow or Pytorch). It contains an extensive API that allows you to define
 your agent, its policy, the environment, and the overall training routine:
 
-![overview](/assets/images/pfn-internship/chainerrl-overview.png){:width="640px"}  
-__Figure:__ _ChainerRL is a feature-rich reinforcement learning framework_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-overview.png"
+   width="640"
+   alt="overview"
+   caption="ChainerRL is a feature-rich reinforcement learning framework" %}
 
 It is convenient to use ChainerRL: simply (1) create a model and an optimizer,
 (2) pass them into an instance of your agent, and (3) have your agent interact
@@ -60,9 +62,11 @@ with the training environment. There's a variety of policies and agents
 included in the library, you just need to import them and set their
 hyperparameters. Its basic usage can be summarized in a diagram:
 
-![usage](/assets/images/pfn-internship/chainerrl-basic-usage.png){:width="520px"}  
-__Figure:__ _Basic usage of ChainerRL_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-basic-usage.png"
+   width="520"
+   alt="usage"
+   caption="Basic usage of ChainerRL" %}
 
 > If your interest was piqued with what I just mentioned, feel free to go over
 > this short "Getting Started into ChainerRL" notebook to experience all of its
@@ -75,9 +79,11 @@ interaction simply ends. Here's a simple Markov diagram explaining this process
 is the reward): 
 
 
-![episodic](/assets/images/pfn-internship/chainerrl-episodic.png){:width="360px"}  
-__Figure:__ _Episodic training scheme, the usual way we do RL_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-episodic.png"
+   width="360"
+   alt="episodic"
+   caption="Episodic training scheme, the usual way we do RL" %}
 
 Given a state $$S_t$$, we take an action $$A_{t}$$ to produce the next state
 $$S_{t+1}$$. We do this for a number of timesteps until the environment signals
@@ -100,9 +106,11 @@ parallelization. There are two main differences in this method:
   done.
 * The environment is reset right away when proceeding into the next episode.
 
-![continuous](/assets/images/pfn-internship/chainerrl-continuous.png){:width="480px"}  
-__Figure:__ _Continuous training scheme to support parallelization_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-continuous.png"
+   width="480"
+   alt="continuous"
+   caption="Continuous training scheme to support parallelization" %}
 
 The main consequence of these changes is that the agent still considers the
 last state (if done) when transitioning into the next episode. This enables
@@ -125,10 +133,11 @@ synchronous updates in order to maximize compute in a processing unit
 (CPU/GPU)**. This is known as PPO-style parallelization (Schulman et al.,
 [2017](#schulman2017ppo)).
 
-![parallel](/assets/images/pfn-internship/parallel-env-stepping.png){:width="720px"}
-__Figure:__ _PPO-style parallelization. Perform an update after a
-certain number of timesteps_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/parallel-env-stepping.png"
+   width="720"
+   alt="parallel"
+   caption="PPO-style parallelization. Perform an update after a certain number of timesteps" %}
 
 What happens is that we let our $$N$$ simulators run for a certain number
 of batch timesteps $$T$$, then after some number of transitions $$NT$$, we
@@ -197,9 +206,11 @@ number of transitions), we simply flush the older contents as time passes. With
 this technique, it's easier to share data between two API calls without
 the risk of losing information.
 
-![accummulator](/assets/images/pfn-internship/chainerrl-accummulator.png){:width="640px"}  
-__Figure:__ _Accumulator data structure for passing data between two API calls_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-accummulator.png"
+   width="640"
+   alt="accummulator"
+   caption="Accumulator data structure for passing data between two API calls" %}
 
 ### Reporting the reward's moving average
 
@@ -213,9 +224,11 @@ throughout the library. In the ChainerRL API, the size of the deque is treated
 as a hyperparameter. A simple diagram is shown below: 
 
 
-![fifo](/assets/images/pfn-internship/chainerrl-fifo.png){:width="720px"}  
-__Figure:__ _Deque data structure to report a reward stream's moving average_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pfn-internship/chainerrl-fifo.png"
+   width="720"
+   alt="fifo"
+   caption="Deque data structure to report a reward stream's moving average" %}
 
 
 ## <a id="results"></a> Simulation Results

@@ -16,28 +16,43 @@ to another. Here, I used the neural style transfer technique to learn the
 artistic style of various Filipino paintings. Painters range from Amorsolo to
 Manansala, and other modern artists such as Zobel. Enjoy!
 
-![Communities](/assets/images/experiments-with-neural-style-transfer/communities.png){:width="560px"}   
-__Figure 1:__ _Vicente Manansala's style in Communities was applied in a photo of the Manila Skyline._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/experiments-with-neural-style-transfer/communities.png"
+   width="560"
+   title="Figure 1."
+   alt="Communities"
+   caption="Vicente Manansala's style in Communities was applied in a photo of the Manila Skyline." %}
 
-![Fruit Gatherer](/assets/images/experiments-with-neural-style-transfer/fruit-gatherer.png){:width="560px"}   
-__Figure 2:__ _Probably one of my favorites. Manansala's brush strokes applied to the facade of his alma mater._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/experiments-with-neural-style-transfer/fruit-gatherer.png"
+   width="560"
+   title="Figure 2."
+   alt="Fruit Gatherer"
+   caption="Probably one of my favorites. Manansala's brush strokes applied to the facade of his alma mater." %}
 
-![Rivers](/assets/images/experiments-with-neural-style-transfer/rivers.png){:width="560px"}   
-__Figure 3:__ _Fernando Zobel's work as implemented into one of the buildings in Ateneo._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/experiments-with-neural-style-transfer/rivers.png"
+   width="560"
+   title="Figure 3."
+   alt="Rivers"
+   caption="Fernando Zobel's work as implemented into one of the buildings in Ateneo." %}
 
-![Sarimanok](/assets/images/experiments-with-neural-style-transfer/sarimanok.png){:width="560px"}   
-__Figure 4:__ _The work Sarimanok, aptly transfered to a pair of fighting cocks._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/experiments-with-neural-style-transfer/sarimanok.png"
+   width="560"
+   title="Figure 4."
+   alt="Sarimanok"
+   caption="The work Sarimanok, aptly transfered to a pair of fighting cocks." %}
 
 Here is also Ateneo's Church of the Gesu, rendered in Van Gogh's Starry
 Night. What beauty!
 
-![Starry Night](/assets/images/experiments-with-neural-style-transfer/starry-night.png){:width="560px"}   
-__Figure 5:__ _Van Gogh's starry night in Church of the Gesu._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/experiments-with-neural-style-transfer/starry-night.png"
+   width="560"
+   title="Figure 5."
+   alt="Starry Night"
+   caption="Van Gogh's starry night in Church of the Gesu." %}
 
 If you want to implement this technique, you can use [my
 work](https://github.com/ljvmiranda921/style-transfer) written in Python 2.X

@@ -56,10 +56,10 @@ Most IFT data comes in question-answer pairs containing a _user instruction_, an
 
 For the next year or so, I believe there's a **more urgent need for Filipino IFT datasets.**
 
-![](/assets/images/filipino-llm/llm_training.png){:width="700px"}  
-_A simple language modelling pipeline (as seen in models like InstructGPT, Tulu 2, etc.).  
-Currently, we lack quality Filipino data for post-training._
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/filipino-llm/llm_training.png"
+   width="700"
+   caption="A simple language modelling pipeline (as seen in models like InstructGPT, Tulu 2, etc.). Currently, we lack quality Filipino data for post-training." %}
 
 I want to focus on collecting IFT data because it can be **tailored to specific domains** and is **more economical to run experiments with**.
 This means that NLP researchers interested in Filipino can still continue focusing on their own domains of interest while still contributing to this larger goal of improving our Filipino data pool.

@@ -33,9 +33,10 @@ identified (1) two directions of ecosystem growth, i.e, cloud adoption and
 software production, and (2) three forces of change driving the evolution of
 our tools, especially in the Jupyter Notebook ecosystem:
 
-![](/assets/images/jupyter-notebooks-in-2020/axis_with_jupyter_forces.png){:width="480px"}  
-**Figure**: The growth of the Notebook ecosystem is driven by these forces
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/jupyter-notebooks-in-2020/axis_with_jupyter_forces.png"
+   width="480"
+   caption="The growth of the Notebook ecosystem is driven by these forces" %}
 
 In Part Two, we'll expound upon these key drivers and investigate how the
 Jupyter Ecosystem grew to respond to these forces&mdash;perhaps via a plugin, a

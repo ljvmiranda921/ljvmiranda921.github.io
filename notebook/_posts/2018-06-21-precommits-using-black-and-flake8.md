@@ -39,9 +39,11 @@ In this short post, I'll describe how I created a pre-commit pipeline in
 [pre-commit](https://github.com/pre-commit/pre-commit) Python framework. The
 entire pipeline looks like this:
 
-![Diagram](/assets/images/precommits-using-black-and-flake8/precommit_pipeline.png){:width="640px"}  
-__Figure:__ _Pre-commit pipeline with `black` and `flake8` for checking my `.py` files_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/precommits-using-black-and-flake8/precommit_pipeline.png"
+   width="640"
+   alt="Diagram"
+   caption="Pre-commit pipeline with `black` and `flake8` for checking my `.py` files" %}
 
 I'll first discuss the `pre-commit` framework, then add components one-by-one:
 first is `black`, and then `flake8`. I will show the dotfiles present
@@ -159,16 +161,20 @@ page](https://pyswarms.readthedocs.io/en/development/contributing.html#get-start
 I explicitly mentioned to use pre-commits (or run flake8 and black on their code
 manually) before submitting a Pull Request.
 
-![Diagram](/assets/images/precommits-using-black-and-flake8/precommit_pipeline.png){:width="640px"}  
-__Figure:__ _Pre-commit pipeline with `black` and `flake8` for checking my `.py` files_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/precommits-using-black-and-flake8/precommit_pipeline.png"
+   width="640"
+   alt="Diagram"
+   caption="Pre-commit pipeline with `black` and `flake8` for checking my `.py` files" %}
 
 Now that we have a pre-commit framework set-up with black and flake8, let's see
 it in action! Here we'll see how black formats a Python file automagically: 
 
-![Diagram](/assets/images/precommits-using-black-and-flake8/precommit_demo.gif){:width="640px"}  
-__Figure:__ _Short demo on pre-commit hooks_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/precommits-using-black-and-flake8/precommit_demo.gif"
+   width="640"
+   alt="Diagram"
+   caption="Short demo on pre-commit hooks" %}
 
 Awesome right? Hope you learned something new today!
 

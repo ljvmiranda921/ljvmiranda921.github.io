@@ -9,7 +9,7 @@ Usage:
    alt="Alt text for the image" %}
 src and caption are required; width, title, and alt are optional.
 {%- endcomment -%}
-<figure class="post-figure">
+<figure class="post-figure" markdown="0">
   <img src="{{ include.src | relative_url }}" alt="{{ include.alt | default: include.title | default: 'figure' }}"{% if include.width %} width="{{ include.width }}"{% endif %}>
   <figcaption>
     {%- if include.title %}<span class="figure-title">{{ include.title }}</span> {% endif -%}

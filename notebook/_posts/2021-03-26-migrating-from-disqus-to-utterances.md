@@ -23,9 +23,10 @@ For the past three years, I've been using Disqus to manage discussions in my
 site. However, a few days ago, I've noticed that it **added intrusive ads** in
 my blog posts:
 
-![](/assets/images/migrating-from-disqus-to-utterances/disqus_ads.png){:width="480px"}  
-**Figure:** These ads are very off-putting. Bad move, Disqus.
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/migrating-from-disqus-to-utterances/disqus_ads.png"
+   width="480"
+   caption="These ads are very off-putting. Bad move, Disqus." %}
 
 They're very off-putting, especially that it covers a huge area of the page. In
 addition, the only way to remove them is to subscribe and pay $10 a

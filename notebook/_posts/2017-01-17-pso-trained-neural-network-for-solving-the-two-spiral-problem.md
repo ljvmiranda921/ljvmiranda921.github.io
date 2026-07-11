@@ -79,9 +79,12 @@ __Table 1:__ _Parameters used in PSO Implementation_
 Here, I swept over different values for the social and cognitive components,
 and came up with this matrix:
 
-![Cmatrix for PSO params](/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/cmatrix.png){:width="320px"}    
-__Figure 2:__ _Heat map for testing the social and cognitive parameters_
-{: style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/cmatrix.png"
+   width="320"
+   title="Figure 2."
+   alt="Cmatrix for PSO params"
+   caption="Heat map for testing the social and cognitive parameters" %}
 
 From this value matrix, it is clear that accuracy may improve with values
 where the ratio of $$c_{1}$$ and $$c_{2}$$ is $$\approx 1$$. Moreover, it

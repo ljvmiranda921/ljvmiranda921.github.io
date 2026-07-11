@@ -165,9 +165,10 @@ highly recommend looking at the [developer
 docs](https://github.com/explosion/spaCy/blob/master/extra/DEVELOPER_DOCS/Listeners.md).
 
 <!-- show this image: https://spacy.io/models#design-cnn -->
-![](/assets/images/low-resource-dep-parse/spacy_pipeline.svg){:width="800px"}
-**Figure**: spaCy pipeline design (Source: spaCy website)
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/low-resource-dep-parse/spacy_pipeline.svg"
+   width="800"
+   caption="spaCy pipeline design (Source: spaCy website)" %}
 
 If you are using [this spaCy
 project](https://github.com/ljvmiranda921/ud-tagalog-spacy), then you can train
