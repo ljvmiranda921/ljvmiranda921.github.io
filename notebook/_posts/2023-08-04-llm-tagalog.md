@@ -5,7 +5,7 @@ title: "Do large language models work on Tagalog?"
 date: 2023-08-04
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 filipino_nlp: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]

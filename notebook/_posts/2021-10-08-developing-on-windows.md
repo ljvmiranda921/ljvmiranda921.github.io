@@ -5,7 +5,7 @@ title: "Developing on a Windows machine"
 date: 2021-10-08
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [windows, wsl, software engineering]
 description: |

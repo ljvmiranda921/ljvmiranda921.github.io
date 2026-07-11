@@ -5,7 +5,7 @@ title: "Reimagining Philippine mythical creatures using VQGAN+CLIP"
 date: 2021-10-23
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 header-img: /assets/images/generating-ph-myths/header.png
 tags: [machine learning, clip, clip vqgan, open ai, trese, halloween, scary,

@@ -5,7 +5,7 @@ title: "How I dealt with a nagging ingestion problem in Redisgraph"
 date: 2021-02-28
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [redis, redisgraph]
 description: |
     An obvious solution to a nagging ingestion problem

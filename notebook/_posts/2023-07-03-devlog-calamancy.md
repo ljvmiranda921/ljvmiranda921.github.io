@@ -5,7 +5,7 @@ title: "Some thoughts on the annotation process"
 date: 2023-07-03
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 filipino_nlp: true
 tags: [nlp, tagalog, low-resource languages, prodigy, natural language processing, machine learning]

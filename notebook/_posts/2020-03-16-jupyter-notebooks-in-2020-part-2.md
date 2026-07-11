@@ -4,7 +4,7 @@ title: "How to use Jupyter Notebooks in 2020 (Part 2: Ecosystem growth)"
 date: 2020-03-16
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [jupyter notebooks, 2020, technical review, git, data science, software engineering, machine learning, streamlit, gcp, aws, voila, dagster, papermill]
 description: |
     In the second part of this series, I'd like to explore some of the tools in

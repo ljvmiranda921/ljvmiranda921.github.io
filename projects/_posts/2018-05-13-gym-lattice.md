@@ -4,7 +4,7 @@ title: "Gym-Lattice: RL environment for the protein folding problem"
 date: 2018-05-13
 category: projects
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 summary: "A short introduction to the gym-lattice environment for protein folding."
 tags: [reinforcement learning, bioinformatics, protein structure prediction, research]
 ---

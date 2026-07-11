@@ -5,7 +5,7 @@ date: 2017-02-04
 category: notebook
 comments: true
 math: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 ---
 
 In this notebook, I solved a 6-DOF Inverse Kinematics problem by treating it

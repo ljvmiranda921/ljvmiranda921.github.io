@@ -4,7 +4,7 @@ title: "Add badges to your Google Cloud Builds"
 date: 2018-12-21
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [cloud build, google, google cloud platform, google cloud build, badge]
 ---
 

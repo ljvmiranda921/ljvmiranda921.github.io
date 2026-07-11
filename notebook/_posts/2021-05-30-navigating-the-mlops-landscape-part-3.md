@@ -5,7 +5,7 @@ title: "Navigating the MLOps tooling landscape (Part 3: The Strategies)"
 date: 2021-05-30
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 header-img: /assets/images/navigating-the-mlops-landscape/header_part_03.png
 tags: [machine learning, ml, mlops, software engineering, ml engineering, mle, data science, data engineering, mlops tools]

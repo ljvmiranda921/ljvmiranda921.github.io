@@ -5,7 +5,7 @@ title: "How to debug"
 date: 2020-05-30
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [software development, debugging, python, software engineering, life]
 header-img: /assets/images/how-to-debug/Blog-TitleCard.png
 description: |

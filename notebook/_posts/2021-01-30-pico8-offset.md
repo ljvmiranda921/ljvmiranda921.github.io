@@ -5,7 +5,7 @@ title: "Study notes on Pico-8 movement"
 date: 2021-01-31
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [pico8, games, movement, roguelike, programming, software]
 description: |
     Picollino contains some of my study notes as I learn Pico-8. Here, I

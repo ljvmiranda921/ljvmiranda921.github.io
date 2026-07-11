@@ -5,7 +5,7 @@ title: "My personal framework for flourishing"
 date: 2021-09-21
 category: life
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 header-img: /assets/images/build-earn-play/header.png
 summary: "A perfect time to revisit my values on career, happiness, and growth"
 excerpt: |

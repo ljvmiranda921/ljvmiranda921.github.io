@@ -5,7 +5,7 @@ title: "Draw me a swordsman: Can tool-calling LLMs draw pixel art?"
 date: 2025-07-20
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [pixel art, aseprite, llm, nlp, tool-calling, mcp, claude, gpt]
 header-img: /assets/images/draw-me-a-swordsman/header.png

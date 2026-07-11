@@ -4,7 +4,7 @@ title: "Solving the travelling salesman problem using ant colony optimization"
 date: 2017-01-18
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 description: "Solution for the berlin52 travelling salesman problem using ant colony optimization"
 ---
 

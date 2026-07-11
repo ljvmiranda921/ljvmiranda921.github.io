@@ -5,7 +5,7 @@ title: "Navigating the MLOps tooling landscape (Part 2: The Ecosystem)"
 date: 2021-05-15
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 header-img: /assets/images/navigating-the-mlops-landscape/header_part_02.png
 tags: [machine learning, ml, mlops, software engineering, ml engineering, mle, data science, data engineering, mlops tools]

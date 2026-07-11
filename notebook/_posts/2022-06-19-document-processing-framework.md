@@ -6,7 +6,7 @@ date: 2022-06-19
 category: notebook
 comments: true
 highlight: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 header-img: /assets/images/document-processing-framework/header.png
 tags: [spacy, machine learning, prodigy, huggingface, rpa, document processing, transformers]

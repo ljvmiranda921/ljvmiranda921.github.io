@@ -5,7 +5,7 @@ title: "calamanCy: NLP pipelines for Tagalog"
 date: 2023-08-01
 category: projects
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 filipino_nlp: true
 tags: [nlp, language technology, natural language processing, tagalog, low resource, spacy, machine learning]

@@ -4,7 +4,7 @@ title: "Solving the Forward Kinematics of a Stanford Arm"
 date: 2017-01-25
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 description: "Simulation of robotic-arm movement using Denavit-Hartenberg parameters"
 math: true
 ---

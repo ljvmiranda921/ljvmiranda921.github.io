@@ -5,7 +5,7 @@ title: "Field Report: ACL 2025"
 date: 2025-08-01
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 header-img: /assets/images/field-report-acl25/header.png
 tags:

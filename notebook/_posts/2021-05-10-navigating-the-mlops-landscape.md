@@ -6,7 +6,7 @@ date: 2021-05-10
 highlight: true
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 header-img: /assets/images/navigating-the-mlops-landscape/header_part_01.png
 tags: [machine learning, ml, mlops, software engineering, ml engineering, mle, data science, data engineering, mlops tools]

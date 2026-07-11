@@ -5,7 +5,7 @@ title: "How to sync your fork with the original repository"
 date: 2021-11-12
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [software development, git, github]
 description: |

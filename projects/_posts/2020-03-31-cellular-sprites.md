@@ -4,7 +4,7 @@ title: "Postscript: Sprites-as-a-Service"
 date: 2020-03-31
 category: projects
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 header-img: /assets/images/cellular-sprites/cellular_sprites_header.png
 tags: [jupyter notebooks, streamlit, procedural generation, streamlit, seagull, cellular automata, pixel art, 8-bit, sprites]
 description: |

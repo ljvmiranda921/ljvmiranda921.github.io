@@ -5,7 +5,7 @@ title: "Reflections of a Pinoy applying to CS PhD programs abroad"
 date: 2025-10-30
 category: life
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 summary: "Reflections of a Pinoy applying to CS PhD programs abroad"
 excerpt: |
   A long reflection about my journey from industry to grad school applications&mdash;spanning countries, jobs, and experiences.

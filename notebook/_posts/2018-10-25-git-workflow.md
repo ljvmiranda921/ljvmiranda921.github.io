@@ -4,7 +4,7 @@ title: "Git team workflow: merge or rebase?"
 date: 2018-10-25
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [git, automation, software development, workflow]
 ---
 

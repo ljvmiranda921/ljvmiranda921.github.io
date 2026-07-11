@@ -5,7 +5,7 @@ title: "How to fix screen flickering on Linux Thinkpad by disabling PSR"
 date: 2021-09-01
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [linux, thinkpad, nvidia, screen flickering, ubuntu]
 description: |

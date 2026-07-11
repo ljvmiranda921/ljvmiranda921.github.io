@@ -5,7 +5,7 @@ title: "Visualizing Tagalog NER embeddings"
 date: 2023-11-20
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 filipino_nlp: true
 header-img: /assets/images/tagalog-ner-embeddings/header.png

@@ -5,7 +5,7 @@ title: "Study notes on data-centric machine learning"
 date: 2021-07-30
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [machine learning, andrew ng, data centric, active learning, semi-supervised learning, weak supervision, prodigy, snorkel]
 header-img: /assets/images/data-centric-ml/header.png

@@ -5,7 +5,7 @@ title: "How to fuse chips in NieR: Automata"
 date: 2022-01-18
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 header-img: /assets/images/nier-chip-fuse-guide/fusing.jpg
 tags: [gaming, nier automata, guides, plugin chips]

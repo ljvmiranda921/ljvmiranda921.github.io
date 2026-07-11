@@ -6,7 +6,7 @@ date: 2020-11-15
 category: notebook
 comments: true
 highlight: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 header-img: /assets/images/data-science-swe/2_modularization.png
 tags: [software development, python, software engineering, data science,
 machine learning, research, academia, deep learning, jupyter notebooks]

@@ -5,7 +5,7 @@ title: "Podcasts I listen to"
 date: 2019-02-05
 category: life
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 summary: "Some tech podcasts I listen to"
 tags: [podcasts, contributions, software development, life]
 ---

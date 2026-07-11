@@ -5,7 +5,7 @@ title: "Labeling with GPT-3 using annotation guidelines"
 date: 2023-03-25
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [langchain, nlp, llm, data annotation, prodigy, natural language processing, chatgpt, gpt-j, gpt-3]
 header-img: /assets/images/langchain/header.png

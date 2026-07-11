@@ -5,7 +5,7 @@ type: post
 date: 2020-03-30
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [jupyter notebooks, 2020, technical review, git, data science, software engineering, machine learning, streamlit, gcp, aws, voila, dagster, papermill]
 description: |
     In the final part of this series, I'd like to share my reflections and

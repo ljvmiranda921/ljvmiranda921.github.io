@@ -4,7 +4,7 @@ title: "Postscript: The ChristmAIs Journey"
 date: 2018-12-25
 category: projects
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 summary: "Postscript on the ChristmAIs project"
 tags: [machine learning, david ha, sketch-rnn, magenta, holiday cards, thinking
 machines data science, deep learning, christmas, glove, style transfer]

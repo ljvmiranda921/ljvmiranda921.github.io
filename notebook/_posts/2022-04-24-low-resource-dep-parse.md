@@ -5,7 +5,7 @@ title: "Dependency parsing for a low-resource language (Tagalog)"
 date: 2022-04-24
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 filipino_nlp: true
 tags: [natural language processing, dependency parsing, nlp, low-resource, machine learning]

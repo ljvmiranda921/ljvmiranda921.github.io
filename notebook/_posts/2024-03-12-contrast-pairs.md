@@ -5,7 +5,7 @@ title: "A lexical view of contrast pairs in preference datasets"
 date: 2024-03-12
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [rlhf, preference data, llm, shp, openai, berkeley-nest]
 header-img: /assets/images/contrast-pairs/header.png

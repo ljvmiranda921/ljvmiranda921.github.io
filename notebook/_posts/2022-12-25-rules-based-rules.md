@@ -5,7 +5,7 @@ title: "spaCy Internals: Rules-based rules!"
 date: 2022-12-25
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [nlp, spacy, machine learning, nlproc, natural language processing]
 description: |

@@ -5,7 +5,7 @@ title: "Desiderata for Filipino NLP in the Age of LLMs"
 date: 2024-12-17
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 filipino_nlp: true
 header-img: /assets/images/filipino-llm/header.png

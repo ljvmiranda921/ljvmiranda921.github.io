@@ -4,7 +4,7 @@ title: "A short postmortem on moving to Docker for LaTeX continuous integration"
 date: 2018-04-23
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 ---
 
 > Update (2021-10-11): I changed my CI/CD system from Travis CI to Github

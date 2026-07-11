@@ -5,7 +5,7 @@ title: "Towards a Tagalog NLP pipeline"
 date: 2023-02-04
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 filipino_nlp: true
 highlight: true

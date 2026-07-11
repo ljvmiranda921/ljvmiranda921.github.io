@@ -4,7 +4,7 @@ title: "Experiments with neural style transfer"
 date: 2017-05-28
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 summary: "Training a convolutional neural network to perform style transfer on some Filipino paintings."
 tags: [neural style transfer, deep learning, filipino paintings, convolutional neural network]
 ---

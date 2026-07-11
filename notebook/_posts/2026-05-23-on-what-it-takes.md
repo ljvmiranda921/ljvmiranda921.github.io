@@ -5,7 +5,7 @@ title: "The Filipino qualities we need to build world-class language technologie
 date: 2026-05-23
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 filipino_nlp: true
 header-img: /assets/images/on-what-it-takes/header.png

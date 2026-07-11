@@ -6,7 +6,7 @@ date: 2020-03-06
 highlight: true
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [jupyter notebooks, 2020, technical review, git, data science, software engineering, machine learning]
 description: |
     Love it or hate it, they're here to stay. The field of data science has

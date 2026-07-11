@@ -5,7 +5,7 @@ title: "How to migrate from Disqus to Utterances in your Jekyll blog"
 date: 2021-03-26
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [github, blogging, utterances, jekyll, github pages]
 description: |
     Disqus suddenly put ads on my site, hassle! In this blogpost, I'll outline

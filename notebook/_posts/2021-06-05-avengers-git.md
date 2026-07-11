@@ -5,7 +5,7 @@ title: "What can Avengers: Endgame teach us about Git?"
 date: 2021-06-05
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [git, avengers, marvel, endgame, software engineering]
 header-img: /assets/images/avengers-git/header.png

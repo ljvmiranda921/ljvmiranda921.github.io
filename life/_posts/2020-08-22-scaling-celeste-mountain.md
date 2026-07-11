@@ -5,7 +5,7 @@ title: "Scaling Celeste Mountain"
 date: 2020-08-22
 category: life
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [celeste, platformers, indie game dev, mental health]
 description: |
     Celeste is one of the most memorable games I've played this year. A

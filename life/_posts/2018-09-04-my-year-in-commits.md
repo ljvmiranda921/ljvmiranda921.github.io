@@ -5,7 +5,7 @@ title: "My year in commits: lessons and perspectives"
 date: 2018-09-04
 category: life
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 summary: "My year in commits: examining my Github contribution graph"
 tags: [github, contributions, software development, life, commits]
 ---

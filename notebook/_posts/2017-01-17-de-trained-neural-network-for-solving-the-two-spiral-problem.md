@@ -4,7 +4,7 @@ title: "Training a neural network using differential evolution"
 date: 2017-01-17
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 description: "Trained a neural network using differential evolution (DE) to solve the two-spiral problem"
 math: true
 ---

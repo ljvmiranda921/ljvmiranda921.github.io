@@ -6,7 +6,7 @@ date: 2021-08-08
 category: notebook
 comments: true
 highlight: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [vqgan, machine learning, research, deep learning, neural network, clip vqgan]
 header-img: /assets/images/clip-vqgan/ai_art_collage.png

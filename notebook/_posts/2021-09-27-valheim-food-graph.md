@@ -5,7 +5,7 @@ title: "Valheim Food Graph"
 date: 2021-09-27
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [valheim, game, data science]
 header-img: /assets/images/valheim-food-graph/header.png

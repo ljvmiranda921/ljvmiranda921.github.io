@@ -5,7 +5,7 @@ date: 2017-02-09
 category: notebook
 comments: true
 math: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 ---
 
 > I am currently following the [course notes](http://cs231n.github.io/) of CS231n: Convolutional Neural Networks for Visual Recognition in Stanford University. There are programming exercises involved, and I wanted to share my solutions to some of the problems.

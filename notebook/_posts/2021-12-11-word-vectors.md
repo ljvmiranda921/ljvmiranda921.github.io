@@ -5,7 +5,7 @@ title: "Study notes on making word vectors from scratch"
 date: 2021-12-11
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [nlp, word vectors, spacy, machine learning]
 header-img: /assets/images/word-vectors/header.png

@@ -5,7 +5,7 @@ title: "How can language models augment the annotation process?"
 date: 2023-03-24
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [nlp, llm, data annotation, prodigy, natural language processing, chatgpt, gpt-j, gpt-3]
 header-img: /assets/images/llm-annotation/header.png

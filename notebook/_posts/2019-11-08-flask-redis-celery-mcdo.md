@@ -5,7 +5,7 @@ date: 2019-11-08
 category: notebook
 comments: true
 highlight: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [flask, celery, redis, python, backend, web development, mcdonalds]
 description: |
     A few weeks ago, someone at work asked me how Flask,

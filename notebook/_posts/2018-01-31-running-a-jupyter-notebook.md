@@ -5,7 +5,7 @@ date: 2018-01-31
 category: notebook
 comments: true
 highlight: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 description: "Running a Jupyter notebook from a remote server"
 math: true
 ---

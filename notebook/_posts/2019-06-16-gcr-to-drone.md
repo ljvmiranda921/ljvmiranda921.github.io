@@ -4,7 +4,7 @@ title: "How to pull a private image from GCR in Drone CI"
 date: 2019-06-16
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [drone ci, gcr, google cloud, google, google container registry, image, docker, private, pull]
 ---
 

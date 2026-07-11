@@ -4,7 +4,7 @@ title: "How to send data from RPI to Server"
 date: 2017-02-21
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 ---
 
 > For those who were redirected here from my Wordpress site, I would like to welcome you to my new blog! I will be moving some of my older posts here so that in the future,  I can delete the Wordpress site entirely. Feel free to look around!

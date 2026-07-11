@@ -5,7 +5,7 @@ title: "spaCy Internals: Spancat architecture walkthrough"
 date: 2022-07-16
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 header-img: /assets/images/spacy-registry/header.png
 tags: [spacy, internals, spancat, architecture, software design]

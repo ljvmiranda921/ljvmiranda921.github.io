@@ -4,7 +4,7 @@ title: "Exploratory Data Analysis: Energy Use in the Philippines"
 date: 2017-01-18
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 ---
 
 > This was my very first data science project (circa 2016). You can find the original post in [Kaggle](https://www.kaggle.com/ljvmiranda/philippines-energy-use).

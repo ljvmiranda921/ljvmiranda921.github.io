@@ -4,7 +4,7 @@ title: "Kubernetes clicked when I learned about Deployments and Services"
 date: 2020-01-18
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [kubernetes, deployments, services, k8s, cloud-native, cloud computing]
 description: |
     I've been using Kubernetes for a few months, but this tech only *clicked*

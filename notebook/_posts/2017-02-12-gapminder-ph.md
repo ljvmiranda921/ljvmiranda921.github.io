@@ -4,7 +4,7 @@ title: "Gapminder PH"
 date: 2017-02-12
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 summary: "A tribute to Hans Rosling's Gapminder chart, applied in the Philippine context."
 tags: [data visualization, gap minder, philippines, han rosling]
 ---

@@ -5,7 +5,7 @@ title: "Hello world!"
 date: 2017-01-16
 category: life
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [github pages, github, jekyll, ruby, wordpress, wordpress to github pages]
 ---
 

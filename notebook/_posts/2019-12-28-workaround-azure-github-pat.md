@@ -4,7 +4,7 @@ title: "Workaround for creating a Github service connection in Azure Pipelines"
 date: 2019-12-28
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [azure pipelines, github , service connection]
 description: |
     Here's a workaround in creating a Github service connection in Azure Pipelines.

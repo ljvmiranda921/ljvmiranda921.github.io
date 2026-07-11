@@ -5,7 +5,7 @@ title: "How to set up Git and SSH when your org has enforced SAML SSO"
 date: 2023-11-28
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [git, github, saml, sso, ssh, how to]
 header-img: /assets/images/git-ssh-saml/header-saml.png

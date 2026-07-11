@@ -5,7 +5,7 @@ title: "What are Nodes and Scenes in Godot? A cooking perspective"
 date: 2021-04-19
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 header-img: /assets/images/godot-nodes-and-scenes/HeaderImage.png
 tags: [godot, game development, open source, nodes, scenes, tutorial, cooking]
 description: |

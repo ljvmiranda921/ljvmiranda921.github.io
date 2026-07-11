@@ -5,7 +5,7 @@ title: "Guest lecture @ UNC Charlotte: Labeling with LLMs"
 date: 2024-02-21
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 header-img: /assets/images/talk-unc-charlotte/header.png
 tags: [argument mining, fake news, llm, evaluation, annotation, prodigy, ai, large language models]

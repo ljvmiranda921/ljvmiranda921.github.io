@@ -5,7 +5,7 @@ title: "Thinking with pen and paper"
 date: 2022-08-04
 category: life
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 summary: "My analog tools for thought"
 header-img: /assets/images/pen-and-paper/notes_revealed.jpg
 excerpt: |

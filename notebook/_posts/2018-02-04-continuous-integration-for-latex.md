@@ -4,7 +4,7 @@ title: "Continuous integration and automatic deployment of LaTeX files"
 date: 2018-02-04
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 description: "A tutorial on how to set-up continuous integration via Travis-CI, and automatic deployment in DropBox for LaTeX files"
 math: true
 ---

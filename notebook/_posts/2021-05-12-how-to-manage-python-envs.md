@@ -5,7 +5,7 @@ title: "How to manage Python environments"
 date: 2021-05-12
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [machine learning, python, virtualenv, make, makefile, software engineering, precommits]
 description: |

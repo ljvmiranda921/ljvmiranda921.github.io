@@ -5,7 +5,7 @@ date: 2017-08-13
 category: notebook
 comments: true
 highlight: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 math: true
 ---
 

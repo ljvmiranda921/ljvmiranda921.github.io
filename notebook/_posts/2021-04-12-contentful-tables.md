@@ -5,7 +5,7 @@ title: "How to add tables to Contentful"
 date: 2021-04-12
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [contentful, tables, content management system, cms, software dev]
 description: |
     A short blogpost on what worked, what didn't work, and what are your other

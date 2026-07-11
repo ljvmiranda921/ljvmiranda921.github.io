@@ -5,7 +5,7 @@ title: "A Weekend Ray Tracer"
 date: 2021-09-25
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [raytracing, typescript, computer graphics]
 description: |

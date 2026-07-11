@@ -4,7 +4,7 @@ title: "A brief soirée with reinforcement learning"
 date: 2017-11-26
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 description: "Solving the Preferred Network's Cartpole Reinforcement Learning Task"
 math: true
 ---

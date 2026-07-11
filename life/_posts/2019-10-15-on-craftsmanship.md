@@ -5,7 +5,7 @@ title: "On craftsmanship"
 date: 2019-10-15
 category: life
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 summary: "A reflection on my journey in technology and software"
 description: |
     This is a long post encompassing some of my reflections

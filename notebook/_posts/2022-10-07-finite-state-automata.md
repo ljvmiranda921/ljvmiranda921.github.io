@@ -5,7 +5,7 @@ title: "Study notes on regular expressions and finite state automata"
 date: 2022-10-07
 category: notebook
 comments: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 published: true
 tags: [nlp, machine learning, nlp, linguistics, finite state automata, fsa, morphology, regular expressions, regex]
 description: |

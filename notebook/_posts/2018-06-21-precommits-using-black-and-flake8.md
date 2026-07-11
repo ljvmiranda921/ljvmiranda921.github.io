@@ -5,7 +5,7 @@ date: 2018-06-21
 category: notebook
 comments: true
 highlight: true
-author: "LJ MIRANDA"
+author: "LJ V. MIRANDA"
 tags: [python, black, precommit, flake8, git, automation, workflow]
 ---
 
