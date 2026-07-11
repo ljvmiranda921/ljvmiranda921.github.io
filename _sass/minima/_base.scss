@@ -282,14 +282,37 @@
   * heart bullet), following Bringhurst-style ornamentation
   */
  hr {
-   border: none;
+   position: relative;
+   display: block;
+   height: 2rem;
    margin: $spacing-unit auto;
-   text-align: center;
+   border: none;
+   color: $text-color;
 
+   // The line
+   &::before {
+     content: "";
+     display: block;
+     position: absolute;
+     top: 50%;
+     left: 0;
+     width: 100%;
+     height: 0;
+     border-top: 1px solid $text-color;
+   }
+
+   // The ornament, knocking out the line behind it
    &::after {
+     display: inline-block;
      content: "\2767";
-     color: $grey-color;
-     font-size: 1.25em;
+     position: absolute;
+     top: 0;
+     left: calc(50% - 1ch);
+     width: 2ch;
+     text-align: center;
+     font-size: 2rem;
+     line-height: 2rem;
+     background: $background-color;
    }
  }
 
