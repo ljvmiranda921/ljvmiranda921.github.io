@@ -148,7 +148,7 @@ $$\theta_{1}$$ = -90, $$\theta_{2}$$ = 90, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $
    alt="Simulation 1"
    caption="Forward Kinematics Simulation" %}
 {% include figure.html
-   src="https://i.imgur.com/uxf2xKtl.png"
+   src="/assets/images/forward-kinematics-stanford-manipulator/uxf2xKt.png"
    width="560"
    height="274"
    alt="Top and Side View"
@@ -184,7 +184,7 @@ $$\theta_{1}$$ = 90, $$\theta_{2}$$ = -45, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $
    caption="Forward Kinematics Simulation" %}
 
 {% include figure.html
-   src="https://i.imgur.com/StBp7rGl.png"
+   src="/assets/images/forward-kinematics-stanford-manipulator/StBp7rG.png"
    width="560"
    height="274"
    alt="Top and Side View"
