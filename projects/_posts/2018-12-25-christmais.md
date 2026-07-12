@@ -22,7 +22,7 @@ application.
 > open-source repository [here](https://github.com/thinkingmachines/christmais)
 
 {% include figure.html
-   src="https://i.imgur.com/TFGRexp.jpg"
+   src="/assets/images/christmais/TFGRexp.jpg"
    width="560"
    alt="AI Holiday Cards"
    caption="Artworks produced by our AI-art generator. Credits: [Thinking Machines Data Science](https://thinkingmachin.es/)" %}
@@ -46,7 +46,7 @@ colors as its primitives, the perception engine should be able to draw any
 real-world object. 
 
 {% include figure.html
-   src="https://i.imgur.com/uglus41.jpg"
+   src="/assets/images/christmais/uglus41.jpg"
    width="560"
    alt="Imgur"
    caption="Some objects from Tom White's Perception Engine: forklift, ruler, sewing machine. Credits: [@dribnet](https://twitter.com/dribnet)" %}
@@ -66,7 +66,7 @@ optimize the drawing (he only used random walks):
 We didn't have much luck. 
 
 {% include figure.html
-   src="https://i.imgur.com/JikBJYD.png,https://i.imgur.com/fTVWgta.png,https://i.imgur.com/P7lAdb0.png"
+   src="/assets/images/christmais/JikBJYD.png,/assets/images/christmais/fTVWgta.png,/assets/images/christmais/P7lAdb0.png"
    width="150"
    alt="Trial1-1"
    caption="First iteration of our tests. Yup, doesn't really look like it. We tried changing the colors or adding new strokes, but to no effect" %}
@@ -76,7 +76,7 @@ and other colors in the background. We thought that by training the "outlines,"
 we can get atleast some recognizable shapes:
 
 {% include figure.html
-   src="https://i.imgur.com/tt6xMXx.png,https://i.imgur.com/ahmJvt2.png,https://i.imgur.com/0ioAPxi.png"
+   src="/assets/images/christmais/tt6xMXx.png,/assets/images/christmais/ahmJvt2.png,/assets/images/christmais/0ioAPxi.png"
    width="150"
    alt="Trial2-1"
    caption="Second iteration of our tests. To be honest, this looks a bit of an improvement over the previous one, and I think that we're on to something here. However, we decided to scrap this idea due to time constraints" %}
@@ -94,7 +94,7 @@ for our Drawing System. It's simply a set of drawings made by real players from
 the game [Quick, Draw!](https://quickdraw.withgoogle.com/)
 
 {% include figure.html
-   src="https://i.imgur.com/zwM2tib.jpg"
+   src="/assets/images/christmais/zwM2tib.jpg"
    width="560"
    alt="Quick, Draw! Preview"
    caption="Some samples of the Quick, Draw! dataset" %}
@@ -110,7 +110,7 @@ doodles, the generative model finds the distribution that perfectly fits (or
 represents) all of them, then creates new drawings based on that.
 
 {% include figure.html
-   src="https://i.imgur.com/V746am3.png"
+   src="/assets/images/christmais/V746am3.png"
    width="560"
    alt="Generated books"
    caption="Generated &ldquo;book&rdquo; samples. These were not drawn by any human player" %}
@@ -150,7 +150,7 @@ talented teammates who helped productionalize this machine learning system!
 
 - We also printed some **holiday cards and artworks** that look really dope!
 
-![Fun artwork prints](https://i.imgur.com/gHiMAgS.jpg){:width="560px"}  
+![Fun artwork prints](/assets/images/christmais/gHiMAgS.jpg){:width="560px"}  
 {: style="text-align: center;"}
 
 

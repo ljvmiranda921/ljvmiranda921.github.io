@@ -220,5 +220,5 @@ Remember to load a LaTeX package such as [hyperref](https://ctan.org/pkg/hyperre
 * 09-29-2018: Update figures using TikZ for consistency
 * 09-15-2018: [Micheleen Harris](https://twitter.com/rheartpython) made a [really cool illustration](https://twitter.com/rheartpython/status/1040963091670986752) of negative log-likelihood loss. Check it out below! Thank you Micheleen!
 
-![Imgur](https://i.imgur.com/hU252jE.jpg){:width="640px"}
+![Imgur](/assets/images/softmax-and-the-negative-log-likelihood/hU252jE.jpg){:width="640px"}
 {: style="text-align: center;"}
