@@ -18,7 +18,7 @@ problem that requires separating two logistic spirals from one another (Lang
 and Witbrock, [1998](#lang1998learning)).
 
 {% include figure.html
-   src="/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/AB14SHCl.png"
+   src="/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/AB14SHC.png"
    alt="Two Spiral Problem"
    caption="Graph of the Two-Spiral Problem" %}
 
@@ -131,7 +131,7 @@ the parameters.
 {: .table}
 
 {% include figure.html
-   src="/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/oEHj0Dhl.png"
+   src="/assets/images/de-trained-neural-network-for-solving-the-two-spiral-problem/oEHj0Dh.png"
    width="640"
    alt="Generalization ability of DE"
    caption="Generalization ability of the DE-trained Neural Network over the whole space" %}
