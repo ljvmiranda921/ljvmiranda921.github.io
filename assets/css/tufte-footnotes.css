@@ -63,6 +63,11 @@ sup .footnote {
   -webkit-hyphens: none;
 }
 
+/* Inline code has a fixed px size; scale it to the smaller sidenote text */
+.sidenote code {
+  font-size: 0.9em;
+}
+
 /* Wide viewports: notes move to the right margin; the JS sets
    position/left/top and prevents overlaps */
 @media screen and (min-width: 1340px) {

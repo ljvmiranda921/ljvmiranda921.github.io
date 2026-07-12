@@ -166,7 +166,7 @@ $$\theta_{1}$$ = 180, $$\theta_{2}$$ = 0, $$d_{3}$$ = 6, $$\theta_{4}$$ = 45, $$
    caption="Forward Kinematics Simulation" %}
 
 {% include figure.html
-   src="https://i.imgur.com/AjVMtIGl.png"
+   src="/assets/images/forward-kinematics-stanford-manipulator/AjVMtIGl.png"
    width="560"
    height="274"
    alt="Top and Side View"

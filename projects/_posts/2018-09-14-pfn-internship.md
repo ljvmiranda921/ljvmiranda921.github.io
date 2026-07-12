@@ -40,8 +40,8 @@ outline:
 > I'll only discuss parts of my work that are open-source and
 > publicly-available as stipulated in the NDA. 
 
-![chainerrl-logo](https://i.imgur.com/CgGgAN8.png){:width="240px"}
-![pfn-logo](https://i.imgur.com/vm1NMSH.png){:width="240px"}
+![chainerrl-logo](/assets/images/pfn-internship/CgGgAN8.png){:width="240px"}
+![pfn-logo](/assets/images/pfn-internship/vm1NMSH.png){:width="240px"}
 {: style="text-align: center;"}
 
 ## <a id="intro"></a> A short introduction to ChainerRL
@@ -246,7 +246,7 @@ learning_). I am using an Asynchronous Advantage Actor-Critic (A3C)
 algorithm with a size 200-200 multilayer perceptron (softmax output). 
 
 {% include figure.html
-   src="https://i.imgur.com/37Pr9Rm.png,https://i.imgur.com/ppeLL0x.png"
+   src="/assets/images/pfn-internship/37Pr9Rm.png,/assets/images/pfn-internship/ppeLL0x.png"
    width="320"
    alt="CartPole-v1"
    caption="Moving average of the reward for Gym Environments. Notice that convergence is faster with a high number of simulators" %}
@@ -268,7 +268,7 @@ For this task, I used another A3C model with a fully-connected Gaussian policy
 fact, most papers use a million steps as baseline). The results are shown below
 
 {% include figure.html
-   src="https://i.imgur.com/aezXER6.png,https://i.imgur.com/SJDjPk7.png,https://i.imgur.com/4FaUjxW.png"
+   src="/assets/images/pfn-internship/aezXER6.png,/assets/images/pfn-internship/SJDjPk7.png,/assets/images/pfn-internship/4FaUjxW.png"
    width="320"
    alt="Hopper-v2"
    caption="Moving average of the reward for MuJoCo Environments. Notice that convergence is faster with a high number of simulators" %}
@@ -280,7 +280,7 @@ Remember that during evaluation, we don't need to show multiple
 agent-environment interactions since we're only updating one "master" model.
 
 {% include figure.html
-   src="https://i.imgur.com/vshQdEq.gif,https://i.imgur.com/0EMydkG.gif,https://i.imgur.com/bbYwW6D.gif"
+   src="/assets/images/pfn-internship/vshQdEq.gif,/assets/images/pfn-internship/0EMydkG.gif,/assets/images/pfn-internship/bbYwW6D.gif"
    width="240"
    alt="Hopper-v2"
    caption="Simulation results for the final model for the three MuJoCo environments" %}

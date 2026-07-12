@@ -20,7 +20,7 @@ another (Lang
 and Witbrock, [1998](#lang1998learning)).
 
 {% include figure.html
-   src="https://i.imgur.com/AB14SHCl.png"
+   src="/assets/images/pso-trained-neural-network-for-solving-the-two-spiral-problem/AB14SHCl.png"
    alt="Two Spiral Problem"
    caption="Graph of the Two-Spiral Problem" %}
 
@@ -146,7 +146,7 @@ the parameters.
 
 
 {% include figure.html
-   src="https://i.imgur.com/JtMGhr8l.png"
+   src="/assets/images/pso-trained-neural-network-for-solving-the-two-spiral-problem/JtMGhr8l.png"
    width="640"
    alt="Generalization ability of PSO"
    caption="Generalization ability of the PSO-trained Neural Network over the whole space" %}

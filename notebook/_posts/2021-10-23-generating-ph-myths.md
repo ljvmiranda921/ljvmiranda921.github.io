@@ -62,7 +62,7 @@ works best on desktop!
 <div style="display:flex">
 <!-- video -->
 <div style="flex:33.33%;padding:5px">
-<video width="360" height="360" controls loop><source src="https://imgur.com/32IzDcS.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<video width="360" height="360" controls loop><source src="/assets/images/generating-ph-myths/32IzDcS.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 
 </div>
 <!-- image -->
@@ -82,7 +82,7 @@ works best on desktop!
 <div style="display:flex">
 <!-- video -->
 <div style="flex:33.33%;padding:5px">
-<video width="360" height="360" controls  loop><source src="https://imgur.com/562OYMa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<video width="360" height="360" controls  loop><source src="/assets/images/generating-ph-myths/562OYMa.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
@@ -101,7 +101,7 @@ works best on desktop!
 <div style="display:flex">
 <!-- video -->
 <div style="flex:33.33%;padding:5px">
-<video width="360" height="360" controls  loop><source src="https://imgur.com/Sg2w8X0.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<video width="360" height="360" controls  loop><source src="/assets/images/generating-ph-myths/Sg2w8X0.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
@@ -121,7 +121,7 @@ works best on desktop!
 <div style="display:flex">
 <!-- video -->
 <div style="flex:33.33%;padding:5px">
-<video width="360" height="360" controls  loop><source src="https://imgur.com/2cTcXG1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<video width="360" height="360" controls  loop><source src="/assets/images/generating-ph-myths/2cTcXG1.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
@@ -140,7 +140,7 @@ works best on desktop!
 <div style="display:flex">
 <!-- video -->
 <div style="flex:33.33%;padding:5px">
-<video width="360" height="360" controls  loop><source src="https://imgur.com/8KjHw3O.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<video width="360" height="360" controls  loop><source src="/assets/images/generating-ph-myths/8KjHw3O.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
@@ -159,7 +159,7 @@ works best on desktop!
 <div style="display:flex">
 <!-- video -->
 <div style="flex:33.33%;padding:5px">
-<video width="360" height="360" controls  loop><source src="https://imgur.com/nBvTQiY.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<video width="360" height="360" controls  loop><source src="/assets/images/generating-ph-myths/nBvTQiY.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
@@ -177,7 +177,7 @@ works best on desktop!
 <div style="display:flex">
 <!-- video -->
 <div style="flex:33.33%;padding:5px">
-<video width="360" height="360" controls  loop><source src="https://imgur.com/sQ0V68X.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<video width="360" height="360" controls  loop><source src="/assets/images/generating-ph-myths/sQ0V68X.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
@@ -195,7 +195,7 @@ works best on desktop!
 <div style="display:flex">
 <!-- video -->
 <div style="flex:33.33%;padding:5px">
-<video width="360" height="360" controls  loop><source src="https://imgur.com/JlNQfwW.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<video width="360" height="360" controls  loop><source src="/assets/images/generating-ph-myths/JlNQfwW.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
@@ -214,7 +214,7 @@ works best on desktop!
 <div style="display:flex">
 <!-- video -->
 <div style="flex:33.33%;padding:5px">
-<video width="360" height="360" controls  loop><source src="https://imgur.com/xgjWVf5.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<video width="360" height="360" controls  loop><source src="/assets/images/generating-ph-myths/xgjWVf5.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">
@@ -233,7 +233,7 @@ works best on desktop!
 <div style="display:flex">
 <!-- video -->
 <div style="flex:33.33%;padding:5px">
-<video width="360" height="360" controls  loop><source src="https://imgur.com/KS2Ayag.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+<video width="360" height="360" controls  loop><source src="/assets/images/generating-ph-myths/KS2Ayag.mp4" type="video/mp4">Your browser does not support the video tag.</video>
 </div>
 <!-- image -->
 <div style="flex:33.33%;padding:5px">

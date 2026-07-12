@@ -65,7 +65,7 @@ constantly doing random searches for each iteration.
 
 ### Increased pheromone evaporation rate
 __Parameters:__ $$\alpha$$ = $$\beta$$ = 15, $$\rho$$ = 0.8
-![ACO Test 3](https://i.imgur.com/1mqQCyrl.png)  
+![ACO Test 3](/assets/images/ant-colony-optimization-tsp/1mqQCyrl.png)  
 __Figure 4:__ _ACO Simulation when pheromone evaporation is high_
 {: style="text-align: center;"}
 
