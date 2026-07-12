@@ -22,12 +22,10 @@ If you own a Lenovo Thinkpad and experience screen flickering&mdash;monitor
 blacks out even if it's turned on, static-like screen movement, or
 tearing&mdash; then it may just be due to a power-saving setting.
 
-<div style="text-align:center">
-<blockquote class="imgur-embed-pub" lang="en" data-id="EFuItd0" data-context="false" >
-    <a href="//imgur.com/EFuItd0"></a>
-</blockquote>
-<script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-</div>
+{% include figure.html
+   src="/assets/images/linux-thinkpad-screen-flicker/EFuItd0.jpg"
+   width="500"
+   caption="Screen flickering on a Lenovo Thinkpad." %}
 
 Don't fret, because it's [a common problem with Thinkpad
 notebooks](https://www.reddit.com/r/thinkpad/search/?q=screen%20flicker&restrict_sr=1).
