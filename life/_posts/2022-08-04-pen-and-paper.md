@@ -63,9 +63,10 @@ quicksand](https://twitter.com/kevinbaker/status/1433167944243159045?s=20&t=oNGb
 It hampers me from doing actual work.
 
 <!-- picture of midori -->
-![](/assets/images/pen-and-paper/blank_ntbk.jpg){:width="800px", style="padding:10px"}  
-*My work notebook (Midori Notebook A5).*
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pen-and-paper/blank_ntbk.jpg"
+   width="800"
+   caption="My work notebook (Midori Notebook A5)." %}
 
 The simplicity of pen and paper allows me to shape my system as I go along.
 Mine's quite plain: an A5 notebook for work, a smaller notebook for
@@ -100,9 +101,10 @@ coupled with the convenience of note-taking apps, makes it easier to collect
 rather than synthesize.
 
 <!-- picture of your webbie notebooks  -->
-![](/assets/images/pen-and-paper/webbies.jpg){:width="800px", style="padding:10px"}  
-*My notebooks for journalling since 2018 (Rhodia Webnotebooks).*
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pen-and-paper/webbies.jpg"
+   width="800"
+   caption="My notebooks for journalling since 2018 (Rhodia Webnotebooks)." %}
 
 Perhaps this is why *Zettelkasten* worked well during the time of physical
 slip-boxes. Information was not cheap. You have to physically go to a library,
@@ -119,9 +121,10 @@ hand, note-taking apps usually force me to think line by line. It's not bad, but
 it misses out on several affordances that pen and paper provides. 
 
 <!-- picture of midori with blank page -->
-![](/assets/images/pen-and-paper/blank.jpg){:width="800px", style="padding:10px"}  
-*I like writing on blank paper (pen and ink: Lamy 2000 and Aurora Black).*
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pen-and-paper/blank.jpg"
+   width="800"
+   caption="I like writing on blank paper (pen and ink: Lamy 2000 and Aurora Black)." %}
 
 ## Provides history
 
@@ -133,9 +136,10 @@ the small corrections, marginalia, and scribbles representing the unrefined
 parts of my thought process.
 
 <!-- picture of your actual notes -->
-![](/assets/images/pen-and-paper/notes_revealed.jpg){:width="800px", style="padding:10px"}  
-*I'm the only one who can read my penmanship.*
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pen-and-paper/notes_revealed.jpg"
+   width="800"
+   caption="I'm the only one who can read my penmanship." %}
 
 It's fun to go back to my old notes and say: *"Oh, I was a little bit stressed
 when I wrote this down."* There's an archival element in it that digital formats
@@ -155,9 +159,10 @@ stress me out, and I opt for the inks I love and enjoy. My notes contain
 streaming information, after all.
 
 <!-- picture of your fountain pen collection -->
-![](/assets/images/pen-and-paper/pens.jpg){:width="800px", style="padding:10px"}  
-*My pens through the years (from left to right: Lamy 2000, TWSBI ECO, Pilot Metropolitan).*
-{:style="text-align: center;"}
+{% include figure.html
+   src="/assets/images/pen-and-paper/pens.jpg"
+   width="800"
+   caption="My pens through the years (from left to right: Lamy 2000, TWSBI ECO, Pilot Metropolitan)." %}
 
 ## Final thoughts
 

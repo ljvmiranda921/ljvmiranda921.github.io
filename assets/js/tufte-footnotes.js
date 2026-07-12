@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Place the note after the block that references it, so the
         // inline (narrow-viewport) presentation lands in reading order
-        const host = link.closest('p, li, blockquote, figcaption') || paperContainer;
+        const host = link.closest('p, li, blockquote, figcaption, table') || paperContainer;
         host.insertAdjacentElement('afterend', sidenote);
         sidenotes.push(sidenote);
 
