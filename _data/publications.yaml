@@ -10,6 +10,8 @@
       url: "https://huggingface.co/datasets/ljvmiranda921/PolyglotTeachers-SFT-Synth"
     - label: Models
       url: "https://huggingface.co/collections/ljvmiranda921/polyglot-teachers"
+    - label: Website
+      url: "https://ljvmiranda921.github.io/polyglot-teachers/"
 
 - title: "Multilinguality at the Edge: Developing Language Models for the Global South"
   url: "https://arxiv.org/abs/2604.21637"
