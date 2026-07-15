@@ -1,0 +1,21 @@
+{%- comment -%}
+Grid of research posters. Reads _data/posters.yaml; click a thumbnail to
+open it full-size in a lightbox (assets/js/lightbox.js, loaded once below).
+{%- endcomment -%}
+<div class="poster-grid">
+  {%- for poster in site.data.posters -%}
+  <figure class="poster-item">
+    <a href="{{ poster.image | relative_url }}" class="poster-thumb" data-lightbox aria-label="{{ poster.title | default: 'Poster' }}">
+      <img src="{{ poster.image | relative_url }}" alt="{{ poster.title | default: 'Research poster' }}" loading="lazy">
+    </a>
+    {%- if poster.title or poster.venue -%}
+    <figcaption>
+      {%- if poster.url %}<a href="{{ poster.url }}">{{ poster.title }}</a>{% else %}{{ poster.title }}{% endif -%}
+      {%- if poster.venue %} <span class="poster-venue">{{ poster.venue }}</span>{% endif -%}
+    </figcaption>
+    {%- endif -%}
+  </figure>
+  {%- endfor -%}
+</div>
+
+<script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>

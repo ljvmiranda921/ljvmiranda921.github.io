@@ -1,0 +1,8 @@
+# Conference/workshop posters shown in the grid on the research page.
+# Drop the PNGs into assets/images/posters/ and add an entry here.
+# Fields: image (required), title, venue, url (all optional).
+#
+# - image: "/assets/images/posters/hybrid-preferences.png"
+#   title: "Hybrid Preferences"
+#   venue: "ACL '25"
+#   url: "https://aclanthology.org/2025.acl-long.355/"
