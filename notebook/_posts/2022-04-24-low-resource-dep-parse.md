@@ -373,71 +373,7 @@ If you're interested to see the code and datasets used in this project, then
 feel free to head over [the Github
 repository](https://github.com/ljvmiranda921/ud-tagalog-spacy).
 
-### References
+## References
 
-* <a id="agic2017parser">Željko, A.</a>Cross-lingual Parser Selection for
-    Low-Resource Languages. In: *Proceedings of the NoDaLiDa 2017 Workshop on
-    Universal Dependencies*, pages 1-10, Gothenburg, Sweden, Association for
-    Computational Lingustics.
-* <a id="aquino2020parsing">Aquino, A. and de Leon, F.</a> Parsing in the
-    absence of related languages: Evaluating low-resource dependency parsers on
-    Tagalog. In *Proceedings of the Fourth Workshoup on Universal Dependencies
-    (UDW 2020)*, pages 8-15, ACL.
-* <a id="dryer2013wals">Dryer, M. and Haspelmath, M.</a>*The World Atlas of
-    Language Structures Online*. Max Planck Institute for Evolutionary Anthropology, Leipzig.   
-* <a id="lui2017langid">Lui, M. and Baldwin, T.</a>langid.py: An Off-theShelf
-    Language Identification Tool. In: *Proceedings of the ACL 2012 System
-    Demonstrations*, pages 25-30, Jeju Island, Korea. Association for
-    Computational Linguistics.
-* <a id="nivre2017tutorial">Nivre, J., Zeman, D., Ginter F., Tyers, F.</a> Tutorial
-    on Universal Dependencies: Adding a new language to UD. Presented at the *15th Conference
-    of the European Chapter of the Association for Computational Linguistics*, 2017.
-* <a id="nivre2017universal">Nivre, J. and Fang C-T.</a> Universal Dependency
-    Evaluation. In: *Proceedings of the NoDaLiDa 2017 Workshop on Universal
-    Dependencies*, pages 86-95, Gothenburg, Sweden. Association for Computational
-    Linguistics
-* <a id="schachtner1983trg">Schachter, P. and Otanes, F.</a>Tagalog Reference
-    Grammar. *University of California Press*, 1983.
+{% bibliography --file notebook/low-resource-dep-parse.bib %}
 
-
-
-
-[^1]:
-
-    This treebank got its name from *Tagalog Reference Grammar* (TRG) by
-    Schachter and Otanes. Most of the texts in the TRG treebank were lifted
-    from this source.
-
-[^2]:
-
-    And we're just talking about Universal Dependencies treebanks for English.
-    In the Linguistic Data Consortium inventory, you have the [Penn
-    treebank](https://catalog.ldc.upenn.edu/LDC99T42) and  OntoNotes with
-    almost more than a million words each!
-
-[^3]:
-
-    Other toolkits for dependency parsing include
-    [UDPipe](https://cran.r-project.org/web/packages/udpipe/index.html) (which
-    in my research is only available to R), and Stanford
-    [Stanza](https://stanfordnlp.github.io/stanza/)'s [`depparse`
-    pipeline](https://stanfordnlp.github.io/stanza/depparse.html). 
-
-[^4]:
-
-    Aside from the first sentence, the last two were song lyrics from a band
-    called [*Eraserheads*](https://en.wikipedia.org/wiki/Eraserheads). The
-    first one came from the song *Huwag mo nang Itanong*, while the second
-    came from *Alapaap*. I definitely botched the translations so I'm sorry for
-    that!
-
-[^5]:
-
-    It's based on the Language Identification (LangID) tool of Lui and Baldwin
-    ([2012](#lui2017langid)), combined with some of the features in the World Atlas
-    of Language Structures (WALS) ([Dryer and Haspelmath, 2013](#dryer2013wals)).
-
-[^6]:
-
-    Not to mention that these data sources should have commercially-friendly
-    licenses: you'd want to avoid texts with copyright, etc.

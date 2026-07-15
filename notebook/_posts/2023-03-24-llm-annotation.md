@@ -413,36 +413,5 @@ claims. Feel free to drop a comment below.
 
 ## References
 
-- <a id="palau2009argument">Palau, R.M., & Moens, M.</a> (2009). Argumentation
-mining: the detection, classification and structure of arguments in text.
-*International Conference on Artificial Intelligence and Law*.
-- <a id="jakobsen2022sensitivity">Thorn Jakobsen, T.S., Barrett, M., Søgaard,
-A., & Lassen, D.S.</a> (2022). The Sensitivity of Annotator Bias to Task
-Definitions in Argument Mining. In *Proceedings of the 16th Linguistic
-Annotation Workshop (LAW-XVI) within LREC2022*, pp. 44-61, Marseille, France.
-European Language Resources Association.
-- <a id="lawrence2019argument">Lawrence, J., Reed, C.</a>(2019) Argument Mining:
-A Survey. *Computational Linguistics* 45 (4): 765–818. doi:
-- <a id="liu2019roberta">Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen,
-D., Levy, O., Lewis, M., Zettlemoyer, L., & Stoyanov, V.</a> (2019). RoBERTa: A
-Robustly Optimized BERT Pretraining Approach. ArXiv, abs/1907.11692.
-https://doi.org/10.1162/coli_a_00364.
-- <a id="stab2018ukp">Stab, C., Miller, T., Schiller, B., Rai, P., and Gurevych,
-I.</a> (2018). Cross-topic argument mining from heterogeneous sources. In
-*Proceedings of the 2018 Conference on Empirical Methods in Natural Language
-Processing*, pages 3664–3674, Brussels, Belgium, October-November. Association
-for Computational Linguistics.
-- <a id="wei2022chain">Wei, J., Wang, X., Schuurmans, D., Bosma, M., Chi, E.H.,
-Le, Q., & Zhou, D.</a> (2022). Chain of Thought Prompting Elicits Reasoning in
-Large Language Models. *ArXiv, abs/2201.11903.*
-- <a id="huang2022chain">Huang, F., Kwak, H., & An, J.</a> (2022). Chain of
-Explanation: New Prompting Method to Generate Higher Quality Natural Language
-Explanation for Implicit Hate Speech. *ArXiv, abs/2209.04889.*
-- <a id="bender2021parrot">Bender, E.M., Gebru, T., McMillan-Major, A., &
-Shmitchell, S.</a> (2021). On the Dangers of Stochastic Parrots: Can Language Models
-Be Too Big? 🦜. *Proceedings of the 2021 ACM Conference on Fairness,
-Accountability, and Transparency.*
-- <a id="bender2020octopus">Bender, E.M., & Koller, A.</a> (2020). Climbing
-towards NLU: On Meaning, Form, and Understanding in the Age of Data. *Annual
-Meeting of the Association for Computational Linguistics.*
+{% bibliography --file notebook/llm-annotation.bib %}
 

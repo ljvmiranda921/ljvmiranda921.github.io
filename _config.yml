@@ -38,10 +38,17 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-scholar
 # Kramdown settings
 kramdown:
   input: GFM
   parse_block_html: true
+
+scholar:
+  style: apa
+  locale: en
+  source: ./_bibliography
+  bibliography: references.bib
 
 # Highlighter settings
 highlighter: rouge

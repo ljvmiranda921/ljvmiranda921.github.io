@@ -140,5 +140,5 @@ Finally, I'd like to thank our annotators for helping out in the process.
 
 ## References
 
-- <a id="deleger2012gold">Deleger, L., Li, Q., Lingren, T., Kaiser, M., Molnar, K., Stoutenborough, L., Kouril, M., Marsolo, K., and Solti, I.</a> (2012). Building gold standard corpora for medical natural language processing tasks. *AMIA Annual Symposium proceedings / AMIA Symposium. AMIA Symposium*, 2012:144–153.
-- <a id="brandsen2020gold">Brandsen, A., Verberne S., Wansleeben, M., and Lambers, K.</a> (2020). Creating a Dataset for Named Entity Recognition in the Archaeology Domain. In *Proceedings of the Twelfth Language Resources and Evaluation Conference*, pages 4573–4577, Marseille, France. European Language Resources Association.
+{% bibliography --file notebook/devlog-calamancy.bib %}
+

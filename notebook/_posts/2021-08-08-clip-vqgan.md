@@ -412,8 +412,8 @@ It's a bit hard to parse, so let's take them one-by-one:
 * The first term, $$||x-\hat{x}||^{2}$$, is the *reconstruction loss*, it checks
     how well our network was able to approximate (via $$\hat{x}$$) our input
     $$x$$  when given only its quantized version $$z_\mathbf{q}$$. Note that
-    this is computed as **perceptual loss** ([Johnson and Li, 2016](#joh
-    )), not in a per-pixel basis.
+    this is computed as **perceptual loss** ([Johnson and Li, 2016](#johnson2016perceptual)),
+    not in a per-pixel basis.
 * The second term, $$||sg[E(x)] - z_\mathbf{q}||_2^2$$, optimizes our
     embeddings. The operation $$sg$$ stands for
     "[stop-gradient](https://www.tensorflow.org/api_docs/python/tf/stop_gradient)."
@@ -563,23 +563,7 @@ by commenting below!
 
 ## References
 
-1. <a id="ballard1999vq">Ballard, D.H.</a>, 1999. An introduction to natural computation. MIT press.
-1. <a id="chen2020pixels">Chen, M., Radford, A., Child, R., Wu, J., Jun, H., Luan, D. and Sutskever, I.</a>, 2020, November. Generative pretraining from pixels. In International Conference on Machine Learning (pp. 1691-1703). PMLR.
-1. <a id="child2019sparse">Child, R., Gray, S., Radford, A. and Sutskever, I.</a>, 2019. Generating long sequences with sparse transformers. arXiv preprint arXiv:1904.10509.
-1. <a id="dosovitskiy2020vit">Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., Dehghani, M., Minderer, M., Heigold, G., Gelly, S. and Uszkoreit, J.</a>, 2020. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010.11929.
-1. <a id="esser2021vqgan">Esser, P., Rombach, R. and Ommer, B.</a>, 2021. Taming transformers for high-resolution image synthesis. In *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition* (pp. 12873-12883).
-1. <a id="goodfellow2020gans">Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A. and Bengio, Y., 2020</a>. Generative adversarial networks. Communications of the ACM, 63(11), pp.139-144.
-1. <a id="gu2018cnn">Gu, J., Wang, Z., Kuen, J., Ma, L., Shahroudy, A., Shuai, B., Liu, T., Wang, X., Wang, G., Cai, J. and Chen, T.</a>, 2018. Recent advances in convolutional neural networks. Pattern Recognition, 77, pp.354-377.
-1. <a id="isola2017patch">Isola, P., Zhu, J.Y., Zhou, T. and Efros, A.A.</a>, 2017. Image-to-image translation with conditional adversarial networks. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1125-1134).
-1. <a id="johnson2016perceptual">Johnson, J., Alahi, A. and Fei-Fei, L.</a>, 2016, October. Perceptual losses for real-time style transfer and super-resolution. In European conference on computer vision (pp. 694-711). Springer, Cham.
-1. <a id="mnih2014neural">Mnih, A. and Gregor, K.</a>, 2014, June. Neural variational inference and learning in belief networks. In International Conference on Machine Learning (pp. 1791-1799). PMLR.
-1. <a id="oord2017discrete">Oord, A.V.D., Vinyals, O. and Kavukcuoglu, K.</a>, 2017. Neural discrete representation learning. arXiv preprint arXiv:1711.00937.
-1. <a id="parmar2018transformer">Parmar, N., Vaswani, A., Uszkoreit, J., Kaiser, L., Shazeer, N., Ku, A. and Tran</a>, D., 2018, July. Image transformer. In International Conference on Machine Learning (pp. 4055-4064). PMLR.
-1. <a id="radford2021clip">Radford, A., Kim, J.W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, G., Askell, A., Mishkin, P., Clark, J. and Krueger, G.</a>, 2021. Learning transferable visual models from natural language supervision. *arXiv preprint arXiv:2103.00020*.
-1. <a id="salakhutdinov2009boltzmann">Salakhutdinov, R. and Hinton, G., 2009</a>, April. Deep boltzmann machines. In Artificial intelligence and statistics (pp. 448-455). PMLR.
-1. <a id="weissenborn2019video">Weissenborn, D., Täckström, O. and Uszkoreit, J.</a>, 2019. Scaling autoregressive video models. arXiv preprint arXiv:1906.02634.
-1. <a id="vaswani2017attention">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, Ł. and Polosukhin, I.</a>, 2017. Attention is all you need. In Advances in neural information processing systems (pp. 5998-6008).
-
+{% bibliography --file notebook/clip-vqgan.bib %}
 
 #### Changelog
 

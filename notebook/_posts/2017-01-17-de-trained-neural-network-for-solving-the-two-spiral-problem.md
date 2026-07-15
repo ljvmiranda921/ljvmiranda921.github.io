@@ -155,14 +155,6 @@ Although this gradient needs to be modified so that the stochastic element is
 still present.
 
 ## References
-- <a id="sopena1999neural">Sopena, J.M., Romero, E. and Alquezar, R.</a>
-  (1999). “Neural networks with periodic and monotonic activation functions: a
-  comparative study in classification problems”. In: *ICANN Ninth International Conference on Artificial Neural Networks*.
-- <a id="lang1998learning">Lang, K.J. and Witbrock, M.J.</a> (1988).
-  "Learning to Tell Two Spirals Apart". In: *Proceedings of the 1988
-  Connectionist Models Summer School*
-- <a id="price2005differential">Price, K.V., Storn, R.M., and Lampinen,
-  J.A.</a> (2005). *Differential Evolution: A Practical Approach to Global
-  Evolution*, Springer.
 
-You can access the gist [here.](https://gist.github.com/ljvmiranda921/53939299b9e67f0df082e0127c7f229d)
+{% bibliography --file notebook/de-trained-neural-network-for-solving-the-two-spiral-problem.bib %}
+

@@ -169,12 +169,6 @@ problem may be solved using advanced vectorization techniques in MATLAB, but
 overall, the PSO runtime often correlates with the swarm size.
 
 ## References
-- <a id="engelbrecht2007computational">Engelbrecht, Andres</a> (2007). *Computational Intelligence: An Introduction*, John Wiley & Sons.
-- <a id="sopena1999neural">Sopena, J.M., Romero, E. and Alquezar, R.</a>
-  (1999). “Neural networks with periodic and monotonic activation functions: a
-  comparative study in classification problems”. In: *ICANN Ninth International Conference on Artificial Neural Networks*.
-- <a id="lang1998learning">Lang, K.J. and Witbrock, M.J.</a> (1988).
-  "Learning to Tell Two Spirals Apart". In: *Proceedings of the 1988
-  Connectionist Models Summer School*
 
-You can access the gist [here.](https://gist.github.com/ljvmiranda921/53939299b9e67f0df082e0127c7f229d)
+{% bibliography --file notebook/pso-trained-neural-network-for-solving-the-two-spiral-problem.bib %}
+

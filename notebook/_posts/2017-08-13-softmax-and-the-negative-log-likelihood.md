@@ -209,10 +209,9 @@ referencing this:
 Remember to load a LaTeX package such as [hyperref](https://ctan.org/pkg/hyperref?lang=en) or [url](https://ctan.org/pkg/url?lang=en).
 
 
-## Sources
-* [Stanford CS231N Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/). _This course inspired this blog post. The derivation of the softmax was left as an exercise and I decided to derive it here._
-* [The Softmax Function and Its Derivative](http://eli.thegreenplace.net/2016/the-softmax-function-and-its-derivative/). _A more thorough treatment of the softmax function's derivative_
-* [CIFAR 10](https://www.cs.toronto.edu/~kriz/cifar.html). _Benchmark dataset for visual recognition._
+## References
+
+{% bibliography --file notebook/softmax-and-the-negative-log-likelihood.bib %}
 
 #### Changelog
 

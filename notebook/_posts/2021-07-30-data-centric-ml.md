@@ -402,70 +402,7 @@ probably do this again in the future, but I'll definitely lower my scope.
 
 ## References
 
-1. <a id="abarbanel2018da">Abarbanel, H.D., Rozdeba, P.J. and Shirman, S.</a>, 2018. Machine learning: Deepest learning as statistical data assimilation problems. *Neural Computation*, 30(8), pp.2025-2055.
-1. <a id="abu1990hints">Abu-Mostafa, Y.S.</a>, 1990. Learning from hints in neural networks. *Journal of Complexity*, 6(2), pp.192-198.
-1. <a id="baxter1997mtl">Baxter, J.</a>, 1997. A Bayesian/information theoretic model of learning to learn via multiple task sampling. *Machine Learning*, 28(1), pp.7-39.
-1. <a id="bell2021pysch">Bell, S.J. and Kampman, O.P.,</a> 2021. Perspectives on Machine Learning from Psychology's Reproducibility Crisis. *arXiv preprint arXiv:2104.08878*.
-1. <a id="bendavid2009expert">Ben-David, A. and Frank, E.</a>, 2009. Accuracy of machine learning models versus “hand crafted” expert systems–a credit scoring case study. *Expert Systems with Applications*, 36(3), pp.5264-5271.
-1. <a id="beyer2020imagenet">Beyer, L., Hénaff, O.J., Kolesnikov, A., Zhai, X. and Oord, A.V.D.</a>, 2020. Are we done with imagenet?. arXiv preprint arXiv:2006.07159.
-1. <a id="biran2017expert">Biran, O. and Cotton, C.</a>, 2017, August. Explanation and justification in machine learning: A survey. In *IJCAI-17 Workshop on Explainable AI (XAI)* (Vol. 8, No. 1, pp. 8-13).
-1. <a id="bouttier2002da">Bouttier, F. and Courtier, P.</a>, 2002. Data assimilation concepts and methods March 1999. Meteorological training course lecture series. ECMWF, 718, p.59.
-1. <a id="brajard2020da">Brajard, J., Carrassi, A., Bocquet, M. and Bertino, L.</a>, 2020. Combining data assimilation and machine learning to emulate a dynamical model from sparse and noisy observations: A case study with the Lorenz 96 model. Journal of Computational Science, 44, p.101171.
-1. <a id="brown2020gpt3">Brown, T.B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A. and Agarwal, S.,</a> 2020. Language models are few-shot learners. *arXiv preprint arXiv:2005.14165*.
-1. <a id="buchanan1989expert">Buchanan, B.G.</a>, 1989. Can machine learning offer anything to expert systems?. In *Knowledge Acquisition: Selected Research and Commentary* (pp. 5-8). Springer, Boston, MA.
-1. <a id="byra2019knee">Byra, M., Wu, M., Zhang, X., Jang, H., Ma, Y.J., Chang, E.Y., Shah, S. and Du, J.</a>, 2020. Knee menisci segmentation and relaxometry of 3D ultrashort echo time cones MR imaging using attention U‐Net with transfer learning. *Magnetic Resonance in Medicine*, 83(3), pp.1109-1122.
-1. <a id="caruana1997mtl">Caruana, R.</a>, 1997. Multitask learning. *Machine Learning*, 28(1), pp.41-75.
-1. <a id="chapelle2006semisupervised">Chapelle, O., Scholkopf, B. and Zien, A.</a>, 2006. *Semi-supervised learning*. 2006. Cambridge, Massachusettes: The MIT Press View Article.
-1. <a id="cohn1996active">Cohn, D.A., Ghahramani, Z. and Jordan, M.I.</a>, 1996. Active learning with statistical models. *Journal of Artificial Intelligence Research*, 4, pp.129-145.
-1. <a id="crawshaw2020mtl">Crawshaw, M.</a>, 2020. Multi-task learning with deep neural networks: A survey. *arXiv preprint arXiv:2009.09796.*
-1. <a id="dellapenna2012crowd">Della Penna, N. and Reid, M.D.</a>, 2012. Crowd & prejudice: An impossibility theorem for crowd labelling without a gold standard. *arXiv preprint arXiv:1204.3511.*
-1. <a id="deng2009imagenet">Deng, J., Dong, W., Socher, R., Li, L.J., Li, K. and Fei-Fei, L.</a>, 2009, June. Imagenet: A large-scale hierarchical image database. In *2009 IEEE Conference on Computer Vision and Pattern Recognition* (pp. 248-255). IEEE.
-1. <a id="dietterich1997multi">Dietterich, T.G., Lathrop, R.H. and Lozano-Pérez, T.</a>, 1997. Solving the multiple instance problem with axis-parallel rectangles. Artificial intelligence, 89(1-2), pp.31-71.
-1. <a id="doshi2017expert">Doshi-Velez, F. and Kim, B.</a>, 2017. Towards a rigorous science of interpretable machine learning. *arXiv preprint arXiv:1702.08608*.
-1. <a id="duong2015soft">Duong, L., Cohn, T., Bird, S. and Cook, P.</a>, 2015, July. Low resource dependency parsing: Cross-lingual parameter sharing in a neural network parser. In *Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing* (volume 2: short papers) (pp. 845-850).
-1. <a id="gennatas2020expert">Gennatas, E.D., Friedman, J.H., Ungar, L.H., Pirracchio, R., Eaton, E., Reichmann, L.G., Interian, Y., Luna, J.M., Simone, C.B., Auerbach, A. and Delgado, E.,</a> 2020. Expert-augmented machine learning. *Proceedings of the National Academy of Sciences*, 117(9), pp.4571-4577.
-1. <a id="ghil1991da">Ghil, M. and Malanotte-Rizzoli, P.</a>, 1991. Data assimilation in meteorology and oceanography. *Advances in Geophysics*, 33, pp.141-266.
-1. <a id="giuffrida2018plant">Giuffrida, M.V., Chen, F., Scharr, H. and Tsaftaris, S.A.</a>, 2018. Citizen crowds and experts: observer variability in image-based plant phenotyping. *Plant Methods*, 14(1), pp.1-14.
-1. <a id="henderson2019deeprl">Henderson, P., Islam, R., Bachman, P., Pineau, J., Precup, D. and Meger, D.,</a> 2018, April. Deep reinforcement learning that matters. In *Proceedings of the AAAI Conference on Artificial Intelligence* (Vol. 32, No. 1).
-1. <a id="kajino2012crowd">Kajino, H., Tsuboi, Y., Sato, I. and Kashima, H.</a>, 2012, July. Learning from crowds and experts. In *Workshops at the Twenty-Sixth AAAI Conference on Artificial Intelligence.*
-1. <a id="krizhevsky2012alexnet">Krizhevsky, A., Sutskever, I. and Hinton, G.E.</a>, 2012. Imagenet classification with deep convolutional neural networks. *Advances in Neural Information Processing Systems*, 25, pp.1097-1105.
-1. <a id="law2015da">Law, K., Stuart, A. and Zygalakis, K.</a>, 2015. Data assimilation. Cham, Switzerland: Springer, 214.
-1. <a id="lewis1994active">Lewis, D.D. and Gale, W.A.</a>, 1994. A sequential algorithm for training text classifiers. In SIGIR’94 (pp. 3-12). Springer, London.
-1. <a id="lipton2019trends">Lipton, Z.C. and Steinhardt, J.,</a> 2019. Research for practice: troubling trends in machine-learning scholarship. *Communications of the ACM*, 62(6), pp.45-53.
-1. <a id="masqood2019alzheimer">Maqsood, M., Nazir, F., Khan, U., Aadil, F., Jamal, H., Mehmood, I. and Song, O.Y.</a>, 2019. Transfer learning assisted classification and detection of Alzheimer’s disease stages using 3D MRI scans. *Sensors*, 19(11), p.2645.
-1. <a id="northcutt2017pruning">Northcutt, C.G., Wu, T. and Chuang, I.L.</a>, 2017. Learning with confident examples: Rank pruning for robust classification with noisy labels. *arXiv preprint arXiv:1705.01936*.
-1. <a id="northcutt2021error">Northcutt, C.G., Athalye, A. and Mueller, J.</a>, 2021. Pervasive label errors in test sets destabilize machine learning benchmarks. *arXiv preprint arXiv:2103.14749*.
-1. <a id="northcutt2021confident">Northcutt, C., Jiang, L. and Chuang, I.</a>, 2021. Confident learning: Estimating uncertainty in dataset labels. *Journal of Artificial Intelligence Research*, 70, pp.1373-1411.
-1. <a id="pan2009survey">Pan, S.J. and Yang, Q.</a>, 2009. A survey on transfer learning. *IEEE Transactions on Knowledge and Data Engineering*, 22(10), pp.1345-1359.
-1. <a id="raykar2019crowds">Raykar, V.C., Yu, S., Zhao, L.H., Valadez, G.H., Florin, C., Bogoni, L. and Moy, L.</a>, 2010. Learning from crowds. *Journal of Machine Learning Research*, 11(4).
-1. <a id="ratner2016dataprog">Ratner, A.J., De Sa, C.M., Wu, S., Selsam, D. and Ré, C.</a>, 2016. Data programming: Creating large training sets, quickly. Advances in neural information processing systems, 29, pp.3567-3575.
-1. <a id="ratner2017snorkel">Ratner, A., Bach, S.H., Ehrenberg, H., Fries, J., Wu, S. and Ré, C.</a>, 2017, November. Snorkel: Rapid training data creation with weak supervision. In Proceedings of the VLDB Endowment. International Conference on Very Large Data Bases (Vol. 11, No. 3, p. 269). NIH Public Access.
-1. <a id="ratner2019weak">Ratner, A., Bach, S., Varma, P. and Ré, C.</a>, 2019. Weak supervision: the new programming paradigm for machine learning. Hazy Research. Available via [https://dawn.cs.stanford.edu//2017/07/16/weak-supervision/](https://dawn.cs.stanford.edu//2017/07/16/weak-supervision/). Accessed, pp.05-09.
-1. <a id="ruder2019thesis">Ruder, S.</a>, 2019. *Neural transfer learning for natural language processing* (Doctoral dissertation, NUI Galway).
-1. <a id="ruder2019survey">Ruder, S., Aylien</a>. The State of Transfer Learning in NLP [online]. 2019 [cit. 2019-08-19]. Available: [https://ruder.io/state-of-transfer-learning-in-nlp/](https://ruder.io/state-of-transfer-learning-in-nlp/)
-1. <a id="ruder2017mtl">Ruder, S.</a>, 2017. An overview of multi-task learning in deep neural networks. *arXiv preprint arXiv:1706.05098*.
-1. <a id="ruder2017survey">Ruder, S., Aylien</a>. Transfer Learning: Machine Learning’s Next Frontier [online]. 2017 [cit. 2017-07-04]. Available: [https://ruder.io/transfer-learning/index.html](https://ruder.io/transfer-learning/index.html)
-1. <a id="sambasivan2021data">Sambasivan, N., Kapania, S., Highfill, H., Akrong, D., Paritosh, P. and Aroyo, L.M.,</a> 2021, May. “Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI. In *proceedings of the 2021 CHI Conference on Human Factors in Computing Systems* (pp. 1-15).
-1. <a id="settles2009active">Settles, B.</a>, 2009. Active learning literature survey.
-1. <a id="settles2007active">Settles, B., Craven, M. and Ray, S.</a>, 2007. Multiple-instance active learning. *Advances in Neural Information Processing Systems*, 20, pp.1289-1296.
-1. <a id="settles2011active">Settles, B.</a>, 2011, April. From theories to queries: Active learning in practice. In *Active Learning and Experimental Design workshop In conjunction with AISTATS* 2010 (pp. 1-18). JMLR Workshop and Conference Proceedings.
-1. <a id="seung1992active">Seung, H.S., Opper, M. and Sompolinsky, H.</a>, 1992, July. Query by committee. In Proceedings of the fifth annual workshop on Computational learning theory (pp. 287-294).
-1. <a id="sculley2015debt">Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J.F. and Dennison, D.,</a> 2015. Hidden technical debt in machine learning systems. *Advances in neural information processing systems*, 28, pp.2503-2511.
-1. <a id="sculley2019winner">Sculley, D., Snoek, J., Wiltschko, A. and Rahimi, A.,</a> 2018. Winner's curse? On pace, progress, and empirical rigor.
-1.a id="shin2016computer">Shin, H.C., Roth, H.R., Gao, M., Lu, L., Xu, Z., Nogues, I., Yao, J., Mollura, D. and Summers, R.M.</a>, 2016. Deep convolutional neural networks for computer-aided detection: CNN architectures, dataset characteristics and transfer learning. *IEEE transactions on medical imaging*, 35(5), pp.1285-1298.
-1. <a id="tan2018survey">Tan, C., Sun, F., Kong, T., Zhang, W., Yang, C. and Liu, C.</a>, 2018, October. A survey on deep transfer learning. In *International conference on artificial neural networks* (pp. 270-279). Springer, Cham.
-1. <a id="tsymbal2004drift">Tsymbal, A.,</a> 2004. The problem of concept drift: definitions and related work. *Computer Science Department, Trinity College Dublin*, 106(2), p.58.
-1. <a id="vanengelen2020survey">Van Engelen, J.E. and Hoos, H.H.</a>, 2020. A survey on semi-supervised learning. *Machine Learning*, 109(2), pp.373-440.
-1. <a id="vaswani2017attention">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L. and Polosukhin, I.,</a> 2017. Attention is all you need. *arXiv preprint arXiv:1706.03762*.
-1. <a id="weiss1991expert">Weiss, S.M. and Kulikowski, C.A.</a>, 1991. Computer systems that learn: classification and prediction methods from statistics, neural nets, machine learning, and expert systems. Morgan Kaufmann Publishers Inc..
-1. <a id="weiss2016survey">Weiss, K., Khoshgoftaar, T.M. and Wang, D.</a>, 2016. A survey of transfer learning. *Journal of Big data*, 3(1), pp.1-40.
-1. <a id="yang2016soft">Yang, Y. and Hospedales, T.</a>, 2016. Deep multi-task representation learning: A tensor factorisation approach. *arXiv preprint arXiv:1605.06391*.
-1. <a id="yin2020expert"> Yin, H., Fan, F. Zhang, J., Li, H., and Lau, T-F. The Importance of Domain Knowledge. [Available] In: [https://blog.ml.cmu.edu/2020/08/31/1-domain-knowledge/](https://blog.ml.cmu.edu/2020/08/31/1-domain-knowledge/)
-1. <a id="zhang2017mtlsurvey">Zhang, Y. and Yang, Q.</a>, 2017. A survey on multi-task learning. *arXiv preprint arXiv:1707.08114*.
-1. <a id="zhou2018weak">Zhou, Z.H.</a>, 2018. A brief introduction to weakly supervised learning. National science review, 5(1), pp.44-53.
-1. <a id="zhu2005semisupervised">Zhu, X.J.</a>, 2005. *Semi-supervised learning literature survey*.
-1. <a id="zhuang2020survey">Zhuang, F., Qi, Z., Duan, K., Xi, D., Zhu, Y., Zhu, H., Xiong, H. and He, Q.</a>, 2020. A comprehensive survey on transfer learning. *Proceedings of the IEEE*, 109(1), pp.43-76.
-1. <a id="zliobaite2010drift">Žliobaitė, I.,</a> 2010. Learning under concept drift: an overview. *arXiv preprint arXiv:1010.4784*.
+{% bibliography --file notebook/data-centric-ml.bib %}
 
 #### Changelog
 

@@ -325,7 +325,5 @@ ito sa Meron.
 
 ## References
 
-- <a id="firth1957distrib">Firth, J.R.</a> (1957). "A synopsis of linguistic theory 1930-1955". Studies in Linguistic Analysis: 1–32. Reprinted in F.R. Palmer, ed. (1968). Selected Papers of J.R. Firth 1952-1959. London: Longman.
-- <a id="bender2020nlu">Emily M. Bender and Alexander Koller.</a> 2020. Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data. In *Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics*, pages 5185–5198, Online. Association for Computational Linguistics.
-- <a id="manning2022human">Manning, Christopher D.</a>2022. Human Language Understanding & Reasoning. In *Daedalus, the Journal of the American Academy of Arts & Sciences*
+{% bibliography --file notebook/wika-at-kahulugan.bib %}
 
