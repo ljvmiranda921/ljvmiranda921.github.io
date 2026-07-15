@@ -26,8 +26,8 @@
   {% assign rendered_reference = rendered_reference | replace_first: entry.title, linked_title %}
 {% endif %}
 
-{% if arxiv_id != '' and rendered_reference contains 'arXiv:' == false %}
+{% unless arxiv_id == '' or rendered_reference contains 'arXiv:' %}
   {% capture rendered_reference %}{{ rendered_reference }} Preprint, arXiv:{{ arxiv_id }}.{% endcapture %}
-{% endif %}
+{% endunless %}
 
 {{ rendered_reference }}
