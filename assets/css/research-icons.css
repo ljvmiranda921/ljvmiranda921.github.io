@@ -85,7 +85,7 @@ a .research-icon {
 
 .poster-thumb {
   display: block;
-  border: 1px solid #ccc;
+  border: 1px solid #111;
   transition: border-color 0.2s ease-in-out;
 }
 
