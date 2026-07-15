@@ -315,11 +315,9 @@ instructions for the task (i.e., the labels to classify with, the format for
 parsing, etc.), then I included exemplars via chain-of-thought. You can find the
 complete prompt by clicking the `details` tab below:
 
-&nbsp;
+**Chain of thought prompt for argument mining annotation**
 
-<details>
-  <summary><u>Chain of thought prompt for argument mining annotation</u></summary>
-  <pre><code>
+```
 Determine whether the text below is a supporting argument (Argument_for), 
 opposing argument (Argument_against), or none (NoArgument) regarding 
 the topic of "minimum wage." First, identify the premise and the 
@@ -350,11 +348,9 @@ minimum wage. Therefore the answer is Argument_against.
 
 Text:
 """
-&lcub;&lcub;text&rcub;&rcub;
+{{text}}
 """
-  </code>
-  </pre>
-</details>
+```
 
 &nbsp;
 
@@ -414,4 +410,3 @@ claims. Feel free to drop a comment below.
 ## References
 
 {% bibliography --file notebook/llm-annotation.bib %}
-
