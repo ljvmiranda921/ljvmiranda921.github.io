@@ -312,8 +312,8 @@ labels. This "reasoning pipeline" is shown in the figure below:
 
 The prompt is a bit long, but it goes like this: I first provided the
 instructions for the task (i.e., the labels to classify with, the format for
-parsing, etc.), then I included exemplars via chain-of-thought. You can find the
-complete prompt by clicking the `details` tab below:
+parsing, etc.), then I included exemplars via chain-of-thought. The complete
+prompt is below:
 
 **Chain of thought prompt for argument mining annotation**
 
@@ -348,7 +348,7 @@ minimum wage. Therefore the answer is Argument_against.
 
 Text:
 """
-{{text}}
+{% raw %}{{text}}{% endraw %}
 """
 ```
 
