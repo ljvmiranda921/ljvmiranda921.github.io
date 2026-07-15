@@ -116,3 +116,11 @@ I do research that attempts to relax these constraints. -->
   <br>_Southeast Asian Language Processing (SEALP) Workshop @ IJCNLP-AACL '23_
   <br> <b>Lester James V. Miranda</b>
   <br> [Code](https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark) / [Dataset](https://huggingface.co/datasets/ljvmiranda921/tlunified-ner) / [Slides](https://drive.google.com/file/d/1QVbW7Myou6U6cSqrlz5p_35Sl__008kG/view?usp=drive_link) / [Video](https://www.youtube.com/watch?v=WAJ8IEIHuiM) --> 
+
+## Research Posters
+
+I enjoy making posters for my research projects, and still strive to improve this craft.
+Here are some that I presented in various conferences and workshops!
+
+{% include posters.html %}
+

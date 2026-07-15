@@ -1,0 +1,28 @@
+# Conference/workshop posters shown in the grid on the research page.
+# Drop the PNGs into assets/images/posters/ and add an entry here.
+# Fields: image (required), title, venue, url (all optional).
+
+- image: "/assets/images/posters/filbench_emnlp_2025.png"
+  title: "FilBench"
+  venue: "EMNLP '25"
+  url: "https://aclanthology.org/2025.emnlp-main.127/"
+
+- image: "/assets/images/posters/hybrid-preferences_acl_2025.png"
+  title: "Hybrid Preferences"
+  venue: "ACL '25"
+  url: "https://aclanthology.org/2025.acl-long.355/"
+
+- image: "/assets/images/posters/m-rewardbench_acl_2025.png"
+  title: "M-RewardBench"
+  venue: "ACL '25"
+  url: "https://aclanthology.org/2025.acl-long.3/"
+
+- image: "/assets/images/posters/ud-newscrawl_acl_2025.png"
+  title: "UD-NewsCrawl"
+  venue: "ACL '25"
+  url: "https://aclanthology.org/2025.acl-long.357/"
+
+- image: "/assets/images/posters/calamanCy_nlposs_2023.png"
+  title: "calamanCy"
+  venue: "NLP-OSS '23"
+  url: "https://aclanthology.org/2023.nlposs-1.1/"
