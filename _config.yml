@@ -45,10 +45,11 @@ kramdown:
   parse_block_html: true
 
 scholar:
-  style: apa
+  style: association-for-computational-linguistics
   locale: en
   source: ./_bibliography
   bibliography: references.bib
+  bibliography_template: bib
 
 # Highlighter settings
 highlighter: rouge

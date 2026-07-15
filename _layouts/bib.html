@@ -1,0 +1,33 @@
+---
+---
+{% assign rendered_reference = reference %}
+{% assign reference_link = '' %}
+{% assign arxiv_id = '' %}
+
+{% if entry.doi and entry.doi != '' %}
+  {% if entry.doi contains 'http://' or entry.doi contains 'https://' %}
+    {% assign reference_link = entry.doi %}
+  {% else %}
+    {% capture reference_link %}https://doi.org/{{ entry.doi }}{% endcapture %}
+  {% endif %}
+{% elsif entry.eprint and entry.eprint != '' %}
+  {% assign arxiv_id = entry.eprint %}
+  {% capture reference_link %}https://arxiv.org/abs/{{ entry.eprint }}{% endcapture %}
+{% elsif entry.url and entry.url != '' %}
+  {% assign reference_link = entry.url %}
+  {% if entry.url contains 'arxiv.org/abs/' %}
+    {% assign arxiv_suffix = entry.url | split: 'arxiv.org/abs/' | last %}
+    {% assign arxiv_id = arxiv_suffix | split: '?' | first | remove: '/' %}
+  {% endif %}
+{% endif %}
+
+{% if reference_link and reference_link != '' and entry.title %}
+  {% capture linked_title %}<a href="{{ reference_link }}" rel="noopener">{{ entry.title }}</a>{% endcapture %}
+  {% assign rendered_reference = rendered_reference | replace_first: entry.title, linked_title %}
+{% endif %}
+
+{% if arxiv_id != '' and rendered_reference contains 'arXiv:' == false %}
+  {% capture rendered_reference %}{{ rendered_reference }} Preprint, arXiv:{{ arxiv_id }}.{% endcapture %}
+{% endif %}
+
+{{ rendered_reference }}
