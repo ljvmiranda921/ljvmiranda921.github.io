@@ -33,7 +33,8 @@ The page, by default, should be running at [localhost:4000](localhost:4000)
 ## Citations and references
 
 The site uses [`jekyll-scholar`](https://github.com/inukshuk/jekyll-scholar) with
-APA style formatting. For notebook posts, references are stored in per-post
+APA style formatting. 
+For notebook posts, references are stored in 
 BibTeX files under `_bibliography/notebook/`, and rendered from each post via:
 
 ```liquid
