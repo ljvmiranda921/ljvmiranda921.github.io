@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "sass:color";
+
 /**
  * Reset some basic elements
  */
@@ -45,7 +48,7 @@
  p, blockquote, pre,
  ul, ol, dl, figure,
  %vertical-rhythm {
-   margin-bottom: $spacing-unit / 2;
+   margin-bottom: math.div($spacing-unit, 2);
  }
  
  
@@ -93,7 +96,7 @@
      width: 0;
      min-width: 100%;
      margin-top: calc(#{$spacing-unit} / 3);
-     color: lighten($text-color, 27%);
+     color: color.adjust($text-color, $lightness: 27%);
 
      .figure-title,
      &:not(:has(.figure-title))::before {
@@ -135,7 +138,7 @@
  // Table caption, above the table, auto-numbered like figures
  .table-caption {
    font-size: $small-font-size;
-   color: lighten($text-color, 27%);
+   color: color.adjust($text-color, $lightness: 27%);
    max-width: 85%;
    margin: 0 auto calc(#{$spacing-unit} / 3);
 
@@ -151,7 +154,7 @@
  // Caption for inline SVG/iframe figures; shares the figure counter
  .svg-caption {
    font-size: $small-font-size;
-   color: lighten($text-color, 27%);
+   color: color.adjust($text-color, $lightness: 27%);
    max-width: 85%;
    margin: calc(#{$spacing-unit} / 3) auto $spacing-unit;
 
@@ -244,7 +247,7 @@
    text-decoration: none;
  
    &:visited {
-     color: darken($brand-color, 15%);
+     color: color.adjust($brand-color, $lightness: -15%);
    }
  
    &:hover {
@@ -400,8 +403,8 @@
    @include media-query($on-laptop) {
      max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
      max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-     padding-right: $spacing-unit / 2;
-     padding-left: $spacing-unit / 2;
+     padding-right: math.div($spacing-unit, 2);
+     padding-left: math.div($spacing-unit, 2);
    }
  }
  
@@ -446,7 +449,7 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: lighten($text-color, 18%);
+  color: color.adjust($text-color, $lightness: 18%);
   border-collapse: collapse;
   // border: 1px solid $grey-color-light;
 
@@ -458,11 +461,11 @@ table {
 
   th,
   td {
-    padding: ($spacing-unit / 6) ($spacing-unit / 10);
+    padding: (math.div($spacing-unit, 6)) (math.div($spacing-unit, 10));
   }
 
   th {
-    //    background-color: lighten($grey-color-light, 3%);
+    //    background-color: color.adjust($grey-color-light, $lightness: 3%);
     border-top: 1.5px solid $text-color;
     border-bottom: 0.75px solid $text-color;
     font-family: "Inter", sans-serif;
