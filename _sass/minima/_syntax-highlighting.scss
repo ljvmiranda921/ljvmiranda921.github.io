@@ -1,9 +1,11 @@
+@use "sass:math";
+
 /**
  * Syntax highlighting styles
  */
 $spacing-unit:     30px;
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: math.div($spacing-unit, 2);
 }
 
 .highlight {
