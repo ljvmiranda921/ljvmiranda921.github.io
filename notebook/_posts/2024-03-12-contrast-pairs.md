@@ -19,7 +19,7 @@ During RLHF, we train a reward model by showing pairs of chosen and rejected mod
 The hope is, our reward model can capture the nuance and diversity of human judgment.
 
 However, preference is subjective by nature, and few studies have tried articulating it.
-For example, some looked into different aspects of a response's helpfulness / harmlessness ([Bai et al., 2022](https://arxiv.org/abs/2204.05862)) while others investigated surface-level characteristics like its length ([Singhal et al., 2023](https://arxiv.org/pdf/2310.03716.pdf)).
+For example, some looked into different aspects of a response's helpfulness / harmlessness {% cite bai2022 --file notebook/contrast-pairs.bib %} while others investigated surface-level characteristics like its length {% cite singhal2023 --file notebook/contrast-pairs.bib %}.
 
 In this blog post, I want to offer a different approach: **what if instead of looking at qualitative aspects or token-level features, we use sentence embeddings?**
 Sentence embeddings capture a text's lexical and semantic meaning in a high-dimensional vector space.
@@ -37,11 +37,11 @@ The table below shows the sources I used:
 
 | Dataset                                                                                                                                                      | Description                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI's Summarize from Human Feedback ([Stiennon et al., 2022](https://arxiv.org/abs/2009.01325))                                                           | Dataset used to train a summarization reward model. I used the `comparisons` subset where each instance represents a matchup between two summaries.                                                                                             |
-| Stanford Human Preferences Dataset ([Ethayarajh et al., 2022](https://proceedings.mlr.press/v162/ethayarajh22a.html))                                        | Contains a collection of human preferences over responses to questions or instructions. I used the `explainlikeimfive_train` subset to represent OpenQA questions.                                                                              |
-| [Argilla's Ultrafeedback Multi-Binarized Cleaned Dataset](https://huggingface.co/datasets/argilla/ultrafeedback-multi-binarized-quality-preferences-cleaned) | A clean version of the original Ultrafeedback dataset ([Cui et al., 2023](https://arxiv.org/abs/2310.01377)). The cleanup process can be found [in their writeup](https://huggingface.co/datasets/argilla/ultrafeedback-binarized-preferences). |
-| Tatsumoto Lab's Alpaca Farm ([Dubois et al., 2023](https://arxiv.org/abs/2305.14387))                                                                        | The human preference subset of the Alpaca Farm dataset. The researchers used this subset to compare their LLM judge's preferences.                                                                                                              |
-| [Berkeley Nest Lab's Nectar Dataset](https://huggingface.co/datasets/berkeley-nest/Nectar)                                                                   | Preference ranking dataset for training the Starling 7B reward model ([Zhu et al., 2023](https://starling.cs.berkeley.edu/)), and consequently, the Starling 7B language model.                                                                 |
+| OpenAI's Summarize from Human Feedback {% cite stiennon2020 --file notebook/contrast-pairs.bib %}                                                           | Dataset used to train a summarization reward model. I used the `comparisons` subset where each instance represents a matchup between two summaries.                                                                                             |
+| Stanford Human Preferences Dataset {% cite ethayarajh2022 --file notebook/contrast-pairs.bib %}                                        | Contains a collection of human preferences over responses to questions or instructions. I used the `explainlikeimfive_train` subset to represent OpenQA questions.                                                                              |
+| [Argilla's Ultrafeedback Multi-Binarized Cleaned Dataset](https://huggingface.co/datasets/argilla/ultrafeedback-multi-binarized-quality-preferences-cleaned) | A clean version of the original Ultrafeedback dataset {% cite cui2023 --file notebook/contrast-pairs.bib %}. The cleanup process can be found [in their writeup](https://huggingface.co/datasets/argilla/ultrafeedback-binarized-preferences). |
+| Tatsumoto Lab's Alpaca Farm {% cite dubois2023 --file notebook/contrast-pairs.bib %}                                                                        | The human preference subset of the Alpaca Farm dataset. The researchers used this subset to compare their LLM judge's preferences.                                                                                                              |
+| [Berkeley Nest Lab's Nectar Dataset](https://huggingface.co/datasets/berkeley-nest/Nectar)                                                                   | Preference ranking dataset for training the Starling 7B reward model {% cite zhu2023 --file notebook/contrast-pairs.bib %}, and consequently, the Starling 7B language model.                                                                 |
 
 <!-- talk about elo ranking for matchup-type datasets -->
 
@@ -143,7 +143,7 @@ For example, the negative sign in the last column shows that as the text's Elo r
 
 ### Lexical distance is consistent across preference attributes
 
-Finally, I was curious how individual attributes of preference manifest in lexical distances using the [HelpSteer](https://huggingface.co/datasets/nvidia/HelpSteer) dataset ([Wang et al., 2023](https://arxiv.org/abs/2311.09528)).
+Finally, I was curious how individual attributes of preference manifest in lexical distances using the [HelpSteer](https://huggingface.co/datasets/nvidia/HelpSteer) dataset {% cite wang2023 --file notebook/contrast-pairs.bib %}.
 Most datasets only give us a single view of human judgment, but HelpSteer provides finegrained preferences such as helpfulness, correctness, coherence, complexity, and verbosity.
 
 So, I did the same experiments for each of these attributes and found that the distribution didn't change much.
@@ -172,3 +172,7 @@ I think this is just my way of exploring interesting avenues and scratching my i
 If you're interested in this type of work, feel free to reach out and discuss!
 
 You can find the [source code for this work](https://github.com/ljvmiranda921/scratch/tree/master/2024-02-21-contrast-pairs) on GitHub!
+
+## References
+
+{% bibliography --file notebook/contrast-pairs.bib %}
