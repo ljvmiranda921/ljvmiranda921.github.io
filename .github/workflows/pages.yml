@@ -18,7 +18,10 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # ubuntu-24 (ubuntu-latest) only ships Ruby >= 3.0; the pinned gem stack
+    # (jekyll 3.8.7 / jekyll-scholar 5.16 / bibtex-ruby 4.x, see `ffi < 1.17`)
+    # is Ruby-2-era and breaks on Ruby 3 (bibtex-ruby's Proc.new-without-block).
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,7 +32,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2"
+          ruby-version: "2.7"
           bundler-cache: true
 
       - name: Build with Jekyll
