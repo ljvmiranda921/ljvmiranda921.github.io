@@ -46,7 +46,7 @@ The slides below are taken from the closing remarks of my talk (about 75% of the
 Just think of this blog post as an extended version of those closing slides.
 
 
-[^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my [blog post](/projects/2025/08/21/filbench/), check the [leaderboard](https://huggingface.co/spaces/filbench/filbench-leaderboard), or read the [paper](https://aclanthology.org/2025.emnlp-main.127/)!
+[^1]: I won't be talking a lot about FilBench in this blog post. But if you're curious, check out my [blog post](/projects/2025/08/21/filbench/), check the [leaderboard](https://huggingface.co/spaces/filbench/filbench-leaderboard), or read the paper {% cite miranda2025 --file notebook/on-what-it-takes.bib %}!
 
 
 ## Diskarte - achieving a goal under extreme constraints
@@ -69,7 +69,7 @@ Personally, I see diskarte as the ability to achieve a goal under extreme constr
 
 I argue that the **best way to innovate is similar to how we approached the jeepney**: taking these innovations from the Global North and adapting them to our local contexts through ingenuity and resourcefulness.
 Simply importing Silicon Valley approaches is not enough.
-I wrote about this at length in a recent [survey paper](https://arxiv.org/abs/2604.21637), but one approach I'm currently exploring is careful synthetic data generation to address the lack of training data.
+I wrote about this at length in a recent survey paper {% cite miranda2026 --file notebook/on-what-it-takes.bib %}, but one approach I'm currently exploring is careful synthetic data generation to address the lack of training data.
 Synthetic data is now a common approach in training frontier language models, but I believe we can strip it down and, similar to the jeepney, add some ornaments / adjustments to make it work for low-resource languages.
 I encourage you to read the survey paper, as I mention potential paths for improvement such as creating task-specific small language models, deploying models at the edge, and improving a model's capabilities through a robust set of harnesses. 
 
@@ -178,3 +178,7 @@ I then walked through specific challenges in building LLMs where each of these q
 Ultimately, I believe that to build Filipino-centric LMs, we need to create an environment where these qualities can flourish.
 
 I wrote more about my thoughts in a blog post (linked in the comments). Would love to discuss this further, just reach out :)  -->
+
+## References
+
+{% bibliography --file notebook/on-what-it-takes.bib %}
