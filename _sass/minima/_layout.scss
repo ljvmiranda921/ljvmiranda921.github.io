@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "variables" as *;
 
 /**
  * Paper container for lifted effect
@@ -164,7 +165,7 @@
   @include relative-font-size(0.9375);
   color: $grey-color;
   margin-left: math.div(-$spacing-unit, 2);
-  @extend %clearfix;
+  @include clearfix;
 }
 
 .footer-col {
@@ -227,7 +228,7 @@
   margin: 0 auto;
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-  @extend %clearfix;
+  @include clearfix;
 
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));

@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "variables" as *;
 @use "sass:color";
 
 /**
@@ -398,7 +399,7 @@
    margin-left: auto;
    padding-right: $spacing-unit;
    padding-left: $spacing-unit;
-   @extend %clearfix;
+   @include clearfix;
  
    @include media-query($on-laptop) {
      max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
@@ -413,11 +414,6 @@
  /**
   * Clearfix
   */
- %clearfix:after {
-   content: "";
-   display: table;
-   clear: both;
- }
  
  
  

@@ -1,59 +1,15 @@
 @charset "utf-8";
-@use "sass:color";
 
-// Define defaults for each variable.
-$base-font-family: "Vollkorn", serif !default;
-$base-font-size:   18px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+// Shared variables + mixins.
+@forward "minima/variables";
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Inter", sans-serif; }
-code {
-  font-family: "Berkeley Mono", monospace; }
+// Sass modules.
+@use "minima/base";
+@use "minima/layout";
+@use "minima/syntax-highlighting";
 
-$spacing-unit:     30px !default;
-
-$text-color:       #111 !default;
-$background-color: #fffff8 !default;
-$page-background:  #d0d0d0 !default;
-$brand-color:      #a00000 !default;
-
-$grey-color:       #828282 !default;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%) !default;
-$grey-color-dark:  color.adjust($grey-color, $lightness: -25%) !default;
-
-$table-text-align: left !default;
-
-// Width of the content area
-$content-width:    900px !default;
-
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-@mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
-}
-
-// Import partials.
+// Plain CSS partials.
 @import
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting",
   "css/better-gist-styles.css",
   "css/frontpage.css",
   "css/dropcap.css",
@@ -62,3 +18,8 @@ $on-laptop:        800px !default;
   "css/research-icons.css",
   "css/bibliography.css"
 ;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", sans-serif; }
+code {
+  font-family: "Berkeley Mono", monospace; }

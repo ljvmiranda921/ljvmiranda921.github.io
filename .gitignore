@@ -9,7 +9,7 @@
 # .ruby-version
 .sass-cache
 /vendor
-Gemfile.lock
+# Gemfile.lock
 _site
 bin/
 bbin/
