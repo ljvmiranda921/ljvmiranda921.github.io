@@ -75,7 +75,7 @@
    font-size: $small-font-size;
  }
 
- // Figures from figure.html: centered image + auto-numbered caption
+ // Figure include: image + auto-numbered caption
  .post-figure {
    margin: $spacing-unit auto;
    width: fit-content;
@@ -113,7 +113,7 @@
    }
  }
 
- // Gameboy Camera-style photo strips: framed, grayscale, scroll sideways
+ // Framed grayscale photo strips, scroll sideways
  .post-figure.framed-grayscale {
    img {
      border: 2px solid black;
@@ -136,7 +136,7 @@
    border-radius: 8px;
  }
 
- // Table caption, above the table, auto-numbered like figures
+ // Table caption above the table, auto-numbered
  .table-caption {
    font-size: $small-font-size;
    color: color.adjust($text-color, $lightness: 27%);
@@ -152,7 +152,7 @@
    }
  }
 
- // Caption for inline SVG/iframe figures; shares the figure counter
+ // Caption for inline SVG/iframe figures
  .svg-caption {
    font-size: $small-font-size;
    color: color.adjust($text-color, $lightness: 27%);
@@ -168,7 +168,7 @@
    }
  }
 
- // Side-by-side image rows that scroll sideways on narrow screens
+ // Side-by-side image rows, scroll sideways
  .img-row {
    overflow-x: auto;
 
@@ -220,9 +220,10 @@
    text-wrap: pretty;
  }
 
- // Justify prose (needs lang="en" for hyphenation)
+ // Left-aligned prose with hyphenation
  p {
-   text-align: justify;
+   text-align: left;
+   text-wrap: pretty;
    -webkit-hyphens: auto;
    hyphens: auto;
    hyphenate-limit-chars: 7 4 3;
@@ -233,7 +234,7 @@
    text-align: center;
  }
 
- // Tabular figures so table numbers line up in columns
+ // Tabular figures in tables
  table {
    font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1;
  }
@@ -269,7 +270,7 @@
  /**
   * Blockquotes
   */
- // Book-style quotations: indentation and italics, no border chrome
+ // Book-style quotations
  blockquote {
    color: $grey-color;
    font-style: italic;
@@ -280,7 +281,7 @@
      margin-bottom: 0;
    }
 
-   // Attribution footer from the quote.html include
+   // Attribution footer
    footer {
      text-align: right;
      font-style: normal;
@@ -354,7 +355,7 @@
      border-top: 1px solid $text-color;
    }
 
-   // The ornament, knocking out the line behind it
+   // The ornament
    &::after {
      display: inline-block;
      content: "\2767";
@@ -379,7 +380,7 @@
    @include relative-font-size(0.875);
  }
 
- // Inline code stays \texttt-style: plain monospace, no box
+ // Inline code: plain monospace, no box
  pre {
    border: 1px solid $grey-color-light;
    border-radius: 3px;

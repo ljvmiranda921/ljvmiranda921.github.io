@@ -75,7 +75,7 @@
   margin-top: 0.2em;
   color: $grey-color; // the &middot; separators
 
-  // Fit links on one line on mobile; balance the wrap if not
+  // Fit links on one line on mobile
   @include media-query($on-palm) {
     font-size: $small-font-size;
     text-wrap: balance;
@@ -273,7 +273,7 @@
   @include relative-font-size(2);
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  // Sans display reads better slightly tightened
+  // Slightly tightened
   letter-spacing: -0.01em;
   line-height: 1.15;
 
@@ -284,9 +284,9 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
-  counter-reset: figure table; // for auto-numbered figure/table captions
+  counter-reset: figure table;
 
-  // Bond headings to the section below: more space above, less below
+  // More space above heading, less below
   h2, h3, h4 {
     margin-top: $spacing-unit;
     margin-bottom: calc(#{$spacing-unit} / 4);
