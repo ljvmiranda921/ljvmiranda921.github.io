@@ -10,20 +10,29 @@ cookie-free and open source).
 
 ## Set-up
 
-Make sure that you have [bundler](https://bundler.io/) and
-[Ruby 2.7.0](https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/) in
-your system:
+The site pins its Ruby version in [`.ruby-version`](.ruby-version), so on a new
+machine it's easiest to match it with [rbenv](https://github.com/rbenv/rbenv)
+instead of your system Ruby:
 
 ```shell
-sudo apt-get -y ruby ruby-dev
+# macOS with Homebrew (on Linux, install rbenv via your package manager)
+brew install rbenv ruby-build
+echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc && exec zsh
+```
+
+Then clone the repo and let rbenv grab the pinned Ruby, along with
+[bundler](https://bundler.io/):
+
+```shell
+git clone https://github.com/ljvmiranda921/ljvmiranda921.github.io.git
+cd ljvmiranda921.github.io/
+rbenv install   # reads .ruby-version
 gem install bundler
 ```
 
-Then, build the dependencies and call `jekyll serve`
+Finally, build the dependencies and call `jekyll serve`:
 
 ```shell
-git clone https://github.com/ljvmiranda921/ljvmiranda921.github.io.git 
-cd ljvmiranda921.github.io/
 bundle install
 bundle exec jekyll serve --livereload
 ```
@@ -33,9 +42,9 @@ The page, by default, should be running at [localhost:4000](localhost:4000)
 ## Citations and references
 
 The site uses [`jekyll-scholar`](https://github.com/inukshuk/jekyll-scholar) with
-APA style formatting. 
-For notebook posts, references are stored in 
-BibTeX files under `_bibliography/notebook/`, and rendered from each post via:
+the Association for Computational Linguistics citation style.
+References are stored as BibTeX files under `_bibliography`, and rendered from
+each post via:
 
 ```liquid
 {% bibliography --file notebook/<post-slug>.bib %}
