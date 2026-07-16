@@ -6,7 +6,7 @@
 .byebug_history
 .jekyll-metadata
 .ruby-gemset
-.ruby-version
+# .ruby-version
 .sass-cache
 /vendor
 Gemfile.lock
