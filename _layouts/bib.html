@@ -30,4 +30,16 @@
   {% capture rendered_reference %}{{ rendered_reference }} Preprint, arXiv:{{ arxiv_id }}.{% endcapture %}
 {% endunless %}
 
+{% comment %}
+  The ACL CSL glues the issued month onto the preceding address with no
+  separator (e.g. "Dominican RepublicNovember."). Insert a ", " before the
+  glued month so it reads "..., Dominican Republic, November.".
+{% endcomment %}
+{% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
+{% for mo in months %}
+  {% assign glued = mo | append: ". " %}
+  {% assign fixed = ", " | append: mo | append: ". " %}
+  {% assign rendered_reference = rendered_reference | replace: glued, fixed %}
+{% endfor %}
+
 {{ rendered_reference }}
