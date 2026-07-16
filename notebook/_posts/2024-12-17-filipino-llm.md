@@ -16,13 +16,13 @@ excerpt: |
 ---
 
 <span class="firstcharacter">B</span>ack when I started working in Filipino NLP, my standard approach in training models is to encode linguistics knowledge via meticulous data annotation, feature engineering, and extensive testing.
-Take [calamanCy](https://ljvmiranda921/calamanCy) for example: we spent countless hours annotating [named-entity recognition (NER)](https://aclanthology.org/2023.sealp-1.2/) datasets and validating [dependency parsing treebanks](https://huggingface.co/datasets/UD-Filipino/UD_Tagalog-NewsCrawl) to train statistical models using frameworks like [spaCy](https://spacy.io).
+Take [calamanCy](https://ljvmiranda921/calamanCy) for example: we spent countless hours annotating named-entity recognition (NER) {% cite miranda2023 --file notebook/filipino-llm.bib %} datasets and validating [dependency parsing treebanks](https://huggingface.co/datasets/UD-Filipino/UD_Tagalog-NewsCrawl) to train statistical models using frameworks like [spaCy](https://spacy.io).
 Back then, these components typically power larger systems that handle tasks like information extraction and question answering. But lately, we've seen how LLMs can tackle these tasks end-to-end, without needing any of these components at all.
 
 The pace of progress in multilingual LLMs has also been relentless this year.
 We've seen several high-profile releases such as Meta's [Llama 3.1](https://ai.meta.com/blog/meta-llama-3-1/), Cohere for AI's [Aya Expanse](https://cohere.com/blog/aya-expanse-connecting-our-world), and Southeast Asian models such as AI Singapore's [SEA-LION](https://sea-lion.ai/) and Sea AI's [Sailor](https://huggingface.co/collections/sail/sailor2-language-models-674d7c9e6b4dbbd9a869906b).
 Sure, one can still argue that building custom-made pipelines is still viable because current LLMs don't always work well on Filipino (and I've argued these before [[1](/notebook/2023/08/04/llm-tagalog/)] [[2](/notebook/2024/07/02/talk-dlsu/)]) and that there are [advantages in building modular, non-black box components](https://speakerdeck.com/inesmontani/applied-nlp-with-llms-beyond-black-box-monoliths),
-but the [impressive gains in multilinguality](https://huggingface.co/CohereForAI/aya-101) from [data scale](https://arxiv.org/abs/2001.08361) have changed my perspective somewhat.
+but the [impressive gains in multilinguality](https://huggingface.co/CohereForAI/aya-101) from data scale {% cite kaplan2020 --file notebook/filipino-llm.bib %} have changed my perspective somewhat.
 
 While I still believe in building artisanal Filipino NLP resources, I now see that **we need to simultaneously support the development of multilingual LLMs by creating high-quality Filipino datasets and benchmarks.**
 This way, we can **actively push for the inclusion of Philippine languages in the next generation of multilingual LLMs**, rather than just waiting for improvements to happen on their own.
@@ -52,7 +52,7 @@ This stage usually involves two main steps: instruction finetuning (IFT) and pre
 I want to focus on the former.
 Most IFT data comes in question-answer pairs containing a _user instruction_, an optional _context_, and a given _response_.
 
-<!-- PreFT data, on the other hand, consists of human preferences on model outputs, which can be collected either [manually](https://arxiv.org/abs/2204.05862) or using [another language model](https://arxiv.org/abs/2310.01377) (or a [combination of both](https://arxiv.org/abs/2410.19133)). -->
+<!-- PreFT data, on the other hand, consists of human preferences on model outputs, which can be collected either manually {% cite bai2022 --file notebook/filipino-llm.bib %} or using another language model {% cite cui2023 --file notebook/filipino-llm.bib %} (or a combination of both {% cite miranda2024 --file notebook/filipino-llm.bib %}). -->
 
 For the next year or so, I believe there's a **more urgent need for Filipino IFT datasets.**
 
@@ -63,7 +63,7 @@ For the next year or so, I believe there's a **more urgent need for Filipino IFT
 
 I want to focus on collecting IFT data because it can be **tailored to specific domains** and is **more economical to run experiments with**.
 This means that NLP researchers interested in Filipino can still continue focusing on their own domains of interest while still contributing to this larger goal of improving our Filipino data pool.
-Take [SciRIFF](https://arxiv.org/abs/2406.07835) for example: it contains question answering pairs for scientific literature that serves the authors' own purpose, yet we were able to use it in [T&uuml;lu 3](https://arxiv.org/abs/2411.15124) to build _generalist language models_ that are capable of chat, reasoning, coding, and other skills.
+Take SciRIFF {% cite wadden2024 --file notebook/filipino-llm.bib %} for example: it contains question answering pairs for scientific literature that serves the authors' own purpose, yet we were able to use it in T&uuml;lu 3 {% cite lambert2024 --file notebook/filipino-llm.bib %} to build _generalist language models_ that are capable of chat, reasoning, coding, and other skills.
 In addition, **IFT is computationally cheaper than pretraining**; laboratories with a decent grant and cloud capacity can [easily finetune a 7B-parameter model](https://github.com/hiyouga/LLaMA-Factory?tab=readme-ov-file#hardware-requirement).
 Preference data is also important, but collecting it requires more annotation effort and stronger multilingual models that _actually work_ in Filipino (for that we need good evaluation, which I'll discuss in the [next section](#build-reliable-benchmarks-for-filipino)).
 
@@ -119,7 +119,7 @@ Here's an opportunity: join our <a href="https://grassroots.science">Grassroots 
 
 For the past few years, I've witnessed several grassroots NLP efforts that led to significant breakthroughs in the multilingual world.
 [SEACrowd](https://seacrowd.github.io/) is one example.
-They were able to rally a community of researchers from Southeast Asia (SEA) and [build a data hub for all SEA datasets](https://arxiv.org/abs/2406.10118), which is very much needed today.
+They were able to rally a community of researchers from Southeast Asia (SEA) and build a data hub for all SEA datasets {% cite lovenia2024 --file notebook/filipino-llm.bib %}, which is very much needed today.
 Other examples include [Cohere for AI's Aya](https://share.hsforms.com/10OrjljwpQ52ILJA6ftENIwch5vw) and HuggingFace's [Data is Better Together](https://huggingface.co/data-is-better-together) projects.
 Right now, it's nice to see familiar Filipino faces participating in these communities, but **it would be nice if we can increase our involvement in these larger grassroots projects**.
 
@@ -145,7 +145,7 @@ I believe it is important for us, the Filipino research community, to have a say
 Many indigenous and endangered languages fall into this category due to their limited number of speakers and dedicated NLP researchers.
 Tagalog occupies an interesting middle ground: while we have a large speaker population and presumably extensive written content, there remains a scarcity of readily available datasets for downstream NLP tasks.
 
-One of my favorite papers this year, [_The Zeno's Paradox of Low-Resource Languages_](https://arxiv.org/pdf/2410.20817), helped clarify these definitions by examining how we define "low-resource" across different axes: Artifacts, Resources, Socio-Political factors, and Agency.
+One of my favorite papers this year, _The Zeno's Paradox of Low-Resource Languages_ {% cite nigatu2024 --file notebook/filipino-llm.bib %}, helped clarify these definitions by examining how we define "low-resource" across different axes: Artifacts, Resources, Socio-Political factors, and Agency.
 Although Tagalog has millions of speakers (**&uarr; Resources**), it still lacks high-quality data for several core NLP and language modelling tasks (**&darr; Artifacts**), and there remains significant room for growth in our participatin in developing these language technologies (**&middot; Agency**).
 I appreciate this framework because it provides multiple dimensions for measuring a language's low-resource status, eliminating the need to debate or bikeshed new definitions.
 
@@ -157,4 +157,8 @@ I have some ideas (the ideas in this blog post are just a small part of it), so 
 
 
 [^1]: The Cebuano Wikipedia is the second-largest Wikipedia in terms of number of articles. Although this appears impressive, its size is due to an article-generating bot called [Lsjbot](https://en.wikipedia.org/wiki/Lsjbot) rather than a dedicated group of Wikipedia volunteers. Unfortunately, the articles in Cebuano Wikipedia are unnatural and do not reflect how the language is actually used by native speakers.
-[^2]: This year we published [SEACrowd](https://aclanthology.org/2024.emnlp-main.296/), [Universal NER](https://aclanthology.org/2024.naacl-long.243/), and the [largest Tagalog UD Treebank](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317), but most of these efforts started back in 2023.
+[^2]: This year we published SEACrowd {% cite lovenia2024b --file notebook/filipino-llm.bib %}, Universal NER {% cite mayhew2024 --file notebook/filipino-llm.bib %}, and the [largest Tagalog UD Treebank](https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317), but most of these efforts started back in 2023.
+
+## References
+
+{% bibliography --file notebook/filipino-llm.bib %}

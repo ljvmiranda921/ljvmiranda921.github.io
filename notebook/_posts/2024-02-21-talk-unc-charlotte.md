@@ -45,7 +45,7 @@ Combating disinformation is labor-intensive.
 [Politifact](https://www.politifact.com/), a fact-checking website, relies on volunteer journalists to scour the internet and manually label each source.
 
 There are several efforts to automate the fact-checking process.
-A common approach is to treat it as an NLP pipeline composed of different tasks ([Guo et al., 2022](https://aclanthology.org/2022.tacl-1.11/)).
+A common approach is to treat it as an NLP pipeline composed of different tasks {% cite guo2022 --file notebook/talk-unc-charlotte.bib %}.
 Today, we will only focus on **claim detection**, the first step in an automated fact-checking pipeline.
 
 <div style="text-align: center;">
@@ -115,13 +115,13 @@ So, how good is an LLM annotator?
   <img src="/assets/images/talk-unc-charlotte/slide25.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
 </div>
 
-To test this question, I worked on a portion of the UKP Sentential Argument Mining corpus ([Stab et al., 2018](https://aclanthology.org/D18-1402/)). 
+To test this question, I worked on a portion of the UKP Sentential Argument Mining corpus {% cite stab2018 --file notebook/talk-unc-charlotte.bib %}. 
 It contains several statements across various topics, and the task is to determine whether the statement supports, opposes, or is neutral to the topic&mdash; a text categorization problem.
 
 The process was simple: I included each statement in a prompt and asked GPT-3.5 what the stance was. You can read more about my process in [this blog post](/notebook/2023/03/24/llm-annotation/). 
 My findings show that LLMs, when prompted in a zero-shot manner, are competitive on a baseline that I trained on the original labels.
 In addition, I also found myself annotating faster (and more correctly) when correcting LLM annotations compared to annotating from scratch.
-The latter finding is important because correcting annotations induces less cognitive load and human effort ([Li et al., 2023](https://aclanthology.org/2023.emnlp-main.92/), [Zhang et al., 2023](https://arxiv.org/abs/2311.04345)).
+The latter finding is important because correcting annotations induces less cognitive load and human effort {% cite li2023 zhang2023 --file notebook/talk-unc-charlotte.bib %}.
 
 <div style="text-align: center;">
   <img src="/assets/images/talk-unc-charlotte/slide27.jpg" style="border: 1px solid black; padding: 2px; width: 360px">
@@ -132,7 +132,7 @@ So, if LLMs can already provide competitive annotations, is our problem solved?
 We don't have to annotate anymore?
 Remember, the reason why we collect these annotations is so that we can train a supervised model that can reliably approximate the task we're interested in.
 The operating word here is reliable.
-There's a huge variance in LLM performance, and one way to *thin out* that curve is to insert it in a human-in-the-loop workflow ([Dai et al., 2023](https://arxiv.org/pdf/2310.15100.pdf); [Boubdir et al., 2023](https://arxiv.org/pdf/2310.14424.pdf); [Wang et al., 2023](https://arxiv.org/pdf/2305.17926.pdf)).
+There's a huge variance in LLM performance, and one way to *thin out* that curve is to insert it in a human-in-the-loop workflow {% cite dai2023 boubdir2023 wang2023 --file notebook/talk-unc-charlotte.bib %}.
 
 ### Directing annotations by providing extra info in the UI
 
@@ -160,7 +160,7 @@ The process is similar to the first section, but I prompt for auxiliary informat
 LLMs make this possible because we can formulate each task as a question-answer pair.
 You'll find examples of my prompt in the slides below.
 The prompt on the left is a straightforward span labeling prompt, where we ask the LLM to provide the exact spans from a text.
-On the other hand, the prompt on the right is a chain-of-thought prompt ([Wei et al., 2023](https://arxiv.org/abs/2201.11903)). 
+On the other hand, the prompt on the right is a chain-of-thought prompt {% cite wei2022 --file notebook/talk-unc-charlotte.bib %}. 
 Here, we induce an LLM to perform a series of reasoning tasks to arrive at a final answer.
 
 <div style="text-align: center;">
@@ -175,7 +175,7 @@ On the bottom left, you'll see that it highlights the claims and premises for ea
 On the bottom right, you'll find that the  UI metadata now contains the prompt's reasoning steps.
 
 There are many creative ways to improve annotation efficiency (and quality) using LLMs. 
-One of my favorite papers from EMNLP was CoAnnotating ([Li et al., 2023](https://aclanthology.org/2023.emnlp-main.92.pdf)), which uses an uncertainty metric to allocate annotation tasks between humans and a chat model such as ChatGPT.
+One of my favorite papers from EMNLP was CoAnnotating {% cite li2023 --file notebook/talk-unc-charlotte.bib %}, which uses an uncertainty metric to allocate annotation tasks between humans and a chat model such as ChatGPT.
 We've seen a lot of LLM-as-an-assistant applications in the market for the past year, and I think that there's an opportunity to apply the same perspective to the task of annotation.
 
 ### Revealing ambiguity in our annotation guidelines
@@ -228,7 +228,7 @@ Before we end, I want to share an important question before you begin your annot
 You should always ask yourself: what is the label supposed to reflect?
 Knowing what you want to use the collected dataset for is paramount.
 
-[Rottger et al. (2022)](https://arxiv.org/pdf/2112.07475.pdf) named two paradigms for data annotation: prescriptive and descriptive.
+{% citet rottger2021 --file notebook/talk-unc-charlotte.bib %} named two paradigms for data annotation: prescriptive and descriptive.
 **Prescriptive** annotation is usually found in linguistic tasks such as named entity recognition or parts-of-speech tagging&mdash;where there is a "correct" answer for each instance. 
 Here, you already have a function in mind and need to collect enough data to train a reliable model.
 On the other hand, **descriptive** annotation aims to capture the whole diversity of human judgment.
@@ -239,7 +239,7 @@ You'd usually find this in subjective tasks like hate speech detection or human 
 </div>
 
 LLMs are pretty good at prescriptive annotation tasks.
-Some empirical evidence that supports it ([Ashok et al., 2023](https://arxiv.org/pdf/2305.15444.pdf); [Chen et al., 2023](https://arxiv.org/pdf/2311.08723.pdf); [Sun et al., 2023](https://arxiv.org/pdf/2305.08377.pdf)), and it allows us to access the web-scale data it was pretrained upon.
+Some empirical evidence that supports it {% cite ashok2023 chen2023 sun2023 --file notebook/talk-unc-charlotte.bib %}, and it allows us to access the web-scale data it was pretrained upon.
 
 And now to my final point: despite their web-scale and zero-shot capabilities, LLMs are only as good as how well you prompt them.
 During my early days in data science, there is this common adage: "garbage in, garbage out."
@@ -247,3 +247,7 @@ Usually, we say this when we want to refer to bad data.
 The problem with prompts is that the degree of freedom is much higher, which introduces ambiguity to our inputs.
 Hence, I don't recommend using LLM outputs straight from the firehose and serving it immediately.
 There should be an intermediary step that minimizes this uncertainty, and that step is human annotation.
+
+## References
+
+{% bibliography --file notebook/talk-unc-charlotte.bib %}
