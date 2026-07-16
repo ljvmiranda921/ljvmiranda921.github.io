@@ -53,7 +53,7 @@ my benchmarking results, and my hopes for the future of Tagalog NLP.
 - [**Experimental results**](#results)
     - [Finding the best word vector training setup](#word-vector-setup)
     - [Finding the best language model training setup](#language-model-setup)
-    - [Evaluating our pipelines](#eval-pipeline)
+    - [Evaluating our pipelines](#eval-pipelines)
 - [**Conclusion**](#conclusion)
     - [Next steps](#next-steps)
     - [Caveats](#caveats)
@@ -718,17 +718,4 @@ collaborate! *Maraming salamat!*
 
 ## References
 
-- <a id="conneau2019xlm">Conneau, Alexis, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume Wenzek, Francisco Guzmán, Edouard Grave, Myle Ott, Luke Zettlemoyer, and Veselin Stoyanov.</a> "Unsupervised cross-lingual representation learning at scale." *arXiv preprint arXiv:1911.02116* (2019).
--  <a id="mortensen">David Mortensen.</a>, *Undated*. Low-Resource NLP. Algorithms for Natural Language Processing [[Slides]](http://demo.clab.cs.cmu.edu/algo4nlp20/slides/low-resource-nlp.pdf)
-- <a id="gorman2019standard">Kyle Gorman and Steven Bedrick.</a> 2019. We Need to Talk about Standard Splits. In *Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics*, pages 2786–2791, Florence, Italy. Association for Computational Linguistics.
-- <a id="cruz2022tlunified">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2022. [Improving Large-scale Language Models and Resources for Filipino](https://aclanthology.org/2022.lrec-1.703/). In *Proceedings of the Thirteenth Language Resources and Evaluation Conference*, pages 6548–6555, Marseille, France. European Language Resources Association.
-- <a id="cruz2019wikitext">Jan Christian Blaise Cruz and Charibeth Cheng</a>. 2019. [Evaluating Language Model Finetuning Techniques for Low-resource Languages](https://arxiv.org/abs/1907.00409) *arXiv:1907.00409*.
-- <a id="liu2019roberta">Liu, Yinhan, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, and Veselin Stoyanov.</a> "Roberta: A robustly optimized bert pretraining approach." *arXiv preprint arXiv:1907.11692* (2019).
-- <a id="joshi2021state">Pratik Joshi, Sebastin Santy, Amar Budhiraja, Kalika Bali, and Monojit Choudhury.</a> 2020. The State and Fate of Linguistic Diversity and Inclusion in the NLP World. In *Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics*, pages 6282–6293, Online. Association for Computational Linguistics.
-- <a id="artstein2017inter">Ron Artstein</a>. Inter-annotator Agreement. In: Ide Nancy & Pustejovsky James (eds.) *Handbook of Linguistic Annotation.* Springer, Dordrecht, 2017. DOI 10.1007/978-94-024-0881-2.
-- <a id="sogaard2021random">Anders Søgaard, Sebastian Ebert, Jasmijn Bastings, and Katja Filippova.</a> 2021. We Need To Talk About Random Splits. In *Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume*, pages 1823–1832, Online. Association for Computational Linguistics.
-- <a id="vajjala2022sota">Sowmya Vajjala, and Ramya Balasubramaniam.</a> "What do we Really Know about State of the Art NER?." *arXiv preprint arXiv:2205.00034* (2022).
-- <a id="pan2017wikiann">Xiaoman Pan, Boliang Zhang, Jonathan May, Joel Nothman, Kevin Knight, and Heng Ji.</a> 2017. [Cross-lingual Name Tagging and Linking for 282 Languages](https://aclanthology.org/P17-1178). In *Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)*, pages 1946–1958, Vancouver, Canada. Association for Computational Linguistics.
-- <a id="tsvetkov2017opportunities">Yulia Tsvetkov</a>, 2017. Opportunities and Challenges in Working with Low-Resource Languages. Language Technologies Institute, Carnegie Mellon University. [[Slides]](https://www.cs.cmu.edu/~ytsvetko/jsalt-part1.pdf). 
-- <a id="morales2017diskarte">Marie Rose H. Morales</a>, 2017. Defining Diskarte: Exploring Cognitive Processes, Personality Traits, and Social Constraints in Creative Problem Solving, *Philippine Journal of Psychology* vol. 50, no. 2.
-
+{% bibliography --file notebook/tagalog-pipeline.bib %}

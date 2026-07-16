@@ -1,6 +1,6 @@
 # ljvmiranda921.github.io
 
-[![pages-build-deployment](https://github.com/ljvmiranda921/ljvmiranda921.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ljvmiranda921/ljvmiranda921.github.io/actions/workflows/pages/pages-build-deployment)
+[![Deploy Jekyll site to Pages](https://github.com/ljvmiranda921/ljvmiranda921.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/ljvmiranda921/ljvmiranda921.github.io/actions/workflows/pages.yml)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 This is the source code for my [blog](https://ljvmiranda921.github.io). It's a
@@ -29,6 +29,17 @@ bundle exec jekyll serve --livereload
 ```
 
 The page, by default, should be running at [localhost:4000](localhost:4000)
+
+## Citations and references
+
+The site uses [`jekyll-scholar`](https://github.com/inukshuk/jekyll-scholar) with
+APA style formatting. 
+For notebook posts, references are stored in 
+BibTeX files under `_bibliography/notebook/`, and rendered from each post via:
+
+```liquid
+{% bibliography --file notebook/<post-slug>.bib %}
+```
 
 ## Contribute
 

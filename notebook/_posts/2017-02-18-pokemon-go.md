@@ -42,8 +42,7 @@ hide some types so you can focus or compare between different types. Enjoy!
 - To make the "magic quadrant" more pleasing to look at, I applied zero-mean centering in my data. This means that I took the mean of the two features, and subtracted it to all my samples. You can access the [GitHub repo](https://github.com/ljvmiranda921/pkmn) for the source code.
 - As you can see, I am only plotting the Primary types of each Pok&eacute;mon. I still haven't figured an elegant way of showing those that are double-typed. That's why you'll see Pidgey and Spearow classified as Normal-types, and Seel and Dewgong as Water-types. If you have nice ideas, just comment below!
 
-### Sources
-- `The_Desert_Rain` (2016). [Analysis on Catch Rates and Encounters](https://www.reddit.com/r/TheSilphRoad/comments/4vs70r/analysis_on_catch_rates_and_encounters/), Reddit, [r/TheSilphRoad](https://www.reddit.com/r/TheSilphRoad/)
-- `homu` (2016). [Base Capture Rate](https://www.reddit.com/r/TheSilphRoad/comments/4v52le/base_capture_rate/i), Reddit, [r/TheSilphRoad](https://www.reddit.com/r/TheSilphRoad/)
-- `Zeroghan` (2016). [Pokemon GO Spawn Rate](https://pokemongohub.net/pokemon-go-spawn-rate/), PokemonGO Hub.
-- Barradas, Alberto (2016). [PokemonGO Dataset](https://www.kaggle.com/abcsds/pokemongo), Kaggle.
+## References
+
+{% bibliography --file notebook/pokemon-go.bib %}
+

@@ -112,7 +112,5 @@ first implemented to construct the initial tour.
 
 ## References
 
-- <a id="engelbrecht2007computational">Engelbrecht, Andres</a> (2007). *Computational Intelligence: An Introduction*, John Wiley & Sons.
-- <a id="dorigo1992optimization">Dorigo, Marco</a> (1992). *Optimization, Learning, and Natural Algorithms*, PhD Thesis, Politecnico di Milano.
+{% bibliography --file notebook/ant-colony-optimization-tsp.bib %}
 
-You can access the gist [here.](https://gist.github.com/ljvmiranda921/ca93059bc213531fd99af22955b6bf5f)

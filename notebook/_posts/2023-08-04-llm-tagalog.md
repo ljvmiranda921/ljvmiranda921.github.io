@@ -195,14 +195,5 @@ Finally, there might also be a good argument for building an LLM geared towards 
 
 ## References
 
-- <a id="bender2021parrots">Emily Bender, Timnit Gebru, Angelina McMillan-Major and Margaret Mitchell</a>. “On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜.” Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (2021): n. pag.
-- <a id="cabasag2019hatespeech">Neil Vicente P. Cabasag, Vicente Raphael C. Chan, Sean Christian Y. Lim, Mark Edward M. Gonzales, and Charibeth K. Cheng.</a> 2019. Hate Speech in Philippine Election-Related Tweets: Automatic Detection and Classification Using Natural Language Processing. *Philippine Computing Journal Dedicated Issue on Natural Language Processing*, pages 1–14.
-- <a id="livelo2018dengue">Evan Dennison S. Livelo and Charibeth Ko Cheng.</a> 2018. Intelligent Dengue Infoveillance Using Gated Recurrent Neural Learning and Cross-Label Frequencies. *2018 IEEE International Conference on Agents (ICA)*, pages 2–7.
-- <a id="cruz2021tlunified">Jan Christian Blaise Cruz and Charibeth Ko Cheng.</a> 2021. Improving Large-scale Language Models and Resources for Filipino. In *International Conference on Language Resources and Evaluation*
-- <a id="conneau2019xlmr">Alexis Conneau, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume Wenzek, Francisco Guzmán, Edouard Grave, Myle Ott, Luke Zettlemoyer, and Veselin Stoyanov.</a> 2019. Unsupervised Cross-lingual Representation Learning at Scale. In *Annual Meeting of the Association for Computational Linguistics*.
-- <a id="devlin2019bert">Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.</a> 2019. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv, abs/1810.04805
-- <a id="wang2022WhatLM">Thomas Wang, Adam Roberts, Daniel Hesslow, Teven Le Scao, Hyung Won Chung, Iz Beltagy, Julien Lauanay, and Colin Raffel.</a> 2022. What Language Model Architecture and Pretraining Objective Work Best for Zero-Shot Generalization? *Proceedings of the 39th International Conference on Machine Learning*.
-- <a id="lin2022xglm">Xi Victoria Lin, , Todor Mihaylov, Mikel Artetxe, Tianlu Wang, Shuohui Chen, Daniel Simig, Myle Ott, Naman Goyal, Shruti Bhosale, Jingfei Du, Ramakanth Pasunuru, Sam Shleifer, Punit Singh Koura, Vishrav Chaudhary, Brian O'Horo, Jeff Wang, Luke Zettlemoyer, Zornitsa Kozareva, Mona T. Diab, Ves Stoyanov and Xian Li.</a> 2022. Few-shot Learning with Multilingual Generative Language Models. *Conference on Empirical Methods in Natural Language Processing.*
-- <a id="scao2022bloom">Teven Le Scao, Angela Fan, Thomas Wolf and others</a> 2022. BLOOM: A 176B-Parameter Open-Access Multilingual Language Model. *ArXiV:abs/2211.05100*.
-- <a id="wei2022cot">Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Ed Huai-hsin Chi, F. Xia, Quoc Le and Denny Zhou.</a> “Chain of Thought Prompting Elicits Reasoning in Large Language Models.” ArXiv abs/2201.11903 (2022): n. pag.
-- <a id="cohen2023kb">Roi Cohen, Mor Geva, Jonathan Berant and Amir Globerson.</a> “Crawling The Internal Knowledge-Base of Language Models.” *Findings of the ACL* (2023).
+{% bibliography --file notebook/llm-tagalog.bib %}
+

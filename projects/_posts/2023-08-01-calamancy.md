@@ -176,7 +176,7 @@ language-specific adapters for efficiency.
 
 ### FAQs
 
-- **Can I use this in production?** Yes. Compared to my [previous blog post](notebook/2023/02/04/tagalog-pipeline/), the NER corpora has been [reannotated](/notebook/2023/07/03/devlog-calamancy/) with multiple annotators so I'm more confident with our corpus. However, note that some of the datasets used for training have non-commercial licenses, so the application of calamanCy is still restricted.
+- **Can I use this in production?** Yes. Compared to my [previous blog post](/notebook/2023/02/04/tagalog-pipeline/), the NER corpora has been [reannotated](/notebook/2023/07/03/devlog-calamancy/) with multiple annotators so I'm more confident with our corpus. However, note that some of the datasets used for training have non-commercial licenses, so the application of calamanCy is still restricted.
 - **The licenses are too restrictive!** It's quite unfortunate that the UD treebanks and pretraining corpora available for Tagalog have stricter licenses. Aside from creating a new
 corpora myself, I'm still thinking of ways to get around that. If you have any ideas, then let me know!
 - **What's the design decision for only including X component?** I want to make calamanCy as general-purpose as possible yet flexible enough to be finetuned on specific tasks.
@@ -187,13 +187,7 @@ If you have any questions, feel free to reach out on [Github](https://github.com
 
 ## References
 
-- <a id="samson2018trg">Stephanie Dawn Samson.</a> 2018. A treebank prototype of Tagalog. Bachelor’s thesis, University of Tübingen, Germany.
-- <a id="aquino2020ugnayan">Angelina A. Aquino and Franz A. de Leon.</a> 2020. Parsing in the absence of related languages: Evaluating low-resource dependency parsers on Tagalog. In *Universal Dependencies Workshop*.
-- <a id="cabasag2019hatespeech">Neil Vicente P. Cabasag, Vicente Raphael C. Chan, Sean Christian Y. Lim, Mark Edward M. Gonzales, and Charibeth K. Cheng.</a> 2019. Hate Speech in Philippine Election-Related Tweets: Automatic Detection and Classification Using Natural Language Processing. *Philippine Computing Journal Dedicated Issue on Natural Language Processing*, pages 1–14.
-- <a id="livelo2018dengue">Evan Dennison S. Livelo and Charibeth Ko Cheng.</a> 2018. Intelligent Dengue Infoveillance Using Gated Recurrent Neural Learning and Cross-Label Fre- quencies. *2018 IEEE International Conference on Agents (ICA)*, pages 2–7.
-- <a id="cruz2021tlunified">Jan Christian Blaise Cruz and Charibeth Ko Cheng.</a> 2021. Improving Large-scale Language Models and Resources for Filipino. In *International Conference on Language Resources and Evaluation*
-- <a id="conneau2019xlmr">Alexis Conneau, Kartikay Khandelwal, Naman Goyal, Vishrav Chaudhary, Guillaume Wenzek, Francisco Guzmán, Edouard Grave, Myle Ott, Luke Zettlemoyer, and Veselin Stoyanov.</a> 2019. Unsupervised Cross-lingual Representation Learning at Scale. In *Annual Meeting of the Association for Computational Linguistics*.
-- <a id="devlin2019bert">Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.</a> 2019. BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding. ArXiv, abs/1810.04805
+{% bibliography --file projects/calamancy.bib %}
 
 
 

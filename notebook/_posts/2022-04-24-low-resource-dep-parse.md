@@ -65,7 +65,7 @@ For Tagalog, you only have two choices for treebanks:
 [TRG](https://universaldependencies.org/treebanks/tl_trg/index.html)[^1]
 ([Schachtner and Otanes, 1983](#schachtner1983trg) and Samson, S., 2020) and
 [Ugnayan](https://universaldependencies.org/treebanks/tl_ugnayan/index.html)
-([Aquino and de Leon, 2020](#aquino2020parsing)).  The former contains 128
+([Aquino and de Leon, 2020](#aquino-de-leon-2020-parsing)).  The former contains 128
 sentences and 734 tokens, while the latter has 94 sentences and 1011 tokens.
 It's not much especially when you compare them to some English treebanks like
 [Atis](https://github.com/UniversalDependencies/UD_English-Atis/blob/master/README.md)
@@ -82,7 +82,7 @@ almost 50x the amount of tokens than us.[^2]
 This then begs the question: *how can we reliably train and evaluate a model
 from a low-resource language?*
 - For **training**, it seems that it's possible to train a parser and get decent
-accuracy with just about 100 sentences ([Nivre, et al, 2017](#nivre2017tutorial)), so we'll stick with the treebanks that
+accuracy with just about 100 sentences ([Nivre, et al, 2017](#zeman-2021-universal)), so we'll stick with the treebanks that
 we have. We will use spaCy's default training configuration which you can find
 in [this
 repository](https://github.com/ljvmiranda921/ud-tagalog-spacy/blob/master/configs/default.cfg).
@@ -242,7 +242,7 @@ As for our metrics, we'll measure the following:
 - **`MORPH_ACC`**: the overall accuracy of our morphologizer based on the [Universal Dependencies FEATS format](https://universaldependencies.org/format.html#morphological-annotation). 
 - **`DEP_UAS / DEP_LAS`**: the accuracy of the dependency parser. The former is the
     unlabeled attachment score while the latter is called the labeled attachment
-    score ([Nivre and Fang, 2017](#nivre2017universal)).
+    score ([Nivre and Fang, 2017](#nivre-fang-2017-universal)).
 
 It pays to measure other attributes of our model even if we're only concerned
 with dependency parsing. I didn't bother that much with NER because I have a
@@ -279,7 +279,7 @@ languages are the following: they should be (1) closer to Tagalog, and (2)
 must have a decent amount of data (not low-resource). 
 
 For the former, I used a distance metric to identify languages that are
-typologically similar to Tagalog ([Agić, 2017](#agic2017parser)).[^5] In this
+typologically similar to Tagalog ([Agić, 2017](#agic-2017-cross)).[^5] In this
 case, these are Indonesian (id), Vietnamese (vi), Romanian (ro), Ukranian (uk),
 and Catalan (ca).
 
@@ -362,7 +362,7 @@ enough, a large part of this endeavor involves gritty work.
 
 Lastly, you can treat this blogpost as a reproduction of the paper, *"Parsing in
 the absence of related languages: evaluating low-resource dependency parsers on
-Tagalog"* ([Aquino and de Leon, 2020](#aquino2020parsing)). Here, they used
+Tagalog"* ([Aquino and de Leon, 2020](#aquino-de-leon-2020-parsing)). Here, they used
 [stanza](https://stanfordnlp.github.io/stanza/) and
 [UDPipe](https://cran.r-project.org/web/packages/udpipe/index.html), but I want
 to check how it fares with spaCy. This [Connected Papers](https://www.connectedpapers.com/main/ae807124961fd4a9eb02f288b4fc70bc8840a58e/Parsing-in-the-absence-of-related-languages%3A-Evaluating-low%20resource-dependency-parsers-on-Tagalog/graph)
@@ -373,71 +373,14 @@ If you're interested to see the code and datasets used in this project, then
 feel free to head over [the Github
 repository](https://github.com/ljvmiranda921/ud-tagalog-spacy).
 
-### References
+## References
 
-* <a id="agic2017parser">Željko, A.</a>Cross-lingual Parser Selection for
-    Low-Resource Languages. In: *Proceedings of the NoDaLiDa 2017 Workshop on
-    Universal Dependencies*, pages 1-10, Gothenburg, Sweden, Association for
-    Computational Lingustics.
-* <a id="aquino2020parsing">Aquino, A. and de Leon, F.</a> Parsing in the
-    absence of related languages: Evaluating low-resource dependency parsers on
-    Tagalog. In *Proceedings of the Fourth Workshoup on Universal Dependencies
-    (UDW 2020)*, pages 8-15, ACL.
-* <a id="dryer2013wals">Dryer, M. and Haspelmath, M.</a>*The World Atlas of
-    Language Structures Online*. Max Planck Institute for Evolutionary Anthropology, Leipzig.   
-* <a id="lui2017langid">Lui, M. and Baldwin, T.</a>langid.py: An Off-theShelf
-    Language Identification Tool. In: *Proceedings of the ACL 2012 System
-    Demonstrations*, pages 25-30, Jeju Island, Korea. Association for
-    Computational Linguistics.
-* <a id="nivre2017tutorial">Nivre, J., Zeman, D., Ginter F., Tyers, F.</a> Tutorial
-    on Universal Dependencies: Adding a new language to UD. Presented at the *15th Conference
-    of the European Chapter of the Association for Computational Linguistics*, 2017.
-* <a id="nivre2017universal">Nivre, J. and Fang C-T.</a> Universal Dependency
-    Evaluation. In: *Proceedings of the NoDaLiDa 2017 Workshop on Universal
-    Dependencies*, pages 86-95, Gothenburg, Sweden. Association for Computational
-    Linguistics
-* <a id="schachtner1983trg">Schachter, P. and Otanes, F.</a>Tagalog Reference
-    Grammar. *University of California Press*, 1983.
+{% bibliography --file notebook/low-resource-dep-parse.bib %}
 
+[^1]: This treebank got its name from Tagalog Reference Grammar (TRG) by Schachter and Otanes. Most of the texts in the TRG treebank were lifted from this source.
+[^2]: And we're just talking about Universal Dependencies treebanks for English. In the Linguistic Data Consortium inventory, you have the Penn treebank and OntoNotes with almost more than a million words each!
+[^3]: Other toolkits for dependency parsing include UDPipe (which in my research is only available to R), and Stanford Stanza's `depparse` pipeline.
+[^4]: Aside from the first sentence, the last two were song lyrics from a band called Eraserheads. The first one came from the song Huwag mo nang Itanong, while the second came from Alapaap. I definitely botched the translations so I'm sorry for that!
+[^5]: It's based on the Language Identification (LangID) tool of Lui and Baldwin ([2012](#lui-baldwin-2012-langid)), combined with some of the features in the World Atlas of Language Structures (WALS) ([Dryer and Haspelmath, 2013](#dryer2013wals)).
+[^6]: Not to mention that these data sources should have commercially-friendly licenses: you'd want to avoid texts with copyright, etc.
 
-
-
-[^1]:
-
-    This treebank got its name from *Tagalog Reference Grammar* (TRG) by
-    Schachter and Otanes. Most of the texts in the TRG treebank were lifted
-    from this source.
-
-[^2]:
-
-    And we're just talking about Universal Dependencies treebanks for English.
-    In the Linguistic Data Consortium inventory, you have the [Penn
-    treebank](https://catalog.ldc.upenn.edu/LDC99T42) and  OntoNotes with
-    almost more than a million words each!
-
-[^3]:
-
-    Other toolkits for dependency parsing include
-    [UDPipe](https://cran.r-project.org/web/packages/udpipe/index.html) (which
-    in my research is only available to R), and Stanford
-    [Stanza](https://stanfordnlp.github.io/stanza/)'s [`depparse`
-    pipeline](https://stanfordnlp.github.io/stanza/depparse.html). 
-
-[^4]:
-
-    Aside from the first sentence, the last two were song lyrics from a band
-    called [*Eraserheads*](https://en.wikipedia.org/wiki/Eraserheads). The
-    first one came from the song *Huwag mo nang Itanong*, while the second
-    came from *Alapaap*. I definitely botched the translations so I'm sorry for
-    that!
-
-[^5]:
-
-    It's based on the Language Identification (LangID) tool of Lui and Baldwin
-    ([2012](#lui2017langid)), combined with some of the features in the World Atlas
-    of Language Structures (WALS) ([Dryer and Haspelmath, 2013](#dryer2013wals)).
-
-[^6]:
-
-    Not to mention that these data sources should have commercially-friendly
-    licenses: you'd want to avoid texts with copyright, etc.

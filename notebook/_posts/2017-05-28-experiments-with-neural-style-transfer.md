@@ -58,7 +58,7 @@ from previous experience, this may take more than 30 minutes to run.
 
 ## References
 
-* <a id="gatys2015neural">Gatys, Leaon, Echker, Alexander and Bethge, Matthias</a> (2015). "A Neural Algorithm of Artistic Style". In: *arXiv:1508.06576[cs.CV]*
+{% bibliography --file notebook/experiments-with-neural-style-transfer.bib %}
 
 ### Other neural style implementations
 

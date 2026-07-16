@@ -271,28 +271,5 @@ below!
 
 ## References
 
-- <a id="shnarch2018unsupervised">Eyal Shnarch, Leshem Choshen, Guy Moshkowich,
-Ranit Aharonov, and Noam Slonim.</a> 2020. Unsupervised Expressive Rules Provide
-Explainability and Assist Human Experts Grasping New Domains. In *Findings of the
-Association for Computational Linguistics: EMNLP 2020*, pages 2678–2697, Online.
-Association for Computational Linguistics.
-- <a id="levy2018towards">Ran Levy, Ben Bogin, Shai Gretz, Ranit Aharonov, and
-Noam Slonim.</a> 2018. Towards an argumentative content search engine using weak
-supervision. In *Proceedings of the 27th International Conference on
-Computational Linguistics*, pages 2066–2081, Santa Fe, New Mexico, USA.
-Association for Computational Linguistics.
-- <a id="morante2020vaccination">Roser Morante, Chantal van Son, Isa Maks, and
-Piek Vossen.</a> 2020. Annotating Perspectives on Vaccination. In *Proceedings of
-the Twelfth Language Resources and Evaluation Conference*, pages 4964–4973,
-Marseille, France. European Language
-Resources Association.
-- <a id="stab2018ukp">Stab, C., Miller, T., Schiller, B., Rai, P., and Gurevych,
-I.</a> (2018). Cross-topic argument mining from heterogeneous sources. In
-*Proceedings of the 2018 Conference on Empirical Methods in Natural Language
-Processing*, pages 3664–3674, Brussels, Belgium, October-November. Association
-for Computational Linguistics.
-- <a id="jakobsen2022sensitivity">Thorn Jakobsen, T.S., Barrett, M., Søgaard,
-A., & Lassen, D.S.</a> (2022). The Sensitivity of Annotator Bias to Task
-Definitions in Argument Mining. In *Proceedings of the 16th Linguistic
-Annotation Workshop (LAW-XVI) within LREC2022*, pp. 44-61, Marseille, France.
-European Language Resources Association.
+{% bibliography --file notebook/langchain-annotation.bib %}
+

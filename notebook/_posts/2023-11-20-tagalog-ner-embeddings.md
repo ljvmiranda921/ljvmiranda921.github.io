@@ -169,8 +169,5 @@ For now, I think this is fun!
 
 ## References
 
-- <a id="swayamdipta2020cartography">Swabha Swayamdipta, Roy Schwartz, Nicholas Lourie, Yizhong Wang, Hannaneh Hajishirzi, Noah A. Smith, and Yejin Choi.</a> 2020. Dataset Cartography: Mapping and Diagnosing Datasets with Training Dynamics. In *Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP)*, pages 9275–9293, Online. Association for Computational Linguistics.
-- <a id="balasubramanian2020name">Sriram Balasubramanian, Naman Jain, Gaurav Jindal, Abhijeet Awasthi, and Sunita Sarawagi.</a> 2020. What’s in a Name? Are BERT Named Entity Representations just as Good for any other Name?. In *Proceedings of the 5th Workshop on Representation Learning for NLP*, pages 205–214, Online. Association for Computational Linguistics.
-- <a id="rheault2019parliamentary">Ludovic Rheault and Christopher Cochrane. 2020. Word Embeddings for the Analysis of Ideological Placement in Parliamentary Corpora. *Political Analysis*, 28(1), 112-133. doi:10.1017/pan.2019.26.
-- <a id="prost2019debiasing">Flavien Prost, Nithum Thain, and Tolga Bolukbasi</a>. 2019. Debiasing Embeddings for Reduced Gender Bias in Text Classification. In *Proceedings of the First Workshop on Gender Bias in Natural Language Processing*, pages 69–75, Florence, Italy. Association for Computational Linguistics.
-- <a id="kaneko2021debiasing">Masahiro Kaneko and Danushka Bollegala. 2021. Debiasing Pre-trained Contextualised Embeddings.</a> In *Proceedings of the 16th Conference of the European Chapter of the Association for Computational Linguistics: Main Volume*, pages 1256–1266, Online. Association for Computational Linguistics.
+{% bibliography --file notebook/tagalog-ner-embeddings.bib %}
+
