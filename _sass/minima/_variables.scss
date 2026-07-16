@@ -1,0 +1,46 @@
+@use "sass:color";
+
+// Font + color defaults.
+$base-font-family: "Vollkorn", serif !default;
+$base-font-size:   18px !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+
+$text-color:       #111 !default;
+$background-color: #fffff8 !default;
+$page-background:  #d0d0d0 !default;
+$brand-color:      #a00000 !default;
+
+$grey-color:       #828282 !default;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%) !default;
+$grey-color-dark:  color.adjust($grey-color, $lightness: -25%) !default;
+
+$table-text-align: left !default;
+
+$content-width:    900px !default;
+$on-palm:          600px !default;
+$on-laptop:        800px !default;
+
+// Wrap content in a max-width media query.
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+// Size relative to the base font.
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Contain floats.
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
