@@ -227,6 +227,9 @@
    -webkit-hyphens: auto;
    hyphens: auto;
    hyphenate-limit-chars: 7 4 3;
+   -webkit-hyphenate-limit-lines: 2;
+   hyphenate-limit-lines: 2;
+   overflow-wrap: break-word;
  }
 
  // Center paragraphs that are just an image
