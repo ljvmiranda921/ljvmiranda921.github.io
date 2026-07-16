@@ -1,0 +1,60 @@
+/* Bibliography / references
+   Rendered by jekyll-scholar (CSL: association-for-computational-linguistics)
+   wrapped by _layouts/bib.html. Styled to read as quiet reference apparatus:
+   smaller and muted, framed by top/bottom rules like the <details> block,
+   with a hanging indent and oldstyle figures. */
+
+/* The "References" heading becomes a quiet italic label with a top rule,
+   echoing the summary/details treatment instead of a loud sans-serif H2. */
+h2:has(+ ol.bibliography) {
+  font-family: "Vollkorn", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1rem;
+  border-top: 1px solid #111;
+  padding-top: 15px;
+  margin-top: 30px;
+  margin-bottom: 0.6em;
+}
+
+ol.bibliography {
+  font-size: 0.8em;
+  line-height: 1.4;
+  color: #2b2b2b;
+  font-feature-settings: "onum" 1;   /* oldstyle figures for years/pages/vols */
+
+  /* hanging indent instead of numbered list — removes the <ol> left padding
+     and lets author surnames sit flush left for scanning */
+  list-style: none;
+  padding: 0 0 15px 0;
+  margin: 0 0 30px 0;
+  border-bottom: 1px solid #111;
+}
+
+ol.bibliography li {
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  margin-bottom: 0.55em;
+}
+
+ol.bibliography li:last-child {
+  margin-bottom: 0;
+}
+
+/* Links in references stay subdued rather than brand-red, so a dense list
+   of citations does not turn into a wall of colour. */
+ol.bibliography a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.4px;
+  text-underline-offset: 2px;
+}
+
+ol.bibliography a:hover {
+  color: #a00000;
+}
+
+/* Give anchor jumps (#citekey) a little breathing room below the top rule. */
+ol.bibliography li > span[id] {
+  scroll-margin-top: 1.5em;
+}
