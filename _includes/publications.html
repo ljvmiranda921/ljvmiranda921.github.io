@@ -1,4 +1,5 @@
-{% for pub in site.data.publications %}
+{%- assign pubs = include.data | default: site.data.publications -%}
+{% for pub in pubs %}
 <div class="pub-entry">
 <div class="pub-img">
 <img src="{{ pub.image }}" alt="{{ pub.title }}">

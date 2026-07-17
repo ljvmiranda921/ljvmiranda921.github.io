@@ -1,0 +1,78 @@
+# Filipino NLP publications shown on /filipino-nlp/.
+# Same schema as publications.yaml; image is optional.
+
+- title: "FilBench: Can LLMs Generate and Understand Filipino?"
+  image: "/assets/images/research/filbench.png"
+  url: "https://aclanthology.org/2025.emnlp-main.127/"
+  venue: "EMNLP '25 Main"
+  authors: "<b>Lester James V. Miranda&#42;</b>, Elyanah Aco&#42;, Conner Manuel&#42;, Jan Christian Blaise Cruz, Joseph Marvin Imperial"
+  links:
+    - label: Code
+      url: "https://github.com/filbench/filbench-eval"
+    - label: Website
+      url: "https://huggingface.co/spaces/UD-Filipino/filbench-leaderboard"
+
+- title: "The UD-NewsCrawl Treebank: Reflections and Challenges from a Large-scale Tagalog Syntactic Annotation Project"
+  image: "/assets/images/research/ud-newscrawl.png"
+  url: "https://aclanthology.org/2025.acl-long.357/"
+  venue: "ACL '25 Main"
+  authors: "Angelina A. Aquino&#42;, <b>Lester James V. Miranda&#42;</b>, Elsie Marie T. Or&#42;"
+  links:
+    - label: Dataset
+      url: "https://huggingface.co/collections/UD-Filipino/universal-dependencies-for-tagalog-67573d625baa5036fd59b317"
+    - label: Slides
+      url: "https://drive.google.com/file/d/1LGm4v9ZsSftDHI9vkl9mj1BYBSZZX_uA/view?usp=drive_link"
+    - label: Poster
+      url: "https://drive.google.com/file/d/16ONq_xmRrUgvALirWEwX0BpZnn1OtqwH/view?usp=drive_link"
+    - label: Video
+      url: "https://youtu.be/W4cONaL_otI?si=DgfmF0_7zkOmI_ma"
+
+- title: "SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages"
+  image: "/assets/images/research/seacrowd.png"
+  url: "https://aclanthology.org/2024.emnlp-main.296/"
+  venue: "EMNLP '24 Main"
+  authors: "Holy Lovenia&#42;, Rahmad Mahendra&#42;, Salsabil Maulana Akbar&#42;, <b>Lester James Miranda&#42;</b>, and 50+ other authors <i>(&#42;: major contributor)</i>."
+  links:
+    - label: Code
+      url: "https://github.com/SEACrowd/seacrowd-datahub"
+    - label: Website
+      url: "https://seacrowd.github.io/seacrowd-catalogue"
+
+- title: "Universal NER: A Gold-Standard Multilingual Named Entity Recognition Benchmark"
+  image: "/assets/images/research/universal-ner.png"
+  url: "https://aclanthology.org/2024.naacl-long.243/"
+  venue: "NAACL '24 Main"
+  authors: "Stephen Mayhew, Terra Blevins, Shuheng Liu, Marek Šuppa, Hila Gonen, Joseph Marvin Imperial, Börje F. Karlsson, Peiqin Lin, Nikola Ljubešić, <b>LJ Miranda</b>, Barbara Plank, Arij Riabi, Yuval Pinter"
+  links:
+    - label: Dataset
+      url: "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GQ8HDL"
+    - label: Website
+      url: "https://www.universalner.org/"
+
+- title: "calamanCy: a Tagalog Natural Language Processing Toolkit"
+  image: "/assets/images/research/calamancy.png"
+  url: "https://aclanthology.org/2023.nlposs-1.1/"
+  venue: "NLP Open-Source Software (NLP-OSS) Workshop @ EMNLP '23"
+  authors: "<b>Lester James V. Miranda</b>"
+  links:
+    - label: Code
+      url: "https://github.com/ljvmiranda921/calamanCy"
+    - label: Poster
+      url: "https://drive.google.com/file/d/1Q_-4Lf9ZL9ZCYS5aWPhRnCfHPhGwlBp6/view?usp=drive_link"
+    - label: Video
+      url: "https://youtu.be/2fbzs1KbFTQ?si=_vKEY11Z1Jzuaxeu"
+
+- title: "Developing a Named Entity Recognition Dataset for Tagalog"
+  image: "/assets/images/research/tlunified-ner.png"
+  url: "https://aclanthology.org/2023.sealp-1.2/"
+  venue: "Southeast Asian Language Processing (SEALP) Workshop @ IJCNLP-AACL '23"
+  authors: "<b>Lester James V. Miranda</b>"
+  links:
+    - label: Code
+      url: "https://github.com/ljvmiranda921/calamanCy/tree/master/reports/aacl2023/benchmark"
+    - label: Dataset
+      url: "https://huggingface.co/datasets/ljvmiranda921/tlunified-ner"
+    - label: Slides
+      url: "https://drive.google.com/file/d/1QVbW7Myou6U6cSqrlz5p_35Sl__008kG/view?usp=drive_link"
+    - label: Video
+      url: "https://www.youtube.com/watch?v=WAJ8IEIHuiM"
