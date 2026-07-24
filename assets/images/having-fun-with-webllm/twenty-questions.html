@@ -225,7 +225,7 @@
 <body>
 <div class="wrap">
 
-  <h1>20 Questions <span style="font-weight:400">🔮</span></h1>
+  <h1>20 Questions</h1>
   <p class="sub">Figure out a secret word within 20 questions!</p>
 
   <div id="screen-nogpu" class="card fallback hidden">
@@ -237,11 +237,11 @@
     <label class="field">Game mode</label>
     <div class="modes" id="mode-picker">
       <button class="mode-btn active" data-mode="iguess">
-        <strong>🤖 I Guess</strong>
+        <strong>I Guess</strong>
         <span>The model picks a secret word. You ask up to 20 yes/no questions to figure it out.</span>
       </button>
       <button class="mode-btn" data-mode="llmguess">
-        <strong>🧠 LLM Guesses</strong>
+        <strong>LLM Guesses</strong>
         <span>You think of a word, then the model asks the questions. You reply with yes / no / sort of.</span>
       </button>
     </div>
@@ -298,7 +298,7 @@
     <div class="answer-emojis" id="score-emojis"></div>
     <dl id="score-dl"></dl>
     <div class="share-box" id="share-box"></div>
-    <button class="ghost" id="btn-copy">📋 Copy share text</button>
+    <button class="ghost" id="btn-copy">Copy share text</button>
     <div class="copy-note" id="copy-note"></div>
     <div style="margin-top:18px">
       <button class="primary" id="btn-again">Play again</button>
@@ -318,13 +318,12 @@ const MODELS = [
   { id: "Phi-3.5-mini-instruct-q4f16_1-MLC",  name: "Phi-3.5 mini",   size: "~2.4 GB" },
 ];
 
-const CATEGORIES = {
-  animal: ["dog","cat","elephant","penguin","dolphin","kangaroo","owl","octopus","tiger","rabbit","horse","frog","bat","giraffe","bee","shark","snake","crocodile","koala","hedgehog"],
-  object: ["umbrella","telescope","guitar","backpack","candle","mirror","hammer","clock","scissors","toothbrush","kite","compass","lantern","piano","teapot","stapler","skateboard","binoculars","violin","anchor"],
-  place:  ["beach","library","volcano","airport","desert","castle","lighthouse","farm","waterfall","subway","cave","museum","forest","bridge","harbor","glacier","stadium","temple","market","observatory"],
-  food:   ["pizza","banana","sushi","pancake","avocado","noodles","popcorn","cheese","mango","donut","pickle","waffle","coconut","dumpling","pretzel","watermelon","burrito","cupcake","oyster","chili"],
-  person: ["astronaut","chef","pirate","detective","firefighter","clown","farmer","wizard","nurse","sailor","painter","librarian","referee","blacksmith","magician","gardener","pilot","barber"],
-};
+const CATEGORY_HINTS = [
+  "animal", "food", "everyday object", "place", "plant", "vehicle",
+  "household item", "sport", "musical instrument", "article of clothing",
+  "profession", "natural feature", "tool", "kitchen item", "toy",
+];
+const FALLBACK_SECRET = { category: "object", word: "umbrella" };
 
 let engine = null;
 let loadedModelId = null;
@@ -398,11 +397,6 @@ async function onStart() {
     if (!cat || !word) { alert("Tell me a category and your secret word first!"); return; }
     game.category = cat.toLowerCase();
     game.secret = word;
-  } else {
-    const cats = Object.keys(CATEGORIES);
-    game.category = cats[Math.floor(Math.random() * cats.length)];
-    const words = CATEGORIES[game.category];
-    game.secret = words[Math.floor(Math.random() * words.length)];
   }
 
   show("loading");
@@ -415,7 +409,42 @@ async function onStart() {
     return;
   }
 
+  if (game.mode === "iguess") {
+    $("progress-fill").style.width = "100%";
+    $("progress-text").textContent = "Thinking of a secret word…";
+    await pickSecret();
+  }
+
   startGame();
+}
+
+async function pickSecret() {
+  const hint = CATEGORY_HINTS[Math.floor(Math.random() * CATEGORY_HINTS.length)];
+  const messages = [
+    { role: "system", content:
+      "You are setting up a game of 20 Questions. Choose ONE specific, common secret word that a curious player could reasonably guess. " +
+      "Use a concrete everyday noun, not a proper noun, not something obscure. " +
+      "Reply with ONLY a JSON object of the form {\"category\":\"...\",\"word\":\"...\"} and nothing else." },
+    { role: "user", content: `Pick a fresh secret word in the category: ${hint}.` },
+  ];
+  try {
+    const reply = await engine.chat.completions.create({
+      messages,
+      temperature: 1.1,
+      max_tokens: 40,
+      response_format: { type: "json_object" },
+    });
+    const raw = reply.choices[0].message.content || "";
+    const obj = JSON.parse((raw.match(/\{[\s\S]*\}/) || [raw])[0]);
+    const word = String(obj.word || "").trim();
+    const category = String(obj.category || hint).trim().toLowerCase();
+    if (!word) throw new Error("empty word");
+    game.secret = word;
+    game.category = category;
+  } catch (e) {
+    game.secret = FALLBACK_SECRET.word;
+    game.category = FALLBACK_SECRET.category;
+  }
 }
 
 async function ensureEngine(modelId) {
@@ -547,7 +576,7 @@ async function onGuess() {
   addTurn("you", `<em>My guess:</em> ${escapeHtml(g)}`);
 
   if (matchesSecret(g, game.secret)) {
-    addTurn("host", `🎉 Yes! It was <strong>${escapeHtml(game.secret)}</strong>. You got it in ${game.used}!`);
+    addTurn("host", `Yes! It was <strong>${escapeHtml(game.secret)}</strong>. You got it in ${game.used}!`);
     setBusy(false);
     endGame(true);
   } else {
@@ -590,7 +619,7 @@ async function onAnswer(kind) {
   updateCounter();
 
   if (game.pendingGuess && kind === "yes") {
-    addTurn("system", `🎯 The model guessed <strong>${escapeHtml(game.secret)}</strong> in ${game.used}!`);
+    addTurn("system", `The model guessed <strong>${escapeHtml(game.secret)}</strong> in ${game.used}!`);
     setBusy(false);
     endGame(true, true);
     return;
@@ -615,10 +644,10 @@ function endGame(won, llmWasGuesser = (game.mode === "llmguess")) {
 
   let verdict, cls;
   if (game.mode === "iguess") {
-    verdict = won ? "🏆 You win!" : "😵 Out of questions!";
+    verdict = won ? "You win!" : "Out of questions!";
     cls = won ? "win" : "loss";
   } else {
-    verdict = won ? "🤖 The model wins!" : "🙈 You stumped it!";
+    verdict = won ? "The model wins!" : "You stumped it!";
     cls = won ? "win" : "loss";
   }
   $("verdict").textContent = verdict;
@@ -632,7 +661,7 @@ function endGame(won, llmWasGuesser = (game.mode === "llmguess")) {
   dl.innerHTML = "";
   const rows = [
     ["Result", won ? "Win" : "Loss"],
-    ["The answer", game.secret],
+    ["Secret word", game.secret],
     ["Category", game.category],
     ["Mode", game.mode === "iguess" ? "I Guess" : "LLM Guesses"],
     ["Model", game.modelName],
@@ -647,8 +676,9 @@ function endGame(won, llmWasGuesser = (game.mode === "llmguess")) {
 
   const modeLabel = game.mode === "iguess" ? "I Guess" : "LLM Guesses";
   const share =
-`20 Questions 🔮 — ${modeLabel}
+`20 Questions — ${modeLabel}
 ${game.modelName} · ${game.category}
+Secret word: ${game.secret}
 ${emojiLine}
 ${game.used}/${game.max} · ${timeStr}`;
   game.shareText = share;
