@@ -6,16 +6,16 @@
 <title>20 Questions with an LLM</title>
 <style>
   :root {
-    --bg:            #fffff8;   /* page background (cream) */
-    --panel:         #fffffdff; /* card background        */
-    --ink:           #111111;   /* primary text           */
-    --muted:         #6b6b63;   /* secondary text         */
-    --accent:        #a00000;   /* brand / accent (red)   */
-    --accent-ink:    #ffffff;   /* text on accent         */
-    --line:          #e2e2d6;   /* hairline borders       */
-    --yes:           #3f8f4f;   /* yes  🟢                */
-    --no:            #b23b3b;   /* no   🔴                */
-    --sortof:        #c99a2e;   /* sortof 🟡              */
+    --bg:            #fffff8;
+    --panel:         #fffffdff;
+    --ink:           #111111;
+    --muted:         #6b6b63;
+    --accent:        #a00000;
+    --accent-ink:    #ffffff;
+    --line:          #e2e2d6;
+    --yes:           #3f8f4f;
+    --no:            #b23b3b;
+    --sortof:        #c99a2e;
     --radius:        6px;
     --serif: "Vollkorn", "Iowan Old Style", Georgia, "Times New Roman", serif;
     --mono:  "SFMono-Regular", "Menlo", "Consolas", monospace;
@@ -70,7 +70,6 @@
   }
   select:focus, input:focus { outline: 2px solid var(--accent); outline-offset: 0; }
 
-  /* segmented mode toggle */
   .modes { display: flex; gap: 10px; margin-top: 6px; }
   .mode-btn {
     flex: 1;
@@ -119,7 +118,6 @@
 
   .hidden { display: none !important; }
 
-  /* progress */
   .progress-track {
     height: 10px;
     background: var(--line);
@@ -135,7 +133,6 @@
   }
   .progress-text { color: var(--muted); font-size: 0.85rem; font-family: var(--mono); white-space: pre-wrap; }
 
-  /* game header row */
   .game-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
   .pill {
     font-family: "Vollkorn SC", var(--serif);
@@ -146,7 +143,6 @@
   }
   .counter { font-family: var(--mono); font-size: 0.9rem; color: var(--accent); }
 
-  /* conversation */
   .convo {
     max-height: 46vh;
     min-height: 120px;
@@ -163,8 +159,6 @@
     color: var(--muted);
     margin-bottom: 2px;
   }
-  .turn .msg { }
-  .turn.host .msg { }
   .turn.you .msg { color: var(--accent); }
   .turn.system .msg { color: var(--muted); font-style: italic; }
   .dot-typing::after { content: "…"; animation: blink 1.2s steps(3) infinite; }
@@ -172,7 +166,6 @@
 
   .answer-emojis { font-size: 0.95rem; letter-spacing: 2px; margin: 2px 0 10px; }
 
-  /* input rows */
   .input-row { display: flex; gap: 8px; }
   .input-row input { flex: 1; }
   .ans-btns { display: flex; gap: 8px; flex-wrap: wrap; }
@@ -181,7 +174,6 @@
   .ans-btns .b-no     { border-color: var(--no);  color: var(--no); }
   .ans-btns .b-sortof { border-color: var(--sortof); color: #9a7411; }
 
-  /* score card */
   .score { text-align: center; }
   .score .verdict { font-size: 1.6rem; margin: 4px 0 2px; }
   .score .verdict.win  { color: var(--yes); }
@@ -217,13 +209,11 @@
   <h1>20 Questions <span style="font-weight:400">🔮</span></h1>
   <p class="sub">A small language model runs entirely in your browser via WebGPU. Nothing leaves your device.</p>
 
-  <!-- ============ WebGPU fallback ============ -->
   <div id="screen-nogpu" class="card fallback hidden">
     <p style="font-size:1.1rem">⚠️ WebGPU isn't available in this browser.</p>
     <p class="hint">This game needs WebGPU to run the model locally. Try the latest <strong>Chrome</strong>, <strong>Edge</strong>, or <strong>Safari&nbsp;18+</strong> on a desktop. On Firefox you may need to enable <code>dom.webgpu.enabled</code>.</p>
   </div>
 
-  <!-- ============ Start menu ============ -->
   <div id="screen-start" class="card hidden">
     <label class="field">Game mode</label>
     <div class="modes" id="mode-picker">
@@ -237,7 +227,6 @@
       </button>
     </div>
 
-    <!-- Mode-2 secret entry -->
     <div id="secret-fields" class="hidden">
       <label class="field" for="secret-cat">Category <span class="hint">(the model sees this)</span></label>
       <input type="text" id="secret-cat" placeholder="animal, object, place, food…" />
@@ -252,7 +241,6 @@
     <button class="primary" id="btn-start">Download model &amp; start →</button>
   </div>
 
-  <!-- ============ Loading ============ -->
   <div id="screen-loading" class="card hidden">
     <p style="margin-top:0"><strong>Downloading model…</strong></p>
     <p class="hint">The model is cached after the first time, so future games load instantly.</p>
@@ -260,7 +248,6 @@
     <div class="progress-text" id="progress-text">Initializing…</div>
   </div>
 
-  <!-- ============ Game ============ -->
   <div id="screen-game" class="card hidden">
     <div class="game-head">
       <span class="pill" id="game-pill">—</span>
@@ -268,7 +255,6 @@
     </div>
     <div class="convo" id="convo"></div>
 
-    <!-- Mode 1: ask / guess -->
     <div id="ctrl-ask" class="hidden">
       <div class="input-row">
         <input type="text" id="ask-input" placeholder="Ask a yes/no question…" autocomplete="off" />
@@ -280,7 +266,6 @@
       </div>
     </div>
 
-    <!-- Mode 2: answer buttons -->
     <div id="ctrl-answer" class="hidden">
       <div class="ans-btns">
         <button class="ghost b-yes"    data-ans="yes">🟢 Yes</button>
@@ -290,7 +275,6 @@
     </div>
   </div>
 
-  <!-- ============ Score card ============ -->
   <div id="screen-score" class="card score hidden">
     <div class="verdict" id="verdict">—</div>
     <div class="answer-emojis" id="score-emojis"></div>
@@ -308,9 +292,6 @@
 <script type="module">
 import * as webllm from "https://esm.run/@mlc-ai/web-llm";
 
-/* ------------------------------------------------------------------ *
- *  Config
- * ------------------------------------------------------------------ */
 const MODELS = [
   { id: "Llama-3.2-1B-Instruct-q4f16_1-MLC",  name: "Llama 3.2 1B",   size: "~0.9 GB", note: "Fastest. Small brain, big heart." },
   { id: "Qwen2.5-1.5B-Instruct-q4f16_1-MLC",  name: "Qwen2.5 1.5B",   size: "~1.1 GB", note: "Quick and a decent guesser." },
@@ -327,21 +308,18 @@ const CATEGORIES = {
   person: ["astronaut","chef","pirate","detective","firefighter","clown","farmer","wizard","nurse","sailor","painter","librarian","referee","blacksmith","magician","gardener","pilot","barber"],
 };
 
-/* ------------------------------------------------------------------ *
- *  State
- * ------------------------------------------------------------------ */
 let engine = null;
 let loadedModelId = null;
 let busy = false;
 
 const game = {
-  mode: "iguess",         // "iguess" | "llmguess"
+  mode: "iguess",
   modelId: MODELS[0].id,
   modelName: MODELS[0].name,
   category: "",
-  secret: "",             // the answer
-  messages: [],           // full chat history for the LLM
-  answers: [],            // emoji sequence
+  secret: "",
+  messages: [],
+  answers: [],
   used: 0,
   max: 20,
   over: false,
@@ -349,22 +327,15 @@ const game = {
   startTime: 0,
 };
 
-/* ------------------------------------------------------------------ *
- *  Screen helpers
- * ------------------------------------------------------------------ */
 const $ = (id) => document.getElementById(id);
 const screens = ["nogpu","start","loading","game","score"];
 function show(name) {
   screens.forEach(s => $("screen-" + s).classList.toggle("hidden", s !== name));
 }
 
-/* ------------------------------------------------------------------ *
- *  Boot
- * ------------------------------------------------------------------ */
 function boot() {
   if (!navigator.gpu) { show("nogpu"); return; }
 
-  // populate model dropdown
   const sel = $("model-select");
   MODELS.forEach(m => {
     const opt = document.createElement("option");
@@ -379,7 +350,6 @@ function boot() {
     updateModelNote();
   });
 
-  // mode picker
   $("mode-picker").querySelectorAll(".mode-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       $("mode-picker").querySelectorAll(".mode-btn").forEach(b => b.classList.remove("active"));
@@ -407,9 +377,6 @@ function updateModelNote() {
   $("model-note").textContent = m ? m.note : "";
 }
 
-/* ------------------------------------------------------------------ *
- *  Start a round → load model → begin
- * ------------------------------------------------------------------ */
 async function onStart() {
   game.modelId = $("model-select").value;
   game.modelName = MODELS.find(m => m.id === game.modelId).name;
@@ -421,14 +388,12 @@ async function onStart() {
     game.category = cat.toLowerCase();
     game.secret = word;
   } else {
-    // model picks: choose category + word
     const cats = Object.keys(CATEGORIES);
     game.category = cats[Math.floor(Math.random() * cats.length)];
     const words = CATEGORIES[game.category];
     game.secret = words[Math.floor(Math.random() * words.length)];
   }
 
-  // load model
   show("loading");
   $("progress-fill").style.width = "0%";
   $("progress-text").textContent = "Initializing…";
@@ -458,9 +423,6 @@ async function ensureEngine(modelId) {
   }
 }
 
-/* ------------------------------------------------------------------ *
- *  Game setup
- * ------------------------------------------------------------------ */
 function startGame() {
   game.messages = [];
   game.answers = [];
@@ -503,9 +465,6 @@ function startGame() {
   }
 }
 
-/* ------------------------------------------------------------------ *
- *  Conversation rendering
- * ------------------------------------------------------------------ */
 function addTurn(who, html) {
   const labels = { host: "The Model", you: "You", system: "" };
   const div = document.createElement("div");
@@ -529,9 +488,6 @@ function setBusy(b) {
   $("ctrl-answer").querySelectorAll("button").forEach(x => x.disabled = b);
 }
 
-/* ------------------------------------------------------------------ *
- *  LLM call
- * ------------------------------------------------------------------ */
 async function complete(temperature = 0.6) {
   const reply = await engine.chat.completions.create({
     messages: game.messages,
@@ -541,7 +497,6 @@ async function complete(temperature = 0.6) {
   return (reply.choices[0].message.content || "").trim();
 }
 
-/* ---- Mode 1: I Guess ---- */
 async function onAsk() {
   if (busy || game.over) return;
   const q = $("ask-input").value.trim();
@@ -586,7 +541,6 @@ async function onGuess() {
     endGame(true);
   } else {
     addTurn("host", `Nope — that's not it. Keep going!`);
-    // keep the model's history consistent
     game.messages.push({ role: "user", content: `Is it "${g}"?` });
     game.messages.push({ role: "assistant", content: `No, it is not "${g}".` });
     game.answers.push("🔴");
@@ -596,7 +550,6 @@ async function onGuess() {
   }
 }
 
-/* ---- Mode 2: LLM Guesses ---- */
 async function llmAsk() {
   if (game.over) return;
   setBusy(true);
@@ -608,7 +561,6 @@ async function llmAsk() {
   typing.querySelector(".msg").innerHTML = escapeHtml(q);
   $("convo").scrollTop = $("convo").scrollHeight;
 
-  // did the model just guess the secret word?
   game.pendingGuess = matchesSecret(q, game.secret);
   setBusy(false);
 }
@@ -626,7 +578,6 @@ async function onAnswer(kind) {
   game.used++;
   updateCounter();
 
-  // If the model's previous message was a guess of the secret and player said yes → win
   if (game.pendingGuess && kind === "yes") {
     addTurn("system", `🎯 The model guessed <strong>${escapeHtml(game.secret)}</strong> in ${game.used}!`);
     setBusy(false);
@@ -635,7 +586,6 @@ async function onAnswer(kind) {
   }
 
   if (game.used >= game.max) {
-    // last-chance: reveal
     addTurn("system", `Out of questions! You were thinking of <strong>${escapeHtml(game.secret)}</strong>.`);
     setBusy(false);
     endGame(false, true);
@@ -646,23 +596,18 @@ async function onAnswer(kind) {
   llmAsk();
 }
 
-/* ------------------------------------------------------------------ *
- *  End + score card
- * ------------------------------------------------------------------ */
 function endGame(won, llmWasGuesser = (game.mode === "llmguess")) {
   game.over = true;
   game.won = won;
   const secs = Math.round((Date.now() - game.startTime) / 1000);
   const timeStr = fmtTime(secs);
 
-  // verdict wording depends on who was guessing
   let verdict, cls;
   if (game.mode === "iguess") {
     verdict = won ? "🏆 You win!" : "😵 Out of questions!";
     cls = won ? "win" : "loss";
   } else {
     verdict = won ? "🤖 The model wins!" : "🙈 You stumped it!";
-    // "win" here = a satisfying outcome for the reader; color by whether guesser succeeded
     cls = won ? "win" : "loss";
   }
   $("verdict").textContent = verdict;
@@ -689,7 +634,6 @@ function endGame(won, llmWasGuesser = (game.mode === "llmguess")) {
     dl.appendChild(row);
   });
 
-  // share text
   const modeLabel = game.mode === "iguess" ? "I Guess" : "LLM Guesses";
   const share =
 `20 Questions 🔮 — ${modeLabel}
@@ -703,15 +647,11 @@ ${game.used}/${game.max} · ${timeStr}`;
   show("score");
 }
 
-/* ------------------------------------------------------------------ *
- *  Share / clipboard
- * ------------------------------------------------------------------ */
 async function onCopy() {
   try {
     await navigator.clipboard.writeText(game.shareText);
     $("copy-note").textContent = "Copied to clipboard!";
   } catch (e) {
-    // fallback
     const ta = document.createElement("textarea");
     ta.value = game.shareText;
     document.body.appendChild(ta);
@@ -722,15 +662,11 @@ async function onCopy() {
   }
 }
 
-/* ------------------------------------------------------------------ *
- *  Utilities
- * ------------------------------------------------------------------ */
 function classifyEmoji(text) {
   const t = text.toLowerCase().replace(/^[^a-z]+/, "");
   if (t.startsWith("yes")) return "🟢";
   if (t.startsWith("no")) return "🔴";
   if (/^(sort of|kind of|sometimes|partially|maybe|it depends|not exactly|not really)/.test(t)) return "🟡";
-  // secondary sniff
   if (/\byes\b/.test(t) && !/\bno\b/.test(t)) return "🟢";
   if (/\bno\b/.test(t) && !/\byes\b/.test(t)) return "🔴";
   return "🟡";
@@ -744,10 +680,8 @@ function matchesSecret(text, secret) {
   const nt = normalize(text);
   const ns = normalize(secret);
   if (!ns) return false;
-  // word-boundary containment of the full secret phrase
   const re = new RegExp("\\b" + ns.replace(/ /g, "\\s+") + "\\b");
   if (re.test(nt)) return true;
-  // singular/plural leniency
   if (ns.endsWith("s") && new RegExp("\\b" + ns.slice(0, -1) + "\\b").test(nt)) return true;
   if (!ns.endsWith("s") && new RegExp("\\b" + ns + "s\\b").test(nt)) return true;
   return false;
