@@ -4,6 +4,25 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>20 Questions with an LLM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&family=Vollkorn+SC:wght@400;600;700&display=swap">
+<style>
+  @font-face {
+    font-family: "Berkeley Mono";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/assets/fonts/BerkeleyMono/BerkeleyMono-Regular.woff2") format("woff2"),
+         url("/assets/fonts/BerkeleyMono/BerkeleyMono-Regular.woff") format("woff");
+  }
+  @font-face {
+    font-family: "Berkeley Mono";
+    font-weight: bold;
+    font-style: normal;
+    src: url("/assets/fonts/BerkeleyMono/BerkeleyMono-Bold.woff2") format("woff2"),
+         url("/assets/fonts/BerkeleyMono/BerkeleyMono-Bold.woff") format("woff");
+  }
+</style>
 <style>
   :root {
     --bg:            #fffff8;
@@ -18,7 +37,7 @@
     --sortof:        #c99a2e;
     --radius:        6px;
     --serif: "Vollkorn", "Iowan Old Style", Georgia, "Times New Roman", serif;
-    --mono:  "SFMono-Regular", "Menlo", "Consolas", monospace;
+    --mono:  "Berkeley Mono", "SFMono-Regular", "Menlo", "Consolas", monospace;
     --maxw:  680px;
   }
 
@@ -207,7 +226,7 @@
 <div class="wrap">
 
   <h1>20 Questions <span style="font-weight:400">🔮</span></h1>
-  <p class="sub">A small language model runs entirely in your browser via WebGPU. Nothing leaves your device.</p>
+  <p class="sub">Figure out a secret word within 20 questions!</p>
 
   <div id="screen-nogpu" class="card fallback hidden">
     <p style="font-size:1.1rem">⚠️ WebGPU isn't available in this browser.</p>
@@ -223,27 +242,26 @@
       </button>
       <button class="mode-btn" data-mode="llmguess">
         <strong>🧠 LLM Guesses</strong>
-        <span>You think of a word. The model asks the questions — you answer yes / no / sort of.</span>
+        <span>You think of a word, then the model asks the questions. You reply with yes / no / sort of.</span>
       </button>
     </div>
 
     <div id="secret-fields" class="hidden">
-      <label class="field" for="secret-cat">Category <span class="hint">(the model sees this)</span></label>
+      <label class="field" for="secret-cat">Category</label>
       <input type="text" id="secret-cat" placeholder="animal, object, place, food…" />
-      <label class="field" for="secret-word">Your secret word <span class="hint">(kept on your device, never sent)</span></label>
+      <label class="field" for="secret-word">Your secret word</label>
       <input type="text" id="secret-word" placeholder="e.g. dolphin" autocomplete="off" />
     </div>
 
     <label class="field" for="model-select">Opponent model</label>
     <select id="model-select"></select>
-    <p class="hint" id="model-note"></p>
 
     <button class="primary" id="btn-start">Download model &amp; start →</button>
   </div>
 
   <div id="screen-loading" class="card hidden">
     <p style="margin-top:0"><strong>Downloading model…</strong></p>
-    <p class="hint">The model is cached after the first time, so future games load instantly.</p>
+    <p class="hint">The model will be cached.</p>
     <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
     <div class="progress-text" id="progress-text">Initializing…</div>
   </div>
@@ -293,11 +311,11 @@
 import * as webllm from "https://esm.run/@mlc-ai/web-llm";
 
 const MODELS = [
-  { id: "Llama-3.2-1B-Instruct-q4f16_1-MLC",  name: "Llama 3.2 1B",   size: "~0.9 GB", note: "Fastest. Small brain, big heart." },
-  { id: "Qwen2.5-1.5B-Instruct-q4f16_1-MLC",  name: "Qwen2.5 1.5B",   size: "~1.1 GB", note: "Quick and a decent guesser." },
-  { id: "Llama-3.2-3B-Instruct-q4f16_1-MLC",  name: "Llama 3.2 3B",   size: "~2.3 GB", note: "Sharper, a bit slower to load." },
-  { id: "gemma-2-2b-it-q4f16_1-MLC",          name: "Gemma 2 2B",     size: "~1.9 GB", note: "Balanced and chatty." },
-  { id: "Phi-3.5-mini-instruct-q4f16_1-MLC",  name: "Phi-3.5 mini",   size: "~2.4 GB", note: "Best reasoning here, heaviest download." },
+  { id: "Llama-3.2-1B-Instruct-q4f16_1-MLC",  name: "Llama 3.2 1B",   size: "~0.9 GB" },
+  { id: "Qwen2.5-1.5B-Instruct-q4f16_1-MLC",  name: "Qwen2.5 1.5B",   size: "~1.1 GB" },
+  { id: "Llama-3.2-3B-Instruct-q4f16_1-MLC",  name: "Llama 3.2 3B",   size: "~2.3 GB" },
+  { id: "gemma-2-2b-it-q4f16_1-MLC",          name: "Gemma 2 2B",     size: "~1.9 GB" },
+  { id: "Phi-3.5-mini-instruct-q4f16_1-MLC",  name: "Phi-3.5 mini",   size: "~2.4 GB" },
 ];
 
 const CATEGORIES = {
@@ -343,11 +361,9 @@ function boot() {
     opt.textContent = `${m.name}  ·  ${m.size}`;
     sel.appendChild(opt);
   });
-  updateModelNote();
   sel.addEventListener("change", () => {
     game.modelId = sel.value;
     game.modelName = MODELS.find(m => m.id === sel.value).name;
-    updateModelNote();
   });
 
   $("mode-picker").querySelectorAll(".mode-btn").forEach(btn => {
@@ -370,11 +386,6 @@ function boot() {
   $("btn-again").addEventListener("click", () => show("start"));
 
   show("start");
-}
-
-function updateModelNote() {
-  const m = MODELS.find(x => x.id === game.modelId);
-  $("model-note").textContent = m ? m.note : "";
 }
 
 async function onStart() {
