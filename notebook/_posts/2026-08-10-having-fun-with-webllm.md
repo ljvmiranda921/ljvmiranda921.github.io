@@ -19,9 +19,19 @@ WebLLM allows you to download (~2 GB) language model on your device, so the mode
 
 Here's a game demo of Twenty Questions using this framework (feel free to share your score in the comments below!):
 
-
-
 <div style="text-align: center; margin: 1.5em 0;">
 <iframe src="/assets/images/having-fun-with-webllm/twenty-questions.html" title="20 Questions with an LLM" width="100%" height="720" style="border: 1px solid #e2e2d6; border-radius: 6px; max-width: 720px;"></iframe>
 </div>
+
+## How does WebLLM work?
+
+
+## Setting up the LLM to play 20 Questions
+
+
+## Some observations while playing
+
+
+
+## Final thoughts on Edge Models
 
