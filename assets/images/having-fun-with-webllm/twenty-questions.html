@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>20 Questions with an LLM</title>
+<style>
+  :root {
+    --bg:            #fffff8;   /* page background (cream) */
+    --panel:         #fffffdff; /* card background        */
+    --ink:           #111111;   /* primary text           */
+    --muted:         #6b6b63;   /* secondary text         */
+    --accent:        #a00000;   /* brand / accent (red)   */
+    --accent-ink:    #ffffff;   /* text on accent         */
+    --line:          #e2e2d6;   /* hairline borders       */
+    --yes:           #3f8f4f;   /* yes  🟢                */
+    --no:            #b23b3b;   /* no   🔴                */
+    --sortof:        #c99a2e;   /* sortof 🟡              */
+    --radius:        6px;
+    --serif: "Vollkorn", "Iowan Old Style", Georgia, "Times New Roman", serif;
+    --mono:  "SFMono-Regular", "Menlo", "Consolas", monospace;
+    --maxw:  680px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 22px 18px 40px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 2px;
+    letter-spacing: 0.01em;
+  }
+  .sub { color: var(--muted); font-style: italic; margin: 0 0 20px; font-size: 0.95rem; }
+
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px;
+  }
+
+  label.field { display: block; margin: 16px 0 6px; font-weight: 600; font-size: 0.95rem; }
+  .hint { color: var(--muted); font-size: 0.85rem; font-style: italic; }
+
+  select, input[type="text"] {
+    width: 100%;
+    font-family: var(--serif);
+    font-size: 1rem;
+    padding: 9px 11px;
+    background: var(--bg);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  select:focus, input:focus { outline: 2px solid var(--accent); outline-offset: 0; }
+
+  /* segmented mode toggle */
+  .modes { display: flex; gap: 10px; margin-top: 6px; }
+  .mode-btn {
+    flex: 1;
+    text-align: left;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    cursor: pointer;
+    font-family: var(--serif);
+    color: var(--ink);
+    transition: border-color .12s, background .12s;
+  }
+  .mode-btn:hover { border-color: var(--accent); }
+  .mode-btn.active { border-color: var(--accent); background: #fff7f4; box-shadow: inset 0 0 0 1px var(--accent); }
+  .mode-btn strong { display: block; font-size: 1rem; }
+  .mode-btn span { display: block; color: var(--muted); font-size: 0.82rem; margin-top: 3px; }
+
+  button.primary {
+    display: inline-block;
+    margin-top: 22px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border: none;
+    border-radius: var(--radius);
+    padding: 11px 22px;
+    font-family: var(--serif);
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+  }
+  button.primary:hover { filter: brightness(1.08); }
+  button.primary:disabled { opacity: .5; cursor: not-allowed; }
+
+  button.ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 9px 16px;
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+  button.ghost:hover { border-color: var(--accent); }
+
+  .hidden { display: none !important; }
+
+  /* progress */
+  .progress-track {
+    height: 10px;
+    background: var(--line);
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 14px 0 8px;
+  }
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    transition: width .25s ease;
+  }
+  .progress-text { color: var(--muted); font-size: 0.85rem; font-family: var(--mono); white-space: pre-wrap; }
+
+  /* game header row */
+  .game-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+  .pill {
+    font-family: "Vollkorn SC", var(--serif);
+    font-variant: small-caps;
+    letter-spacing: 0.03em;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  .counter { font-family: var(--mono); font-size: 0.9rem; color: var(--accent); }
+
+  /* conversation */
+  .convo {
+    max-height: 46vh;
+    min-height: 120px;
+    overflow-y: auto;
+    padding: 4px 2px;
+    margin-bottom: 14px;
+  }
+  .turn { margin: 0 0 14px; }
+  .turn .who {
+    font-family: "Vollkorn SC", var(--serif);
+    font-variant: small-caps;
+    letter-spacing: 0.04em;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .turn .msg { }
+  .turn.host .msg { }
+  .turn.you .msg { color: var(--accent); }
+  .turn.system .msg { color: var(--muted); font-style: italic; }
+  .dot-typing::after { content: "…"; animation: blink 1.2s steps(3) infinite; }
+  @keyframes blink { 0% {opacity:.2} 50%{opacity:1} 100%{opacity:.2} }
+
+  .answer-emojis { font-size: 0.95rem; letter-spacing: 2px; margin: 2px 0 10px; }
+
+  /* input rows */
+  .input-row { display: flex; gap: 8px; }
+  .input-row input { flex: 1; }
+  .ans-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+  .ans-btns button { flex: 1; min-width: 90px; }
+  .ans-btns .b-yes    { border-color: var(--yes); color: var(--yes); }
+  .ans-btns .b-no     { border-color: var(--no);  color: var(--no); }
+  .ans-btns .b-sortof { border-color: var(--sortof); color: #9a7411; }
+
+  /* score card */
+  .score { text-align: center; }
+  .score .verdict { font-size: 1.6rem; margin: 4px 0 2px; }
+  .score .verdict.win  { color: var(--yes); }
+  .score .verdict.loss { color: var(--no); }
+  .score dl { text-align: left; max-width: 360px; margin: 18px auto; }
+  .score dl div { display: flex; justify-content: space-between; border-bottom: 1px dotted var(--line); padding: 6px 0; }
+  .score dt { color: var(--muted); }
+  .score dd { margin: 0; font-weight: 600; text-align: right; }
+  .share-box {
+    font-family: var(--mono);
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 14px;
+    margin: 16px auto 6px;
+    max-width: 360px;
+    text-align: left;
+    line-height: 1.6;
+  }
+  .copy-note { color: var(--yes); font-size: 0.85rem; min-height: 1.1em; }
+
+  .fallback { text-align: center; padding: 30px 10px; }
+  .fallback code { font-family: var(--mono); background: var(--bg); padding: 1px 5px; border: 1px solid var(--line); border-radius: 4px; }
+
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>20 Questions <span style="font-weight:400">🔮</span></h1>
+  <p class="sub">A small language model runs entirely in your browser via WebGPU. Nothing leaves your device.</p>
+
+  <!-- ============ WebGPU fallback ============ -->
+  <div id="screen-nogpu" class="card fallback hidden">
+    <p style="font-size:1.1rem">⚠️ WebGPU isn't available in this browser.</p>
+    <p class="hint">This game needs WebGPU to run the model locally. Try the latest <strong>Chrome</strong>, <strong>Edge</strong>, or <strong>Safari&nbsp;18+</strong> on a desktop. On Firefox you may need to enable <code>dom.webgpu.enabled</code>.</p>
+  </div>
+
+  <!-- ============ Start menu ============ -->
+  <div id="screen-start" class="card hidden">
+    <label class="field">Game mode</label>
+    <div class="modes" id="mode-picker">
+      <button class="mode-btn active" data-mode="iguess">
+        <strong>🤖 I Guess</strong>
+        <span>The model picks a secret word. You ask up to 20 yes/no questions to figure it out.</span>
+      </button>
+      <button class="mode-btn" data-mode="llmguess">
+        <strong>🧠 LLM Guesses</strong>
+        <span>You think of a word. The model asks the questions — you answer yes / no / sort of.</span>
+      </button>
+    </div>
+
+    <!-- Mode-2 secret entry -->
+    <div id="secret-fields" class="hidden">
+      <label class="field" for="secret-cat">Category <span class="hint">(the model sees this)</span></label>
+      <input type="text" id="secret-cat" placeholder="animal, object, place, food…" />
+      <label class="field" for="secret-word">Your secret word <span class="hint">(kept on your device, never sent)</span></label>
+      <input type="text" id="secret-word" placeholder="e.g. dolphin" autocomplete="off" />
+    </div>
+
+    <label class="field" for="model-select">Opponent model</label>
+    <select id="model-select"></select>
+    <p class="hint" id="model-note"></p>
+
+    <button class="primary" id="btn-start">Download model &amp; start →</button>
+  </div>
+
+  <!-- ============ Loading ============ -->
+  <div id="screen-loading" class="card hidden">
+    <p style="margin-top:0"><strong>Downloading model…</strong></p>
+    <p class="hint">The model is cached after the first time, so future games load instantly.</p>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <div class="progress-text" id="progress-text">Initializing…</div>
+  </div>
+
+  <!-- ============ Game ============ -->
+  <div id="screen-game" class="card hidden">
+    <div class="game-head">
+      <span class="pill" id="game-pill">—</span>
+      <span class="counter" id="game-counter">20 left</span>
+    </div>
+    <div class="convo" id="convo"></div>
+
+    <!-- Mode 1: ask / guess -->
+    <div id="ctrl-ask" class="hidden">
+      <div class="input-row">
+        <input type="text" id="ask-input" placeholder="Ask a yes/no question…" autocomplete="off" />
+        <button class="ghost" id="btn-ask">Ask</button>
+      </div>
+      <div class="input-row" style="margin-top:8px">
+        <input type="text" id="guess-input" placeholder="…or make your final guess" autocomplete="off" />
+        <button class="ghost" id="btn-guess" style="border-color:var(--accent);color:var(--accent)">Guess</button>
+      </div>
+    </div>
+
+    <!-- Mode 2: answer buttons -->
+    <div id="ctrl-answer" class="hidden">
+      <div class="ans-btns">
+        <button class="ghost b-yes"    data-ans="yes">🟢 Yes</button>
+        <button class="ghost b-no"     data-ans="no">🔴 No</button>
+        <button class="ghost b-sortof" data-ans="sortof">🟡 Sort of</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ Score card ============ -->
+  <div id="screen-score" class="card score hidden">
+    <div class="verdict" id="verdict">—</div>
+    <div class="answer-emojis" id="score-emojis"></div>
+    <dl id="score-dl"></dl>
+    <div class="share-box" id="share-box"></div>
+    <button class="ghost" id="btn-copy">📋 Copy share text</button>
+    <div class="copy-note" id="copy-note"></div>
+    <div style="margin-top:18px">
+      <button class="primary" id="btn-again">Play again</button>
+    </div>
+  </div>
+
+</div>
+
+<script type="module">
+import * as webllm from "https://esm.run/@mlc-ai/web-llm";
+
+/* ------------------------------------------------------------------ *
+ *  Config
+ * ------------------------------------------------------------------ */
+const MODELS = [
+  { id: "Llama-3.2-1B-Instruct-q4f16_1-MLC",  name: "Llama 3.2 1B",   size: "~0.9 GB", note: "Fastest. Small brain, big heart." },
+  { id: "Qwen2.5-1.5B-Instruct-q4f16_1-MLC",  name: "Qwen2.5 1.5B",   size: "~1.1 GB", note: "Quick and a decent guesser." },
+  { id: "Llama-3.2-3B-Instruct-q4f16_1-MLC",  name: "Llama 3.2 3B",   size: "~2.3 GB", note: "Sharper, a bit slower to load." },
+  { id: "gemma-2-2b-it-q4f16_1-MLC",          name: "Gemma 2 2B",     size: "~1.9 GB", note: "Balanced and chatty." },
+  { id: "Phi-3.5-mini-instruct-q4f16_1-MLC",  name: "Phi-3.5 mini",   size: "~2.4 GB", note: "Best reasoning here, heaviest download." },
+];
+
+const CATEGORIES = {
+  animal: ["dog","cat","elephant","penguin","dolphin","kangaroo","owl","octopus","tiger","rabbit","horse","frog","bat","giraffe","bee","shark","snake","crocodile","koala","hedgehog"],
+  object: ["umbrella","telescope","guitar","backpack","candle","mirror","hammer","clock","scissors","toothbrush","kite","compass","lantern","piano","teapot","stapler","skateboard","binoculars","violin","anchor"],
+  place:  ["beach","library","volcano","airport","desert","castle","lighthouse","farm","waterfall","subway","cave","museum","forest","bridge","harbor","glacier","stadium","temple","market","observatory"],
+  food:   ["pizza","banana","sushi","pancake","avocado","noodles","popcorn","cheese","mango","donut","pickle","waffle","coconut","dumpling","pretzel","watermelon","burrito","cupcake","oyster","chili"],
+  person: ["astronaut","chef","pirate","detective","firefighter","clown","farmer","wizard","nurse","sailor","painter","librarian","referee","blacksmith","magician","gardener","pilot","barber"],
+};
+
+/* ------------------------------------------------------------------ *
+ *  State
+ * ------------------------------------------------------------------ */
+let engine = null;
+let loadedModelId = null;
+let busy = false;
+
+const game = {
+  mode: "iguess",         // "iguess" | "llmguess"
+  modelId: MODELS[0].id,
+  modelName: MODELS[0].name,
+  category: "",
+  secret: "",             // the answer
+  messages: [],           // full chat history for the LLM
+  answers: [],            // emoji sequence
+  used: 0,
+  max: 20,
+  over: false,
+  won: false,
+  startTime: 0,
+};
+
+/* ------------------------------------------------------------------ *
+ *  Screen helpers
+ * ------------------------------------------------------------------ */
+const $ = (id) => document.getElementById(id);
+const screens = ["nogpu","start","loading","game","score"];
+function show(name) {
+  screens.forEach(s => $("screen-" + s).classList.toggle("hidden", s !== name));
+}
+
+/* ------------------------------------------------------------------ *
+ *  Boot
+ * ------------------------------------------------------------------ */
+function boot() {
+  if (!navigator.gpu) { show("nogpu"); return; }
+
+  // populate model dropdown
+  const sel = $("model-select");
+  MODELS.forEach(m => {
+    const opt = document.createElement("option");
+    opt.value = m.id;
+    opt.textContent = `${m.name}  ·  ${m.size}`;
+    sel.appendChild(opt);
+  });
+  updateModelNote();
+  sel.addEventListener("change", () => {
+    game.modelId = sel.value;
+    game.modelName = MODELS.find(m => m.id === sel.value).name;
+    updateModelNote();
+  });
+
+  // mode picker
+  $("mode-picker").querySelectorAll(".mode-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      $("mode-picker").querySelectorAll(".mode-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      game.mode = btn.dataset.mode;
+      $("secret-fields").classList.toggle("hidden", game.mode !== "llmguess");
+    });
+  });
+
+  $("btn-start").addEventListener("click", onStart);
+  $("btn-ask").addEventListener("click", onAsk);
+  $("btn-guess").addEventListener("click", onGuess);
+  $("ask-input").addEventListener("keydown", e => { if (e.key === "Enter") onAsk(); });
+  $("guess-input").addEventListener("keydown", e => { if (e.key === "Enter") onGuess(); });
+  $("ctrl-answer").querySelectorAll("button").forEach(b =>
+    b.addEventListener("click", () => onAnswer(b.dataset.ans)));
+  $("btn-copy").addEventListener("click", onCopy);
+  $("btn-again").addEventListener("click", () => show("start"));
+
+  show("start");
+}
+
+function updateModelNote() {
+  const m = MODELS.find(x => x.id === game.modelId);
+  $("model-note").textContent = m ? m.note : "";
+}
+
+/* ------------------------------------------------------------------ *
+ *  Start a round → load model → begin
+ * ------------------------------------------------------------------ */
+async function onStart() {
+  game.modelId = $("model-select").value;
+  game.modelName = MODELS.find(m => m.id === game.modelId).name;
+
+  if (game.mode === "llmguess") {
+    const cat = $("secret-cat").value.trim();
+    const word = $("secret-word").value.trim();
+    if (!cat || !word) { alert("Tell me a category and your secret word first!"); return; }
+    game.category = cat.toLowerCase();
+    game.secret = word;
+  } else {
+    // model picks: choose category + word
+    const cats = Object.keys(CATEGORIES);
+    game.category = cats[Math.floor(Math.random() * cats.length)];
+    const words = CATEGORIES[game.category];
+    game.secret = words[Math.floor(Math.random() * words.length)];
+  }
+
+  // load model
+  show("loading");
+  $("progress-fill").style.width = "0%";
+  $("progress-text").textContent = "Initializing…";
+  try {
+    await ensureEngine(game.modelId);
+  } catch (err) {
+    $("progress-text").textContent = "Failed to load model: " + (err?.message || err);
+    return;
+  }
+
+  startGame();
+}
+
+async function ensureEngine(modelId) {
+  const cb = (report) => {
+    const pct = Math.max(0, Math.min(100, Math.round((report.progress || 0) * 100)));
+    $("progress-fill").style.width = pct + "%";
+    $("progress-text").textContent = report.text || (pct + "%");
+  };
+  if (!engine) {
+    engine = await webllm.CreateMLCEngine(modelId, { initProgressCallback: cb });
+    loadedModelId = modelId;
+  } else if (loadedModelId !== modelId) {
+    engine.setInitProgressCallback(cb);
+    await engine.reload(modelId);
+    loadedModelId = modelId;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ *  Game setup
+ * ------------------------------------------------------------------ */
+function startGame() {
+  game.messages = [];
+  game.answers = [];
+  game.used = 0;
+  game.over = false;
+  game.won = false;
+  game.startTime = Date.now();
+
+  $("convo").innerHTML = "";
+  updateCounter();
+  show("game");
+
+  if (game.mode === "iguess") {
+    $("game-pill").textContent = `I Guess · category: ${game.category}`;
+    $("ctrl-ask").classList.remove("hidden");
+    $("ctrl-answer").classList.add("hidden");
+    game.messages.push({ role: "system", content:
+      `We are playing the game 20 Questions. You are the host. You have secretly chosen this exact ${game.category}: "${game.secret}". ` +
+      `The player will ask you yes/no questions to figure out what it is. ` +
+      `Rules for every reply: (1) Begin with exactly one of these words: "Yes", "No", or "Sort of". ` +
+      `(2) After that word you may add a SHORT clarifying phrase, but never more than one sentence. ` +
+      `(3) Answer truthfully about "${game.secret}". ` +
+      `(4) NEVER state or spell out the word "${game.secret}" yourself, and never reveal the category details beyond answering. ` +
+      `Keep it fun and fair.` });
+    addTurn("system", `I'm thinking of a <strong>${game.category}</strong>. Ask me anything! (yes/no questions work best)`);
+    $("ask-input").focus();
+  } else {
+    $("game-pill").textContent = `LLM Guesses · category: ${game.category}`;
+    $("ctrl-ask").classList.add("hidden");
+    $("ctrl-answer").classList.remove("hidden");
+    game.messages.push({ role: "system", content:
+      `We are playing the game 20 Questions. The player has thought of a specific ${game.category}. ` +
+      `Your job is to guess it. Ask ONE short yes/no question at a time. ` +
+      `Do not ask more than one question per turn. Do not explain your reasoning — just ask the question. ` +
+      `Use the player's answers (yes / no / sort of) to narrow it down. ` +
+      `When you feel confident, make a guess phrased as a question, e.g. "Is it a dolphin?". ` +
+      `Keep each message under 15 words.` });
+    addTurn("system", `You're thinking of a <strong>${game.category}</strong>. Let me ask my first question…`);
+    llmAsk();
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ *  Conversation rendering
+ * ------------------------------------------------------------------ */
+function addTurn(who, html) {
+  const labels = { host: "The Model", you: "You", system: "" };
+  const div = document.createElement("div");
+  div.className = "turn " + who;
+  const label = labels[who];
+  div.innerHTML = (label ? `<div class="who">${label}</div>` : "") + `<div class="msg">${html}</div>`;
+  $("convo").appendChild(div);
+  $("convo").scrollTop = $("convo").scrollHeight;
+  return div;
+}
+
+function updateCounter() {
+  const left = game.max - game.used;
+  $("game-counter").textContent = `${left} question${left === 1 ? "" : "s"} left`;
+}
+
+function setBusy(b) {
+  busy = b;
+  $("btn-ask").disabled = b;
+  $("btn-guess").disabled = b;
+  $("ctrl-answer").querySelectorAll("button").forEach(x => x.disabled = b);
+}
+
+/* ------------------------------------------------------------------ *
+ *  LLM call
+ * ------------------------------------------------------------------ */
+async function complete(temperature = 0.6) {
+  const reply = await engine.chat.completions.create({
+    messages: game.messages,
+    temperature,
+    max_tokens: 80,
+  });
+  return (reply.choices[0].message.content || "").trim();
+}
+
+/* ---- Mode 1: I Guess ---- */
+async function onAsk() {
+  if (busy || game.over) return;
+  const q = $("ask-input").value.trim();
+  if (!q) return;
+  $("ask-input").value = "";
+  setBusy(true);
+
+  game.used++;
+  updateCounter();
+  addTurn("you", escapeHtml(q));
+  game.messages.push({ role: "user", content: q });
+
+  const typing = addTurn("host", `<span class="dot-typing"></span>`);
+  let ans;
+  try { ans = await complete(0.5); }
+  catch (e) { ans = "Sort of — (the model hiccuped, ask again)"; }
+  game.messages.push({ role: "assistant", content: ans });
+  typing.querySelector(".msg").innerHTML = escapeHtml(ans);
+  $("convo").scrollTop = $("convo").scrollHeight;
+
+  game.answers.push(classifyEmoji(ans));
+
+  setBusy(false);
+  if (game.used >= game.max && !game.over) endGame(false);
+  else $("ask-input").focus();
+}
+
+async function onGuess() {
+  if (busy || game.over) return;
+  const g = $("guess-input").value.trim();
+  if (!g) return;
+  $("guess-input").value = "";
+  setBusy(true);
+
+  game.used++;
+  updateCounter();
+  addTurn("you", `<em>My guess:</em> ${escapeHtml(g)}`);
+
+  if (matchesSecret(g, game.secret)) {
+    addTurn("host", `🎉 Yes! It was <strong>${escapeHtml(game.secret)}</strong>. You got it in ${game.used}!`);
+    setBusy(false);
+    endGame(true);
+  } else {
+    addTurn("host", `Nope — that's not it. Keep going!`);
+    // keep the model's history consistent
+    game.messages.push({ role: "user", content: `Is it "${g}"?` });
+    game.messages.push({ role: "assistant", content: `No, it is not "${g}".` });
+    game.answers.push("🔴");
+    setBusy(false);
+    if (game.used >= game.max && !game.over) endGame(false);
+    else $("guess-input").focus();
+  }
+}
+
+/* ---- Mode 2: LLM Guesses ---- */
+async function llmAsk() {
+  if (game.over) return;
+  setBusy(true);
+  const typing = addTurn("host", `<span class="dot-typing"></span>`);
+  let q;
+  try { q = await complete(0.7); }
+  catch (e) { q = "Is it something you can hold in your hand?"; }
+  game.messages.push({ role: "assistant", content: q });
+  typing.querySelector(".msg").innerHTML = escapeHtml(q);
+  $("convo").scrollTop = $("convo").scrollHeight;
+
+  // did the model just guess the secret word?
+  game.pendingGuess = matchesSecret(q, game.secret);
+  setBusy(false);
+}
+
+async function onAnswer(kind) {
+  if (busy || game.over) return;
+  setBusy(true);
+
+  const map = { yes: "🟢", no: "🔴", sortof: "🟡" };
+  const words = { yes: "Yes", no: "No", sortof: "Sort of" };
+  addTurn("you", words[kind]);
+  game.messages.push({ role: "user", content: words[kind] });
+  game.answers.push(map[kind]);
+
+  game.used++;
+  updateCounter();
+
+  // If the model's previous message was a guess of the secret and player said yes → win
+  if (game.pendingGuess && kind === "yes") {
+    addTurn("system", `🎯 The model guessed <strong>${escapeHtml(game.secret)}</strong> in ${game.used}!`);
+    setBusy(false);
+    endGame(true, true);
+    return;
+  }
+
+  if (game.used >= game.max) {
+    // last-chance: reveal
+    addTurn("system", `Out of questions! You were thinking of <strong>${escapeHtml(game.secret)}</strong>.`);
+    setBusy(false);
+    endGame(false, true);
+    return;
+  }
+
+  setBusy(false);
+  llmAsk();
+}
+
+/* ------------------------------------------------------------------ *
+ *  End + score card
+ * ------------------------------------------------------------------ */
+function endGame(won, llmWasGuesser = (game.mode === "llmguess")) {
+  game.over = true;
+  game.won = won;
+  const secs = Math.round((Date.now() - game.startTime) / 1000);
+  const timeStr = fmtTime(secs);
+
+  // verdict wording depends on who was guessing
+  let verdict, cls;
+  if (game.mode === "iguess") {
+    verdict = won ? "🏆 You win!" : "😵 Out of questions!";
+    cls = won ? "win" : "loss";
+  } else {
+    verdict = won ? "🤖 The model wins!" : "🙈 You stumped it!";
+    // "win" here = a satisfying outcome for the reader; color by whether guesser succeeded
+    cls = won ? "win" : "loss";
+  }
+  $("verdict").textContent = verdict;
+  $("verdict").className = "verdict " + cls;
+
+  const endEmoji = won ? "✅" : "❌";
+  const emojiLine = game.answers.join("") + endEmoji;
+  $("score-emojis").textContent = emojiLine;
+
+  const dl = $("score-dl");
+  dl.innerHTML = "";
+  const rows = [
+    ["Result", won ? "Win" : "Loss"],
+    ["The answer", game.secret],
+    ["Category", game.category],
+    ["Mode", game.mode === "iguess" ? "I Guess" : "LLM Guesses"],
+    ["Model", game.modelName],
+    ["Questions", `${game.used} / ${game.max}`],
+    ["Time", timeStr],
+  ];
+  rows.forEach(([k, v]) => {
+    const row = document.createElement("div");
+    row.innerHTML = `<dt>${k}</dt><dd>${escapeHtml(String(v))}</dd>`;
+    dl.appendChild(row);
+  });
+
+  // share text
+  const modeLabel = game.mode === "iguess" ? "I Guess" : "LLM Guesses";
+  const share =
+`20 Questions 🔮 — ${modeLabel}
+${game.modelName} · ${game.category}
+${emojiLine}
+${game.used}/${game.max} · ${timeStr}`;
+  game.shareText = share;
+  $("share-box").textContent = share;
+  $("copy-note").textContent = "";
+
+  show("score");
+}
+
+/* ------------------------------------------------------------------ *
+ *  Share / clipboard
+ * ------------------------------------------------------------------ */
+async function onCopy() {
+  try {
+    await navigator.clipboard.writeText(game.shareText);
+    $("copy-note").textContent = "Copied to clipboard!";
+  } catch (e) {
+    // fallback
+    const ta = document.createElement("textarea");
+    ta.value = game.shareText;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); $("copy-note").textContent = "Copied!"; }
+    catch (_) { $("copy-note").textContent = "Copy failed — select the text above."; }
+    document.body.removeChild(ta);
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ *  Utilities
+ * ------------------------------------------------------------------ */
+function classifyEmoji(text) {
+  const t = text.toLowerCase().replace(/^[^a-z]+/, "");
+  if (t.startsWith("yes")) return "🟢";
+  if (t.startsWith("no")) return "🔴";
+  if (/^(sort of|kind of|sometimes|partially|maybe|it depends|not exactly|not really)/.test(t)) return "🟡";
+  // secondary sniff
+  if (/\byes\b/.test(t) && !/\bno\b/.test(t)) return "🟢";
+  if (/\bno\b/.test(t) && !/\byes\b/.test(t)) return "🔴";
+  return "🟡";
+}
+
+function normalize(s) {
+  return s.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function matchesSecret(text, secret) {
+  const nt = normalize(text);
+  const ns = normalize(secret);
+  if (!ns) return false;
+  // word-boundary containment of the full secret phrase
+  const re = new RegExp("\\b" + ns.replace(/ /g, "\\s+") + "\\b");
+  if (re.test(nt)) return true;
+  // singular/plural leniency
+  if (ns.endsWith("s") && new RegExp("\\b" + ns.slice(0, -1) + "\\b").test(nt)) return true;
+  if (!ns.endsWith("s") && new RegExp("\\b" + ns + "s\\b").test(nt)) return true;
+  return false;
+}
+
+function fmtTime(secs) {
+  const m = Math.floor(secs / 60);
+  const s = secs % 60;
+  return m > 0 ? `${m}m${String(s).padStart(2, "0")}s` : `${s}s`;
+}
+
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+}
+
+boot();
+</script>
+</body>
+</html>
