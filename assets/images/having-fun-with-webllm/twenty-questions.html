@@ -513,6 +513,7 @@ function startGame() {
   game.used = 0;
   game.over = false;
   game.won = false;
+  game.awaitingRetry = false;
   game.startTime = Date.now();
 
   $("convo").innerHTML = "";
@@ -638,9 +639,18 @@ async function llmAsk() {
   if (game.over) return;
   setBusy(true);
   const typing = addTurn("host", `<span class="dot-typing"></span>`);
-  let q;
+  let q = "";
   try { q = await complete(0.7); }
-  catch (e) { q = "Is it something you can hold in your hand?"; }
+  catch (e) { q = ""; }
+
+  if (!q) {
+    typing.querySelector(".msg").innerHTML = `<em>The model generated unparseable text. Tap any answer to let it try again.</em>`;
+    game.awaitingRetry = true;
+    setBusy(false);
+    return;
+  }
+
+  game.awaitingRetry = false;
   game.messages.push({ role: "assistant", content: q });
   typing.querySelector(".msg").innerHTML = escapeHtml(q);
   $("convo").scrollTop = $("convo").scrollHeight;
@@ -651,6 +661,7 @@ async function llmAsk() {
 
 async function onAnswer(kind) {
   if (busy || game.over) return;
+  if (game.awaitingRetry) { game.awaitingRetry = false; llmAsk(); return; }
   setBusy(true);
 
   const map = { yes: "🟢", no: "🔴", sortof: "🟡" };
