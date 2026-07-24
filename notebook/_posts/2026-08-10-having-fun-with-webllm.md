@@ -31,6 +31,9 @@ Here's a game demo of Twenty Questions using this framework (feel free to share 
 
 ## Some observations while playing
 
+### Weird conversation turns
+
+### Trying to jailbreak the model to reveal the answer
 
 ## Final thoughts on Edge Models
 
