@@ -76,6 +76,22 @@
 
   label.field { display: block; margin: 16px 0 6px; font-weight: 600; font-size: 0.95rem; }
   .hint { color: var(--muted); font-size: 0.85rem; font-style: italic; }
+  .info {
+    display: inline-block;
+    width: 1.15em;
+    height: 1.15em;
+    line-height: 1.1em;
+    margin-left: 5px;
+    font-size: 0.72rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    cursor: help;
+    vertical-align: middle;
+  }
+  .info:hover, .info:focus { border-color: var(--accent); color: var(--accent); outline: none; }
 
   select, input[type="text"] {
     width: 100%;
@@ -253,6 +269,14 @@
       <input type="text" id="secret-word" placeholder="e.g. dolphin" autocomplete="off" />
     </div>
 
+    <div id="wordsrc-field">
+      <label class="field" for="wordsrc-select">Secret word<span class="info" tabindex="0" title="Letting the model think of a word is more varied, but small models sometimes pick something odd, obscure, or answer inconsistently. Choosing from the word list is more reliable.">?</span></label>
+      <select id="wordsrc-select">
+        <option value="model">The model thinks of one</option>
+        <option value="list">Pick from a word list</option>
+      </select>
+    </div>
+
     <label class="field" for="model-select">Opponent model</label>
     <select id="model-select"></select>
 
@@ -325,6 +349,13 @@ const CATEGORY_HINTS = [
 ];
 const FALLBACK_SECRET = { category: "object", word: "umbrella" };
 
+const WORD_LIST = {
+  animal: ["dog","cat","elephant","penguin","dolphin","kangaroo","owl","octopus","tiger","rabbit","horse","frog","giraffe","bee","shark","snake","crocodile","koala","hedgehog","whale"],
+  object: ["umbrella","telescope","guitar","backpack","candle","mirror","hammer","clock","scissors","toothbrush","kite","compass","lantern","piano","teapot","stapler","skateboard","binoculars","violin","anchor"],
+  place:  ["beach","library","volcano","airport","desert","castle","lighthouse","farm","waterfall","subway","cave","museum","forest","bridge","harbor","glacier","stadium","temple","market","observatory"],
+  food:   ["pizza","banana","sushi","pancake","avocado","noodles","popcorn","cheese","mango","donut","pickle","waffle","coconut","dumpling","pretzel","watermelon","burrito","cupcake","oyster","chili"],
+};
+
 let engine = null;
 let loadedModelId = null;
 let busy = false;
@@ -371,6 +402,7 @@ function boot() {
       btn.classList.add("active");
       game.mode = btn.dataset.mode;
       $("secret-fields").classList.toggle("hidden", game.mode !== "llmguess");
+      $("wordsrc-field").classList.toggle("hidden", game.mode !== "iguess");
     });
   });
 
@@ -410,12 +442,24 @@ async function onStart() {
   }
 
   if (game.mode === "iguess") {
-    $("progress-fill").style.width = "100%";
-    $("progress-text").textContent = "Thinking of a secret word…";
-    await pickSecret();
+    if ($("wordsrc-select").value === "list") {
+      pickSecretFromList();
+    } else {
+      $("progress-fill").style.width = "100%";
+      $("progress-text").textContent = "Thinking of a secret word…";
+      await pickSecret();
+    }
   }
 
   startGame();
+}
+
+function pickSecretFromList() {
+  const cats = Object.keys(WORD_LIST);
+  const category = cats[Math.floor(Math.random() * cats.length)];
+  const words = WORD_LIST[category];
+  game.category = category;
+  game.secret = words[Math.floor(Math.random() * words.length)];
 }
 
 async function pickSecret() {
