@@ -597,7 +597,7 @@ async function onAsk() {
   const typing = addTurn("host", `<span class="dot-typing"></span>`);
   let ans;
   try { ans = await complete(0.5); }
-  catch (e) { ans = "Sort of — (the model hiccuped, ask again)"; }
+  catch (e) { ans = "Sort of — (the model generated unparseable text, ask again)"; }
   game.messages.push({ role: "assistant", content: ans });
   typing.querySelector(".msg").innerHTML = escapeHtml(ans);
   $("convo").scrollTop = $("convo").scrollHeight;
