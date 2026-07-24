@@ -32,6 +32,5 @@ Here's a game demo of Twenty Questions using this framework (feel free to share 
 ## Some observations while playing
 
 
-
 ## Final thoughts on Edge Models
 
