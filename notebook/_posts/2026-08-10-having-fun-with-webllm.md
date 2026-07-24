@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Play 20 Questions with an LLM!"
-date: 2026-07-24
+date: 2026-08-10
 category: notebook
 comments: true
 author: "LJ V. MIRANDA"
