@@ -5,24 +5,14 @@ description: Research work of Lester James V. Miranda
 permalink: /research/
 ---
 
-My field is in natural language processing and machine learning.
-I explore how we can build equitable language technologies through **cheap, small, and specialized language models that can be deployed at the edge**, i.e., nearest to the communities who need these technologies the most.
-
-<!-- I have a soft preference for data as a lever to develop these types of models. -->
-I believe that good data is the foundation for building these models, especially when working with low-resource languages where data is scarce and quality matters more.
-I'm excited about techniques that involve creative (or in Tagalog, [ma-diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to obtain high quality signals given these extreme constraints. 
-That said, I'm always open to learning new approaches!
+I work in natural language processing and machine learning, specifically focusing on **data-centric** approaches.
+I study notions of *data quality* in the context of less-resourced languages in the Global South, given that data in these languages tend to be limited and noisy.
+I want to find out how we can measure and describe quality, 
+so that the field has vocabulary for reasoning about it, and so that data collection efforts become more efficient and sustainable.
 
 Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
-<!-- You can also check my profiles for a complete list. -->
 I'm always excited for potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
-
-<!-- I believe that one of the key unlocks for this to happen is getting **access to high-quality training signals**,
-and so I explore creative (or as we say in Tagalog, ma-[diskarte](https://pap.ph/assets/files/journals/defining-diskarte-exploring-cognitive-processes-personality-traits-and-social-constraints-in-crea.pdf)) ways to obtain these signals under extreme constraints. -->
-
-
-<!-- The following are the research themes I am interested in, along with some representative publications. -->
 
 ## Selected Publications
 
