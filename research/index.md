@@ -8,7 +8,7 @@ permalink: /research/
 I work in natural language processing and machine learning, specifically focusing on **data-centric** approaches.
 I study notions of *data quality* in the context of less-resourced languages in the Global South, given that data in these languages tend to be limited and noisy.
 I want to find out how we can describe and measure quality, 
-so that the field has vocabulary for reasoning about it, and so that data collection efforts become more efficient and sustainable.
+so that the field has vocabulary for reasoning about it, and so that data collection efforts become more deliberate and effective.
 
 Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
