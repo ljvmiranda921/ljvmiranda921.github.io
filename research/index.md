@@ -10,6 +10,7 @@ I study **edge language models** or small models that can run on resource-constr
 
 I want to find out what it takes to build capable language technology when data and compute are scarce, 
 so that we understand how our resource investments map to model capability, and hopefully right-size development efforts to the actual needs of the language and community.
+My research spans across the whole development lifecyle: data collection, training, and evaluation.
 
 <!-- I study notions of *data quality* in the context of less-resourced languages in the Global South, given that data in these languages tend to be limited and noisy.
 I want to find out how we can describe and measure quality, 
