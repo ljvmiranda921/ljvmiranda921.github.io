@@ -6,9 +6,10 @@ permalink: /research/
 ---
 
 My field is in natural language processing and machine learning.
-I study **edge language models**, small models that can run on resource-constrained infrastructure such as commodity devices or limited connectivity. 
+I study **edge language models** or small models that can run on resource-constrained infrastructure such as commodity devices or limited connectivity. 
+
 I want to find out what it takes to build capable language technology when data and compute are scarce, 
-so that we understand how resource investments map to model capability, and right-size development efforts to the actual needs of the language and community.
+so that we understand how our resource investments map to model capability, and hopefully right-size development efforts to the actual needs of the language and community.
 
 <!-- I study notions of *data quality* in the context of less-resourced languages in the Global South, given that data in these languages tend to be limited and noisy.
 I want to find out how we can describe and measure quality, 
