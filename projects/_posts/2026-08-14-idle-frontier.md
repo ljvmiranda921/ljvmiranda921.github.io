@@ -43,6 +43,8 @@ I will talk about my experience with Claude regarding gameplay, programming, and
 
 ## Programming
 
+<!-- really good at programming -->
+<!-- i'm also rusty at Godot: version changed from 3 -> 4, learning new techniques and patterns. not even proud of my own Godot code -->
 
 ## Art & Writing
 
