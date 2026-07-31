@@ -40,6 +40,7 @@ I will talk about my experience with Claude regarding gameplay, programming, and
 ## Gameplay
 
 <!-- Claude isn't good with ideation, not too novel -->
+<!-- but really good at mechanics and balancing -->
 
 ## Programming
 
