@@ -51,5 +51,6 @@ I will talk about my experience with Claude regarding gameplay, programming, and
 
 <!-- Tone is often wry and condescending -->
 <!-- You need to nudge it properly, still bad at art. but good at simple art (a few mistakes that are fixable) -->
+<!-- The art looks a bit too streamlined... i think in some way it loses the indie game clunky charm -->
 
 ## Conclusion
