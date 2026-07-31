@@ -32,6 +32,7 @@ excerpt: |
 
 In this blog post, I want to share my experience developing this game with the aid of Opus 5 (which I'll just call Claude from now on).
 My goal is to give a middle ground perspective for AI-aided game development: 
-something in between those [zero-shot-three-js games](https://somethingbig.ai/games) that are popular recently and the no-AI-in-my-workflow crowd.
-However, do note that I'm just a hobbyist game developer.
-I've made [some games before](https://ljvmiranda921.itch.io) back in 2022 when language models are still starting out.
+something in between those [zero-shot-three-js games](https://somethingbig.ai/games) that are popular recently and the [no-AI-in-my-workflow](https://www.gamesradar.com/games/why-so-many-game-developers-dont-want-to-use-generative-ai/) crowd.
+Note that I'm just a hobbyist game developer.
+I learned pixel art and Godot and made [four games before](https://ljvmiranda921.itch.io), but nothing too fancy.
+
