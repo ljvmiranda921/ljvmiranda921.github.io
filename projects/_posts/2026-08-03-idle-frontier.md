@@ -50,8 +50,8 @@ I will talk about my experience with Claude regarding gameplay, programming, and
 ## Programming
 
 Language models have been really good at coding tasks recently, and I think that this is where Claude helped the most.
-The last time I made a game was back in 2022 using Godot 3; however, four years passed and there's now a major update to Godot.
-Working with Claude helped me in migrate my Godot 3 knowledge to the new version.
+The last time I made a game was back in 2022 using Godot 3, and in the four years since, Godot has shipped a major update.
+Working with Claude helped me migrate my Godot 3 knowledge to the new version.
 
 
 
