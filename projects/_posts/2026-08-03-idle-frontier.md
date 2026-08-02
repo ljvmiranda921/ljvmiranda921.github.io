@@ -123,8 +123,17 @@ When I inspect the Lua call, it's full of for-loops and shifts, which is reasona
 although there is a `draw_pixels` tool, using it would require sending hundreds of tool calls (one for each coordinate) to Aseprite. 
 Perhaps Claude found that just sending Lua code with a for-loop is much more efficient.
 
-Finally, if there's one thing that Claude wowed me, it's in making storefront assets:
+Finally, if there's one thing that Claude wowed me, it's in **making storefront assets.**
+Just look at these GIFs!
+I just told Claude to clip a gameplay I want, and it created a scaffold for building custom GIFS at different parts of the run.
+This is definitely a new unlock for me and I can imagine this to be useful in the future.
 
+{% include figure.html
+   src="/assets/images/idle-frontier/clip_annotate.gif,/assets/images/idle-frontier/clip_research.gif,/assets/images/idle-frontier/clip_victory.gif"
+   width="200"
+   class="rounded"
+   caption="From left to right: annotating data, running research, and reaching victory."
+   alt="Three Idle Frontier gameplay clips shown side by side." %}
 
 
 
