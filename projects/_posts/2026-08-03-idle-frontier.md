@@ -123,6 +123,9 @@ When I inspect the Lua call, it's full of for-loops and shifts, which is reasona
 although there is a `draw_pixels` tool, using it would require sending hundreds of tool calls (one for each coordinate) to Aseprite. 
 Perhaps Claude found that just sending Lua code with a for-loop is much more efficient.
 
+Finally, if there's one thing that Claude wowed me, it's in making storefront assets:
+
+
 
 
 
