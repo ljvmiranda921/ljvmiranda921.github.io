@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Postscript: Idle Frontier"
+title: "Postscript: Idle Frontier and on developing games with AI"
 date: 2026-08-03
 category: projects
 comments: true
@@ -91,9 +91,19 @@ I tried many things to nudge Claude such as giving it a reference picture or des
 One thing I learned about my process is that there's a *specific* vibe that I'm aiming for, and it is hard to express this vibe into words, as "I'll know it when I see it." 
 Perhaps, that's why it's easy for me to iterate on Aseprite rather than in a chat box.
 
-Although Claude can already draw pixel art through Aseprite, I think I'll stick with drawing it myself for more complicated stuff. 
+Despite this limitation, Claude has been quite good in drawing very simple icons for the UI:
 
+{% include figure.html
+   src="/assets/images/idle-frontier/blog_icons.png"
+   width="500"
+   caption="User interface icons made by Claude using Aseprite" %}
 
+This one is quite useful because I can just describe what I need (e.g., "can you draw a chip?") and it will be exported immediately. 
+Claude is also quite good in workflow-related tasks such as creating a canvas, exporting to PNG/GIF, or creating a spritesheet.
+It's actually very cool, I can just say "create a lightbulb and an 8-cycle animation of it turning on."
+Again, it's pretty good at these basic time-saving activities.
+
+I am not really sure if Claude's drawing limitations is due to its harness. 
 
 
 
