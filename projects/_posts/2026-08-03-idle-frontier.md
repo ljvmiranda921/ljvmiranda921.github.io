@@ -22,7 +22,7 @@ tags:
   ]
 description: |
     Idle Frontier is a clicker game that challenges you to build a frontier language model in 1000 days!
-    In this blog post, I'll talk about some reflections on developing a game with the help of Opus 5 from Anthropic.
+    In this blog post, I'll talk about some reflections on developing a game with the help of large language models.
 excerpt: |
 ---
 
