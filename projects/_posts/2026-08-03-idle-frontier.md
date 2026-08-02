@@ -78,6 +78,9 @@ For example, there are many moments when implementing a new features breaks anot
 What I found helpful is to always have the general "shape" or context of the codebase in your head, and let Claude implement the details.
 The challenge usually is that when you vibe-code a lot, you lose your understanding of the organization of your codebase, and you're left with a frustrating whack-a-mole of patches.
 
+Despite these limitations, Claude has been very helpful in speeding myself up in getting reacquainted to Godot.
+To be honest, this was one of my hesitations why I wasn't able to go back to game dev in the past few years.
+Relearning a framework is kinda a bummer, but Claude has helped me ease in to Godot again!
 
 ## Art & Writing
 
