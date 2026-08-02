@@ -43,7 +43,7 @@ I will talk about my experience with Claude regarding programming, art, and game
 
 ## Programming
 
-Language models have been really good at coding tasks recently, and I think that this is where Claude helped me the most.
+Language models have been really good at coding tasks recently, and I think this is where Claude helped me the most.
 The [last time I made a game](https://ljvmiranda921.itch.io/better-together) was back in 2022 using Godot 3, and in the four years since, Godot has shipped a major update.
 In addition, I am not quite proud of my GDScript coding hygiene: most of my game dev projects have spaghetti code or random patches here and there.[^1]
 Working with Claude has helped me with two things: migrating my rusty Godot 3 knowledge to the new version and learning actual game design patterns. 
@@ -78,9 +78,9 @@ For example, there are many moments when implementing a new feature breaks anoth
 What I found helpful is to always have the general "shape" or context of the codebase in your head, and let Claude implement the details.
 The challenge usually is that when you vibe-code a lot, you lose your understanding of the organization of your codebase, and you're left with a frustrating whack-a-mole of patches.
 
-Despite these limitations, Claude has been very helpful in speeding myself up in getting reacquainted with Godot.
-To be honest, this was one of my hesitations why I wasn't able to go back to game dev in the past few years.
-Relearning a framework is kinda a bummer, but Claude has helped me ease into Godot again!
+Despite these limitations, Claude has helped me get reacquainted with Godot faster.
+To be honest, this was one of the reasons I hadn't gone back to game dev in the past few years.
+Relearning a framework is kind of a bummer, but Claude has helped me ease into Godot again!
 
 ## Art & Writing
 
