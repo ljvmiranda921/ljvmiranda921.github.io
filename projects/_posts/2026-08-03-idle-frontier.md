@@ -39,13 +39,7 @@ My goal is to give a tempered perspective on AI-aided game development:
 something in between those [zero-shot-three-js games](https://somethingbig.ai/games) that are popular recently and the [no-AI-in-my-workflow](https://www.gamesradar.com/games/why-so-many-game-developers-dont-want-to-use-generative-ai/) crowd.
 Note that I'm just a hobbyist game developer.
 I learned pixel art and Godot and made [four games before](https://ljvmiranda921.itch.io), but nothing too fancy.
-I will talk about my experience with Claude regarding gameplay, programming, and art.
-
-## Gameplay
-
-
-<!-- Claude isn't good with ideation, not too novel -->
-<!-- but really good at mechanics and balancing -->
+I will talk about my experience with Claude regarding programming, art, and gameplay.
 
 ## Programming
 
@@ -63,5 +57,12 @@ Working with Claude helped me migrate my Godot 3 knowledge to the new version.
 <!-- Tone is often wry and condescending -->
 <!-- You need to nudge it properly, still bad at art. but good at simple art (a few mistakes that are fixable) -->
 <!-- The art looks a bit too streamlined... i think in some way it loses the indie game clunky charm -->
+
+## Gameplay
+
+
+<!-- Claude isn't good with ideation, not too novel -->
+<!-- but really good at mechanics and balancing -->
+
 
 ## Conclusion
