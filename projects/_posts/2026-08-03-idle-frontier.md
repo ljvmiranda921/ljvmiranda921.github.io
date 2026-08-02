@@ -43,7 +43,7 @@ I will talk about my experience with Claude regarding programming, art, and game
 
 ## Programming
 
-Language models have been really good at coding tasks recently, and I think that this is where Claude helped the most.
+Language models have been really good at coding tasks recently, and I think that this is where Claude helped me the most.
 The [last time I made a game](https://ljvmiranda921.itch.io/better-together) was back in 2022 using Godot 3, and in the four years since, Godot has shipped a major update.
 In addition, I am not quite proud of my GDScript coding hygiene: most of my game dev projects have spaghetti code or random patches here and there.[^1]
 Working with Claude has helped me with two things: migrating my rusty Godot 3 knowledge to the new version and learning actual game design patterns. 
@@ -70,9 +70,9 @@ func _ready() -> void:
 
 So instead of keeping track of every signal I created, I can just use the `EventBus` as the handler for any changes&mdash;awesome!
 
-
-
-
+My workflow for *Idle Frontier* was to start constructing the scene in the Editor and write the functions for the interaction I want.
+Initially, I asked Claude to help me with bugfixes and debugging, but I've been quite impressed with its skill in interacting with Godot (without any add-ons!).
+In fact, some of the screens (e.g., the mission screen) were done by Claude end to end.
 
 
 <!-- really good at programming -->
