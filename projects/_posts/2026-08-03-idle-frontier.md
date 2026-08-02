@@ -2,7 +2,7 @@
 layout: post
 type: post
 title: "Postscript: Idle Frontier"
-date: 2026-08-14
+date: 2026-08-03
 category: projects
 comments: true
 author: "LJ V. MIRANDA"
