@@ -43,10 +43,15 @@ I will talk about my experience with Claude regarding gameplay, programming, and
 
 ## Gameplay
 
+
 <!-- Claude isn't good with ideation, not too novel -->
 <!-- but really good at mechanics and balancing -->
 
 ## Programming
+
+Language models have been really good at coding tasks recently, and I'd like to think that this is where Claude helped the most.
+When I started learni
+
 
 <!-- really good at programming -->
 <!-- i'm also rusty at Godot: version changed from 3 -> 4, learning new techniques and patterns. not even proud of my own Godot code -->
