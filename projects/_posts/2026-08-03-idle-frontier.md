@@ -51,6 +51,9 @@ However, how do you build language models in environments where these resources 
 I think this type of problem has a certain shape that can be simulated as a resource engine problem.
 Initially, I thought of doing a card game about this, a la Blackjack style, but I came across [*Inn Over Your Head*](https://minmaxwell.itch.io/inn-over-your-head) and realized that balancing data and compute makes a perfect idle incremental game!
 
+I believe that the "clicking" action is about annotating data is quite apt, it's one of the few levers that you can actually control. 
+Sure, you're gonna spend a lot of time and money if you want to annotate a huge corpora, but it's virtually possible if you really want to.
+Then, that's where the research mechanic came in to ease the burden of annotation (e.g., synthetic data gives you some data), and by that, I realized that there's a game there.
 
 [^1]: Check it out our work in [*Multilinguality at the Edge: Developing Language Models for the Global South*](https://ljvmiranda921.github.io/multilinguality-at-the-edge/)!
 
