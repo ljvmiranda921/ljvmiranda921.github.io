@@ -45,8 +45,31 @@ I will talk about my experience with Claude regarding programming, art, and game
 
 Language models have been really good at coding tasks recently, and I think that this is where Claude helped the most.
 The [last time I made a game](https://ljvmiranda921.itch.io/better-together) was back in 2022 using Godot 3, and in the four years since, Godot has shipped a major update.
-Working with Claude helped me migrate my rusty Godot 3 knowledge to the new version.
-In fact, I'd even say that I learned new things and design patterns just by reading Claude's code!
+In addition, I am not quite proud of my GDScript coding hygiene: most of my game dev projects have spaghetti code or random patches here and there.[^1]
+Working with Claude has helped me with two things: migrating my rusty Godot 3 knowledge to the new version and learning actual game design patterns. 
+Yes, I did learn a few new tricks just by reading Claude's code!
+
+[^1]: Although I consider myself proficient in Python, the design space in Godot is quite different and took me some time to even wrap my head around.
+
+One example of this is in my use of signals.
+I learned that signals are now objects and we call them using `await` in Godot 4 instead of `yield(...)` in Godot 3.
+In addition, I also learned about the event bus pattern when handling multiple signals together:
+
+```python
+signal data_changed(total: int)
+signal mission_claimed(mission: Mission)
+signal grant_claimed(grant: GpuGrant)
+
+func add_data(amount: int) -> void:
+    data += amount
+    EventBus.data_changed.emit(data)
+
+func _ready() -> void:
+    EventBus.data_changed.connect(_refresh)
+```
+
+So instead of keeping track of every signal I created, I can just use the `EventBus` as the handler for any changes&mdash;awesome!
+
 
 
 
