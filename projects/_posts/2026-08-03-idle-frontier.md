@@ -84,6 +84,16 @@ Relearning a framework is kind of a bummer, but Claude has helped me ease into G
 
 ## Art & Writing
 
+Claude, through its tool use capabilities, can already interact with Aseprite to [draw pixel art](/notebook/2025/07/20/draw-me-a-swordsman/).
+But from my experience, I don't think it's quite there yet.
+For example, it had a hard time drawing a llama and animating it&mdash;so instead, I did it myself.
+I tried many things such as giving it a reference picture, or describing it in a verbose manner.
+One thing I learned about my process is that there's a certain vibe that I'm aiming for, that might be hard to express into words yet "I'll know it when I see it." 
+Perhaps, that's why it's easy for me to iterate on Aseprite rather than in a chat box.
+
+
+
+
 <!-- Tone is often wry and condescending -->
 <!-- You need to nudge it properly, still bad at art. but good at simple art (a few mistakes that are fixable) -->
 <!-- The art looks a bit too streamlined... i think in some way it loses the indie game clunky charm -->
