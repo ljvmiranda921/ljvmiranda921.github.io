@@ -41,19 +41,19 @@ Note that I'm just a hobbyist game developer.
 I learned pixel art and Godot and made [four games before](https://ljvmiranda921.itch.io), but nothing too fancy.
 I will talk about my experience with Claude regarding programming, art, and gameplay.
 
-But first, how did this game came to be?
+But first, how did this game come to be?
 
 ## The Idea
 
-One of my projects during the first term of my PhD is a literature review of language model development in the context of data and compute constraints.[^1]
+One of my projects during the first term of my PhD was a literature review of language model development in the context of data and compute constraints.[^1]
 Language models require a lot of these resources (this has been formalized into a set of scaling laws by {% citet kaplan2020 --file projects/idle-frontier.bib %} and {% citet hoffmann2022 --file projects/idle-frontier.bib %}).
 However, how do you build language models in environments where these resources are scarce, such as in the Global South?
 I think this type of problem has a certain shape that can be simulated as a resource engine problem.
-Initially, I thought of doing a card game about this, a la Blackjack style, but I came across [*Inn Over Your Head*](https://minmaxwell.itch.io/inn-over-your-head) and realized that balancing data and compute makes a perfect idle incremental game!
+Initially, I thought of doing a card game about this, à la Blackjack, but I came across [*Inn Over Your Head*](https://minmaxwell.itch.io/inn-over-your-head) and realized that balancing data and compute makes a perfect idle incremental game!
 
-I believe that the "clicking" action is about annotating data is quite apt, it's one of the few levers that you can actually control. 
-Sure, you're gonna spend a lot of time and money if you want to annotate a huge corpora, but it's virtually possible if you really want to.
-Then, that's where the research mechanic came in to ease the burden of annotation (e.g., synthetic data gives you some data), and by that, I realized that there's a game there.
+I believe that the "clicking" action being about annotating data is quite apt: it's one of the few levers that you can actually control. 
+Sure, you're gonna spend a lot of time and money if you want to annotate a huge corpus, but it's virtually possible if you really want to.
+Then, that's where the research mechanic came in to ease the burden of annotation (e.g., synthetic data gives you some data), and with that, I realized that there's a game there.
 
 [^1]: Check it out our work in [*Multilinguality at the Edge: Developing Language Models for the Global South*](https://ljvmiranda921.github.io/multilinguality-at-the-edge/)!
 
