@@ -72,11 +72,12 @@ So instead of keeping track of every signal I created, I can just use the `Event
 
 My workflow for *Idle Frontier* was to start constructing the scene in the Editor and write the functions for the interaction I want.
 Initially, I asked Claude to help me with bugfixes and debugging, but I've been quite impressed with its skill in interacting with Godot (without any add-ons!).
-In fact, some of the screens (e.g., the mission screen) were done by Claude end to end.
+In fact, some of the [Screens](/notebook/2021/04/19/godot-nodes-and-scenes/) (e.g., the mission screen) were done by Claude end to end.
+Although I can definitely imagine a Godot game done by Claude with minimal human input (similar to those zero-shot three-js games), there are still a lot of details that Claude missed.
+For example, there are many moments when implementing a new features breaks another, or like the screen has elements that are spaced weirdly.
+What I found helpful is to always have the general "shape" or context of the codebase in your head, and let Claude implement the details.
+The challenge usually is that when you vibe-code a lot, you lose your understanding of the organization of your codebase, and you're left with a frustrating whack-a-mole of patches.
 
-
-<!-- really good at programming -->
-<!-- i'm also rusty at Godot: version changed from 3 -> 4, learning new techniques and patterns. not even proud of my own Godot code -->
 
 ## Art & Writing
 
