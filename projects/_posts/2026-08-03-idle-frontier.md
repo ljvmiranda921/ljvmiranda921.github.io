@@ -135,18 +135,8 @@ This is definitely a new unlock for me and I can imagine this to be useful in th
    caption="From left to right: annotating data, running research, and reaching victory."
    alt="Three Idle Frontier gameplay clips shown side by side." %}
 
-
-
-
-<!-- Tone is often wry and condescending -->
-<!-- You need to nudge it properly, still bad at art. but good at simple art (a few mistakes that are fixable) -->
-<!-- The art looks a bit too streamlined... i think in some way it loses the indie game clunky charm -->
-
 ## Gameplay
 
-
-<!-- Claude isn't good with ideation, not too novel -->
-<!-- but really good at mechanics and balancing -->
 
 
 ## Conclusion
