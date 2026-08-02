@@ -41,15 +41,28 @@ Note that I'm just a hobbyist game developer.
 I learned pixel art and Godot and made [four games before](https://ljvmiranda921.itch.io), but nothing too fancy.
 I will talk about my experience with Claude regarding programming, art, and gameplay.
 
+But first, how did this game came to be?
+
+## The Idea
+
+One of my projects during the first term of my PhD is a literature review of language model development in the context of data and compute constraints.[^1]
+Language models require a lot of these resources (this has been formalized into a set of scaling laws by {% citet kaplan2020 --file projects/idle-frontier.bib %} and {% citet hoffmann2022 --file projects/idle-frontier.bib %}).
+However, how do you build language models in environments where these resources are scarce, such as in the Global South?
+I think this type of problem has a certain shape that can be simulated as a resource engine problem.
+Initially, I thought of doing a card game about this, a la Blackjack style, but I came across [*Inn Over Your Head*](https://minmaxwell.itch.io/inn-over-your-head) and realized that this is a perfect idle incremental game!
+
+
+[^1]: Check it out our work in [*Multilinguality at the Edge: Developing Language Models for the Global South*](https://ljvmiranda921.github.io/multilinguality-at-the-edge/)!
+
 ## Programming
 
 Language models have been really good at coding tasks recently, and I think this is where Claude helped me the most.
 The [last time I made a game](https://ljvmiranda921.itch.io/better-together) was back in 2022 using Godot 3, and in the four years since, Godot has shipped a major update.
-In addition, I am not quite proud of my GDScript coding hygiene: most of my game dev projects have spaghetti code or random patches here and there.[^1]
+In addition, I am not quite proud of my GDScript coding hygiene: most of my game dev projects have spaghetti code or random patches here and there.[^2]
 Working with Claude has helped me with two things: migrating my rusty Godot 3 knowledge to the new version and learning actual game design patterns. 
 Yes, I did learn a few new tricks just by reading Claude's code!
 
-[^1]: Although I consider myself proficient in Python, the design space in Godot is quite different and took me some time to even wrap my head around.
+[^2]: Although I consider myself proficient in Python, the design space in Godot is quite different and took me some time to even wrap my head around.
 
 One example of this is in my use of signals.
 I learned that signals are now objects and we call them using `await` in Godot 4 instead of `yield(...)` in Godot 3.
@@ -141,3 +154,10 @@ This is definitely a new unlock for me and I can imagine this to be useful in th
 
 
 ## Conclusion
+
+
+
+
+## References
+
+{% bibliography --file projects/idle-frontier.bib %}
