@@ -28,10 +28,14 @@ excerpt: |
 
 <span class="firstcharacter">C</span>an you bootstrap your way from annotating data to training a frontier model in one thousand days? Play Idle Frontier!
 
+<div style="text-align: center;" markdown="0">
+<iframe frameborder="0" src="https://itch.io/embed-upload/18643386?color=183f39" allowfullscreen="" width="360" height="640"><a href="https://ljvmiranda921.itch.io/idle-frontier">Play Idle Frontier on itch.io</a></iframe>
+</div>
 
+&nbsp;
 
 In this blog post, I want to share my experience developing this game with the aid of Opus 5 (which I'll just call Claude from now on).
-My goal is to give a middle ground perspective for AI-aided game development: 
+My goal is to give a tempered perspective on AI-aided game development: 
 something in between those [zero-shot-three-js games](https://somethingbig.ai/games) that are popular recently and the [no-AI-in-my-workflow](https://www.gamesradar.com/games/why-so-many-game-developers-dont-want-to-use-generative-ai/) crowd.
 Note that I'm just a hobbyist game developer.
 I learned pixel art and Godot and made [four games before](https://ljvmiranda921.itch.io), but nothing too fancy.
