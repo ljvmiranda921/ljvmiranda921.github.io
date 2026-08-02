@@ -156,6 +156,8 @@ This is definitely a new unlock for me and I can imagine this to be useful in th
 
 ### Gameplay
 
+Since *Idle Frontiers* is about building an economic engine, one challenge is making sure that the environment (e.g., the missions, grants, research upgrades) is challenging while still making it possible to win.
+
 
 
 
