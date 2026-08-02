@@ -74,13 +74,13 @@ My workflow for *Idle Frontier* was to start constructing the scene in the Edito
 Initially, I asked Claude to help me with bugfixes and debugging, but I've been quite impressed with its skill in interacting with Godot (without any add-ons!).
 In fact, some of the [Screens](/notebook/2021/04/19/godot-nodes-and-scenes/) (e.g., the mission screen) were done by Claude end to end.
 Although I can definitely imagine a Godot game done by Claude with minimal human input (similar to those zero-shot three-js games), there are still a lot of details that Claude missed.
-For example, there are many moments when implementing a new features breaks another, or like the screen has elements that are spaced weirdly.
+For example, there are many moments when implementing a new feature breaks another, or like the screen has elements that are spaced weirdly.
 What I found helpful is to always have the general "shape" or context of the codebase in your head, and let Claude implement the details.
 The challenge usually is that when you vibe-code a lot, you lose your understanding of the organization of your codebase, and you're left with a frustrating whack-a-mole of patches.
 
-Despite these limitations, Claude has been very helpful in speeding myself up in getting reacquainted to Godot.
+Despite these limitations, Claude has been very helpful in speeding myself up in getting reacquainted with Godot.
 To be honest, this was one of my hesitations why I wasn't able to go back to game dev in the past few years.
-Relearning a framework is kinda a bummer, but Claude has helped me ease in to Godot again!
+Relearning a framework is kinda a bummer, but Claude has helped me ease into Godot again!
 
 ## Art & Writing
 
