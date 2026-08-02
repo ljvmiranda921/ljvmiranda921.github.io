@@ -45,7 +45,10 @@ I will talk about my experience with Claude regarding programming, art, and game
 
 Language models have been really good at coding tasks recently, and I think that this is where Claude helped the most.
 The [last time I made a game](https://ljvmiranda921.itch.io/better-together) was back in 2022 using Godot 3, and in the four years since, Godot has shipped a major update.
-Working with Claude helped me migrate my Godot 3 knowledge to the new version.
+Working with Claude helped me migrate my rusty Godot 3 knowledge to the new version.
+In fact, I'd even say that I learned new things and design patterns just by reading Claude's code!
+
+
 
 
 
