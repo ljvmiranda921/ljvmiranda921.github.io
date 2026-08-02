@@ -82,7 +82,7 @@ Despite these limitations, Claude has helped me get reacquainted with Godot fast
 To be honest, this was one of the reasons I hadn't gone back to game dev in the past few years.
 Relearning a framework is kind of a bummer, but Claude has helped me ease into Godot again!
 
-## Art & Writing
+## Art & Assets
 
 Claude, through its tool use capabilities, can already interact with Aseprite to [draw pixel art](/notebook/2025/07/20/draw-me-a-swordsman/).
 But from my experience, I don't think it's quite there yet.
@@ -103,7 +103,24 @@ Claude is also quite good in workflow-related tasks such as creating a canvas, e
 It's actually very cool, I can just say "create a lightbulb and an 8-cycle animation of it turning on."
 Again, it's pretty good at these basic time-saving activities.
 
+> I am not really sure if Claude's drawing limitations is due to its harness.
+
 I am not really sure if Claude's drawing limitations is due to its harness. 
+When I counted the number of tool calls in Aseprite, here's what I got:
+
+| Function | Number of Calls | Percentage |
+|---|---|---|
+| `run_lua_script` | 145 | 64.4% |
+| `export_sprite` | 39 | 17.3% |
+| `export_spritesheet` | 20 | 8.9% |
+| `create_canvas` | 14 | 6.2% |
+| `get_sprite_info` | 6 | 2.7% |
+| `set_palette` | 1 | 0.4% |
+
+It seems that most operations are Claude just passing Lua scripts to Aseprite instead of using granular drawing tools (e.g., `draw_line`, `draw_polygon`, `draw_pixels`, etc.).
+So in some way, it is actually circumventing the "spririt" of the tool-call and relying on its coding capabilities.
+When I inspect the Lua call, its full of for-loops and shifts, which is reasonable in retrospect:
+although there is a `draw_pixels` tool, using it will require sending hundreds of tool-calls (one for each coordinate) to Aseprite. Perhaps, Claude found that just sending a Lua code with the for-loop is much more efficient.
 
 
 
