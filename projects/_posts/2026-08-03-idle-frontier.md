@@ -49,7 +49,7 @@ One of my projects during the first term of my PhD is a literature review of lan
 Language models require a lot of these resources (this has been formalized into a set of scaling laws by {% citet kaplan2020 --file projects/idle-frontier.bib %} and {% citet hoffmann2022 --file projects/idle-frontier.bib %}).
 However, how do you build language models in environments where these resources are scarce, such as in the Global South?
 I think this type of problem has a certain shape that can be simulated as a resource engine problem.
-Initially, I thought of doing a card game about this, a la Blackjack style, but I came across [*Inn Over Your Head*](https://minmaxwell.itch.io/inn-over-your-head) and realized that this is a perfect idle incremental game!
+Initially, I thought of doing a card game about this, a la Blackjack style, but I came across [*Inn Over Your Head*](https://minmaxwell.itch.io/inn-over-your-head) and realized that balancing data and compute makes a perfect idle incremental game!
 
 
 [^1]: Check it out our work in [*Multilinguality at the Edge: Developing Language Models for the Global South*](https://ljvmiranda921.github.io/multilinguality-at-the-edge/)!
