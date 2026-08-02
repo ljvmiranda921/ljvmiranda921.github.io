@@ -39,7 +39,6 @@ My goal is to give a tempered perspective on AI-aided game development:
 something in between those [zero-shot-three-js games](https://somethingbig.ai/games) that are popular recently and the [no-AI-in-my-workflow](https://www.gamesradar.com/games/why-so-many-game-developers-dont-want-to-use-generative-ai/) crowd.
 Note that I'm just a hobbyist game developer.
 I learned pixel art and Godot and made [four games before](https://ljvmiranda921.itch.io), but nothing too fancy.
-I will talk about my experience with Claude regarding programming, art, and gameplay.
 
 But first, how did this game come to be?
 
@@ -57,7 +56,11 @@ Then, that's where the research mechanic came in to ease the burden of annotatio
 
 [^1]: Check it out our work in [*Multilinguality at the Edge: Developing Language Models for the Global South*](https://ljvmiranda921.github.io/multilinguality-at-the-edge/)!
 
-## Programming
+## Game Development with AI
+
+In this section, I'll talk more about my experience in developing *Idle Frontiers* using Claude, in the context of three aspects: programming, art, and gameplay. 
+
+### Programming
 
 Language models have been really good at coding tasks recently, and I think this is where Claude helped me the most.
 The [last time I made a game](https://ljvmiranda921.itch.io/better-together) was back in 2022 using Godot 3, and in the four years since, Godot has shipped a major update.
@@ -98,7 +101,7 @@ Despite these limitations, Claude has helped me get reacquainted with Godot fast
 To be honest, this was one of the reasons I hadn't gone back to game dev in the past few years.
 Relearning a framework is kind of a bummer, but Claude has helped me ease into Godot again!
 
-## Art & Assets
+### Art & Assets
 
 Claude, through its tool use capabilities, can already interact with Aseprite to [draw pixel art](/notebook/2025/07/20/draw-me-a-swordsman/).
 But from my experience, I don't think it's quite there yet.
@@ -151,7 +154,7 @@ This is definitely a new unlock for me and I can imagine this to be useful in th
    caption="From left to right: annotating data, running research, and reaching victory."
    alt="Three Idle Frontier gameplay clips shown side by side." %}
 
-## Gameplay
+### Gameplay
 
 
 
