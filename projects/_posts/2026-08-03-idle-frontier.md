@@ -185,8 +185,9 @@ But most importantly, Claude has been really good at **spinning up a UI simulato
 
 
 I admit, this not one-shot: I still have to do many runs to test the "feel" of the balance.
-There are many cases where the simulator says we're at the right pacing, but it still doesn't feel good.
-This led me to some "tricks" to help the player such as showing missions with the payout the user currently needs and being more lenient in its success conditions. 
+There are many cases where the simulator says we're at the right pacing, but it still doesn't "feel good."
+This led me to some tricks to help the player such as showing missions with the payout the user currently needs and being more lenient in its success conditions. 
+
 
 
 [^3]: Since most of the gameplay information are in JSON, I can just read them through Python, parse it into a dictionary, and write a non-GUI simulator to see how they interact.
