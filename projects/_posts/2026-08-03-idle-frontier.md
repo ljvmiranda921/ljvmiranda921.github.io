@@ -7,6 +7,7 @@ category: projects
 comments: true
 author: "LJ V. MIRANDA"
 published: true
+header-img: /assets/images/idle-frontier/header.png
 tags:
   [
     nlp,
@@ -24,6 +25,8 @@ description: |
     Idle Frontier is a clicker game that challenges you to build a frontier language model in 1000 days!
     In this blog post, I'll talk about some reflections on developing a game with the help of large language models.
 excerpt: |
+    Idle Frontier is a clicker game that challenges you to build a frontier language model in 1000 days!
+    In this blog post, I'll talk about some reflections on developing a game with the help of large language models.
 ---
 
 <span class="firstcharacter">C</span>an you bootstrap your way from annotating data to training a frontier model in one thousand days? Play Idle Frontier!
@@ -197,7 +200,7 @@ Claude being able to turn these into a set of sliders and knobs I can just tweak
 
 [^3]: Since most of the gameplay information is in JSON, I can just read it through Python, parse it into a dictionary, and write a non-GUI simulator to see how they interact.
 
-## Final Thoughts
+## Final Thoughts and Reflections
 
 *Idle Frontier* is my first foray into AI-aided game development.
 In retrospect, creating a systems-heavy game is the perfect use case for Claude; I can definitely see this being extended to roguelikes or platformers.
