@@ -201,7 +201,7 @@ Claude being able to turn these into a set of sliders and knobs I can just tweak
 
 *Idle Frontier* is my first foray into AI-aided game development.
 In retrospect, creating a systems-heavy game is the perfect use case for Claude; I can definitely see this being extended to roguelikes or platformers.
-I'm also quite curious how these models can be used in genres like interactive fiction or visual novels&mdash; I've grown averse to Claude-like writing so this will be a challenge.
+I'm also quite curious about how these models could be used in genres like interactive fiction or visual novels&mdash;though I've grown averse to Claude-like writing, so that will be a challenge.
 
 Recently, I've been seeing the proliferation of one-shot games.
 The clips look quite fun, but when I tried playing a few, I was easily taken out by tells that it was AI in some way.
@@ -209,7 +209,7 @@ I noticed that there's a bit of sameness in these games that I can't quite accur
 I admit that I also feel *Idle Frontier* has given me that same feeling of sameness: the icons are "too perfect" and "too streamlined."
 In some ways, I appreciate the charm and clunkiness of my older games, despite this game having better technical execution.
 I also noticed that outside my AI-bubble, there's definitely some adversity in the use of AI in the game development community.
-For example, Itch.io has an AI disclosure form, and the usual subreddit and Discord groups I go to seem to treat this disclosure as a target on the creator's back&mdash;it's very interesting.
+For example, Itch.io has an AI disclosure form, and the subreddits and Discord groups I frequent seem to treat that disclosure as a target on the creator's back&mdash;which I find very interesting.
 
 What I really like about making games is that the real judge of how good a game is is whether a human finds it fun, whether it's built with AI or not.
 There's something *embodied* about it.
