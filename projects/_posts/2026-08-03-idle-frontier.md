@@ -172,6 +172,13 @@ Therefore, you need to perform several activites such as research or applying fo
 It's important to pace these milestones so that a player has something to aim for while still seeing the fruits of their labor.
 There are so many variables to consider, that's why making balancing decisions is quite difficult as it's hard to ascertain how they'll influence the runs.
 
+Claude has been helpful in building a simulator based on the game's many variables.
+At first, we started iterating on a Python file:[^3] we bootstrapped the gameplay loop and simulate many conditions to assess a player's expected data and compute levels at Day 250, 500, 750, and 1000.
+That itself has been helpful for me to tweak the numbers and figure out mechanics that were missing.
+This is also where the coffee mechanic came in, where a player can have a massive boost in income.
+
+[^3]: Since most of the gameplay information are in JSON, I can just read them through Python, parse it into a dictionary, and write a non-GUI simulator to see how they interact.
+
 
 
 
