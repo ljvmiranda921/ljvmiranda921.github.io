@@ -164,7 +164,13 @@ This is definitely a new unlock for me and I can imagine this to be useful in th
 
 For the two aspects above (Programming and Art), I can say that Claude's value-add here is on efficiency.
 I can basically do these things if I spend more time and energy.
-However, if there's one aspect of game dev that I believe only Claude can do, it's in figuring out the right balance for a game about building a strong economic engine.
+However, if there's one aspect of game dev that I believe Claude can do better than me, it's in figuring out the right balance for a game about building a strong economic engine.
+
+The core challenge in *Idle Frontiers* is creating the highest tier model possible within a limited time frame.
+You cannot brute-force your way by just annotating data, and the compute you initially have is quite limited.
+Therefore, you need to perform several activites such as research or applying for grants that will improve your income so that you reach several milestones and train better models.
+It's important to pace these milestones so that a player has something to aim for while still seeing the fruits of their labor.
+There are so many variables to consider, that's why making balancing decisions is quite difficult as it's hard to ascertain how they'll influence the runs.
 
 
 
