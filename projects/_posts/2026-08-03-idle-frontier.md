@@ -128,9 +128,7 @@ Claude is also quite good in workflow-related tasks such as creating a canvas, e
 It's actually very cool; I can just say "create a lightbulb and an 8-cycle animation of it turning on."
 Again, it's pretty good at these basic time-saving activities.
 
-> I am not really sure if Claude's drawing limitations is due to its harness.
-
-I am not really sure if Claude's drawing limitations is due to its harness. 
+As an aside, I am not really sure if Claude's drawing limitations is due to its harness. 
 When I counted the number of tool calls in Aseprite, here's what I got:
 
 | Function | Number of Calls | Percentage |
@@ -143,10 +141,12 @@ When I counted the number of tool calls in Aseprite, here's what I got:
 | `set_palette` | 1 | 0.4% |
 
 It seems that in most operations, Claude is just passing Lua scripts to Aseprite instead of using the granular drawing tools (e.g., `draw_line`, `draw_polygon`, `draw_pixels`, etc.).
-So in some way, it is actually circumventing the "spirit" of the tool call and relying on its coding capabilities.
+So in some way, it is actually circumventing the "spirit" of the tool call and instead, rely on its coding capabilities.
 When I inspect the Lua call, it's full of for-loops and shifts, which is reasonable in retrospect:
 although there is a `draw_pixels` tool, using it would require sending hundreds of tool calls (one for each coordinate) to Aseprite. 
 Perhaps Claude found that just sending Lua code with a for-loop is much more efficient.
+
+> ...in some way [Claude] is actually circumventing the "spirit" of the tool call and instead, rely on its coding capabilities.
 
 Finally, if there's one thing that Claude wowed me, it's in **making storefront assets.**
 Just look at these GIFs!
