@@ -167,7 +167,7 @@ However, if there's one aspect of game dev that I believe Claude can do better t
 
 The core challenge in *Idle Frontier* is creating the highest tier model possible within a limited time frame.
 You cannot brute-force your way by just annotating data, and the compute you initially have is quite limited.
-Therefore, you need to perform several activities such as research or applying for grants that will improve your income so that you reach several milestones and train better models.
+Therefore, you need to perform several activities such as doing research or applying for grants that will improve your income so that you reach several milestones and train better models.
 It's important to pace these milestones so that a player has something to aim for while still seeing the fruits of their labor.
 There are so many variables to consider that making balancing decisions is quite difficult, as it's hard to ascertain how they'll influence the runs.
 
@@ -192,7 +192,7 @@ But most importantly, Claude has been really good at **spinning up a UI simulato
 I admit, this wasn't one-shot: I still have to do many runs to test the "feel" of the balance.
 There are many cases where the simulator says we're at the right pacing, but it still doesn't "feel good."
 This led me to some tricks to help the player such as showing missions with the payout the user currently needs and being more lenient in its success conditions. 
-However, this is a massive unlock for me: I sometimes find balancing to be tedious and drudging, and the effort required to make perfect balance is more than I can give for a hobby side project.
+However, this is a massive unlock for me: I sometimes find balancing to be tedious and dull, and the effort required to make perfect balance is more than I can give for a hobby side project.
 Claude being able to turn these into a set of sliders and knobs I can just tweak will improve the future games I'll build.
 
 [^3]: Since most of the gameplay information is in JSON, I can just read it through Python, parse it into a dictionary, and write a non-GUI simulator to see how they interact.
