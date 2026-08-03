@@ -195,15 +195,11 @@ This led me to some tricks to help the player such as showing missions with the 
 However, this is a massive unlock for me: I sometimes find balancing to be tedious and drudging, and the effort required to make perfect balance is more than I can give for a hobby side project.
 Claude being able to turn these into a set of sliders and knobs I can just tweak will improve the future games I'll build.
 
-
 [^3]: Since most of the gameplay information is in JSON, I can just read it through Python, parse it into a dictionary, and write a non-GUI simulator to see how they interact.
 
+## Final Thoughts
 
 
-
-
-
-## Conclusion
 
 
 
