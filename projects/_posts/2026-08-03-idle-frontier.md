@@ -54,7 +54,7 @@ I believe that the "clicking" action being about annotating data is quite apt: i
 Sure, you're gonna spend a lot of time and money if you want to annotate a huge corpus, but it's virtually possible if you really want to.
 Then, that's where the research mechanic came in to ease the burden of annotation (e.g., synthetic data gives you some data), and with that, I realized that there's a game there.
 
-[^1]: Check it out our work in [*Multilinguality at the Edge: Developing Language Models for the Global South*](https://ljvmiranda921.github.io/multilinguality-at-the-edge/)!
+[^1]: Check out our work in [*Multilinguality at the Edge: Developing Language Models for the Global South*](https://ljvmiranda921.github.io/multilinguality-at-the-edge/)!
 
 ## Game Development with AI
 
