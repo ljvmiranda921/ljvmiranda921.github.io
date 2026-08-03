@@ -162,7 +162,11 @@ This is definitely a new unlock for me and I can imagine this to be useful in th
 
 ### Gameplay
 
-Since *Idle Frontiers* is about building an economic engine, one challenge is making sure that the environment (e.g., the missions, grants, research upgrades) is challenging while still making it possible to win.
+For the two aspects above (Programming and Art), I can say that Claude's value-add here is on efficiency.
+I can basically do these things if I spend more time and energy.
+However, if there's one aspect of game dev that I believe only Claude can do, it's in figuring out the right balance for a game about building a strong economic engine.
+
+
 
 
 
