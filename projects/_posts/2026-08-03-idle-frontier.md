@@ -161,15 +161,15 @@ This is definitely a new unlock for me and I can imagine this to be useful in th
 
 ### Gameplay
 
-For the two aspects above (Programming and Art), I can say that Claude's value-add here is on efficiency.
+For the two aspects above (Programming and Art), I can say that Claude's value-add here is in efficiency.
 I can basically do these things if I spend more time and energy.
 However, if there's one aspect of game dev that I believe Claude can do better than me, it's in figuring out the right balance for a game about building a strong economic engine.
 
-The core challenge in *Idle Frontiers* is creating the highest tier model possible within a limited time frame.
+The core challenge in *Idle Frontier* is creating the highest tier model possible within a limited time frame.
 You cannot brute-force your way by just annotating data, and the compute you initially have is quite limited.
-Therefore, you need to perform several activites such as research or applying for grants that will improve your income so that you reach several milestones and train better models.
+Therefore, you need to perform several activities such as research or applying for grants that will improve your income so that you reach several milestones and train better models.
 It's important to pace these milestones so that a player has something to aim for while still seeing the fruits of their labor.
-There are so many variables to consider, that's why making balancing decisions is quite difficult as it's hard to ascertain how they'll influence the runs.
+There are so many variables to consider that making balancing decisions is quite difficult, as it's hard to ascertain how they'll influence the runs.
 
 {% include figure.html
    src="/assets/images/idle-frontier/economy_curve.png"
@@ -178,20 +178,20 @@ There are so many variables to consider, that's why making balancing decisions i
    alt="A simulation of 100 runs in Idle Frontier" %}
 
 Claude has been helpful in building a simulator based on the game's many variables.
-At first, I started iterating on a Python file:[^3] I bootstrapped the gameplay loop and simulate many conditions to assess a player's expected resource levels (data and compute) at Day 250, 500, 750, and 1000.
+At first, I started iterating on a Python file:[^3] I bootstrapped the gameplay loop and simulated many conditions to assess a player's expected resource levels (data and compute) at Day 250, 500, 750, and 1000.
 That itself has been helpful for me to tweak the numbers and figure out mechanics that were missing.
 This is also where the coffee mechanic came in, where a player can have a massive boost in income.
-But most importantly, Claude has been really good at **spinning up a UI simulator** based on my Python simulation, this actually allowed me to test any balancing changes while playing!
+But most importantly, Claude has been really good at **spinning up a UI simulator** based on my Python simulation, which actually allowed me to test any balancing changes while playing!
 
 
-I admit, this not one-shot: I still have to do many runs to test the "feel" of the balance.
+I admit, this wasn't one-shot: I still have to do many runs to test the "feel" of the balance.
 There are many cases where the simulator says we're at the right pacing, but it still doesn't "feel good."
 This led me to some tricks to help the player such as showing missions with the payout the user currently needs and being more lenient in its success conditions. 
 However, this is a massive unlock for me: I sometimes find balancing to be tedious and drudging, and the effort required to make perfect balance is more than I can give for a hobby side project.
 Claude being able to turn these into a set of sliders and knobs I can just tweak will improve the games I'll build from now on.
 
 
-[^3]: Since most of the gameplay information are in JSON, I can just read them through Python, parse it into a dictionary, and write a non-GUI simulator to see how they interact.
+[^3]: Since most of the gameplay information is in JSON, I can just read it through Python, parse it into a dictionary, and write a non-GUI simulator to see how they interact.
 
 
 
