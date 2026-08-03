@@ -209,14 +209,17 @@ I noticed that there's a bit of sameness in these games that I can't quite accur
 I admit that I also feel *Idle Frontier* has given me that same feeling of sameness: the icons are "too perfect" and "too streamlined."
 In some ways, I appreciate the charm and clunkiness of my older games, despite this game having better technical execution.
 I also noticed that outside my AI-bubble, there's definitely some adversity in the use of AI in the game development community.
-For example, Itch.io has an AI disclosure form, and the subreddits and Discord groups I frequent seem to treat that disclosure as a target on the creator's back&mdash;which I find very interesting.
+For example, Itch.io has an AI disclosure form, and the subreddits and Discord groups I frequent seem to treat that disclosure as a target on the creator's back. 
+I find all of these very interesting.
 
-What I really like about making games is that the real judge of how good a game is is whether a human finds it fun, whether it's built with AI or not.
+What I really like about making games is that the real judge of a game is simply whether a human finds it fun&mdash;whether it's built with AI or not.
 There's something *embodied* about it.
-It's very different from other fields like, say, peer reviewing and publishing, where papers are sometimes judged by an AI reviewer and can be gamed in many convoluted ways.
-Games, in the end, are about making things that bring fun; it's direct.
+It's very different from a field like, say, academic publishing, where there is so much machinery sitting between the work and any real judgment of it.[^4]
+Games, in the end, cut through all that: you make something, and a human either has fun or they don't. It's direct.
 
 That said, I hope *Idle Frontier* (and my other games) also bring you fun.
+
+[^4]: And this machinery is breaking due to the rapid use of AI in research. A common refrain during the past conference cycles is the explosion in the number of submissions coupled with AI reviews. I have many thoughts and reflections about this, especially on how it changed my perspective of *impact* in research.
 
 
 ## References
