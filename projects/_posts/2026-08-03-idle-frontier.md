@@ -183,12 +183,17 @@ That itself has been helpful for me to tweak the numbers and figure out mechanic
 This is also where the coffee mechanic came in, where a player can have a massive boost in income.
 But most importantly, Claude has been really good at **spinning up a UI simulator** based on my Python simulation, which actually allowed me to test any balancing changes while playing!
 
+{% include figure.html
+   src="/assets/images/idle-frontier/dev_knobs.png,/assets/images/idle-frontier/dev_sim.png"
+   width="200"
+   caption="Simulation UI for balancing gameplay."
+   alt="Simulation UI for balancing gameplay." %}
 
 I admit, this wasn't one-shot: I still have to do many runs to test the "feel" of the balance.
 There are many cases where the simulator says we're at the right pacing, but it still doesn't "feel good."
 This led me to some tricks to help the player such as showing missions with the payout the user currently needs and being more lenient in its success conditions. 
 However, this is a massive unlock for me: I sometimes find balancing to be tedious and drudging, and the effort required to make perfect balance is more than I can give for a hobby side project.
-Claude being able to turn these into a set of sliders and knobs I can just tweak will improve the games I'll build from now on.
+Claude being able to turn these into a set of sliders and knobs I can just tweak will improve the future games I'll build.
 
 
 [^3]: Since most of the gameplay information is in JSON, I can just read it through Python, parse it into a dictionary, and write a non-GUI simulator to see how they interact.
