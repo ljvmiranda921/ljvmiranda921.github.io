@@ -181,8 +181,12 @@ Claude has been helpful in building a simulator based on the game's many variabl
 At first, I started iterating on a Python file:[^3] I bootstrapped the gameplay loop and simulate many conditions to assess a player's expected resource levels (data and compute) at Day 250, 500, 750, and 1000.
 That itself has been helpful for me to tweak the numbers and figure out mechanics that were missing.
 This is also where the coffee mechanic came in, where a player can have a massive boost in income.
-But most importantly, Claude has been really good at spinning up a UI simulator based on my Python simulation, this actually allowed me to test any balancing changes while playing!
+But most importantly, Claude has been really good at **spinning up a UI simulator** based on my Python simulation, this actually allowed me to test any balancing changes while playing!
 
+
+I admit, this not one-shot: I still have to do many runs to test the "feel" of the balance.
+There are many cases where the simulator says we're at the right pacing, but it still doesn't feel good.
+This led me to some "tricks" to help the player such as showing missions with the payout the user currently needs and being more lenient in its success conditions. 
 
 
 [^3]: Since most of the gameplay information are in JSON, I can just read them through Python, parse it into a dictionary, and write a non-GUI simulator to see how they interact.
