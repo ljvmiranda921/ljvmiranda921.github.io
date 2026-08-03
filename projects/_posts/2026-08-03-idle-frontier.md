@@ -156,7 +156,6 @@ This is definitely a new unlock for me and I can imagine this to be useful in th
 {% include figure.html
    src="/assets/images/idle-frontier/clip_annotate.gif,/assets/images/idle-frontier/clip_research.gif,/assets/images/idle-frontier/clip_victory.gif"
    width="200"
-   class="rounded"
    caption="From left to right: annotating data, running research, and reaching victory."
    alt="Three Idle Frontier gameplay clips shown side by side." %}
 
@@ -172,10 +171,18 @@ Therefore, you need to perform several activites such as research or applying fo
 It's important to pace these milestones so that a player has something to aim for while still seeing the fruits of their labor.
 There are so many variables to consider, that's why making balancing decisions is quite difficult as it's hard to ascertain how they'll influence the runs.
 
+{% include figure.html
+   src="/assets/images/idle-frontier/economy_curve.png"
+   width="600"
+   caption="A simulation of runs in Idle Frontier, and my initial attempts in modelling the game. Reporting the average of 100 runs."
+   alt="A simulation of 100 runs in Idle Frontier" %}
+
 Claude has been helpful in building a simulator based on the game's many variables.
 At first, I started iterating on a Python file:[^3] I bootstrapped the gameplay loop and simulate many conditions to assess a player's expected resource levels (data and compute) at Day 250, 500, 750, and 1000.
 That itself has been helpful for me to tweak the numbers and figure out mechanics that were missing.
 This is also where the coffee mechanic came in, where a player can have a massive boost in income.
+But most importantly, Claude has been really good at spinning up a UI simulator based on my Python simulation, this actually allowed me to test any balancing changes while playing!
+
 
 
 [^3]: Since most of the gameplay information are in JSON, I can just read them through Python, parse it into a dictionary, and write a non-GUI simulator to see how they interact.
