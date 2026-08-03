@@ -45,7 +45,7 @@ But first, how did this game come to be?
 ## The Idea
 
 One of my projects during the first term of my PhD was a literature review of language model development in the context of data and compute constraints.[^1]
-Language models require a lot of these resources (this has been formalized into a set of scaling laws by {% citet kaplan2020 --file projects/idle-frontier.bib %} and {% citet hoffmann2022 --file projects/idle-frontier.bib %}).
+Language models require a lot of these resources; this has been formalized into a set of scaling laws by {% citet kaplan2020 --file projects/idle-frontier.bib %} and {% citet hoffmann2022 --file projects/idle-frontier.bib %}.
 However, how do you build language models in environments where these resources are scarce, such as in the Global South?
 I think this type of problem has a certain shape that can be simulated as a resource engine problem.
 Initially, I thought of doing a card game about this, à la Blackjack, but I came across [*Inn Over Your Head*](https://minmaxwell.itch.io/inn-over-your-head) and realized that balancing data and compute makes a perfect idle incremental game!
