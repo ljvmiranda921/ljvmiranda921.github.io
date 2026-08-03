@@ -220,7 +220,7 @@ There's something *embodied* about it.
 It's very different from a field like, say, academic publishing, where there is so much machinery sitting between the work and any real judgment of it.[^4]
 Games, in the end, cut through all that: you make something, and a human either has fun or they don't. It's direct.
 
-That said, I hope *Idle Frontier* (and my other games) also bring you fun.
+That said, I hope *Idle Frontier* brings you fun.
 
 [^4]: And this machinery is breaking due to the rapid use of AI in research. A common refrain during the past conference cycles is the explosion in the number of submissions coupled with AI reviews. I have many thoughts and reflections about this, especially on how it changed my perspective of *impact* in research.
 
