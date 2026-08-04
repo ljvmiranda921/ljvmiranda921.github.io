@@ -133,6 +133,11 @@
 .home-social {
   font-size: $small-font-size;
 
+  // FontAwesome itch.io icon, spaced like the svg-icons
+  i {
+    padding-right: 5px;
+  }
+
   a {
     color: $text-color;
 
