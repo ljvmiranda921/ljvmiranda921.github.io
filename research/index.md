@@ -8,7 +8,7 @@ permalink: /research/
 My field is in natural language processing and machine learning.
 I study **edge language models** or small models that can run on resource-constrained infrastructure such as commodity devices or limited connectivity, with the motivation of enabling the development and deployment of Language AI for the Global South.
 
-I want to find out what it takes to build capable language technology when data and compute are scarce, 
+I want to find out what it takes to build capable language technology given scarce data and compute resources, 
 so that we understand how our resource investments map to utility, and right-size development efforts to the actual needs of the language and its speakers.
 My research spans across the whole development lifecyle: data collection, training, and evaluation.
 
