@@ -48,7 +48,7 @@ I [write a lot about Filipino NLP](/filipino-nlp) in this blog and organize rese
 * [NLP Seminar for the Philippine Team at the International Olympiad in AI](https://ljvmiranda921.github.io/ioaiph26-nlp/). *Philippine AI Olympiad Team*. Hosted by Martin Gomez. 2026.
 * [Artisanal Filipino Resources in the Age of LLMs](/notebook/2024/07/02/talk-dlsu/). *De La Salle University - Manila (Graduate Seminar)*. Hosted by Dr. Charibeth Cheng. 2024.
 * [Labeling with LLMs](/notebook/2024/02/21/talk-unc-charlotte/). *University of North Carolina - Charlotte (Course Seminar)*. Hosted by Dr. Ryan Wesslen and Chang Hsin Lee. 2024.
-* [Geospatial Data at Scale with Geomancer](https://docs.google.com/presentation/d/1tti0OabRqiVTeU4y4mI4ePfpEehngiZvwlBqBQbiujU/edit?usp=sharing). *DataBeers Manila*. Hosted by Dr. Erika Fille Legara. 2019.
+<!-- * [Geospatial Data at Scale with Geomancer](https://docs.google.com/presentation/d/1tti0OabRqiVTeU4y4mI4ePfpEehngiZvwlBqBQbiujU/edit?usp=sharing). *DataBeers Manila*. Hosted by Dr. Erika Fille Legara. 2019. -->
 
 
 ## Research Posters
