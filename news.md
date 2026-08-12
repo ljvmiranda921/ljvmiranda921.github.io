@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**Aug 2026**</span>: I started my internship at the [Thomson Reuters Lab - Foundational Research Team](https://www.imperial.ac.uk/frontier-ai/) where I'll be working with [Jonathan Richard Schwarz](https://jonathan-schwarz.github.io/). See you around London!</p>
+<p><span class="date">**Aug 2026**</span>: I started my internship at the [Thomson Reuters Labs - Foundational Research Team](https://www.imperial.ac.uk/frontier-ai/) where I'll be working with [Jonathan Richard Schwarz](https://jonathan-schwarz.github.io/). See you around London!</p>
 </div>
 
 <div class="news-item">
