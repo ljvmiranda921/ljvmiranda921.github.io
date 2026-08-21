@@ -22,6 +22,10 @@ title: News
 </style>
 
 <div class="news-item">
+<p><span class="date">**Aug 2026**</span>: My first PhD work on multilingual synthetic data generation, [Polyglot Teachers](https://ljvmiranda921.github.io/polyglot-teachers/) ([preprint](https://arxiv.org/abs/2604.11290)), has been accepted to EMNLP Main. See you in Budapest this October!</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**Aug 2026**</span>: I started my internship at the [Thomson Reuters Labs - Foundational Research Team](https://www.imperial.ac.uk/frontier-ai/) where I'll be working with [Jonathan Richard Schwarz](https://jonathan-schwarz.github.io/) and [Shengzhuang Chen](https://szc12153.github.io/). See you around London!</p>
 </div>
 
@@ -41,9 +45,9 @@ title: News
 <p><span class="date">**May 2026**</span>: Proud to release our [survey on multilingual edge models](https://arxiv.org/abs/2604.21637) (check the [website](/multilinguality-at-the-edge/)!). If you know me, I care a lot about AI in the Global South, I'd like to continue doing these types of sociotechnical research, so reach out if you wanna chat!</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**Apr 2026**</span>: Sharing my first PhD work, [Polyglot Teachers](https://arxiv.org/abs/2604.11290)! Here, I studied what makes a good teacher model for generating multilingual data. I'm excited to continue this research agenda on multilingual synthetic data generation!</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**Dec 2025**</span>: So excited to see the release of [OLMo 3](https://arxiv.org/pdf/2512.13961)! My contribution was on creating the tool-use SFT mix during my last few months as a pre-doc. My experience here made me excited in agentic tool-use!</p>
