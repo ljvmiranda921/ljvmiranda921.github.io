@@ -6,9 +6,9 @@ permalink: /research/
 ---
 
 My field is in natural language processing and machine learning.
-I study **edge language models**, or small models that can run on commodity devices and under limited connectivity, with the motivation of enabling the development and deployment of Language AI for the Global South.
+I study **edge language models**, or small models that can run on commodity devices or under limited connectivity, with the motivation of enabling the development and deployment of language technologies for the Global South.
 
-I want to find out how we can pack strong capability into a small model footprint, given that most Global South communities don't have the resources to run frontier-scale models.
+I want to find out how we can pack strong capabilities that the Global South cares about into a small model footprint, given that most of these communities don't have the resources to run frontier-scale models.
 I'm a strong proponent of data-centric approaches, including synthetic data generation, knowledge distillation, and building faithful benchmarks (among many others).
 I believe data quality is a compute multiplier: high-quality data gives us more signal per token, letting us build smaller, more capable models.
 
