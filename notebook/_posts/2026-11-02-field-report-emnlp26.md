@@ -46,3 +46,10 @@ Then, we got a meta-review of 3.5, which led us to be accepted into the Main tra
 I know there are a lot of complaints right now regarding the LLM-ification of the review process, but I'm happy (and lucky) to have good reviewers, and I thank them for making this work much better!
 
 ### Co-organizing the MRL 2026 workshop and shared task
+
+
+## Papers that piqued my attention
+
+
+
+## Miscellaneous
