@@ -40,7 +40,7 @@ It's also a conference of firsts: it's my first PhD paper, and my first-time co-
 I presented my first PhD paper, Polyglot Teachers: Evaluating Language Models for Multilingual Synthetic Data Generation, where we performed a comprehensive analysis of synthetic data generation techniques for producing high-quality data.
 We also introduced a metric, called Polyglot Score, that takes into consideration both the intrinsic and extrinsic qualities of the generated data and the model it has been trained on.
 
-Getting this work into acceptance has been quite an adventure.
+Getting this work into acceptance has been quite a ride.
 The initial reviews started with an average of 2.88, but with careful rebuttal and high-quality discussion with reviewers, we managed to improve its score to 3.25.
 Then, we got a meta-review of 3.5, which led us to be accepted into the Main track.
 I know there are a lot of complaints right now regarding the LLM-ification of the review process, but I'm happy (and lucky) to have good reviewers, and I thank them for making this work much better!
