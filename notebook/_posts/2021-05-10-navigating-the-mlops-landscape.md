@@ -18,6 +18,7 @@ excerpt: |
     It's hard to keep up with the MLOps landscape! In this three-part series,
     we will navigate the ecosystem and understand the benefits, types, and
     adoption stragies for MLOps.
+toc: true
 ---
 
 > This is the first of a three-part blog post on the MLOps landscape. Here,
@@ -44,7 +45,7 @@ engineering and machine learning. There's an [academic
 field](https://arxiv.org/abs/1904.03257) for it (Ratner, et al, [2019](#ratner2019mlsys)), and *wow*, the [industry is
 booming](https://huyenchip.com/2020/12/30/mlops-v2.html).
 
-## Contents
+## About this series
 
 **In this three-part blogpost, I'll attempt to navigate the MLOps
 landscape**. I'll be focusing on the commercial side, i.e., the tools,

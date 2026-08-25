@@ -3,6 +3,7 @@ layout: page
 title: Research
 description: Research work of Lester James V. Miranda
 permalink: /research/
+# toc: true
 ---
 
 My field is in natural language processing and machine learning.

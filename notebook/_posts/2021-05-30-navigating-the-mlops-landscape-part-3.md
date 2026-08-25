@@ -15,6 +15,7 @@ description: |
 excerpt: |
     In Part Three of "Navigating the MLOps tooling landscape," I'll talk about
     some adoption strategies that we can use given the variety of MLOps tools
+toc: true
 ---
 
 > This is the last of a three-part series on the MLOps landscape. Here, I'll
@@ -38,7 +39,7 @@ Technology Radar](https://www.thoughtworks.com/radar) and borrow familiar terms
 such as *Adopt*, *Trial*, *Assess*, and *Hold*. Note that this will be a bit
 opinionated, and your mileage may vary!
 
-## Contents
+## About this series
 
 To recap, this is a **three-part blogpost where I attempt to navigate the MLOps
 landscape**. I'll be focusing on the commercial side, i.e., the tools,

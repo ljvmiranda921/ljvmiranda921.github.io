@@ -18,6 +18,7 @@ excerpt: |
     VQGAN allows us to generate high-resolution images from text, and has now
     taken art Twitter by storm. Let me talk about how it works on a conceptual
     level in this blog post.
+toc: true
 ---
 
 <span class="firstcharacter">T</span>**ext-to-image synthesis has taken ML

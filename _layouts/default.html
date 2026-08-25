@@ -10,6 +10,8 @@
     <div style="background-color: #FF0000; height: 4px; width: 100%;"></div>
     {% endif %}
 
+    {% if page.toc %}{% include toc.html %}{% endif %}
+
     <div class="paper-container">
       {% include header.html %}
 

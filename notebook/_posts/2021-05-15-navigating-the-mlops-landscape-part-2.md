@@ -15,6 +15,7 @@ description: |
 excerpt: |
     In Part Two of "Navigating the MLOps tooling landscape," I'll deep-dive into the
     ecosystem in order to understand how each tool relate to one another.
+toc: true
 ---
 
 > This is the second of a three-part series on the MLOps landscape. Here,
@@ -48,7 +49,7 @@ We will continue our analysis, this time diving deep  into the MLOps landscape,
 while examining the tools and frameworks present in each area.
 
 
-## Contents
+## About this series
 
 To recap, this is a **three-part blogpost where I attempt to navigate the MLOps
 landscape**. I'll be focusing on the commercial side, i.e., the tools,

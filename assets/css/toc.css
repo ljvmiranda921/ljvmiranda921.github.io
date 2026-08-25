@@ -1,0 +1,71 @@
+/* Left-margin table of contents, counterpart to the margin notes on the
+   right. Keep the 1340px breakpoint in sync with toc.js. */
+
+.toc {
+  display: none;
+}
+
+@media screen and (min-width: 1340px) {
+  .toc {
+    display: block;
+    position: fixed;
+    top: 120px;
+    right: calc(50% + 450px - 15px);
+    width: 200px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    /* overflow-y: auto also clips horizontally; leave room so the last
+       glyph on a full line is not shaved off */
+    padding-right: 14px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    text-align: left;
+    hyphens: none;
+    -webkit-hyphens: none;
+  }
+
+  .toc-title {
+    font-family: "Vollkorn SC", serif;
+    font-size: 0.85rem;
+    color: #111;
+    margin: 0 0 0.8em;
+  }
+
+  .toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .toc-item {
+    margin: 0 0 0.6em;
+    overflow-wrap: anywhere;
+  }
+
+  .toc-item--h3 {
+    padding-left: 1em;
+    font-size: 0.95em;
+  }
+
+  .toc-item a {
+    color: #828282;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  .toc-item a:hover {
+    color: #a00000;
+  }
+
+  .toc-item--active a {
+    color: #111;
+  }
+
+  .toc::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .toc::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+  }
+}
