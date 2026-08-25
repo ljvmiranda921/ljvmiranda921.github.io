@@ -10,7 +10,9 @@ I study **edge language models**, or small models that can run on commodity devi
 
 I want to find out how we can pack strong capabilities that the Global South cares about into a small model footprint, given that most of these communities don't have the resources to run models at frontier scale.
 I'm a strong proponent of data-centric approaches, with a belief that data quality is a compute multiplier: high-quality data leads to more signal per token, letting us build smaller, more capable models.
-I'm interested in techniques such as synthetic data generation, sustainable human data collection, knowledge distillation, and building faithful benchmarks (among many others).
+
+I'm interested in techniques such as knowledge distillation, synthetic data generation, and building faithful benchmarks.
+Currently, I'm thinking about how we can start with the *actual* needs of Global South communities and work our way backwards to *right-size* our data and compute interventions.
 
 <!-- I want to find out what it takes to build capable language technology given scarce data and compute resources, 
 so that we understand how our resource investments map to utility, and right-size development efforts to the actual needs of the language and its speakers. -->

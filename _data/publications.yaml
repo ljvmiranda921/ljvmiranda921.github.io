@@ -3,6 +3,7 @@
   venue: "Preprint '26"
   image: "/assets/images/research/multilinguality-at-the-edge.png"
   authors: "<u>Lester James V. Miranda</u>, Songbo Hu, Roi Reichart, and Anna Korhonen"
+  tldr: "We survey 232 papers across the multilingual and edge NLP literatures and provide a research agenda for bringing language models to the Global South."
   links:
     - label: Code
       url: "https://github.com/ljvmiranda921/multilinguality-at-the-edge"
@@ -14,6 +15,7 @@
   venue: "EMNLP '26"
   image: "/assets/images/research/polyglot-teachers.png"
   authors: "<u>Lester James V. Miranda</u>, Ivan Vulić, and Anna Korhonen"
+  tldr: "We systematically analyze how to select teacher models and offer a recipe for multilingual synthetic data generation."
   links:
     - label: Code
       url: "https://github.com/ljvmiranda921/polyglot-teachers"
@@ -29,6 +31,7 @@
   venue: "ACL '25 (work done as pre-doc at Ai2)"
   image: "/assets/images/research/hybrid-preferences.png"
   authors: '<u>Lester James V. Miranda</u><span class="eq">★</span>, Yizhong Wang<span class="eq">★</span>, Yanai Elazar, Sachin Kumar, Valentina Pyatkin, Faeze Brahman, Noah A. Smith, Hannaneh Hajishirzi, and Pradeep Dasigi'
+  tldr: "We build a router that decides whether each preference instance for RLHF should be annotated by a human or a language model."
   links:
     - label: Code
       url: "https://github.com/allenai/hybrid-preferences"
@@ -46,6 +49,7 @@
   venue: "ACL '25 (work done as part of Expedition Aya w/ Cohere Labs)"
   image: "/assets/images/research/m-rewardbench.png"
   authors: 'Srishti Gureja<span class="eq">★</span>, <u>Lester James V. Miranda</u><span class="eq">★</span>, Shayekh bin Islam<span class="eq">★</span>, Rishabh Maheshwary<span class="eq">★</span>, Drishti Sharma, Gusti Winata, Nathan Lambert, Sebastian Ruder, Sara Hooker, and Marzieh Fadaee'
+  tldr: "We build the first multilingual reward-model benchmark, covering 23 typologically diverse languages, and show that reward models carry a substantial gap from English into every other language."
   links:
     - label: Code
       url: "https://github.com/for-ai/aya_rm_multilingual"
