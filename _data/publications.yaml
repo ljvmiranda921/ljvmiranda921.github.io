@@ -1,3 +1,17 @@
+- title: "DataSmith: Synthesizing Multilingual Instruction-Tuning Data with the Help of External Tools"
+  url: ""
+  venue: "Preprint '26"
+  image: "/assets/images/research/datasmith.png"
+  authors: "<u>Lester James V. Miranda</u> and Anna Korhonen"
+  tldr: "We propose a multilingual synthetic data framework that leverages a model's tool-calling capabilities to construct multilingual instruction data."
+  links:
+    - label: Code
+      url: "https://github.com/ljvmiranda921/datasmith"
+    - label: Collection
+      url: "https://huggingface.co/collections/ljvmiranda921/datasmith"
+    - label: Website
+      url: "https://ljvmiranda921.github.io/datasmith/"
+
 - title: "Multilinguality at the Edge: Developing Language Models for the Global South"
   url: "https://arxiv.org/abs/2604.21637"
   venue: "Preprint '26"
