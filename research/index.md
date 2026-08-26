@@ -22,11 +22,12 @@ I want to find out how we can describe and measure quality,
 so that the field has vocabulary for reasoning about it, and so that data collection efforts become more deliberate and effective.
 -->
 
+
+## Selected Publications
+
 Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
 I'm always excited for potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
-
-## Selected Publications
 
 <div class="scholar-buttons">
   <em>Profile links: <a href="https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en" class="scholar-btn">Google Scholar</a>, <a href="https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871" class="scholar-btn">Semantic Scholar</a></em>
