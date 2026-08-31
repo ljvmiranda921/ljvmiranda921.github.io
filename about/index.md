@@ -19,7 +19,7 @@ I also worked as an open-source developer at [spaCy](https://spacy.io/) and as a
 Prior to working on NLP, I was a bioinformatics researcher studying protein function prediction.
 
 Thanks again for stopping by!
-If you're interested in reaching out, send me an [email](mailto:ljvm2@cam.ac.uk) or [book a call](https://calendar.app.google/5bbwr5HHsbSFaodu5).
+If you're interested in reaching out, just shoot me an [email](mailto:ljvm2@cam.ac.uk)!
 
 <details markdown="0" open>
 <summary>Short Background</summary>
