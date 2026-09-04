@@ -1,3 +1,19 @@
+- title: "DataSmith: Synthesizing Multilingual Instruction-Tuning Data with the Help of External Tools"
+  url: "https://arxiv.org/abs/2604.11290"
+  venue: "Preprint '26"
+  image: "/assets/images/research/datasmith.png"
+  authors: "<u>Lester James V. Miranda</u> and Anna Korhonen"
+  tldr: "We propose a data generation framework that marries longstanding approaches to multilingual data construction and modern agentic model capabilities."
+  links:
+    - label: Code
+      url: "https://github.com/ljvmiranda921/polyglot-teachers"
+    - label: Dataset
+      url: "https://huggingface.co/datasets/ljvmiranda921/PolyglotTeachers-SFT-Synth"
+    - label: Models
+      url: "https://huggingface.co/collections/ljvmiranda921/polyglot-teachers"
+    - label: Website
+      url: "https://ljvmiranda921.github.io/polyglot-teachers/"
+
 - title: "Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation"
   url: "https://arxiv.org/abs/2604.11290"
   venue: "EMNLP '26"
