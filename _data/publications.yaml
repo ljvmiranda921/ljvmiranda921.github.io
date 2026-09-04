@@ -1,15 +1,3 @@
-- title: "Multilinguality at the Edge: Developing Language Models for the Global South"
-  url: "https://arxiv.org/abs/2604.21637"
-  venue: "Preprint '26"
-  image: "/assets/images/research/multilinguality-at-the-edge.png"
-  authors: "<u>Lester James V. Miranda</u>, Songbo Hu, Roi Reichart, and Anna Korhonen"
-  tldr: "We survey 232 papers across the multilingual and edge NLP literatures and provide a research agenda for bringing language models to the Global South."
-  links:
-    - label: Code
-      url: "https://github.com/ljvmiranda921/multilinguality-at-the-edge"
-    - label: Website
-      url: "https://ljvmiranda921.github.io/multilinguality-at-the-edge/"
-
 - title: "Polyglot Teachers: Evaluating Models for Multilingual Synthetic Data Generation"
   url: "https://arxiv.org/abs/2604.11290"
   venue: "EMNLP '26"
@@ -25,6 +13,18 @@
       url: "https://huggingface.co/collections/ljvmiranda921/polyglot-teachers"
     - label: Website
       url: "https://ljvmiranda921.github.io/polyglot-teachers/"
+
+- title: "Multilinguality at the Edge: Developing Language Models for the Global South"
+  url: "https://arxiv.org/abs/2604.21637"
+  venue: "Preprint '26"
+  image: "/assets/images/research/multilinguality-at-the-edge-v2.png"
+  authors: "<u>Lester James V. Miranda</u>, Songbo Hu, Roi Reichart, and Anna Korhonen"
+  tldr: "We survey 232 papers across the multilingual and edge NLP literatures and provide a research agenda for bringing language models to the Global South."
+  links:
+    - label: Code
+      url: "https://github.com/ljvmiranda921/multilinguality-at-the-edge"
+    - label: Website
+      url: "https://ljvmiranda921.github.io/multilinguality-at-the-edge/"
 
 - title: "Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback"
   url: "https://aclanthology.org/2025.acl-long.355/"
