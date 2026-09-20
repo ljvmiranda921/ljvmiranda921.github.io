@@ -42,6 +42,14 @@
   -webkit-hyphens: none;
 }
 
+.pub-details .pub-tldr {
+  margin: 0.4em 0;
+  font-size: 0.875em; /* $small-font-size */
+  font-style: italic;
+  color: #828282; /* $grey-color */
+  text-wrap: pretty;
+}
+
 .pub-details .eq {
   font-size: 0.4em;
   vertical-align: super;

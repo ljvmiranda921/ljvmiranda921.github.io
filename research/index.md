@@ -8,9 +8,11 @@ permalink: /research/
 My field is in natural language processing and machine learning.
 I study **edge language models**, or small models that can run on commodity devices or under limited connectivity, with the motivation of enabling the development and deployment of language technologies for the Global South.
 
-I want to find out how we can pack strong capabilities that the Global South cares about into a small model footprint, given that most of these communities don't have the resources to run frontier-scale models.
-I'm a strong proponent of data-centric approaches, including synthetic data generation, knowledge distillation, and building faithful benchmarks (among many others).
-I believe data quality is a compute multiplier: high-quality data gives us more signal per token, letting us build smaller, more capable models.
+I want to find out how we can pack strong capabilities that the Global South cares about into a **small model footprint**, given that most of these communities don't have the resources to run models at frontier scale.
+I'm a strong proponent of **data-centric approaches**, with a belief that data quality is a compute multiplier: high-quality data leads to more signal per token, letting us build smaller, more capable models.
+
+I'm interested in techniques such as knowledge distillation, synthetic data generation, and building faithful benchmarks.
+Currently, I'm thinking about how we can start with the *actual* needs of Global South communities and work our way backwards to *right-size* our data and compute interventions.
 
 <!-- I want to find out what it takes to build capable language technology given scarce data and compute resources, 
 so that we understand how our resource investments map to utility, and right-size development efforts to the actual needs of the language and its speakers. -->
@@ -20,11 +22,12 @@ I want to find out how we can describe and measure quality,
 so that the field has vocabulary for reasoning about it, and so that data collection efforts become more deliberate and effective.
 -->
 
+
+## Selected Publications
+
 Below is a selection of work that reflects my current interests.
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
 I'm always excited for potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
-
-## Selected Publications
 
 <div class="scholar-buttons">
   <em>Profile links: <a href="https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en" class="scholar-btn">Google Scholar</a>, <a href="https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871" class="scholar-btn">Semantic Scholar</a></em>

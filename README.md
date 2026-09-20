@@ -10,9 +10,8 @@ cookie-free and open source).
 
 ## Set-up
 
-The site pins its Ruby version in [`.ruby-version`](.ruby-version), so on a new
-machine it's easiest to match it with [rbenv](https://github.com/rbenv/rbenv)
-instead of your system Ruby:
+We pin the Ruby version in [`.ruby-version`](.ruby-version), so we can 
+easily match it with [rbenv](https://github.com/rbenv/rbenv):
 
 ```shell
 # macOS with Homebrew (on Linux, install rbenv via your package manager)
