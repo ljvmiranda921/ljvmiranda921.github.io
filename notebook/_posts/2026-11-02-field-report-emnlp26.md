@@ -25,13 +25,13 @@ tags:
   ]
 description: |
   Here is my field report from the EMNLP 2026 Conference in Budapest, Hungary.
-  This was a conference of firsts: first PhD paper and first workshop co-organizer!
+  This was a conference of firsts as I presented my first PhD paper and my first time co-organizing a workshop!
 excerpt: |
 ---
 
 <span class="firstcharacter">T</span>he [EMNLP 2026 Conference](https://2026.emnlp.org/) in Budapest has been such a blast!
 This is one of the top NLP conferences in the field and I feel honored to have presented my work there.
-It's also a conference of firsts: it's my first PhD paper, and my first-time co-organizing a workshop.
+It's also a conference of firsts as I presented my first PhD paper and my first time co-organizing a workshop!
 
 ## My conference activities
 
@@ -41,7 +41,7 @@ I presented my first PhD paper, Polyglot Teachers: Evaluating Language Models fo
 We also introduced a metric, called Polyglot Score, that takes into consideration both the intrinsic and extrinsic qualities of the generated data and the model it has been trained on.
 
 
-### Co-organizing the MRL 2026 workshop and shared task
+### Co-organizing the MRL 2026 workshop and Shared Task
 
 
 ## Papers that piqued my attention
