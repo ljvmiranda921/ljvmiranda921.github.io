@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Edge LM Devlog: Deploying LLMs on a Raspberry Pi"
+title: "Edge LM Devlog: Deploying LLMs on a Raspberry Pi 5"
 date: 2026-09-27
 category: notebook
 comments: true
@@ -14,3 +14,5 @@ description: |
     Join me in the first of (hopefully) many dev logs in the world of edge models!
 excerpt: |
 ---
+
+<span class="firstcharacter">W</span>orking on a Raspberry Pi feels like a trip back to memory lane.
