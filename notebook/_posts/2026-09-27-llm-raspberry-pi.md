@@ -36,4 +36,9 @@ As for my case, I attached the active cooler, flashed the [RPi Imager](https://w
 
 ## Running an inference server from RPi
 
+The main goal here is to have a quantized version (or quants) of Qwen 3.8 27B running on a local inference server.
+Specifically, I plan to use quants in the [GGUF format](https://huggingface.co/docs/hub/en/gguf) served via [llama-cpp](https://github.com/ggml-org/llama.cpp).
+Interestingly, most RPi tutorials I found recommend [ollama](https://ollama.com/) as an inference server.
+However, I am quite keen to use llama-cpp as it affords me more control and familiarity.
+
 ## Connecting to the inference server
