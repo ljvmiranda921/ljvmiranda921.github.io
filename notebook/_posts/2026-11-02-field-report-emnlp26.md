@@ -41,6 +41,13 @@ Finally, Budapest is beautiful---I enjoyed my time there :)
 I presented my first PhD paper, Polyglot Teachers: Evaluating Language Models for Multilingual Synthetic Data Generation, where we performed a comprehensive analysis of synthetic data generation techniques for producing high-quality data.
 We also introduced a metric, called Polyglot Score, that takes into consideration both the intrinsic and extrinsic qualities of the generated data and the model it has been trained on.
 
+<!-- talk about what inspired you in this idea -->
+
+
+<!-- talk about the process -->
+
+
+<!-- reflections and what's next -->
 
 ### Co-organizing the MRL 2026 workshop and Shared Task
 
