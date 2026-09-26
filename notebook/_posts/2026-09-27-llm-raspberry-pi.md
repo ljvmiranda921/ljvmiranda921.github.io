@@ -16,7 +16,7 @@ excerpt: |
 ---
 
 <span class="firstcharacter">W</span>orking on a Raspberry Pi (RPi) feels like a trip back to memory lane.
-My undergraduate training was in electronics engineering, and I still remember my final year project to involve an RPi.[^1]
+My undergraduate degree was in electronics engineering, and I still remember my final year project which involves an RPi.[^1]
 Now that I'm in the field of NLP, I'm quite curious how we can fit *large* language models into these small devices.
 In this blog post, I document my journey in running a quantized Qwen 3.8-27B model in a Raspberry Pi 5!
 
@@ -33,6 +33,9 @@ As someone who is getting back into RPi again, I think it's worth it especially 
 
 I wouldn't go over setting up the RPi here since there are already many tutorials for that.
 As for my case, I attached the active cooler, flashed the [RPi Imager](https://www.raspberrypi.com/software/) to my microSD, and let the magic happen:
+
+
+*Et voila!* Back in the game!
 
 ## Running an inference server from RPi
 
