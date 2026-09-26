@@ -25,13 +25,15 @@ In this blog post, I document my journey in running a quantized Qwen 3.8-27B mod
 First, I want to lay down the price list:
 
 * **Raspberry Pi 5 16 GB RAM** (230 GBP): it was my birthday so I had money to spare. Kidding aside, I chose to max out on specs because I want to measure the *ceiling* in which I can deploy language models. To the best of my knowledge, this is the largest you can buy unmodded.
-* **32 GB SSD Card** (27.50 GBP): I chose 32 GB because I want to work on a size that is a bit constrained, but not too limiting that I can't store a mid-sized model.
+* **32 GB microSD Card** (27.50 GBP): I chose 32 GB because I want to work on a size that is a bit constrained, but not too limiting that I can't store a mid-sized model.
 * **Active Cooler** (4.80 GBP): I often see this recommended in all the tutorials I found and I'm glad I bought it. You actually notice your RPi heating up at max load, so it's good to have a cooler to mitigate any damage to the board.
 
 I actually bought the Essentials Kit from the Grand Arcade store at Cambridge, which is around 315 GBP.
 As someone who is getting back into RPi again, I think it's worth it especially because the kit has added goodies like a dedicated case and a beginner's handbook.
 
-## Running an inference server from RPi
+I wouldn't go over setting up the RPi here since there are already many tutorials for that.
+As for my case, I attached the active cooler, flashed the [RPi Imager](https://www.raspberrypi.com/software/) to my microSD, and let the magic happen:
 
+## Running an inference server from RPi
 
 ## Connecting to the inference server
