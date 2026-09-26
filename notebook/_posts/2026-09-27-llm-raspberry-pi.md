@@ -15,4 +15,14 @@ description: |
 excerpt: |
 ---
 
-<span class="firstcharacter">W</span>orking on a Raspberry Pi feels like a trip back to memory lane.
+<span class="firstcharacter">W</span>orking on a Raspberry Pi (RPi) feels like a trip back to memory lane.
+My undergraduate training was in electronics engineering, and I still remember my final year project to involve an RPi.[^1]
+Now that I'm in the field of NLP, I'm quite curious how we can fit *large* language models into these small devices.
+In this blog post, I document my journey in running a Qwen 3.8-27B model in a Raspberry Pi 5!
+
+
+## Preliminaries
+
+
+
+[^1]: Look at this [old blog post of mine](/notebook/2017/02/21/send-data-from-rpi-to-server/) from 2017!
