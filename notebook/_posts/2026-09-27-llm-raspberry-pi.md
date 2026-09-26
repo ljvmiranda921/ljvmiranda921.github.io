@@ -45,3 +45,6 @@ Interestingly, most RPi tutorials I found recommend [ollama](https://ollama.com/
 However, I am quite keen to use llama-cpp as it affords me more control and familiarity.
 
 ## Connecting to the inference server
+
+
+## Inference benchmarking 
