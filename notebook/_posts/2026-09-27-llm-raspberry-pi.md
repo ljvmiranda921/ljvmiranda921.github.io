@@ -119,6 +119,7 @@ export OPENBLAS_NUM_THREADS=1
 export OMP_NUM_THREADS=1
 export GOMP_SPINCOUNT=0      
 
+# Generation Settings and launch
 echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor > /dev/null
 sudo swapoff -a
 THP=/sys/kernel/mm/transparent_hugepage/enabled
@@ -167,10 +168,6 @@ I asked a simple question, and it's pretty cool to see the model responding righ
 Yay! This opens up many possibilities.
 In addition, since the `llama-cpp` server is HTTP, I can actually connect to the LLM running on my RPi from any machine.
 I've already tried it on my Mac, but I know there are more secure ways of doing this, which I plan to explore in future blog posts, so stay tuned!
-
-<!-- ## Final thoughts
-
-It's nice to be back hacking on these types of projects again.  -->
 
 <!-- 
 ## Connecting to the inference server
