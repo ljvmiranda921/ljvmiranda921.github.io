@@ -99,7 +99,8 @@ Here, LFM is the name of the model (LiquidAI Foundation Model)[^2], 2.6B is the 
 
 [^2]: Liquid AI's models were specifically built for edge and on-device applications.
 
-I follow the same launch script from Wolf's blog and saved it as `launch.sh`:
+I follow the same launch script from Wolf's blog with a few changes such as `mlock` to `--load-mode mlock` and adding the recommended generation parameters from LFM's model card. 
+I then saved this file to `launch.sh`:
 
 ```sh
 #!/usr/bin/env bash
@@ -124,9 +125,11 @@ THP=/sys/kernel/mm/transparent_hugepage/enabled
 LLAMA_ARGS=(
     -m "${MODEL_PATH}"
     --port 8080 --host 0.0.0.0
-    --temp 0.6
+    --temp 0.1
+    --top-k 50
+    --repeat-penalty 1.1
     --threads 3              
-    --mlock                  
+    --load-mode mlock
 )
 
 cd "$WORKDIR"
