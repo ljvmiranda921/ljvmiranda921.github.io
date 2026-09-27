@@ -92,6 +92,18 @@ built with GNU 14.2.0 for Linux aarch64
 
 ### Downloading a model from HuggingFace
 
+The llama-cpp server requires GGUF files to run. 
+Good thing, most model providers provide these files with their releases, so we're actually quite spoiled by choice.
+Given that, I decided to use [LFM2.5-2.6B-Q4_K_M](https://huggingface.co/LiquidAI/LFM2.5-2.6B-GGUF/blob/main/LFM2.5-2.6B-Q4_K_M.gguf) GGUF.
+Here, LFM is the name of the model (LiquidAI Foundation Model)[^2], 2.6B is the number of its parameters, and Q4_K_M is the quantization level (4-bits, [k-quants](https://www.youtube.com/watch?v=vW30o4U9BFE), medium-sized).
+
+
+
+
+
+[^2]: Liquid AI's models were specifically built for edge and on-device applications.
+
+
 ## Connecting to the inference server
 
 
