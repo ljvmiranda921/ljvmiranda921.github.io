@@ -46,9 +46,7 @@ The main goal here is to have a quantized version (or quant) of Qwen 3.8 27B run
 Specifically, I plan to use quants in the [GGUF format](https://huggingface.co/docs/hub/en/gguf) served via [llama-cpp](https://github.com/ggml-org/llama.cpp).
 Interestingly, most RPi tutorials I found recommend [ollama](https://ollama.com/) as an inference server.
 However, I am quite keen to use llama-cpp as it affords me more control and familiarity.
-Luckily, I found this [really good tutorial](https://wolfpaulus.com/local_llama) by Wolf Paulus that guided me in my setup.
-I literally copied some steps from his blog.
-
+Luckily, I found this [really good tutorial](https://wolfpaulus.com/local_llama) by Wolf Paulus that guided me in my setup---I literally copied some steps from his blog.
 First things first, in a freshly-booted RPi, I ran the following:
 
 ```sh
@@ -57,6 +55,19 @@ sudo apt install -y build-essential git perl python3 pkg-config python3-dev gfor
 ```
 
 ### Building BLIS and llama-cpp
+
+To build BLIS, we first clone the repository and set the necessary configurations.
+Here, the flag `-O3` mean that we want to have an aggressive optimization during compilation for higher performance. 
+On the hand, the flag `-mcpu=cortex-a76` tells the compiler to target a specific ARM core in RPi 5 (which is Cortex-A76 in this case).
+
+```sh
+git clone https://github.com/flame/blis
+cd blis
+CFLAGS="-O3 -mcpu=cortex-a76" ./configure --enable-cblas -t openmp,pthreads auto
+make -j
+sudo make install
+```
+
 
 
 ### Downloading a model from HuggingFace
