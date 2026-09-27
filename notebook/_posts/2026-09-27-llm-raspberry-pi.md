@@ -97,11 +97,46 @@ Good thing, most model providers provide these files with their releases, so we'
 Given that, I decided to use [LFM2.5-2.6B-Q4_K_M](https://huggingface.co/LiquidAI/LFM2.5-2.6B-GGUF/blob/main/LFM2.5-2.6B-Q4_K_M.gguf) GGUF.
 Here, LFM is the name of the model (LiquidAI Foundation Model)[^2], 2.6B is the number of its parameters, and Q4_K_M is the quantization level (4-bits, [k-quants](https://www.youtube.com/watch?v=vW30o4U9BFE), medium-sized).
 
-
-
-
-
 [^2]: Liquid AI's models were specifically built for edge and on-device applications.
+
+I follow the same launch script from Wolf's blog and saved it as `launch.sh`:
+
+```sh
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Important directories
+WORKDIR="/home/ljvm/Development/llama.cpp"
+MODELDIR="/home/ljvm/Development/models"
+BINARY="$WORKDIR/build/bin/llama-server"
+MODEL_PATH="$MODELDIR/LFM2.5-2.6B-Q4_K_M.gguf"
+
+# Inference settings
+export BLIS_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export OMP_NUM_THREADS=1
+export GOMP_SPINCOUNT=0      
+
+echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor > /dev/null
+sudo swapoff -a
+THP=/sys/kernel/mm/transparent_hugepage/enabled
+[[ -f "$THP" ]] && echo madvise | sudo tee "$THP" > /dev/null
+LLAMA_ARGS=(
+    -m "${MODEL_PATH}"
+    --port 8080 --host 0.0.0.0
+    --temp 0.6
+    --threads 3              
+    --mlock                  
+)
+
+cd "$WORKDIR"
+exec taskset -c 0-2 env -- \
+    BLIS_NUM_THREADS="$BLIS_NUM_THREADS" \
+    OPENBLAS_NUM_THREADS="$OPENBLAS_NUM_THREADS" \
+    OMP_NUM_THREADS="$OMP_NUM_THREADS" \
+    GOMP_SPINCOUNT="$GOMP_SPINCOUNT" \
+    "$BINARY" "${LLAMA_ARGS[@]}"
+```
 
 
 ## Connecting to the inference server
