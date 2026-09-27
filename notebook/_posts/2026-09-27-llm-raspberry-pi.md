@@ -10,7 +10,7 @@ published: true
 filipino_nlp: true
 tags: [edge lm, local lm, llm, small language models, global south, equitable ai]
 description: |
-    In this development log series, I documented how I ran a quantized version of Qwen 3.8-27B on a Raspberry Pi 5.
+    In this development log series, I documented how I ran a small language model on a Raspberry Pi 5.
     Join me in the first of (hopefully) many dev logs in the world of edge models!
 excerpt: |
 ---
@@ -18,7 +18,7 @@ excerpt: |
 <span class="firstcharacter">W</span>orking on a Raspberry Pi (RPi) feels like a trip back to memory lane.
 My undergraduate degree was in electronics engineering, and I still remember [my final year project](https://ieeexplore.ieee.org/document/7847947) which involves an RPi.[^1]
 Now that I'm in the field of NLP, I'm quite curious how we can fit *large* language models into these small devices.
-In this blog post, I document my journey in running a quantized Qwen 3.8-27B model in a Raspberry Pi 5!
+In this blog post, I document my journey in running a language model in a Raspberry Pi 5!
 
 [^1]: Look at this [old blog post of mine](/notebook/2017/02/21/send-data-from-rpi-to-server/) from 2017! It's also very fitting to know that Raspberry Pi started here in Cambridge!
 
@@ -42,7 +42,7 @@ As for my case, I attached the active cooler, flashed the [RPi Imager](https://w
 
 ## Running an inference server from RPi
 
-The main goal here is to have a quantized version (or quant) of Qwen 3.8 27B running on a local inference server.
+The main goal here is to have a quantized version (or quant) of a model running on a local inference server.
 Specifically, I plan to use quants in the [GGUF format](https://huggingface.co/docs/hub/en/gguf) served via [llama-cpp](https://github.com/ggml-org/llama.cpp).
 Interestingly, most RPi tutorials I found recommend [ollama](https://ollama.com/) as an inference server.
 However, I am quite keen to use llama-cpp as it affords me more control and familiarity.
@@ -89,7 +89,6 @@ $ build/bin/llama-server --version
 version: 0.5.0-dev (build 11217, commit c9064dded)
 built with GNU 14.2.0 for Linux aarch64
 ```
-
 
 ### Downloading a model from HuggingFace
 
