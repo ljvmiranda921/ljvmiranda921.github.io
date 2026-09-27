@@ -106,13 +106,13 @@ I then saved this file to `launch.sh`:
 #!/usr/bin/env bash
 # launch.sh
 
-# Important directories
+# Directories
 WORKDIR="/home/ljvm/Development/llama.cpp"
 MODELDIR="/home/ljvm/Development/models"
 BINARY="$WORKDIR/build/bin/llama-server"
 MODEL_PATH="$MODELDIR/LFM2.5-2.6B-Q4_K_M.gguf"
 
-# Inference settings
+# Threading settings
 export BLIS_NUM_THREADS=1
 export OPENBLAS_NUM_THREADS=1
 export OMP_NUM_THREADS=1
@@ -140,6 +140,10 @@ exec taskset -c 0-2 env -- \
     GOMP_SPINCOUNT="$GOMP_SPINCOUNT" \
     "$BINARY" "${LLAMA_ARGS[@]}"
 ```
+
+This script has three parts, the "Directories" simply set where the `llama-cpp` binary and the GGUF model is located.
+The "Threading Settings"
+
 
 I can then run: 
 
