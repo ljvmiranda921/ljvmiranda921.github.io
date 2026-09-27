@@ -57,7 +57,7 @@ sudo apt install -y build-essential git perl python3 pkg-config python3-dev gfor
 ### Building BLIS and llama-cpp
 
 To build BLIS, we first clone the repository and set the necessary configurations.
-Here, the flag `-O3` mean that we want to have an aggressive optimization during compilation for higher performance. 
+Here, the flag `-O3` means that we want to have an aggressive optimization during compilation for higher performance. 
 On the hand, the flag `-mcpu=cortex-a76` tells the compiler to target a specific ARM core in RPi 5 (which is Cortex-A76 in this case).
 
 ```sh
@@ -68,6 +68,27 @@ make -j
 sudo make install
 ```
 
+Then, we build llama-cpp. Same routine, we first clone from GitHub and pass the necessary flags for compilation:
+
+```sh
+git clone https://github.com/ggml-org/llama.cpp.git
+cd llama.cpp
+
+cmake -B build -DGGML_BLAS=ON -DGGML_BLAS_VENDOR=FLAME -DCMAKE_BUILD_TYPE=Release -DGGML_NATIVE=ON -DGGML_LTO=ON
+cmake --build build --config Release -j"$(nproc)"
+```
+
+Wolf [provides a good explanation](https://wolfpaulus.com/local_llama/) of these flags. 
+The important ones here are `GGML_BLAS=ON` which toggles BLAS acceleration, and `GGML_BLAS_VENDOR=FLAME` which points to the BLIS libraries we just set up.
+If things go well, you should be able to find `llama-server` in the `build` directory of the same repo:
+
+```sh
+# Inside the llama.cpp repository
+$ build/bin/llama-server --version
+0.00.000.357 I srv llama_server: initializing
+version: 0.5.0-dev (build 11217, commit c9064dded)
+built with GNU 14.2.0 for Linux aarch64
+```
 
 
 ### Downloading a model from HuggingFace
