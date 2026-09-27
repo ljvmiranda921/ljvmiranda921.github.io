@@ -141,8 +141,21 @@ exec taskset -c 0-2 env -- \
     "$BINARY" "${LLAMA_ARGS[@]}"
 ```
 
+I can then run this by executing `./launch.sh` or `MODEL_PATH=/path/to/gguf/file ./launch.sh`.
+And now it works!
 
+{% include figure.html
+   src="/assets/images/llm-raspberry-pi/working.png"
+   width="600"
+   class="framed"
+   caption="Screenshot of LFM2.5 2.6B running in a Raspberry Pi 5" %}
+
+## Final thoughts
+
+It's nice to be back hacking on these types of projects again. 
+
+<!-- 
 ## Connecting to the inference server
 
 
-## Inference benchmarking 
+## Inference benchmarking  -->
