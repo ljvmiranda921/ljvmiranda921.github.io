@@ -110,7 +110,7 @@ I then saved this file to `launch.sh`:
 WORKDIR="/home/ljvm/Development/llama.cpp"
 MODELDIR="/home/ljvm/Development/models"
 BINARY="$WORKDIR/build/bin/llama-server"
-MODEL_PATH="$MODELDIR/LFM2.5-2.6B-Q4_K_M.gguf"
+MODEL_PATH="${MODEL_PATH:-$MODELDIR/LFM2.5-2.6B-Q4_K_M.gguf}"
 
 # Threading settings
 export BLIS_NUM_THREADS=1
@@ -142,10 +142,10 @@ exec taskset -c 0-2 env -- \
 ```
 
 This script has three parts, the "Directories" simply set where the `llama-cpp` binary and the GGUF model is located.
-The "Threading Settings"
-
-
-I can then run: 
+The "Threading Settings" manages the usage of the cores in RPi. 
+In our case, we tell `llama-cpp`'s internal libraries (BLIS, OpenBLAS, and OpenMP) to each use only a single thread, so they don't spawn overlapping thread pools and compete with each other---and we pin the actual inference work to 3 (out of the RPi's 4 cores), leaving one core free for the OS and other tasks.
+Finally, the last few lines simply set the generation arguments and finally launches the server.
+With that said, I can then run: 
 
 ```
 ./launch.sh
