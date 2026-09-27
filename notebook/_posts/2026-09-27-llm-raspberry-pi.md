@@ -17,7 +17,7 @@ excerpt: |
 ---
 
 <span class="firstcharacter">W</span>orking on a Raspberry Pi (RPi) feels like a trip back to memory lane.
-My undergraduate degree was in electronics engineering, and I still remember [my final year project](https://ieeexplore.ieee.org/document/7847947) which involves an RPi.[^1]
+My undergraduate degree was in electronics engineering, and I still remember [my final year project](https://ieeexplore.ieee.org/document/7847947) which involved an RPi.[^1]
 Now that I'm in the field of NLP, I'm quite curious how we can fit *large* language models into these small devices.
 In this blog post, I document my journey in running a language model in a Raspberry Pi 5!
 
@@ -59,7 +59,7 @@ sudo apt install -y build-essential git perl python3 pkg-config python3-dev gfor
 
 To build BLIS, we first clone the repository and set the necessary configurations.
 Here, the flag `-O3` means that we want to have an aggressive optimization during compilation for higher performance. 
-On the hand, the flag `-mcpu=cortex-a76` tells the compiler to target a specific ARM core in RPi 5 (which is Cortex-A76 in this case).
+On the other hand, the flag `-mcpu=cortex-a76` tells the compiler to target a specific ARM core in RPi 5 (which is Cortex-A76 in this case).
 
 ```sh
 git clone https://github.com/flame/blis
@@ -143,10 +143,13 @@ exec taskset -c 0-2 env -- \
     "$BINARY" "${LLAMA_ARGS[@]}"
 ```
 
-This script has three parts, the "Directories" simply set where the `llama-cpp` binary and the GGUF model is located.
-The "Threading Settings" manages the usage of the cores in RPi. 
-In our case, we tell `llama-cpp`'s internal libraries (BLIS, OpenBLAS, and OpenMP) to each use only a single thread, so they don't spawn overlapping thread pools and compete with each other---and we pin the actual inference work to 3 (out of the RPi's 4 cores), leaving one core free for the OS and other tasks.
-Finally, the last few lines simply set the generation arguments and finally launches the server.
+This script has three parts: 
+1. the "Directories" simply set where the `llama-cpp` binary and the GGUF model are located.
+2. the "Threading Settings" manage the usage of the cores in RPi. 
+In our case, we tell `llama-cpp`'s internal libraries to each use only a single thread, so they don't spawn overlapping thread pools and compete with each other. 
+3. the last few lines simply set the generation arguments (based on LFM's recommended parameters) and finally launch the server.
+
+
 With that said, I can then run: 
 
 ```sh
@@ -156,7 +159,7 @@ MODEL_PATH=path/to/gguf/file ./launch.sh
 ```
 
 And now it works!
-Opening up my browser and going to the URL indicated in the `llama-cpp` logs show this chat interface.
+Opening up my browser and going to the URL indicated in the `llama-cpp` logs shows this chat interface.
 I asked a simple question, and it's pretty cool to see the model responding right away.
 
 {% include figure.html
