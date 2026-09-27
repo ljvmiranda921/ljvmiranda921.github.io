@@ -1,14 +1,15 @@
 ---
 layout: post
 type: post
-title: "Edge LM Devlog: Deploying LLMs on a Raspberry Pi 5"
+title: "Edge LM Devlog: Running a language model on a Raspberry Pi 5"
 date: 2026-09-27
 category: notebook
 comments: true
 author: "LJ V. MIRANDA"
 published: true
-filipino_nlp: true
-tags: [edge lm, local lm, llm, small language models, global south, equitable ai]
+filipino_nlp: false
+header-img: /assets/images/llm-raspberry-pi/header.png
+tags: [edge lm, local lm, llm, small language models, global south, equitable ai, raspberry pi, on-device ai, quantization, llama.cpp, gguf, edge computing, hardware]
 description: |
     In this development log series, I documented how I ran a small language model on a Raspberry Pi 5.
     Join me in the first of (hopefully) many dev logs in the world of edge models!
@@ -165,7 +166,7 @@ I asked a simple question, and it's pretty cool to see the model responding righ
 
 Yay! This opens up many possibilities.
 In addition, since the `llama-cpp` server is HTTP, I can actually connect to the LLM running on my RPi from any machine.
-I've already tried it on my Mac, but I know there are more secure ways of doing this, which I plan to explore in future blog posts (please stay tuned!).
+I've already tried it on my Mac, but I know there are more secure ways of doing this, which I plan to explore in future blog posts, so stay tuned!
 
 <!-- ## Final thoughts
 
