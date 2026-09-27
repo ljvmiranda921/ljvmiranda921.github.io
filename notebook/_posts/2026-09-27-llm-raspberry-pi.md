@@ -141,8 +141,17 @@ exec taskset -c 0-2 env -- \
     "$BINARY" "${LLAMA_ARGS[@]}"
 ```
 
-I can then run this by executing `./launch.sh` or `MODEL_PATH=/path/to/gguf/file ./launch.sh`.
+I can then run: 
+
+```
+./launch.sh
+# or
+MODEL_PATH=path/to/gguf/file ./launch.sh
+```
+
 And now it works!
+Opening up my browser and going to the URL indicated in the `llama-cpp` logs show this chat interface.
+I asked a simple question, and it's pretty cool to see the model responding right away.
 
 {% include figure.html
    src="/assets/images/llm-raspberry-pi/working.png"
@@ -150,14 +159,13 @@ And now it works!
    class="framed"
    caption="Screenshot of LFM2.5 2.6B running in a Raspberry Pi 5" %}
 
-Yay! This opens up many possibilities.
+This opens up many possibilities.
 In addition, since the `llama-cpp` server is HTTP, I can actually connect to the LLM running on my RPi from any machine.
 I've already tried it on my Mac, but I know there are more secure ways of doing this, which I plan to explore in future blog posts (please stay tuned!).
 
 ## Final thoughts
 
 It's nice to be back hacking on these types of projects again. 
-I hope things work out
 
 <!-- 
 ## Connecting to the inference server
