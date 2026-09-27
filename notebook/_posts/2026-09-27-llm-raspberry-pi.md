@@ -32,10 +32,13 @@ I actually bought the Essentials Kit from the Grand Arcade store at Cambridge, w
 As someone who is getting back into RPi again, I think it's worth it especially because the kit has added goodies like a dedicated case and a beginner's handbook.
 
 I wouldn't go over setting up the RPi here since there are already many tutorials for that.
-As for my case, I attached the active cooler, flashed the [RPi Imager](https://www.raspberrypi.com/software/) to my microSD, and let the magic happen:
+As for my case, I attached the active cooler, flashed the [RPi Imager](https://www.raspberrypi.com/software/) to my microSD, and let the magic happen...and *et voila!* Back in the game:
 
-
-*Et voila!* Back in the game!
+{% include figure.html
+   src="/assets/images/llm-raspberry-pi/rpi.jpeg"
+   width="300"
+   class="framed"
+   caption="My Raspberry Pi 5 Setup" %}
 
 ## Running an inference server from RPi
 
