@@ -16,7 +16,7 @@ excerpt: |
 ---
 
 <span class="firstcharacter">W</span>orking on a Raspberry Pi (RPi) feels like a trip back to memory lane.
-My undergraduate degree was in electronics engineering, and I still remember my final year project which involves an RPi.[^1]
+My undergraduate degree was in electronics engineering, and I still remember [my final year project](https://ieeexplore.ieee.org/document/7847947) which involves an RPi.[^1]
 Now that I'm in the field of NLP, I'm quite curious how we can fit *large* language models into these small devices.
 In this blog post, I document my journey in running a quantized Qwen 3.8-27B model in a Raspberry Pi 5!
 
@@ -46,6 +46,20 @@ The main goal here is to have a quantized version (or quant) of Qwen 3.8 27B run
 Specifically, I plan to use quants in the [GGUF format](https://huggingface.co/docs/hub/en/gguf) served via [llama-cpp](https://github.com/ggml-org/llama.cpp).
 Interestingly, most RPi tutorials I found recommend [ollama](https://ollama.com/) as an inference server.
 However, I am quite keen to use llama-cpp as it affords me more control and familiarity.
+Luckily, I found this [really good tutorial](https://wolfpaulus.com/local_llama) by Wolf Paulus that guided me in my setup.
+I literally copied some steps from his blog.
+
+First things first, in a freshly-booted RPi, I ran the following:
+
+```sh
+sudo apt update
+sudo apt install -y build-essential git perl python3 pkg-config python3-dev gfortran clang cmake libomp-dev libcurl4-openssl-dev
+```
+
+### Building BLIS and llama-cpp
+
+
+### Downloading a model from HuggingFace
 
 ## Connecting to the inference server
 
