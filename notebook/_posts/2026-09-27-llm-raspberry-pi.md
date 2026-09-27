@@ -104,7 +104,7 @@ I then saved this file to `launch.sh`:
 
 ```sh
 #!/usr/bin/env bash
-set -euo pipefail
+# launch.sh
 
 # Important directories
 WORKDIR="/home/ljvm/Development/llama.cpp"
@@ -150,9 +150,14 @@ And now it works!
    class="framed"
    caption="Screenshot of LFM2.5 2.6B running in a Raspberry Pi 5" %}
 
+Yay! This opens up many possibilities.
+In addition, since the `llama-cpp` server is HTTP, I can actually connect to the LLM running on my RPi from any machine.
+I've already tried it on my Mac, but I know there are more secure ways of doing this, which I plan to explore in future blog posts (please stay tuned!).
+
 ## Final thoughts
 
 It's nice to be back hacking on these types of projects again. 
+I hope things work out
 
 <!-- 
 ## Connecting to the inference server
