@@ -5,10 +5,10 @@
   authors: "<u>Lester James V. Miranda</u> and Anna Korhonen"
   tldr: "We propose a data generation framework that combines longstanding approaches to multilingual data construction and modern agentic model capabilities."
   links:
-    - label: Code
-      url: "https://github.com/ljvmiranda921/datasmith"
     - label: Website
       url: "https://ljvmiranda921.github.io/datasmith/"
+    - label: Code
+      url: "https://github.com/ljvmiranda921/datasmith"
     - label: Collection
       url: "https://huggingface.co/collections/ljvmiranda921/datasmith"
 
