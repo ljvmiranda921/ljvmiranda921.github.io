@@ -19,14 +19,16 @@
   authors: "<u>Lester James V. Miranda</u>, Ivan Vulić, and Anna Korhonen"
   tldr: "We systematically analyze how to select teacher models and offer a recipe for multilingual synthetic data generation."
   links:
+    - label: Website
+      url: "https://ljvmiranda921.github.io/polyglot-teachers/"
     - label: Code
       url: "https://github.com/ljvmiranda921/polyglot-teachers"
     - label: Dataset
       url: "https://huggingface.co/datasets/ljvmiranda921/PolyglotTeachers-SFT-Synth"
     - label: Models
       url: "https://huggingface.co/collections/ljvmiranda921/polyglot-teachers"
-    - label: Website
-      url: "https://ljvmiranda921.github.io/polyglot-teachers/"
+    - label: Slides
+      url: "https://drive.google.com/file/d/1R00dPpAyDJgYRiK8H1ZX2OiqmWq5FTEw/view?usp=sharing"
 
 - title: "Multilinguality at the Edge: Developing Language Models for the Global South"
   url: "https://arxiv.org/abs/2604.21637"
@@ -35,10 +37,10 @@
   authors: "<u>Lester James V. Miranda</u>, Songbo Hu, Roi Reichart, and Anna Korhonen"
   tldr: "We survey 232 papers across the multilingual and edge NLP literatures and provide a research agenda for bringing language models to the Global South."
   links:
-    - label: Code
-      url: "https://github.com/ljvmiranda921/multilinguality-at-the-edge"
     - label: Website
       url: "https://ljvmiranda921.github.io/multilinguality-at-the-edge/"
+    - label: Code
+      url: "https://github.com/ljvmiranda921/multilinguality-at-the-edge"
 
 - title: "Hybrid Preferences: Learning to Route Instances for Human vs. AI Feedback"
   url: "https://aclanthology.org/2025.acl-long.355/"
