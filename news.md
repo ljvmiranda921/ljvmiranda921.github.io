@@ -22,6 +22,10 @@ title: News
 </style>
 
 <div class="news-item">
+<p><span class="date">**Nov 2026**</span>: I'd like to introduce DataSmith, a framework for generating multilingual supervision data with the help of external tools. Check out the [website](https://ljvmiranda921/github.io/datasmith) for more information.</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**Aug 2026**</span>: My first PhD work on multilingual synthetic data generation, [Polyglot Teachers](https://ljvmiranda921.github.io/polyglot-teachers/) ([preprint](https://arxiv.org/abs/2604.11290)), has been accepted to EMNLP Main. See you in Budapest this October!</p>
 </div>
 
@@ -41,9 +45,9 @@ title: News
 <p><span class="date">**May 2026**</span>: Gave a talk at the [Analytics and AI Association of the Philippines](https://www.aap.ph/) about [FilBench](/projects/2025/08/21/filbench/) and on what it takes to build Filipino-centric LLMs [(slides)](https://docs.google.com/presentation/d/1KOdSsFsk8io59bKRzwU-4u1iFNxDumlSNLQfUYgbTfU/edit?usp=sharing). Here's [some notes](/notebook/2026/05/23/on-what-it-takes/) from my talk.</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**May 2026**</span>: Proud to release our [survey on multilingual edge models](https://arxiv.org/abs/2604.21637) (check the [website](/multilinguality-at-the-edge/)!). If you know me, I care a lot about AI in the Global South, I'd like to continue doing these types of sociotechnical research, so reach out if you wanna chat!</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**Apr 2026**</span>: Sharing my first PhD work, [Polyglot Teachers](https://arxiv.org/abs/2604.11290)! Here, I studied what makes a good teacher model for generating multilingual data. I'm excited to continue this research agenda on multilingual synthetic data generation!</p>
