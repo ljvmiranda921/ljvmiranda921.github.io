@@ -41,7 +41,15 @@ Finally, Budapest is beautiful---I enjoyed my time there :)
 I presented my first PhD paper, Polyglot Teachers: Evaluating Language Models for Multilingual Synthetic Data Generation, where we performed a comprehensive analysis of synthetic data generation techniques for producing high-quality data.
 We also introduced a metric, called Polyglot Score, that takes into consideration both the intrinsic and extrinsic qualities of the generated data and the model it has been trained on.
 
-<!-- talk about what inspired you in this idea -->
+<!-- insert picture -->
+
+Synthetic data has been on my mind since my pre-doc days.
+When applying for PhD programs, one thing that has been on my mind is how we can optimize the synthetic data pipeline to improve multilingual capabilities.
+I am happy to have been given the opportunity to explore this problem during my PhD, and be provided with the compute to do so!
+
+I think synthetic data for post-training continues to be relevant.
+Although nowadays, much of the field has moved on from off-policy distillation (i.e., generate text from teacher and use that as learning signal) and focused on on-policy or RL-based approaches.
+
 
 
 <!-- talk about the process -->
