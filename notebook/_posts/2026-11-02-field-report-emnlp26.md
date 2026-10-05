@@ -53,12 +53,9 @@ Nowadays, much of the field has moved on from off-policy distillation (i.e., gen
 I've also seen several works taking synthetic data generation to the next level, such as Adaption's [Invent-A-Dataset](https://www.alphaxiv.org/abs/2609.invent-a-dataset-zero-seed) or Meta's [Autodata](https://www.alphaxiv.org/abs/2606.25996).
 **I have some upcoming works that explore both directions**, one is DataSmith, which is a method for synthesizing multilingual instruction-tuning data with the help of external tools.
 
-<!-- talk about the process -->
-
-
-<!-- reflections and what's next -->
-
 ### Co-organizing the MRL 2026 workshop and Shared Task
+
+This year, I also helped co-organize the 2026 Workshop on Multilingual Representation Learning.
 
 
 ## Papers that piqued my attention
