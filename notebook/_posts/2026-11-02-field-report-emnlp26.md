@@ -44,13 +44,14 @@ We also introduced a metric, called Polyglot Score, that takes into consideratio
 <!-- insert picture -->
 
 Synthetic data has been on my mind since my pre-doc days.
+In some ways, I've been influenced by my prior work in T&uuml;lu 3 and by one of my mentors, Yizhong, who created [self-instruct](https://aclanthology.org/2023.acl-long.754/).
 When applying for PhD programs, one thing that has been on my mind is how we can optimize the synthetic data pipeline to improve multilingual capabilities.
-I am happy to have been given the opportunity to explore this problem during my PhD, and be provided with the compute to do so!
+I am happy to have been given the opportunity to explore this problem during my PhD, and be provided with the compute to do so! Thank you Isambard and Cambridge CSD3!
 
-I think synthetic data for post-training continues to be relevant.
-Although nowadays, much of the field has moved on from off-policy distillation (i.e., generate text from teacher and use that as learning signal) and focused on on-policy or RL-based approaches.
-
-
+*Future outlook:* I think synthetic data for post-training continues to be relevant, albeit in different forms.
+Nowadays, much of the field has moved on from off-policy distillation (i.e., generate text from teacher and use that as learning signal) and focused on on-policy or RL-based approaches.
+I've also seen several works taking synthetic data generation to the next level, such as Adaption's [Invent-A-Dataset](https://www.alphaxiv.org/abs/2609.invent-a-dataset-zero-seed) or Meta's [Autodata](https://www.alphaxiv.org/abs/2606.25996).
+**I have some upcoming works that explore both directions**, one is DataSmith, which is a method for synthesizing multilingual instruction-tuning data with the help of external tools.
 
 <!-- talk about the process -->
 
