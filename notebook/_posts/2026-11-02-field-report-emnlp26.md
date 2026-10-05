@@ -55,7 +55,8 @@ I've also seen several works taking synthetic data generation to the next level,
 
 ### Co-organizing the MRL 2026 workshop and Shared Task
 
-This year, I also helped co-organize the 2026 Workshop on Multilingual Representation Learning.
+This year, I also helped co-organize the 2026 Workshop on Multilingual Representation Learning and Shared Task.
+It was a nice experience as I was able to see how workshop organization happens at this scale.
 
 
 ## Papers that piqued my attention
