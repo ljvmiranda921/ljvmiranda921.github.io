@@ -1,6 +1,7 @@
-# Conference/workshop posters shown in the grid on the research page.
-# Drop the PNGs into assets/images/posters/ and add an entry here.
-# Fields: image (required), title, venue, url (all optional).
+- image: "/assets/images/posters/polyglotteachers_emnlp_2026.png"
+  title: "Polyglot Teachers"
+  venue: "EMNLP '26"
+  url: "https://ljvmiranda921.github.io/polyglot-teachers/"
 
 - image: "/assets/images/posters/filbench_emnlp_2025.png"
   title: "FilBench"
