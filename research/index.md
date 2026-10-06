@@ -9,8 +9,8 @@ My field is in natural language processing and machine learning.
 I study **edge language models**---small models that can run on commodity devices or under limited network or compute infrastructure---with the motivation of enabling the development and deployment of language technologies for the Global South.
 
 
-I'm also a strong proponent of **data-centric approaches**, with a belief that data quality is a compute multiplier: high-quality data leads to more signal per token, enabling us to build smaller and more capable models.
-Currently, I'm thinking about how we can start with the *actual* needs of Global South communities and work our way backwards to *right-size* our data and compute interventions.
+I'm also a strong proponent of *data-centric NLP*, with a belief that data quality is a compute multiplier: high-quality data leads to more signal per token, enabling us to build smaller and more capable models.
+Currently, I'm thinking about how we can start with the *actual needs* of Global South communities and work our way backwards to *right-size* our technical interventions.
 
 <!-- I want to find out what it takes to build capable language technology given scarce data and compute resources, 
 so that we understand how our resource investments map to utility, and right-size development efforts to the actual needs of the language and its speakers. -->
