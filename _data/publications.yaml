@@ -29,6 +29,8 @@
       url: "https://huggingface.co/collections/ljvmiranda921/polyglot-teachers"
     - label: Slides
       url: "https://drive.google.com/file/d/1R00dPpAyDJgYRiK8H1ZX2OiqmWq5FTEw/view?usp=sharing"
+    - label: Video
+      url: "https://youtu.be/JLTeLQkUEng?si=HNf9rVV0R5f2yvSU"
 
 - title: "Multilinguality at the Edge: Developing Language Models for the Global South"
   url: "https://arxiv.org/abs/2604.21637"
