@@ -1,7 +1,7 @@
 ---
 layout: post
 type: post
-title: "Three Strategies for Making Smaller Language Models for the Edge"
+title: "Three Strategies for Making Edge Language Models"
 date: 2026-10-16
 category: notebook
 comments: true
