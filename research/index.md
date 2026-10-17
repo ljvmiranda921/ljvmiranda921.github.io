@@ -28,13 +28,11 @@ so that the field has vocabulary for reasoning about it, and so that data collec
 ## Selected Publications
 
 Below is a selection of work that reflects my current interests.
+You can find the full list in my [Google Scholar profile](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en).
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
 I'm always excited for potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
 
-<div class="scholar-buttons">
-  <em>Profile links: <a href="https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en" class="scholar-btn">Google Scholar</a>, <a href="https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871" class="scholar-btn">Semantic Scholar</a></em>
-</div>
-_Keywords: data-centric NLP, multilinguality, resources & evaluation_
+_Keywords: data-centric NLP, multilinguality, edge models_
 
 {% include publications.html %}
 
