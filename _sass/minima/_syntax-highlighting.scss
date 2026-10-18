@@ -1,9 +1,6 @@
 @use "sass:math";
 @use "variables" as *;
 
-/**
- * Syntax highlighting styles
- */
 $spacing-unit:     30px;
 %vertical-rhythm {
     margin-bottom: math.div($spacing-unit, 2);

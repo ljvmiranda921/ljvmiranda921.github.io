@@ -1,30 +1,17 @@
 @use "sass:math";
 @use "variables" as *;
 
-/**
- * Paper container for lifted effect
- */
 .paper-container {
-  // Paper style: lifted cream card on the gray page background
-  // background-color: $background-color;
-  // box-shadow: 4px 4px 0 #bbb;
-  // margin: $spacing-unit auto;
   margin: 0 auto;
   max-width: $content-width;
   position: relative;
 }
 
-/**
- * Site header
- */
 .site-header {
-  // border-bottom: 1px solid $grey-color-light;
   background-color: $background-color;
-  // wrapper handles the vertical padding
   padding: 0;
 }
 
-// Photo + name + email + nav links
 .site-identity {
   display: flex;
   align-items: center;
@@ -40,7 +27,6 @@
     margin: 0.2em 0;
   }
 
-  // Stack photo above text on mobile
   @include media-query($on-palm) {
     flex-direction: column;
     align-items: flex-start;
@@ -71,26 +57,33 @@
   }
 }
 
-.site-nav {
-  margin-top: 0.2em;
-  color: $grey-color; // the &middot; separators
+// Each link carries its leading dot in the gutter; the nav is shifted left
+// and clipped by one gutter, so the dot before the first link on every
+// wrapped line is hidden.
+$nav-gutter: 1.2em;
 
-  // Fit links on one line on mobile
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.2em;
+  margin-left: -$nav-gutter;
+  clip-path: inset(0 0 0 $nav-gutter);
+
   @include media-query($on-palm) {
     font-size: $small-font-size;
-    text-wrap: balance;
   }
 
   .page-link {
     color: $text-color;
+    margin-left: $nav-gutter;
 
-    // Space around the dots
-    &:not(:first-child) {
-      margin-left: 0.4em;
-    }
-
-    &:not(:last-child) {
-      margin-right: 0.4em;
+    &::before {
+      content: "\00B7";
+      display: inline-block;
+      width: $nav-gutter;
+      margin-left: -$nav-gutter;
+      text-align: center;
+      color: $grey-color;
     }
 
     &:hover {
@@ -99,14 +92,7 @@
   }
 }
 
-
-
-/**
- * Site footer
- */
 .site-footer {
-  // border-top: 1px solid $grey-color-light;
-  // wrapper handles the padding, hr has its own margin
   padding: 0;
   background-color: $background-color;
 
@@ -216,11 +202,6 @@
   }
 }
 
-
-
-/**
- * Page content
- */
 .page-content {
   padding: 0;
   background-color: $background-color;
@@ -229,7 +210,6 @@
 .wrapper {
   background-color: $background-color;
   padding: $spacing-unit calc(#{$spacing-unit} * 2.5);
-  // padding: $spacing-unit calc(#{$spacing-unit} * 1.5);
   margin: 0 auto;
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -265,11 +245,6 @@
   @include relative-font-size(1.5);
 }
 
-
-
-/**
- * Posts
- */
 .post-header {
   margin-bottom: $spacing-unit;
 }
@@ -278,7 +253,6 @@
   @include relative-font-size(2);
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  // Slightly tightened
   letter-spacing: -0.01em;
   line-height: 1.15;
 
@@ -291,7 +265,6 @@
   margin-bottom: $spacing-unit;
   counter-reset: figure table;
 
-  // More space above heading, less below
   h2, h3, h4 {
     margin-top: $spacing-unit;
     margin-bottom: calc(#{$spacing-unit} / 4);
@@ -323,9 +296,6 @@
   }
 }
 
-/**
- * Scholar buttons
- */
 .scholar-buttons {
   margin: 15px 0 0;
   text-align: left;
