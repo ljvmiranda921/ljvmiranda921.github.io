@@ -2,456 +2,361 @@
 @use "variables" as *;
 @use "sass:color";
 
-/**
- * Reset some basic elements
- */
- body, h1, h2, h3, h4, h5, h6,
- p, blockquote, pre, hr,
- dl, dd, ol, ul, figure {
-   margin: 0;
-   padding: 0;
- }
- 
- 
- 
- /**
-  * Basic styling
-  */
- body {
-   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-   color: $text-color;
-   background-color: $background-color;
-   // Old retro gray paper background (disabled)
-   // background-color: $page-background;
-   // background-image:
-   //   radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
-   //   radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-   //   linear-gradient(45deg, rgba(255, 255, 255, 0.02) 25%, transparent 25%),
-   //   linear-gradient(-45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%);
-   // background-size: 40px 40px, 20px 20px, 80px 80px, 80px 80px;
-   // background-position: 0 0, 10px 10px, 0 0, 40px 40px;
-   -webkit-text-size-adjust: 100%;
-   -webkit-font-feature-settings: "kern" 1, "lnum" 1;
-      -moz-font-feature-settings: "kern" 1, "lnum" 1;
-        -o-font-feature-settings: "kern" 1, "lnum" 1;
-           font-feature-settings: "kern" 1, "lnum" 1;
-   font-variant-numeric: lining-nums;
-   font-kerning: normal;
-   font-synthesis: none;
- }
- 
- 
- 
- /**
-  * Set `margin-bottom` to maintain vertical rhythm
-  */
- h1, h2, h3, h4, h5, h6,
- p, blockquote, pre,
- ul, ol, dl, figure,
- %vertical-rhythm {
-   margin-bottom: math.div($spacing-unit, 2);
- }
- 
- 
- 
- /**
-  * Images
-  */
- img {
-   max-width: 100%;
-   vertical-align: middle;
- }
- 
- 
- 
- /**
-  * Figures
-  */
- figure > img {
-   display: block;
- }
- 
- figcaption {
-   font-size: $small-font-size;
- }
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
 
- // Figure include: image + auto-numbered caption
- .post-figure {
-   margin: $spacing-unit auto;
-   width: fit-content;
-   max-width: 100%;
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1, "lnum" 1;
+     -moz-font-feature-settings: "kern" 1, "lnum" 1;
+       -o-font-feature-settings: "kern" 1, "lnum" 1;
+          font-feature-settings: "kern" 1, "lnum" 1;
+  font-variant-numeric: lining-nums;
+  font-kerning: normal;
+  font-synthesis: none;
+}
 
-   .figure-images {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     gap: 8px;
-   }
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: math.div($spacing-unit, 2);
+}
 
-   img {
-     display: block;
-     max-width: 100%;
-   }
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
 
-   figcaption {
-     width: 0;
-     min-width: 100%;
-     margin-top: calc(#{$spacing-unit} / 3);
-     color: color.adjust($text-color, $lightness: 27%);
+figure > img {
+  display: block;
+}
 
-     .figure-title,
-     &:not(:has(.figure-title))::before {
-       font-family: "Vollkorn SC", serif;
-       letter-spacing: 0.05em;
-       color: $text-color;
-     }
+figcaption {
+  font-size: $small-font-size;
+}
 
-     &:not(:has(.figure-title))::before {
-       counter-increment: figure;
-       content: "Figure " counter(figure) ". ";
-     }
-   }
- }
+// Figure include: image + auto-numbered caption
+.post-figure {
+  margin: $spacing-unit auto;
+  width: fit-content;
+  max-width: 100%;
 
- // Framed grayscale photo strips, scroll sideways
- .post-figure.framed-grayscale {
-   img {
-     border: 2px solid black;
-     filter: grayscale(95%);
-     flex-shrink: 0;
-   }
+  .figure-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
 
-   .figure-images {
-     flex-wrap: nowrap;
-     overflow-x: auto;
+  img {
+    display: block;
+    max-width: 100%;
+  }
 
-     @include media-query($on-laptop) {
-       justify-content: flex-start;
-     }
-   }
- }
+  figcaption {
+    width: 0;
+    min-width: 100%;
+    margin-top: calc(#{$spacing-unit} / 3);
+    color: color.adjust($text-color, $lightness: 27%);
 
- // Rounded corners for game screenshots and gifs
- .post-figure.rounded img {
-   border-radius: 8px;
- }
+    .figure-title,
+    &:not(:has(.figure-title))::before {
+      font-family: "Vollkorn SC", serif;
+      letter-spacing: 0.05em;
+      color: $text-color;
+    }
 
- // Table caption above the table, auto-numbered
- .table-caption {
-   font-size: $small-font-size;
-   color: color.adjust($text-color, $lightness: 27%);
-   max-width: 85%;
-   margin: 0 auto calc(#{$spacing-unit} / 3);
+    &:not(:has(.figure-title))::before {
+      counter-increment: figure;
+      content: "Figure " counter(figure) ". ";
+    }
+  }
+}
 
-   &::before {
-     counter-increment: table;
-     content: "Table " counter(table) ". ";
-     font-family: "Vollkorn SC", serif;
-     letter-spacing: 0.05em;
-     color: $text-color;
-   }
- }
+// Framed grayscale photo strips, scroll sideways
+.post-figure.framed-grayscale {
+  img {
+    border: 2px solid black;
+    filter: grayscale(95%);
+    flex-shrink: 0;
+  }
 
- // Caption for inline SVG/iframe figures
- .svg-caption {
-   font-size: $small-font-size;
-   color: color.adjust($text-color, $lightness: 27%);
-   max-width: 85%;
-   margin: calc(#{$spacing-unit} / 3) auto $spacing-unit;
+  .figure-images {
+    flex-wrap: nowrap;
+    overflow-x: auto;
 
-   &::before {
-     counter-increment: figure;
-     content: "Figure " counter(figure) ". ";
-     font-family: "Vollkorn SC", serif;
-     letter-spacing: 0.05em;
-     color: $text-color;
-   }
- }
+    @include media-query($on-laptop) {
+      justify-content: flex-start;
+    }
+  }
+}
 
- // Side-by-side image rows, scroll sideways
- .img-row {
-   overflow-x: auto;
+// Rounded corners for game screenshots and gifs
+.post-figure.rounded img {
+  border-radius: 8px;
+}
 
-   &,
-   p {
-     display: flex;
-     justify-content: center;
-   }
+// Table caption above the table, auto-numbered
+.table-caption {
+  font-size: $small-font-size;
+  color: color.adjust($text-color, $lightness: 27%);
+  max-width: 85%;
+  margin: 0 auto calc(#{$spacing-unit} / 3);
 
-   img {
-     flex-shrink: 0;
-   }
+  &::before {
+    counter-increment: table;
+    content: "Table " counter(table) ". ";
+    font-family: "Vollkorn SC", serif;
+    letter-spacing: 0.05em;
+    color: $text-color;
+  }
+}
 
-   @include media-query($on-laptop) {
-     &,
-     p {
-       justify-content: flex-start;
-     }
-   }
- }
- 
- 
- 
- /**
-  * Lists
-  */
- ul, ol {
-   margin-left: $spacing-unit;
- }
- 
- li {
-   > ul,
-   > ol {
-     margin-bottom: 0;
-   }
- }
- 
- 
- 
- /**
-  * Headings
-  */
- h1, h2, h3, h4, h5, h6 {
-   font-weight: 500;
- }
+// Caption for inline SVG/iframe figures
+.svg-caption {
+  font-size: $small-font-size;
+  color: color.adjust($text-color, $lightness: 27%);
+  max-width: 85%;
+  margin: calc(#{$spacing-unit} / 3) auto $spacing-unit;
 
- p, li,
- h1, h2, h3, h4, h5, h6 {
-   text-wrap: pretty;
- }
+  &::before {
+    counter-increment: figure;
+    content: "Figure " counter(figure) ". ";
+    font-family: "Vollkorn SC", serif;
+    letter-spacing: 0.05em;
+    color: $text-color;
+  }
+}
 
- // Left-aligned prose with hyphenation
- p {
-   text-align: left;
-   text-wrap: pretty;
-   -webkit-hyphens: auto;
-   hyphens: auto;
-   hyphenate-limit-chars: 7 4 3;
-   -webkit-hyphenate-limit-lines: 2;
-   hyphenate-limit-lines: 2;
-   overflow-wrap: break-word;
- }
+// Side-by-side image rows, scroll sideways
+.img-row {
+  overflow-x: auto;
 
- // Center paragraphs that are just an image
- p:has(> img:only-child) {
-   text-align: center;
- }
+  &,
+  p {
+    display: flex;
+    justify-content: center;
+  }
 
- // Tabular figures in tables
- table {
-   font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1;
- }
+  img {
+    flex-shrink: 0;
+  }
 
- 
- 
- /**
-  * Links
-  */
- a {
-   color: $brand-color;
-   text-decoration: none;
- 
-   &:visited {
-     color: color.adjust($brand-color, $lightness: -15%);
-   }
- 
-   &:hover {
-     color: $text-color;
-     text-decoration: underline;
-   }
- 
-   .social-media-list &:hover {
-     text-decoration: none;
- 
-     .username {
-       text-decoration: underline;
-     }
-   }
- }
- 
- 
- /**
-  * Blockquotes
-  */
- // Book-style quotations
- blockquote {
-   color: $grey-color;
-   font-style: italic;
-   margin-left: $spacing-unit;
-   margin-right: $spacing-unit;
+  @include media-query($on-laptop) {
+    &,
+    p {
+      justify-content: flex-start;
+    }
+  }
+}
 
-   > :last-child {
-     margin-bottom: 0;
-   }
+ul, ol {
+  margin-left: $spacing-unit;
+}
 
-   // Attribution footer
-   footer {
-     text-align: right;
-     font-style: normal;
-     font-size: $small-font-size;
-     margin-top: calc(#{$spacing-unit} / 6);
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
 
-     .quote-author {
-       font-family: "Vollkorn SC", serif;
-       letter-spacing: 0.05em;
-     }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
 
-     cite {
-       font-style: italic;
-     }
-   }
- }
- 
- 
- 
- /**
-  * Details/summary, proportional-web style: framed by rules, italic
-  * summary label, no disclosure triangle
-  */
- details {
-   margin: $spacing-unit 0;
-   border-top: 1px solid $text-color;
-   border-bottom: 1px solid $text-color;
-   padding: calc(#{$spacing-unit} / 2) 0;
+p, li,
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: pretty;
+}
 
-   > :last-child {
-     margin-bottom: 0;
-   }
- }
+p {
+  text-align: left;
+  text-wrap: pretty;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 7 4 3;
+  -webkit-hyphenate-limit-lines: 2;
+  hyphenate-limit-lines: 2;
+  overflow-wrap: break-word;
+}
 
- summary {
-   font-style: italic;
-   cursor: pointer;
+// Center paragraphs that are just an image
+p:has(> img:only-child) {
+  text-align: center;
+}
 
-   &::marker {
-     content: "";
-   }
- }
+table {
+  font-feature-settings: "kern" 1, "lnum" 1, "tnum" 1;
+}
 
- details[open] summary {
-   margin-bottom: calc(#{$spacing-unit} / 2);
- }
+a {
+  color: $brand-color;
+  text-decoration: none;
 
+  &:visited {
+    color: color.adjust($brand-color, $lightness: -15%);
+  }
 
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
 
- /**
-  * Horizontal rules: ornament instead of a line (U+2767, rotated floral
-  * heart bullet), following Bringhurst-style ornamentation
-  */
- hr {
-   position: relative;
-   display: block;
-   height: 2rem;
-   margin: $spacing-unit auto;
-   border: none;
-   color: $text-color;
+  .social-media-list &:hover {
+    text-decoration: none;
 
-   // The line
-   &::before {
-     content: "";
-     display: block;
-     position: absolute;
-     top: 50%;
-     left: 0;
-     width: 100%;
-     height: 0;
-     border-top: 1px solid $text-color;
-   }
+    .username {
+      text-decoration: underline;
+    }
+  }
+}
 
-   // The ornament
-   &::after {
-     display: inline-block;
-     content: "\2767";
-     position: absolute;
-     top: 0;
-     left: calc(50% - 1ch);
-     width: 2ch;
-     text-align: center;
-     font-size: 2rem;
-     line-height: 2rem;
-     background: $background-color;
-   }
- }
+blockquote {
+  color: $grey-color;
+  font-style: italic;
+  margin-left: $spacing-unit;
+  margin-right: $spacing-unit;
 
+  > :last-child {
+    margin-bottom: 0;
+  }
 
+  // Attribution footer
+  footer {
+    text-align: right;
+    font-style: normal;
+    font-size: $small-font-size;
+    margin-top: calc(#{$spacing-unit} / 6);
 
- /**
-  * Code formatting
-  */
- pre,
- code {
-   @include relative-font-size(0.875);
- }
+    .quote-author {
+      font-family: "Vollkorn SC", serif;
+      letter-spacing: 0.05em;
+    }
 
- // Inline code: plain monospace, no box
- pre {
-   border: 1px solid $grey-color-light;
-   border-radius: 3px;
-   padding: 8px 12px;
-   overflow-x: auto;
- }
- 
- 
- 
- /**
-  * Wrapper
-  */
- .wrapper {
-   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-   margin-right: auto;
-   margin-left: auto;
-   padding-right: $spacing-unit;
-   padding-left: $spacing-unit;
-   @include clearfix;
- 
-   @include media-query($on-laptop) {
-     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-     max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-     padding-right: math.div($spacing-unit, 2);
-     padding-left: math.div($spacing-unit, 2);
-   }
- }
- 
- 
- 
- /**
-  * Clearfix
-  */
- 
- 
- 
- /**
-  * Icons
-  */
- 
- .svg-icon {
-     width: 16px;
-     height: 16px;
-     display: inline-block;
-     fill: #{$grey-color};
-     padding-right: 5px;
-     vertical-align: text-top;
- }
- 
- .social-media-list {
-   li + li {
-     padding-top: 5px;
-   }
- }
- 
- 
- 
- /**
-  * Tables
-  */
+    cite {
+      font-style: italic;
+    }
+  }
+}
+
+// Framed by rules, italic summary label, no disclosure triangle
+details {
+  margin: $spacing-unit 0;
+  border-top: 1px solid $text-color;
+  border-bottom: 1px solid $text-color;
+  padding: calc(#{$spacing-unit} / 2) 0;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+summary {
+  font-style: italic;
+  cursor: pointer;
+
+  &::marker {
+    content: "";
+  }
+}
+
+details[open] summary {
+  margin-bottom: calc(#{$spacing-unit} / 2);
+}
+
+// A rule with a centered ornament (U+2767, rotated floral heart bullet)
+hr {
+  position: relative;
+  display: block;
+  height: 2rem;
+  margin: $spacing-unit auto;
+  border: none;
+  color: $text-color;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-top: 1px solid $text-color;
+  }
+
+  &::after {
+    display: inline-block;
+    content: "\2767";
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1ch);
+    width: 2ch;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    background: $background-color;
+  }
+}
+
+pre,
+code {
+  @include relative-font-size(0.875);
+}
+
+pre {
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  padding: 8px 12px;
+  overflow-x: auto;
+}
+
+.wrapper {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @include clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: math.div($spacing-unit, 2);
+    padding-left: math.div($spacing-unit, 2);
+  }
+}
+
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #{$grey-color};
+  padding-right: 5px;
+  vertical-align: text-top;
+}
+
+.social-media-list {
+  li + li {
+    padding-top: 5px;
+  }
+}
+
 table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
   color: color.adjust($text-color, $lightness: 18%);
   border-collapse: collapse;
-  // border: 1px solid $grey-color-light;
 
   tbody tr {
     &:last-child {
@@ -465,15 +370,10 @@ table {
   }
 
   th {
-    //    background-color: color.adjust($grey-color-light, $lightness: 3%);
     border-top: 1.5px solid $text-color;
     border-bottom: 0.75px solid $text-color;
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: $small-font-size;
   }
-
-  // td {
-  //   // border: 1px solid $grey-color-light;
-  // }
 }
