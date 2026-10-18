@@ -38,10 +38,10 @@ Finally, Budapest is beautiful---I enjoyed my time there :)
 
 ### Presenting my research on multilingual synthetic data generation
 
-I presented my first PhD paper, [Polyglot Teachers: Evaluating Language Models for Multilingual Synthetic Data Generation](https://arxiv.org/abs/2604.11290), where we performed a comprehensive analysis of synthetic data generation techniques for producing high-quality data.
+I presented my first PhD paper, [Polyglot Teachers: Evaluating Language Models for Multilingual Synthetic Data Generation](https://arxiv.org/abs/2604.11290), where we performed a comprehensive analysis of synthetic data generation techniques for producing high-quality multilingual data.
 We also introduced a metric, called Polyglot Score, that takes into consideration both the intrinsic and extrinsic qualities of the generated data and the model it has been trained on.
 
-<!-- insert picture -->
+<!-- insert picture of you presenting it, maybe interspersed with photos of some figures -->
 
 Synthetic data has been on my mind since my pre-doc days.
 In some ways, I've been influenced by my prior work in T&uuml;lu 3 and by one of my mentors, Yizhong, who created [self-instruct](https://aclanthology.org/2023.acl-long.754/).
@@ -52,13 +52,25 @@ I am happy to have been given the opportunity to explore this problem during my 
 Nowadays, much of the field has moved on from off-policy distillation (i.e., generate text from teacher and use that as learning signal) and focused on on-policy or RL-based approaches.
 I've also seen several works taking synthetic data generation to the next level, such as Adaption's [Invent-A-Dataset](https://www.alphaxiv.org/abs/2609.invent-a-dataset-zero-seed) or Meta's [Autodata](https://www.alphaxiv.org/abs/2606.25996).
 **I have some upcoming works that explore both directions**, one is DataSmith, which is a method for synthesizing multilingual instruction-tuning data with the help of external tools.
+Stay tuned!
 
 ### Co-organizing the MRL 2026 workshop and Shared Task
 
-This year, I also helped co-organize the 2026 Workshop on Multilingual Representation Learning and Shared Task.
+This year, I also helped co-organize the [2026 Workshop on Multilingual Representation Learning and Shared Task](https://sigtyp.github.io/ws2026-mrl.html).
 It was a nice experience as I was able to see how workshop organization happens at this scale.
+My primary responsibility was to handle social media communications such as making posters, updating the website, and inviting keynote speakers.
+I enjoyed doing this, and will definitely be back again next year (wink wink!).
 
 <!-- talk about what you did specifically: comms, setting-up the website, etc. -->
+
+Aside from the workshop proper, I also helped out in this year's Shared Task.
+This time, the goal is to create a challenging benchmark in the style of [ECLeKTic](https://arxiv.org/abs/2502.21228).
+I helped out in setting up and managing the Discord server and in evaluating the submissions.
+We had a really nice turn out!
+I am so thankful for all submitting teams for the care and quality of their work.
+The 2026 Shared Task is not yet over, and we're hoping to continue onward to the multimodal phase.
+
+
 
 
 <!-- talk about shared task, why you're excited with this -->
