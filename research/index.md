@@ -9,7 +9,11 @@ My field is in natural language processing and machine learning.
 I study **edge language models**---small models that can run on commodity devices or under limited network or compute infrastructure---with the motivation of enabling the development and deployment of language technologies for the Global South.
 
 
-I'm also a strong proponent of *data-centric NLP*, with a belief that data quality is a compute multiplier: high-quality data leads to more signal per token, enabling us to build smaller and more capable models.
+I'm a strong proponent of *data-centric NLP*. 
+Models are a reflection of the data they were trained on,
+so it is important that the way we collect and generate datasets reflect the values we want to see.
+I also believe that data quality is a compute multiplier: high-quality data provides more signal per token, enabling us to build smaller yet more capable models.
+
 Currently, I'm thinking about how we can start with the *actual needs* of Global South communities and work our way backwards to *right-size* our technical interventions.
 
 <!-- I want to find out what it takes to build capable language technology given scarce data and compute resources, 
@@ -24,13 +28,11 @@ so that the field has vocabulary for reasoning about it, and so that data collec
 ## Selected Publications
 
 Below is a selection of work that reflects my current interests.
+You can find the full list in my [Google Scholar profile](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en).
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
 I'm always excited for potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
 
-<div class="scholar-buttons">
-  <em>Profile links: <a href="https://scholar.google.co.jp/citations?user=2RtnNKEAAAAJ&hl=en" class="scholar-btn">Google Scholar</a>, <a href="https://www.semanticscholar.org/author/Lester-James-Validad-Miranda/13614871" class="scholar-btn">Semantic Scholar</a></em>
-</div>
-_Keywords: data-centric NLP, multilinguality, resources & evaluation_
+_Keywords: data-centric NLP, multilinguality, edge models_
 
 {% include publications.html %}
 
