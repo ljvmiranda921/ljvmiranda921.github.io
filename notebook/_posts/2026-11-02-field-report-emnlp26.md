@@ -63,15 +63,12 @@ I enjoyed doing this, and will definitely be back again next year (wink wink!).
 
 <!-- talk about what you did specifically: comms, setting-up the website, etc. -->
 
-Aside from the workshop proper, I also helped out in this year's Shared Task.
+Aside from the workshop proper, I also helped out in this year's [Shared Task](https://mrlbenchmarks.github.io/).
 This time, the goal is to create a challenging benchmark in the style of [ECLeKTic](https://arxiv.org/abs/2502.21228).
 I helped out in setting up and managing the Discord server and in evaluating the submissions.
 We had a really nice turn out!
-I am so thankful for all submitting teams for the care and quality of their work.
+I am so thankful for all teams for the care and quality in their submissions.
 The 2026 Shared Task is not yet over, and we're hoping to continue onward to the multimodal phase.
-
-
-
 
 <!-- talk about shared task, why you're excited with this -->
 
@@ -80,6 +77,8 @@ The 2026 Shared Task is not yet over, and we're hoping to continue onward to the
 
 
 ## Miscellaneous
+
+- My supervisor, Anna Korhonen, gave a [keynote talk](https://2026.emnlp.org/program/keynotes/#keynote-3-anna-korhonen)! 
 
 
 
