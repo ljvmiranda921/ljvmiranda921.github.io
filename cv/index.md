@@ -6,7 +6,7 @@ permalink: /cv/
 ---
 
 *Last updated: October 18, 2026*  
-You can also get the [PDF version](https://storage.googleapis.com/ljvmiranda/cv.pdf){:target="_blank" rel="noopener"}.
+You can also get the [PDF version](https://storage.googleapis.com/ljvmiranda/cv.pdf){:target="_blank" rel="noopener"} or find me on [Linkedin](https://www.linkedin.com/in/ljvmiranda/){:target="_blank" rel="noopener"}.
 
 ## Education
 {: style="font-size: 1.3em; font-family: 'Vollkorn SC', serif; border-bottom: 1px solid; padding-bottom: 0.1em; margin-bottom: 0.6em;"}
