@@ -34,7 +34,7 @@ Predoctoral Young Investigator
 2023 &ndash; 2025
 
 **ExplosionAI GmbH**  
-spaCy Machine Learning Engineer  
+Machine Learning Engineer, spaCy  
 2021 &ndash; 2023
 
 **Thinking Machines Data Science**  
@@ -57,39 +57,39 @@ Topic: Efficient Reinforcement Learning
 
 See my [research](/research) page, or the full list of publications on my [Google Scholar](https://scholar.google.com/citations?user=2RtnNKEAAAAJ&hl=en).
 
-## Awards, Grants & Fellowships
+## Awards, Grants, and Fellowships
 {: style="font-size: 1.3em; font-family: 'Vollkorn SC', serif; border-bottom: 1px solid; padding-bottom: 0.1em; margin-bottom: 0.6em;"}
 
-- Churchill College Travel Grant Award, *University of Cambridge*, 2026
-- UKRI Frontier Research Grant Studentship (EQUATE), *University of Cambridge*, 2025
-- Cohere Labs Catalyst Research Grant, *Cohere Labs*, 2025
-- Cohere Labs Aya Expedition Silver Prize for M-RewardBench, *Cohere Labs*, 2024
-- Monbukagakusho (MEXT) Japanese Government Scholarship, *Waseda University*, 2016
-- Cum laude (with honors), *Ateneo de Manila University*, 2016
-- PhilFrance French Embassy Scholarship, *Institut Catholique d'Arts et Métiers*, 2015
-- DOST-SEI Merit Scholarship, *Ateneo de Manila University*, 2011
-- Ateneo College Scholarship, *Ateneo de Manila University*, 2011
+- Churchill College Travel Grant Award. *University of Cambridge*. 2026.
+- UKRI Frontier Research Grant Studentship (EQUATE). *University of Cambridge*. 2025.
+- Cohere Labs Catalyst Research Grant. *Cohere Labs*. 2025.
+- Cohere Labs Aya Expedition Silver Prize for M-RewardBench. *Cohere Labs*. 2024.
+- Monbukagakusho (MEXT) Japanese Government Scholarship. *Waseda University*. 2016.
+- Cum laude (with honors). *Ateneo de Manila University*. 2016.
+- PhilFrance French Embassy Scholarship. *Institut Catholique d'Arts et Métiers*. 2015.
+- DOST-SEI Merit Scholarship. *Ateneo de Manila University*. 2011.
+- Ateneo College Scholarship. *Ateneo de Manila University*. 2011.
 
 ## Open-source Projects
 {: style="font-size: 1.3em; font-family: 'Vollkorn SC', serif; border-bottom: 1px solid; padding-bottom: 0.1em; margin-bottom: 0.6em;"}
 
-- [calamanCy](https://github.com/ljvmiranda921/calamanCy), *NLP toolkit for building Tagalog pipelines based on spaCy*, 2023
-- [PySwarms](https://github.com/ljvmiranda921/pyswarms), *Python framework for swarm optimization algorithms*, 2018
+- [calamanCy](https://github.com/ljvmiranda921/calamanCy), NLP toolkit for building Tagalog pipelines based on spaCy
+- [PySwarms](https://github.com/ljvmiranda921/pyswarms), Python framework for swarm optimization algorithms
 
 ## Invited Talks
 {: style="font-size: 1.3em; font-family: 'Vollkorn SC', serif; border-bottom: 1px solid; padding-bottom: 0.1em; margin-bottom: 0.6em;"}
 
-- NLP Lecture for AI Olympiad (host: Martin Gomez), *International Olympiad for AI, Team Philippines*, 2026
-- Gumagana ba talaga 'yan sa Filipino? Evaluating and Building Philippine LLMs (host: Michelle Alarcon), *Analytics & AI Association of the Philippines (AAP)*, 2026
-- Artisanal Filipino Resources in the Age of LLMs (host: Charibeth Cheng), *De La Salle University, Manila*, 2024
-- Labeling with LLMs (hosts: Ryan Wesslen & Chang Hsin Lee), *University of North Carolina, Charlotte*, 2024
-- Geospatial Data at Scale with Geomancer (host: Erika Legara), *Databeers Manila*, 2019
+- [NLP Seminar for the Philippine Team at the International Olympiad in AI](/ioaiph26-nlp/). *Philippine AI Olympiad Team*. Hosted by Martin Gomez. 2026.
+- [Gumagana ba talaga 'yan sa Filipino? Evaluating and Building Language Models for the Philippines](https://docs.google.com/presentation/d/1KOdSsFsk8io59bKRzwU-4u1iFNxDumlSNLQfUYgbTfU/edit?usp=sharing). *Analytics & AI Association of the Philippines*. Hosted by Michelle Alarcon. 2026.
+- [Artisanal Filipino Resources in the Age of LLMs](/notebook/2024/07/02/talk-dlsu/). *De La Salle University, Manila (Graduate Seminar)*. Hosted by Dr. Charibeth Cheng. 2024.
+- [Labeling with LLMs](/notebook/2024/02/21/talk-unc-charlotte/). *University of North Carolina, Charlotte (Course Seminar)*. Hosted by Dr. Ryan Wesslen and Chang Hsin Lee. 2024.
+- [Geospatial Data at Scale with Geomancer](https://docs.google.com/presentation/d/1tti0OabRqiVTeU4y4mI4ePfpEehngiZvwlBqBQbiujU/edit?usp=sharing). *DataBeers Manila*. Hosted by Dr. Erika Fille Legara. 2019.
 
 ## Professional and Community Service
 {: style="font-size: 1.3em; font-family: 'Vollkorn SC', serif; border-bottom: 1px solid; padding-bottom: 0.1em; margin-bottom: 0.6em;"}
 
-- Scientific Committee & Trainer, Philippine Team, *International Olympiad for AI (IOAI)*, 2026
-- Co-organizer, 6th Multilingual Representation Learning (MRL) Workshop & Shared Task, *EMNLP '26*, 2026
-- Election Committee Member (2026&ndash;2029 term), *SIGSEA*, 2026
-- Conference Reviewer: ICLR, COLM, ARR (ACL, EMNLP)
-- Journal Reviewer: Philippine Journal of Science (PJS), Philippine Computing Journal (PCJ), Journal of Open Source Software (JOSS)
+- Scientific Committee & Trainer. *[IOAI Philippine Team](https://ioaiph.org/)*. 2026.
+- Co-organizer. *[6th Multilingual Representation Learning (MRL) Workshop & Shared Task](https://sigtyp.github.io/ws2026-mrl.html)*. 2026.
+- Election Committee Member (2026&ndash;2029 term). *[SIGSEA](https://www.sigsea.org/)*. 2026.
+- Conference Reviewer: ICLR, COLM, ARR (ACL, EMNLP).
+- Journal Reviewer: Philippine Journal of Science (PJS), Philippine Computing Journal (PCJ), Journal of Open Source Software (JOSS).
