@@ -22,7 +22,7 @@ If we also account for the memory required to run them, then it's apparent that 
 
 In a [survey I wrote](https://arxiv.org/abs/2604.21637) months ago, I looked into some scenarios where hardware constraints are more apparent, making it harder to access language models.
 Unfortunately, we find these scenarios in the Global South.
-For example, 
+For example, the devices people own are mostly low-end (an entry-level phone can cost up to 48% of monthly income), and Internet access is limited in many of the most linguistically diverse countries (e.g., Nigeria and Chad), so neither on-device nor cloud inference is a given.
 
 So how can we make existing models fit into these hardware-constrained environments?
 In this blog post, I want to present three major *strategies*: **Tinyfication**, **Specialization**, and **Modularization**.
