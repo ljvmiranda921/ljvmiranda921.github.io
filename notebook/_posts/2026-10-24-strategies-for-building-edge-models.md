@@ -25,11 +25,11 @@ Unfortunately, we find these scenarios in the Global South.
 For example, 
 
 So how can we make existing models fit into these hardware-constrained environments?
-In this blog post, I want to present three major strategies: **Tinyfication**, **Specialization**, and **Modularization**.
+In this blog post, I want to present three major *strategies*: **Tinyfication**, **Specialization**, and **Modularization**.
 
 <!-- insert image -->
 
-If you're an NLP researcher, you probably know about methods like compression, quantization, and the like.
+If you're an NLP researcher, you probably know about *methods* like compression, quantization, and the like.
 My hope for naming these three strategies is to help practitioners take a step back on what they really wanted to do and then choose the right method for their chosen strategy.
 
 ## Tinyfication
