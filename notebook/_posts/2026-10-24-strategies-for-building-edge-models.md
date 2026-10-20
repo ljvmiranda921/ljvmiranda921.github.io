@@ -15,12 +15,12 @@ description: |
 excerpt: |
 ---
 
-<span class="firstcharacter">A</span>ll this time we've been hearing a lot about LLMs or large language models.
-These LLMs often contain billions of parameters which helps them perform complicated computations for performing all sorts of tasks.
-The size of "small" models being released right now is in the range of 7B--27B parameters, which might be 10GB to 50GB in storage size (still big!).
-If we also account for the memory required to run them, then it's apparent that even "small" LMs will still require high-end consumer hardware to be accessible.
+<span class="firstcharacter">A</span>ll this time we've been hearing a lot about large language models (LLMs).
+These models pack billions of parameters to help them perform complicated calculations for all sorts of tasks.
+These models are "large" and rightfully so: the smallest models being released right now are in the range of 7B--27B parameters, requiring tons of storage and RAM.
+Running these models in full-precision on a consumer hardware is nigh impossible.
 
-In a [survey I wrote](https://arxiv.org/abs/2604.21637) months ago, I looked into some scenarios where hardware constraints are more apparent, making it harder to access language models.
+In a [survey I wrote](https://arxiv.org/abs/2604.21637) a few months ago, I looked into some scenarios where hardware constraints are more apparent, making it harder to access language models.
 Unfortunately, we find these scenarios in the Global South.
 For example, the devices people own are mostly low-end (an entry-level phone can cost up to 48% of monthly income), and Internet access is limited in many of the most linguistically diverse countries (e.g., Nigeria and Chad), so neither on-device nor cloud inference is a given.
 So how can we make existing models fit into these hardware-constrained environments?
