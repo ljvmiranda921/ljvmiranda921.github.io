@@ -31,7 +31,9 @@ In this blog post, I want to present three major *strategies*: **Tinyfication**,
 If you're an NLP researcher, you probably know about *methods* like compression, quantization, and the like.
 My hope for naming these three strategies is to help practitioners take a step back on what they really wanted to do and then choose the right method for their chosen strategy.
 
-You might also notice that some of the works mentioned below are post-training interventions, i.e., we start from an already large model, and attempt to 
+You might also notice that some of the works I'll mention below are post-training interventions, i.e., we start from an already large model, and attempt to make it smaller to fit a hardware requirement.
+I decided to focus on this aspect of building edge LLMs because pretraining from scratch can be more expensive while involving more design decisions.
+I believe post-training interventions are much simpler and much easier to wrap one's head upon.
 
 ## Tinyfication
 
