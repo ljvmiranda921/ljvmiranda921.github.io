@@ -40,7 +40,7 @@ I believe post-training interventions are much simpler and much easier to wrap o
 
 <!-- for each strategy, talk about the underlying principle, pros and cons -->
 The goal of tinyfication is to create a smaller version of a bigger model in order to fit a hardware constraint.
-This strategy is quite common in the Local LM space with the popularity of quantized models (or quants) that you can run with tools like llama-cpp or ollama.
+This strategy is quite common in the Local LM space with the popularity of quantized models (or quants) that you can run with tools like [llama-cpp](https://github.com/ggml-org/llama.cpp) or [Ollama](https://ollama.com/).
 
 <!-- explain the technology -->
 These quants are based on a technique called **quantization**
