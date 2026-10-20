@@ -23,7 +23,7 @@ In this blog post, I want to synthesize what I've learned and present three majo
 All this time we've been hearing a lot about LLMs or **large** language models.
 These LLMs often contain billions of parameters which helps them perform complicated computations for performing all sorts of tasks.
 The size of "small" models being released right now is in the range of 7B--27B parameters, which might be 10GB to 50GB in storage size (still big!).
-If we even account for the memory required to use it, it's apparent that even "small" LMs still require high-end consumer technologies to access them.
+If we also account for the memory required to run them, then it's apparent that even "small" LMs will still require high-end consumer hardware to be accessible.
 
 Edge LMs are built by
 
