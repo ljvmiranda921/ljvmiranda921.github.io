@@ -47,6 +47,10 @@ There are many approaches but the most popular one is GGML.
 
 ## Specialization
 
+<!--
+models are large to store this vast parametric knowledge...
+but for some cases, we really don't need quite a lot...
+-->
 
 
 ## Modularization
