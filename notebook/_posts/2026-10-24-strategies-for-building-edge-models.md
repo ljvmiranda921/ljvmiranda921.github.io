@@ -35,6 +35,7 @@ My hope for naming these three strategies is to help practitioners take a step b
 
 <!-- for each strategy, talk about the underlying principle, pros and cons -->
 The goal of tinyfication is to create a smaller version of a bigger model in order to fit some hardware constraint.
+This is quite common in the Local LM space with the proliferation of quants
 
 
 ## Specialization
