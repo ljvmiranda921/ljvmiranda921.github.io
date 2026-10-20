@@ -39,6 +39,8 @@ This strategy is quite common in the Local LM space with the popularity of quant
 
 <!-- explain the technology -->
 These quants are based on a technique called **quantization**
+The idea is to...
+There are many approaches but the most popular one is GGML.
 
 
 ## Specialization
