@@ -42,6 +42,7 @@ My hope for naming these three strategies is to help practitioners take a step b
 
 ## Modularization
 
+## Final thoughts
 
 I hope you enjoyed reading through this work! If you do, I highly encourage you to [check out our survey](/multilinguality-at-the-edge/) and cite us below:
 
