@@ -34,6 +34,7 @@ My hope for naming these three strategies is to help practitioners take a step b
 
 ## Tinyfication
 
+<!-- for each strategy, talk about the underlying principle, pros and cons -->
 
 
 ## Specialization
