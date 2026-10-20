@@ -15,7 +15,13 @@ description: |
 excerpt: |
 ---
 
-Hello
+In the past few months, I've been working on developing edge language models (LMs) and studying how they are built.
+I [wrote a survey](https://arxiv.org/abs/2604.21637) out of it, and I learned through this process that there are so many methods available for training small LMs.
+In this blog post, I want to synthesize what I've learned and present three major strategies for training edge LMs.
+
+*But first, what are edge models?*
+All this time we've been hearing a lot about LLMs or **large** language models.
+These LLMs often contain billions of parameters which helps them perform these complicated computations
 
 I hope you enjoyed reading through this work! If you do, I highly encourage you to [check out our survey](/multilinguality-at-the-edge/) and cite us below:
 
