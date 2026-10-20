@@ -20,16 +20,17 @@ These models pack billions of parameters to help them perform complicated calcul
 These models are "large" and rightfully so: the smallest models being released right now are in the range of 7B--27B parameters, requiring tons of storage and RAM.
 Running these models in full-precision on a consumer hardware is nigh impossible.
 
-In a [survey I wrote](https://arxiv.org/abs/2604.21637) a few months ago, I looked into some scenarios where hardware constraints are more apparent, making it harder to access language models.
-Unfortunately, we find these scenarios in the Global South.
+In a [survey I wrote](https://arxiv.org/abs/2604.21637) a few months ago, I looked into some scenarios where hardware constraints are more apparent, thereby restricting access to language models.
+Unfortunately, we find a lot of these scenarios in the Global South.
 For example, the devices people own are mostly low-end (an entry-level phone can cost up to 48% of monthly income), and Internet access is limited in many of the most linguistically diverse countries (e.g., Nigeria and Chad), so neither on-device nor cloud inference is a given.
+
 So how can we make existing models fit into these hardware-constrained environments?
 In this blog post, I want to present three major *strategies*: **Tinyfication**, **Specialization**, and **Modularization**.
+If you're an NLP researcher, you probably know about *methods* like distillation, quantization, and the like.
+My hope for naming these three strategies is to help practitioners take a step back on what they really wanted to do and then choose the right method for their chosen strategy.
 
 <!-- insert image -->
 
-If you're an NLP researcher, you probably know about *methods* like compression, quantization, and the like.
-My hope for naming these three strategies is to help practitioners take a step back on what they really wanted to do and then choose the right method for their chosen strategy.
 
 You might also notice that some of the works I'll mention below are post-training interventions, i.e., we start from an already large model, and attempt to make it smaller to fit a hardware requirement.
 I decided to focus on this aspect of building edge LLMs because pretraining from scratch can be more expensive while involving more design decisions.
