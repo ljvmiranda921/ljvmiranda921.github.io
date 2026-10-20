@@ -21,7 +21,11 @@ In this blog post, I want to synthesize what I've learned and present three majo
 
 *But first, what are edge models?*
 All this time we've been hearing a lot about LLMs or **large** language models.
-These LLMs often contain billions of parameters which helps them perform these complicated computations
+These LLMs often contain billions of parameters which helps them perform complicated computations for performing all sorts of tasks.
+The size of "small" models being released right now is in the range of 7B--27B parameters, which might be 10GB to 50GB in storage size (still big!).
+If we even account for the memory required to use it, it's apparent that even "small" LMs still require high-end consumer technologies to access them.
+
+Edge LMs are built by
 
 I hope you enjoyed reading through this work! If you do, I highly encourage you to [check out our survey](/multilinguality-at-the-edge/) and cite us below:
 
