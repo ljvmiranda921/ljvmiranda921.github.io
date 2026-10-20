@@ -31,10 +31,12 @@ In this blog post, I want to present three major *strategies*: **Tinyfication**,
 If you're an NLP researcher, you probably know about *methods* like compression, quantization, and the like.
 My hope for naming these three strategies is to help practitioners take a step back on what they really wanted to do and then choose the right method for their chosen strategy.
 
+You might also notice that some of the works mentioned below are post-training interventions, i.e., we start from an already large model, and attempt to 
+
 ## Tinyfication
 
 <!-- for each strategy, talk about the underlying principle, pros and cons -->
-The goal of tinyfication is to create a smaller version of a bigger model in order to fit some hardware constraint.
+The goal of tinyfication is to create a smaller version of a bigger model in order to fit a hardware constraint.
 This strategy is quite common in the Local LM space with the popularity of quantized models (or quants) that you can run with tools like llama-cpp or ollama.
 
 <!-- explain the technology -->
