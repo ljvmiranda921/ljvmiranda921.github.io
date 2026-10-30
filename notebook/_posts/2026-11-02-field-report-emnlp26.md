@@ -32,11 +32,9 @@ excerpt: |
 <span class="firstcharacter">T</span>he [EMNLP 2026 Conference](https://2026.emnlp.org/) in Budapest has been such a blast!
 This is one of the top NLP conferences in the field and I feel honored to have presented my work there.
 It's also a conference of firsts as I presented my first PhD paper and my first time co-organizing a workshop!
-Finally, Budapest is beautiful---I enjoyed my time there :) 
+Finally, Budapest as a city is beautiful---it was a nice experience :) 
 
-## My conference activities
-
-### Presenting my research on multilingual synthetic data generation
+## Presenting my research on multilingual synthetic data generation
 
 I presented my first PhD paper, [Polyglot Teachers: Evaluating Language Models for Multilingual Synthetic Data Generation](https://arxiv.org/abs/2604.11290), where we performed a comprehensive analysis of synthetic data generation techniques for producing high-quality multilingual data.
 We also introduced a metric, called Polyglot Score, that takes into consideration both the intrinsic and extrinsic qualities of the generated data and the model it has been trained on.
@@ -51,17 +49,15 @@ I am happy to have been given the opportunity to explore this problem during my 
 *Future outlook:* I think synthetic data for post-training continues to be relevant, albeit in different forms.
 Nowadays, much of the field has moved on from off-policy distillation (i.e., generate text from teacher and use that as learning signal) and focused on on-policy or RL-based approaches.
 I've also seen several works taking synthetic data generation to the next level, such as Adaption's [Invent-A-Dataset](https://www.alphaxiv.org/abs/2609.invent-a-dataset-zero-seed) or Meta's [Autodata](https://www.alphaxiv.org/abs/2606.25996).
-**I have some upcoming works that explore both directions**, one is DataSmith, which is a method for synthesizing multilingual instruction-tuning data with the help of external tools.
+**I have some upcoming works that explore both directions**, one is [DataSmith](/datasmith/), which is a method for synthesizing multilingual instruction-tuning data with the help of external tools.
 Stay tuned!
 
-### Co-organizing the MRL 2026 workshop and Shared Task
+## Co-organizing the MRL 2026 workshop and Shared Task
 
 This year, I also helped co-organize the [2026 Workshop on Multilingual Representation Learning and Shared Task](https://sigtyp.github.io/ws2026-mrl.html).
 It was a nice experience as I was able to see how workshop organization happens at this scale.
 My primary responsibility was to handle social media communications such as making posters, updating the website, and inviting keynote speakers.
 I enjoyed doing this, and will definitely be back again next year (wink wink!).
-
-<!-- talk about what you did specifically: comms, setting-up the website, etc. -->
 
 Aside from the workshop proper, I also helped out in this year's [Shared Task](https://mrlbenchmarks.github.io/).
 This time, the goal is to create a challenging benchmark in the style of [ECLeKTic](https://arxiv.org/abs/2502.21228).
@@ -70,16 +66,17 @@ We had a really nice turn out!
 I am so thankful for all teams for the care and quality in their submissions.
 The 2026 Shared Task is not yet over, and we're hoping to continue onward to the multimodal phase.
 
-<!-- talk about shared task, why you're excited with this -->
 
-## Papers that piqued my attention
+## Miscellaneous 
+
+- **My supervisor, Anna Korhonen, gave a [keynote talk](https://2026.emnlp.org/program/keynotes/#keynote-3-anna-korhonen)**
 
 
 
-## Miscellaneous
 
-- My supervisor, Anna Korhonen, gave a [keynote talk](https://2026.emnlp.org/program/keynotes/#keynote-3-anna-korhonen)! 
-
+- **I joined the SEACrowd Birds-of-a-Feather**
 
 
 ## Reflections
+
+<!-- AI-generated content, agents as the most common approach -->
