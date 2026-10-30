@@ -57,7 +57,7 @@ Stay tuned!
 This year, I also helped co-organize the [2026 Workshop on Multilingual Representation Learning and Shared Task](https://sigtyp.github.io/ws2026-mrl.html).
 It was a nice experience as I was able to see how workshop organization happens at this scale.
 My primary responsibility was to handle social media communications such as making posters, updating the website, and inviting keynote speakers.
-I enjoyed doing this, and will definitely be back again next year (wink wink!).
+I enjoyed doing this, and will definitely be back again next year at EMNLP 2027.
 
 Aside from the workshop proper, I also helped out in this year's [Shared Task](https://mrlbenchmarks.github.io/).
 This time, the goal is to create a challenging benchmark in the style of [ECLeKTic](https://arxiv.org/abs/2502.21228).
