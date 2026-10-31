@@ -104,8 +104,11 @@ If I had to describe the general sentiment, it would be disgust&mdash;most peopl
 - **For multilinguality, we know the problem but struggle with the solutions**
   Another discussion that came up in both the SEACrowd BoF and the MRL workshop was how asymmetric the resources for developing LMs are.
   In the SEACrowd BoF, we talked a lot about sovereignty.
-  Everyone believes that sovereignty is important, but getting there requires a lot of data and compute, both of which are hard to come by.
-  At MRL, Aji's talk on evaluation highlighted the lack of truly hard multilingual benchmarks.
-  Someone in the audience asked why that is the case and why big tech companies don't focus on it, but we were left without clear answers.
+  Sovereignty in this case means having the capacity to build our own models, with less reliance on foreign model providers outside our control.
 
-  Juxtaposing this with Anna's keynote, it seems like we already know what the important problems are, it's just that the hard part is how to get there.
+  Everyone believes that sovereignty is important, but getting there requires a lot of data and compute, both of which are hard to come by.
+  At MRL, Prof. Aji's talk on evaluation highlighted the lack of truly hard multilingual benchmarks.
+  Someone in the audience asked why that is the case and why big tech companies don't focus on it, but we were left without clear answers (e.g., perhaps there's no financial incentive to focus on these *last mile* cases). 
+
+  In my view, I believe that we as a field are caught in the trap of thinking that progress can only be achieved by scaling things (which involves a lot investment that small communities don't have).
+  Perhaps it is true that at the end of the day, it's a numbers game.
