@@ -112,3 +112,5 @@ If I had to describe the general sentiment, it would be disgust&mdash;most peopl
 
   In my view, I believe that we as a field are caught in the trap of thinking that progress can only be achieved by scaling things (which involves a lot investment that small communities don't have).
   I really don't want to believe that at the end of the day, it's a numbers game.
+
+- **Job prospects after PhD**
