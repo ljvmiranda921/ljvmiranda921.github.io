@@ -91,4 +91,7 @@ The 2026 Shared Task is not yet over, and we're hoping to continue onward to the
 
 ## Reflections
 
+I think one of the biggest discussions during the conference is the proliferation of AI in our daily workflows, and the trust or mistrust that comes with it.
+For example, I overhear a lot of complaints about rampant Claude use in keynote talks, posters, and oral presentations.
+Not to mention the growing concern of the field itself to "claudeslop" in paper submissions and reviews.
 <!-- AI-generated content, agents as the most common approach -->
