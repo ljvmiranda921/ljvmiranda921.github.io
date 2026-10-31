@@ -91,13 +91,21 @@ The 2026 Shared Task is not yet over, and we're hoping to continue onward to the
 
 ## Reflections
 
+The conference has left me with a lot of things to think about, I want to note them down here.
+
 I think one of the biggest discussions during the conference is the proliferation of AI in our daily workflows, and the trust or mistrust that comes with it.
 For example, I overhear a lot of complaints about rampant Claude use in talks, posters, and oral presentations.
 Not to mention the growing concern of the field itself to "claudeslop" in paper submissions and reviews.
 I'd describe that the general sentiment of the field is that of disgust. 
 In general it seems like most people don't like Claude interfering with the research process.
 Despite that, it seems like LLM Agents is the most popular research topic according to the EMNLP Program Chair's opening remarks.
-It's quite ironic to be honest, and seems like a double standard.
 Going through the poster sessions, you see a lot of papers talking about autoscientists or using LLM agents in the research process.
 It's quite ironic that it has become funny in some way.
 
+Another discussion that I had from SEACrowd and the MRL workshop, is on how asymmetric the resources are for developing LMs.
+More specifically, In the SEACrowd BoF, we talked a lot about sovereignty.
+Everyone believes that sovereignty is important, but the path to get there is hard.
+It requires a lot of data and compute, in which is hard to come by.
+In the MRL discussion, Aji's talk on evaluation has shown the lack of truly hard multilingual benchmarks.
+One person asked why is that the case and why don't big tech companies focus on that, but unfortunately we're left with no clear answers.
+Juxtaposing this with Anna's keynote, it seems like we know what the important problems really are, but the path to get there is hard.
