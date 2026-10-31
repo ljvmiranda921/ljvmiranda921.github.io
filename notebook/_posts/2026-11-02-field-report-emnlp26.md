@@ -75,6 +75,10 @@ We had a really nice turn out!
 I am so thankful for all teams for the care and quality in their submissions.
 The 2026 Shared Task is not yet over, and we're hoping to continue onward to the multimodal phase.
 
+{% include figure.html
+   src="/assets/images/field-report-emnlp26/poster_a.jpeg,/assets/images/field-report-emnlp26/poster_b.jpg,/assets/images/field-report-emnlp26/poster_c.jpeg"
+   height="300"
+   class="framed" %}
 
 ## Miscellaneous 
 
