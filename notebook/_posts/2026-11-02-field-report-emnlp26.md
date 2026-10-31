@@ -101,7 +101,7 @@ If I had to describe the general sentiment, it would be disgust&mdash;most peopl
   Walking through the poster sessions, you see a lot of papers on autoscientists or on using LLM agents in the research process.
   The irony is almost funny: we complain about AI in our research while making it the subject of our research.
 
-- **For multilinguality, we know the problem but struggle with the solutions**
+- **For multilinguality, we know the problem but struggle with the solutions.**
   Another discussion that came up in both the SEACrowd BoF and the MRL workshop was how asymmetric the resources for developing LMs are.
   In the SEACrowd BoF, we talked a lot about sovereignty.
   Sovereignty in this case means having the capacity to build our own models, with less reliance on foreign model providers outside our control.
@@ -112,5 +112,8 @@ If I had to describe the general sentiment, it would be disgust&mdash;most peopl
 
   In my view, I believe that we as a field are caught in the trap of thinking that progress can only be achieved by scaling things (which involves a lot investment that small communities don't have).
   I really don't want to believe that at the end of the day, it's a numbers game.
+
+- **Job prospects after PhD** I met a lot of friends (old and new) who are at the tail-end of their PhDs.
+
 
 ## Final thoughts
