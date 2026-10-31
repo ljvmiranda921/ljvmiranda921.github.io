@@ -62,7 +62,7 @@ My primary responsibility was to handle social media communications such as maki
 
 ![](/assets/images/field-report-emnlp26/mrl_team.jpeg){: style="float: left; width: 40%; margin: 0.3em 1.5em 0.5em 0; border: 1px solid black; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);"}
 
-During the workshop, I helped out in several of the 
+During the workshop, I helped out in several of the last mile
 
 I enjoyed doing this, and will definitely be back again next year at EMNLP 2027.
 
