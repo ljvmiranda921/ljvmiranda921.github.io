@@ -113,7 +113,21 @@ If I had to describe the general sentiment, it would be disgust&mdash;most peopl
   In my view, I believe that we as a field are caught in the trap of thinking that progress can only be achieved by scaling things which involves a lot investment that small communities don't have.
   *I really don't want to believe that at the end of the day, progress is a numbers game.*
 
-- **Job prospects after PhD.** I met a lot of friends (old and new) who are at the tail-end of their PhDs.
+- **Dude, research is fun. Attending conferences is so fun.** 
+  Sometimes I often see on Twitter: why do we still do research if LLMs will surpass us in the future?
+  I dunno man, research is fun!
+  I often consider myself an introvert, but it's good that I get to exercise my extroverted muscles during EMNLP.
+  It was really nice to strike up conversations with strangers, connect old and new friends, and chat with folks about their posters.
+  There's a social and *human* side to research that is quite beautiful to experience.
+
+  It's amazing, witnessing researchers actually **care**:
+  seeing the most creative poster I found at MRL that requires looking through a plastic filter to discern its contents, 
+  chatting with someone about multilingual data for an hour after my poster presentation,
+  random conversations in the shuttle bus on the way home from Hungexpo,
+  and many other *human* things.
+  Heidegger talks about *sorge* or care, 
+
+
 
 
 ## Final thoughts
