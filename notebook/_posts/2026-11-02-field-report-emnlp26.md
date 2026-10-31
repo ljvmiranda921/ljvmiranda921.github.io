@@ -78,6 +78,7 @@ The 2026 Shared Task is not yet over, and we're hoping to continue onward to the
 {% include figure.html
    src="/assets/images/field-report-emnlp26/poster_a.jpeg,/assets/images/field-report-emnlp26/poster_b.jpg,/assets/images/field-report-emnlp26/poster_c.jpeg"
    height="300"
+   caption="Poster session during the MRL 2026 Conference. The poster area for MRL is very lively! In the middle you see me with Senyu Li looking at the very creative poster by the [Pag-refuse](https://aclanthology.org/2026.mrl-1.41/) authors."
    class="framed" %}
 
 ## Miscellaneous 
