@@ -96,5 +96,8 @@ For example, I overhear a lot of complaints about rampant Claude use in talks, p
 Not to mention the growing concern of the field itself to "claudeslop" in paper submissions and reviews.
 I'd describe that the general sentiment of the field is that of disgust. 
 In general it seems like most people don't like Claude interfering with the research process.
+Despite that, it seems like LLM Agents is the most popular research topic according to the EMNLP Program Chair's opening remarks.
+It's quite ironic to be honest, and seems like a double standard.
+Going through the poster sessions, you see a lot of papers talking about autoscientists or using LLM agents in the research process.
+It's quite ironic that it has become funny in some way.
 
-Despite that, it seems like LLM Agents is the most popular research topic.
