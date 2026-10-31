@@ -122,11 +122,12 @@ If I had to describe the general sentiment, it would be disgust&mdash;most peopl
 
   It's amazing, witnessing researchers actually **care**:
   seeing the most creative poster I found at MRL that requires looking through a plastic filter to discern its contents, 
-  chatting with someone about multilingual data for an hour after my poster presentation,
-  random conversations in the shuttle bus on the way home from Hungexpo,
+  a passionate chat with someone about multilingual data after my poster presentation,
+  random research conversations with strangers in the shuttle bus on the way home from Hungexpo,
+  our collective frustration on job prospects after PhD,
+  passionate debates during keynote Q&A and oral sessions,
   and many other *human* things.
-  Heidegger talks about *sorge* or care, 
-
+  LLMs might produce the most perfectly ablated set of experiments, but there's this underlying mood or concern (or *Sorge* as how Heidegger puts it) that only us human researchers can embody.
 
 
 
