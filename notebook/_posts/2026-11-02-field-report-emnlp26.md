@@ -34,12 +34,14 @@ This is one of the top NLP conferences in the field and I feel honored to have p
 It's also a conference of firsts as I presented my first PhD paper and my first time co-organizing a workshop!
 Finally, Budapest as a city is beautiful---it was a nice experience :) 
 
-## Presenting my research on multilingual synthetic data generation
+## My conference activities
 
-I presented my first PhD paper, [Polyglot Teachers: Evaluating Language Models for Multilingual Synthetic Data Generation](https://arxiv.org/abs/2604.11290), where we performed a comprehensive analysis of synthetic data generation techniques for producing high-quality multilingual data.
+### Presenting my research on multilingual synthetic data generation
+
+I presented my first PhD paper, [Polyglot Teachers: Evaluating Language Models for Multilingual Synthetic Data Generation](https://aclanthology.org/2026.emnlp-main.440/), where we performed a comprehensive analysis of synthetic data generation techniques for producing high-quality multilingual data.
 We also introduced a metric, called Polyglot Score, that takes into consideration both the intrinsic and extrinsic qualities of the generated data and the model it has been trained on.
 
-<!-- insert picture of you presenting it, maybe interspersed with photos of some figures -->
+![](/assets/images/field-report-emnlp26/polyglot_teachers_presentation.jpeg){: style="float: left; width: 40%; margin: 0.3em 1.5em 0.5em 0; border: 1px solid black; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);"}
 
 Synthetic data has been on my mind since my pre-doc days.
 In some ways, I've been influenced by my prior work in T&uuml;lu 3 and by one of my mentors, Yizhong, who created [self-instruct](https://aclanthology.org/2023.acl-long.754/).
@@ -52,7 +54,7 @@ I've also seen several works taking synthetic data generation to the next level,
 **I have some upcoming works that explore both directions**, one is [DataSmith](/datasmith/), which is a method for synthesizing multilingual instruction-tuning data with the help of external tools.
 Stay tuned!
 
-## Co-organizing the MRL 2026 workshop and Shared Task
+### Co-organizing the MRL 2026 workshop and Shared Task
 
 This year, I also helped co-organize the [2026 Workshop on Multilingual Representation Learning and Shared Task](https://sigtyp.github.io/ws2026-mrl.html).
 It was a nice experience as I was able to see how workshop organization happens at this scale.
@@ -72,9 +74,7 @@ The 2026 Shared Task is not yet over, and we're hoping to continue onward to the
 - **My supervisor, Anna Korhonen, gave a [keynote talk](https://2026.emnlp.org/program/keynotes/#keynote-3-anna-korhonen)**
 
 
-
-
-- **I joined the SEACrowd Birds-of-a-Feather**
+- **I joined the SEACrowd Birds-of-a-Feather (BoF)**
 
 
 ## Reflections
