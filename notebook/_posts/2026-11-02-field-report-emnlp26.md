@@ -52,7 +52,7 @@ I am happy to have been given the opportunity to explore this problem during my 
 Nowadays, much of the field has moved on from off-policy distillation (i.e., generating text from a teacher and using that as a learning signal) and has focused on on-policy or RL-based approaches.
 I've also seen several works taking synthetic data generation to the next level, such as Adaption's [Invent-A-Dataset](https://www.alphaxiv.org/abs/2609.invent-a-dataset-zero-seed) or Meta's [Autodata](https://www.alphaxiv.org/abs/2606.25996).
 **I have some upcoming works that explore both directions**. One is [DataSmith](/datasmith/), which is a method for synthesizing multilingual instruction-tuning data with the help of external tools.
-Stay tuned!
+We had some exciting results to share soon, so stay tuned!
 
 ### Co-organizing the MRL 2026 workshop and Shared Task
 
