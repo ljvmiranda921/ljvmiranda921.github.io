@@ -130,6 +130,8 @@ If I had to describe the general sentiment, it would be disgust&mdash;most peopl
   and many other *human* things.
   LLMs might produce the most perfectly ablated set of experiments, but there's this underlying mood or concern (or *Sorge* as how Heidegger puts it) that only us human researchers can embody.
 
+  I enjoy the research process and like the community that comes with it, and I'd like to keep doing this many years from now.
+
 
 
 ## Final thoughts
