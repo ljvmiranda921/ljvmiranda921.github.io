@@ -32,7 +32,7 @@ excerpt: |
 <span class="firstcharacter">T</span>he [EMNLP 2026 Conference](https://2026.emnlp.org/) in Budapest has been such a blast!
 This is one of the top NLP conferences in the field and I feel honored to have presented my work there.
 It's also a conference of firsts as I presented my first PhD paper and my first time co-organizing a workshop!
-Finally, Budapest as a city is beautiful---it was a nice experience :) 
+Finally, Budapest is beautiful---it was a nice experience :) 
 
 ## My conference activities
 
