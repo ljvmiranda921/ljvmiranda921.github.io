@@ -87,7 +87,11 @@ The 2026 Shared Task is not yet over, and we're hoping to continue onward to the
 - **My supervisor, Anna Korhonen, gave a [keynote talk](https://2026.emnlp.org/program/keynotes/#keynote-3-anna-korhonen)**
 
 
-- **I joined the SEACrowd Birds-of-a-Feather (BoF)**
+- **I attended the SEACrowd Birds-of-a-Feather (BoF)**
+
+
+
+- **I attended the Data Diversity Birds-of-a-Feather (BoF)**
 
 
 ## Reflections
