@@ -56,7 +56,8 @@ We have some exciting results to share soon, so stay tuned!
 
 ### Co-organizing the MRL 2026 workshop and Shared Task
 
-This year, I also helped co-organize the [2026 Workshop on Multilingual Representation Learning and Shared Task](https://sigtyp.github.io/ws2026-mrl.html).
+This year, I also helped co-organize the [2026 Workshop on Multilingual Representation Learning (MRL) and Shared Task](https://sigtyp.github.io/ws2026-mrl.html).
+MRL is all about multilingual NLP, with a focus on representation learning and its applications.
 It was a nice experience, as I was able to see how workshop organization happens at this scale.
 My primary responsibility was to handle social media communications, such as making posters, updating the website, and inviting keynote speakers.
 
