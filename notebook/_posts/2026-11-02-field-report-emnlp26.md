@@ -111,7 +111,7 @@ If I had to describe the general sentiment, it would be disgust&mdash;most peopl
   At MRL, Prof. Aji's talk on evaluation highlighted the lack of truly hard multilingual benchmarks.
   Someone in the audience asked why that is the case and why big tech companies don't focus on it, but we were left without clear answers. For example, another audience member suggested that perhaps there's no financial incentive to focus on these last mile cases. 
 
-  In my view, I believe that we as a field are caught in the trap of thinking that progress can only be achieved by scaling things which involves a lot investment that small communities don't have.
+  In my view, I believe that we as a field are caught in the trap of thinking that progress can only be achieved by scale&mdash; and scaling involves a lot investment that small communities don't have.
   *I really don't want to believe that at the end of the day, progress is a numbers game.*
 
 - **Dude, research is fun. Attending conferences is so fun.** 
