@@ -145,6 +145,8 @@ My wife joined me after the conference to explore what Budapest has to offer.
 The city is amazing, in some ways it reminds me of Vienna[^1] but with more edge and character.
 It is a place of contrasts: some places near Blaha Lujza tér straight up reminded me of Novaliches in the Philippines with all its grafitti-filled walls and dark alleyways, and then, you cross the Danube and you'll find the Castle District which is very historical and Cambridge-like in some way.
 
+![](/assets/images/field-report-emnlp26/places.png)
+
 As for the people: one of the most common stereotypes I read about Hungarians is that they are cold and rude on the outside but are actually warm once you get to know them.
 I think it is true for the city as a whole.
 I admit that we encountered some bits of rude and mean personalities during our first day exploring, to the point where we almost want to "leave it all behind" and travel to a nearby country instead.
