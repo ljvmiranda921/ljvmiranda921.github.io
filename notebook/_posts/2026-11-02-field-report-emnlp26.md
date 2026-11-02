@@ -32,7 +32,7 @@ excerpt: |
 <span class="firstcharacter">T</span>he [EMNLP 2026 Conference](https://2026.emnlp.org/) in Budapest has been such a blast!
 This is one of the top NLP conferences in the field and I feel honored to have presented my work there.
 It's also a conference of firsts as I presented my first PhD paper and my first time co-organizing a workshop!
-Finally, Budapest is beautiful---it was a nice experience :) 
+The location is also top-notch: Budapest is charming, and I enjoyed my time there.
 
 ## My conference activities
 
@@ -44,9 +44,11 @@ We also introduced a metric, called Polyglot Score, that takes into consideratio
 ![](/assets/images/field-report-emnlp26/polyglot_teachers_presentation.jpeg){: style="float: left; width: 40%; margin: 0.3em 1.5em 0.5em 0; border: 1px solid black; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);"}
 
 Synthetic data has been on my mind since my pre-doc days.
-In some ways, I've been influenced by my prior work on T&uuml;lu 3 and by one of my mentors, Yizhong, who created [self-instruct](https://aclanthology.org/2023.acl-long.754/).
+My work has revolved around [understanding when synthetic data is useful as an alternative to human preference](https://aclanthology.org/2025.acl-long.355/) to [building large-scale synthetic preference pipelines](https://openreview.net/forum?id=i1uGbfHHpH).
 When applying for PhD programs, one thing that was on my mind was how we can optimize the synthetic data pipeline to improve multilingual capabilities.
-I am happy to have been given the opportunity to explore this problem during my PhD, and to have been provided with the compute to do so! Thank you, Isambard and Cambridge CSD3!
+It is harder to generate synthetic data for non-English languages as most models are not really optimized for them, so my approach is to conduct a systematic study and derive a principled recipe from these experiments.
+I am happy to have been given the opportunity to explore this problem during my PhD, and to have been provided with the compute to do so! 
+[UK's Isambard cluster](https://docs.isambard.ac.uk/) has really been a great boon to these types of work and I'm thankful for this large-scale compute resource!
 
 *Future outlook:* I think synthetic data for post-training will continue to be relevant, albeit in different forms.
 Nowadays, much of the field has moved on from off-policy distillation (i.e., generating text from a teacher and using that as a learning signal) and has focused on on-policy or RL-based approaches.
@@ -59,7 +61,7 @@ We have some exciting results to share soon, so stay tuned!
 This year, I also helped co-organize the [2026 Workshop on Multilingual Representation Learning (MRL) and Shared Task](https://sigtyp.github.io/ws2026-mrl.html).
 MRL is all about multilingual NLP, with a focus on representation learning and its applications.
 It was a nice experience, as I was able to see how workshop organization happens at this scale.
-My primary responsibility was to handle social media communications, such as making posters, updating the website, and inviting keynote speakers.
+My primary responsibility was to handle social media outreach such as making posters, updating the website, and inviting keynote speakers.
 
 ![](/assets/images/field-report-emnlp26/mrl_team.jpeg){: style="float: left; width: 40%; margin: 0.3em 1.5em 0.5em 0; border: 1px solid black; box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);"}
 
