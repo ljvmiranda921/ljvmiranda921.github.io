@@ -138,6 +138,18 @@ If I had to describe the general sentiment, it would be disgust&mdash;most peopl
 
   I enjoy the research process and like the community that comes with it, and I'd like to keep doing this many years from now.
 
+## Traveling around Budapest
+
+No conference would be complete without a post-work trip!
+My wife joined me after the conference to explore what Budapest has to offer.
+The city is amazing, in some ways it reminds me of Vienna[^1] but with more edge and character.
+It is a place of contrasts: some places near Blaha Lujza tér straight up reminded me of Novaliches (where I grew up) in the Philippines with all its grafitti filled walls and dark alleyways, and then, you cross the Danube and you'll find the Castle District which is very historical and Cambridge-like in some way.
+
+One of the most common stereotypes I read about Hungarians is that they are cold and rude on the outside but are actually warm once you get to know them.
+I think it is true for the city as a whole.
+I admit that we encountered some bits of rude and mean personalities during our first day exploring, to the point where we almost want to "leave it all behind" and travel to a nearby country instead.
+However, as we discover the place further, we find that you can find warmth and hospitality in various places.
 
 
-## Final thoughts
+
+[^1]: My first conference was [ACL 2025 in Vienna](/notebook/2025/08/01/field-report-acl25/).
