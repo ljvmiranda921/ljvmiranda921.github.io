@@ -155,6 +155,8 @@ The food is, of course, amazing.
 Throughout my whole stay I ate kürtőskalács (chimney cake), lángos, and chicken parikash.
 I realized that the best chimney cake is the one being sold near metro stations and that they taste better when it's not hot.
 In addition, lángos is now my new guilty pleasure, the best ones I've tasted is in [Lángos Center](https://finomlangos.com/) (very local and authentic).
+Interestingly, there are also a lot of Chinese canteens that offer the usual share of Eastern cuisine in various areas in Budapest&mdash; we surprisingly enjoyed these and wondered the lack of such places in Cambridge.
+Hungarian cuisine is wonderful and it's now one of my new favorites!
 
 
 
