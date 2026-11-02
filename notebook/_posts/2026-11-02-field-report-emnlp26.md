@@ -143,12 +143,20 @@ If I had to describe the general sentiment, it would be disgust&mdash;most peopl
 No conference would be complete without a post-work trip!
 My wife joined me after the conference to explore what Budapest has to offer.
 The city is amazing, in some ways it reminds me of Vienna[^1] but with more edge and character.
-It is a place of contrasts: some places near Blaha Lujza tér straight up reminded me of Novaliches (where I grew up) in the Philippines with all its grafitti filled walls and dark alleyways, and then, you cross the Danube and you'll find the Castle District which is very historical and Cambridge-like in some way.
+It is a place of contrasts: some places near Blaha Lujza tér straight up reminded me of Novaliches in the Philippines with all its grafitti-filled walls and dark alleyways, and then, you cross the Danube and you'll find the Castle District which is very historical and Cambridge-like in some way.
 
-One of the most common stereotypes I read about Hungarians is that they are cold and rude on the outside but are actually warm once you get to know them.
+As for the people: one of the most common stereotypes I read about Hungarians is that they are cold and rude on the outside but are actually warm once you get to know them.
 I think it is true for the city as a whole.
 I admit that we encountered some bits of rude and mean personalities during our first day exploring, to the point where we almost want to "leave it all behind" and travel to a nearby country instead.
 However, as we discover the place further, we find that you can find warmth and hospitality in various places.
+Shoutout to our Airbnb host, the folks at [Folk Art Shop](https://www.folkartshop.hu/rolunk/), and many others we met that made the Budapest stay so wonderful!
+
+The food is, of course, amazing.
+Throughout my whole stay I ate kürtőskalács (chimney cake), lángos, and chicken parikash.
+I realized that the best chimney cake is the one being sold near metro stations and that they taste better when it's not hot.
+In addition, lángos is now my new guilty pleasure, the best ones I've tasted is in [Lángos Center](https://finomlangos.com/) (very local and authentic).
+
+
 
 
 
