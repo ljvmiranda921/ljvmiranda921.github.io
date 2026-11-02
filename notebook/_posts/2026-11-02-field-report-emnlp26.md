@@ -86,10 +86,14 @@ The 2026 Shared Task is not yet over, and we're hoping to continue onward to the
 
 ## Miscellaneous 
 
-- **My supervisor, Anna Korhonen, gave a [keynote talk](https://2026.emnlp.org/program/keynotes/#keynote-3-anna-korhonen).** Our lab had a strong showing at the conference, with our supervisor closing off the conference with her keynote. Her main thesis statement is that AI development should start from the world's needs rather than from model development itself. At first, it sounds like a very "obvious" proposition, but if you look at the current state of AI development today and the rate of diffusion and adoption, we find that there's still a lot of work to be done.
+- **My supervisor, Anna Korhonen, gave a [keynote talk](https://2026.emnlp.org/program/keynotes/#keynote-3-anna-korhonen).** 
+Our lab had a strong showing at the conference, with our supervisor closing off the conference with her keynote. 
+Her main thesis statement is that AI development should start from the world's needs rather than from model development itself.
+At first, it sounds like a very "obvious" proposition, but if you look at the current state of AI development today and the rate of diffusion and adoption, we find that there's still a lot of work to be done. 
+I encourage you to watch the talk if you can, and it's chock full of insights about what our lab does.
 
-
-- **I attended the SEACrowd Birds-of-a-Feather (BoF)**
+- **I attended the SEACrowd Birds-of-a-Feather (BoF).**
+I mentioned from my [ACL 2025 field report](/notebook/2025/08/01/field-report-acl25/) that the SEACrowd group has been my homebase when it comes to conferences.
 
 
 
