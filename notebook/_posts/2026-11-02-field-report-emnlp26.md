@@ -160,6 +160,9 @@ In addition, lángos is now my new guilty pleasure, the best ones I've tasted is
 Interestingly, there are also a lot of Chinese canteens that offer the usual share of Eastern cuisine in various areas in Budapest&mdash; we surprisingly enjoyed these and wondered the lack of such places in Cambridge.
 Hungarian cuisine is wonderful and it's now one of my new favorites!
 
+Overall, Budapest for me is a place that takes its time to show its charm.
+I'm happy that EMNLP has chosen this city as its venue, and I look forward to visiting this city again.
+
 
 
 
