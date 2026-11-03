@@ -104,6 +104,11 @@ figcaption {
   border-radius: 8px;
 }
 
+.post-figure.framed img {
+  border: 1px solid black;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
 // Table caption above the table, auto-numbered
 .table-caption {
   font-size: $small-font-size;
