@@ -92,6 +92,12 @@ Her main thesis statement is that AI development should start from the world's n
 At first, it sounds like a very "obvious" proposition, but if you look at the current state of AI development today and the rate of diffusion and adoption, we find that there's still a lot of work to be done. 
 I encourage you to watch the talk if you can, and it's chock full of insights about what our lab does.
 
+  {% include figure.html
+     src="/assets/images/field-report-emnlp26/ltl_lab.jpeg,/assets/images/field-report-emnlp26/ltl_papers.png"
+     height="320"
+     caption="Our lab had a strong showing during EMNLP, with several papers, a workshop, and a keynote!"
+     class="framed" %}
+
 - **I attended the SEACrowd Birds-of-a-Feather (BoF).**
 I mentioned from my [ACL 2025 field report](/notebook/2025/08/01/field-report-acl25/) that the SEACrowd group felt like my homebase during the conference.
 This is still true as I've been with them throughout the week.
@@ -103,16 +109,13 @@ It's also very nice to reconnect with fellow Filipino researchers such as Joseph
   As a nation, it imports a lot of the critical resources it needs to survive, so it has tried to become independent and not rely too much on foreign imports.
   It then applied the same philosophy to AI, which is why it has such a strong sovereign AI stack, as seen in the SEA-LION model suite and the AI Singapore organization.
 
-![](/assets/images/field-report-emnlp26/socials.png)
+  {% include figure.html
+     src="/assets/images/field-report-emnlp26/socials.png"
+     caption="Some photos from the SEACrowd BoF and from hanging out with friends during EMNLP. It's also nice to meet Joseph and Blaise, my longtime collaborators on Filipino NLP! It's also a treat to see Jane, a schoolmate and a good friend from Ateneo." %}
 
   Of course, Singapore's economy and political landscape are very different from those of the Philippines.
   Still, I really like the idea of a nation building AI according to its own sensibilities.
   I believe something similar can be done in the Philippines: as I noted in my [previous blog post](/notebook/2026/05/23/on-what-it-takes/), we have *diskarte* (resourcefulness), *sipag at tiyaga* (sustained effort), and *bayanihan* (collective action).
-
-
-
-- **I attended the Data Diversity Birds-of-a-Feather (BoF)**
-
 
 ## Reflections
 
