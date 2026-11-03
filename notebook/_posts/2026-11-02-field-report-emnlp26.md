@@ -97,6 +97,11 @@ I mentioned from my [ACL 2025 field report](/notebook/2025/08/01/field-report-ac
 This is still true as I've been with them throughout the week.
 It's also very nice to reconnect with fellow Filipino researchers such as Joseph, Blaise, Jane, and Bob!
 
+  During the BoF, I talked a bit about sovereignty, which in this case is the capacity of a nation to own the language modelling stack (data, training, and evaluation).
+  Although we all agree upon how sovereignty is important, we also find that attaining it is difficult as it entails a lot of resources and (in my opinion) executive willpower.
+  One comment that stayed with me is how Singapore treats sovereignty: as a nation, they import a lot of critical resources for survival, and they tried to ensure to become independent and not rely too much from foreign imports. they then applied the same philosophy with AI. That's why they have a very strong sovereign AI stack as seen in SEA-LION model suite and AI Singapore orgnaization.
+
+
 
 
 - **I attended the Data Diversity Birds-of-a-Feather (BoF)**
