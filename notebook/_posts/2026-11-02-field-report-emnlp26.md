@@ -122,7 +122,7 @@ It's also very nice to reconnect with fellow Filipino researchers such as Joseph
 The conference left me with a lot to think about, so I want to note some of them down here.
 
 - **Our love or hate relationship with AI agents.** One of the biggest conversations I overheard was about the growing use of AI in our daily workflows, and the trust (or mistrust) that comes with it.
-I heard a lot of complaints about rampant Claude use in talks, posters, and oral presentations, not to mention the growing concern over "claudeslop" in paper submissions and reviews.
+I heard a lot of complaints about rampant Claude use in a keynote, some posters, and even oral presentations, not to mention the growing concern over "claudeslop" in paper submissions and reviews.
 If I had to describe the general sentiment, it would be disgust&mdash;most people don't like Claude interfering with the research process.
 
   And yet, according to the [Program Chairs' opening remarks](https://underline.io/events/535/schedule/sessions/23310/lecture/169657-opening-session?tab=video), LLM agents was the most popular research topic this year.
