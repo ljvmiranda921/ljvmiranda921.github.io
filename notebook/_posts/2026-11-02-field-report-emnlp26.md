@@ -99,8 +99,13 @@ It's also very nice to reconnect with fellow Filipino researchers such as Joseph
 
   During the BoF, I talked a bit about sovereignty, which in this case is the capacity of a nation to own the language modelling stack (data, training, and evaluation).
   Although we all agree upon how sovereignty is important, we also find that attaining it is difficult as it entails a lot of resources and (in my opinion) executive willpower.
-  One comment that stayed with me is how Singapore treats sovereignty: as a nation, they import a lot of critical resources for survival, and they tried to ensure to become independent and not rely too much from foreign imports. they then applied the same philosophy with AI. That's why they have a very strong sovereign AI stack as seen in SEA-LION model suite and AI Singapore orgnaization.
+  One comment that stayed with me was about how Singapore treats sovereignty.
+  As a nation, it imports a lot of the critical resources it needs to survive, so it has tried to become independent and not rely too much on foreign imports.
+  It then applied the same philosophy to AI, which is why it has such a strong sovereign AI stack, as seen in the SEA-LION model suite and the AI Singapore organization.
 
+  Of course, Singapore's economy and political landscape is very different from that of the Philippines.
+  However, I really like the idea of applying a nation's sensibilities on how they build AI.
+  I believe something similar can be done in the Philippines, as I note in my [previous blog post](/notebook/2026/05/23/on-what-it-takes/): we have *diskarte* (resourcefulness), *sipag at tiyaga* (sustained effort), and *bayanihan* (collective action).
 
 
 
