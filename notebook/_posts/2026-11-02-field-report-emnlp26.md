@@ -93,8 +93,8 @@ At first, it sounds like a very "obvious" proposition, but if you look at the cu
 I encourage you to watch the talk if you can, and it's chock full of insights about what our lab does.
 
 - **I attended the SEACrowd Birds-of-a-Feather (BoF).**
-I mentioned from my [ACL 2025 field report](/notebook/2025/08/01/field-report-acl25/) that the SEACrowd group has been my homebase when it comes to conferences.
-This is still true up to this day as I've been with them throughout the week.
+I mentioned from my [ACL 2025 field report](/notebook/2025/08/01/field-report-acl25/) that the SEACrowd group felt like my homebase during the conference.
+This is still true as I've been with them throughout the week.
 It's also very nice to reconnect with fellow Filipino researchers such as Joseph, Blaise, Jane, and Bob!
 
 
