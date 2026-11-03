@@ -103,9 +103,11 @@ It's also very nice to reconnect with fellow Filipino researchers such as Joseph
   As a nation, it imports a lot of the critical resources it needs to survive, so it has tried to become independent and not rely too much on foreign imports.
   It then applied the same philosophy to AI, which is why it has such a strong sovereign AI stack, as seen in the SEA-LION model suite and the AI Singapore organization.
 
-  Of course, Singapore's economy and political landscape is very different from that of the Philippines.
-  However, I really like the idea of applying a nation's sensibilities on how they build AI.
-  I believe something similar can be done in the Philippines, as I note in my [previous blog post](/notebook/2026/05/23/on-what-it-takes/): we have *diskarte* (resourcefulness), *sipag at tiyaga* (sustained effort), and *bayanihan* (collective action).
+![](/assets/images/field-report-emnlp26/socials.png)
+
+  Of course, Singapore's economy and political landscape are very different from those of the Philippines.
+  Still, I really like the idea of a nation building AI according to its own sensibilities.
+  I believe something similar can be done in the Philippines: as I noted in my [previous blog post](/notebook/2026/05/23/on-what-it-takes/), we have *diskarte* (resourcefulness), *sipag at tiyaga* (sustained effort), and *bayanihan* (collective action).
 
 
 
