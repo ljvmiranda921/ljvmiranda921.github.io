@@ -95,7 +95,7 @@ I encourage you to watch the talk if you can, and it's chock full of insights ab
   {% include figure.html
      src="/assets/images/field-report-emnlp26/ltl_lab.jpeg,/assets/images/field-report-emnlp26/ltl_papers.png"
      height="320"
-     caption="Our lab had a strong showing during EMNLP, with several papers, a workshop, and a keynote!"
+     caption="Our lab had a strong showing during EMNLP, with several papers, a workshop, and a keynote! I'm also now responsible on our lab's social media accounts (I made the poster on the right!)."
      class="framed" %}
 
 - **I attended the SEACrowd Birds-of-a-Feather (BoF).**
