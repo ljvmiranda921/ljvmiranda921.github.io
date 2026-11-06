@@ -7,7 +7,7 @@ permalink: /about/
 
 My name is Lj V. Miranda, and welcome to my website! 
 
-I am a PhD student at the [Language Technology Laboratory](https://ltl.mmll.cam.ac.uk/) at the University of Cambridge, where I'm working with [Anna Korhonen](https://sites.google.com/site/annakorhonen/).
+I am a [PhD student](https://www.mmll.cam.ac.uk/people/lester-james-miranda) at the [Language Technology Laboratory](https://ltl.mmll.cam.ac.uk/) at the University of Cambridge, where I'm working with [Anna Korhonen](https://sites.google.com/site/annakorhonen/).
 My [research](/research) broadly examines how we can build equitable language technologies through cheap, small, and specialized language models that are deployed to edge, i.e., nearest to the communities that need these technologies the most.
 I also have a special interest in [improving the state of Filipino NLP](/filipino-nlp).
 
@@ -24,7 +24,7 @@ If you're interested in reaching out, just shoot me an [email](mailto:ljvm2@cam.
 <details markdown="0" open>
 <summary>Short Background</summary>
 <p>
-Lj is a PhD student at the University of Cambridge, <a href="https://ltl.mmll.cam.ac.uk/">working on multilingual and equitable NLP</a>.
+Lj is a <a href="https://www.mmll.cam.ac.uk/people/lester-james-miranda">PhD student</a> at the University of Cambridge, <a href="https://ltl.mmll.cam.ac.uk/">working on multilingual and equitable NLP</a>.
 Before his studies, he has over seven years of industry experience in consulting, open-source software development, and research, including work as a predoctoral researcher at the <a href="https://allenai.org">Allen Institute for AI</a> and an engineer working on spaCy and Prodigy at <a href="https://explosion.ai">Explosion</a>.
 Outside of work, he enjoys <a href="https://ljvmiranda921.github.io/gallery">photography</a> and <a href="https://ljvmiranda921.itch.io">game development</a>.
 </p>
