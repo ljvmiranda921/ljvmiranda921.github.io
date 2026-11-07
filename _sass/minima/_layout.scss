@@ -86,7 +86,8 @@ $nav-gutter: 1.2em;
       color: $grey-color;
     }
 
-    &:hover {
+    &:hover,
+    &[aria-current="page"] {
       color: $brand-color;
     }
   }
