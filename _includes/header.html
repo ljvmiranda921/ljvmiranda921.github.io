@@ -7,13 +7,14 @@
         <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
         <p>PhD Student, University of Cambridge</p>
         <p><a href="mailto:ljvm2@cam.ac.uk">ljvm2@cam.ac.uk</a></p>
+        {% assign section = page.url | split: '/' %}
         <nav class="site-nav">
-          <a class="page-link" href="/about/">About</a>
-          <a class="page-link" href="/cv/">CV</a>
-          <a class="page-link" href="/research/">Research</a>
-          <a class="page-link" href="/life/">Life</a>
-          <a class="page-link" href="/projects/">Projects</a>
-          <a class="page-link" href="/notebook/">Notebook</a>
+          <a class="page-link" href="/about/"{% if section[1] == 'about' %} aria-current="page"{% endif %}>About</a>
+          <a class="page-link" href="/cv/"{% if section[1] == 'cv' %} aria-current="page"{% endif %}>CV</a>
+          <a class="page-link" href="/research/"{% if section[1] == 'research' %} aria-current="page"{% endif %}>Research</a>
+          <a class="page-link" href="/life/"{% if section[1] == 'life' %} aria-current="page"{% endif %}>Life</a>
+          <a class="page-link" href="/projects/"{% if section[1] == 'projects' %} aria-current="page"{% endif %}>Projects</a>
+          <a class="page-link" href="/notebook/"{% if section[1] == 'notebook' %} aria-current="page"{% endif %}>Notebook</a>
           <!-- <a class="page-link" href="/filipino-nlp/">Filipino NLP</a> -->
         </nav>
       </div>

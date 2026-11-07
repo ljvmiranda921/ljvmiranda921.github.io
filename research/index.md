@@ -32,7 +32,7 @@ You can find the full list in my [Google Scholar profile](https://scholar.google
 My work has been published in top NLP conferences such as ACL, NAACL, and EMNLP.
 I'm always excited for potential internships or research visits, so just [reach out](mailto:ljvm2@cam.ac.uk) if you find me a good match!
 
-_Keywords: data-centric NLP, multilinguality, edge models_
+<!-- _Keywords: data-centric NLP, multilinguality, edge models_ -->
 
 {% include publications.html %}
 

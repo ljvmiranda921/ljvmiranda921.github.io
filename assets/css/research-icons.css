@@ -46,7 +46,7 @@
   margin: 0.4em 0;
   font-size: 0.875em; /* $small-font-size */
   font-style: italic;
-  color: #828282; /* $grey-color */
+  color: #111; /* $text-color */
   text-wrap: pretty;
 }
 
@@ -109,13 +109,9 @@ a .research-icon {
 
 .poster-item figcaption {
   font-size: 0.8rem;
-  color: #555;
+  color: #111; /* $text-color */
   margin-top: 6px;
   line-height: 1.35;
-}
-
-.poster-venue {
-  color: #828282;
 }
 
 @media screen and (max-width: 600px) {
