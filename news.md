@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**Dec 2026**</span>: New Preprint! Introducing DataSmith, a data generation framework that marries longstanding approaches in multilingual data creation and agentic research capabilities of modern LMs.</p>
+<p><span class="date">**Dec 2026**</span>: New preprint: introducing DataSmith, a data generation framework that combines longstanding approaches in multilingual data creation and agentic research capabilities of modern LMs.</p>
 </div>
 
 <div class="news-item">
