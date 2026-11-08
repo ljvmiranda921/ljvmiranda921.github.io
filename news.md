@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**Dec 2026**</span>: Introducing DataSmith, a framework for <b>S</b>ynthesizing <b>M</b>ultilingual <b>I</b>nstruction-<b>T</b>uning data with the <b>H</b>elp of external tools. Check out the [website](https://ljvmiranda921/github.io/datasmith) for more information.</p>
+<p><span class="date">**Dec 2026**</span>: New Preprint! Introducing DataSmith, a data generation framework that marries longstanding approaches in multilingual data creation and agentic research capabilities of modern LMs.</p>
 </div>
 
 <div class="news-item">
