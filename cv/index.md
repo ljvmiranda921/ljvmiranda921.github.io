@@ -79,7 +79,7 @@ See my [research](/research) page, or the full list of publications on my [Googl
 ## Invited Talks
 {: style="font-size: 1.3em; font-family: 'Vollkorn SC', serif; border-bottom: 1px solid; padding-bottom: 0.1em; margin-bottom: 0.6em;"}
 
-- [5 Myths About Doing Philippine NLP Research](/ioaiph26-nlp/). *Philippine Science High School - Main*. 2026.
+- [5 Myths About Doing Philippine NLP Research](/ioaiph26-nlp/). *Philippine Science High School - Main*. Hosted by Tomorrow - PSHS AI & Data Science Club. 2026.
 - [NLP Seminar for the Philippine Team at the International Olympiad in AI](/ioaiph26-nlp/). *Philippine AI Olympiad Team*. Hosted by Martin Gomez. 2026.
 - [Gumagana ba talaga 'yan sa Filipino? Evaluating and Building Language Models for the Philippines](https://docs.google.com/presentation/d/1KOdSsFsk8io59bKRzwU-4u1iFNxDumlSNLQfUYgbTfU/edit?usp=sharing). *Analytics & AI Association of the Philippines*. Hosted by Michelle Alarcon. 2026.
 - [Artisanal Filipino Resources in the Age of LLMs](https://youtu.be/oY-uQ66z3Ss?si=WOMSfIbhObsOFclH). *De La Salle University, Manila (Graduate Seminar)*. Hosted by Dr. Charibeth Cheng. 2024.
