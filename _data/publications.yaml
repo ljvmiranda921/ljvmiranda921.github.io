@@ -13,7 +13,7 @@
       url: https://huggingface.co/collections/ljvmiranda921/polyglot-teachers
     - label: Slides
       url: "https://drive.google.com/file/d/1R00dPpAyDJgYRiK8H1ZX2OiqmWq5FTEw/view?usp=sharing"
-    - label: Video
+    - label: Talk
       url: "https://youtu.be/JLTeLQkUEng?si=HNf9rVV0R5f2yvSU"
 
 - title: "Multilinguality at the Edge: Developing Language Models for the Global South"
@@ -41,9 +41,7 @@
       url: "https://huggingface.co/datasets/allenai/multipref"
     - label: Slides
       url: "https://drive.google.com/file/d/1jyp_8TH2rAWofkoTEAEpT97hGwEvj5gS/view?usp=sharing"
-    - label: Poster
-      url: "https://drive.google.com/file/d/1QWadXHVxHT9F09CqXnjWO1Zu1dLr4oek/view?usp=drive_link"
-    - label: Video
+    - label: Talk
       url: "https://youtu.be/6i8Pa5qqxAI?si=4i9-5tWcEbLpDwz9"
 
 - title: "M-RewardBench: Evaluating Reward Models in Multilingual Settings"
@@ -59,7 +57,5 @@
       url: "https://huggingface.co/collections/C4AI-Community/multilingual-rewardbench-66dcbf2bfc68bfbb93feebd7"
     - label: Slides
       url: "https://drive.google.com/file/d/15bjZ7sVVPjtR02L0x1eIH5sfQfR_Y0P-/view?usp=drive_link"
-    - label: Poster
-      url: "https://drive.google.com/file/d/1GTLRaH3w9-EEePPMbryiUQteEnFyx71V/view?usp=drive_link"
-    - label: Video
+    - label: Talk
       url: "https://youtu.be/pgXm9etIpH4?si=H71Kr-1z5fphow11"
