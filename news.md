@@ -22,7 +22,7 @@ title: News
 </style>
 
 <div class="news-item">
-<p><span class="date">**Nov 2026**</span>: Gave a talk to Philippine Science High School's AI & Data Science Club on "5 Myths About Doing Philippine NLP Research." I enjoyed sharing my work to this next generation of scientists!</p>
+<p><span class="date">**Nov 2026**</span>: Gave a talk to Philippine Science High School's AI & Data Science Club on ["5 Myths About Doing Philippine NLP Research."](https://drive.google.com/file/d/1-SM4r9lFkKcEvGmCf889ByMWKWrasaYF/view?usp=drive_link) I enjoyed sharing my work to this next generation of scientists!</p>
 </div>
 
 <div class="news-item">
