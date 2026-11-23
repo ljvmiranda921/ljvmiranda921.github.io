@@ -26,6 +26,10 @@ title: News
 </div>
 
 <div class="news-item">
+<p><span class="date">**Nov 2026**</span>: Gave a talk to Philippine Science High School's AI & Data Science Club on ["5 Myths About Doing Philippine NLP Research."](https://drive.google.com/file/d/1-SM4r9lFkKcEvGmCf889ByMWKWrasaYF/view?usp=drive_link) I enjoyed sharing my work to this next generation of scientists!</p>
+</div>
+
+<div class="news-item">
 <p><span class="date">**Aug 2026**</span>: My first PhD work on multilingual synthetic data generation, [Polyglot Teachers](https://ljvmiranda921.github.io/polyglot-teachers/) ([preprint](https://arxiv.org/abs/2604.11290)), has been accepted to EMNLP Main. See you in Budapest this October!</p>
 </div>
 
@@ -41,9 +45,9 @@ title: News
 <p><span class="date">**Jun 2026**</span>: I am part of the Scientific Committee of the [Philippine Team](https://ioaiph.org/) for the [International Olympiad for Artificial Intelligence](https://ioai-official.org/). I also gave a training lecture for NLP (see [lecture materials](https://ljvmiranda921.github.io/ioaiph26-nlp/)). Go Team PH!</p>
 </div>
 
-<div class="news-item">
+<!-- <div class="news-item">
 <p><span class="date">**May 2026**</span>: Gave a talk at the [Analytics and AI Association of the Philippines](https://www.aap.ph/) about [FilBench](/projects/2025/08/21/filbench/) and on what it takes to build Filipino-centric LLMs [(slides)](https://docs.google.com/presentation/d/1KOdSsFsk8io59bKRzwU-4u1iFNxDumlSNLQfUYgbTfU/edit?usp=sharing). Here's [some notes](/notebook/2026/05/23/on-what-it-takes/) from my talk.</p>
-</div>
+</div> -->
 
 <!-- <div class="news-item">
 <p><span class="date">**May 2026**</span>: Proud to release our [survey on multilingual edge models](https://arxiv.org/abs/2604.21637) (check the [website](/multilinguality-at-the-edge/)!). If you know me, I care a lot about AI in the Global South, I'd like to continue doing these types of sociotechnical research, so reach out if you wanna chat!</p>
